@@ -1,11 +1,17 @@
 import manualData from "./data/manual.json";
 
+const CATEGORIES = Object.freeze([
+  { id: "planificacion", label: "Orientación y planificación", sections: Object.freeze([1, 2, 18, 19, 20]) },
+  { id: "docencia", label: "Docencia", sections: Object.freeze([3, 4, 5, 6]) },
+  { id: "pdi", label: "Carrera y condiciones PDI", sections: Object.freeze([7, 8]) },
+  { id: "investigacion", label: "Investigación y transferencia", sections: Object.freeze([9, 10, 11]) },
+  { id: "gestion", label: "Gestión administrativa y económica", sections: Object.freeze([12, 13]) },
+  { id: "cumplimiento", label: "Cumplimiento, seguridad y derechos", sections: Object.freeze([14, 15, 16, 17]) }
+]);
+
 const FILTER_MAP = Object.freeze({
   all: null,
-  docencia: new Set([3, 4, 5, 6]),
-  investigacion: new Set([9, 10, 11, 13, 14, 15]),
-  pdi: new Set([3, 7, 8, 16, 17, 18, 19]),
-  gestion: new Set([2, 10, 12, 13, 17, 20])
+  ...Object.fromEntries(CATEGORIES.map((category) => [category.id, new Set(category.sections)]))
 });
 
 const state = { sections: [], activeFilter: "all", query: "", searchTimer: null, observer: null };
@@ -81,7 +87,16 @@ function parseManual(markdown) {
     const number = Number(match[1]);
     const title = match[2].trim();
     const body = normalized.slice(start, end).trim();
-    return { number, title, slug: slugify(title), body, searchText: normalizeText(`${title} ${stripMarkdown(body)}`) };
+    const category = getCategory(number);
+    return {
+      number,
+      title,
+      slug: slugify(title),
+      body,
+      categoryId: category.id,
+      categoryLabel: category.label,
+      searchText: normalizeText(`${category.label} ${title} ${stripMarkdown(body)}`)
+    };
   });
   return { introduction, sections };
 }
@@ -110,10 +125,16 @@ function renderSections(sections) {
     article.className = "chapter";
     article.id = section.slug;
     article.dataset.section = String(section.number);
+    article.dataset.category = section.categoryId;
     article.dataset.searchText = section.searchText;
 
     const header = document.createElement("header");
     header.className = "chapter__head";
+    const titleBlock = document.createElement("div");
+    titleBlock.className = "chapter__title-block";
+    const category = document.createElement("p");
+    category.className = "chapter__category";
+    category.textContent = section.categoryLabel;
     const title = document.createElement("h2");
     title.textContent = section.title;
     const copyButton = document.createElement("button");
@@ -126,7 +147,8 @@ function renderSections(sections) {
     const body = document.createElement("div");
     body.className = "chapter__body";
     body.innerHTML = renderMarkdown(section.body);
-    header.append(title, copyButton);
+    titleBlock.append(category, title);
+    header.append(titleBlock, copyButton);
     article.append(header, body);
     fragment.append(article);
   });
@@ -134,24 +156,36 @@ function renderSections(sections) {
 }
 
 function renderIndex(sections) {
-  const list = document.createElement("ol");
-  list.className = "index-list";
-  sections.forEach((section) => {
-    const item = document.createElement("li");
-    const link = document.createElement("a");
-    link.href = `#${section.slug}`;
-    link.dataset.indexSection = String(section.number);
-    const number = document.createElement("span");
-    number.className = "index-list__number";
-    number.textContent = String(section.number).padStart(2, "0");
-    const title = document.createElement("span");
-    title.className = "index-list__title";
-    title.textContent = section.title;
-    link.append(number, title);
-    item.append(link);
-    list.append(item);
+  const fragment = document.createDocumentFragment();
+  CATEGORIES.forEach((category) => {
+    const categorySections = sections.filter((section) => section.categoryId === category.id);
+    if (!categorySections.length) return;
+    const group = document.createElement("section");
+    group.className = "index-group";
+    const heading = document.createElement("h2");
+    heading.className = "index-group__title";
+    heading.textContent = category.label;
+    const list = document.createElement("ol");
+    list.className = "index-list";
+    categorySections.forEach((section) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `#${section.slug}`;
+      link.dataset.indexSection = String(section.number);
+      const number = document.createElement("span");
+      number.className = "index-list__number";
+      number.textContent = String(section.number).padStart(2, "0");
+      const title = document.createElement("span");
+      title.className = "index-list__title";
+      title.textContent = section.title;
+      link.append(number, title);
+      item.append(link);
+      list.append(item);
+    });
+    group.append(heading, list);
+    fragment.append(group);
   });
-  elements.index.replaceChildren(list);
+  elements.index.replaceChildren(fragment);
 }
 
 function renderMarkdown(markdown) {
@@ -260,6 +294,9 @@ function applyFilters() {
   document.querySelectorAll("[data-index-section]").forEach((link) => {
     const target = document.querySelector(`[data-section="${Number(link.dataset.indexSection)}"]`);
     link.closest("li").hidden = !target || target.hidden;
+  });
+  document.querySelectorAll(".index-group").forEach((group) => {
+    group.hidden = [...group.querySelectorAll("li")].every((item) => item.hidden);
   });
   let empty = elements.manual.querySelector(".empty-results");
   if (visible === 0 && !empty) {
@@ -418,6 +455,11 @@ function renderLoadError(error) {
 
 function countLinks(markdown) { return (markdown.match(/\[[^\]]+\]\([^)]+\)/g) || []).length; }
 function countExamples(markdown) { return (markdown.match(/^> \*\*Ejemplo realista\b/gm) || []).length; }
+function getCategory(sectionNumber) {
+  const category = CATEGORIES.find((candidate) => candidate.sections.includes(sectionNumber));
+  if (!category) throw new Error(`El capítulo ${sectionNumber} no tiene un ámbito asignado.`);
+  return category;
+}
 function stripMarkdown(value) { return value.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[`*_>#|:-]/g, " ").replace(/\s+/g, " "); }
 function slugify(value) { return normalizeText(value).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
 function normalizeText(value) { return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es"); }

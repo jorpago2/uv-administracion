@@ -86,6 +86,11 @@ a:hover { text-decoration-style: double; }
   font-family: var(--font-display); font-size: var(--text-lg);
 }
 #chapterIndex { overflow-y: auto; overscroll-behavior: contain; padding-block: var(--space-sm); }
+.index-group + .index-group { border-block-start: var(--rule) solid var(--color-paper-muted); }
+.index-group__title {
+  padding: var(--space-md) var(--space-md) var(--space-xs); color: var(--color-accent);
+  font-size: var(--text-xs); letter-spacing: 0.06em; line-height: 1.25; text-transform: uppercase;
+}
 .index-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
 .index-list a {
   display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: var(--space-sm); min-height: 44px;
@@ -178,6 +183,12 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .chapter:nth-of-type(4n + 3) { box-shadow: 8px 8px 0 var(--color-accent); }
 .chapter[hidden] { display: none; }
 .chapter__head { display: grid; gap: var(--space-md); padding-block-end: var(--space-lg); border-block-end: var(--rule-thick) solid var(--color-rule); }
+.chapter__title-block { display: grid; gap: var(--space-sm); }
+.chapter__category {
+  width: max-content; max-width: 100%; margin: 0; padding: var(--space-3xs) var(--space-xs);
+  background: var(--color-ink); color: var(--color-paper); font-family: var(--font-mono);
+  font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.03em; line-height: 1.35; text-transform: uppercase;
+}
 .chapter__head h2 { max-width: 24ch; }
 .copy-link { justify-self: start; padding-inline: var(--space-md); }
 .chapter__body { display: grid; gap: var(--space-md); padding-block-start: var(--space-xl); }

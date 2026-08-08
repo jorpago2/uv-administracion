@@ -39,6 +39,19 @@ Una instrucción inferior no puede eliminar un derecho reconocido por una norma 
 
 Los casos prácticos de esta guía son ficticios, aunque describen situaciones plausibles en la ETSE, el DIE y el ICMUV. Sirven para identificar la ruta de actuación y la documentación que conviene conservar; no sustituyen la convocatoria vigente, el criterio de la unidad gestora ni una resolución administrativa.
 
+### Mapa de capítulos por ámbito
+
+Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algunos procedimientos son transversales: por ejemplo, la protección de datos puede afectar tanto a docencia como a investigación, aunque se agrupa con cumplimiento para evitar duplicidades.
+
+| Ámbito | Capítulos | Contenido principal |
+|---|---:|---|
+| Orientación y planificación | 1, 2 y 18–20 | Uso de la guía, directorio rápido, rutina anual, archivo personal y mantenimiento |
+| Docencia | 3–6 | POD y OCA, evaluación, TFG/TFM y prácticas externas |
+| Carrera y condiciones PDI | 7–8 | Permisos, licencias, acreditación, promoción y complementos |
+| Investigación y transferencia | 9–11 | Proyectos, contratos del artículo 60, propiedad intelectual y protección de resultados |
+| Gestión administrativa y económica | 12–13 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
+| Cumplimiento, seguridad y derechos | 14–17 | Ética, datos, bioseguridad, prevención, incompatibilidades, recursos y quejas |
+
 ## 2. Directorio rápido de procedimientos
 
 | Necesidad | Primera unidad o canal | Plazo crítico |
