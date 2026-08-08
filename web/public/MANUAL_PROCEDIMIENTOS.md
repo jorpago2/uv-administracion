@@ -45,12 +45,12 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 
 | Ámbito | Capítulos | Contenido principal |
 |---|---:|---|
-| Orientación y planificación | 1, 2 y 18–20 | Uso de la guía, directorio rápido, rutina anual, archivo personal y mantenimiento |
-| Docencia | 3–6 | POD y OCA, evaluación, TFG/TFM y prácticas externas |
-| Carrera y condiciones PDI | 7–8 | Permisos, licencias, acreditación, promoción y complementos |
-| Investigación y transferencia | 9–11 | Proyectos, contratos del artículo 60, propiedad intelectual y protección de resultados |
-| Gestión administrativa y económica | 12–13 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
-| Cumplimiento, seguridad y derechos | 14–17 | Ética, datos, bioseguridad, prevención, incompatibilidades, recursos y quejas |
+| Orientación y planificación | 1–5 | Uso de la guía, directorio rápido, rutina anual, archivo personal y mantenimiento |
+| Docencia | 6–9 | POD y OCA, evaluación, TFG/TFM y prácticas externas |
+| Carrera y condiciones PDI | 10–11 | Permisos, licencias, acreditación, promoción y complementos |
+| Investigación y transferencia | 12–14 | Proyectos, contratos del artículo 60, propiedad intelectual y protección de resultados |
+| Gestión administrativa y económica | 15–16 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
+| Cumplimiento, seguridad y derechos | 17–20 | Ética, datos, bioseguridad, prevención, incompatibilidades, recursos y quejas |
 
 ## 2. Directorio rápido de procedimientos
 
@@ -73,7 +73,69 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 | Brecha de datos o incidente informático | `solicitudes.uv.es`; DPD si afecta a datos | Sin demora |
 | Reclamación institucional no resuelta | Sindicatura de Greuges | Después de agotar, preferentemente, las vías ordinarias |
 
-## 3. Dedicación docente, OCA y POD
+## 3. Rutina anual recomendada
+
+### Cada septiembre
+
+- Revisar POD, horarios, idioma y aulas.
+- Verificar guías docentes y calendarios de evaluación.
+- Comprobar tutelas TFG/TFM y prácticas asignadas.
+- Revisar vigencia de sexenios y reducciones.
+
+### Cada trimestre
+
+- Revisar ejecución y fecha final de proyectos.
+- Archivar contratos, compras, viajes, entregables y evidencias.
+- Comprobar riesgos, inventario y autorizaciones de laboratorio.
+- Revisar plazos próximos de convocatorias y justificaciones.
+
+### Noviembre–enero
+
+- Consultar convocatoria de quinquenios.
+- Preparar sexenios y revisar producción científica.
+- Consultar convocatoria de sabáticos.
+- Revisar cierre contable y gastos pendientes.
+
+### Febrero–abril
+
+- Consultar complemento autonómico y promoción.
+- Revisar OCA del curso siguiente.
+- Preparar convocatorias estatales/autonómicas habituales de investigación.
+
+### Mayo–julio
+
+- Revisar POD definitivo y reducciones.
+- Tramitar vacaciones fuera de agosto antes del 15 de junio.
+- Cerrar actas, TFG/TFM y prácticas con evidencia completa.
+- Anticipar compras y viajes evitando el cierre presupuestario.
+
+## 4. Lista de comprobación documental personal
+
+Conviene mantener una carpeta anual con:
+
+- hoja de servicios y relación contractual/nombramiento;
+- quinquenios, sexenios, acreditaciones y complementos;
+- POD aprobado y correcciones solicitadas;
+- proyectos, contratos, convenios y autorizaciones;
+- licencias, comisiones de servicio y justificantes;
+- informes de ética, bioseguridad, datos y prevención;
+- declaraciones de conflicto de interés;
+- comunicaciones de resultados protegibles;
+- justificantes de registro y notificaciones administrativas;
+- evidencias de evaluación docente y tutorización, respetando conservación y protección de datos.
+
+## 5. Mantenimiento del manual
+
+Debe revisarse, como mínimo:
+
+- al inicio de cada curso académico;
+- después de cada reforma de LOSU, Estatutos UV o convenio colectivo;
+- al publicarse OCA, calendario académico, presupuesto y criterios de promoción;
+- cuando cambien los procedimientos de sede, UV-plyca, RR. HH. PDI o investigación.
+
+Las fuentes normativas completas, inventarios y alertas están en [`README.md`](README.md), [`catalogos/`](catalogos/) y [`ALERTAS.md`](ALERTAS.md).
+
+## 6. Dedicación docente, OCA y POD
 
 ### 3.1 Determinación de la dedicación inicial
 
@@ -128,7 +190,7 @@ El [ACGUV 251/2025](https://www.uv.es/sgeneral/Reglamentacio/Doc/Professorat/202
 
 > **Ejemplo realista — discrepancia en el POD.** Marta es profesora titular a tiempo completo, tiene tres sexenios y el tercero está vigente. Para 2026-2027, su borrador de POD muestra 180 horas, pero el régimen transitorio aplicable al resto de PDI permanente con tres sexenios vigentes fija 170. Antes de la aprobación, remite a la dirección y secretaría del DIE la hoja de servicios y la resolución de sexenios, identifica la línea concreta que debe corregirse y conserva la solicitud y la respuesta. No compensa informalmente las diez horas cambiando docencia con otro profesor.
 
-## 4. Docencia, evaluación y exámenes
+## 7. Docencia, evaluación y exámenes
 
 ### 4.1 Antes de empezar la asignatura
 
@@ -176,7 +238,7 @@ Fuente: [procedimiento UV de impugnación](https://www.uv.es/uvweb/universidad/e
 
 > **Ejemplo realista — revisión e impugnación de una nota.** Las calificaciones se publican un 12 de junio junto con una revisión prevista para el día 17. En la revisión, el profesor muestra el examen, la rúbrica y el cálculo de la ponderación, y deja constancia del resultado. Si el estudiante presenta después una impugnación dentro de los siete días hábiles vinculados a la calificación definitiva y al depósito del acta, el profesor entrega a la ETSE esas evidencias y una explicación técnica, pero no intenta resolver por su cuenta el procedimiento institucional.
 
-## 5. TFG y TFM
+## 8. TFG y TFM
 
 La norma general es el [Reglamento UV ACGUV 206/2024](https://www.uv.es/convenisestud/TFG-TFM/Reglamento_TFG-TFM-2024.pdf), desarrollado por las instrucciones de cada titulación y los calendarios ETSE.
 
@@ -214,7 +276,7 @@ Modelos oficiales: [Anexo I](https://www.uv.es/convenisestud/TFG-TFM/Annex-I-aut
 
 > **Ejemplo realista — TFM con resultados protegibles.** Un TFM presenta un circuito de lectura para memristores todavía no publicado y utiliza parámetros suministrados por una empresa bajo confidencialidad. Tutor, estudiante y empresa plantean la restricción antes del depósito: tramitan los anexos aplicables, solicitan defensa no pública si procede y coordinan con la ETSE qué versión puede archivarse. El tutor no espera al día de la defensa ni envía el documento completo por canales no controlados.
 
-## 6. Prácticas externas en la ETSE
+## 9. Prácticas externas en la ETSE
 
 La [normativa ETSE aprobada en 2026](https://www.uv.es/etsedoc/practiques/NormativaPEETSE100226.pdf) distingue prácticas curriculares y extracurriculares.
 
@@ -233,7 +295,7 @@ Para prácticas curriculares de grado, el expediente de evaluación incluye al m
 
 > **Ejemplo realista — prácticas incompatibles con el horario.** Una estudiante de máster propone una práctica extracurricular en una empresa fotónica de 30 horas semanales, pero dos mañanas coinciden con laboratorios obligatorios. El tutor académico no valida simplemente el correo de la empresa: comprueba proyecto formativo, calendario, dedicación y ausencia de solapamientos, solicita el ajuste horario y espera a que la práctica esté formalizada antes de permitir su inicio.
 
-## 7. Permisos, licencias, vacaciones y sabáticos
+## 10. Permisos, licencias, vacaciones y sabáticos
 
 El reglamento UV publicado como ACGUV 21/2003 ha sido modificado numerosas veces. Debe leerse junto con TREBEP, Estatuto de los Trabajadores, Ley valenciana 4/2021, convenio colectivo y normativa posterior de conciliación.
 
@@ -273,7 +335,7 @@ Al finalizar el sabático debe presentarse una memoria de actividades a la Comis
 
 > **Ejemplo realista — estancia de investigación de seis semanas.** Un profesor quiere realizar una estancia desde el 1 de octubre hasta mediados de noviembre. Como supera un mes pero no tres, prepara la licencia con al menos 20 días de antelación, aporta invitación, fechas, justificación académica y previsión de cobertura docente, y la canaliza a través del DIE hacia RR. HH. PDI o el vicerrectorado competente. No compra billetes no reembolsables suponiendo que un acuerdo verbal equivale a autorización.
 
-## 8. Carrera, acreditación y complementos
+## 11. Carrera, acreditación y complementos
 
 ### 8.1 Acreditación ANECA
 
@@ -304,7 +366,7 @@ Contra la resolución de quinquenios que agota la vía administrativa se prevé,
 
 > **Ejemplo realista — acreditación y promoción no son el mismo trámite.** Laura, profesora contratada doctora, obtiene la acreditación estatal a titular. Guarda la resolución, pero no interpreta que produzca automáticamente el nombramiento: revisa por separado la convocatoria de promoción interna de la UV, sus méritos computables, el plazo de solicitud y la documentación exigida. La acreditación es un requisito; la plaza y el concurso siguen su propio procedimiento.
 
-## 9. Proyectos competitivos y ayudas de investigación
+## 12. Proyectos competitivos y ayudas de investigación
 
 ### 9.1 Presentación de propuestas
 
@@ -337,7 +399,7 @@ Un gasto permitido por la UV puede no ser elegible para la ayuda. En caso de con
 
 > **Ejemplo realista — plazo interno anterior al de la agencia.** Una convocatoria de la AEI cierra el 15 de septiembre, pero el Servicio de Gestión de la Investigación fija el cierre interno el día 8. El IP entrega antes de ese segundo plazo la memoria, presupuesto, equipo, compromisos y formularios de firma. Enviar una versión directamente a la plataforma externa el día 14 no subsana haber omitido la revisión y firma institucional de la UV.
 
-## 10. Contratos y convenios con empresas — artículo 60 LOSU
+## 13. Contratos y convenios con empresas — artículo 60 LOSU
 
 Cualquier trabajo científico, tecnológico, artístico o formativo para terceros debe canalizarse previamente mediante contrato o convenio firmado por la UV; el PDI no debe contratar personalmente ni comenzar trabajos basándose solo en correos o presupuestos aceptados.
 
@@ -355,7 +417,7 @@ Fuente: [procedimiento UV para contratos y convenios](https://www.uv.es/uvweb/se
 
 > **Ejemplo realista — ensayo para una empresa.** Una empresa solicita caracterizar durante dos meses unos moduladores y ofrece 12.000 euros, con la condición de empezar la semana siguiente. El investigador no inicia medidas ni acepta el presupuesto por correo: prepara memoria técnica, responsable, equipo participante, costes, propiedad de resultados, confidencialidad y calendario; remite el expediente al Servicio de Transferencia e Innovación y espera las firmas institucionales del contrato del artículo 60.
 
-## 11. Propiedad intelectual, patentes, software y secretos
+## 14. Propiedad intelectual, patentes, software y secretos
 
 ### Regla esencial
 
@@ -378,7 +440,7 @@ Fuente y trámite: [comunicación de resultados protegibles](https://www.uv.es/u
 
 > **Ejemplo realista — publicación frente a patente.** Un doctorando y dos investigadores observan un mecanismo de conmutación reproducible y pretenden incluirlo en el resumen de un congreso dentro de dos semanas. Antes de enviar el resumen o subir código y datos a un repositorio público, documentan autores, fechas y contribuciones, comunican el resultado protegible a Transferencia y coordinan la decisión sobre protección y publicación. La comunicación se realiza sin esperar al límite de tres meses si existe una divulgación inminente.
 
-## 12. Compras y contratos menores
+## 15. Compras y contratos menores
 
 La [Instrucción IUV 1/2025](https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693) regula la tramitación mediante UV-plyca.
 
@@ -422,7 +484,7 @@ Los pagos al extranjero, exclusividades, gastos compartidos y anticipos tienen r
 
 > **Ejemplo realista — osciloscopio por debajo de 5.000 euros.** Un grupo necesita un osciloscopio de 4.850 euros sin IVA y accesorios asociados. Aunque el equipo está por debajo de 5.000 euros, supera 200: antes de pedirlo, el responsable comprueba crédito y proveedor y tramita la solicitud en UV-plyca. No compra primero con tarjeta personal ni separa artificialmente accesorios que forman parte de una única necesidad para mantener cada factura bajo el umbral.
 
-## 13. Viajes, congresos, dietas e inscripciones
+## 16. Viajes, congresos, dietas e inscripciones
 
 La norma vigente está en el [Anexo 1a del Presupuesto UV 2026](https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf); las cuantías están en el [Anexo 1b](https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf).
 
@@ -449,7 +511,7 @@ La dirección del DIE o del ICMUV puede autorizar comisiones del personal adscri
 
 > **Ejemplo realista — congreso internacional.** Un profesor recibe la aceptación de una comunicación en un congreso de Eindhoven. Antes de pagar inscripción y hotel, identifica el proyecto que financiará el viaje, solicita autorización, confirma qué gastos y límites son elegibles y conserva aceptación, agenda y justificantes. Si combina el viaje con días personales, separa claramente fechas y costes para no imputarlos al proyecto.
 
-## 14. Ética, datos personales y bioseguridad
+## 17. Ética, datos personales y bioseguridad
 
 ### 14.1 Investigación con personas o muestras humanas
 
@@ -489,7 +551,7 @@ Fuentes: [comunicación de incidentes](https://www.uv.es/ensuv/es/guias-procedim
 
 > **Ejemplo realista — encuesta con datos sensibles.** Un equipo quiere encuestar a estudiantes sobre fatiga, salud y rendimiento y cruzar las respuestas con calificaciones. Antes de reclutar participantes, define base jurídica, información y consentimiento cuando proceda, minimización, seudonimización, accesos y conservación; solicita evaluación al CEIH con al menos dos meses y consulta al DPD. No comienza como «prueba piloto» con datos reales esperando regularizarla después.
 
-## 15. Prevención de riesgos y laboratorios
+## 18. Prevención de riesgos y laboratorios
 
 Antes de introducir un equipo, proceso, sustancia, láser, fuente de radiación, nanomaterial o instalación experimental nueva:
 
@@ -505,7 +567,7 @@ Ante accidente grave: proteger, avisar y socorrer, sin exponerse a un segundo ac
 
 > **Ejemplo realista — nueva estación láser.** El laboratorio incorpora un láser para caracterización fotónica. Antes de que lo utilicen doctorandos o estudiantes, se actualizan la evaluación de riesgos y el procedimiento de trabajo, se verifican cerramientos, señalización, gafas adecuadas a la longitud de onda, responsables y formación. Una demostración breve tampoco se realiza si esas medidas aún no están implantadas.
 
-## 16. Incompatibilidades, conflicto de interés y uso de recursos
+## 19. Incompatibilidades, conflicto de interés y uso de recursos
 
 Antes de aceptar una segunda actividad, administración de empresa, consultoría, participación remunerada o cargo externo:
 
@@ -520,7 +582,7 @@ Normas de partida: Ley 53/1984, RD 598/1985, LOSU, Estatutos UV y regulación de
 
 > **Ejemplo realista — consultoría relacionada con la investigación.** Una empresa ofrece a un profesor ocho horas mensuales de asesoramiento remunerado sobre dispositivos neuromórficos, una materia próxima a sus proyectos UV. Antes de firmar, declara la actividad, solicita la compatibilidad o autorización que corresponda y aclara propiedad intelectual, confidencialidad y uso de recursos. No utiliza medidas, software, personal ni equipamiento de la UV como parte de la consultoría sin el instrumento institucional adecuado.
 
-## 17. Recursos, quejas, denuncias y protección
+## 20. Recursos, quejas, denuncias y protección
 
 ### 17.1 Frente a una resolución administrativa
 
@@ -545,65 +607,3 @@ La UV dispone de ventanilla única, vía informal y formulario de denuncia. El p
 El canal interno UV se presenta mediante sede, permite comunicación confidencial y genera un código alfanumérico que debe conservarse para acceder al buzón seguro. No se utiliza para reclamaciones académicas ordinarias ni para acusaciones deliberadamente falsas. Véase el [procedimiento del canal interno](https://www.uv.es/uvweb/universidad/es/uvintegridad/canal-denuncia-interna/procedimiento-presentacion-gestion-denuncias-1286338034522.html).
 
 > **Ejemplo realista — resolución desfavorable.** Un profesor recibe una resolución que deniega una licencia. El mismo día guarda la notificación completa y anota la fecha de acceso; después identifica en el pie de recursos si la resolución agota la vía administrativa, qué recurso cabe, ante qué órgano y en qué plazo. Presenta el escrito por registro con los documentos pertinentes. Una queja ante la Sindicatura puede ser útil en su ámbito, pero no interrumpe ni sustituye el plazo del recurso administrativo o judicial.
-
-## 18. Rutina anual recomendada
-
-### Cada septiembre
-
-- Revisar POD, horarios, idioma y aulas.
-- Verificar guías docentes y calendarios de evaluación.
-- Comprobar tutelas TFG/TFM y prácticas asignadas.
-- Revisar vigencia de sexenios y reducciones.
-
-### Cada trimestre
-
-- Revisar ejecución y fecha final de proyectos.
-- Archivar contratos, compras, viajes, entregables y evidencias.
-- Comprobar riesgos, inventario y autorizaciones de laboratorio.
-- Revisar plazos próximos de convocatorias y justificaciones.
-
-### Noviembre–enero
-
-- Consultar convocatoria de quinquenios.
-- Preparar sexenios y revisar producción científica.
-- Consultar convocatoria de sabáticos.
-- Revisar cierre contable y gastos pendientes.
-
-### Febrero–abril
-
-- Consultar complemento autonómico y promoción.
-- Revisar OCA del curso siguiente.
-- Preparar convocatorias estatales/autonómicas habituales de investigación.
-
-### Mayo–julio
-
-- Revisar POD definitivo y reducciones.
-- Tramitar vacaciones fuera de agosto antes del 15 de junio.
-- Cerrar actas, TFG/TFM y prácticas con evidencia completa.
-- Anticipar compras y viajes evitando el cierre presupuestario.
-
-## 19. Lista de comprobación documental personal
-
-Conviene mantener una carpeta anual con:
-
-- hoja de servicios y relación contractual/nombramiento;
-- quinquenios, sexenios, acreditaciones y complementos;
-- POD aprobado y correcciones solicitadas;
-- proyectos, contratos, convenios y autorizaciones;
-- licencias, comisiones de servicio y justificantes;
-- informes de ética, bioseguridad, datos y prevención;
-- declaraciones de conflicto de interés;
-- comunicaciones de resultados protegibles;
-- justificantes de registro y notificaciones administrativas;
-- evidencias de evaluación docente y tutorización, respetando conservación y protección de datos.
-
-## 20. Mantenimiento del manual
-
-Debe revisarse, como mínimo:
-
-- al inicio de cada curso académico;
-- después de cada reforma de LOSU, Estatutos UV o convenio colectivo;
-- al publicarse OCA, calendario académico, presupuesto y criterios de promoción;
-- cuando cambien los procedimientos de sede, UV-plyca, RR. HH. PDI o investigación.
-
-Las fuentes normativas completas, inventarios y alertas están en [`README.md`](README.md), [`catalogos/`](catalogos/) y [`ALERTAS.md`](ALERTAS.md).

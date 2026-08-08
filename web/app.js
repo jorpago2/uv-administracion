@@ -1,12 +1,12 @@
 import manualData from "./data/manual.json";
 
 const CATEGORIES = Object.freeze([
-  { id: "planificacion", label: "Orientación y planificación", sections: Object.freeze([1, 2, 18, 19, 20]) },
-  { id: "docencia", label: "Docencia", sections: Object.freeze([3, 4, 5, 6]) },
-  { id: "pdi", label: "Carrera y condiciones PDI", sections: Object.freeze([7, 8]) },
-  { id: "investigacion", label: "Investigación y transferencia", sections: Object.freeze([9, 10, 11]) },
-  { id: "gestion", label: "Gestión administrativa y económica", sections: Object.freeze([12, 13]) },
-  { id: "cumplimiento", label: "Cumplimiento, seguridad y derechos", sections: Object.freeze([14, 15, 16, 17]) }
+  { id: "planificacion", label: "Orientación y planificación", sections: Object.freeze([1, 2, 3, 4, 5]) },
+  { id: "docencia", label: "Docencia", sections: Object.freeze([6, 7, 8, 9]) },
+  { id: "pdi", label: "Carrera y condiciones PDI", sections: Object.freeze([10, 11]) },
+  { id: "investigacion", label: "Investigación y transferencia", sections: Object.freeze([12, 13, 14]) },
+  { id: "gestion", label: "Gestión administrativa y económica", sections: Object.freeze([15, 16]) },
+  { id: "cumplimiento", label: "Cumplimiento, seguridad y derechos", sections: Object.freeze([17, 18, 19, 20]) }
 ]);
 
 const FILTER_MAP = Object.freeze({
