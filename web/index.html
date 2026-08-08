@@ -61,12 +61,112 @@
       </section>
 
       <nav class="route-strip" aria-label="Accesos frecuentes">
+        <a href="#asistente-tramites"><span>Asistente</span>Resolver un trámite</a>
+        <a href="#calendario-anual"><span>Planificación</span>Crear calendario</a>
         <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
         <a href="#dedicacion-docente-oca-y-pod"><span>Docencia</span>Revisar POD</a>
-        <a href="#docencia-evaluacion-y-examenes"><span>Evaluación</span>Resolver examen</a>
         <a href="#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion"><span>Investigación</span>Presentar proyecto</a>
         <a href="#compras-y-contratos-menores"><span>Gestión</span>Tramitar compra</a>
       </nav>
+
+      <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
+        <header class="operational-hub__heading">
+          <div>
+            <p class="context-line">Decidir · preparar · registrar · comprobar</p>
+            <h2 id="operationsTitle">Herramientas operativas</h2>
+            <p>Convierte una necesidad en una ruta de trabajo, consulta fichas homogéneas y crea recordatorios anuales sin enviar información fuera del navegador.</p>
+          </div>
+          <dl class="operations-meta" aria-label="Cobertura de las herramientas">
+            <div><dt>Fichas</dt><dd id="operationsProcedureCount">—</dd></div>
+            <div><dt>Hitos anuales</dt><dd id="operationsMilestoneCount">—</dd></div>
+            <div><dt>Datos revisados</dt><dd id="operationsReviewedDate">—</dd></div>
+          </dl>
+        </header>
+
+        <nav class="operations-nav" aria-label="Herramientas disponibles">
+          <a href="#asistente-tramites">01 · Asistente</a>
+          <a href="#fichas-procedimiento">02 · Fichas</a>
+          <a href="#calendario-anual">03 · Calendario</a>
+        </nav>
+
+        <article class="worktool worktool--assistant" id="asistente-tramites" aria-labelledby="wizardTitle">
+          <header class="worktool__heading">
+            <p class="worktool__number" aria-hidden="true">01</p>
+            <div><h3 id="wizardTitle">Asistente de procedimientos</h3><p>Selecciona el contexto. El resultado propone hasta cuatro rutas; no guarda ni transmite las respuestas.</p></div>
+          </header>
+          <form class="wizard-form" id="procedureWizardForm">
+            <fieldset>
+              <legend>Describe la necesidad</legend>
+              <div class="wizard-fields">
+                <label>Ámbito principal
+                  <select id="procedureArea" name="area"></select>
+                </label>
+                <label>Tu papel en el trámite
+                  <select id="procedureRole" name="role">
+                    <option value="all">Cualquier papel</option>
+                    <option value="docente">Docente o solicitante</option>
+                    <option value="ip">IP de proyecto</option>
+                    <option value="tutor">Tutor/a o director/a</option>
+                    <option value="responsable">Cargo o responsable</option>
+                  </select>
+                </label>
+                <label>Momento actual
+                  <select id="procedureMoment" name="moment">
+                    <option value="all">Cualquier momento</option>
+                    <option value="preparar">Estoy planificando</option>
+                    <option value="tramitar">Tengo que tramitarlo</option>
+                    <option value="incidencia">Ha surgido un problema</option>
+                    <option value="cerrar">Debo justificar o cerrar</option>
+                  </select>
+                </label>
+              </div>
+              <button class="control wizard-submit" type="submit">Obtener una ruta</button>
+            </fieldset>
+          </form>
+          <p class="sr-only" id="wizardStatus" aria-live="polite"></p>
+          <div class="procedure-stack procedure-stack--recommended" id="wizardResults"></div>
+        </article>
+
+        <article class="worktool" id="fichas-procedimiento" aria-labelledby="cardsTitle">
+          <header class="worktool__heading">
+            <p class="worktool__number" aria-hidden="true">02</p>
+            <div><h3 id="cardsTitle">Fichas normalizadas</h3><p>Cada ficha usa la misma estructura: unidad inicial, plazo, canal, documentos, secuencia, riesgo y fuente oficial.</p></div>
+          </header>
+          <div class="procedure-toolbar">
+            <label>Filtrar por ámbito
+              <select id="procedureCardArea"></select>
+            </label>
+            <label>Buscar en las fichas
+              <input id="procedureCardSearch" type="search" autocomplete="off" placeholder="Ej.: confidencialidad, presupuesto, examen…">
+            </label>
+          </div>
+          <p class="tool-status" id="procedureCardStatus" aria-live="polite"></p>
+          <div class="procedure-stack" id="procedureCardList"></div>
+        </article>
+
+        <article class="worktool worktool--calendar" id="calendario-anual" aria-labelledby="calendarTitle">
+          <header class="worktool__heading">
+            <p class="worktool__number" aria-hidden="true">03</p>
+            <div><h3 id="calendarTitle">Calendario anual</h3><p>Recordatorios internos orientativos. No representan fechas oficiales: cada convocatoria, notificación y calendario UV debe comprobarse.</p></div>
+          </header>
+          <div class="calendar-toolbar">
+            <label>Año del calendario
+              <select id="calendarYear"></select>
+            </label>
+            <div class="calendar-selection" role="group" aria-label="Seleccionar recordatorios">
+              <button class="control" id="calendarSelectAll" type="button">Seleccionar todo</button>
+              <button class="control" id="calendarSelectNone" type="button">Quitar todo</button>
+            </div>
+          </div>
+          <div class="calendar-list" id="calendarList"></div>
+          <p class="tool-status" id="calendarStatus" aria-live="polite"></p>
+          <div class="calendar-actions">
+            <button class="control control--primary" id="downloadCalendar" type="button">Descargar calendario .ics</button>
+            <button class="control" id="printCalendar" type="button">Imprimir checklist</button>
+          </div>
+          <p class="calendar-caveat"><strong>Privacidad:</strong> el archivo se genera localmente. No contiene datos personales ni se conecta con tu calendario; debes importarlo manualmente en la aplicación que utilices.</p>
+        </article>
+      </section>
 
       <section class="salary-tool" id="calculadora-retributiva" aria-labelledby="salaryTitle">
         <header class="salary-tool__heading">

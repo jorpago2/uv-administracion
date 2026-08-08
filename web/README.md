@@ -38,7 +38,7 @@ El resultado se escribe en `web/dist/`.
 pnpm test
 ```
 
-Las pruebas comprueban casos de PDI funcionario y laboral, los tramos autonómicos y los complementos por cargo académico.
+Las pruebas comprueban la estructura del manual, casos de PDI funcionario y laboral, los tramos autonómicos, los complementos por cargo académico, el contrato de las fichas operativas, las recomendaciones del asistente y la exportación iCalendar.
 
 ## Publicación
 
@@ -51,9 +51,12 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `styles.css`: diseño responsive, impresión y estados de interacción.
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
 - `chapter-categories.js`: mapa comprobable entre capítulos y ámbitos de la guía.
+- `operational-tools.js`: interfaz del asistente, fichas y calendario anual.
+- `operational-tools-model.js`: validación, búsqueda, recomendaciones y generación iCalendar, sin dependencias del DOM.
 - `salary-calculator.js`: controles y representación de la calculadora retributiva.
 - `salary-model.js`: cálculo puro y validable de los importes anuales.
 - `data/manual.json`: dato generado; no debe editarse a mano.
+- `data/operations.json`: fichas normalizadas e hitos anuales; cada cambio debe conservar su fuente y fecha de revisión.
 - `data/salaries-2026.json`: importes transcritos de las fuentes oficiales UV de 2026; debe revisarse al cambiar el ejercicio.
 - `public/`: copias generadas de los recursos documentales enlazados.
 

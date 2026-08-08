@@ -4,8 +4,12 @@ import process from "node:process";
 
 const repositoryRoot = path.resolve(import.meta.dirname, "..");
 const manualPath = path.join(repositoryRoot, "MANUAL_PROCEDIMIENTOS.md");
+const operationsPath = path.join(repositoryRoot, "web", "data", "operations.json");
 const markdown = await readFile(manualPath, "utf8");
-const links = [...new Set([...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]))];
+const operations = JSON.parse(await readFile(operationsPath, "utf8"));
+const markdownLinks = [...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
+const procedureLinks = Array.isArray(operations.procedures) ? operations.procedures.map((procedure) => procedure.sourceUrl) : [];
+const links = [...new Set([...markdownLinks, ...procedureLinks])];
 const externalLinks = links.filter((link) => /^https?:\/\//i.test(link));
 const localLinks = links.filter((link) => !/^[a-z][a-z0-9+.-]*:/i.test(link));
 

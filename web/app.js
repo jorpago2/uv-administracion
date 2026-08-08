@@ -1,5 +1,6 @@
 import manualData from "./data/manual.json";
 import { CATEGORIES } from "./chapter-categories.js";
+import { initOperationalTools } from "./operational-tools.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
 
 const FILTER_MAP = Object.freeze({
@@ -26,11 +27,13 @@ const elements = {
   menuScrim: document.querySelector("#menuScrim"),
   pageShell: document.querySelector(".page-shell"),
   filters: document.querySelector(".filters"),
-  backToTop: document.querySelector("#backToTop")
+  backToTop: document.querySelector("#backToTop"),
+  operationalHub: document.querySelector("#herramientas-operativas")
 };
 
 assertRequiredElements(elements);
 bindEvents();
+initOperationalTools(elements.operationalHub);
 initSalaryCalculator(document.querySelector("#salaryCalculator"));
 loadManual();
 
