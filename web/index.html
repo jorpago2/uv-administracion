@@ -66,7 +66,7 @@
         <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
         <a href="#calculadora-pod"><span>Docencia</span>Calcular POD</a>
         <a href="#calculadora-compras"><span>Compras</span>Elegir tramitación</a>
-        <a href="#calculadora-viajes"><span>Viajes</span>Estimar comisión</a>
+        <a href="#calculadora-presupuesto"><span>Proyectos</span>Preparar presupuesto</a>
       </nav>
 
       <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
@@ -171,11 +171,11 @@
       <section class="decision-tools" id="calculadoras-operativas" aria-labelledby="decisionToolsTitle">
         <header class="decision-tools__heading">
           <div><p class="context-line">Regla aplicada · desglose · advertencias</p><h2 id="decisionToolsTitle">Calculadoras para decidir</h2></div>
-          <p>Cuatro estimadores locales para preparar una decisión antes de iniciar el expediente. Los datos no salen del navegador y cada herramienta enlaza su norma oficial.</p>
+          <p>Cinco estimadores locales para preparar una decisión antes de iniciar el expediente. Los datos no salen del navegador y cada herramienta enlaza su norma oficial.</p>
         </header>
 
         <nav class="decision-tools__nav" aria-label="Calculadoras disponibles">
-          <a href="#calculadora-pod">01 · POD</a><a href="#calculadora-compras">02 · Compras</a><a href="#calculadora-viajes">03 · Viajes</a><a href="#calculadora-personal">04 · Personal</a>
+          <a href="#calculadora-pod">01 · POD</a><a href="#calculadora-compras">02 · Compras</a><a href="#calculadora-viajes">03 · Viajes</a><a href="#calculadora-personal">04 · Personal</a><a href="#calculadora-presupuesto">05 · Presupuesto</a>
         </nav>
 
         <div class="decision-grid">
@@ -264,6 +264,39 @@
               <section class="decision-result" aria-label="Resultado de coste de personal"><p class="decision-result__eyebrow">Coste total estimado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
             </div>
             <footer class="decision-source"><strong>Fuentes:</strong> <a href="https://www.boe.es/eli/es/o/2026/03/30/pjc297">Orden PJC/297/2026</a> y <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/9932/4315?changeLanguage=es">tipos de cotización de la Seguridad Social</a>.</footer>
+          </details>
+
+          <details class="decision-card decision-card--budget" id="calculadora-presupuesto">
+            <summary><span><small>05 · Investigación</small><strong>Presupuesto de proyecto</strong><span>Costes, IVA, indirectos, cofinanciación y anualidades.</span></span><b aria-hidden="true">+</b></summary>
+            <div class="decision-card__body decision-card__body--budget">
+              <form class="decision-form budget-form" id="projectBudgetForm">
+                <fieldset><legend>Proyecto y reglas de la convocatoria</legend><div class="decision-fields">
+                  <label>Título de trabajo<input name="projectTitle" type="text" value="Proyecto de sensor fotónico integrado" autocomplete="off"></label>
+                  <label>Anualidades<select name="years"><option value="1">1 año</option><option value="2">2 años</option><option value="3" selected>3 años</option><option value="4">4 años</option><option value="5">5 años</option></select></label>
+                  <label>Financiación de costes elegibles · %<input name="fundingRate" type="number" min="0" max="100" step="0.1" value="100"></label>
+                  <label>Costes indirectos · %<input name="indirectRate" type="number" min="0" max="100" step="0.1" value="25"></label>
+                  <label>Reserva de planificación · %<input name="reserveRate" type="number" min="0" max="50" step="0.1" value="3"></label>
+                  <label>Límite máximo de ayuda · €<input name="grantCeiling" type="number" min="0" max="100000000" step="0.01" value="200000"></label>
+                </div><p class="budget-help">Los valores son un ejemplo editable, no una convocatoria. La reserva no se solicita como gasto salvo que las bases lo permitan.</p></fieldset>
+
+                <fieldset><legend>Distribución por anualidades</legend><div class="decision-fields budget-annualities" id="budgetAnnualities"></div><p class="budget-help">La distribución debe sumar exactamente el 100 %.</p></fieldset>
+
+                <fieldset><legend>Personal a contratar</legend><div class="budget-lines" id="budgetPersonnelRows"></div><button class="control budget-add" id="addBudgetPersonnel" type="button">Añadir personal</button></fieldset>
+
+                <fieldset><legend>Otros costes directos</legend><div class="budget-lines" id="budgetDirectRows"></div><button class="control budget-add" id="addBudgetDirect" type="button">Añadir partida</button></fieldset>
+
+                <div class="budget-form__actions"><button class="control" type="reset">Restablecer ejemplo</button></div>
+              </form>
+
+              <section class="decision-result budget-result" aria-label="Resultado del presupuesto de proyecto">
+                <p class="decision-result__eyebrow">Financiación solicitada</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl>
+                <section><h4>Por categoría</h4><div class="table-wrap"><table class="budget-table"><thead><tr><th>Categoría</th><th>Coste</th><th>Elegible</th></tr></thead><tbody id="budgetCategoryBody"></tbody></table></div></section>
+                <section><h4>Anualidades</h4><div class="table-wrap"><table class="budget-table"><thead><tr><th>Año</th><th>%</th><th>Presupuesto</th><th>Solicitado</th></tr></thead><tbody id="budgetAnnualityBody"></tbody></table></div></section>
+                <ul class="decision-warnings"></ul>
+                <button class="control control--primary budget-download" id="downloadProjectBudget" type="button">Descargar presupuesto .md</button>
+              </section>
+            </div>
+            <footer class="decision-source"><strong>Fuentes y criterio:</strong> <a href="https://www.boe.es/eli/es/l/2003/11/17/38/con">art. 31 de la Ley General de Subvenciones</a>, <a href="https://www.aei.gob.es/sites/default/files/convocatory_info/file/2026-03/Instrucciones_ejecuci%C3%B3n_justificaci%C3%B3n_PID_2024_v1_30032026.pdf">ejemplo AEI de indirectos</a>, <a href="https://www.boe.es/eli/es/o/2026/03/30/pjc297">cotización 2026</a> e <a href="https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/proyectos-investigacion/invesweb-1285867372160.html">INVESWEB UV</a>. Cada convocatoria puede definir reglas distintas.</footer>
           </details>
         </div>
 

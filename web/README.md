@@ -38,7 +38,7 @@ El resultado se escribe en `web/dist/`.
 pnpm test
 ```
 
-Las pruebas comprueban la estructura del manual, los cálculos retributivos, POD, compras, viajes y coste de personal, el contrato de las fichas operativas, las recomendaciones del asistente y la exportación iCalendar.
+Las pruebas comprueban la estructura del manual, los cálculos retributivos, POD, compras, viajes, coste de personal y presupuesto de proyectos, el contrato de las fichas operativas, las recomendaciones del asistente y las exportaciones iCalendar y Markdown.
 
 ## Publicación
 
@@ -55,6 +55,8 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `operational-tools-model.js`: validación, búsqueda, recomendaciones y generación iCalendar, sin dependencias del DOM.
 - `decision-tools.js`: formularios y representación de las cuatro calculadoras de decisión y los casos completos.
 - `decision-tools-model.js`: reglas puras y comprobables de POD, compras, viajes y coste de contratación.
+- `project-budget.js`: partidas dinámicas, anualidades, representación y descarga local del presupuesto.
+- `project-budget-model.js`: cálculo puro de IVA, elegibilidad, indirectos, cofinanciación, límites y anualidades.
 - `salary-calculator.js`: controles y representación de la calculadora retributiva.
 - `salary-model.js`: cálculo puro y validable de los importes anuales.
 - `data/manual.json`: dato generado; no debe editarse a mano.

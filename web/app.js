@@ -2,6 +2,7 @@ import manualData from "./data/manual.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { initDecisionTools } from "./decision-tools.js";
 import { initOperationalTools } from "./operational-tools.js";
+import { initProjectBudget } from "./project-budget.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
 
 const FILTER_MAP = Object.freeze({
@@ -36,6 +37,7 @@ assertRequiredElements(elements);
 bindEvents();
 initOperationalTools(elements.operationalHub);
 initDecisionTools(document.querySelector("#calculadoras-operativas"));
+initProjectBudget(document.querySelector("#calculadora-presupuesto"));
 initSalaryCalculator(document.querySelector("#salaryCalculator"));
 loadManual();
 

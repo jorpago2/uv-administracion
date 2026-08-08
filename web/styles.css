@@ -286,7 +286,7 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .decision-form legend { padding-inline: var(--space-xs); font-family: var(--font-display); font-weight: 800; }
 .decision-fields { display: grid; gap: var(--space-md); }
 .decision-form label:not(.decision-check) { min-width: 0; display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 700; }
-.decision-form input[type="number"], .decision-form select { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-xs) var(--space-sm); background: var(--color-paper); color: var(--color-ink); border: var(--rule) solid var(--color-rule); border-radius: 0; }
+.decision-form input[type="number"], .decision-form input[type="text"], .decision-form select { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-xs) var(--space-sm); background: var(--color-paper); color: var(--color-ink); border: var(--rule) solid var(--color-rule); border-radius: 0; }
 .decision-form input:hover, .decision-form select:hover { background: var(--color-paper-muted); }
 .decision-form input:active, .decision-form select:active { background: var(--color-paper-raised); }
 .decision-form input:disabled, .decision-form select:disabled { opacity: 0.55; cursor: not-allowed; }
@@ -325,6 +325,20 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .case-file__actions { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; }
 .case-file__actions .control { padding-inline: var(--space-md); }
 .case-file__actions a { font-weight: 700; }
+.budget-form { gap: var(--space-lg); }
+.budget-help { margin: var(--space-sm) 0 0; color: var(--color-ink-soft); font-size: var(--text-sm); }
+.budget-lines { display: grid; gap: var(--space-md); margin-block-end: var(--space-md); }
+.budget-line { min-width: 0; display: grid; gap: var(--space-sm); padding: var(--space-md); background: var(--color-paper-muted); border: var(--rule-thin) solid var(--color-rule); }
+.budget-line > label:not(.decision-check) { align-content: start; }
+.budget-line__check { align-self: end; margin: 0; }
+.budget-line__remove { justify-self: start; align-self: end; padding-inline: var(--space-sm); }
+.budget-add { padding-inline: var(--space-md); }
+.budget-form__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; }
+.budget-form__actions .control, .budget-download { padding-inline: var(--space-md); }
+.budget-result > section { min-width: 0; display: grid; gap: var(--space-sm); }
+.budget-table { min-width: 22rem; }
+.budget-table td:not(:first-child), .budget-table th:not(:first-child) { text-align: end; font-variant-numeric: tabular-nums; }
+.budget-download { justify-self: start; }
 
 .salary-tool {
   min-width: 0; scroll-margin-top: 6rem; display: grid; gap: var(--space-xl); margin-block-start: var(--space-2xl); padding: var(--space-lg);
@@ -447,9 +461,12 @@ mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: v
   .procedure-lists { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .decision-tools { padding: var(--space-xl); }
   .decision-tools__heading, .case-library > header { grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr); align-items: end; }
-  .decision-tools__nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .decision-tools__nav a + a { border-block-start: 0; border-inline-start: var(--rule-thin) solid var(--color-paper-muted); }
+  .decision-tools__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .decision-tools__nav a + a { border-block-start: var(--rule-thin) solid var(--color-paper-muted); }
+  .decision-tools__nav a:nth-child(2) { border-block-start: 0; }
+  .decision-tools__nav a:nth-child(even) { border-inline-start: var(--rule-thin) solid var(--color-paper-muted); }
   .decision-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .budget-line { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-file__body { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-file__outcome, .case-file__actions { grid-column: 1 / -1; }
   .salary-tool { padding: var(--space-xl); }
@@ -475,6 +492,9 @@ mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: v
   .procedure-stack--recommended { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .procedure-stack--recommended .procedure-card[open] { grid-column: 1 / -1; }
   .decision-card__body { grid-template-columns: minmax(0, 0.95fr) minmax(24rem, 1.05fr); align-items: start; padding: var(--space-xl); }
+  .decision-tools__nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .decision-tools__nav a + a { border-block-start: 0; border-inline-start: var(--rule-thin) solid var(--color-paper-muted); white-space: nowrap; }
+  .decision-card__body--budget { grid-template-columns: minmax(32rem, 1.25fr) minmax(24rem, 0.75fr); }
   .case-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .case-file[open] { grid-column: 1 / -1; }
   .salary-layout { grid-template-columns: minmax(0, 0.95fr) minmax(25rem, 1.05fr); align-items: start; }
