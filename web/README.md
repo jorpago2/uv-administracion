@@ -50,6 +50,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `tokens.css`: paleta, tipografías, escalas, bordes, sombras y movimiento.
 - `styles.css`: diseño responsive, impresión y estados de interacción.
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
+- `chapter-categories.js`: mapa comprobable entre capítulos y ámbitos de la guía.
 - `salary-calculator.js`: controles y representación de la calculadora retributiva.
 - `salary-model.js`: cálculo puro y validable de los importes anuales.
 - `data/manual.json`: dato generado; no debe editarse a mano.

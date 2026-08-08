@@ -2,7 +2,7 @@
 
 ## Interfaz web
 
-La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable y vista de impresión. El contenido se genera desde `MANUAL_PROCEDIMIENTOS.md` mediante `scripts/generar_datos_web.ps1`, de modo que el Markdown continúa siendo la fuente única.
+La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, vista de impresión y una calculadora de retribuciones PDI basada en las tablas oficiales UV de 2026. El contenido documental se genera desde `MANUAL_PROCEDIMIENTOS.md` mediante `scripts/generar_datos_web.ps1`.
 
 **Web publicada:** <https://jorpago2.github.io/uv-administracion/>
 
@@ -59,6 +59,7 @@ documentos/
 scripts/
   recopilar_catalogo_uv.ps1
   descargar_documentos.ps1
+  comprobar_enlaces.mjs
 ALERTAS.md
 ```
 
@@ -78,6 +79,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\descargar_document
 ```
 
 El mismo descargador puede aplicarse a los otros dos catálogos cambiando rutas y usando la columna `url_pdf`. Para `unidades_especificas.csv` debe añadirse `-ForzarPdf`, porque el adjunto de ACGUV 4/2026 se sirve desde una URL dinámica terminada en `.do` aunque su contenido sea PDF.
+
+Los enlaces del manual pueden comprobarse con:
+
+```powershell
+node .\scripts\comprobar_enlaces.mjs
+```
 
 ## Criterios y límites
 

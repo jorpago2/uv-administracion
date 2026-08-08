@@ -1,14 +1,6 @@
 import manualData from "./data/manual.json";
+import { CATEGORIES } from "./chapter-categories.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
-
-const CATEGORIES = Object.freeze([
-  { id: "planificacion", label: "Orientación y planificación", sections: Object.freeze([1, 2, 3, 4, 5]) },
-  { id: "docencia", label: "Docencia", sections: Object.freeze([6, 7, 8, 9]) },
-  { id: "pdi", label: "Carrera y condiciones PDI", sections: Object.freeze([10, 11]) },
-  { id: "investigacion", label: "Investigación y transferencia", sections: Object.freeze([12, 13, 14]) },
-  { id: "gestion", label: "Gestión administrativa y económica", sections: Object.freeze([15, 16]) },
-  { id: "cumplimiento", label: "Cumplimiento, seguridad y derechos", sections: Object.freeze([17, 18, 19, 20]) }
-]);
 
 const FILTER_MAP = Object.freeze({
   all: null,
@@ -256,7 +248,7 @@ function renderTable(lines) {
 function splitTableRow(line) { return line.trim().replace(/^\||\|$/g, "").split("|").map((cell) => cell.trim()); }
 
 function renderInline(source) {
-  const tokenPattern = /(\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`|\*\*([^*]+)\*|\*([^*]+)\*)/g;
+  const tokenPattern = /(\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`|\*\*([^*]+)\*\*|\*([^*]+)\*)/g;
   let output = "";
   let cursor = 0;
   for (const match of source.matchAll(tokenPattern)) {

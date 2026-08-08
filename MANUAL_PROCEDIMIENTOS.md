@@ -1,6 +1,6 @@
 ---
 title: "Manual operativo para PDI de la UV — ETSE, DIE e ICMUV"
-version: "1.0"
+version: "2.0"
 fecha_revision: "2026-08-08"
 ambito: "Profesorado e investigación en la Universitat de València"
 ---
@@ -45,32 +45,42 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 
 | Ámbito | Capítulos | Contenido principal |
 |---|---:|---|
-| Orientación y planificación | 1–5 | Uso de la guía, directorio rápido, rutina anual, archivo personal y mantenimiento |
-| Docencia | 6–9 | POD y OCA, evaluación, TFG/TFM y prácticas externas |
-| Carrera y condiciones PDI | 10–11 | Permisos, licencias, acreditación, promoción y complementos |
-| Investigación y transferencia | 12–14 | Proyectos, contratos del artículo 60, propiedad intelectual y protección de resultados |
-| Gestión administrativa y económica | 15–16 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
-| Cumplimiento, seguridad y derechos | 17–20 | Ética, datos, bioseguridad, prevención, incompatibilidades, recursos y quejas |
+| Orientación, administración y gobierno | 1–7 | Uso de la guía, directorio, rutina anual, administración electrónica, órganos UV y mantenimiento |
+| Docencia | 8–15 | POD y OCA, evaluación, TFG/TFM, prácticas, calidad, tutorías, movilidad y doctorado |
+| Carrera y condiciones PDI | 16–19 | Permisos, carrera, retribuciones, situaciones administrativas, cese y jubilación |
+| Investigación y transferencia | 20–28 | Solicitud y gestión de proyectos, contratación, artículo 60, resultados, integridad, ciencia abierta, empresas e infraestructuras |
+| Gestión administrativa y económica | 29–30 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
+| Cumplimiento, seguridad y derechos | 31–37 | Datos, ética y bioseguridad, prevención, igualdad, incompatibilidades, recursos y denuncias |
 
 ## 2. Directorio rápido de procedimientos
 
 | Necesidad | Primera unidad o canal | Plazo crítico |
 |---|---|---|
 | Corregir dedicación, POD o reducciones | Dirección/secretaría del DIE y, en su caso, ETSE | Antes de la aprobación o cierre anual del POD |
+| Registrar una solicitud o subsanación | Sede Electrónica UV/órgano indicado | El fijado en convocatoria o notificación; guardar justificante |
+| Elevar una propuesta a un órgano colegiado | Secretaría de ETSE, DIE o ICMUV | Antes del cierre del orden del día |
 | Permiso o licencia de hasta un mes | Dirección del DIE | Regla general UV: al menos 3 días antes |
 | Licencia de más de un mes | DIE → Servicio de RR. HH. PDI/vicerrectorado | 20 días antes si dura hasta 3 meses; 2 meses antes si dura más |
 | Revisión de una calificación | Profesorado responsable | Fecha y horario publicados con las calificaciones |
 | Impugnación de calificación | Dirección de la ETSE | 7 días hábiles desde la calificación definitiva y depósito del acta |
 | TFG/TFM confidencial | Comisión correspondiente/ETSE antes del depósito | Debe acordarse antes de divulgar o defender |
+| Adaptación docente por discapacidad o NEAE | UVdiscapacidad y coordinación ETSE | Antes de la actividad o prueba; requiere informe técnico |
+| Evaluación anual o depósito de tesis | Comisión académica/Escola de Doctorat | Calendario anual del programa y requisitos previos al depósito |
 | Solicitud de proyecto competitivo | Servicio de Gestión de la Investigación | El plazo interno UV, normalmente anterior al externo |
+| Proyecto concedido, modificación o justificación | SGI y unidad gestora | Antes del gasto/cambio y según calendario de seguimiento |
+| Contratar personal con cargo a proyecto | Investigación y RR. HH. de investigación | Antes de publicar e incorporar; nunca después de empezar a trabajar |
 | Contrato o convenio con una empresa | Servicio de Transferencia e Innovación | Antes de iniciar trabajos o asumir compromisos |
 | Invención, software o resultado protegible | Servicio de Transferencia e Innovación | Invenciones: 3 meses desde su conclusión y siempre antes de divulgar |
+| Crear una spin-off o trabajar en ella | Transferencia y RR. HH. PDI | Reconocimiento y compatibilidad antes de actuar |
 | Compra inferior a 5.000 € sin IVA | Unidad gestora/UV-plyca | Antes de comprometer gastos superiores a 200 € sin IVA |
 | Compra igual o superior a 5.000 € sin IVA, dentro de los límites de contrato menor | Unidad gestora/UV-plyca | Expediente y adjudicación antes del pedido y de la factura |
 | Viaje, congreso o estancia | Dirección de la estructura/unidad gestora | Autorización y crédito antes del viaje |
 | Estudio con personas o muestras humanas | CEIH | Al menos 2 meses antes de iniciar; no evalúa estudios ya iniciados |
 | Proyecto con agentes biológicos/OMG | Comité de Bioseguridad | Hasta una semana antes de la reunión correspondiente |
 | Brecha de datos o incidente informático | `solicitudes.uv.es`; DPD si afecta a datos | Sin demora |
+| Cambio de situación, cese o jubilación | RR. HH. PDI y organismo de previsión social | Con antelación suficiente para resolver efectos y relevo |
+| Acoso o discriminación | Ventanilla/protocolo de la Unidad de Igualdad | Cuanto antes; emergencias por el canal inmediato aplicable |
+| Recurso administrativo | Órgano indicado en la resolución, mediante sede/registro | El pie de recursos concreto prevalece |
 | Reclamación institucional no resuelta | Sindicatura de Greuges | Después de agotar, preferentemente, las vías ordinarias |
 
 ## 3. Rutina anual recomendada
@@ -81,6 +91,8 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 - Verificar guías docentes y calendarios de evaluación.
 - Comprobar tutelas TFG/TFM y prácticas asignadas.
 - Revisar vigencia de sexenios y reducciones.
+- Revisar informes de adaptación, tutorías especiales y evaluaciones doctorales.
+- Actualizar planes de gestión de datos y accesos a equipos compartidos.
 
 ### Cada trimestre
 
@@ -88,6 +100,7 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 - Archivar contratos, compras, viajes, entregables y evidencias.
 - Comprobar riesgos, inventario y autorizaciones de laboratorio.
 - Revisar plazos próximos de convocatorias y justificaciones.
+- Verificar contratos de personal, hitos, modificaciones y cierre de proyectos.
 
 ### Noviembre–enero
 
@@ -123,8 +136,56 @@ Conviene mantener una carpeta anual con:
 - comunicaciones de resultados protegibles;
 - justificantes de registro y notificaciones administrativas;
 - evidencias de evaluación docente y tutorización, respetando conservación y protección de datos.
+- planes de gestión de datos, versiones de código, datasets y depósitos en repositorios;
+- actas o certificaciones de órganos colegiados que afecten a responsabilidades propias;
+- inventario, calibraciones, formación y mantenimiento de equipos bajo responsabilidad;
+- contratos, altas, acogida y finalización de personal de proyectos.
 
-## 5. Mantenimiento del manual
+## 5. Administración electrónica UV
+
+La [Sede Electrónica de la UV](https://seu.uv.es) es el canal oficial para registrar solicitudes, aportar documentación, consultar expedientes y recibir comunicaciones o notificaciones con validez jurídica. El correo electrónico ordinario sirve para pedir información, pero no sustituye al registro cuando el procedimiento exige presentación formal.
+
+### 5.1 Antes de registrar
+
+1. Localiza el trámite específico; utiliza la instancia general únicamente si no existe uno adecuado.
+2. Comprueba quién debe figurar como solicitante y a qué órgano o unidad se dirige.
+3. Prepara documentos definitivos, preferentemente PDF, con nombres descriptivos y sin datos innecesarios.
+4. Firma electrónicamente solo los documentos que lo requieran y verifica que el certificado corresponde a la persona firmante.
+5. Revisa límite de tamaño, idioma, anexos obligatorios y plazo de la convocatoria.
+
+### 5.2 Después del registro
+
+- Descarga y conserva el justificante con número, fecha, hora y huella de los documentos.
+- Revisa «Mis trámites», el correo institucional y las notificaciones electrónicas; un aviso por correo no es la notificación misma.
+- Si existe requerimiento de subsanación, aporta la documentación en el expediente abierto, no mediante una solicitud nueva salvo indicación expresa.
+- Si actúas por otra persona o entidad, utiliza la representación admitida y acredita su alcance.
+- Ante una incidencia técnica dentro de plazo, guarda capturas, abre un tique y utiliza, si procede, otro registro válido; una avería no prorroga automáticamente el plazo.
+
+La plataforma integra registro, tramitación, portafirmas y notificaciones. La [información oficial sobre administración electrónica](https://www.uv.es/servicio-sistemas-informacion-digitalizacion/es/sede-electronica-digitalizacion/sede-electronica.html) debe consultarse junto con la Ley 39/2015 y el [Reglamento de administración electrónica de la UV](https://www.uv.es/registre/REGLAMENTOS/0.Reglamento_admon_electronica.pdf).
+
+> **Ejemplo realista — subsanación de una ayuda.** Un investigador recibe una notificación que solicita corregir una declaración firmada en diez días hábiles. Accede al expediente desde la sede, descarga el requerimiento completo, calcula el plazo desde la notificación efectiva, adjunta la declaración corregida mediante la acción de subsanación y conserva el nuevo justificante. Responder al correo de aviso no habría incorporado el documento al expediente.
+
+## 6. Gobierno de la ETSE, el DIE y el ICMUV
+
+Un mismo asunto puede depender de órganos distintos. La ETSE organiza titulaciones y servicios del centro; el DIE gestiona docencia, plantilla y actividad departamental; el ICMUV organiza la actividad de su instituto. Pertenecer o estar adscrito a una estructura no transfiere automáticamente competencias entre ellas.
+
+### 6.1 Antes de elevar un asunto
+
+1. Identifica el órgano competente: Junta de Centro, Consejo de Departamento, Consejo de Instituto, CAT/CCA u otra comisión.
+2. Consulta su reglamento, composición y calendario; pregunta a la secretaría por la fecha límite para incluir documentación en el orden del día.
+3. Presenta una propuesta concreta con antecedentes, fundamento, parte dispositiva, responsable y, si tiene coste, financiación.
+4. Declara conflictos de interés y abstente cuando concurra una causa legal.
+5. No ejecutes el acuerdo hasta conocer su redacción aprobada y, cuando proceda, su ratificación por otro órgano.
+
+### 6.2 Sesiones y acuerdos
+
+La convocatoria debe permitir conocer orden del día y documentación. Durante la sesión conviene distinguir deliberación, propuesta y acuerdo finalmente votado. Si el acta no refleja correctamente una intervención o el sentido del voto, solicita su corrección por el cauce y momento reglamentarios. Las certificaciones corresponden a la secretaría del órgano, no a sus miembros individualmente.
+
+Fuentes: [Estatutos UV](https://www.uv.es/comunicacio/estatutos.pdf), [RRI de la ETSE](https://www.uv.es/etsedoc/otros/Reglament_regim_intern_2014%20modif%2021-11-14%20Aprobado%20CG.pdf), [RRI del DIE](https://www.uv.es/dieweb/Reglamento_Regimen_Interno.pdf) y [RRI del ICMUV](https://www.uv.es/sgeneral/Reglamentacio/Doc/Regl_Reg_Intern_Instituts/ICMUV.pdf). Debe comprobarse si existe una modificación posterior aún no incorporada al texto publicado.
+
+> **Ejemplo realista — propuesta de nuevo equipamiento compartido.** Un profesor quiere que el DIE cofinancie un equipo que se ubicará en el ICMUV y dará servicio a docencia de la ETSE. Antes de llevarlo a un consejo, aclara titularidad, inventario, ubicación, mantenimiento, acceso y fuente presupuestaria; determina qué órgano de cada estructura debe autorizar cada aspecto y presenta acuerdos coordinados. Una aprobación genérica de «apoyar la compra» no sustituye los expedientes económico y patrimonial.
+
+## 7. Mantenimiento del manual
 
 Debe revisarse, como mínimo:
 
@@ -135,9 +196,9 @@ Debe revisarse, como mínimo:
 
 Las fuentes normativas completas, inventarios y alertas están en [`README.md`](README.md), [`catalogos/`](catalogos/) y [`ALERTAS.md`](ALERTAS.md).
 
-## 6. Dedicación docente, OCA y POD
+## 8. Dedicación docente, OCA y POD
 
-### 3.1 Determinación de la dedicación inicial
+### 8.1 Determinación de la dedicación inicial
 
 El [ACGUV 4/2026](https://webges.uv.es/uvTaeWeb/MuestraInformacionEdictoPublicoFrontAction.do?idEdictoSeleccionado=94719) se aplica desde el curso 2026-2027 al profesorado funcionario y laboral permanente a tiempo completo, y regula también la dedicación del profesorado ayudante doctor.
 
@@ -170,7 +231,7 @@ Durante 2026-2027, 2027-2028 y 2028-2029:
 
 Si se reconoce un cuarto sexenio durante ese periodo, se pasa directamente a la tabla general.
 
-### 3.2 Reducciones principales
+### 8.2 Reducciones principales
 
 - IP de un proyecto público: 10 horas por un proyecto, 20 por dos y 30 por tres o más; excepcionalmente hasta 40 por proyectos europeos.
 - La persona IP puede derivar la reducción a otra persona investigadora del mismo proyecto.
@@ -178,7 +239,7 @@ Si se reconoce un cuarto sexenio durante ese periodo, se pasa directamente a la 
 - Cargos, responsabilidades académicas, discapacidad, representación de personal y otras reducciones se rigen por sus normas específicas.
 - Las reducciones de proyecto pueden no aplicarse, o hacerlo parcialmente, cuando el área tenga superávit estructural y no tenga asignada toda su capacidad en el POD.
 
-### 3.3 Qué debe hacer el profesor
+### 8.3 Qué debe hacer el profesor
 
 1. Antes del cierre del POD, obtén o verifica tu hoja de servicios, sexenios reconocidos, categoría y dedicación.
 2. Entrega a la dirección/secretaría del DIE la documentación de reducciones que no se incorporen automáticamente: proyectos, derivación de horas, tesis, discapacidad, representación o responsabilidades.
@@ -190,16 +251,16 @@ El [ACGUV 251/2025](https://www.uv.es/sgeneral/Reglamentacio/Doc/Professorat/202
 
 > **Ejemplo realista — discrepancia en el POD.** Marta es profesora titular a tiempo completo, tiene tres sexenios y el tercero está vigente. Para 2026-2027, su borrador de POD muestra 180 horas, pero el régimen transitorio aplicable al resto de PDI permanente con tres sexenios vigentes fija 170. Antes de la aprobación, remite a la dirección y secretaría del DIE la hoja de servicios y la resolución de sexenios, identifica la línea concreta que debe corregirse y conserva la solicitud y la respuesta. No compensa informalmente las diez horas cambiando docencia con otro profesor.
 
-## 7. Docencia, evaluación y exámenes
+## 9. Docencia, evaluación y exámenes
 
-### 4.1 Antes de empezar la asignatura
+### 9.1 Antes de empezar la asignatura
 
 - Comprueba que la guía docente está aprobada y coincide con la planificación real.
 - Publica o comunica cronograma, actividades evaluables, ponderaciones, requisitos y reglas sobre materiales y dispositivos.
 - No cambies sustancialmente el sistema de evaluación durante el curso salvo causa justificada y mediante el procedimiento académico correspondiente.
 - Conserva evidencias de actividades, entregas, rúbricas, calificaciones y comunicaciones.
 
-### 4.2 Durante una prueba en la ETSE
+### 9.2 Durante una prueba en la ETSE
 
 Las [directrices de exámenes de la ETSE](https://www.uv.es/etsedoc/otros/Directrius_examen.pdf) permiten exigir identificación y depositar materiales o dispositivos no autorizados a la distancia indicada. El profesorado no asume la custodia de las pertenencias depositadas.
 
@@ -211,7 +272,7 @@ Ante una posible práctica fraudulenta:
 4. Documenta la incidencia y comunica por la vía académica establecida.
 5. Distingue la consecuencia académica de un eventual procedimiento disciplinario.
 
-### 4.3 Publicación y revisión de calificaciones
+### 9.3 Publicación y revisión de calificaciones
 
 Con la publicación de las calificaciones debe indicarse lugar, fecha y horario de revisión. En la revisión, el estudiante tiene derecho a conocer la justificación de la calificación y su ponderación conforme a la guía docente. La revisión debe realizarla el profesorado responsable en presencia del estudiante. Véase la [información oficial sobre revisión](https://www.uv.es/uvweb/universidad/es/estudios-postgrado/informacion-academica-administrativa/convocatorias-calificaciones/revision-examenes-1285897761954.html).
 
@@ -222,7 +283,7 @@ Buenas prácticas probatorias:
 - Si se modifica la nota, deja constancia del motivo y corrige el acta por el procedimiento establecido.
 - No comuniques calificaciones mediante listados que permitan identificar indebidamente al alumnado.
 
-### 4.4 Impugnación
+### 9.4 Impugnación
 
 Después de la revisión —o de haberla intentado sin resultado— el estudiante puede impugnar motivadamente ante la dirección de la ETSE en **7 días hábiles** desde la publicación de la calificación definitiva y una vez depositada el acta.
 
@@ -238,11 +299,11 @@ Fuente: [procedimiento UV de impugnación](https://www.uv.es/uvweb/universidad/e
 
 > **Ejemplo realista — revisión e impugnación de una nota.** Las calificaciones se publican un 12 de junio junto con una revisión prevista para el día 17. En la revisión, el profesor muestra el examen, la rúbrica y el cálculo de la ponderación, y deja constancia del resultado. Si el estudiante presenta después una impugnación dentro de los siete días hábiles vinculados a la calificación definitiva y al depósito del acta, el profesor entrega a la ETSE esas evidencias y una explicación técnica, pero no intenta resolver por su cuenta el procedimiento institucional.
 
-## 8. TFG y TFM
+## 10. TFG y TFM
 
 La norma general es el [Reglamento UV ACGUV 206/2024](https://www.uv.es/convenisestud/TFG-TFM/Reglamento_TFG-TFM-2024.pdf), desarrollado por las instrucciones de cada titulación y los calendarios ETSE.
 
-### 5.1 Como tutor o tutora
+### 10.1 Como tutor o tutora
 
 1. Confirma la asignación formal del tema y la tutela; con carácter general solo vale para ese curso.
 2. Define alcance, objetivos, hitos, formato de entregas, autoría y tratamiento de datos/resultados.
@@ -251,7 +312,7 @@ La norma general es el [Reglamento UV ACGUV 206/2024](https://www.uv.es/convenis
 5. Emite el informe de tutela exigido antes de la defensa.
 6. No autorices la publicación de resultados potencialmente patentables antes de hablar con Transferencia.
 
-### 5.2 Depósito y defensa
+### 10.2 Depósito y defensa
 
 - La matrícula da derecho a dos convocatorias durante el curso.
 - El estudiante presenta solicitud de defensa/evaluación y, al menos, la versión electrónica.
@@ -262,7 +323,7 @@ La norma general es el [Reglamento UV ACGUV 206/2024](https://www.uv.es/convenis
 
 El calendario ETSE de 2026 exige que el nombramiento del tribunal, fecha y lugar se comuniquen al menos tres días naturales antes de la defensa. Las fechas concretas de depósito cambian cada curso y deben consultarse en la [página de TFM de la ETSE](https://www.uv.es/uvweb/enginyeria/ca/estudis-postgrau/masters-oficials/treball-fi-master-1285845343824.html).
 
-### 5.3 Confidencialidad y resultados protegibles
+### 10.3 Confidencialidad y resultados protegibles
 
 La confidencialidad debe plantearse **antes** de entregar, publicar o defender el trabajo:
 
@@ -276,7 +337,7 @@ Modelos oficiales: [Anexo I](https://www.uv.es/convenisestud/TFG-TFM/Annex-I-aut
 
 > **Ejemplo realista — TFM con resultados protegibles.** Un TFM presenta un circuito de lectura para memristores todavía no publicado y utiliza parámetros suministrados por una empresa bajo confidencialidad. Tutor, estudiante y empresa plantean la restricción antes del depósito: tramitan los anexos aplicables, solicitan defensa no pública si procede y coordinan con la ETSE qué versión puede archivarse. El tutor no espera al día de la defensa ni envía el documento completo por canales no controlados.
 
-## 9. Prácticas externas en la ETSE
+## 11. Prácticas externas en la ETSE
 
 La [normativa ETSE aprobada en 2026](https://www.uv.es/etsedoc/practiques/NormativaPEETSE100226.pdf) distingue prácticas curriculares y extracurriculares.
 
@@ -295,11 +356,95 @@ Para prácticas curriculares de grado, el expediente de evaluación incluye al m
 
 > **Ejemplo realista — prácticas incompatibles con el horario.** Una estudiante de máster propone una práctica extracurricular en una empresa fotónica de 30 horas semanales, pero dos mañanas coinciden con laboratorios obligatorios. El tutor académico no valida simplemente el correo de la empresa: comprueba proyecto formativo, calendario, dedicación y ausencia de solapamientos, solicita el ajuste horario y espera a que la práctica esté formalizada antes de permitir su inicio.
 
-## 10. Permisos, licencias, vacaciones y sabáticos
+## 12. Calidad docente, Docentia e innovación educativa
+
+La calidad docente no se reduce a las encuestas. Requiere coherencia entre memoria verificada, guía docente, actividades realizadas, evaluación, resultados y acciones de mejora. En la ETSE debe consultarse el [Sistema de Aseguramiento Interno de la Calidad](https://www.uv.es/etsedoc/Calidad/Manual%20del%20SAIC_JC.pdf) y las instrucciones de la titulación.
+
+### 12.1 Evidencias y mejora
+
+1. Antes del curso, revisa resultados del año anterior, guía, coordinación horizontal/vertical y cambios aprobados.
+2. Durante el curso, conserva evidencias proporcionadas: materiales, rúbricas, incidencias, coordinación y ajustes adoptados.
+3. Tras cerrar actas, compara resultados con cursos anteriores sin confundir diferencias de cohorte con efectos docentes.
+4. Formula acciones concretas, con responsable, plazo e indicador; «mejorar la asignatura» no es verificable.
+5. Si la CAT/CCA o la comisión de calidad solicita información, entrega datos agregados y evita documentos con datos personales innecesarios.
+
+### 12.2 Docentia e innovación
+
+El [Manual Docentia UV](https://www.uv.es/uq/docs/c/Docentia%20UV.pdf) regula la evaluación institucional de la actividad docente. No equivale al reconocimiento económico de quinquenios. Conviene mantener actualizado el expediente, revisar los datos importados y aportar solo evidencias correspondientes al periodo evaluado.
+
+Para proyectos o grupos de innovación, consulta las convocatorias del Servicio de Formación Permanente e Innovación Educativa. Define problema, intervención, comparación o línea base, indicadores y tratamiento de datos antes de aplicar la innovación. Si se pretende publicar investigación educativa con datos de estudiantes, deben revisarse ética y protección de datos por separado.
+
+La [guía UV sobre uso responsable de IA en docencia y evaluación](https://www.uv.es/graus/normatives/Guia_actuacio_IA_UV.pdf) debe traducirse en reglas explícitas en la guía docente o instrucciones de cada actividad: usos permitidos, declaración, evidencias del proceso y consecuencias de un uso no autorizado.
+
+> **Ejemplo realista — rediseño de una práctica.** El equipo docente sustituye una memoria tradicional por un cuaderno reproducible de simulación. Antes de concluir que la innovación mejora el aprendizaje, fija una rúbrica común, compara logro de resultados con el curso anterior, registra incidencias y encuesta de forma proporcionada. Si quiere publicar datos individuales, no reutiliza automáticamente las calificaciones: define base jurídica, minimización y evaluación ética aplicable.
+
+## 13. Tutorías, atención al estudiantado y situaciones especiales
+
+La tutoría orienta sobre la asignatura y los procedimientos universitarios, pero el profesorado no debe asumir funciones clínicas, jurídicas o administrativas para las que existen servicios especializados.
+
+### 13.1 Atención ordinaria
+
+- Publica horario, modalidad y canal de tutoría; comunica cambios con antelación.
+- Deja constancia de acuerdos relevantes sin registrar información íntima innecesaria.
+- Aplica las mismas reglas académicas a situaciones equivalentes y deriva las excepciones regladas al órgano competente.
+- Ante un conflicto, distingue escucha, información, mediación posible y resolución formal.
+
+### 13.2 Adaptaciones y necesidades específicas
+
+Las adaptaciones por discapacidad o necesidades específicas se aplican conforme al informe técnico de UVdiscapacidad. El profesorado no diagnostica ni exige al estudiante revelar información clínica. Revisa el correo institucional al inicio del cuatrimestre, coordina con la ETSE medios, aula y tiempo, y preserva la confidencialidad. Fuente: [protocolo UV de adaptaciones 2025](https://www.uv.es/upd/doc/doc%20propios/Protocol_estudiantat_2025.pdf) y [orientaciones al profesorado](https://www.uv.es/uv-docencia/es/-planificacion-asignatura/preparacion-materiales/discapacidad-informacion-adaptaciones-estudiantes.html).
+
+Para deportistas de élite, alto nivel o alto rendimiento existe un plan de tutorización coordinado por el Servicio de Deportes; no se improvisan cambios sin comprobar la condición reconocida y coordinar con la persona tutora del centro. Véase la [IUV 3/2024](https://www.uv.es/uvweb/gerencia/es/gerencia/instruccion-3/2024-implantacion-del-plan-tutorizacion-deportistas-elite-uv-1285866727042/Novetat.html?id=1286386896099).
+
+Ante señales de malestar, informa de los recursos de [asesoría psicológica del SEDI](https://www.uv.es/uvweb/servicio-informacion-dinamizacion-sedi/es/informacion-soporte/asesorias-uv-estudiantes/asesorias-uv-estudiantes/asesoria-psicologica-1286126960741.html). Si existe riesgo inmediato, prioriza emergencias; una tutoría docente no es atención sanitaria.
+
+> **Ejemplo realista — adaptación de examen.** Una estudiante comunica verbalmente que necesita más tiempo por una condición médica. El profesor la escucha sin pedir el diagnóstico, comprueba si ha recibido el informe técnico de UVdiscapacidad y, si no consta, le indica el canal oficial. Cuando llega el informe, coordina espacio, tiempo y medios con la ETSE y aplica exactamente la adaptación, manteniéndola fuera de listas públicas y actas ordinarias.
+
+## 14. Movilidad e internacionalización
+
+Debe distinguirse entre movilidad financiada Erasmus+, licencia o comisión de servicio, viaje con cargo a proyecto y estancia sin financiación. Una concesión económica no sustituye la autorización laboral o académica ni garantiza que todo gasto sea elegible.
+
+### 14.1 Movilidad saliente del PDI
+
+1. Revisa la convocatoria vigente, institución elegible, duración, actividad mínima y plazo de sede.
+2. Obtén invitación o acuerdo de movilidad con objetivos, fechas y docencia/formación prevista.
+3. Coordina sustitución o recuperación de docencia con el DIE y solicita la licencia o comisión correspondiente.
+4. Tramita seguro, cobertura sanitaria, prevención, viaje y, si procede, visado antes de asumir gastos.
+5. Conserva certificados de estancia y actividad firmados después de realizarla, tarjetas de embarque y justificantes exigidos.
+6. Presenta la justificación y reconoce la financiación en los resultados cuando lo exija el programa.
+
+La [movilidad docente Erasmus del PDI](https://www.uv.es/uvweb/formacion-profesorado/es/movilidad-cooperacion/ori-facultat-formacio-del-professorat/movilidad-pdi/pas/programa-erasmus-pdi/pas/movilidad-docente-pdi-1285848223125.html) se tramita por sede y cambia cada curso.
+
+### 14.2 Personal visitante
+
+Antes de invitar a una persona, define estatus, duración, financiación, puesto de trabajo, acceso a sistemas y laboratorios, seguro, propiedad intelectual, confidencialidad y tratamiento de datos. Una carta de invitación científica no crea por sí sola vínculo laboral, permiso migratorio ni autorización de acceso a infraestructuras.
+
+> **Ejemplo realista — estancia Erasmus y congreso.** Una profesora enlaza cuatro días de docencia Erasmus con un congreso financiado por un proyecto. Separa ambos expedientes, identifica qué noches y desplazamientos corresponden a cada financiación, obtiene licencia y cobertura docente, y solicita certificados diferenciados. No carga el mismo billete íntegro a dos ayudas ni supone que la ayuda Erasmus autoriza la ausencia del puesto.
+
+## 15. Doctorado y dirección de tesis
+
+La dirección de tesis implica seguimiento académico, integridad, viabilidad y protección de la persona doctoranda; no se limita a firmar formularios. Deben aplicarse el RD 99/2011, el [RRI de la Escuela de Doctorado](https://www.uv.es/escoladoct/REGLAMENTOS/02%20PROPUESTA%20DE%20RRI%20DE%20LA_ED_Y%20DE%20ESTUDIOS%20DE%20DOCTORADO%20DE%20LA%20UV_C.pdf), la normativa de depósito y las reglas del programa.
+
+### 15.1 Incorporación y seguimiento
+
+1. Acordad tema, alcance, dedicación, recursos, financiación, plan formativo, reuniones y criterios de autoría.
+2. Identificad desde el inicio ética, bioseguridad, datos, confidencialidad, cotutela, empresa y posibles resultados protegibles.
+3. Mantened actualizado el plan de investigación/formación y el documento de actividades.
+4. Preparad la evaluación anual con evidencias; una evaluación negativa debe motivarse y permitir las garantías previstas.
+5. Documentad cambios de dirección, dedicación, título, plan o bajas mediante el procedimiento del programa.
+
+### 15.2 Publicaciones, depósito y defensa
+
+Antes de autorizar el depósito, comprueba matrícula y evaluaciones, formato, originalidad, publicaciones, coautorías, protección de resultados, datos y autorizaciones. Para tesis por compendio, mención internacional o industrial y cotutela se exige documentación adicional. Consulta el [Reglamento sobre depósito, evaluación y defensa](https://www.uv.es/medidocs/doctorado/depositotesis/Reglamento_sobre_deposito_evaluacion_y_defensa_de_la_tesis_doctoral.pdf) y la [guía de estudios de doctorado UV](https://www.uv.es/escoladoct/GUIAS/Guia_de_los_estudios_de_doctorado_UV..pdf).
+
+Los conflictos sobre autoría, calendario o disponibilidad de resultados deben tratarse temprano y por escrito. La dirección no puede garantizar una fecha de defensa que depende de depósito, informes, tribunal y autorizaciones institucionales.
+
+> **Ejemplo realista — tesis con patente y empresa.** Una doctoranda tiene un artículo aceptado y resultados nuevos potencialmente patentables obtenidos en un contrato con empresa. Antes del depósito, dirección y doctoranda revisan obligaciones de confidencialidad, comunican el resultado a Transferencia y coordinan qué versión de tesis puede evaluarse y publicarse. No retrasan la consulta hasta que RODERIC haya hecho pública la memoria.
+
+## 16. Permisos, licencias, vacaciones y sabáticos
 
 El reglamento UV publicado como ACGUV 21/2003 ha sido modificado numerosas veces. Debe leerse junto con TREBEP, Estatuto de los Trabajadores, Ley valenciana 4/2021, convenio colectivo y normativa posterior de conciliación.
 
-### 7.1 Competencia y antelación general
+### 16.1 Competencia y antelación general
 
 | Duración/tipo | Quién autoriza | Antelación publicada |
 |---|---|---:|
@@ -309,7 +454,7 @@ El reglamento UV publicado como ACGUV 21/2003 ha sido modificado numerosas veces
 
 El informe departamental debe indicar quién asume docencia, tutorías y demás obligaciones. Algunos permisos, aunque duren menos de un mes, están reservados al vicerrectorado.
 
-### 7.2 Licencia de estudios superior a un mes
+### 16.2 Licencia de estudios superior a un mes
 
 Documentación básica:
 
@@ -320,11 +465,11 @@ Documentación básica:
 
 Si supera tres meses requiere además informe favorable de la Comisión de Profesorado. Al finalizar debe aportarse certificado del centro receptor y comunicarse la reincorporación. Los cambios de fechas o destino requieren comunicación y, cuando corresponda, nueva autorización.
 
-### 7.3 Vacaciones
+### 16.3 Vacaciones
 
 La regla interna publicada sitúa las vacaciones anuales del PDI en agosto. La dirección del departamento puede autorizar otro periodo por motivo académico justificado o conciliación, si quedan cubiertas las necesidades del servicio. La solicitud de cambio debe presentarse antes del **15 de junio** y el departamento comunica los periodos antes del 30 de junio.
 
-### 7.4 Sabático
+### 16.4 Sabático
 
 Existe convocatoria anual. Para 2026-2027 se convocaron 25 licencias semestrales, con solicitud telemática del 9 de enero al 6 de febrero de 2026. Estas fechas son solo referencia: cada convocatoria fija las suyas. Véase la [convocatoria oficial](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/otras-convocatorias/licencia-sabatico/convocatoria-curso-2026-2027-1285927662601.html).
 
@@ -335,15 +480,15 @@ Al finalizar el sabático debe presentarse una memoria de actividades a la Comis
 
 > **Ejemplo realista — estancia de investigación de seis semanas.** Un profesor quiere realizar una estancia desde el 1 de octubre hasta mediados de noviembre. Como supera un mes pero no tres, prepara la licencia con al menos 20 días de antelación, aporta invitación, fechas, justificación académica y previsión de cobertura docente, y la canaliza a través del DIE hacia RR. HH. PDI o el vicerrectorado competente. No compra billetes no reembolsables suponiendo que un acuerdo verbal equivale a autorización.
 
-## 11. Carrera, acreditación y complementos
+## 17. Carrera, acreditación y promoción
 
-### 11.1 Acreditación ANECA
+### 17.1 Acreditación ANECA
 
 La acreditación estatal para TU o CU se solicita por la sede electrónica de ANECA conforme al RD 678/2023. Debe seleccionarse cuerpo y comisión, y acreditar el requisito de movilidad cuando corresponda. La información vigente está en [ANECA](https://ayuda.aneca.es/hc/es/articles/21625407058204-4-Inicio-e-instrucci%C3%B3n-del-procedimiento-para-la-obtenci%C3%B3n-de-la-acreditaci%C3%B3n-estatal-para-el-acceso-a-los-cuerpos-docentes-universitarios).
 
 La acreditación no produce por sí sola una promoción ni una plaza: habilita para participar en el procedimiento posterior.
 
-### 11.2 Promoción interna UV
+### 17.2 Promoción interna UV
 
 Los criterios se aprueban por curso. En 2026-2027 las solicitudes se presentaron del 12 al 27 de marzo mediante instancia interna dirigida al departamento de adscripción. Por tanto:
 
@@ -354,7 +499,11 @@ Los criterios se aprueban por curso. En 2026-2027 las solicitudes se presentaron
 
 Fuente permanente: [normativa específica PDI](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html).
 
-### 11.3 Quinquenios, sexenios y complemento autonómico
+> **Ejemplo realista — acreditación y promoción no son el mismo trámite.** Laura, profesora contratada doctora, obtiene la acreditación estatal a titular. Guarda la resolución, pero no interpreta que produzca automáticamente el nombramiento: revisa por separado la convocatoria de promoción interna de la UV, sus méritos computables, el plazo de solicitud y la documentación exigida. La acreditación es un requisito; la plaza y el concurso siguen su propio procedimiento.
+
+## 18. Nómina, retribuciones y previsión social
+
+### 18.1 Trienios, quinquenios, sexenios y complemento autonómico
 
 - **Quinquenios:** convocatoria UV anual. En 2025 el plazo fue del 1 al 31 de diciembre; el reconocimiento tuvo efectos desde el 1 de enero siguiente. La evaluación Docentia no sustituye la solicitud retributiva.
 - **Sexenios:** la vía depende de ser PDI funcionario o laboral. Comprueba la convocatoria CNEAI/ANECA y la página UV específica del colectivo.
@@ -364,7 +513,7 @@ La [Sección de Gestión de PDI](https://www.uv.es/uvweb/servicio-recursos-human
 
 Contra la resolución de quinquenios que agota la vía administrativa se prevé, con carácter general, reposición potestativa en un mes o recurso contencioso-administrativo en dos meses. Debe comprobarse siempre el pie de recursos de la resolución recibida.
 
-### 11.4 Retribuciones PDI y calculadora 2026
+### 18.2 Retribuciones PDI y calculadora 2026
 
 La [calculadora retributiva interactiva](https://jorpago2.github.io/uv-administracion/#calculadora-retributiva) estima el bruto anual y el equivalente medio por paga para las categorías y dedicaciones incluidas en la tabla oficial UV de 2026. Permite añadir trienios, quinquenios, sexenios, un cargo académico y complementos autonómicos ya reconocidos.
 
@@ -377,13 +526,45 @@ El resultado no es una nómina ni una predicción de salario neto. No incorpora 
 
 Fuentes: [tabla retributiva oficial UV 2026](https://www.uv.es/transparent/pdi/retribucions_pdi-UV.pdf), [convocatoria UV del complemento autonómico 2026](https://www.uv.es/pdi/Complement%20Autonomic/2026/2026_6844_va.pdf), [ACGUV 355/2025](https://www.uv.es/pdi/Complement%20Autonomic/2026/Annex%20355SG.pdf) y [Real Decreto-ley 14/2025](https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24445&lang=es).
 
+### 18.3 Cómo revisar una nómina
+
+1. Comprueba categoría, dedicación, antigüedad, cargo y fecha de efectos.
+2. Separa devengos fijos, complementos reconocidos, atrasos y conceptos no periódicos.
+3. Distingue base de cotización, retención de IRPF y demás deducciones; el líquido no permite verificar por sí solo el bruto.
+4. En pagas extraordinarias, no presupongas que todos los conceptos tienen el mismo importe que en una mensualidad ordinaria.
+5. Compara con resoluciones individuales y con la [tabla publicada en el Portal de Transparencia](https://www.uv.es/uvweb/transparencia-uv/es/personas/pdi/bandas-salariales-retribuciones-1285924386851.html).
+6. Si detectas una diferencia, solicita a RR. HH. PDI el desglose y la corrección por escrito, indicando nómina, concepto, periodo y resolución afectada.
+
+### 18.4 Incapacidad temporal y previsión social
+
+La baja médica, el permiso y la justificación de una ausencia son procedimientos distintos. Comunica la situación por el canal laboral aplicable y coordina la cobertura docente sin divulgar diagnósticos. El [ACGUV 18/2013](https://www.uv.es/pdi/normativa/ACGUV_18-2013_%28IT%29.pdf) regula complementos de la prestación de incapacidad temporal, pero debe contrastarse con la normativa posterior y el régimen de afiliación.
+
+Para jubilación, comprueba primero si corresponde Régimen General, clases pasivas u otro régimen, porque edad, cálculo, compatibilidades y órgano competente pueden variar. Solicita con antelación hoja de servicios, vida laboral y simulación oficial; la [Seguridad Social](https://prestaciones.seg-social.es/servicio/pension-jubilacion.html) permite simular y tramitar la pensión del Régimen General. La UV gestiona el cese administrativo, pero no sustituye al organismo que reconoce la pensión.
+
 > **Ejemplo realista — estimación antes de revisar una nómina.** Un profesor titular a tiempo completo con tres trienios, dos quinquenios y tres sexenios introduce únicamente los periodos que figuran en sus resoluciones. La herramienta obtiene 54.278,08 € brutos anuales si activa el tramo autonómico de 1.320 € correspondiente a cinco periodos reconocidos. El equivalente medio es 3.877,01 € por paga, pero no debe compararse directamente con una mensualidad ordinaria sin revisar el desglose de las extras y las deducciones.
 
-> **Ejemplo realista — acreditación y promoción no son el mismo trámite.** Laura, profesora contratada doctora, obtiene la acreditación estatal a titular. Guarda la resolución, pero no interpreta que produzca automáticamente el nombramiento: revisa por separado la convocatoria de promoción interna de la UV, sus méritos computables, el plazo de solicitud y la documentación exigida. La acreditación es un requisito; la plaza y el concurso siguen su propio procedimiento.
+## 19. Cambio de situación, cese y jubilación
 
-## 12. Proyectos competitivos y ayudas de investigación
+La [Sección de Gestión de PDI](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html) tramita excedencias, servicios especiales, reingresos, comisiones de servicio, cambios de dedicación, reducciones de jornada, jubilaciones y ceses. Los efectos no deben darse por producidos hasta existir resolución, contrato o toma de posesión válida.
 
-### 9.1 Presentación de propuestas
+### 19.1 Antes de cambiar o finalizar la vinculación
+
+1. Solicita información individual a RR. HH. PDI sobre régimen, fecha y efectos retributivos y de Seguridad Social.
+2. Comprueba preaviso, convocatoria o autorización exigida; una comunicación al departamento puede no bastar.
+3. Coordina docencia, tutorías, tribunales, tesis y responsabilidades en proyectos.
+4. Reasigna formalmente claves, inventario, muestras, datos, contratos y personal supervisado.
+5. Conserva hoja de servicios, certificados, resoluciones retributivas y documentación de cotización.
+6. Revoca accesos personales cuando corresponda, sin eliminar registros institucionales ni datos que deban conservarse.
+
+### 19.2 Jubilación y profesorado emérito
+
+La jubilación y una eventual contratación como emérito son decisiones diferentes. El departamento presenta propuestas de profesorado emérito conforme al [ACGUV 45/2023 y la convocatoria anual](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/novedades/convocatoria-profesorado-emerito-2025-1285923457786/Novetat.html?id=1286305074793); no existe continuidad automática. Deben separarse la fecha de jubilación, el reconocimiento de la pensión, el cierre de la plaza anterior y, en su caso, el nuevo vínculo.
+
+> **Ejemplo realista — jubilación con proyectos activos.** Un catedrático prevé jubilarse dentro de nueve meses y dirige una tesis y dos proyectos. Solicita simulación y hoja de servicios, acuerda con RR. HH. la fecha administrativa, consulta al SGI si puede continuar como IP y tramita con tiempo los cambios que exija cada financiador. El DIE y el ICMUV documentan sustituciones, inventario y accesos. La posible propuesta como emérito se tramita aparte y no se usa como garantía de continuidad.
+
+## 20. Solicitud de proyectos competitivos y ayudas de investigación
+
+### 20.1 Presentación de propuestas
 
 No utilices únicamente el plazo de la agencia financiadora. La UV suele fijar un **plazo interno anterior** para revisar presupuesto, elegibilidad, participación y firma del representante legal.
 
@@ -399,7 +580,13 @@ Procedimiento recomendado:
 
 Si la UV no es beneficiaria y se participa en una propuesta liderada por otra entidad, debe solicitarse autorización institucional mediante sede. La firma estará disponible posteriormente en «Mis trámites». Véase el [portal oficial de gestión y trámites](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html).
 
-### 9.2 Tras la concesión
+> **Ejemplo realista — plazo interno anterior al de la agencia.** Una convocatoria de la AEI cierra el 15 de septiembre, pero el Servicio de Gestión de la Investigación fija el cierre interno el día 8. El IP entrega antes de ese segundo plazo la memoria, presupuesto, equipo, compromisos y formularios de firma. Enviar una versión directamente a la plataforma externa el día 14 no subsana haber omitido la revisión y firma institucional de la UV.
+
+## 21. Gestión de proyectos concedidos
+
+La resolución de concesión, la solicitud aprobada, las instrucciones de ejecución y la normativa UV forman conjuntamente el marco del proyecto. La unidad gestora y el [Servicio de Gestión de la Investigación](https://www.uv.es/uvweb/servicio-investigacion/es/servicio-gestion-investigacion-1285913826831.html) apoyan el seguimiento y la justificación, pero el IP sigue siendo responsable de la ejecución científica y de anticipar incidencias.
+
+### 21.1 Alta y ejecución
 
 Antes de gastar:
 
@@ -412,9 +599,44 @@ Antes de gastar:
 
 Un gasto permitido por la UV puede no ser elegible para la ayuda. En caso de conflicto, aplica la condición más restrictiva o solicita confirmación escrita.
 
-> **Ejemplo realista — plazo interno anterior al de la agencia.** Una convocatoria de la AEI cierra el 15 de septiembre, pero el Servicio de Gestión de la Investigación fija el cierre interno el día 8. El IP entrega antes de ese segundo plazo la memoria, presupuesto, equipo, compromisos y formularios de firma. Enviar una versión directamente a la plataforma externa el día 14 no subsana haber omitido la revisión y firma institucional de la UV.
+### 21.2 Cambios, seguimiento y riesgos
 
-## 13. Contratos y convenios con empresas — artículo 60 LOSU
+- Mantén un calendario de hitos científicos, contratación, compras, informes, auditorías y fin de elegibilidad.
+- Revisa mensualmente ejecución por concepto y compromisos pendientes; saldo contable no equivale a saldo elegible.
+- Solicita autorización antes de cambios relevantes de equipo, IP, entidad, presupuesto, objetivos o plazo.
+- Documenta desviaciones, decisiones y entregables; no reconstruyas la trazabilidad al final.
+- Controla obligaciones de publicidad, acceso abierto, datos, igualdad, DNSH, conflicto de interés y doble financiación cuando sean aplicables.
+
+### 21.3 Justificación y cierre
+
+Planifica el cierre varios meses antes. Completa entregables, regulariza compromisos, verifica inventario y contratos, concilia gastos con el presupuesto aprobado y conserva facturas, adjudicaciones, recepción, pagos, viajes, partes de dedicación y evidencias de difusión. Responde coordinadamente a requerimientos y auditorías; no envíes directamente a la agencia información distinta de la validada por la UV.
+
+> **Ejemplo realista — equipo entregado al final del proyecto.** Un analizador llega diez días antes del fin de ejecución, pero la puesta en marcha y el acta de recepción quedan para el mes siguiente. El IP consulta antes de cerrar si la convocatoria exige entrega, pago o funcionamiento dentro del periodo; coordina recepción e inventario y solicita, si aún es posible, una modificación. La factura por sí sola no demuestra que el gasto sea elegible.
+
+## 22. Contratación de personal con cargo a proyectos
+
+La persona responsable de un proyecto con crédito para personal puede solicitar una convocatoria de personal investigador o de apoyo, pero no seleccionar ni incorporar informalmente a una persona. El procedimiento se inicia mediante la [solicitud de convocatoria pública](https://www.uv.es/uvweb/servicio-recursos-humanos-pas/es/gestion-personal-investigacion/gestion-interna-nuevas-contrataciones/requisitos-publicar-ofertas-dogv-1285931205622.html) y se rige por la categoría, la fuente financiadora y la normativa UV.
+
+### 22.1 Preparación de la plaza
+
+1. Confirma crédito, periodo elegible, coste total empresa y duración posible.
+2. Define funciones, titulación, experiencia, jornada, ubicación y retribución coherentes con el proyecto.
+3. Redacta requisitos imprescindibles verificables y un baremo proporcional; evita perfiles dirigidos a una persona concreta.
+4. Tramita la solicitud por sede y espera la conformidad del Servicio de Investigación y la publicación oficial.
+
+### 22.2 Selección e incorporación
+
+- La comisión aplica a todas las candidaturas los criterios publicados, documenta puntuaciones y declara conflictos de interés.
+- No se valoran méritos no previstos ni se cambia el baremo después de conocer candidatos.
+- La persona seleccionada no trabaja hasta que exista contrato y alta; una resolución provisional no basta.
+- Antes del acceso a laboratorios, datos o sistemas se completan prevención, acogida, confidencialidad y permisos.
+- El IP planifica supervisión, formación, evaluación, vacaciones y finalización, y comunica prórrogas o cambios con antelación.
+
+Fuentes: [gestión y trámites de personal de investigación](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html) y [Reglamento del personal investigador UV](https://www.uv.es/uvweb/servicio-investigacion/es/rrhh-investigacion/contratacion-personal-investigador-1285907247790.html).
+
+> **Ejemplo realista — contrato de apoyo para fabricar dispositivos.** Un proyecto necesita una persona técnica durante doce meses. El IP calcula el coste completo, verifica que el contrato cabe dentro de la fecha final, describe tareas y baremo y solicita la convocatoria. Aunque ya conoce a una candidata adecuada, no le permite empezar ni reservarle la plaza; se abstiene si existe una relación que compromete su imparcialidad y conserva las actas de selección.
+
+## 23. Contratos y convenios con empresas — artículo 60 LOSU
 
 Cualquier trabajo científico, tecnológico, artístico o formativo para terceros debe canalizarse previamente mediante contrato o convenio firmado por la UV; el PDI no debe contratar personalmente ni comenzar trabajos basándose solo en correos o presupuestos aceptados.
 
@@ -432,13 +654,13 @@ Fuente: [procedimiento UV para contratos y convenios](https://www.uv.es/uvweb/se
 
 > **Ejemplo realista — ensayo para una empresa.** Una empresa solicita caracterizar durante dos meses unos moduladores y ofrece 12.000 euros, con la condición de empezar la semana siguiente. El investigador no inicia medidas ni acepta el presupuesto por correo: prepara memoria técnica, responsable, equipo participante, costes, propiedad de resultados, confidencialidad y calendario; remite el expediente al Servicio de Transferencia e Innovación y espera las firmas institucionales del contrato del artículo 60.
 
-## 14. Propiedad intelectual, patentes, software y secretos
+## 24. Propiedad intelectual, patentes, software y secretos
 
-### Regla esencial
+### 24.1 Regla esencial
 
 **Primero comunicar y proteger; después publicar, presentar en un congreso, defender públicamente o subir a un repositorio.** Una divulgación previa puede destruir la novedad de una patente.
 
-### Procedimiento
+### 24.2 Procedimiento
 
 1. Identifica el resultado y quién ha contribuido intelectualmente a sus elementos esenciales. Autoría de un artículo e inventoría no son equivalentes.
 2. Identifica financiación, contratos, empresas y otras instituciones participantes.
@@ -455,7 +677,95 @@ Fuente y trámite: [comunicación de resultados protegibles](https://www.uv.es/u
 
 > **Ejemplo realista — publicación frente a patente.** Un doctorando y dos investigadores observan un mecanismo de conmutación reproducible y pretenden incluirlo en el resumen de un congreso dentro de dos semanas. Antes de enviar el resumen o subir código y datos a un repositorio público, documentan autores, fechas y contribuciones, comunican el resultado protegible a Transferencia y coordinan la decisión sobre protección y publicación. La comunicación se realiza sin esperar al límite de tres meses si existe una divulgación inminente.
 
-## 15. Compras y contratos menores
+## 25. Integridad científica, autoría e inteligencia artificial
+
+La UV se adhirió en 2023 al [Código Europeo de Conducta para la Integridad en la Investigación de ALLEA](https://www.uv.es/hrs4r/es/aspectos-eticos-profesionales/codigo-buenas-practicas.html). Sus principios afectan al diseño, datos, colaboración, publicación, revisión y evaluación, no solo a la fabricación o falsificación de resultados.
+
+### 25.1 Prácticas mínimas
+
+- Conserva protocolos, versiones, datos brutos, código, parámetros y decisiones con trazabilidad suficiente para verificar el resultado.
+- Registra resultados negativos y exclusiones; no elimines observaciones solo porque contradicen la hipótesis.
+- Define antes de publicar quién responde por datos, análisis, figuras y archivo.
+- Corrige errores relevantes con rapidez y comunica sospechas mediante canales que protejan a las personas y las evidencias.
+- En revisión por pares, respeta confidencialidad, no uses información privilegiada y declara conflictos.
+
+### 25.2 Autoría y contribuciones
+
+La autoría exige contribución intelectual, revisión o aprobación y responsabilidad sobre el trabajo; financiación, jerarquía o cesión de muestras no bastan por sí solas. Acordad pronto criterios, orden provisional y taxonomía de contribuciones, y revisadlos cuando cambie el proyecto. Diferencia autoría científica, inventoría, titularidad y agradecimientos.
+
+### 25.3 Uso de inteligencia artificial
+
+No introduzcas en servicios de IA no autorizados manuscritos confidenciales, datos personales, resultados protegibles, propuestas o revisiones. Verifica toda salida, documenta el uso cuando la convocatoria o editorial lo exija y no atribuyas a una herramienta responsabilidad o autoría. Código, imágenes, citas y análisis generados requieren la misma comprobación que el trabajo humano.
+
+> **Ejemplo realista — figura generada a partir de datos simulados.** Un investigador utiliza un asistente de IA para refactorizar código que genera una figura. Conserva los datos y el código original, ejecuta pruebas numéricas, revisa licencias y documenta el uso conforme a la revista. No sube al servicio un manuscrito confidencial de revisión ni acepta referencias generadas sin comprobarlas en la fuente primaria.
+
+## 26. Ciencia abierta y gestión de datos de investigación
+
+Abrir no significa publicar todo. La ciencia abierta exige hacer resultados tan abiertos como sea posible y tan cerrados como sea necesario, respetando datos personales, seguridad, propiedad intelectual, contratos y explotación.
+
+### 26.1 Plan de gestión de datos
+
+Al inicio del proyecto define:
+
+1. qué datos, código, diseños, imágenes y metadatos se producirán;
+2. formatos, nomenclatura, versiones y controles de calidad;
+3. almacenamiento, copias, cifrado, accesos y responsables;
+4. base jurídica y seudonimización si existen datos personales;
+5. conservación, eliminación, licencias, embargo y repositorio final;
+6. costes y obligaciones del financiador.
+
+Actualiza el plan cuando cambien métodos, socios o riesgos. La [guía UV de gestión de datos](https://www.uv.es/uvweb/servicio-bibliotecas-documentacion/es/servicio-bibliotecas-documentacion/guia-gestion-datos-investigacion-1285867215074/Novetat.html?id=1286280453948) recomienda herramientas específicas y la aplicación de principios FAIR.
+
+### 26.2 Publicaciones, datos y software
+
+- Revisa la política de acceso abierto del financiador antes de firmar con la editorial.
+- Deposita la versión permitida y los metadatos en RODERIC u otro repositorio adecuado dentro del plazo.
+- Para datos, elige repositorio disciplinar o general con identificador persistente y condiciones de acceso claras.
+- Publica código con versión, entorno, dependencias, licencia y ejemplo reproducible; un archivo sin instrucciones rara vez es reutilizable.
+- Enlaza artículo, dataset y software, e incluye financiación y proyecto correctamente.
+
+Consulta la [Comisión de Ciencia Abierta UV](https://www.uv.es/comision-ciencia-abierta/es/comision-ciencia-abierta.html) y sus compromisos institucionales.
+
+> **Ejemplo realista — dataset de medidas eléctricas.** Un grupo publica curvas I–V de dispositivos, código de ajuste y metadatos de fabricación. Antes elimina identificadores de operadores innecesarios, comprueba que el contrato no impone embargo y reserva los parámetros que constituyen secreto industrial. Deposita una versión documentada con DOI y conserva internamente datos brutos y trazabilidad de las exclusiones.
+
+## 27. Transferencia, emprendimiento y empresas derivadas
+
+Una spin-off o empresa basada en conocimiento requiere resultados o capacidades UV, viabilidad, estrategia de propiedad intelectual, contrato de transferencia y autorización institucional. Constituir una sociedad por cuenta propia no convierte automáticamente la iniciativa en spin-off UV ni habilita el uso de recursos universitarios.
+
+### 27.1 Ruta de creación
+
+1. Comunica y evalúa los resultados con Transferencia antes de divulgar o negociar derechos.
+2. Define equipo promotor, tecnología, mercado, modelo de negocio, financiación y conflictos.
+3. Aclara titularidad, licencia, contraprestaciones, uso de marca, espacios y servicios UV.
+4. Presenta la solicitud de reconocimiento mediante el trámite institucional.
+5. Tramita compatibilidad antes de participar en administración, superar límites de capital o trabajar para la empresa.
+6. Formaliza por separado contratos artículo 60, licencias, uso de equipos y contratación de personal.
+
+La [página oficial de creación de empresas](https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/creacion-empresas-1286323101180.html) reúne el ACGUV 236/2006, modelos y trámites. Ser socio no autoriza a prestar servicios gratuitamente ni a desviar oportunidades, personal o resultados de la UV.
+
+> **Ejemplo realista — spin-off de sensores fotónicos.** Tres investigadores quieren comercializar sensores desarrollados con dos proyectos públicos. Antes de crear la sociedad, notifican la tecnología, revisan cotitularidad y obligaciones de financiación, preparan plan de negocio y solicitan reconocimiento y compatibilidad. El futuro uso de la sala limpia se articula mediante contrato y tarifas; no se reserva informalmente como si siguiera siendo actividad académica ordinaria.
+
+## 28. Equipamiento científico e infraestructuras comunes
+
+Todo equipo debe tener titularidad, inventario, ubicación, responsable, fuente de financiación y condiciones de uso identificables. La compra no termina con la factura: recepción, instalación, prevención, calibración, mantenimiento, datos y retirada forman parte del ciclo de vida.
+
+### 28.1 Alta y operación
+
+1. Antes de comprar, confirma requisitos de espacio, potencia, gases, refrigeración, red, licencias y seguridad.
+2. Al recibir, verifica suministro, prestaciones y documentación antes del acta de conformidad.
+3. Tramita inventario y etiqueta, registra garantía, responsable y plan de mantenimiento/calibración.
+4. Autoriza usuarios tras formación; conserva registros cuando el riesgo o la calidad lo exijan.
+5. Define reservas, prioridades, costes internos, copias de datos y reconocimiento de la infraestructura en publicaciones.
+
+Para servicios del SCSIE, la plataforma [LIMS](https://www.uv.es/uvweb/servei-central-suport-investigacio-experimental/ca/informacio-general/administracio/gestio-tramits/sol-licitud-alta-lims-1285940220064.html) gestiona altas, reservas, resultados y facturación. Los equipos locales del DIE o ICMUV pueden tener reglas propias adicionales.
+
+### 28.2 Avería, traslado y baja
+
+Detén el uso si existe riesgo o resultados no fiables. Documenta avería, última calibración, muestras afectadas y asistencia técnica; no encargues reparación sin expediente económico. Un traslado requiere autorización patrimonial, evaluación de instalación y actualización de inventario. Para baja, elimina datos y sustancias de forma segura y conserva la documentación requerida. Revisa las [ayudas UV para mantenimiento o sustitución de equipamiento científico](https://www.uv.es/uvweb/universitat/ca/recerca-transferencia/financament/programa-ajudes-investigacio-uv/infraestructura-cientifica-1285946452777.html).
+
+> **Ejemplo realista — analizador compartido que falla calibración.** El control semanal queda fuera de tolerancia. El responsable bloquea reservas, identifica medidas realizadas desde el último control válido, informa a usuarios y tramita mantenimiento. No continúa midiendo para «avanzar» ni imputa directamente la reparación a un proyecto sin confirmar elegibilidad y contratación.
+
+## 29. Compras y contratos menores
 
 La [Instrucción IUV 1/2025](https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693) regula la tramitación mediante UV-plyca.
 
@@ -468,14 +778,14 @@ Límites de valor estimado del contrato menor, IVA excluido:
 
 El contrato menor no puede durar más de un año, prorrogarse ni utilizarse para necesidades recurrentes. Por encima del límite aplicable debe acudirse al Servicio de Contratación Administrativa.
 
-### Antes de comprar
+### 29.1 Antes de comprar
 
 - No fracciones una necesidad para eludir umbrales o procedimientos.
 - Confirma crédito y elegibilidad del gasto.
 - No permitas que el proveedor entregue o facture antes de la adjudicación cuando se exige resolución previa.
 - Para importes superiores a 200 € sin IVA, aunque el contrato sea inferior a 5.000 €, remite previamente a la unidad gestora el formulario inicial, presupuesto u oferta.
 
-### Inferior a 5.000 € sin IVA
+### 29.2 Inferior a 5.000 € sin IVA
 
 - Se considera gasto menor.
 - Puede registrarse en UV-plyca después de recibir factura.
@@ -483,7 +793,7 @@ El contrato menor no puede durar más de un año, prorrogarse ni utilizarse para
 - No exige resolución de adjudicación.
 - El documento AD es normalmente potestativo, salvo pagos periódicos o al extranjero.
 
-### Igual o superior a 5.000 € sin IVA
+### 29.3 Igual o superior a 5.000 € sin IVA
 
 1. La unidad registra el expediente en UV-plyca.
 2. Se solicitan y documentan las ofertas exigidas.
@@ -499,11 +809,11 @@ Los pagos al extranjero, exclusividades, gastos compartidos y anticipos tienen r
 
 > **Ejemplo realista — osciloscopio por debajo de 5.000 euros.** Un grupo necesita un osciloscopio de 4.850 euros sin IVA y accesorios asociados. Aunque el equipo está por debajo de 5.000 euros, supera 200: antes de pedirlo, el responsable comprueba crédito y proveedor y tramita la solicitud en UV-plyca. No compra primero con tarjeta personal ni separa artificialmente accesorios que forman parte de una única necesidad para mantener cada factura bajo el umbral.
 
-## 16. Viajes, congresos, dietas e inscripciones
+## 30. Viajes, congresos, dietas e inscripciones
 
 La norma vigente está en el [Anexo 1a del Presupuesto UV 2026](https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf); las cuantías están en el [Anexo 1b](https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf).
 
-### Antes del viaje
+### 30.1 Antes del viaje
 
 1. Confirma que existe crédito y que el gasto es elegible para el proyecto.
 2. Tramita la orden/autorización de comisión de servicio.
@@ -513,7 +823,7 @@ La norma vigente está en el [Anexo 1a del Presupuesto UV 2026](https://www.uv.e
 
 La dirección del DIE o del ICMUV puede autorizar comisiones del personal adscrito según el ámbito y la fuente de financiación. Si un proyecto se gestiona en una estructura distinta de la adscripción, puede autorizar su dirección, pero el profesor sigue siendo responsable de cumplir su docencia.
 
-### Reglas operativas
+### 30.2 Reglas operativas
 
 - No se devengan dietas dentro del municipio o en desplazamientos inferiores a 30 km; sí pueden indemnizarse gastos de viaje.
 - A más de 30 km solo se devenga dieta cuando el servicio exige exceder el horario laboral y se motiva en la autorización.
@@ -526,47 +836,60 @@ La dirección del DIE o del ICMUV puede autorizar comisiones del personal adscri
 
 > **Ejemplo realista — congreso internacional.** Un profesor recibe la aceptación de una comunicación en un congreso de Eindhoven. Antes de pagar inscripción y hotel, identifica el proyecto que financiará el viaje, solicita autorización, confirma qué gastos y límites son elegibles y conserva aceptación, agenda y justificantes. Si combina el viaje con días personales, separa claramente fechas y costes para no imputarlos al proyecto.
 
-## 17. Ética, datos personales y bioseguridad
+## 31. Protección de datos y seguridad de la información
 
-### 14.1 Investigación con personas o muestras humanas
+### 31.1 Antes de tratar datos personales
 
-Necesitan informe favorable del CEIH los proyectos con experimentación o interacción con personas, intervenciones sociales o muestras humanas.
+1. Determina finalidad, base jurídica, categorías de datos, personas afectadas y plazo de conservación.
+2. Recoge únicamente las variables necesarias y separa identificadores de los datos de trabajo.
+3. Define responsables, permisos, copias, cifrado y procedimiento de eliminación.
+4. Prepara la información a las personas y el consentimiento solo cuando esta sea la base aplicable; consentimiento ético y base jurídica RGPD no son equivalentes.
+5. Consulta al DPD si existen datos de salud, biométricos o genéticos, menores, colectivos vulnerables, seguimiento sistemático, gran escala o decisiones automatizadas.
 
-1. Presenta la solicitud por sede al menos **2 meses antes** del inicio.
-2. El IP debe ser PDI doctor de la UV.
-3. Adjunta formulario EH-1, proyecto, información al participante, consentimiento y documentos de datos/confidencialidad.
-4. No inicies reclutamiento o intervención: el CEIH no evalúa estudios que ya hayan iniciado esa fase.
-5. Si el proyecto principal ya tiene dictamen favorable, comprueba si cubre exactamente el subestudio.
+### 31.2 Herramientas, cesiones y publicación
 
-Fuente: [instrucciones del CEIH](https://www.uv.es/comision-etica-investigacion-experimental/es/etica-investigacion-humanos/instrucciones.html).
+Utiliza almacenamiento, formularios y plataformas autorizadas por la UV. Antes de contratar o usar un servicio externo, comprueba ubicación, contrato de encargo, transferencias internacionales, conservación y uso secundario. No envíes listas de estudiantes, nóminas, expedientes, manuscritos confidenciales o datos de investigación a cuentas personales o herramientas de IA sin cobertura institucional.
 
-### 14.2 Bioseguridad
+La anonimización debe ser real y resistente a reidentificación; sustituir el nombre por un código es seudonimizar. Para compartir o publicar, revisa metadatos, nombres de archivo, comentarios, historiales y combinaciones de variables.
 
-Los proyectos con agentes biológicos u OMG necesitan certificación de aptitud de instalaciones y nivel de contención. La solicitud se presenta por sede; el comité evalúa las recibidas hasta una semana antes de cada reunión. Véase el [procedimiento del Comité de Bioseguridad](https://www.uv.es/comision-etica-investigacion-experimental/es/bioseguridad/formularios-solicitudes/evaluacion-proyectos.html).
-
-### 14.3 Protección de datos
-
-Antes de recoger datos personales:
-
-- determina finalidad, base jurídica, variables y plazo de conservación;
-- minimiza datos y separa identificadores de datos de investigación;
-- emplea almacenamiento y herramientas autorizadas por la UV;
-- formaliza consentimiento cuando sea la base aplicable, sin confundir consentimiento ético con base jurídica RGPD;
-- consulta al DPD si hay datos de salud, biométricos, genéticos, menores, colectivos vulnerables, seguimiento sistemático o decisiones automatizadas;
-- no abras nuevos ficheros o servicios externos con datos personales sin la revisión necesaria.
-
-### 14.4 Brecha o incidente
+### 31.3 Brecha o incidente
 
 - Incidente informático: crea inmediatamente un tique en [`solicitudes.uv.es`](https://solicitudes.uv.es), categoría «Seguridad de la información».
 - Extrema gravedad: `enseg@uv.es`.
 - Si afecta a datos personales: escribe sin demora a `lopd@uv.es`, asunto «posible brecha de seguridad».
 - No borres evidencias, no ocultes el incidente y no contactes por tu cuenta con las personas afectadas o la AEPD salvo indicación institucional.
 
-Fuentes: [comunicación de incidentes](https://www.uv.es/ensuv/es/guias-procedimientos/seguridad-uv/comunicar-incidentes-seguridad-informacion.html) y [brechas de datos](https://www.uv.es/uvweb/universidad/es/universitat/delegacion-proteccion-datos-/brechas-seguridad-1286152181710.html).
+Fuentes: [Delegación de Protección de Datos UV](https://www.uv.es/uvweb/universidad/es/universitat/delegacion-proteccion-datos-/delegacion-1286042855523.html), [comunicación de incidentes](https://www.uv.es/ensuv/es/guias-procedimientos/seguridad-uv/comunicar-incidentes-seguridad-informacion.html) y [brechas de datos](https://www.uv.es/uvweb/universidad/es/universitat/delegacion-proteccion-datos-/brechas-seguridad-1286152181710.html).
 
-> **Ejemplo realista — encuesta con datos sensibles.** Un equipo quiere encuestar a estudiantes sobre fatiga, salud y rendimiento y cruzar las respuestas con calificaciones. Antes de reclutar participantes, define base jurídica, información y consentimiento cuando proceda, minimización, seudonimización, accesos y conservación; solicita evaluación al CEIH con al menos dos meses y consulta al DPD. No comienza como «prueba piloto» con datos reales esperando regularizarla después.
+> **Ejemplo realista — hoja compartida con calificaciones.** Un docente descubre que una hoja con nombres y notas se ha compartido mediante un enlace público. Retira el acceso sin destruir registros, conserva URL y evidencias, comunica inmediatamente el incidente por los canales UV y sigue las instrucciones del DPD. No se limita a borrar el correo ni escribe por su cuenta a todo el grupo antes de la evaluación institucional de la brecha.
 
-## 18. Prevención de riesgos y laboratorios
+## 32. Ética de la investigación y bioseguridad
+
+La aprobación científica de un proyecto no sustituye los informes éticos, de bienestar animal o bioseguridad. Deben obtenerse antes de comenzar la fase afectada y actualizarse ante cambios sustanciales.
+
+### 32.1 Investigación con personas o muestras humanas
+
+Necesitan informe favorable del CEIH los proyectos con experimentación o interacción con personas, intervenciones sociales o muestras humanas.
+
+1. Presenta la solicitud por sede al menos **2 meses antes** del inicio.
+2. El IP debe cumplir los requisitos publicados por la UV.
+3. Adjunta proyecto, información al participante, consentimiento y documentos de datos/confidencialidad.
+4. No inicies reclutamiento o intervención: el CEIH no evalúa estudios que ya hayan iniciado esa fase.
+5. Si el proyecto principal ya tiene dictamen favorable, comprueba si cubre exactamente el subestudio.
+
+Fuente: [instrucciones del CEIH](https://www.uv.es/comision-etica-investigacion-experimental/es/etica-investigacion-humanos/instrucciones.html).
+
+### 32.2 Experimentación animal
+
+Los procedimientos con animales requieren personal acreditado, órgano habilitado, evaluación ética, autorización competente e instalaciones adecuadas. Aplica reemplazo, reducción y refinamiento, registra bienestar y desviaciones y no reutilices una autorización para objetivos o procedimientos no cubiertos. Consulta la [Comisión de Ética en Investigación Experimental](https://www.uv.es/comision-etica-investigacion-experimental/es/comision-etica-investigacion-experimental.html).
+
+### 32.3 Bioseguridad
+
+Los proyectos con agentes biológicos u organismos modificados genéticamente necesitan evaluación de instalaciones, nivel de contención, procedimientos, residuos y emergencias. La solicitud se presenta por sede; el comité evalúa las recibidas hasta una semana antes de la reunión correspondiente. Véase el [procedimiento del Comité de Bioseguridad](https://www.uv.es/comision-etica-investigacion-experimental/es/bioseguridad/formularios-solicitudes/evaluacion-proyectos.html).
+
+> **Ejemplo realista — sensores probados con muestras humanas.** Un equipo quiere validar un sensor con muestras residuales facilitadas por un hospital. Antes de recibirlas, aclara responsable, convenio, codificación, base jurídica, consentimiento o habilitación, transporte, almacenamiento y destrucción; solicita los informes éticos y de bioseguridad que correspondan. Que las muestras estén «anonimizadas» según el colaborador no sustituye la verificación documental.
+
+## 33. Prevención de riesgos y laboratorios
 
 Antes de introducir un equipo, proceso, sustancia, láser, fuente de radiación, nanomaterial o instalación experimental nueva:
 
@@ -582,7 +905,27 @@ Ante accidente grave: proteger, avisar y socorrer, sin exponerse a un segundo ac
 
 > **Ejemplo realista — nueva estación láser.** El laboratorio incorpora un láser para caracterización fotónica. Antes de que lo utilicen doctorandos o estudiantes, se actualizan la evaluación de riesgos y el procedimiento de trabajo, se verifican cerramientos, señalización, gafas adecuadas a la longitud de onda, responsables y formación. Una demostración breve tampoco se realiza si esas medidas aún no están implantadas.
 
-## 19. Incompatibilidades, conflicto de interés y uso de recursos
+## 34. Igualdad, convivencia, acoso y discriminación
+
+La responsabilidad de mantener un entorno respetuoso alcanza docencia, investigación, órganos colegiados, viajes, congresos, laboratorios y comunicaciones digitales. Una conducta puede requerir medidas preventivas o de protección aunque todavía no exista una resolución disciplinaria.
+
+### 34.1 Prevención y primera respuesta
+
+- No normalices comentarios, mensajes, aislamiento, represalias o conductas degradantes por jerarquía, sexo, origen, discapacidad, religión, orientación, identidad u otra condición.
+- Si una persona informa de una situación, escucha sin interrogar ni prometer resultados, explica límites de confidencialidad y ofrece los canales especializados.
+- Conserva mensajes y documentos; evita investigaciones paralelas o careos improvisados.
+- Si existe riesgo inmediato, prioriza seguridad y emergencias; comunica a la unidad competente.
+- Las medidas de protección deben evitar trasladar el perjuicio a quien comunica los hechos.
+
+### 34.2 Canales y garantías
+
+La [Unidad de Igualdad](https://www.uv.es/uvweb/unitat-igualtat/es/unitat-igualtat-1285869753878.html) ofrece acompañamiento y la UV dispone de ventanilla única, vía informal y formulario conforme al [protocolo frente al acoso sexual y otros acosos discriminatorios](https://www.uv.es/uvweb/unidad-igualdad/es/violencia-machista/protocolo-acoso-1286060385204.html). El Código de Convivencia y Buenas Prácticas sigue siendo aplicable y el protocolo conserva vigencia en lo que no lo contradiga.
+
+Distingue una consulta, una actuación informal, una denuncia del protocolo, una comunicación al canal interno y una denuncia penal. Cada vía tiene objeto y garantías diferentes; no remitas automáticamente todos los casos al mismo buzón.
+
+> **Ejemplo realista — mensajes discriminatorios en un grupo de investigación.** Una investigadora muestra al director mensajes reiterados sobre su origen y amenazas de excluirla de autorías. El director preserva las evidencias, evita una confrontación grupal, informa de los canales y consulta medidas de protección con la Unidad de Igualdad. No condiciona el apoyo a que la afectada presente inmediatamente una denuncia formal ni comunica los hechos a todo el equipo.
+
+## 35. Incompatibilidades, conflicto de interés y uso de recursos
 
 Antes de aceptar una segunda actividad, administración de empresa, consultoría, participación remunerada o cargo externo:
 
@@ -597,9 +940,9 @@ Normas de partida: Ley 53/1984, RD 598/1985, LOSU, Estatutos UV y regulación de
 
 > **Ejemplo realista — consultoría relacionada con la investigación.** Una empresa ofrece a un profesor ocho horas mensuales de asesoramiento remunerado sobre dispositivos neuromórficos, una materia próxima a sus proyectos UV. Antes de firmar, declara la actividad, solicita la compatibilidad o autorización que corresponda y aclara propiedad intelectual, confidencialidad y uso de recursos. No utiliza medidas, software, personal ni equipamiento de la UV como parte de la consultoría sin el instrumento institucional adecuado.
 
-## 20. Recursos, quejas, denuncias y protección
+## 36. Recursos administrativos y defensa de derechos
 
-### 17.1 Frente a una resolución administrativa
+### 36.1 Frente a una resolución administrativa
 
 1. Lee el pie de recursos: identifica si agota o no la vía administrativa.
 2. Anota fecha de notificación efectiva.
@@ -609,16 +952,35 @@ Normas de partida: Ley 53/1984, RD 598/1985, LOSU, Estatutos UV y regulación de
 
 Como orientación general, la reposición suele ser de un mes frente a actos expresos que agotan vía administrativa; la alzada, de un mes frente a actos que no la agotan. Debe prevalecer siempre el pie de recursos concreto y la Ley 39/2015.
 
-### 17.2 Sindicatura de Greuges
+### 36.2 Acceso al expediente y prueba
+
+Solicita acceso o copia por el cauce del expediente, identifica documentos omitidos y aporta alegaciones dentro del trámite correspondiente. Separa hechos, fundamentos y petición concreta. Guarda el justificante y la versión presentada; una conversación, una queja o una petición de mediación no suspenden por sí solas el plazo de recurso.
+
+### 36.3 Sindicatura de Greuges
 
 Puede recibir consultas en `sgreuges@uv.es` y reclamaciones individuales o colectivas por sede/registro. Garantiza confidencialidad, pero no sustituye los recursos administrativos ni judiciales y recomienda agotar antes las vías ordinarias. Véanse las [instrucciones de la Sindicatura](https://www.uv.es/uvweb/sindicatura-universitaria-greuges/es/escribenos/escribenos-1285872796638.html).
 
-### 17.3 Acoso o discriminación
+> **Ejemplo realista — resolución desfavorable.** Un profesor recibe una resolución que deniega una licencia. El mismo día guarda la notificación completa y anota la fecha de acceso; después identifica en el pie de recursos si la resolución agota la vía administrativa, qué recurso cabe, ante qué órgano y en qué plazo. Presenta el escrito por registro con los documentos pertinentes. Una queja ante la Sindicatura puede ser útil en su ámbito, pero no interrumpe ni sustituye el plazo del recurso administrativo o judicial.
 
-La UV dispone de ventanilla única, vía informal y formulario de denuncia. El protocolo prioriza protección, confidencialidad y ausencia de perjuicio para la víctima. Véase el [protocolo oficial](https://www.uv.es/uvweb/unidad-igualdad/es/violencia-machista/protocolo-acoso-1286060385204.html).
+## 37. Quejas, denuncias y protección frente a represalias
 
-### 17.4 Infracciones, fraude o corrupción
+### 37.1 Elegir el canal correcto
+
+| Situación | Canal inicial orientativo |
+|---|---|
+| Deficiencia de un servicio | Unidad responsable o buzón de quejas y sugerencias |
+| Vulneración de derechos universitarios | Vía ordinaria y, en su ámbito, Sindicatura de Greuges |
+| Acoso o discriminación | Ventanilla/protocolo de la Unidad de Igualdad |
+| Riesgo laboral o psicosocial | Servicio de Prevención y órganos de salud laboral |
+| Posible infracción, fraude o corrupción | Canal interno UV |
+| Emergencia o posible delito inmediato | Servicios de emergencia o autoridad competente |
+
+No difundas acusaciones o datos personales a listas generales. Describe hechos verificables, fechas, personas intervinientes y documentos; separa lo observado de inferencias. Conserva el justificante o código de seguimiento y comunica cualquier represalia por el canal indicado.
+
+### 37.2 Canal interno de información
 
 El canal interno UV se presenta mediante sede, permite comunicación confidencial y genera un código alfanumérico que debe conservarse para acceder al buzón seguro. No se utiliza para reclamaciones académicas ordinarias ni para acusaciones deliberadamente falsas. Véase el [procedimiento del canal interno](https://www.uv.es/uvweb/universidad/es/uvintegridad/canal-denuncia-interna/procedimiento-presentacion-gestion-denuncias-1286338034522.html).
 
-> **Ejemplo realista — resolución desfavorable.** Un profesor recibe una resolución que deniega una licencia. El mismo día guarda la notificación completa y anota la fecha de acceso; después identifica en el pie de recursos si la resolución agota la vía administrativa, qué recurso cabe, ante qué órgano y en qué plazo. Presenta el escrito por registro con los documentos pertinentes. Una queja ante la Sindicatura puede ser útil en su ámbito, pero no interrumpe ni sustituye el plazo del recurso administrativo o judicial.
+El canal protege la confidencialidad y prevé garantías frente a represalias dentro de su ámbito, pero no convierte automáticamente cualquier conflicto en infracción de la Ley 2/2023. Consulta su procedimiento y utiliza los canales específicos cuando se trate de calificaciones, personal, acoso, prevención o protección de datos.
+
+> **Ejemplo realista — posible manipulación de una compra.** Un miembro de una comisión observa que se han fraccionado pedidos y que una persona con relación con el proveedor ha preparado la valoración. Conserva expedientes y correos a los que accede legítimamente, describe hechos y fechas y utiliza el canal interno. No descarga bases completas ajenas al caso ni acusa públicamente a personas antes de que el órgano competente investigue.
