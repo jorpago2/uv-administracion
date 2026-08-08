@@ -197,8 +197,8 @@
     {
       "id": "solicitud-proyecto",
       "featured": true,
-      "title": "Presentar un proyecto competitivo",
-      "summary": "Coordinar memoria, presupuesto, equipo y firma institucional antes del plazo interno UV.",
+      "title": "Encontrar y presentar financiación de investigación",
+      "summary": "Comparar vías europeas, estatales, autonómicas, UV y privadas antes de preparar la propuesta adecuada.",
       "area": "investigacion",
       "roles": ["ip", "responsable"],
       "moments": ["preparar", "tramitar"],
@@ -207,9 +207,9 @@
       "unit": "Servicio de Gestión de la Investigación",
       "deadline": "El plazo interno UV, normalmente anterior al de la agencia",
       "channel": "Trámite indicado en la convocatoria y plataforma de la agencia",
-      "documents": ["Memoria científica", "Presupuesto y justificación", "Equipo, compromisos y formularios de firma"],
-      "steps": ["Localizar convocatoria y cierre interno", "Validar elegibilidad y presupuesto", "Obtener revisión y firma institucional"],
-      "risk": "Presentar solo en la plataforma externa puede dejar sin validar la propuesta institucional.",
+      "documents": ["Bases, convocatoria y criterios de evaluación", "Ficha go/no-go y calendario interno", "Memoria, presupuesto, equipo y formularios de firma"],
+      "steps": ["Vigilar portales y seleccionar la familia adecuada", "Validar beneficiario, encaje, consorcio y presupuesto", "Coordinar revisión y firma institucional antes del cierre UV"],
+      "risk": "Una convocatoria temática o empresarial puede parecer afín y, aun así, no admitir a la UV o no financiar las actividades necesarias.",
       "sourceLabel": "Buscador de convocatorias del Servicio de Investigación",
       "sourceUrl": "https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/buscador-convocatorias-1286271954852.html",
       "validity": "annual"

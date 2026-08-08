@@ -30,3 +30,12 @@ test("los 32 capítulos operativos incluyen un ejemplo realista", () => {
   const exampleCount = (manual.match(/^> \*\*Ejemplo realista/gm) ?? []).length;
   assert.equal(exampleCount, 32);
 });
+
+test("el capítulo de financiación cubre las cinco vías solicitadas y la selección previa", () => {
+  const chapter = manual.match(/^## 20\. [\s\S]+?(?=^## 21\.)/m)?.[0] ?? "";
+  for (const expected of ["Unión Europea", "Estado", "Comunitat Valenciana", "Universitat de València", "Fundaciones y entidades privadas"]) {
+    assert.match(chapter, new RegExp(expected), expected);
+  }
+  assert.match(chapter, /go\/no-go/i);
+  assert.match(chapter, /plazo interno/i);
+});

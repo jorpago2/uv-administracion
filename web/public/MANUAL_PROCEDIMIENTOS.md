@@ -564,23 +564,125 @@ La jubilación y una eventual contratación como emérito son decisiones diferen
 
 ## 20. Solicitud de proyectos competitivos y ayudas de investigación
 
-### 20.1 Presentación de propuestas
+Obtener financiación empieza por escoger el instrumento correcto, no por adaptar una misma memoria a cualquier convocatoria. Deben coincidir al menos el objetivo, la madurez tecnológica, el tipo de beneficiario, el perfil del IP, el consorcio, los gastos necesarios y el calendario. La relación siguiente es un **mapa de programas recurrentes y portales de vigilancia**, no una afirmación de que estén abiertos ni de que conserven cada año las mismas reglas.
 
-No utilices únicamente el plazo de la agencia financiadora. La UV suele fijar un **plazo interno anterior** para revisar presupuesto, elegibilidad, participación y firma del representante legal.
+### 20.1 Mapa de fuentes de financiación
 
-Procedimiento recomendado:
+| Nivel o vía | Instrumentos que conviene vigilar | Encaje típico | Precaución principal |
+|---|---|---|---|
+| Unión Europea | [Funding & Tenders Portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/horizon), programas de trabajo de [Horizonte Europa](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/horizon-europe-work-programmes_en), ERC, MSCA y EIC | Excelencia individual, consorcios internacionales, formación investigadora y deep tech | Leer el *topic* y el programa de trabajo completos; el título de la convocatoria no basta |
+| Redes europeas | [COST](https://www.cost.eu/what-do-we-fund/) | Crear comunidad, reuniones, escuelas y estancias cortas | COST financia actividades de red, no los costes de ejecutar la investigación |
+| Estado | [Buscador y mapa de convocatorias AEI](https://www.aei.gob.es/convocatorias/buscador-convocatorias), [índice de ayudas CDTI](https://www.cdti.es/indice-de-ayudas) y [FECYT](https://www.convocatoria.fecyt.es/publico/bases/bases.aspx) | Proyectos de conocimiento, prueba de concepto, colaboración, personal, equipamiento, I+D empresarial y cultura científica | En CDTI la beneficiaria suele ser una empresa; comprobar el papel financiable de la UV |
+| Comunitat Valenciana | [Programa autonómico de I+D+i](https://ceice.gva.es/es/web/ciencia/a-programa-i-d-i), programas de talento y [ayudas de IVACE+i](https://www.ivace.es/index.php/es/ayudas/innovacion-e-i-d) | Grupos emergentes, consolidados o de excelencia, personal, movilidad, internacionalización y colaboración con empresas | Consultar la edición y el anexo exactos: acrónimos, calendario y condiciones pueden cambiar |
+| Universitat de València | [Buscador UV](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/buscador-convocatorias-1286271954852.html), [programa propio y trámites](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html) | Predoctorales, estancias, visitantes, preparación internacional, valorización y otras acciones propias | Algunas ayudas requieren selección o priorización interna y pueden cerrar antes que la plataforma externa |
+| Fundaciones y entidades privadas | [Becas Leonardo de la Fundación BBVA](https://www.redleonardo.es/informacion-bases-becas-red-leonardo/instrucciones/), [Fundación Ramón Areces](https://www.fundacionareces.es/fundacionareces/es/convocatorias/), [CaixaResearch](https://fundacionlacaixa.org/es/web/caixaresearch/convocatorias-investigacion-innovacion) y convocatorias sectoriales | Proyectos individuales, ciencias de la vida y la materia, salud, transferencia o áreas definidas por cada fundación | Confirmar beneficiario, temática, edad o etapa profesional, incompatibilidades, overheads y convenio con la UV |
+| Empresas y demanda tecnológica | Contratos y convenios del artículo 60 LOSU, cátedras y proyectos empresariales colaborativos | Resolver una necesidad concreta, validar tecnología o transferir conocimiento | No es una subvención: precio, entregables, propiedad intelectual y confidencialidad deben negociarse institucionalmente |
 
-1. Localiza la convocatoria en el [buscador del Servicio de Gestión de la Investigación](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/buscador-convocatorias-1286271954852.html).
+En el contexto de ingeniería electrónica, fotónica, materiales y dispositivos emergentes, las rutas europeas más habituales son: ERC para investigación de frontera liderada por una persona; clústeres de Horizonte Europa para proyectos que respondan a un *topic* y requieran consorcio; [EIC Pathfinder](https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en) para tecnologías rupturistas en fase temprana; EIC Transition para madurar resultados procedentes de actuaciones elegibles; y [MSCA](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/marie-sklodowska-curie-actions_en) para movilidad, formación doctoral y postdoctoral. El [ERC distingue modalidades](https://erc.europa.eu/apply-grant) por etapa de carrera y trayectoria; deben comprobarse las ventanas y extensiones aplicables en la convocatoria concreta.
+
+En el ámbito estatal, la AEI agrupa, entre otras, ayudas de generación de conocimiento, prueba de concepto, colaboración público-privada, redes, equipamiento y recursos humanos. CDTI se orienta principalmente a I+D+i empresarial: en sus [proyectos de I+D](https://www.cdti.es/ayudas/proyectos-de-i-d) la empresa es beneficiaria, por lo que la participación universitaria debe estructurarse conforme al instrumento. FECYT resulta adecuada cuando el objeto principal es cultura científica, no para financiar indirectamente un proyecto de laboratorio.
+
+En la Comunitat Valenciana deben vigilarse las líneas para grupos emergentes o consolidados, Prometeo, captación de proyectos internacionales, movilidad y talento. Las ayudas de IVACE+i pueden ser relevantes cuando existe una empresa tractora o un centro tecnológico, pero no debe presumirse que una universidad pueda solicitarlas directamente. El buscador UV permite filtrar por ámbito geográfico, investigación, innovación, transferencia, proyectos, recursos humanos, movilidad e infraestructuras.
+
+### 20.2 Elegir instrumento según la necesidad
+
+| Necesidad real | Primera familia que conviene explorar | Señal de mal encaje |
+|---|---|---|
+| Idea fundamental ambiciosa y liderazgo científico propio | ERC o proyectos de generación de conocimiento AEI | La memoria depende sobre todo de un producto o cliente inmediato |
+| Tecnología radical en TRL bajo | EIC Pathfinder; después, si el origen es elegible, EIC Transition | Innovación incremental o demostrador ya próximo al mercado |
+| Reto definido que exige socios complementarios | Clústeres de Horizonte Europa, proyectos de colaboración público-privada o programas autonómicos colaborativos | El consorcio se crea solo para cumplir el mínimo y no aporta capacidades esenciales |
+| Contratar o atraer talento | MSCA, Ramón y Cajal, Juan de la Cierva, programas predoctorales/postdoctorales GVA o programa propio UV | La persona o entidad no cumple movilidad, fecha de doctorado o vinculación exigida |
+| Construir una red antes de un gran proyecto | COST, redes AEI, jornadas o ayudas de internacionalización | Se pretende cargar fabricación, personal investigador estable o equipamiento a una ayuda de red |
+| Madurar, proteger o transferir un resultado | Prueba de concepto AEI, EIC Transition si el resultado es elegible, programa UV «Valoritza i Transfereix» o contrato artículo 60 | Se ha divulgado el resultado sin valorar antes protección y titularidad |
+| Proyecto liderado por una empresa | CDTI, IVACE+i, Eurostars u otros instrumentos empresariales | Se presenta a la UV como beneficiaria sin comprobar que el instrumento lo admite |
+| Equipamiento o infraestructura | Equipamiento científico-técnico AEI, expresiones de interés GVA/UV o convocatorias específicas | Se intenta justificar una compra aislada sin plan de uso, mantenimiento, acceso e inventario |
+| Divulgación y participación social | FECYT y programas propios de cultura científica | La actividad principal es investigación y la divulgación es solo accesoria |
+
+La madurez tecnológica o TRL es solo un indicador. También deben coincidir el resultado esperado, el mercado o usuario, la libertad temática, la obligación de consorcio y el modelo de costes. No se debe elevar artificialmente el TRL para entrar en una convocatoria de innovación ni presentar como investigación de frontera un desarrollo meramente incremental.
+
+### 20.3 Sistema personal de vigilancia
+
+Mantén una cartera continua, no una búsqueda improvisada cuando quedan dos semanas:
+
+1. Consulta cada mes el buscador UV y las alertas del SGI; filtra por europeo, estatal, autonómico, propio y otros.
+2. Revisa trimestralmente programas de trabajo, calendarios orientativos y convocatorias previstas de AEI, Comisión Europea, GVA y entidades privadas relevantes.
+3. Conserva una tabla con programa, enlace oficial, objetivo, beneficiario, rol UV, fecha externa, fecha interna, presupuesto, probabilidad cualitativa, responsable y próxima acción.
+4. Clasifica cada oportunidad como `vigilar`, `preparar`, `presentar` o `descartar`, anotando el motivo. No acumules enlaces sin decisión.
+5. Suscríbete a los boletines institucionales y utiliza la [Sección de I+D+i Internacional de la UV](https://www.uv.es/uvweb/servicio-investigacion/es/internacionalizacion/presentacion-1285907257808.html) para programas europeos e internacionales.
+6. Mantén actualizados CVA/CVN, ORCID, producción en `curricul@`, descripción del grupo, inventario de equipos, resultados previos y una ficha de capacidades de una página.
+
+No uses como única fuente agregadores comerciales, redes sociales o correos reenviados. Sirven como alerta, pero la decisión debe basarse en la convocatoria, sus bases, anexos, FAQ y modificaciones oficiales.
+
+### 20.4 Filtro de decisión antes de escribir
+
+Realiza una revisión `go/no-go` y documenta la respuesta:
+
+- **Elegibilidad:** ¿la UV puede ser beneficiaria y la persona propuesta puede ser IP?
+- **Encaje:** ¿el objetivo responde literalmente al *topic* o finalidad, sin forzar la idea?
+- **Resultado:** ¿el entregable y el nivel de madurez coinciden con lo financiado?
+- **Consorcio:** ¿están cubiertas todas las capacidades y cada socio tiene una función necesaria?
+- **Recursos:** ¿hay tiempo de IP, administración, personal, laboratorio y cofinanciación?
+- **Presupuesto:** ¿los costes necesarios son elegibles y los indirectos, IVA y límites están claros?
+- **Evidencia:** ¿existen resultados preliminares, publicaciones, prototipos o usuarios que sostengan la propuesta?
+- **Impacto:** ¿puede demostrarse quién utilizará el resultado y qué cambia si el proyecto funciona?
+- **Obligaciones:** ¿son asumibles ciencia abierta, datos, ética, seguridad, género, DNSH, explotación y auditoría?
+- **Calendario:** ¿queda margen para revisión científica, presupuesto, acuerdos, cartas y firma institucional?
+
+Si fallan elegibilidad o encaje, debe descartarse la convocatoria. Si faltan socios o evidencia, puede convertirse en una acción preparatoria para la edición siguiente, una COST Action, una ayuda pequeña o un contrato piloto.
+
+### 20.5 Coordinación interna en la UV
+
+No utilices únicamente el plazo de la agencia financiadora. La UV puede fijar un **plazo interno anterior** para revisar presupuesto, elegibilidad, participación y firma del representante legal.
+
+1. Comunica tempranamente la intención al Servicio de Gestión de la Investigación o a la unidad de internacionalización/transferencia que corresponda.
 2. Descarga las instrucciones internas UV, no solo las bases externas.
-3. Verifica elegibilidad de IP y equipo, incompatibilidades, dedicación, costes indirectos, contratación y necesidad de informes éticos.
-4. Prepara presupuesto con la unidad gestora antes de comprometer cifras.
-5. Presenta la documentación mediante el trámite indicado y antes del plazo interno.
-6. No alteres equipo o presupuesto después de la validación sin avisar al SGI.
-7. Conserva solicitud final, justificante, memoria, presupuesto y declaraciones firmadas.
+3. Confirma si la UV será coordinadora, beneficiaria, entidad asociada, tercera parte, subcontratada o participante autorizada en un proyecto de otra institución.
+4. Verifica elegibilidad de IP y equipo, incompatibilidades, dedicación, costes indirectos, IVA, contratación, cofinanciación y necesidad de informes éticos.
+5. Prepara el presupuesto con la unidad gestora antes de comprometer cifras o porcentajes al consorcio.
+6. Identifica quién firma cartas, declaraciones, mandatos, acuerdos de consorcio y la solicitud institucional.
+7. Presenta mediante el trámite indicado y antes del plazo interno; conserva la versión cerrada y el justificante.
 
-Si la UV no es beneficiaria y se participa en una propuesta liderada por otra entidad, debe solicitarse autorización institucional mediante sede. La firma estará disponible posteriormente en «Mis trámites». Véase el [portal oficial de gestión y trámites](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html).
+Si la UV no es beneficiaria y se participa en una propuesta liderada por otra entidad, debe solicitarse la autorización institucional que corresponda. La firma del IP no sustituye la del representante legal. Véase el [portal oficial de gestión y trámites](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html).
 
-> **Ejemplo realista — plazo interno anterior al de la agencia.** Una convocatoria de la AEI cierra el 15 de septiembre, pero el Servicio de Gestión de la Investigación fija el cierre interno el día 8. El IP entrega antes de ese segundo plazo la memoria, presupuesto, equipo, compromisos y formularios de firma. Enviar una versión directamente a la plataforma externa el día 14 no subsana haber omitido la revisión y firma institucional de la UV.
+### 20.6 Preparación por fases
+
+| Momento orientativo | Resultado que debería quedar cerrado |
+|---|---|
+| 6–12 meses antes | Hipótesis, encaje con programa, resultados preliminares y mapa inicial de socios |
+| 3–6 meses antes | Consorcio, liderazgo de paquetes, impacto, explotación, riesgos y presupuesto preliminar |
+| 6–10 semanas antes | Borrador completo, CV, datos administrativos, ética, género, ciencia abierta y cartas |
+| 3–5 semanas antes | Revisión externa crítica y corrección de coherencia entre objetivos, tareas, entregables y costes |
+| Antes del cierre interno UV | Memoria final, presupuesto validado, equipo, compromisos, declaraciones y documentos de firma |
+| Después de presentar | Copia íntegra, justificante, versión de cada anexo, evaluación recibida y lecciones para reutilizar |
+
+Estos márgenes son de planificación, no plazos normativos. En una convocatoria de dos fases, una propuesta individual o una ayuda pequeña pueden adaptarse; un consorcio europeo coordinado normalmente exige más anticipación.
+
+### 20.7 Expediente reutilizable
+
+Mantén preparado un paquete base que pueda adaptarse sin copiar afirmaciones obsoletas:
+
+- CVA/CVN y perfiles identificadores actualizados;
+- resumen de línea, capacidades, infraestructuras y resultados previos;
+- publicaciones, datasets, software, patentes y prototipos relevantes;
+- plantilla de objetivos, metodología, riesgos, hitos, entregables e indicadores;
+- plan preliminar de datos, ciencia abierta, ética, seguridad y explotación;
+- presupuesto razonado mediante la [calculadora de proyectos](#calculadora-presupuesto), con personal, IVA, indirectos, reserva y anualidades;
+- datos institucionales y cartas obtenidos siempre de la versión vigente facilitada por la UV;
+- evaluaciones anteriores y una tabla que muestre cómo se ha respondido a cada debilidad.
+
+### 20.8 Errores frecuentes
+
+- Empezar por el formulario en lugar de leer bases, convocatoria, programa de trabajo y criterios de evaluación.
+- Confundir fecha externa con cierre interno UV.
+- Elegir socios por prestigio sin asignarles una contribución, recurso o resultado indispensable.
+- Prometer un TRL, impacto, patente o mercado que no sostienen los datos preliminares.
+- Presupuestar solo precio de compra y olvidar IVA, contratación, mantenimiento, auditoría o coste completo de personal.
+- Solicitar a dos financiadores las mismas actividades o costes sin declarar la posible doble financiación.
+- Aceptar una ayuda privada directamente a título personal cuando el proyecto utiliza recursos, personal o titularidad UV.
+- Tratar un contrato con empresa como una donación o una ayuda sin entregables.
+- Esperar a la concesión para consultar ética, protección, datos o capacidad real de contratación.
+
+> **Ejemplo realista — estrategia de financiación para fotónica integrada.** Un grupo del ICMUV tiene resultados preliminares de un sensor fotónico basado en materiales de cambio de fase, todavía en TRL 2, y quiere fabricar un demostrador y contratar personal. Primero descarta COST como fuente para fabricar dispositivos porque solo cubriría la red. Valora un proyecto AEI de generación de conocimiento para consolidar física, proceso y personal; en paralelo busca socios complementarios para un futuro EIC Pathfinder, sin presentar todavía el resultado como próximo al mercado. Consulta con transferencia antes de divulgar la arquitectura, prepara un presupuesto completo y comunica al SGI la intención con meses de margen. Si una empresa desea validar el sensor para una aplicación concreta, separa esa actividad mediante un contrato artículo 60 o un instrumento empresarial adecuado, con entregables y propiedad intelectual definidos. Así construye una secuencia de financiación coherente en lugar de presentar la misma memoria indistintamente a cinco convocatorias.
 
 ## 21. Gestión de proyectos concedidos
 

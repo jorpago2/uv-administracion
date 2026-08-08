@@ -8,6 +8,7 @@
 2. **Varios reglamentos internos son anteriores a la LOSU y a la reforma de los Estatutos UV de 2026.** La ETSE publica un RRI de 2014, el ICMUV uno aprobado en 2008 y el DIE no muestra claramente una revisión posterior. Se conservan porque son las versiones oficiales publicadas, pero su compatibilidad con normas superiores debe comprobarse artículo por artículo cuando resulte relevante.
 3. **Las normas anuales caducan o son sustituidas.** En particular: OCA 2026-2027, carrera docente 2026-2027, calendario académico 2026-2027 y calendarios ETSE de TFG/TFM.
 4. **Corrección de control de calidad:** una primera prueba vinculó por error la Ley valenciana 10/2010 a `BOE-A-2010-13313`, que corresponde a una ley catalana. El catálogo vigente usa la referencia correcta `BOE-A-2010-12629`; el fichero erróneo se ha aislado en `documentos/cuarentena/` y queda fuera de todos los inventarios.
+5. **Los programas de financiación citados en el capítulo 20 no equivalen a convocatorias abiertas.** Las ediciones, plazos, beneficiarios, ventanas de carrera, costes elegibles y condiciones de consorcio deben comprobarse en las bases y modificaciones oficiales del año correspondiente y en las instrucciones internas de la UV.
 
 ## Documentos no descargables automáticamente
 

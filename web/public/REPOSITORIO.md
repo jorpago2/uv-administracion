@@ -92,7 +92,7 @@ node .\scripts\comprobar_enlaces.mjs
 - Un texto consolidado facilita la consulta, pero no sustituye a la publicación oficial ni garantiza por sí solo qué redacción era aplicable en una fecha pasada.
 - `vigente`, `histórica`, `derogada` y `vigencia_por_confirmar` son etiquetas de orientación, no un dictamen jurídico.
 - El portal UV contiene normas antiguas junto a normas vigentes y algunos enlaces privados o dinámicos. La mera aparición en el portal no demuestra vigencia material.
-- No se incluyen convocatorias individuales, resoluciones personales, guías docentes de cada asignatura, acuerdos no publicados, instrucciones recibidas solo por correo o intranet, ni protocolos locales que no tengan una URL pública estable.
+- El capítulo 20 incluye familias de financiación y ejemplos recurrentes para orientar la búsqueda, pero no mantiene un inventario exhaustivo de convocatorias abiertas ni sustituye sus bases. Tampoco se incluyen resoluciones personales, guías docentes de cada asignatura, acuerdos no publicados, instrucciones recibidas solo por correo o intranet, ni protocolos locales sin una URL pública estable.
 - Los calendarios, OCA, criterios de carrera y procedimientos de TFG/TFM deben revisarse cada curso.
 
 Para una actuación con plazo, recurso, responsabilidad disciplinaria, contratación, propiedad intelectual o conflicto laboral, debe verificarse la versión vigente en la sede oficial y, si procede, consultarse al servicio UV competente o a asesoramiento jurídico/sindical.

@@ -375,6 +375,7 @@ function bindEvents() {
   elements.closeMenuButton.addEventListener("click", closeMenu);
   elements.menuScrim.addEventListener("click", closeMenu);
   elements.index.addEventListener("click", (event) => { if (event.target.closest("a")) closeMenu(); });
+  window.addEventListener("hashchange", applyHashFocus);
   document.addEventListener("keydown", (event) => {
     if (event.key === "/" && !isTypingTarget(event.target)) { event.preventDefault(); elements.searchInput.focus(); }
     if (event.key === "Escape") {
