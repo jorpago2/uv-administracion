@@ -61,11 +61,98 @@
       </section>
 
       <nav class="route-strip" aria-label="Accesos frecuentes">
+        <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
         <a href="#dedicacion-docente-oca-y-pod"><span>Docencia</span>Revisar POD</a>
         <a href="#docencia-evaluacion-y-examenes"><span>Evaluación</span>Resolver examen</a>
         <a href="#proyectos-competitivos-y-ayudas-de-investigacion"><span>Investigación</span>Presentar proyecto</a>
         <a href="#compras-y-contratos-menores"><span>Gestión</span>Tramitar compra</a>
       </nav>
+
+      <section class="salary-tool" id="calculadora-retributiva" aria-labelledby="salaryTitle">
+        <header class="salary-tool__heading">
+          <div>
+            <p class="context-line">PDI · retribuciones 2026</p>
+            <h2 id="salaryTitle">Calculadora de salario bruto</h2>
+          </div>
+          <p>Estimación con las tablas oficiales de la UV. Selecciona solo periodos y complementos que ya tengas reconocidos.</p>
+        </header>
+
+        <div class="salary-layout" id="salaryCalculator">
+          <form class="salary-form" id="salaryForm">
+            <fieldset>
+              <legend>Puesto y dedicación</legend>
+              <div class="salary-fields">
+                <label>Categoría PDI
+                  <select id="salaryCategory" name="category"></select>
+                </label>
+                <label>Dedicación
+                  <select id="salaryDedication" name="dedication"></select>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Antigüedad y méritos reconocidos</legend>
+              <div class="salary-fields salary-fields--three">
+                <label>N.º de trienios
+                  <input id="salaryTriennia" name="triennia" type="number" min="0" max="20" step="1" value="0" inputmode="numeric">
+                </label>
+                <label>N.º de quinquenios
+                  <input id="salaryQuinquenios" name="teachingPeriods" type="number" min="0" max="10" step="1" value="0" inputmode="numeric">
+                </label>
+                <label>N.º de sexenios
+                  <input id="salarySexenios" name="researchPeriods" type="number" min="0" max="10" step="1" value="0" inputmode="numeric">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Complementos potenciales</legend>
+              <div class="salary-fields">
+                <label>Cargo académico
+                  <select id="academicRole" name="academicRole"></select>
+                </label>
+                <label>Otros complementos autonómicos reconocidos · €/año
+                  <input id="otherAutonomic" name="otherAutonomic" type="number" min="0" step="0.01" value="0" inputmode="decimal">
+                </label>
+              </div>
+              <label class="salary-check">
+                <input id="includeAutonomic" name="includeAutonomic" type="checkbox">
+                <span>Incluir el tramo autonómico 2026 por número total de quinquenios + sexenios</span>
+              </label>
+              <p class="salary-hint" id="salaryAutonomicHint"></p>
+            </fieldset>
+
+            <button class="control salary-reset" type="reset">Restablecer</button>
+          </form>
+
+          <section class="salary-result" aria-labelledby="salaryResultTitle">
+            <h3 id="salaryResultTitle">Resultado estimado</h3>
+            <div class="salary-totals">
+              <div class="salary-total salary-total--annual">
+                <span>Bruto anual</span>
+                <strong id="salaryAnnual">—</strong>
+              </div>
+              <div class="salary-total">
+                <span>Bruto mensual equivalente · 14 pagas</span>
+                <strong id="salaryPerPayment">—</strong>
+              </div>
+            </div>
+            <p class="salary-status sr-only" id="salaryStatus" aria-live="polite"></p>
+            <p class="salary-warning" id="salaryWarning" role="alert" hidden></p>
+            <h4>Desglose anual</h4>
+            <dl class="salary-breakdown" id="salaryBreakdown"></dl>
+            <p class="salary-caveat"><strong>No es una nómina.</strong> No incluye IRPF, cotizaciones, atrasos, incidencias personales ni el eventual 0,5 % condicionado al IPC de 2026. El importe «por paga» es un promedio: las extras reales pueden diferir.</p>
+          </section>
+        </div>
+
+        <footer class="salary-sources">
+          <strong>Fuentes oficiales:</strong>
+          <a href="https://www.uv.es/transparent/pdi/retribucions_pdi-UV.pdf">tabla retributiva UV 2026</a>,
+          <a href="https://www.uv.es/pdi/Complement%20Autonomic/2026/2026_6844_va.pdf">convocatoria autonómica 2026</a> y
+          <a href="https://www.uv.es/pdi/Complement%20Autonomic/2026/Annex%20355SG.pdf">ACGUV 355/2025</a>.
+        </footer>
+      </section>
 
       <section class="filter-area" aria-labelledby="filterTitle">
         <h2 id="filterTitle">Explorar por ámbito</h2>

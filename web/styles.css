@@ -13,7 +13,7 @@ body {
   font-size: var(--text-base);
   line-height: 1.62;
 }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: currentColor; text-decoration-thickness: var(--rule-thin); text-underline-offset: 0.2em; }
 a:hover { text-decoration-style: double; }
@@ -161,6 +161,46 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .route-strip a + a { border-block-start: var(--rule) solid var(--color-rule); }
 .route-strip a span { display: none; font-family: var(--font-body); font-size: var(--text-xs); letter-spacing: 0.06em; text-transform: uppercase; }
 .route-strip a:hover, .route-strip a:focus-visible { background: var(--color-accent); color: var(--color-accent-ink); }
+.salary-tool {
+  min-width: 0; scroll-margin-top: 6rem; display: grid; gap: var(--space-xl); margin-block-start: var(--space-2xl); padding: var(--space-lg);
+  background: var(--color-paper-raised); border: var(--rule-thick) solid var(--color-rule); box-shadow: var(--shadow-lg);
+}
+.salary-tool__heading { display: grid; gap: var(--space-lg); padding-block-end: var(--space-lg); border-block-end: var(--rule-thick) solid var(--color-rule); }
+.salary-tool__heading p { max-width: 58ch; margin: 0; }
+.salary-tool__heading .context-line { width: max-content; max-width: 100%; margin-block-end: var(--space-sm); }
+.salary-layout { min-width: 0; display: grid; gap: var(--space-xl); }
+.salary-form { min-width: 0; display: grid; gap: var(--space-lg); align-content: start; }
+.salary-form fieldset { min-width: 0; margin: 0; padding: var(--space-md); border: var(--rule) solid var(--color-rule); }
+.salary-form legend { padding-inline: var(--space-xs); font-family: var(--font-display); font-size: var(--text-md); font-weight: 800; line-height: 1.2; }
+.salary-fields { display: grid; gap: var(--space-md); }
+.salary-form label:not(.salary-check) { display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 700; }
+.salary-form input[type="number"], .salary-form select {
+  width: 100%; min-width: 0; min-height: 48px; padding: var(--space-xs) var(--space-sm); background: var(--color-paper);
+  color: var(--color-ink); border: var(--rule) solid var(--color-rule); border-radius: var(--radius-none);
+}
+.salary-form select { text-overflow: ellipsis; }
+.salary-form input:hover, .salary-form select:hover { background: var(--color-paper-muted); }
+.salary-form input:disabled, .salary-form select:disabled { opacity: 0.55; cursor: not-allowed; }
+.salary-check { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-sm); align-items: start; margin-block-start: var(--space-md); font-weight: 700; }
+.salary-check input { width: 1.35rem; height: 1.35rem; margin: 0.15rem 0 0; accent-color: var(--color-ink); }
+.salary-hint { min-height: 2lh; margin: var(--space-sm) 0 0; color: var(--color-ink-soft); font-size: var(--text-sm); }
+.salary-reset { justify-self: start; padding-inline: var(--space-md); }
+.salary-result { min-width: 0; display: grid; gap: var(--space-lg); align-content: start; padding: var(--space-lg); background: var(--color-secondary); border: var(--rule) solid var(--color-rule); box-shadow: var(--shadow-md); }
+.salary-totals { display: grid; gap: var(--space-sm); }
+.salary-total { display: grid; gap: var(--space-xs); padding: var(--space-md); background: var(--color-paper-raised); border: var(--rule) solid var(--color-rule); }
+.salary-total span { font-size: var(--text-sm); font-weight: 700; }
+.salary-total strong { font-family: var(--font-display); font-size: clamp(1.55rem, 2.6vw, 1.95rem); font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap; }
+.salary-total--annual { background: var(--color-accent); }
+.salary-warning { margin: 0; padding: var(--space-sm); background: var(--color-error-paper); color: var(--color-ink); border: var(--rule) solid var(--color-error); font-weight: 700; }
+.salary-result h4 { margin-block-start: var(--space-xs); }
+.salary-breakdown { margin: 0; background: var(--color-paper-raised); border: var(--rule) solid var(--color-rule); }
+.salary-breakdown > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-md); padding: var(--space-xs) var(--space-sm); }
+.salary-breakdown > div + div { border-block-start: var(--rule-thin) solid var(--color-rule); }
+.salary-breakdown > div[data-zero="true"] { color: var(--color-ink-soft); }
+.salary-breakdown dt { min-width: 0; }
+.salary-breakdown dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+.salary-caveat { margin: 0; padding: var(--space-md); background: var(--color-paper); border: var(--rule-thin) solid var(--color-rule); font-size: var(--text-sm); }
+.salary-sources { padding-block-start: var(--space-md); border-block-start: var(--rule-thin) solid var(--color-rule); font-size: var(--text-sm); }
 .filter-area { display: grid; gap: var(--space-lg); padding-block: var(--space-2xl) var(--space-xl); }
 .filters { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 .filter { padding-inline: var(--space-md); }
@@ -232,6 +272,11 @@ mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: v
   .route-strip a span { display: inline; }
   .route-strip a:nth-child(even) { border-inline-start: var(--rule) solid var(--color-rule); }
   .route-strip a:nth-child(2) { border-block-start: 0; }
+  .salary-tool { padding: var(--space-xl); }
+  .salary-tool__heading { grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr); align-items: end; }
+  .salary-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .salary-fields--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .salary-totals { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
   .filter-area { grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr); align-items: start; }
   .chapter { padding: var(--space-xl); }
   .chapter__head { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
@@ -246,10 +291,11 @@ mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: v
   .page-shell { width: auto; max-width: 96rem; margin-inline-start: 19rem; }
   main { padding-inline: var(--space-2xl); }
   .manual { gap: var(--space-2xl); }
+  .salary-layout { grid-template-columns: minmax(0, 0.95fr) minmax(25rem, 1.05fr); align-items: start; }
 }
 @media (min-width: 90rem) {
   main { padding-inline: var(--space-3xl); }
-  .route-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .route-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .route-strip a + a { border-block-start: 0; border-inline-start: var(--rule) solid var(--color-rule); }
 }
 @media (prefers-reduced-motion: reduce) {

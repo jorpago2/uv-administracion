@@ -1,4 +1,5 @@
 import manualData from "./data/manual.json";
+import { initSalaryCalculator } from "./salary-calculator.js";
 
 const CATEGORIES = Object.freeze([
   { id: "planificacion", label: "Orientación y planificación", sections: Object.freeze([1, 2, 3, 4, 5]) },
@@ -38,6 +39,7 @@ const elements = {
 
 assertRequiredElements(elements);
 bindEvents();
+initSalaryCalculator(document.querySelector("#salaryCalculator"));
 loadManual();
 
 function assertRequiredElements(nodes) {

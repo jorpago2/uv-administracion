@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "paymentCount": 14,
+  "sources": {
+    "salaryTable": "https://www.uv.es/transparent/pdi/retribucions_pdi-UV.pdf",
+    "salaryPortal": "https://www.uv.es/uvweb/transparencia-uv/ca/persones/pdi/bandes-salarials-retribucions-1285924386851.html",
+    "autonomicCall": "https://www.uv.es/pdi/Complement%20Autonomic/2026/2026_6844_va.pdf",
+    "autonomicAgreement": "https://www.uv.es/pdi/Complement%20Autonomic/2026/Annex%20355SG.pdf",
+    "stateIncrease": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24445&lang=es"
+  },
+  "categories": [
+    {
+      "id": "cu",
+      "label": "Catedrático/a de Universidad (CU)",
+      "regime": "Funcionario",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 29", "mode": "functionary", "salaryMonthly": 1387.24, "salaryExtra": 856.05, "trienniumMonthly": 53.39, "trienniumExtra": 32.96, "destinationMonthly": 1086.89, "specificMonthly": 1225.47, "teachingPeriodMonthly": 185.89, "researchPeriodMonthly": 185.89 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "functionary", "salaryMonthly": 600.95, "salaryExtra": 370.84, "trienniumMonthly": 23.13, "trienniumExtra": 14.28, "destinationMonthly": 1001.72, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 80.53 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "functionary", "salaryMonthly": 300.47, "salaryExtra": 185.42, "trienniumMonthly": 11.57, "trienniumExtra": 7.14, "destinationMonthly": 500.87, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 40.27 }
+      ]
+    },
+    {
+      "id": "tu",
+      "label": "Profesor/a Titular de Universidad (TU)",
+      "regime": "Funcionario",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 27", "mode": "functionary", "salaryMonthly": 1387.24, "salaryExtra": 856.05, "trienniumMonthly": 53.39, "trienniumExtra": 32.96, "destinationMonthly": 995.47, "specificMonthly": 571.73, "teachingPeriodMonthly": 150.55, "researchPeriodMonthly": 150.55 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "functionary", "salaryMonthly": 600.95, "salaryExtra": 370.84, "trienniumMonthly": 23.13, "trienniumExtra": 14.28, "destinationMonthly": 678.92, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 65.22 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "functionary", "salaryMonthly": 300.47, "salaryExtra": 185.42, "trienniumMonthly": 11.57, "trienniumExtra": 7.14, "destinationMonthly": 339.46, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 32.61 }
+      ]
+    },
+    {
+      "id": "ceu",
+      "label": "Catedrático/a de Escuela Universitaria (CEU)",
+      "regime": "Funcionario",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 27", "mode": "functionary", "salaryMonthly": 1387.24, "salaryExtra": 856.05, "trienniumMonthly": 53.39, "trienniumExtra": 32.96, "destinationMonthly": 995.47, "specificMonthly": 571.73, "teachingPeriodMonthly": 150.55, "researchPeriodMonthly": 150.55 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "functionary", "salaryMonthly": 600.95, "salaryExtra": 370.84, "trienniumMonthly": 23.13, "trienniumExtra": 14.28, "destinationMonthly": 678.92, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "functionary", "salaryMonthly": 300.47, "salaryExtra": 185.42, "trienniumMonthly": 11.57, "trienniumExtra": 7.14, "destinationMonthly": 339.46, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "teu",
+      "label": "Profesor/a Titular de Escuela Universitaria (TEU)",
+      "regime": "Funcionario",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 26", "mode": "functionary", "salaryMonthly": 1387.24, "salaryExtra": 856.05, "trienniumMonthly": 53.39, "trienniumExtra": 32.96, "destinationMonthly": 873.38, "specificMonthly": 353.00, "teachingPeriodMonthly": 127.43, "researchPeriodMonthly": 127.43 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "functionary", "salaryMonthly": 600.95, "salaryExtra": 370.84, "trienniumMonthly": 23.13, "trienniumExtra": 14.28, "destinationMonthly": 531.27, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "functionary", "salaryMonthly": 300.47, "salaryExtra": 185.42, "trienniumMonthly": 11.57, "trienniumExtra": 7.14, "destinationMonthly": 265.63, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "associate",
+      "label": "Profesor/a Asociado/a",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "labor", "salaryMonthly": 546.49, "trienniumMonthly": 26.83, "destinationMonthly": 314.31, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p5", "label": "Tiempo parcial · 5 horas", "mode": "labor", "salaryMonthly": 455.39, "trienniumMonthly": 22.34, "destinationMonthly": 261.93, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p4", "label": "Tiempo parcial · 4 horas", "mode": "labor", "salaryMonthly": 364.32, "trienniumMonthly": 17.72, "destinationMonthly": 209.55, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "labor", "salaryMonthly": 273.30, "trienniumMonthly": 13.44, "destinationMonthly": 157.12, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "health", "label": "Ciencias de la Salud", "mode": "labor", "salaryMonthly": 273.30, "trienniumMonthly": 13.44, "destinationMonthly": 157.12, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "assistant",
+      "label": "Ayudante",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo", "mode": "labor", "salaryMonthly": 1331.57, "trienniumMonthly": 53.09, "destinationMonthly": 495.40, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "assistant_doctor",
+      "label": "Profesor/a Ayudante Doctor/a",
+      "regime": "Laboral",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 26", "mode": "labor", "salaryMonthly": 1331.57, "trienniumMonthly": 53.09, "destinationMonthly": 873.38, "specificMonthly": 162.95, "teachingPeriodMonthly": 127.43, "researchPeriodMonthly": 127.43 }
+      ]
+    },
+    {
+      "id": "emeritus",
+      "label": "Profesor/a Emérito/a",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "labor", "salaryMonthly": 756.76, "trienniumMonthly": 0, "destinationMonthly": 0, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "labor", "salaryMonthly": 378.39, "trienniumMonthly": 0, "destinationMonthly": 0, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "visiting",
+      "label": "Profesor/a Visitante",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo", "mode": "labor", "salaryMonthly": 2151.82, "trienniumMonthly": 0, "destinationMonthly": 0, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "labor", "salaryMonthly": 546.49, "trienniumMonthly": 0, "destinationMonthly": 314.10, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "substitute",
+      "label": "Profesor/a Sustituto/a",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo", "mode": "labor", "salaryMonthly": 1331.57, "trienniumMonthly": 0, "destinationMonthly": 495.41, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "labor", "salaryMonthly": 546.49, "trienniumMonthly": 0, "destinationMonthly": 314.31, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p5", "label": "Tiempo parcial · 5 horas", "mode": "labor", "salaryMonthly": 455.39, "trienniumMonthly": 0, "destinationMonthly": 261.93, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p4", "label": "Tiempo parcial · 4 horas", "mode": "labor", "salaryMonthly": 364.32, "trienniumMonthly": 0, "destinationMonthly": 209.55, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "labor", "salaryMonthly": 273.30, "trienniumMonthly": 0, "destinationMonthly": 157.12, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "distinguished",
+      "label": "Investigador/a Distinguido/a",
+      "regime": "Laboral",
+      "autonomicEligible": false,
+      "dedications": [
+        { "id": "senior", "label": "Senior · tiempo completo", "mode": "labor", "salaryMonthly": 6267.61, "trienniumMonthly": 0, "destinationMonthly": 0, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "junior", "label": "Junior · tiempo completo", "mode": "labor", "salaryMonthly": 3301.61, "trienniumMonthly": 0, "destinationMonthly": 0, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    },
+    {
+      "id": "contracted_doctor_interim",
+      "label": "Profesor/a Contratado/a Doctor/a interino/a",
+      "regime": "Laboral",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 27", "mode": "labor", "salaryMonthly": 1387.24, "trienniumMonthly": 53.09, "destinationMonthly": 995.47, "specificMonthly": 317.62, "teachingPeriodMonthly": 150.55, "researchPeriodMonthly": 150.55 }
+      ]
+    },
+    {
+      "id": "contracted_doctor",
+      "label": "Profesor/a Contratado/a Doctor/a",
+      "regime": "Laboral",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 27", "mode": "labor", "salaryMonthly": 1387.24, "trienniumMonthly": 53.09, "destinationMonthly": 995.47, "specificMonthly": 317.62, "teachingPeriodMonthly": 150.55, "researchPeriodMonthly": 150.55 }
+      ]
+    },
+    {
+      "id": "collaborator",
+      "label": "Profesor/a Colaborador/a",
+      "regime": "Laboral",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 26", "mode": "labor", "salaryMonthly": 1387.24, "trienniumMonthly": 53.09, "destinationMonthly": 873.38, "specificMonthly": 245.19, "teachingPeriodMonthly": 127.43, "researchPeriodMonthly": 127.43 }
+      ]
+    },
+    {
+      "id": "permanent_labor",
+      "label": "Profesorado Permanente Laboral",
+      "regime": "Laboral",
+      "autonomicEligible": true,
+      "dedications": [
+        { "id": "tc", "label": "Tiempo completo · nivel 27", "mode": "labor", "salaryMonthly": 1387.24, "trienniumMonthly": 53.09, "destinationMonthly": 995.47, "specificMonthly": 317.62, "teachingPeriodMonthly": 150.55, "researchPeriodMonthly": 150.55 },
+        { "id": "p6", "label": "Tiempo parcial · 6 horas", "mode": "labor", "salaryMonthly": 600.96, "trienniumMonthly": 22.99, "destinationMonthly": 568.83, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 },
+        { "id": "p3", "label": "Tiempo parcial · 3 horas", "mode": "labor", "salaryMonthly": 300.47, "trienniumMonthly": 11.50, "destinationMonthly": 284.42, "specificMonthly": 0, "teachingPeriodMonthly": 0, "researchPeriodMonthly": 0 }
+      ]
+    }
+  ],
+  "autonomicTiers": [
+    { "minimumPeriods": 4, "maximumPeriods": 5, "annual": 1320 },
+    { "minimumPeriods": 6, "maximumPeriods": 7, "annual": 1980 },
+    { "minimumPeriods": 8, "maximumPeriods": 9, "annual": 2640 },
+    { "minimumPeriods": 10, "maximumPeriods": null, "annual": 3300 }
+  ],
+  "academicRoles": [
+    { "id": "none", "label": "Sin cargo académico", "annual": 0 },
+    { "id": "rector", "label": "Rector/a", "annual": 24950.52 },
+    { "id": "vice_rector", "label": "Vicerrector/a o secretario/a general", "annual": 11280.50 },
+    { "id": "dean_etse", "label": "Decano/a o director/a de ETS", "annual": 8795.22 },
+    { "id": "department_director", "label": "Director/a de departamento", "annual": 6364.40 },
+    { "id": "vice_dean", "label": "Vicedecano/a, subdirector/a o secretario/a de centro", "annual": 4746.42 },
+    { "id": "department_secretary", "label": "Secretario/a de departamento", "annual": 3421.74 },
+    { "id": "institute_director", "label": "Director/a de instituto universitario", "annual": 3800.44 },
+    { "id": "institute_secretary", "label": "Secretario/a de instituto universitario", "annual": 2475.34 },
+    { "id": "college_director", "label": "Director/a de colegio mayor", "annual": 8248.66 }
+  ]
+}

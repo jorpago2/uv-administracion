@@ -337,13 +337,13 @@ Al finalizar el sabático debe presentarse una memoria de actividades a la Comis
 
 ## 11. Carrera, acreditación y complementos
 
-### 8.1 Acreditación ANECA
+### 11.1 Acreditación ANECA
 
 La acreditación estatal para TU o CU se solicita por la sede electrónica de ANECA conforme al RD 678/2023. Debe seleccionarse cuerpo y comisión, y acreditar el requisito de movilidad cuando corresponda. La información vigente está en [ANECA](https://ayuda.aneca.es/hc/es/articles/21625407058204-4-Inicio-e-instrucci%C3%B3n-del-procedimiento-para-la-obtenci%C3%B3n-de-la-acreditaci%C3%B3n-estatal-para-el-acceso-a-los-cuerpos-docentes-universitarios).
 
 La acreditación no produce por sí sola una promoción ni una plaza: habilita para participar en el procedimiento posterior.
 
-### 8.2 Promoción interna UV
+### 11.2 Promoción interna UV
 
 Los criterios se aprueban por curso. En 2026-2027 las solicitudes se presentaron del 12 al 27 de marzo mediante instancia interna dirigida al departamento de adscripción. Por tanto:
 
@@ -354,7 +354,7 @@ Los criterios se aprueban por curso. En 2026-2027 las solicitudes se presentaron
 
 Fuente permanente: [normativa específica PDI](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html).
 
-### 8.3 Quinquenios, sexenios y complemento autonómico
+### 11.3 Quinquenios, sexenios y complemento autonómico
 
 - **Quinquenios:** convocatoria UV anual. En 2025 el plazo fue del 1 al 31 de diciembre; el reconocimiento tuvo efectos desde el 1 de enero siguiente. La evaluación Docentia no sustituye la solicitud retributiva.
 - **Sexenios:** la vía depende de ser PDI funcionario o laboral. Comprueba la convocatoria CNEAI/ANECA y la página UV específica del colectivo.
@@ -363,6 +363,21 @@ Fuente permanente: [normativa específica PDI](https://www.uv.es/uvweb/servicio-
 La [Sección de Gestión de PDI](https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html) tramita trienios, quinquenios, sexenios, complementos, compatibilidad y situaciones administrativas.
 
 Contra la resolución de quinquenios que agota la vía administrativa se prevé, con carácter general, reposición potestativa en un mes o recurso contencioso-administrativo en dos meses. Debe comprobarse siempre el pie de recursos de la resolución recibida.
+
+### 11.4 Retribuciones PDI y calculadora 2026
+
+La [calculadora retributiva interactiva](https://jorpago2.github.io/uv-administracion/#calculadora-retributiva) estima el bruto anual y el equivalente medio por paga para las categorías y dedicaciones incluidas en la tabla oficial UV de 2026. Permite añadir trienios, quinquenios, sexenios, un cargo académico y complementos autonómicos ya reconocidos.
+
+La estimación aplica dos reglas distintas:
+
+1. En PDI funcionario, el sueldo y los trienios usan los importes específicos publicados para las dos pagas extraordinarias; destino, específico, quinquenios y sexenios se computan en catorce pagas.
+2. En PDI laboral, los conceptos mensuales publicados se computan en catorce pagas.
+
+El resultado no es una nómina ni una predicción de salario neto. No incorpora IRPF, cotizaciones, atrasos, incidencias personales ni el eventual incremento adicional del 0,5 % condicionado al IPC de 2026. La cifra mensual mostrada es `bruto anual ÷ 14`; una paga extraordinaria real puede diferir de ese promedio.
+
+Fuentes: [tabla retributiva oficial UV 2026](https://www.uv.es/transparent/pdi/retribucions_pdi-UV.pdf), [convocatoria UV del complemento autonómico 2026](https://www.uv.es/pdi/Complement%20Autonomic/2026/2026_6844_va.pdf), [ACGUV 355/2025](https://www.uv.es/pdi/Complement%20Autonomic/2026/Annex%20355SG.pdf) y [Real Decreto-ley 14/2025](https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24445&lang=es).
+
+> **Ejemplo realista — estimación antes de revisar una nómina.** Un profesor titular a tiempo completo con tres trienios, dos quinquenios y tres sexenios introduce únicamente los periodos que figuran en sus resoluciones. La herramienta obtiene 54.278,08 € brutos anuales si activa el tramo autonómico de 1.320 € correspondiente a cinco periodos reconocidos. El equivalente medio es 3.877,01 € por paga, pero no debe compararse directamente con una mensualidad ordinaria sin revisar el desglose de las extras y las deducciones.
 
 > **Ejemplo realista — acreditación y promoción no son el mismo trámite.** Laura, profesora contratada doctora, obtiene la acreditación estatal a titular. Guarda la resolución, pero no interpreta que produzca automáticamente el nombramiento: revisa por separado la convocatoria de promoción interna de la UV, sus méritos computables, el plazo de solicitud y la documentación exigida. La acreditación es un requisito; la plaza y el concurso siguen su propio procedimiento.
 
