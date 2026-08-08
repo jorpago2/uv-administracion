@@ -584,7 +584,70 @@ En el ámbito estatal, la AEI agrupa, entre otras, ayudas de generación de cono
 
 En la Comunitat Valenciana deben vigilarse las líneas para grupos emergentes o consolidados, Prometeo, captación de proyectos internacionales, movilidad y talento. Las ayudas de IVACE+i pueden ser relevantes cuando existe una empresa tractora o un centro tecnológico, pero no debe presumirse que una universidad pueda solicitarlas directamente. El buscador UV permite filtrar por ámbito geográfico, investigación, innovación, transferencia, proyectos, recursos humanos, movilidad e infraestructuras.
 
-### 20.2 Elegir instrumento según la necesidad
+### 20.2 Convocatorias recurrentes: tablas comparativas
+
+Las tablas siguientes son una **agenda de vigilancia**, no un calendario jurídico. «Recurrente» significa que la línea se ha convocado repetidamente o figura en la programación oficial, no que exista el derecho a una edición cada año. Los importes y ventanas se apoyan en los programas de trabajo y ediciones oficiales 2025‑2027 consultados en agosto de 2026. Antes de decidir o presupuestar hay que abrir la edición vigente, sus anexos, FAQ y modificaciones, y confirmar el cierre interno de la UV.
+
+#### 20.2.1 Unión Europea
+
+| Instrumento | Para qué y madurez | Quién puede concurrir | Duración y financiación de referencia | Ritmo o ventana habitual | Condición crítica |
+|---|---|---|---|---|---|
+| [ERC Starting Grant](https://erc.europa.eu/apply-grant/starting-grant) | Investigación de frontera dirigida por una persona que inicia independencia científica; libre temática y sin TRL obligatorio | IP con doctorado y *host institution* en UE/país asociado; desde 2027, entre la defensa de tesis y los 10 años posteriores, con extensiones previstas | Hasta 1,5 M€ y 5 años; puede existir financiación adicional justificada; 100 % de costes directos elegibles más 25 % de indirectos | Anual. Referencia 2027: apertura 22/07/2026 y cierre 14/10/2026 | Solo excelencia; comprobar fecha exacta de defensa, extensiones, restricciones de reenvío y compromiso temporal del IP |
+| [ERC Consolidator Grant](https://erc.europa.eu/apply-grant/consolidator-grant) | Consolidar equipo o programa propio de investigación de frontera | IP con trayectoria de independencia; desde 2027, 5‑15 años desde la defensa, con extensiones | Hasta 2 M€ y 5 años; financiación adicional en supuestos admitidos; 100 % + 25 % de indirectos | Anual; el calendario exacto lo fija el programa de trabajo ERC | No basta con cumplir la ventana: la trayectoria y la propuesta deben mostrar liderazgo e independencia |
+| [ERC Advanced Grant](https://erc.europa.eu/apply-grant/advanced-grant) | Programa rompedor de frontera para una persona investigadora consolidada | IP activo con trayectoria sobresaliente, evaluada principalmente sobre los últimos diez años; sin ventana desde la tesis | Hasta 2,5 M€ y 5 años, con posibles costes adicionales; modelo de financiación según el programa de trabajo vigente | Anual; suele cerrar meses después de Starting/Consolidator | Evitar una propuesta incremental: debe quedar claro qué frontera cambia y por qué el riesgo es asumible |
+| [ERC Synergy Grant](https://erc.europa.eu/apply-grant/synergy-grant) | Problema de frontera que no puede resolver un solo IP | Grupo de 2‑4 IP con complementariedad real; uno actúa como *corresponding PI* | Hasta 10 M€ y 6 años, con posible financiación adicional; 100 % + 25 % de indirectos | Anual cuando figura en el programa de trabajo | Debe demostrarse sinergia científica, no una suma de subproyectos ni un consorcio convencional |
+| [ERC Proof of Concept](https://erc.europa.eu/apply-grant/proof-concept) | Explorar potencial comercial o social de un resultado ERC | Solo IP de una ayuda ERC principal elegible y resultado vinculado a ella | 150.000 € a tanto alzado y 18 meses en el programa 2026 | Convocatoria anual con varios cortes | No es una prueba de concepto abierta a cualquier proyecto; la relación con la ayuda ERC de origen es excluyente |
+| [EIC Pathfinder Open y Challenges](https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en) | Deep tech radical, alto riesgo/ganancia y TRL inicial 1‑4; *Open* es abierto y *Challenges* responde a retos definidos | *Open*: al menos 3 entidades independientes de 3 países; *Challenges* puede admitir solicitante individual o consorcios de 2 o más, según reto | Normalmente hasta 4 M€ por proyecto; acción de investigación al 100 % y reglas de indirectos de Horizonte Europa | Programa de trabajo anual; normalmente un corte para *Open* y otro para *Challenges* | No encaja una mejora incremental, una plataforma sin hipótesis tecnológica radical ni un demostrador ya cercano al mercado |
+| [EIC Transition](https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en) | Madurar un resultado elegible desde TRL 4 hasta 5‑6 y validar tecnología y caso de uso/negocio | Una entidad o consorcio de 2‑5; el resultado de partida debe proceder de una actuación UE expresamente elegible | Hasta 2,5 M€; normalmente 1‑3 años | Programa de trabajo anual, habitualmente un corte | Verificar primero el proyecto de origen, titularidad y derechos de acceso; sin resultado elegible no se puede presentar |
+| [Horizonte Europa: RIA, IA y CSA](https://rea.ec.europa.eu/horizon-europe-how-apply_en) | RIA: conocimiento y tecnología; IA: validación/demostración; CSA: coordinación, estándares o redes | Como regla general, 3 entidades independientes de 3 países, una en un Estado miembro; el *topic* puede imponer más condiciones | Presupuesto y duración por *topic*. RIA y CSA: 100 %; IA: normalmente 70 % y hasta 100 % para entidades sin ánimo de lucro; indirectos, en general, 25 % sobre la base elegible | *Topics* anuales o bienales dentro de cada programa de trabajo, a una o dos fases | La elegibilidad real está en el texto del *topic*, tipo de acción, resultados esperados, TRL y composición exigida |
+| [MSCA Postdoctoral Fellowships](https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2026) | Movilidad y desarrollo de carrera de una persona doctora mediante proyecto conjunto con la entidad de acogida | Persona con doctorado; regla de movilidad habitual: no más de 12 meses en los 36 anteriores en el país de acogida; límite de experiencia y excepciones en la convocatoria | Europea: 12‑24 meses. Global: salida 12‑24 meses más retorno obligatorio de 12. Financiación mediante costes unitarios de persona e institución | Anual; en 2026, abril‑09/09/2026 | Elegibilidad pertenece a la persona y a su movilidad; desde 2026 no puede reenviarse una propuesta que obtuviera menos del 80 % en la convocatoria anterior |
+| [COST Actions](https://www.cost.eu/what-do-we-fund/) | Crear una red internacional, grupos de trabajo, reuniones, escuelas y misiones científicas | Red propuesta por investigadores de países COST; la composición mínima y porcentajes geográficos se fijan en cada colección | 4 años; presupuesto de red orientativo, no presupuesto para ejecutar experimentos | Una colección al año, habitualmente en otoño | COST no paga el proyecto de investigación, equipamiento ni plantilla estable; financia colaboración y movilidad de la red |
+
+**Lectura rápida europea.** ERC evalúa persona y proyecto de frontera; Pathfinder evalúa una visión tecnológica radical; Transition exige un resultado UE de origen; los clústeres de Horizonte Europa exigen responder a un *topic*; MSCA financia una trayectoria con movilidad; COST construye la red que puede preceder a un proyecto, pero no sustituirlo.
+
+#### 20.2.2 Estado: AEI, CDTI y FECYT
+
+| Instrumento | Objeto y solicitante | Duración y financiación de referencia | Periodicidad o ventana | Qué permite | Filtro decisivo |
+|---|---|---|---|---|---|
+| [Proyectos de Generación de Conocimiento (PID)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-generacion-conocimiento-actuaciones-formacion-0) | Proyectos de investigación orientada o no orientada; universidad/organismo beneficiario e IP que cumpla vinculación y dedicación | Edición 2025: 3 o 4 años; hasta el 100 % de costes marginales elegibles solicitados y hasta 25 % de indirectos; puede asociarse contrato predoctoral | Prevista anualmente en el [Plan Estratégico AEI 2026‑2028](https://www.aei.gob.es/sites/default/files/inline-files/PLAN_ESTRAT%C3%89GICO_AEI_2026_2028.pdf); la edición 2025 cerró a final de año | Personal, fungible, viajes, servicios y equipamiento amortizable conforme a bases | Elegir bien modalidad, tipo de proyecto y área; comprobar incompatibilidades de IP/equipo y no confundir presupuesto solicitado con concedido |
+| [Proyectos de Prueba de Concepto (PDC)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-prueba-concepto-2025) | Valorización de resultados de un proyecto previo expresamente elegible; normalmente el mismo IP | Edición 2025: hasta 300.000 €, indirectos incluidos; indirectos hasta 21 % y ejecución aproximada de 2 años | Recurrente, pero **no necesariamente anual**; el plan AEI programa PDC en 2027, no en 2026 | Protección, prototipo/piloto, validación con usuarios y modelo de explotación | Debe derivar del proyecto de origen admitido y no ser mera continuación de investigación ni compra general de equipo |
+| [Colaboración Público-Privada (CPP)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-colaboracion-publico-privada-2025) | Desarrollo experimental próximo a mercado mediante consorcio empresa‑organismo de investigación | Plurianual; subvención y/o préstamo según tipo de entidad, con presupuesto, intensidades y garantías de la edición | Prevista anualmente 2026‑2028; la edición 2025 se presentó en enero de 2026 | Prototipos, pilotos y validación colaborativa con explotación empresarial | Consorcio, reparto presupuestario y efecto incentivador deben cerrarse antes; no asignar a la UV un papel incompatible con la convocatoria |
+| [Redes de Investigación (RED)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/redes-investigacion-2026) | Coordinación de grupos, intercambio y programación conjunta | Edición 2026: 2 años; redes temáticas, 20.000‑50.000 €, y redes ICTS, 20.000‑150.000 € | Recurrente; prevista en 2026 y 2028 en el plan AEI | Reuniones, movilidad, formación y coordinación contempladas | No usarla para financiar como actividad principal la investigación experimental de los grupos |
+| [Equipamiento Científico-Técnico (EQC)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/equipamiento-cientifico-tecnico-2025) | Equipos para servicios comunes e infraestructuras de investigación de uso compartido | Importe, umbrales y modalidad financiera según edición; la de 2025 se articuló con financiación FEDER | Recurrente, pero no debe presumirse anual; vigilar calendario AEI/FEDER | Adquisición e instalación de equipo elegible | Exige necesidad institucional, plan de uso/acceso, capacidad de instalación, mantenimiento y posible priorización interna UV |
+| [Ramón y Cajal y Juan de la Cierva](https://www.aei.gob.es/convocatorias/buscador-convocatorias?field_tipo_ayuda_target_id=245) | Incorporación postdoctoral; la persona candidata y la entidad deben cumplir su parte de la solicitud | Duración, cuantía salarial, cofinanciación e incentivos dependen de la edición | Ambas previstas anualmente 2026‑2028 | Contratación y consolidación de talento | Fecha de doctorado, movilidad, cupos/reservas, incompatibilidades y procedimiento de selección interna son excluyentes |
+| [Personal Técnico de I+D+i (PTA)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-contratos-personal-tecnico-idi-2025) | Contratación de personal técnico para infraestructuras, equipos y servicios de I+D+i | Edición 2025: 3 años; ayuda salarial según titulación y bases | Prevista anualmente 2026‑2028 | Operación de equipos, laboratorios y servicios científico-técnicos | Justificar una función técnica estructural y el plan de cofinanciación; no presentarlo como contrato investigador genérico |
+| [Proyectos de Colaboración Internacional (PCI)](https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-colaboracion-internacional-pci2025-2) | Financiar la parte española de proyectos seleccionados en asociaciones o convocatorias internacionales | Presupuesto y duración coherentes con la selección internacional y la resolución española | Dos ventanas PCI previstas cada año 2026‑2028 | Costes de los socios españoles en la actuación transnacional | Primero debe existir selección internacional elegible; no es una convocatoria abierta para cualquier consorcio exterior |
+| [Europa Excelencia](https://aei.gob.es/convocatorias/buscador-convocatorias/proyectos-europa-excelencia-2025) | Dar continuidad en España a propuestas ERC elegibles evaluadas favorablemente pero no financiadas por presupuesto | Condiciones, duración e importe por edición | Prevista anualmente 2026‑2028 | Reformular y desarrollar el proyecto evaluado | Solo determinadas evaluaciones ERC y umbrales; conservar todos los documentos y el informe de evaluación |
+| [CDTI: Proyectos de I+D](https://www.cdti.es/ayudas/proyectos-de-i-d) | I+D empresarial individual o en cooperación; la empresa es beneficiaria | Ventanilla abierta; referencia general: 175.000 € de presupuesto mínimo, 12‑36 meses —hasta 48 en cooperación— y ayuda parcialmente reembolsable de hasta 85 % | Abierta todo el año, sujeta a disponibilidad y evaluación | La empresa puede contratar capacidades universitarias conforme a las reglas | La UV no debe asumirse beneficiaria: definir contrato/subcontratación, precio, propiedad intelectual y ausencia de doble financiación |
+| [FECYT: cultura científica](https://www.convocatoria.fecyt.es/publico/bases/bases.aspx) | Comunicación social de la ciencia, educación y participación | Importe, porcentaje y duración según modalidad anual | Habitualmente anual | Programas de divulgación con públicos, objetivos e indicadores propios | No es una vía para sufragar el trabajo experimental de un proyecto cuyo componente de divulgación sea accesorio |
+
+#### 20.2.3 Comunitat Valenciana
+
+| Línea | Perfil y finalidad | Duración e importe de referencia | Calendario de referencia | Restricción que debe revisarse | Cuándo encaja |
+|---|---|---|---|---|---|
+| [Grupos emergentes (GE/CIGE)](https://sede.gva.es/es/detall-tramit?id_proc=G104733) | Grupo que todavía no ha accedido a financiación como grupo/IP en proyectos estatales o europeos, conforme a la definición de las bases | Edición 2025: hasta 10.000 €/año, máximo 24 meses; por inicio en septiembre, primera anualidad hasta 5.000 € | La edición 2026 se solicitó en noviembre de 2025; resolución y comienzo pueden desplazarse varios meses | Revisar uno por uno antecedentes de IP y miembros, vinculación, composición e incompatibilidad con otros grupos GVA | Crear resultados preliminares y cohesión antes de competir en PID/AICO |
+| [Grupos consolidados (AICO/CIAICO)](https://www.gva.es/es/inicio/procedimientos?id_proc=17234) | Grupo consolidado con potencial de crecimiento, dirigido por uno o dos IP | Edición 2025: hasta 30.000 €/año, máximo 36 meses; primera anualidad hasta 15.000 € | Solicitud de referencia: final de noviembre‑diciembre; inicio previsto en septiembre | En 2025: al menos 3 doctores además de los IP; méritos mínimos de IP y media del grupo; exclusividad respecto de otras ayudas de grupo GVA | Consolidar personal, producción y actividad conjunta con un presupuesto intermedio |
+| [PROMETEO](https://www.gva.es/es/inicio/procedimientos?id_proc=16376) | Grupos de investigación de excelencia con trayectoria conjunta y liderazgo acreditado | Edición 2025: hasta 150.000 €/año, máximo 48 meses; primera anualidad hasta 75.000 € | Solicitud de referencia: final de noviembre‑diciembre; resolución en el verano e inicio en septiembre | Ningún miembro puede pertenecer simultáneamente a otros grupos autonómicos financiados incompatibles; revisar umbrales de trayectoria, tamaño y dedicación | Programa plurianual ambicioso con equipo excelente, contratación y masa crítica demostrables |
+| [Captación de proyectos europeos/internacionales (APE/CIAPE)](https://sede.gva.es/es/detall-tramit?id_proc=G104737) | Preparar una propuesta a Horizonte Europa u otro programa internacional; grupo, coordinador o candidatura ERC individual | Edición 2026: hasta 6.000 € como socio/solicitante y 9.000 € como coordinador o candidatura ERC; una o dos anualidades | Solicitud 03‑21/11/2025 para propuestas internacionales posteriores | Hay que presentar finalmente la propuesta y acreditar resultado; consultoría limitada normalmente al 30 %, ampliable de forma autorizada | Traducción, diseño, consultoría y reuniones necesarias para elevar la calidad de una propuesta internacional concreta |
+| [Contratos predoctorales ACIF y postdoctorales APOSTD](https://ceice.gva.es/es/web/ciencia/a-programa-i-d-i) | Formación doctoral o estancia/contratación postdoctoral según modalidad | Duración, retribución, movilidad y cofinanciación se fijan en cada edición | En la [planificación GVA 2025‑2026](https://ceice.gva.es/documents/161863198/392739054/NOTA%2BINFORMATIVA-cas.pdf/7692e16b-c1d0-01d2-4dcb-5630b4c03e92?t=1747743953212), solicitud en noviembre y resolución/inicio hacia julio‑otoño | Fecha de titulación/doctorado, expediente, movilidad, entidad de destino y vinculación son determinantes | Incorporar talento con un proyecto individual y plan formativo bien definidos |
+| [IVACE+i Innovación](https://www.ivace.es/index.php/es/ayudas/innovacion-e-i-d) | Valorización, transferencia, cooperación e I+D con empresas, según programa | Intensidad, presupuesto y duración dependen de la línea; algunas se dirigen a empresas y otras admiten organismos de investigación | Programación anual variable | Confirmar beneficiario, papel de la UV, efecto incentivador, subcontratación, ayudas de Estado y cofinanciación | Cuando existe resultado transferible, empresa tractora, demanda concreta o colaboración regional estructurada |
+
+En GE, AICO y PROMETEO el límite anual no equivale al total automático ni garantiza que todas las partidas sean elegibles. Además, el comienzo en septiembre puede reducir la primera anualidad al 50 %. Antes de formar el grupo conviene cruzar todos sus miembros con ayudas GVA vigentes: una incompatibilidad individual puede afectar a la solicitud completa.
+
+#### 20.2.4 Universitat de València y financiación privada
+
+| Vía recurrente | Finalidad | Financiación y ritmo | Punto de control |
+|---|---|---|---|
+| [Programa propio y buscador UV](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/buscador-convocatorias-1286271954852.html) | Predoctorales, estancias, visitantes, internacionalización y acciones internas | Convocatorias anuales o periódicas con importes variables | Revisar selección/priorización, plazo interno, unidad gestora y compatibilidad con otras ayudas |
+| Programa UV «Valoritza i Transfereix» y otras acciones de transferencia | Validar, proteger y acercar resultados al mercado o a usuarios | Edición propia; presupuesto y fases variables | Consultar a transferencia antes de publicar; aclarar titularidad, inventores, protección y plan de explotación |
+| [Becas Leonardo – Fundación BBVA](https://www.redleonardo.es/informacion-bases-becas-red-leonardo/instrucciones/) | Proyecto individual de investigación o creación en una etapa profesional delimitada | Convocatoria recurrente; importe, áreas y plazo por edición | Comprobar edad/etapa, residencia, dedicación, incompatibilidades, entidad receptora y tratamiento institucional |
+| [Fundación Ramón Areces](https://www.fundacionareces.es/fundacionareces/es/convocatorias/) | Proyectos en áreas científicas definidas por cada programa | Convocatorias periódicas, no necesariamente anuales | La línea temática y la edición mandan; no extrapolar importes ni requisitos de una convocatoria anterior |
+| [CaixaResearch](https://fundacionlacaixa.org/es/web/caixaresearch/convocatorias-investigacion-innovacion) | Investigación e innovación principalmente en salud y ciencias de la vida, según modalidad | Programación recurrente con modalidades y presupuestos propios | Una tecnología electrónica solo encaja si responde al problema biomédico y al alcance exacto de la convocatoria |
+| Contratos y convenios artículo 60 LOSU | I+D contratada, asistencia técnica, licencia o codesarrollo con una entidad externa | Negociación continua; precio y calendario contractuales | Canalizar por la UV; fijar entregables, coste completo, IVA, confidencialidad, publicación, propiedad intelectual y responsabilidad |
+
+**Campos mínimos para la tabla personal de convocatorias.** Copia de estas tablas a una hoja de seguimiento solo: `programa`, `edición`, `enlace oficial`, `objetivo`, `IP elegible`, `consorcio`, `duración`, `máximo financiable`, `% financiación`, `indirectos`, `fecha externa`, `fecha interna UV`, `documentos`, `restricción excluyente`, `responsable` y `próxima acción`. No copies como datos permanentes el importe o el plazo de esta guía: guárdalos asociados a una edición y su fuente.
+
+### 20.3 Elegir instrumento según la necesidad
 
 | Necesidad real | Primera familia que conviene explorar | Señal de mal encaje |
 |---|---|---|
@@ -600,7 +663,7 @@ En la Comunitat Valenciana deben vigilarse las líneas para grupos emergentes o 
 
 La madurez tecnológica o TRL es solo un indicador. También deben coincidir el resultado esperado, el mercado o usuario, la libertad temática, la obligación de consorcio y el modelo de costes. No se debe elevar artificialmente el TRL para entrar en una convocatoria de innovación ni presentar como investigación de frontera un desarrollo meramente incremental.
 
-### 20.3 Sistema personal de vigilancia
+### 20.4 Sistema personal de vigilancia
 
 Mantén una cartera continua, no una búsqueda improvisada cuando quedan dos semanas:
 
@@ -613,7 +676,7 @@ Mantén una cartera continua, no una búsqueda improvisada cuando quedan dos sem
 
 No uses como única fuente agregadores comerciales, redes sociales o correos reenviados. Sirven como alerta, pero la decisión debe basarse en la convocatoria, sus bases, anexos, FAQ y modificaciones oficiales.
 
-### 20.4 Filtro de decisión antes de escribir
+### 20.5 Filtro de decisión antes de escribir
 
 Realiza una revisión `go/no-go` y documenta la respuesta:
 
@@ -630,7 +693,7 @@ Realiza una revisión `go/no-go` y documenta la respuesta:
 
 Si fallan elegibilidad o encaje, debe descartarse la convocatoria. Si faltan socios o evidencia, puede convertirse en una acción preparatoria para la edición siguiente, una COST Action, una ayuda pequeña o un contrato piloto.
 
-### 20.5 Coordinación interna en la UV
+### 20.6 Coordinación interna en la UV
 
 No utilices únicamente el plazo de la agencia financiadora. La UV puede fijar un **plazo interno anterior** para revisar presupuesto, elegibilidad, participación y firma del representante legal.
 
@@ -644,7 +707,7 @@ No utilices únicamente el plazo de la agencia financiadora. La UV puede fijar u
 
 Si la UV no es beneficiaria y se participa en una propuesta liderada por otra entidad, debe solicitarse la autorización institucional que corresponda. La firma del IP no sustituye la del representante legal. Véase el [portal oficial de gestión y trámites](https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html).
 
-### 20.6 Preparación por fases
+### 20.7 Preparación por fases
 
 | Momento orientativo | Resultado que debería quedar cerrado |
 |---|---|
@@ -657,7 +720,7 @@ Si la UV no es beneficiaria y se participa en una propuesta liderada por otra en
 
 Estos márgenes son de planificación, no plazos normativos. En una convocatoria de dos fases, una propuesta individual o una ayuda pequeña pueden adaptarse; un consorcio europeo coordinado normalmente exige más anticipación.
 
-### 20.7 Expediente reutilizable
+### 20.8 Expediente reutilizable
 
 Mantén preparado un paquete base que pueda adaptarse sin copiar afirmaciones obsoletas:
 
@@ -670,7 +733,7 @@ Mantén preparado un paquete base que pueda adaptarse sin copiar afirmaciones ob
 - datos institucionales y cartas obtenidos siempre de la versión vigente facilitada por la UV;
 - evaluaciones anteriores y una tabla que muestre cómo se ha respondido a cada debilidad.
 
-### 20.8 Errores frecuentes
+### 20.9 Errores frecuentes
 
 - Empezar por el formulario en lugar de leer bases, convocatoria, programa de trabajo y criterios de evaluación.
 - Confundir fecha externa con cierre interno UV.

@@ -39,3 +39,21 @@ test("el capítulo de financiación cubre las cinco vías solicitadas y la selec
   assert.match(chapter, /go\/no-go/i);
   assert.match(chapter, /plazo interno/i);
 });
+
+test("las tablas de financiación comparan las convocatorias recurrentes clave", () => {
+  const chapter = manual.match(/^## 20\. [\s\S]+?(?=^## 21\.)/m)?.[0] ?? "";
+  for (const expected of [
+    "ERC Starting Grant",
+    "EIC Pathfinder",
+    "Proyectos de Generación de Conocimiento",
+    "Grupos emergentes",
+    "Grupos consolidados",
+    "PROMETEO",
+    "Captación de proyectos europeos",
+  ]) {
+    assert.match(chapter, new RegExp(expected, "i"), expected);
+  }
+  assert.match(chapter, /duración/i);
+  assert.match(chapter, /indirectos/i);
+  assert.match(chapter, /no necesariamente anual/i);
+});
