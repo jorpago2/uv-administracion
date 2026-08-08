@@ -2,7 +2,7 @@
 
 ## Interfaz web
 
-La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, 26 fichas operativas normalizadas, asistente de procedimientos, calendario anual exportable, vista de impresión y una calculadora de retribuciones PDI basada en las tablas oficiales UV de 2026. El contenido documental se genera desde `MANUAL_PROCEDIMIENTOS.md` mediante `scripts/generar_datos_web.ps1`.
+La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, 26 fichas operativas normalizadas, asistente de procedimientos, calendario anual exportable y calculadoras de retribuciones, POD, compras, viajes y coste de contratación. Incluye además ocho casos completos que recorren hechos, decisión, documentos, secuencia, errores y resultado. El contenido documental se genera desde `MANUAL_PROCEDIMIENTOS.md` mediante `scripts/generar_datos_web.ps1`.
 
 **Web publicada:** <https://jorpago2.github.io/uv-administracion/>
 

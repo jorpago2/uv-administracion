@@ -1,0 +1,599 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "reviewedOn": "2026-08-08",
+  "source": "https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf",
+  "mileage": {
+    "car": 0.26,
+    "motorcycle": 0.106
+  },
+  "domestic": {
+    "madridBarcelonaLodging": 140.0,
+    "restSpainLodging": 100.0,
+    "meals": 53.34
+  },
+  "foreign": [
+    {
+      "id": "foreign-001",
+      "label": "Alemanya",
+      "lodging": 202.36,
+      "meals": 89.08
+    },
+    {
+      "id": "foreign-002",
+      "label": "Algèria",
+      "lodging": 154.7,
+      "meals": 66.42
+    },
+    {
+      "id": "foreign-003",
+      "label": "Andorra",
+      "lodging": 71.1,
+      "meals": 57.81
+    },
+    {
+      "id": "foreign-004",
+      "label": "Angola",
+      "lodging": 206.27,
+      "meals": 86.72
+    },
+    {
+      "id": "foreign-005",
+      "label": "Argentina",
+      "lodging": 169.55,
+      "meals": 84.38
+    },
+    {
+      "id": "foreign-006",
+      "label": "Aràbia Saudita",
+      "lodging": 112.52,
+      "meals": 78.91
+    },
+    {
+      "id": "foreign-007",
+      "label": "Austràlia",
+      "lodging": 123.45,
+      "meals": 74.23
+    },
+    {
+      "id": "foreign-008",
+      "label": "Bolívia",
+      "lodging": 78.13,
+      "meals": 55.47
+    },
+    {
+      "id": "foreign-009",
+      "label": "Brasil",
+      "lodging": 195.33,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-010",
+      "label": "Bulgària",
+      "lodging": 81.26,
+      "meals": 57.81
+    },
+    {
+      "id": "foreign-011",
+      "label": "Bèlgica",
+      "lodging": 226.58,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-012",
+      "label": "Bòsnia i Hercegovina",
+      "lodging": 110.94,
+      "meals": 75.01
+    },
+    {
+      "id": "foreign-013",
+      "label": "Camerun",
+      "lodging": 134.38,
+      "meals": 71.88
+    },
+    {
+      "id": "foreign-014",
+      "label": "Canadà",
+      "lodging": 143.77,
+      "meals": 75.79
+    },
+    {
+      "id": "foreign-015",
+      "label": "Colòmbia",
+      "lodging": 189.07,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-016",
+      "label": "Congo",
+      "lodging": 154.7,
+      "meals": 78.91
+    },
+    {
+      "id": "foreign-017",
+      "label": "Corea",
+      "lodging": 156.26,
+      "meals": 81.26
+    },
+    {
+      "id": "foreign-018",
+      "label": "Costa d’Ivori",
+      "lodging": 93.76,
+      "meals": 72.66
+    },
+    {
+      "id": "foreign-019",
+      "label": "Costa Rica",
+      "lodging": 100.01,
+      "meals": 67.98
+    },
+    {
+      "id": "foreign-020",
+      "label": "Croàcia",
+      "lodging": 110.94,
+      "meals": 75.01
+    },
+    {
+      "id": "foreign-021",
+      "label": "Cuba",
+      "lodging": 85.94,
+      "meals": 50.0
+    },
+    {
+      "id": "foreign-022",
+      "label": "Dinamarca",
+      "lodging": 187.51,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-023",
+      "label": "Egipte",
+      "lodging": 139.07,
+      "meals": 57.81
+    },
+    {
+      "id": "foreign-024",
+      "label": "El Salvador",
+      "lodging": 100.79,
+      "meals": 65.64
+    },
+    {
+      "id": "foreign-025",
+      "label": "Emirats Àrabs",
+      "lodging": 154.7,
+      "meals": 82.82
+    },
+    {
+      "id": "foreign-026",
+      "label": "Equador",
+      "lodging": 98.45,
+      "meals": 65.64
+    },
+    {
+      "id": "foreign-027",
+      "label": "Eslovàquia",
+      "lodging": 115.64,
+      "meals": 64.84
+    },
+    {
+      "id": "foreign-028",
+      "label": "Estats Units",
+      "lodging": 218.76,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-029",
+      "label": "Etiòpia",
+      "lodging": 182.05,
+      "meals": 57.03
+    },
+    {
+      "id": "foreign-030",
+      "label": "Filipines",
+      "lodging": 109.38,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-031",
+      "label": "Finlàndia",
+      "lodging": 175.02,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-032",
+      "label": "França",
+      "lodging": 187.51,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-033",
+      "label": "Gabon",
+      "lodging": 153.14,
+      "meals": 77.35
+    },
+    {
+      "id": "foreign-034",
+      "label": "Ghana",
+      "lodging": 101.57,
+      "meals": 55.47
+    },
+    {
+      "id": "foreign-035",
+      "label": "Grècia",
+      "lodging": 105.48,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-036",
+      "label": "Guatemala",
+      "lodging": 136.73,
+      "meals": 64.06
+    },
+    {
+      "id": "foreign-037",
+      "label": "Guinea Equatorial",
+      "lodging": 133.6,
+      "meals": 73.45
+    },
+    {
+      "id": "foreign-038",
+      "label": "Haití",
+      "lodging": 68.76,
+      "meals": 57.03
+    },
+    {
+      "id": "foreign-039",
+      "label": "Hondures",
+      "lodging": 106.26,
+      "meals": 64.06
+    },
+    {
+      "id": "foreign-040",
+      "label": "Hong Kong",
+      "lodging": 185.17,
+      "meals": 75.01
+    },
+    {
+      "id": "foreign-041",
+      "label": "Hongria",
+      "lodging": 175.8,
+      "meals": 68.76
+    },
+    {
+      "id": "foreign-042",
+      "label": "Iemen",
+      "lodging": 203.14,
+      "meals": 64.06
+    },
+    {
+      "id": "foreign-043",
+      "label": "Indonèsia",
+      "lodging": 156.26,
+      "meals": 63.28
+    },
+    {
+      "id": "foreign-044",
+      "label": "Iran",
+      "lodging": 122.67,
+      "meals": 67.2
+    },
+    {
+      "id": "foreign-045",
+      "label": "Iraq",
+      "lodging": 100.79,
+      "meals": 57.81
+    },
+    {
+      "id": "foreign-046",
+      "label": "Irlanda",
+      "lodging": 142.19,
+      "meals": 70.32
+    },
+    {
+      "id": "foreign-047",
+      "label": "Israel",
+      "lodging": 141.41,
+      "meals": 82.82
+    },
+    {
+      "id": "foreign-048",
+      "label": "Itàlia",
+      "lodging": 200.02,
+      "meals": 90.64
+    },
+    {
+      "id": "foreign-049",
+      "label": "Jamaica",
+      "lodging": 117.2,
+      "meals": 67.2
+    },
+    {
+      "id": "foreign-050",
+      "label": "Japó",
+      "lodging": 243.78,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-051",
+      "label": "Jordània",
+      "lodging": 142.19,
+      "meals": 63.28
+    },
+    {
+      "id": "foreign-052",
+      "label": "Kenya",
+      "lodging": 125.79,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-053",
+      "label": "Kuwait",
+      "lodging": 187.51,
+      "meals": 65.64
+    },
+    {
+      "id": "foreign-054",
+      "label": "Luxemburg",
+      "lodging": 207.05,
+      "meals": 82.04
+    },
+    {
+      "id": "foreign-055",
+      "label": "Líban",
+      "lodging": 175.8,
+      "meals": 53.13
+    },
+    {
+      "id": "foreign-056",
+      "label": "Líbia",
+      "lodging": 155.48,
+      "meals": 81.26
+    },
+    {
+      "id": "foreign-057",
+      "label": "Malta",
+      "lodging": 70.32,
+      "meals": 48.44
+    },
+    {
+      "id": "foreign-058",
+      "label": "Malàisia",
+      "lodging": 140.63,
+      "meals": 51.57
+    },
+    {
+      "id": "foreign-059",
+      "label": "Marroc",
+      "lodging": 151.58,
+      "meals": 59.38
+    },
+    {
+      "id": "foreign-060",
+      "label": "Mauritània",
+      "lodging": 75.01,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-061",
+      "label": "Moçambic",
+      "lodging": 102.35,
+      "meals": 62.5
+    },
+    {
+      "id": "foreign-062",
+      "label": "Mèxic",
+      "lodging": 125.01,
+      "meals": 64.84
+    },
+    {
+      "id": "foreign-063",
+      "label": "Nicaragua",
+      "lodging": 143.77,
+      "meals": 80.47
+    },
+    {
+      "id": "foreign-064",
+      "label": "Nigèria",
+      "lodging": 179.7,
+      "meals": 67.2
+    },
+    {
+      "id": "foreign-065",
+      "label": "Noruega",
+      "lodging": 203.14,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-066",
+      "label": "Nova Zelanda",
+      "lodging": 100.01,
+      "meals": 60.16
+    },
+    {
+      "id": "foreign-067",
+      "label": "Pakistan",
+      "lodging": 89.08,
+      "meals": 56.25
+    },
+    {
+      "id": "foreign-068",
+      "label": "Panamà",
+      "lodging": 98.45,
+      "meals": 54.69
+    },
+    {
+      "id": "foreign-069",
+      "label": "Paraguai",
+      "lodging": 69.54,
+      "meals": 50.0
+    },
+    {
+      "id": "foreign-070",
+      "label": "Països Baixos",
+      "lodging": 193.77,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-071",
+      "label": "Perú",
+      "lodging": 121.89,
+      "meals": 65.64
+    },
+    {
+      "id": "foreign-072",
+      "label": "Polònia",
+      "lodging": 152.36,
+      "meals": 63.28
+    },
+    {
+      "id": "foreign-073",
+      "label": "Portugal",
+      "lodging": 148.45,
+      "meals": 66.42
+    },
+    {
+      "id": "foreign-074",
+      "label": "Regne Unit",
+      "lodging": 239.08,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-075",
+      "label": "República Dominicana",
+      "lodging": 97.67,
+      "meals": 54.69
+    },
+    {
+      "id": "foreign-076",
+      "label": "República Txeca",
+      "lodging": 154.7,
+      "meals": 64.84
+    },
+    {
+      "id": "foreign-077",
+      "label": "Resta del món",
+      "lodging": 165.63,
+      "meals": 60.94
+    },
+    {
+      "id": "foreign-078",
+      "label": "Romania",
+      "lodging": 193.77,
+      "meals": 57.81
+    },
+    {
+      "id": "foreign-079",
+      "label": "Rússia",
+      "lodging": 347.69,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-080",
+      "label": "Senegal",
+      "lodging": 103.13,
+      "meals": 66.42
+    },
+    {
+      "id": "foreign-081",
+      "label": "Singapur",
+      "lodging": 129.7,
+      "meals": 70.32
+    },
+    {
+      "id": "foreign-082",
+      "label": "Sud-àfrica",
+      "lodging": 97.67,
+      "meals": 72.66
+    },
+    {
+      "id": "foreign-083",
+      "label": "Suècia",
+      "lodging": 225.02,
+      "meals": 91.35
+    },
+    {
+      "id": "foreign-084",
+      "label": "Suïssa",
+      "lodging": 226.58,
+      "meals": 89.86
+    },
+    {
+      "id": "foreign-085",
+      "label": "Síria",
+      "lodging": 127.35,
+      "meals": 67.98
+    },
+    {
+      "id": "foreign-086",
+      "label": "Tailàndia",
+      "lodging": 105.48,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-087",
+      "label": "Taiwan",
+      "lodging": 125.01,
+      "meals": 70.32
+    },
+    {
+      "id": "foreign-088",
+      "label": "Tanzània",
+      "lodging": 117.2,
+      "meals": 45.32
+    },
+    {
+      "id": "foreign-089",
+      "label": "Tunísia",
+      "lodging": 78.91,
+      "meals": 70.32
+    },
+    {
+      "id": "foreign-090",
+      "label": "Turquia",
+      "lodging": 93.76,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-091",
+      "label": "Uruguai",
+      "lodging": 87.5,
+      "meals": 60.68
+    },
+    {
+      "id": "foreign-092",
+      "label": "Veneçuela",
+      "lodging": 118.76,
+      "meals": 54.69
+    },
+    {
+      "id": "foreign-093",
+      "label": "Xile",
+      "lodging": 156.26,
+      "meals": 75.01
+    },
+    {
+      "id": "foreign-094",
+      "label": "Xina",
+      "lodging": 109.38,
+      "meals": 67.2
+    },
+    {
+      "id": "foreign-095",
+      "label": "Zimbabwe",
+      "lodging": 117.2,
+      "meals": 58.6
+    },
+    {
+      "id": "foreign-096",
+      "label": "Àustria",
+      "lodging": 146.11,
+      "meals": 85.94
+    },
+    {
+      "id": "foreign-097",
+      "label": "Índia",
+      "lodging": 152.36,
+      "meals": 57.81
+    }
+  ]
+}

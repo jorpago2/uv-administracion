@@ -1,5 +1,6 @@
 import manualData from "./data/manual.json";
 import { CATEGORIES } from "./chapter-categories.js";
+import { initDecisionTools } from "./decision-tools.js";
 import { initOperationalTools } from "./operational-tools.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
 
@@ -34,6 +35,7 @@ const elements = {
 assertRequiredElements(elements);
 bindEvents();
 initOperationalTools(elements.operationalHub);
+initDecisionTools(document.querySelector("#calculadoras-operativas"));
 initSalaryCalculator(document.querySelector("#salaryCalculator"));
 loadManual();
 

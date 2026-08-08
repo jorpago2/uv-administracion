@@ -64,9 +64,9 @@
         <a href="#asistente-tramites"><span>Asistente</span>Resolver un trámite</a>
         <a href="#calendario-anual"><span>Planificación</span>Crear calendario</a>
         <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
-        <a href="#dedicacion-docente-oca-y-pod"><span>Docencia</span>Revisar POD</a>
-        <a href="#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion"><span>Investigación</span>Presentar proyecto</a>
-        <a href="#compras-y-contratos-menores"><span>Gestión</span>Tramitar compra</a>
+        <a href="#calculadora-pod"><span>Docencia</span>Calcular POD</a>
+        <a href="#calculadora-compras"><span>Compras</span>Elegir tramitación</a>
+        <a href="#calculadora-viajes"><span>Viajes</span>Estimar comisión</a>
       </nav>
 
       <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
@@ -166,6 +166,111 @@
           </div>
           <p class="calendar-caveat"><strong>Privacidad:</strong> el archivo se genera localmente. No contiene datos personales ni se conecta con tu calendario; debes importarlo manualmente en la aplicación que utilices.</p>
         </article>
+      </section>
+
+      <section class="decision-tools" id="calculadoras-operativas" aria-labelledby="decisionToolsTitle">
+        <header class="decision-tools__heading">
+          <div><p class="context-line">Regla aplicada · desglose · advertencias</p><h2 id="decisionToolsTitle">Calculadoras para decidir</h2></div>
+          <p>Cuatro estimadores locales para preparar una decisión antes de iniciar el expediente. Los datos no salen del navegador y cada herramienta enlaza su norma oficial.</p>
+        </header>
+
+        <nav class="decision-tools__nav" aria-label="Calculadoras disponibles">
+          <a href="#calculadora-pod">01 · POD</a><a href="#calculadora-compras">02 · Compras</a><a href="#calculadora-viajes">03 · Viajes</a><a href="#calculadora-personal">04 · Personal</a>
+        </nav>
+
+        <div class="decision-grid">
+          <details class="decision-card" id="calculadora-pod" open>
+            <summary><span><small>01 · Docencia</small><strong>Dedicación POD</strong><span>Base anual y reducciones reconocibles.</span></span><b aria-hidden="true">+</b></summary>
+            <div class="decision-card__body">
+              <form class="decision-form" id="podForm">
+                <fieldset><legend>Situación de partida</legend><div class="decision-fields">
+                  <label>Categoría<select name="category"><option value="permanent">PDI permanente · no CU</option><option value="cu">Catedrático/a de universidad</option><option value="assistant_doctor">Ayudante Doctor/a</option></select></label>
+                  <label>Curso<select name="course"><option value="2026-27">2026-27</option><option value="2027-28">2027-28</option><option value="2028-29">2028-29</option><option value="2029-30">2029-30 o posterior</option></select></label>
+                  <label>Sexenios reconocidos<input name="sexennia" type="number" min="0" max="6" step="1" value="3"></label>
+                  <label>Años desde que dejó de estar activo<input name="inactiveYears" type="number" min="0" max="30" step="1" value="0"></label>
+                </div><label class="decision-check"><input name="active" type="checkbox" checked><span>El último sexenio está activo</span></label></fieldset>
+                <fieldset><legend>Reducciones a comprobar</legend><div class="decision-fields">
+                  <label>Proyectos públicos como IP<input name="publicProjects" type="number" min="0" max="20" step="1" value="2"></label>
+                  <label>Proyectos Erasmus+ elegibles<input name="erasmusProjects" type="number" min="0" max="20" step="1" value="0"></label>
+                  <label>Horas reconocidas por tesis<input name="thesisHours" type="number" min="0" max="60" step="5" value="30"></label>
+                  <label>Otras horas ya reconocidas<input name="otherHours" type="number" min="0" max="300" step="1" value="0"></label>
+                </div><label class="decision-check"><input name="exceptionalEuropean" type="checkbox"><span>Proyecto europeo con reducción excepcional de 40 h reconocida</span></label><label class="decision-check"><input name="age63" type="checkbox"><span>63 años o más al inicio del curso</span></label></fieldset>
+                <button class="control" type="reset">Restablecer</button>
+              </form>
+              <section class="decision-result" aria-label="Resultado POD"><p class="decision-result__eyebrow">Dedicación estimada</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
+            </div>
+            <footer class="decision-source"><strong>Fuente:</strong> <a href="https://webges.uv.es/uvTaeWeb/MuestraInformacionEdictoPublicoFrontAction.do?idEdictoSeleccionado=94719">ACGUV 4/2026</a>. Resultado orientativo: la asignación aprobada en POD prevalece.</footer>
+          </details>
+
+          <details class="decision-card" id="calculadora-compras">
+            <summary><span><small>02 · Gestión</small><strong>Ruta de una compra</strong><span>Límite, ofertas, AD y secuencia.</span></span><b aria-hidden="true">+</b></summary>
+            <div class="decision-card__body">
+              <form class="decision-form" id="purchaseForm">
+                <fieldset><legend>Necesidad</legend><div class="decision-fields">
+                  <label>Tipo<select name="type"><option value="supplies">Suministro general</option><option value="services">Servicio general</option><option value="works">Obra</option><option value="research" selected>Suministro/servicio de investigación · DA 54</option><option value="database">Base de datos o suscripción</option></select></label>
+                  <label>Importe sin IVA<input name="amount" type="number" min="0" max="100000000" step="0.01" value="18000"></label>
+                  <label>Duración prevista · meses<input name="durationMonths" type="number" min="1" max="240" step="1" value="4"></label>
+                </div></fieldset>
+                <fieldset><legend>Condiciones</legend><label class="decision-check"><input name="recurring" type="checkbox"><span>Necesidad recurrente o previsible cada año</span></label><label class="decision-check"><input name="framework" type="checkbox"><span>Existe acuerdo marco o sistema dinámico aplicable</span></label><label class="decision-check"><input name="exclusive" type="checkbox"><span>Proveedor objetivamente exclusivo y documentable</span></label><label class="decision-check"><input name="periodicOrForeign" type="checkbox"><span>Factura periódica o pago al extranjero</span></label></fieldset>
+                <button class="control" type="reset">Restablecer</button>
+              </form>
+              <section class="decision-result" aria-label="Resultado de compra"><p class="decision-result__eyebrow">Ruta propuesta</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><h4>Secuencia</h4><ol class="decision-steps"></ol><ul class="decision-warnings"></ul></section>
+            </div>
+            <footer class="decision-source"><strong>Fuente:</strong> <a href="https://www.uv.es/uvweb/gerencia/ca/novetats/instruccio-iuv-1/2025-sobre-regim-tramitacio-contractes-menors-1285923488803/Novetat.html?id=1286428168023">IUV 1/2025 sobre contratos menores</a>. Importes siempre sin IVA.</footer>
+          </details>
+
+          <details class="decision-card" id="calculadora-viajes">
+            <summary><span><small>03 · Gestión</small><strong>Comisión de servicios</strong><span>Alojamiento, manutención y desplazamiento.</span></span><b aria-hidden="true">+</b></summary>
+            <div class="decision-card__body">
+              <form class="decision-form" id="travelForm">
+                <fieldset><legend>Régimen y destino</legend><div class="decision-fields">
+                  <label>Financiación<select id="travelFunding" name="funding"><option value="uv">Fondos propios UV · régimen UV</option><option value="age-gva">Ayuda AGE/GVA u otro régimen</option></select></label>
+                  <label>Destino<select id="travelDestinationType" name="destinationType"><option value="rest-spain">Resto de España</option><option value="madrid-barcelona">Madrid o Barcelona</option><option value="foreign" selected>Extranjero</option></select></label>
+                  <label>País · denominación del anexo<select id="travelForeign" name="foreignId"></select></label>
+                  <label>Distancia desde el origen · km<input name="distance" type="number" min="0" max="100000" step="1" value="1800"></label>
+                </div><label class="decision-check"><input name="exceedsWorkday" type="checkbox" checked><span>El servicio obliga a exceder la jornada ordinaria y está motivado</span></label></fieldset>
+                <fieldset><legend>Gastos previstos</legend><div class="decision-fields">
+                  <label>Noches<input name="lodgingDays" type="number" min="0" max="365" step="1" value="3"></label>
+                  <label>Alojamiento real total<input name="actualLodging" type="number" min="0" max="1000000" step="0.01" value="510"></label>
+                  <label>Días de manutención completa<input name="fullMealDays" type="number" min="0" max="365" step="0.5" value="2"></label>
+                  <label>Medias dietas<input name="halfMealDays" type="number" min="0" max="365" step="0.5" value="2"></label>
+                  <label>Transporte público<input name="publicTransport" type="number" min="0" max="1000000" step="0.01" value="185"></label>
+                  <label>Inscripción planificada<input name="registration" type="number" min="0" max="1000000" step="0.01" value="420"></label>
+                  <label>Vehículo particular<select name="vehicle"><option value="car">Automóvil · 0,26 €/km</option><option value="motorcycle">Motocicleta · 0,106 €/km</option></select></label>
+                  <label>Kilómetros de vehículo particular<input name="kilometres" type="number" min="0" max="100000" step="1" value="0"></label>
+                </div></fieldset>
+                <button class="control" type="reset">Restablecer</button>
+              </form>
+              <section class="decision-result" aria-label="Resultado de viaje"><p class="decision-result__eyebrow">Máximo planificado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
+            </div>
+            <footer class="decision-source"><strong>Fuentes:</strong> <a href="https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf">reglas del Anexo 1a</a> y <a href="https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf">cuantías del Anexo 1b · 2026</a>.</footer>
+          </details>
+
+          <details class="decision-card" id="calculadora-personal">
+            <summary><span><small>04 · Investigación</small><strong>Coste de contratación</strong><span>Salario, cuotas empresariales y reserva.</span></span><b aria-hidden="true">+</b></summary>
+            <div class="decision-card__body">
+              <form class="decision-form" id="personnelForm">
+                <fieldset><legend>Hipótesis presupuestaria</legend><div class="decision-fields">
+                  <label>Salario bruto anual<input name="grossAnnual" type="number" min="0" max="10000000" step="0.01" value="32000"></label>
+                  <label>Duración · meses<input name="months" type="number" min="0.1" max="120" step="0.1" value="12"></label>
+                  <label>Tipo de contrato<select name="contractType"><option value="indefinite">Indefinido</option><option value="fixed" selected>Temporal · hipótesis</option></select></label>
+                  <label>AT/EP empresarial · %<input name="accidentRate" type="number" min="0" max="20" step="0.01" value="1.5"></label>
+                  <label>Otros tipos empresariales · %<input name="otherRate" type="number" min="0" max="50" step="0.01" value="0"></label>
+                  <label>Otros costes del periodo<input name="otherCosts" type="number" min="0" max="10000000" step="0.01" value="0"></label>
+                  <label>Reserva de desviación · %<input name="reserveRate" type="number" min="0" max="50" step="0.1" value="2"></label>
+                </div></fieldset>
+                <button class="control" type="reset">Restablecer</button>
+              </form>
+              <section class="decision-result" aria-label="Resultado de coste de personal"><p class="decision-result__eyebrow">Coste total estimado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
+            </div>
+            <footer class="decision-source"><strong>Fuentes:</strong> <a href="https://www.boe.es/eli/es/o/2026/03/30/pjc297">Orden PJC/297/2026</a> y <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/9932/4315?changeLanguage=es">tipos de cotización de la Seguridad Social</a>.</footer>
+          </details>
+        </div>
+
+        <section class="case-library" id="casos-completos" aria-labelledby="caseLibraryTitle">
+          <header><div><p class="context-line">De la situación al expediente</p><h3 id="caseLibraryTitle">Casos completos</h3></div><p>Ocho escenarios realistas con hechos, decisión, documentos, secuencia, errores y resultado. Los cinco calculables pueden cargarse con un clic.</p></header>
+          <div class="case-list" id="decisionCaseList"></div>
+        </section>
       </section>
 
       <section class="salary-tool" id="calculadora-retributiva" aria-labelledby="salaryTitle">
