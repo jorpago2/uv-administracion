@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Guía operativa de procedimientos para PDI de la Universitat de València en la ETSE, el DIE y el ICMUV.">
+  <title>Guía operativa UV · ETSE · DIE · ICMUV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="masthead">
+    <a class="brand" href="#inicio" aria-label="Inicio de la guía">
+      <span class="brand__uv">UV</span><span class="brand__name">Guía operativa</span>
+    </a>
+    <div class="masthead__meta" aria-label="Ámbito de la guía"><span>ETSE</span><span>DIE</span><span>ICMUV</span></div>
+    <button class="control control--menu" id="menuButton" type="button" aria-expanded="false" aria-controls="indexPanel">Índice</button>
+  </header>
+
+  <aside class="index-panel" id="indexPanel" aria-label="Índice del manual">
+    <div class="index-panel__head"><strong>Capítulos</strong><button class="control control--close" id="closeMenuButton" type="button">Cerrar</button></div>
+    <nav id="chapterIndex" aria-label="Capítulos de la guía"><p class="loading-copy">Cargando índice…</p></nav>
+    <div class="index-panel__foot"><a href="MANUAL_PROCEDIMIENTOS.md">Abrir Markdown</a><a href="ALERTAS.md">Ver alertas</a></div>
+  </aside>
+
+  <div class="page-shell">
+    <main id="contenido">
+      <section class="intro" id="inicio" aria-labelledby="pageTitle">
+        <div class="intro__copy">
+          <p class="context-line">Procedimientos · derechos · plazos · fuentes</p>
+          <h1 id="pageTitle">Guía operativa UV</h1>
+          <p class="intro__lead">Consulta práctica para profesorado e investigación de la ETSE, el Departamento de Ingeniería Electrónica y el ICMUV.</p>
+        </div>
+        <aside class="revision-note" aria-label="Alcance y revisión">
+          <strong>Documento vivo</strong>
+          <p>La convocatoria, la sede y la norma vigente prevalecen siempre sobre esta síntesis.</p>
+          <dl>
+            <div><dt>Revisión</dt><dd id="revisionDate">—</dd></div>
+            <div><dt>Capítulos</dt><dd id="sectionCount">—</dd></div>
+            <div><dt>Enlaces</dt><dd id="linkCount">—</dd></div>
+            <div><dt>Casos prácticos</dt><dd id="exampleCount">—</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="finder" aria-labelledby="finderTitle">
+        <div class="finder__heading"><h2 id="finderTitle">¿Qué necesitas resolver?</h2><p>Busca una palabra, un trámite, una unidad o una norma. Atajo: <kbd>/</kbd></p></div>
+        <form class="search" id="searchForm" role="search">
+          <label for="searchInput">Buscar en toda la guía</label>
+          <div class="search__row" id="searchControl" data-state="default">
+            <input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Ej.: sexenio, examen, patente, viaje…" aria-describedby="searchHelp searchStatus">
+            <button class="control control--clear" id="clearSearch" type="button" disabled>Limpiar</button>
+          </div>
+          <p class="search__help" id="searchHelp">La búsqueda se realiza en este navegador; no se envía ningún dato.</p>
+          <p class="sr-only" id="searchStatus" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <nav class="route-strip" aria-label="Accesos frecuentes">
+        <a href="#dedicacion-docente-oca-y-pod"><span>Docencia</span>Revisar POD</a>
+        <a href="#docencia-evaluacion-y-examenes"><span>Evaluación</span>Resolver examen</a>
+        <a href="#proyectos-competitivos-y-ayudas-de-investigacion"><span>Investigación</span>Presentar proyecto</a>
+        <a href="#compras-y-contratos-menores"><span>Gestión</span>Tramitar compra</a>
+      </nav>
+
+      <section class="filter-area" aria-labelledby="filterTitle">
+        <h2 id="filterTitle">Explorar por ámbito</h2>
+        <div class="filters" role="group" aria-label="Filtrar capítulos por ámbito">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todo</button>
+          <button class="filter" type="button" data-filter="docencia" aria-pressed="false">Docencia</button>
+          <button class="filter" type="button" data-filter="investigacion" aria-pressed="false">Investigación</button>
+          <button class="filter" type="button" data-filter="pdi" aria-pressed="false">PDI</button>
+          <button class="filter" type="button" data-filter="gestion" aria-pressed="false">Gestión</button>
+        </div>
+      </section>
+
+      <section class="manual" id="manual" aria-label="Contenido del manual" aria-busy="true" data-state="loading">
+        <div class="loading-panel"><span class="loading-panel__block" aria-hidden="true"></span><p>Cargando la guía…</p></div>
+      </section>
+    </main>
+
+    <footer class="colophon"><p><strong>Guía operativa UV.</strong> Interfaz estática generada a partir de <a href="MANUAL_PROCEDIMIENTOS.md">MANUAL_PROCEDIMIENTOS.md</a>. Ámbito: ETSE · Departamento de Ingeniería Electrónica · ICMUV. Las fuentes oficiales enlazadas y las convocatorias vigentes prevalecen. Diseño neobrutalista: estructura visible, color plano, bordes gruesos y sombras sin desenfoque.</p></footer>
+  </div>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Volver al inicio">Arriba</button>
+  <div class="menu-scrim" id="menuScrim" hidden></div>
+  <noscript><div class="noscript">Esta interfaz necesita JavaScript para transformar y buscar el manual. El contenido completo sigue disponible en <a href="MANUAL_PROCEDIMIENTOS.md">formato Markdown</a>.</div></noscript>
+</body>
+</html>

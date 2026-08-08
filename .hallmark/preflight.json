@@ -1,0 +1,9 @@
+{
+  "date": "2026-08-08",
+  "font_stack": "none",
+  "palette": "none",
+  "motion": "motion-cut; no library",
+  "spacing": "none",
+  "framework": "vanilla HTML",
+  "preserve": ["MANUAL_PROCEDIMIENTOS.md", "ALERTAS.md", "catalogos", "documentos"]
+}
