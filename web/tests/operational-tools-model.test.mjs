@@ -12,9 +12,9 @@ import {
 const operations = JSON.parse(await readFile(new URL("../data/operations.json", import.meta.url), "utf8"));
 const manual = await readFile(new URL("../../MANUAL_PROCEDIMIENTOS.md", import.meta.url), "utf8");
 
-test("valida 26 fichas y 12 hitos operativos", () => {
+test("valida 27 fichas y 12 hitos operativos", () => {
   const validated = validateOperationsData(operations);
-  assert.equal(validated.procedures.length, 26);
+  assert.equal(validated.procedures.length, 27);
   assert.equal(validated.milestones.length, 12);
 });
 

@@ -86,9 +86,9 @@ export function classifyPurchase(input) {
   }
 
   if (input.framework) {
-    return purchaseResult("derived", "Compra derivada de acuerdo marco", amount, 0, false,
-      ["Identifica el acuerdo marco o sistema dinámico aplicable.", "Tramita la compra por su procedimiento derivado; no como contrato menor."],
-      ["La instrucción de contratos menores no es la vía aplicable."], minorLimit);
+    return purchaseResult("derived", "Compra derivada de acuerdo marco o SDA", amount, 0, false,
+      ["Identifica el acuerdo marco o sistema dinámico aplicable y su expediente vigente.", "Tramita la compra por su procedimiento derivado; si es material de laboratorio, comprueba el módulo SDA, el centro de coste y sus aprobaciones."],
+      ["La instrucción de contratos menores no es la vía aplicable. El acuerdo marco o SDA puede exigir aprobación administrativa aunque el importe sea inferior a 5.000 €."], minorLimit);
   }
   if (input.recurring || durationMonths > 12 || !thresholdAllowsMinor) {
     if (input.recurring) warnings.push("Una necesidad recurrente y previsible no debe encadenarse mediante contratos menores.");

@@ -45,6 +45,14 @@ test("aplica el umbral SARA 2026-2027 a bases de datos y suscripciones", () => {
   assert.equal(extreme.status, "not-minor");
 });
 
+test("deriva acuerdos marco y SDA fuera del contrato menor", () => {
+  const result = classifyPurchase({ type: "research", amount: 850, durationMonths: 1, framework: true });
+  assert.equal(result.status, "derived");
+  assert.match(result.title, /SDA/);
+  assert.match(result.steps.join(" "), /centro de coste/i);
+  assert.match(result.warnings.join(" "), /inferior a 5\.000/);
+});
+
 test("separa publicaciones, inscripciones y cuotas científicas de UV-plyca", () => {
   for (const type of ["scientific-publication", "conference-registration", "scientific-membership"]) {
     const result = classifyPurchase({ type, amount: 2000, durationMonths: 1 });

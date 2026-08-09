@@ -145,10 +145,11 @@ export const EXAMPLE_GUIDANCE = Object.freeze({
     "Responsable de infraestructura, dirección de la estructura y unidad de mantenimiento o proveedor"
   ),
   29: guide(
-    "El osciloscopio se tramita como una única necesidad, con crédito, procedimiento, ofertas y aprobación completados antes del pedido y la factura.",
-    "Define el objeto completo —equipo, accesorios, instalación y servicios asociados— y calcula el valor sin IVA antes de contactar como comprador al proveedor.",
-    ["¿Es una única necesidad y cuál es su valor estimado total?", "¿Es suministro de investigación y qué umbral resulta aplicable?", "¿Cuántas ofertas y qué aprobación exige UV-plyca?"],
-    ["No existe fraccionamiento artificial.", "Pedido y factura son posteriores a la aprobación cuando procede.", "Recepción, inventario y conformidad quedan documentados."]
+    "Cada suministro sigue la vía que le corresponde: el osciloscopio como necesidad completa y los reactivos mediante el SDA, con crédito, centro de coste, aprobaciones, pedido y recepción trazables.",
+    "Describe por separado cada necesidad y pregunta primero a la unidad gestora si el objeto está cubierto por un acuerdo marco o SDA; no apliques automáticamente los umbrales de contrato menor.",
+    ["¿El objeto aparece en un catálogo o expediente SDA vigente?", "¿Cuál es el centro de coste y quién compra, aprueba y valida?", "¿El precio total incluye portes, alquileres, accesorios y demás conceptos necesarios?"],
+    ["La vía SDA o contrato menor se decide antes de confirmar el pedido.", "El proveedor recibe el pedido solo tras las aprobaciones aplicables.", "Entrega, incidencias, recepción y factura quedan vinculadas al expediente correcto."],
+    "Unidad gestora del DIE o ICMUV y, para el SDA, estructura responsable publicada por el SCSIE"
   ),
   30: guide(
     "El congreso está autorizado y financiado antes de asumir gastos, y la liquidación admite cada coste sin mezclar días personales.",
@@ -210,6 +211,11 @@ export const EXTRA_OFFICIAL_SOURCES = Object.freeze({
   24: [
     source("Comunicación de resultados protegibles", "https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/comunicacion-nuevos-resultados-investigacion-protegibles-1286318132547.html"),
     source("Comunicación y evaluación de resultados", "https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html")
+  ],
+  29: [
+    source("Módulo de pedidos SDA de material de laboratorio — marzo de 2026", "https://www.uv.es/scsieweb/SDA/Modulo-Pedidos-Gestion.pdf"),
+    source("Manual de la plataforma de catálogos electrónicos SDA", "https://www.uv.es/scsieweb/SDA/Manuales/manual-usuarios-catalogo%20SDA.pdf"),
+    source("Documentación UV de acuerdos marco y SDA de suministros", "https://www.uv.es/uvweb/servicio-contratacion-administrativa/es/documentacion-acuerdos-marco-sda-suministros-1286077243115.html")
   ],
   35: [
     source("Ley 53/1984 de incompatibilidades — texto consolidado", "https://www.boe.es/eli/es/l/1984/12/26/53/con"),

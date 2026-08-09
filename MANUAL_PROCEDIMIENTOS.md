@@ -1,7 +1,7 @@
 ---
 title: "Manual operativo para PDI de la UV — ETSE, DIE e ICMUV"
-version: "2.0"
-fecha_revision: "2026-08-08"
+version: "2.1"
+fecha_revision: "2026-08-09"
 ambito: "Profesorado e investigación en la Universitat de València"
 ---
 
@@ -72,6 +72,7 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 | Contrato o convenio con una empresa | Servicio de Transferencia e Innovación | Antes de iniciar trabajos o asumir compromisos |
 | Invención, software o resultado protegible | Servicio de Transferencia e Innovación | Invenciones: 3 meses desde su conclusión y siempre antes de divulgar |
 | Crear una spin-off o trabajar en ella | Transferencia y RR. HH. PDI | Reconocimiento y compatibilidad antes de actuar |
+| Comprar material de laboratorio o gases | Plataforma SDA y unidad gestora de la estructura | Identificar SDA, centro de coste y circuito de aprobación antes de confirmar el pedido |
 | Compra inferior a 5.000 € sin IVA | Unidad gestora/UV-plyca | Antes de comprometer gastos superiores a 200 € sin IVA |
 | Compra igual o superior a 5.000 € sin IVA, dentro de los límites de contrato menor | Unidad gestora/UV-plyca | Expediente y adjudicación antes del pedido y de la factura |
 | Viaje, congreso o estancia | Dirección de la estructura/unidad gestora | Autorización y crédito antes del viaje |
@@ -934,6 +935,8 @@ Detén el uso si existe riesgo o resultados no fiables. Documenta avería, últi
 
 La [Instrucción IUV 1/2025](https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693) regula la tramitación mediante UV-plyca.
 
+Antes de aplicar sus umbrales, comprueba si la necesidad ya está cubierta por un acuerdo marco o por un **Sistema Dinámico de Adquisición (SDA)**. En ese caso no se tramita como un contrato menor ordinario: se utiliza el procedimiento derivado específico, aunque el importe sea reducido.
+
 Límites de valor estimado del contrato menor, IVA excluido:
 
 - obras: menos de 40.000 €;
@@ -943,14 +946,39 @@ Límites de valor estimado del contrato menor, IVA excluido:
 
 El contrato menor no puede durar más de un año, prorrogarse ni utilizarse para necesidades recurrentes. Por encima del límite aplicable debe acudirse al Servicio de Contratación Administrativa.
 
-### 29.1 Antes de comprar
+### 29.1 Elegir la vía antes de comprar
 
 - No fracciones una necesidad para eludir umbrales o procedimientos.
 - Confirma crédito y elegibilidad del gasto.
+- Pregunta a la unidad gestora si existe acuerdo marco, contrato centralizado o SDA aplicable al objeto.
 - No permitas que el proveedor entregue o facture antes de la adjudicación cuando se exige resolución previa.
 - Para importes superiores a 200 € sin IVA, aunque el contrato sea inferior a 5.000 €, remite previamente a la unidad gestora el formulario inicial, presupuesto u oferta.
 
-### 29.2 Inferior a 5.000 € sin IVA
+### 29.2 SDA de material de laboratorio y gases
+
+La UV canaliza mediante SDA las compras incluidas en los catálogos de **material de laboratorio** y **gases de laboratorio**. El SDA no es una tienda libre ni una excepción a la contratación: permite realizar contratos específicos entre los proveedores previamente admitidos, conforme al catálogo, al expediente y al circuito de aprobación de la UV. Consulta la [documentación vigente de acuerdos marco y SDA de suministros](https://www.uv.es/uvweb/servicio-contratacion-administrativa/es/documentacion-acuerdos-marco-sda-suministros-1286077243115.html) para confirmar el alcance de cada expediente.
+
+#### Material de laboratorio: flujo del módulo de pedidos de 2026
+
+La [presentación oficial del módulo de pedidos, de marzo de 2026](https://www.uv.es/scsieweb/SDA/Modulo-Pedidos-Gestion.pdf), describe este circuito en la [plataforma SDA del CSUC](https://mlaboratori.csuc.cat/):
+
+1. **Confirma acceso y centro de coste.** El usuario comprador debe estar dado de alta y vinculado al centro de coste correcto. La estructura define las personas compradoras, aprobadoras y gestoras mediante la [gestión de usuarios e incidencias SDA](https://www.uv.es/uvweb/servicio-central-soporte-investigacion-experimental/es/login/otras-gestiones/sistema-dinamic-adquisicio-uv/gestion-usuarios-consultas-incidencias-sda-1286342845960.html).
+2. **Busca y compara.** Localiza el producto preferentemente por referencia exacta o código CAS, compara las ofertas de proveedores homologados y revisa pedido mínimo, portes y condiciones. Si los portes no están incluidos, añádelos según la ficha del proveedor; no los ocultes fuera del pedido.
+3. **Prepara la cesta.** Comprueba cantidades, precio sin IVA, dirección de entrega, centro de coste, proyecto o clave y comentarios. Una cesta no equivale todavía a una compra autorizada.
+4. **Confirma el pedido en la plataforma.** Se genera un código de pedido. Según la configuración del centro de coste, puede requerir aprobación del IP o dirección y validación de la persona gestora. La validación administrativa es obligatoria para pedidos de **5.000 € o más** y la estructura puede exigirla desde un importe inferior.
+5. **Espera el circuito.** Cuando proceda, la persona gestora verifica la tramitación y realiza las actuaciones necesarias en PLYCA. El proveedor solo recibe el pedido después de las aprobaciones y validaciones configuradas.
+6. **Gestiona observaciones.** El proveedor puede aceptar, cancelar o proponer costes adicionales. No aceptes portes o extras sin revisar crédito, elegibilidad y precio total; la plataforma deja el pedido en estado de observaciones hasta decidir.
+7. **Recibe y cierra.** Comprueba productos, cantidades, integridad y albarán. Después marca la recepción en la plataforma para que el pedido pase de «pendiente de recibir» a finalizado. Comunica inmediatamente faltas, daños o discrepancias antes de conformar la factura.
+
+Conserva como expediente mínimo la necesidad, comparación realizada, pedido y código, aprobaciones, comunicaciones, albarán, recepción e incidencia si la hubiera. El [manual del catálogo electrónico](https://www.uv.es/scsieweb/SDA/Manuales/manual-usuarios-catalogo%20SDA.pdf) explica búsquedas, cestas, centros de coste, proveedores y portes.
+
+> **Atención a manuales antiguos.** La guía inicial de 2024 indicaba descargar la nota de pedido en PDF y enviarla al proveedor. Para material de laboratorio, el módulo presentado en marzo de 2026 permite remitir y seguir el pedido directamente en la plataforma. Comprueba el estado operativo vigente y sigue el circuito que muestre tu centro de coste; no envíes además un pedido manual que pueda duplicarlo.
+
+#### Gases de laboratorio
+
+El SDA de gases tiene expediente e instrucciones propias. No debe darse por supuesto que utiliza exactamente el mismo módulo o flujo que el material de laboratorio. Antes de solicitar una botella, recarga, alquiler o transporte, confirma con la unidad gestora el proveedor admitido, concepto completo, portes o alquileres, dirección y condiciones de seguridad, así como el procedimiento vigente publicado por la UV.
+
+### 29.3 Contrato menor inferior a 5.000 € sin IVA
 
 - Se considera gasto menor.
 - Puede registrarse en UV-plyca después de recibir factura.
@@ -958,7 +986,7 @@ El contrato menor no puede durar más de un año, prorrogarse ni utilizarse para
 - No exige resolución de adjudicación.
 - El documento AD es normalmente potestativo, salvo pagos periódicos o al extranjero.
 
-### 29.3 Igual o superior a 5.000 € sin IVA
+### 29.4 Contrato menor igual o superior a 5.000 € sin IVA
 
 1. La unidad registra el expediente en UV-plyca.
 2. Se solicitan y documentan las ofertas exigidas.
@@ -972,7 +1000,7 @@ Se exigen al menos tres presupuestos de empresas que no pertenezcan al mismo gru
 
 Los pagos al extranjero, exclusividades, gastos compartidos y anticipos tienen reglas adicionales. Antes de una compra dudosa, solicita criterio escrito a la unidad gestora.
 
-> **Ejemplo realista — osciloscopio por debajo de 5.000 euros.** Un grupo necesita un osciloscopio de 4.850 euros sin IVA y accesorios asociados. Aunque el equipo está por debajo de 5.000 euros, supera 200: antes de pedirlo, el responsable comprueba crédito y proveedor y tramita la solicitud en UV-plyca. No compra primero con tarjeta personal ni separa artificialmente accesorios que forman parte de una única necesidad para mantener cada factura bajo el umbral.
+> **Ejemplo realista — dos compras que siguen rutas distintas.** Un grupo necesita un osciloscopio de 4.850 euros sin IVA y, además, reactivos incluidos en el catálogo SDA. El responsable trata el osciloscopio y sus accesorios como una única necesidad, confirma crédito y remite previamente la solicitud a su unidad gestora; no divide facturas ni compra con medios personales. Para los reactivos no abre un contrato menor ordinario: entra en el catálogo SDA, compara proveedores homologados, incorpora portes si corresponden, selecciona el centro de coste y completa las aprobaciones del módulo antes de que el proveedor reciba el pedido. Al llegar, verifica ambos suministros y documenta su recepción por el circuito aplicable.
 
 ## 30. Viajes, congresos, dietas e inscripciones
 

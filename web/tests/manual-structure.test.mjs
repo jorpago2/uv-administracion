@@ -4,6 +4,13 @@ import test from "node:test";
 import { CATEGORIES } from "../chapter-categories.js";
 
 const manual = await readFile(new URL("../../MANUAL_PROCEDIMIENTOS.md", import.meta.url), "utf8");
+
+test("documenta el flujo SDA de material de laboratorio de 2026", () => {
+  assert.match(manual, /### 29\.2 SDA de material de laboratorio y gases/);
+  assert.match(manual, /Modulo-Pedidos-Gestion\.pdf/);
+  assert.match(manual, /Atención a manuales antiguos/);
+  assert.match(manual, /Gases de laboratorio/);
+});
 const chapterNumbers = [...manual.matchAll(/^## (\d+)\. /gm)].map((match) => Number(match[1]));
 
 test("el manual contiene 37 capítulos consecutivos", () => {

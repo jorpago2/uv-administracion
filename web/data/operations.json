@@ -349,6 +349,26 @@
       "validity": "annual"
     },
     {
+      "id": "compra-sda-laboratorio",
+      "featured": true,
+      "title": "Comprar material de laboratorio mediante SDA",
+      "summary": "Buscar entre proveedores homologados, seleccionar centro de coste y completar aprobación, pedido y recepción en el módulo SDA.",
+      "area": "gestion",
+      "roles": ["ip", "responsable", "docente"],
+      "moments": ["preparar", "tramitar", "cerrar"],
+      "chapter": 29,
+      "anchor": "compras-y-contratos-menores",
+      "unit": "Unidad gestora y estructura responsable SDA del SCSIE",
+      "deadline": "Antes de confirmar el pedido al proveedor; validación administrativa obligatoria desde 5.000 € o desde el límite inferior configurado",
+      "channel": "Plataforma SDA de catálogos y módulo de pedidos",
+      "documents": ["Necesidad, referencia y centro de coste", "Comparación de catálogo, portes y pedido SDA", "Aprobaciones, albarán, recepción e incidencias"],
+      "steps": ["Confirmar que el objeto y proveedor pertenecen al SDA vigente", "Comparar precios y completar cesta, portes y centro de coste", "Obtener aprobaciones y esperar el envío del pedido", "Verificar la entrega y finalizar la recepción en la plataforma"],
+      "risk": "No tramitar el objeto como contrato menor ordinario ni duplicar el pedido enviándolo también manualmente.",
+      "sourceLabel": "Módulo de pedidos SDA de material de laboratorio — marzo de 2026",
+      "sourceUrl": "https://www.uv.es/scsieweb/SDA/Modulo-Pedidos-Gestion.pdf",
+      "validity": "annual"
+    },
+    {
       "id": "viaje-congreso",
       "title": "Autorizar y liquidar un viaje o congreso",
       "summary": "Asegurar autorización, crédito y elegibilidad antes de reservar o pagar gastos.",
