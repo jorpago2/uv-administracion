@@ -315,7 +315,7 @@
     "kind": "Situación",
     "title": "Actuar ante conducta disruptiva, amenaza o agresión en clase",
     "context": "Una conducta impide desarrollar la docencia o genera miedo y necesitas proteger, documentar y activar el cauce apropiado sin escalar innecesariamente.",
-    "keywords": "conducta disruptiva amenaza aula agresión expulsar estudiante convivencia seguridad Dirección de la ETSE y departamento; seguridad o emergencias; Comisión de Convivencia o unidad especializada según hechos Comunicación factual y confidencial al órgano competente, con emergencia por 112 cuando proceda",
+    "keywords": "conducta disruptiva amenaza aula agresión expulsar estudiante convivencia seguridad Dirección de la ETSE y departamento; seguridad o emergencias; Comisión de Convivencia o unidad especializada según hechos Comunicación factual y confidencial al órgano competente, con emergencia por 112 cuando proceda giet giei git muie El profesorado protege a las personas y solicita ayuda; seguridad y los órganos institucionales atienden la amenaza. ETSE, CAT o CCA gestionan después las consecuencias académicas sin sustituir la respuesta de emergencia. Si una discusión escala junto a una mesa óptica con láser activo, prioriza detener la actividad de forma segura, alejar al grupo y pedir ayuda. Después registra hechos, testigos y actuaciones sin diagnósticos ni juicios, y coordina con ETSE la continuidad docente. En laboratorios de grado, corta de forma segura energía, láseres, herramientas o equipos si la conducta eleva el riesgo. En grupos pequeños de máster no minimices una amenaza por conocer al estudiante; aplica los mismos límites y cauces.",
     "href": "example.html?caso=conducta-disruptiva-amenaza-aula",
     "priority": 6
   },
@@ -323,7 +323,7 @@
     "kind": "Situación",
     "title": "Actuar ante copia, plagio o uso no autorizado de IA",
     "context": "Detectas indicios en un examen, memoria, código o TFG/TFM y necesitas preservar evidencias y aplicar las reglas sin prejuzgar.",
-    "keywords": "copia plagio fraude académico IA ChatGPT Turnitin Profesorado responsable y, cuando exceda la calificación ordinaria, coordinación, ETSE o comisión académica competente Expediente de evaluación, audiencia o procedimiento institucional; nunca exposición en canales del grupo",
+    "keywords": "copia plagio fraude académico IA ChatGPT Turnitin Profesorado responsable y, cuando exceda la calificación ordinaria, coordinación, ETSE o comisión académica competente Expediente de evaluación, audiencia o procedimiento institucional; nunca exposición en canales del grupo giet giei git muie El profesorado reúne evidencias y aplica el sistema de evaluación; la coordinación, la CAT o CCA y los órganos de la ETSE encauzan revisión, reclamación o eventual responsabilidad. Una sospecha no equivale por sí sola a una sanción. Si dos memorias de una práctica de circuitos contienen resultados, figuras y errores idénticos, conserva los originales y metadatos, compara con el enunciado y la guía, y cita al estudiantado por separado para aclaraciones. Describe hechos observables; no redactes el correo como una condena ni uses un detector de IA como prueba única. La guía de cada asignatura debe permitir identificar qué ayuda, colaboración o uso de IA estaba autorizado y qué resultado de aprendizaje se evaluaba. En el MUIE puede haber entregas ligadas a investigación o código; eso no elimina la necesidad de reglas previas, autoría verificable y audiencia.",
     "href": "example.html?caso=copia-plagio-ia",
     "priority": 6
   },
@@ -339,7 +339,7 @@
     "kind": "Situación",
     "title": "Actuar ante un fallo técnico durante un examen",
     "context": "Durante una prueba falla Aula Virtual, la red, la electricidad, el software o varios ordenadores y las personas afectadas no están en igualdad.",
-    "keywords": "fallo examen Aula Virtual caída ordenador averiado corte luz incidencia técnica cuestionario Profesorado responsable y coordinación; SIUV o soporte del aula; ETSE si afecta a espacio o convocatoria Incidencia SIUV con datos técnicos y acta académica comunicada individualmente o al grupo",
+    "keywords": "fallo examen Aula Virtual caída ordenador averiado corte luz incidencia técnica cuestionario Profesorado responsable y coordinación; SIUV o soporte del aula; ETSE si afecta a espacio o convocatoria Incidencia SIUV con datos técnicos y acta académica comunicada individualmente o al grupo giet giei git muie El profesorado protege la igualdad y documenta la incidencia; coordinación y CAT o CCA valoran la respuesta académica, y ETSE atiende espacio, equipos y registro de la incidencia. Si falla la licencia del simulador durante un examen, anota hora, puestos afectados y mensajes de error; congela la prueba si la igualdad no puede mantenerse y guarda evidencias técnicas. No decidas en caliente una nota compensatoria: eleva una propuesta trazable conforme a guía y coordinación. En pruebas masivas de grado registra puestos, grupos y tiempo efectivo para no aplicar soluciones desiguales. En el MUIE una prueba con software o instrumentación especializada exige conservar configuración, versiones y datos además del examen.",
     "href": "example.html?caso=fallo-tecnico-durante-examen",
     "priority": 6
   },
@@ -347,7 +347,7 @@
     "kind": "Situación",
     "title": "Aplicar una adaptación por discapacidad",
     "context": "Recibes un informe técnico que exige adaptar tiempo, formato, espacio, tecnología o comunicación en una actividad docente.",
-    "keywords": "UVdiscapacidad adaptación necesidades específicas examen accesible",
+    "keywords": "UVdiscapacidad adaptación necesidades específicas examen accesible giet giei git muie La unidad especializada de la UV emite la orientación; el profesorado la aplica y coordina con ETSE, CAT o CCA cuando afecta a recursos, horarios o elementos estructurales, preservando la confidencialidad. Si recibes una indicación de tiempo adicional y puesto accesible para una prueba con instrumentación, confirma con la unidad qué debe aplicarse, reserva con ETSE un espacio compatible y prepara el mismo nivel de competencia mediante un formato accesible. Comparte solo la información imprescindible. En laboratorios de los grados comprueba seguridad, accesibilidad del puesto y equivalencia de la actividad práctica. En el MUIE evita que la adaptación reduzca los resultados de aprendizaje; ajusta medio, tiempo o formato con apoyo institucional.",
     "href": "example.html?caso=adaptacion-discapacidad",
     "priority": 6
   },
@@ -355,7 +355,7 @@
     "kind": "Situación",
     "title": "Atender a un estudiante con malestar psicológico",
     "context": "Durante una tutoría observas malestar intenso, una petición de ayuda o posible riesgo y necesitas actuar sin asumir funciones sanitarias.",
-    "keywords": "salud mental crisis tutoría asesoría psicológica SEDI",
+    "keywords": "salud mental crisis tutoría asesoría psicológica SEDI giet giei git muie El profesorado escucha, protege y deriva; los servicios especializados de la UV atienden el bienestar. CAT, CCA o ETSE solo deben conocer lo necesario para medidas académicas, y una emergencia exige activar ayuda inmediata. Si un estudiante te dice antes de un examen que no puede continuar y expresa desesperanza, llévalo a un lugar seguro sin aislarte si hay riesgo, escucha sin prometer secreto absoluto y contacta con los recursos adecuados. Después documenta solo las actuaciones necesarias y remite cualquier ajuste académico al cauce formal. En cualquier grado, evita asumir funciones clínicas y separa apoyo personal de decisiones de evaluación. En el MUIE, donde grupos y tutorización pueden ser más próximos, la cercanía no elimina límites profesionales ni confidencialidad.",
     "href": "example.html?caso=malestar-estudiante",
     "priority": 6
   },
@@ -371,7 +371,7 @@
     "kind": "Situación",
     "title": "Cambiar horario, aula, laboratorio o fecha de examen",
     "context": "Surge una incompatibilidad o incidencia y quieres mover una actividad sin perjudicar derechos, reservas ni coordinación del curso.",
-    "keywords": "cambio horario reserva aula laboratorio fecha examen calendario Coordinación de asignatura y titulación, DIE y secretaría ETSE según calendario y espacio Solicitud institucional de cambio o reserva y comunicación posterior por Aula Virtual y canales oficiales",
+    "keywords": "cambio horario reserva aula laboratorio fecha examen calendario Coordinación de asignatura y titulación, DIE y secretaría ETSE según calendario y espacio Solicitud institucional de cambio o reserva y comunicación posterior por Aula Virtual y canales oficiales giet giei git muie La ETSE gestiona horarios, aulas y calendario de exámenes; la coordinación y la CAT o CCA intervienen cuando el cambio afecta a la planificación aprobada. El profesor no debe modificarlo unilateralmente. Si el laboratorio reservado no dispone del analizador de redes necesario, documenta el requisito, localiza una alternativa y pide a la ETSE el cambio. Antes de avisar por Aula Virtual, espera confirmación escrita de aula, fecha, franja y grupos afectados; después publica un único aviso coherente con el calendario oficial. En GIET, GIEI y GIT confirma la coordinación del curso y la CAT correspondiente, especialmente si hay grupos compartidos. En el MUIE confirma la CCA y posibles solapamientos de un calendario más concentrado.",
     "href": "example.html?caso=cambiar-horario-aula-examen",
     "priority": 6
   },
@@ -443,7 +443,7 @@
     "kind": "Situación",
     "title": "Coordinar una asignatura con varios profesores y grupos",
     "context": "El equipo comparte asignatura pero existen diferencias en contenidos, evaluación, prácticas o comunicación que pueden afectar a la igualdad entre grupos.",
-    "keywords": "coordinación asignatura varios profesores grupos criterios comunes equipo docente Coordinación de asignatura y de titulación, departamento y ETSE cuando afecte a la programación Acta o documento compartido del equipo y cauce del centro para cambios que requieran aprobación",
+    "keywords": "coordinación asignatura varios profesores grupos criterios comunes equipo docente Coordinación de asignatura y de titulación, departamento y ETSE cuando afecte a la programación Acta o documento compartido del equipo y cauce del centro para cambios que requieran aprobación giet giei git muie La persona coordinadora organiza la ejecución de la guía; el DIE distribuye y coordina su docencia, mientras CAT o CCA resuelven cambios que afectan al diseño académico del título. En una asignatura con teoría, laboratorio de dispositivos y tres docentes, crea antes del curso una matriz de semanas, responsable, recursos, entregables, criterio y evidencia. Reúne al equipo para resolver solapamientos y deja por escrito qué decisiones son operativas y cuáles deben elevarse a CAT o CCA. En asignaturas de grado con varios grupos, documenta mínimos comunes, equivalencia de evaluación y responsables de cada grupo. En el MUIE puede haber docencia más especializada o invitada; concreta igualmente quién evalúa, custodia evidencias y comunica incidencias.",
     "href": "example.html?caso=coordinar-asignatura-varios-profesores",
     "priority": 6
   },
@@ -483,7 +483,7 @@
     "kind": "Situación",
     "title": "Custodiar exámenes y evidencias de evaluación",
     "context": "Debes conservar pruebas, entregas, rúbricas y revisiones y necesitas saber cómo organizarlas, controlar acceso y actuar si falta una evidencia.",
-    "keywords": "custodia exámenes guardar pruebas pérdida examen evidencia evaluación conservación Profesorado responsable y departamento; centro ante impugnación; DPD o SIUV ante pérdida o exposición Repositorio institucional autorizado e inventario de custodia; comunicación formal de incidentes",
+    "keywords": "custodia exámenes guardar pruebas pérdida examen evidencia evaluación conservación Profesorado responsable y departamento; centro ante impugnación; DPD o SIUV ante pérdida o exposición Repositorio institucional autorizado e inventario de custodia; comunicación formal de incidentes giet giei git muie El profesorado y la coordinación custodian las evidencias conforme a normativa y política institucional; ETSE, CAT o CCA requieren acceso cuando hay revisión, reclamación o control de calidad. Para una asignatura con examen, prácticas y proyecto, crea una carpeta de curso con guía, versiones, enunciados, rúbricas, entregas originales y hoja de cálculo bloqueada. Separa datos personales, controla accesos y no borres nada mientras pueda existir revisión o reclamación. En los grados, incluye versiones de examen, listas, rúbricas, entregas y cálculo cuando hay múltiples grupos o docentes. En el MUIE conserva también código, datos, informes o actas de defensa necesarios para reconstruir la evaluación.",
     "href": "example.html?caso=custodiar-examenes-evidencias",
     "priority": 6
   },
@@ -563,7 +563,7 @@
     "kind": "Situación",
     "title": "Gestionar un TFG o TFM confidencial o patentable",
     "context": "El trabajo contiene información empresarial o un resultado potencialmente protegible y se aproxima el depósito o la defensa.",
-    "keywords": "TFM confidencial patente defensa no pública empresa anexo confidencialidad",
+    "keywords": "TFM confidencial patente defensa no pública empresa anexo confidencialidad giet giei git muie CAT o CCA y ETSE gobiernan depósito y defensa; la unidad de transferencia y, si existe, la empresa o proyecto ayudan a proteger resultados. El tutor no puede declarar confidencialidad o cesión de derechos unilateralmente. Si un TFM del MUIE mejora un dispositivo memristivo potencialmente patentable, avisa antes de cualquier póster, repositorio o depósito abierto. Separa memoria evaluable, anexo sensible y resultados publicables; pide a ETSE/CCA y transferencia una ruta escrita y coordina los plazos de protección antes de divulgar. En TFG aplica el procedimiento del grado y limita la reserva a lo imprescindible para poder evaluar el trabajo. En TFM puede haber resultados de proyecto o empresa con mayor sensibilidad, pero el acuerdo previo y la defensa evaluable siguen siendo necesarios.",
     "href": "example.html?caso=tfg-tfm-confidencial",
     "priority": 6
   },
@@ -571,7 +571,7 @@
     "kind": "Situación",
     "title": "Grabar una clase o intervención del alumnado",
     "context": "Quieres grabar una sesión, presentación o práctica para docencia y aparecen imagen, voz, pantalla o datos del alumnado.",
-    "keywords": "grabar clase vídeo estudiantes derecho imagen consentimiento Zoom mUVie Profesorado y centro; DPD UV para la base y SIUV o servicio multimedia para la solución técnica Sistemas corporativos UV con información previa y permisos restringidos",
+    "keywords": "grabar clase vídeo estudiantes derecho imagen consentimiento Zoom mUVie Profesorado y centro; DPD UV para la base y SIUV o servicio multimedia para la solución técnica Sistemas corporativos UV con información previa y permisos restringidos giet giei git muie El profesorado define la necesidad docente; los servicios de protección de datos y docencia orientan el tratamiento, y ETSE, CAT o CCA intervienen si la grabación forma parte estructural de la actividad o evaluación. Si quieres grabar defensas de proyectos para revisar la evaluación, define finalidad, personas captadas, acceso, plazo de conservación y alternativa si procede. Informa antes, usa la herramienta institucional y restringe la grabación al equipo evaluador; no la reutilices como material promocional. En clases numerosas de grado minimiza captación del alumnado y evita que una grabación general sustituya el análisis de necesidad y base jurídica. En el MUIE una presentación individual evaluada puede exigir conservación limitada y acceso restringido; informa antes de grabar.",
     "href": "example.html?caso=grabar-clase-estudiantado",
     "priority": 6
   },
@@ -603,7 +603,7 @@
     "kind": "Situación",
     "title": "Invitar a un profesional externo a una sesión docente",
     "context": "Quieres que una persona de empresa o universidad imparta una charla, práctica o demostración y puede necesitar acceso, pago, viaje o uso de materiales.",
-    "keywords": "ponente externo clase invitada profesional empresa honorarios docente charla Coordinación de asignatura y departamento; unidad económica; ETSE para espacio y acceso Propuesta interna aprobada y encargo o invitación institucional antes de la actividad",
+    "keywords": "ponente externo clase invitada profesional empresa honorarios docente charla Coordinación de asignatura y departamento; unidad económica; ETSE para espacio y acceso Propuesta interna aprobada y encargo o invitación institucional antes de la actividad giet giei git muie El responsable de la asignatura encaja la sesión en la guía; coordinación y DIE confirman la organización, y ETSE, CAT o CCA intervienen si hay acceso, gasto, cambio docente o alteración del plan. Para invitar a una ingeniera de una empresa de fotónica, define resultado de aprendizaje, fecha, formato y materiales; pregunta antes si habrá honorarios, viaje, acceso a laboratorio o datos sensibles. Confirma por escrito quién autoriza y paga antes de comprometer gasto con la invitada. En grado explica el nivel previo y evita convertir una sesión evaluable en publicidad o contenido no coordinado. En el MUIE una persona experta puede aportar especialización, pero debes aclarar autoría de materiales, confidencialidad y quién evalúa.",
     "href": "example.html?caso=invitar-profesional-sesion-docente",
     "priority": 6
   },
@@ -643,7 +643,7 @@
     "kind": "Situación",
     "title": "Organizar una evaluación alternativa por ausencia justificada",
     "context": "Un estudiante no puede acudir a una prueba por una causa que afirma justificada y pide otra fecha o modalidad.",
-    "keywords": "examen alternativo ausencia justificada otra fecha fuerza mayor coincidencia exámenes Profesorado responsable, coordinación de titulación y ETSE o unidad que valide la justificación Solicitud institucional del estudiante y comunicación individual por Aula Virtual o correo UV",
+    "keywords": "examen alternativo ausencia justificada otra fecha fuerza mayor coincidencia exámenes Profesorado responsable, coordinación de titulación y ETSE o unidad que valide la justificación Solicitud institucional del estudiante y comunicación individual por Aula Virtual o correo UV giet giei git muie El profesorado diseña una evaluación equivalente dentro de la guía; coordinación, CAT o CCA y ETSE confirman la procedencia de la causa y cualquier ajuste de calendario o recursos. Si un estudiante falta justificadamente a una práctica evaluable de laboratorio, confirma la resolución o indicación aplicable, identifica el resultado que debía demostrar y diseña una recuperación equivalente. Reserva equipo y fecha por el cauce de ETSE y documenta en qué se basa la nota. En grupos numerosos de grado controla que la alternativa mida los mismos resultados sin dar información indebida sobre la prueba original. En el MUIE una defensa o demostración individual puede requerir reagendar tribunal, equipo o colaborador externo.",
     "href": "example.html?caso=evaluacion-alternativa-ausencia-justificada",
     "priority": 6
   },
@@ -651,7 +651,7 @@
     "kind": "Situación",
     "title": "Organizar una visita docente fuera del campus",
     "context": "Quieres llevar un grupo a una empresa, feria o instalación y necesitas encajar la actividad, transporte, accesibilidad, seguridad y datos de participantes.",
-    "keywords": "visita empresa salida docente excursión actividad fuera campus transporte estudiantes Coordinación de titulación, ETSE y departamento; entidad anfitriona y Prevención según actividad Solicitud interna y comunicación individual al alumnado por canales UV",
+    "keywords": "visita empresa salida docente excursión actividad fuera campus transporte estudiantes Coordinación de titulación, ETSE y departamento; entidad anfitriona y Prevención según actividad Solicitud interna y comunicación individual al alumnado por canales UV giet giei git muie El responsable docente propone la visita; coordinación, DIE y ETSE gestionan encaje académico, autorización, cobertura y gasto, con CAT o CCA si modifica actividades o evaluación. Para visitar una planta de fabricación electrónica, prepara objetivo docente, lista provisional, fecha, transporte, coste, accesibilidad, riesgos, seguros y plan alternativo. Pide confirmación institucional antes de reservar y comunica al alumnado solo cuando cobertura y condiciones estén cerradas. En grupos de grado dimensiona transporte, accesibilidad, supervisión y alternativa para quien no pueda asistir. En el MUIE una visita técnica especializada puede implicar NDA o control de acceso; tramítalo antes de recopilar datos personales.",
     "href": "example.html?caso=visita-docente-externa",
     "priority": 6
   },
@@ -707,7 +707,7 @@
     "kind": "Situación",
     "title": "Preparar o modificar una guía docente",
     "context": "El equipo docente necesita definir o cambiar actividades, evaluación, software, prácticas o reglas de IA manteniendo coherencia con la memoria de la titulación.",
-    "keywords": "guía docente evaluación CAT CCA coordinación IA docente Coordinación de asignatura y titulación, DIE y CAT/CCA según el cambio Circuito de planificación docente y aprobación de la titulación antes de la publicación",
+    "keywords": "guía docente evaluación CAT CCA coordinación IA docente Coordinación de asignatura y titulación, DIE y CAT/CCA según el cambio Circuito de planificación docente y aprobación de la titulación antes de la publicación giet giei git muie La coordinación prepara la propuesta; la CAT decide en GIET, GIEI y GIT, y la CCA en el MUIE. El DIE coordina la aportación de su profesorado, pero no sustituye al órgano académico del título. Si coordinas una asignatura de electrónica y quieres introducir una práctica de caracterización de un fotodiodo, compara primero competencias, resultados, actividades y sistema de evaluación de la memoria con la guía del curso. Redacta qué cambia, por qué, qué recursos de laboratorio exige y cómo se evaluará; remítelo a la coordinación para CAT o CCA antes de anunciarlo al estudiantado. En los grados, identifica la CAT y comprueba que la guía concreta las competencias y resultados comprometidos en la memoria del título. En el MUIE, tramita la coordinación por la CCA y contrasta la ejecución actual con las modificaciones posteriores a la memoria original.",
     "href": "example.html?caso=preparar-guia-docente",
     "priority": 6
   },
@@ -763,7 +763,7 @@
     "kind": "Situación",
     "title": "Proponer, tutorizar y cerrar un TFG o TFM ordinario",
     "context": "Vas a proponer o aceptar un trabajo y necesitas definir alcance, seguimiento, evaluación, depósito y cierre sin improvisar requisitos.",
-    "keywords": "TFG TFM tutor depósito defensa tribunal",
+    "keywords": "TFG TFM tutor depósito defensa tribunal giet giei git muie La CAT y la estructura de TFG de cada grado gobiernan GIET, GIEI y GIT; la CCA y la estructura de TFM gobiernan el MUIE. La ETSE gestiona oferta, matrícula, depósito y defensa según el procedimiento vigente. Para un TFG del GIET sobre un sensor fotónico integrado, define una pregunta acotada, entregables medibles, acceso real a simulación o laboratorio y un calendario con hitos. Para convertirlo en TFM del MUIE, no basta con añadir páginas: justifica mayor autonomía, validación, análisis crítico y complejidad conforme a la guía del título. En los grados debes encajar alcance y evaluación en el TFG y en las competencias del título; no conviertas el trabajo en una tesis de investigación inabarcable. En el MUIE el TFM puede exigir mayor profundidad técnica, pero siguen mandando créditos, calendario, guía y criterios de la CCA.",
     "href": "example.html?caso=tfg-tfm-ordinario",
     "priority": 6
   },
@@ -787,7 +787,7 @@
     "kind": "Situación",
     "title": "Publicar calificaciones y realizar una revisión",
     "context": "Debes publicar resultados y explicar a un estudiante cómo se aplicaron prueba, rúbrica y ponderaciones.",
-    "keywords": "notas revisión examen rúbrica calificación",
+    "keywords": "notas revisión examen rúbrica calificación giet giei git muie El profesorado califica y realiza la revisión conforme a la guía; la coordinación y la CAT o CCA atienden incidencias académicas, y la ETSE gestiona los cauces formales que correspondan. Tras publicar la nota de una práctica de microelectrónica, prepara para cada estudiante la rúbrica, la entrega original, anotaciones y cálculo de la nota. En la revisión explica criterio por criterio, rectifica si hay un error material y deja constancia del resultado sin discutir datos de otros estudiantes. En los grados revisa la guía del grupo y la coordinación entre profesorado para que los criterios sean homogéneos. En el MUIE verifica si la evaluación combina entregas individuales, proyecto o defensa y conserva evidencia de cada componente.",
     "href": "example.html?caso=revision-calificacion",
     "priority": 6
   },
@@ -803,7 +803,7 @@
     "kind": "Situación",
     "title": "Realizar seguimiento y depósito de una tesis",
     "context": "Diriges una tesis y debes controlar plan, actividades, evaluación anual, publicaciones, autoría, protección, depósito y defensa.",
-    "keywords": "doctorado tesis plan investigación depósito defensa compendio",
+    "keywords": "doctorado tesis plan investigación depósito defensa compendio die-doctorado La Comisión Académica del Programa de Doctorado en Ingeniería Electrónica realiza el seguimiento académico; la Escuela de Doctorado gestiona los procedimientos institucionales de evaluación, depósito y defensa. El DIE organiza el programa, pero no sustituye a esos órganos. Para una tesis del PDIE sobre computación neuromórfica con memristores, revisa cada año que plan, actividades, publicaciones, formación y autorizaciones estén reflejados en el expediente. Meses antes del depósito confirma modalidad, informes, conflicto de intereses, protección de resultados, formato y tribunal con la Comisión Académica y la Escuela de Doctorado. El documento de actividades, el plan de investigación y las evaluaciones anuales forman una trazabilidad continuada, no un trámite que se reconstruye al depositar. Una tesis por compendio, una cotutela, una mención internacional o resultados confidenciales añaden requisitos y plazos que deben abrirse con antelación.",
     "href": "example.html?caso=seguimiento-deposito-tesis",
     "priority": 6
   },
@@ -859,7 +859,7 @@
     "kind": "Situación",
     "title": "Resolver una ausencia imprevista del profesor",
     "context": "Una enfermedad o incidencia impide impartir una clase, práctica, tutoría o examen y hay que reorganizarla sin dejar al alumnado sin información.",
-    "keywords": "profesor enfermo cancelar clase sustitución recuperar clase ausencia docente Dirección y coordinación departamental para cobertura; ETSE para espacios o exámenes; RR. HH. PDI para la situación laboral Aviso institucional al responsable y anuncio en Aula Virtual; trámite laboral separado",
+    "keywords": "profesor enfermo cancelar clase sustitución recuperar clase ausencia docente Dirección y coordinación departamental para cobertura; ETSE para espacios o exámenes; RR. HH. PDI para la situación laboral Aviso institucional al responsable y anuncio en Aula Virtual; trámite laboral separado giet giei git muie El profesor avisa inmediatamente; el DIE y la coordinación docente reorganizan la actividad, y ETSE, CAT o CCA intervienen si se altera horario, evaluación o cumplimiento de la guía. Si enfermas el día de una práctica con láser, avisa al DIE, coordinación y alumnado por los canales previstos; no pidas a una persona no autorizada que abra el laboratorio. Confirma si se sustituye, recupera o reprograma y conserva el mensaje definitivo con fecha, aula y responsable. En grados con varios grupos, prioriza una solución homogénea que no adelante contenidos o pruebas a un grupo respecto de otro. En el MUIE una sesión intensiva o con equipamiento específico puede no ser sustituible; documenta la reprogramación y su equivalencia.",
     "href": "example.html?caso=ausencia-imprevista-profesor",
     "priority": 6
   },
@@ -867,7 +867,7 @@
     "kind": "Situación",
     "title": "Responder a una impugnación de calificación",
     "context": "La ETSE te comunica una impugnación y debes aportar el expediente de evaluación sin intentar resolver el procedimiento por tu cuenta.",
-    "keywords": "impugnación reclamación de nota tribunal acta",
+    "keywords": "impugnación reclamación de nota tribunal acta giet giei git muie La reclamación debe seguir el cauce formal de la UV y la ETSE; el profesorado aporta expediente y motivación, mientras que el órgano o comisión competente resuelve sin que la coordinación informal sustituya el procedimiento. Si un estudiante impugna la calificación de un examen de electrónica analógica, congela el examen, criterios, corrección, convocatoria de revisión, comunicaciones y acta. Prepara una cronología breve y una respuesta técnica vinculada a la guía, sin reconstruir a posteriori criterios que no estaban publicados. En GIET, GIEI y GIT identifica la CAT del título y el grupo concreto de la asignatura. En el MUIE identifica la CCA y separa, si procede, evaluación de asignatura y evaluación del TFM.",
     "href": "example.html?caso=impugnacion-calificacion",
     "priority": 6
   },
@@ -1027,7 +1027,7 @@
     "kind": "Situación",
     "title": "Tutorizar o modificar unas prácticas externas",
     "context": "La empresa, el estudiante o el calendario plantean cambios de horario, tareas o condiciones antes o durante la práctica.",
-    "keywords": "prácticas empresa tutor académico ADEIT proyecto formativo",
+    "keywords": "prácticas empresa tutor académico ADEIT proyecto formativo giet giei git muie La estructura de prácticas de la ETSE y la CAT gobiernan las prácticas curriculares de los grados; en el MUIE debe comprobarse primero si la modalidad concreta existe en el plan y curso vigentes. ADEIT y la entidad colaboradora intervienen según el programa aplicable. Si una empresa de instrumentación ofrece una estancia para calibrar sensores, no envíes simplemente al estudiante. Confirma primero titulación, modalidad, matrícula, convenio o cobertura, proyecto formativo, tutores, fechas y evaluación; solo entonces autoriza el inicio y conserva los informes de seguimiento. En GIET, GIEI y GIT confirma modalidad curricular o extracurricular, proyecto formativo, tutor académico y tutor de empresa. En el MUIE no presupongas una práctica curricular por analogía: comprueba ficha, plan y CCA antes de ofrecerla o reconocerla.",
     "href": "example.html?caso=practicas-externas",
     "priority": 6
   },
@@ -1043,7 +1043,7 @@
     "kind": "Situación",
     "title": "Usar materiales con derechos de autor en Aula Virtual",
     "context": "Quieres compartir capítulos, artículos, imágenes, vídeos o diapositivas y necesitas distinguir enlace, cita, licencia y distribución no permitida.",
-    "keywords": "copyright derechos autor Aula Virtual fotocopias artículos PDF imágenes licencia Profesorado responsable; Biblioteca para acceso y licencias; asesoramiento institucional en propiedad intelectual Aula Virtual con acceso restringido y recursos o enlaces autorizados",
+    "keywords": "copyright derechos autor Aula Virtual fotocopias artículos PDF imágenes licencia Profesorado responsable; Biblioteca para acceso y licencias; asesoramiento institucional en propiedad intelectual Aula Virtual con acceso restringido y recursos o enlaces autorizados giet giei git muie El profesorado selecciona materiales y debe respetar licencias; la biblioteca y los servicios UV orientan sobre uso permitido. Coordinación, CAT o CCA aseguran el encaje docente, pero no convierten una copia ilícita en lícita. Si quieres usar un capítulo de un manual de fotónica, comprueba licencia y acceso de biblioteca; enlaza la copia autorizada o utiliza solo el fragmento necesario con referencia y finalidad docente. No descargues el PDF desde tu cuenta y lo redistribuyas completo por comodidad. En los grados prioriza enlaces, recursos con licencia UV y fragmentos justificados frente a subir manuales completos. En el MUIE distingue material docente de artículos o normas usados en investigación; el acceso institucional no autoriza redistribución.",
     "href": "example.html?caso=usar-materiales-derechos-autor-aula-virtual",
     "priority": 6
   },

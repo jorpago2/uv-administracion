@@ -2,14 +2,18 @@ import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
+import academicContextData from "./data/academic-situation-context.json";
+import academicProgrammesData from "./data/academic-programmes.json";
 import { buildExampleGuides } from "./example-guide-model.js";
 import { buildSituationGuides, combineSituationCatalogs, searchSituationGuides, situationSearchItems } from "./situation-model.js";
 
 export const situationCatalog = combineSituationCatalogs(situationsData, situationsExtensionData);
+const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 
 export const situationGuides = buildSituationGuides(
   situationCatalog,
-  buildExampleGuides(manualData.markdown, operationsData.procedures)
+  buildExampleGuides(manualData.markdown, operationsData.procedures),
+  academicContextData
 );
 
 export function situationGlobalSearchItems() {
@@ -75,12 +79,32 @@ function renderCard(guide, detailBase) {
   const outcomeLabel = document.createElement("strong");
   outcomeLabel.textContent = "Resultado verificable";
   outcome.append(outcomeLabel, document.createTextNode(` ${guide.outcome}`));
+  const programmes = renderProgrammeTags(guide.academicContext?.programmeIds ?? []);
   const link = document.createElement("a");
   link.className = "situation-card__open";
   link.href = `${detailBase}?caso=${encodeURIComponent(guide.id)}`;
   link.textContent = "Abrir resolución paso a paso";
-  article.append(header, scenario, outcome, link);
+  article.append(header, scenario, outcome);
+  if (programmes) article.append(programmes);
+  article.append(link);
   return article;
+}
+
+function renderProgrammeTags(programmeIds) {
+  if (!programmeIds.length) return null;
+  const container = document.createElement("div");
+  container.className = "academic-tags";
+  container.setAttribute("aria-label", "Titulaciones contextualizadas");
+  programmeIds.forEach((id) => {
+    const programme = academicProgrammeById.get(id);
+    if (!programme) return;
+    const tag = document.createElement("span");
+    tag.className = "academic-tag";
+    tag.textContent = programme.acronym;
+    tag.title = programme.name;
+    container.append(tag);
+  });
+  return container.childElementCount ? container : null;
 }
 
 function renderEmpty() {

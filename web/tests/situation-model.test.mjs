@@ -8,9 +8,11 @@ const situations = JSON.parse(await readFile(new URL("../data/situations.json", 
 const situationsExtension = JSON.parse(await readFile(new URL("../data/situations-51-100.json", import.meta.url), "utf8"));
 const manual = JSON.parse(await readFile(new URL("../data/manual.json", import.meta.url), "utf8"));
 const operations = JSON.parse(await readFile(new URL("../data/operations.json", import.meta.url), "utf8"));
+const academicContext = JSON.parse(await readFile(new URL("../data/academic-situation-context.json", import.meta.url), "utf8"));
+const academicProgrammes = JSON.parse(await readFile(new URL("../data/academic-programmes.json", import.meta.url), "utf8"));
 const baseGuides = buildExampleGuides(manual.markdown, operations.procedures);
 const catalog = combineSituationCatalogs(situations, situationsExtension);
-const guides = buildSituationGuides(catalog, baseGuides);
+const guides = buildSituationGuides(catalog, baseGuides, academicContext);
 
 test("las cien situaciones forman un catalogo completo y consecutivo", () => {
   assert.equal(guides.length, 100);
@@ -66,6 +68,37 @@ test("el buscador entiende objetivos, siglas y ejemplos concretos", () => {
   assert.equal(searchSituationGuides(guides, "regalo proveedor")[0].id, "aceptar-regalo-invitacion-proveedor");
   assert.equal(searchSituationGuides(guides, "acuerdo NDA MTA")[0].id, "firmar-nda-mta-dta");
   assert.ok(searchSituationGuides(guides, "", "docencia").every((guide) => guide.categoryId === "docencia"));
+});
+
+test("los veinte casos docentes y el caso doctoral están adaptados a ETSE, DIE y sus programas", () => {
+  const contextualised = guides.filter((guide) => guide.academicContext);
+  const teaching = guides.filter((guide) => guide.categoryId === "docencia");
+  const programmeIds = new Set(academicProgrammes.programmes.map((programme) => programme.id));
+  const programmeById = new Map(academicProgrammes.programmes.map((programme) => [programme.id, programme]));
+  assert.equal(teaching.length, 20);
+  assert.equal(contextualised.length, 21);
+  assert.ok(teaching.every((guide) => guide.academicContext), "todos los casos docentes deben tener contexto académico");
+  assert.deepEqual(contextualised.filter((guide) => guide.categoryId !== "docencia").map((guide) => guide.id), ["seguimiento-deposito-tesis"]);
+  for (const guide of contextualised) {
+    assert.ok(guide.academicContext.programmeIds.every((id) => programmeIds.has(id)), guide.id);
+    assert.ok(guide.academicContext.documentTypes.length >= 2, guide.id);
+    for (const programmeId of guide.academicContext.programmeIds) {
+      const documentTypes = new Set(programmeById.get(programmeId).documents.map((document) => document.type));
+      assert.ok(guide.academicContext.documentTypes.every((type) => documentTypes.has(type)), `${guide.id} · ${programmeId}`);
+    }
+    assert.ok(guide.academicContext.differences.length >= 2, guide.id);
+    assert.ok(guide.academicContext.authority.length > 80, guide.id);
+    assert.ok(guide.academicContext.example.length > 150, guide.id);
+    assert.ok(guide.academicContext.approvalGate.length > 70, guide.id);
+  }
+  assert.deepEqual(findSituationGuide(guides, "seguimiento-deposito-tesis").academicContext.programmeIds, ["die-doctorado"]);
+  assert.match(findSituationGuide(guides, "practicas-externas").academicContext.programmeNotes.muie, /condicionada/i);
+});
+
+test("el buscador de casos usa el contexto de titulación y los ejemplos ETSE-DIE", () => {
+  assert.equal(searchSituationGuides(guides, "GIET cambiar examen")[0].id, "cambiar-horario-aula-examen");
+  assert.equal(searchSituationGuides(guides, "MUIE TFM patentable")[0].id, "tfg-tfm-confidencial");
+  assert.equal(searchSituationGuides(guides, "PDIE memristores depósito")[0].id, "seguimiento-deposito-tesis");
 });
 
 test("las situaciones generan entradas profundas para el buscador global", () => {

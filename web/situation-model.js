@@ -1,10 +1,12 @@
 const REQUIRED_GUIDE_FIELDS = Object.freeze([
   "outcome", "firstMove", "unit", "channel", "deadline", "alsoApplies", "adapt", "stopsApplying", "doNotAssume"
 ]);
+const ACADEMIC_PROGRAMME_IDS = new Set(["giet", "giei", "git", "muie", "die-doctorado"]);
 
-export function buildSituationGuides(catalog, baseGuides) {
+export function buildSituationGuides(catalog, baseGuides, academicContextCatalog = null) {
   validateCatalog(catalog);
   if (!Array.isArray(baseGuides)) throw new TypeError("Las guías base no tienen el formato esperado.");
+  const academicContexts = validateAcademicContextCatalog(academicContextCatalog, catalog);
   const baseByChapter = new Map(baseGuides.map((guide) => [guide.chapterNumber, guide]));
   const categories = new Map(catalog.categories.map((category) => [category.id, category.label]));
   const guides = catalog.situations.map((situation) => {
@@ -43,7 +45,8 @@ export function buildSituationGuides(catalog, baseGuides) {
       completionEvidence: [...situation.resolution.completionEvidence],
       escalation: [...situation.resolution.escalation],
       relatedTools: [...(situation.relatedTools ?? [])],
-      reviewedOn: situation.reviewedOn
+      reviewedOn: situation.reviewedOn,
+      academicContext: cloneAcademicContext(academicContexts.get(situation.id))
     };
     validateResolvedGuide(guide);
     return Object.freeze(guide);
@@ -92,9 +95,68 @@ export function situationSearchItems(guides) {
     id: guide.id,
     title: guide.title,
     category: guide.categoryLabel,
-    content: [guide.scenario, guide.outcome, guide.firstMove, ...guide.aliases, ...guide.questions, ...guide.decisionRules].join(" "),
+    content: [
+      guide.scenario, guide.outcome, guide.firstMove, ...guide.aliases, ...guide.questions, ...guide.decisionRules,
+      ...academicSearchContent(guide.academicContext)
+    ].join(" "),
     href: `example.html?caso=${encodeURIComponent(guide.id)}`
   }));
+}
+
+function validateAcademicContextCatalog(contextCatalog, situationCatalog) {
+  if (contextCatalog === null || contextCatalog === undefined) return new Map();
+  if (contextCatalog.schemaVersion !== 1 || !Array.isArray(contextCatalog.contexts)) {
+    throw new TypeError("El catálogo de contexto académico no tiene el formato esperado.");
+  }
+  const situationIds = new Set(situationCatalog.situations.map((situation) => situation.id));
+  const contexts = new Map();
+  contextCatalog.contexts.forEach((context) => {
+    if (!situationIds.has(context.situationId) || contexts.has(context.situationId)) {
+      throw new Error(`Contexto académico desconocido o duplicado: ${context.situationId ?? "vacío"}.`);
+    }
+    if (!Array.isArray(context.programmeIds) || !context.programmeIds.length || context.programmeIds.some((id) => !ACADEMIC_PROGRAMME_IDS.has(id))) {
+      throw new Error(`Programas académicos inválidos en ${context.situationId}.`);
+    }
+    if (!Array.isArray(context.documentTypes) || !context.documentTypes.length || context.documentTypes.some((type) => !["ficha", "verifica", "plan", "seguimiento"].includes(type))) {
+      throw new Error(`Familias documentales inválidas en ${context.situationId}.`);
+    }
+    for (const field of ["authority", "example", "approvalGate"]) {
+      if (typeof context[field] !== "string" || context[field].trim().length < 40) throw new Error(`Falta ${field} en ${context.situationId}.`);
+    }
+    if (!Array.isArray(context.differences) || context.differences.length < 2) throw new Error(`Faltan diferencias académicas en ${context.situationId}.`);
+    const notes = context.programmeNotes ?? {};
+    if (Object.keys(notes).some((id) => !context.programmeIds.includes(id) || typeof notes[id] !== "string")) {
+      throw new Error(`Notas de programa inválidas en ${context.situationId}.`);
+    }
+    contexts.set(context.situationId, context);
+  });
+  return contexts;
+}
+
+function cloneAcademicContext(context) {
+  if (!context) return null;
+  return Object.freeze({
+    programmeIds: Object.freeze([...context.programmeIds]),
+    authority: context.authority,
+    documentTypes: Object.freeze([...context.documentTypes]),
+    programmeNotes: Object.freeze({ ...(context.programmeNotes ?? {}) }),
+    differences: Object.freeze([...context.differences]),
+    example: context.example,
+    approvalGate: context.approvalGate
+  });
+}
+
+function academicSearchContent(context) {
+  if (!context) return [];
+  return [
+    ...context.programmeIds,
+    context.authority,
+    ...context.documentTypes,
+    ...Object.values(context.programmeNotes),
+    ...context.differences,
+    context.example,
+    context.approvalGate
+  ];
 }
 
 function validateCatalog(catalog) {
@@ -175,7 +237,10 @@ function scoreGuide(guide, terms) {
   if (!terms.length) return 0;
   const title = normalize(guide.title);
   const aliases = normalize(guide.aliases.join(" "));
-  const body = normalize([guide.scenario, guide.outcome, guide.firstMove, ...guide.questions, ...guide.decisionRules].join(" "));
+  const body = normalize([
+    guide.scenario, guide.outcome, guide.firstMove, ...guide.questions, ...guide.decisionRules,
+    ...academicSearchContent(guide.academicContext)
+  ].join(" "));
   return terms.reduce((score, term) => score + (title.includes(term) ? 12 : 0) + (aliases.includes(term) ? 8 : 0) + (body.includes(term) ? 3 : 0), 0);
 }
 

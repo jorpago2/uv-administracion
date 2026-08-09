@@ -5,10 +5,12 @@ import path from "node:path";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = path.join(repositoryRoot, "web", "data");
 
-const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes] = await Promise.all([
+const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext] = await Promise.all([
   readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"),
-  readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json")
+  readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json"),
+  readJson("academic-situation-context.json")
 ]);
+const academicContextBySituation = new Map(academicSituationContext.contexts.map((context) => [context.situationId, context]));
 
 const entries = [
   ...manual.markdown.matchAll(/^##\s+(\d+)\.\s+(.+)$/gm)
@@ -22,11 +24,16 @@ const entries = [
 }));
 
 for (const situation of [...situationsA.situations, ...situationsB.situations]) {
+  const academicContext = academicContextBySituation.get(situation.id);
   entries.push({
     kind: "Situación",
     title: situation.title,
     context: situation.scenario,
-    keywords: [...(situation.aliases ?? []), situation.guide?.unit, situation.guide?.channel].filter(Boolean).join(" "),
+    keywords: [
+      ...(situation.aliases ?? []), situation.guide?.unit, situation.guide?.channel,
+      ...(academicContext?.programmeIds ?? []), academicContext?.authority, academicContext?.example,
+      ...(academicContext?.differences ?? [])
+    ].filter(Boolean).join(" "),
     href: `example.html?caso=${encodeURIComponent(situation.id)}`,
     priority: 6
   });

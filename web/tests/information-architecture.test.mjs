@@ -68,7 +68,7 @@ test("la portada identifica el uso personal y el caracter no oficial", () => {
 });
 
 test("cada ambito filtra sus casos y enlaza sus capitulos", () => {
-  assert.match(areaPage, /category\.sections\.includes\(Number\(guide\.chapterNumber\)\)/);
+  assert.match(areaPage, /guide\.categoryId === areaId/);
   assert.match(areaPage, /\.\.\/manual\/#/);
   assert.match(areaPage, /\.\.\/example\.html\?caso=/);
 });

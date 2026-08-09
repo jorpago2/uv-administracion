@@ -1,14 +1,16 @@
 import "./site-shell.js";
 import manualData from "./data/manual.json";
+import academicProgrammesData from "./data/academic-programmes.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { situationGuides } from "./situations.js";
 
 const areaId = document.body.dataset.area;
 const category = CATEGORIES.find((candidate) => candidate.id === areaId);
 if (!category) throw new Error(`Ámbito desconocido: ${areaId}.`);
+const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 
 const chapters = parseChapters(manualData.markdown).filter((chapter) => category.sections.includes(chapter.number));
-const cases = situationGuides.filter((guide) => category.sections.includes(Number(guide.chapterNumber)));
+const cases = situationGuides.filter((guide) => guide.categoryId === areaId);
 
 document.title = `${category.shortLabel} · Guía operativa UV`;
 document.querySelector("#areaKicker").textContent = `${chapters.length} capítulos · ${cases.length} situaciones`;
@@ -44,9 +46,14 @@ function renderCases(items) {
   list.replaceChildren(...items.map((guide) => {
     const article = document.createElement("article");
     article.className = "area-case";
+    const programmeTags = (guide.academicContext?.programmeIds ?? [])
+      .map((id) => academicProgrammeById.get(id))
+      .filter(Boolean)
+      .map((programme) => `<span class="academic-tag" title="${escapeHtml(programme.name)}">${escapeHtml(programme.acronym)}</span>`)
+      .join("");
     article.innerHTML = `
       <span>${String(guide.situationNumber).padStart(2, "0")}</span>
-      <div><h3>${escapeHtml(guide.title)}</h3><p>${escapeHtml(guide.scenario)}</p><p><strong>Resultado:</strong> ${escapeHtml(guide.outcome)}</p></div>
+      <div><h3>${escapeHtml(guide.title)}</h3><p>${escapeHtml(guide.scenario)}</p><p><strong>Resultado:</strong> ${escapeHtml(guide.outcome)}</p>${programmeTags ? `<div class="academic-tags" aria-label="Titulaciones contextualizadas">${programmeTags}</div>` : ""}</div>
       <a href="../example.html?caso=${encodeURIComponent(guide.id)}">Resolver caso</a>`;
     return article;
   }));
@@ -57,7 +64,10 @@ function bindCaseSearch() {
   const input = document.querySelector("#areaCaseQuery");
   input.addEventListener("input", () => {
     const terms = normalize(input.value).split(/\s+/).filter(Boolean);
-    const filtered = cases.filter((guide) => terms.every((term) => normalize(`${guide.title} ${guide.scenario} ${guide.outcome}`).includes(term)));
+    const filtered = cases.filter((guide) => terms.every((term) => normalize([
+      guide.title, guide.scenario, guide.outcome, guide.academicContext?.authority,
+      ...(guide.academicContext?.programmeIds ?? []), ...(guide.academicContext?.differences ?? [])
+    ].join(" ")).includes(term)));
     renderCases(filtered);
   });
 }
@@ -76,4 +86,3 @@ function routeTool(href) {
 function slugify(value) { return normalize(value).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
 function normalize(value) { return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim(); }
 function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]); }
-

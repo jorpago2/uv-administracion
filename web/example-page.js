@@ -2,6 +2,8 @@ import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
+import academicContextData from "./data/academic-situation-context.json";
+import academicProgrammesData from "./data/academic-programmes.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { buildExampleGuides, findExampleGuide } from "./example-guide-model.js";
 import { buildSituationGuides, combineSituationCatalogs, findSituationGuide } from "./situation-model.js";
@@ -12,7 +14,8 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides);
+const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides, academicContextData);
+const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 const parameters = new URLSearchParams(window.location.search);
 const situationId = parameters.get("caso");
 const chapterNumber = parameters.get("capitulo");
@@ -104,11 +107,57 @@ function renderNavigation() {
 function renderOrientation(item) {
   const section = guideSection("orientacion", "1. Entender el caso antes de actuar", "Orientación");
   section.append(callout("Meta operativa", item.outcome, "accent"));
+  if (item.academicContext) section.append(renderAcademicContext(item.academicContext));
   section.append(heading(3, "Las tres preguntas que debes poder responder"), list(item.questions));
   if (item.decisionRules?.length) section.append(heading(3, "Reglas para decidir la ruta"), list(item.decisionRules, "decision-rule-list"));
   section.append(recommendation("No empieces por el formulario. Empieza delimitando hechos, plazo y órgano competente; un formulario correcto enviado al cauce equivocado sigue siendo un problema."));
   appendSourceNote(section, item.sources);
   return section;
+}
+
+function renderAcademicContext(context) {
+  const panel = el("aside", "academic-context");
+  panel.append(paragraph("Aplicación concreta", "eyebrow"), heading(3, "ETSE · DIE · titulaciones"));
+
+  const tags = el("div", "academic-tags");
+  tags.setAttribute("aria-label", "Titulaciones a las que se ha adaptado este caso");
+  context.programmeIds.forEach((id) => {
+    const programme = academicProgrammeById.get(id);
+    if (!programme) return;
+    const programmeLink = link(programme.acronym, `programas/#${programme.id}`);
+    programmeLink.className = "academic-tag academic-tag--link";
+    programmeLink.title = programme.name;
+    tags.append(programmeLink);
+  });
+  panel.append(tags, callout("Quién interviene y quién decide", context.authority, "secondary"));
+
+  const documentGrid = el("div", "academic-documents");
+  context.programmeIds.forEach((id) => {
+    const programme = academicProgrammeById.get(id);
+    if (!programme) return;
+    const card = el("article", "academic-document-card");
+    card.append(heading(4, `${programme.acronym} · documentos que mandan`));
+    if (context.programmeNotes[id]) card.append(paragraph(context.programmeNotes[id], "practical-note"));
+    const sources = el("ul");
+    programme.documents
+      .filter((document) => context.documentTypes.includes(document.type))
+      .forEach((document) => {
+        const item = el("li");
+        const sourceLink = link(document.typeLabel, document.url);
+        sourceLink.target = "_blank";
+        sourceLink.rel = "noopener noreferrer";
+        item.append(sourceLink, text(` — ${document.purpose}`));
+        sources.append(item);
+      });
+    card.append(sources);
+    documentGrid.append(card);
+  });
+  panel.append(documentGrid, heading(4, "Qué cambia entre titulaciones"), list(context.differences));
+
+  const example = el("article", "academic-example");
+  example.append(heading(4, "Ejemplo situado en tu contexto"), paragraph(context.example));
+  panel.append(example, callout("Punto de parada", context.approvalGate, "warning"));
+  return panel;
 }
 
 function renderTransferability(item) {

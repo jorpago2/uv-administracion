@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-09",
+  "scopeNote": "Contextualización operativa de los casos docentes de la ETSE-UV, el DIE y el Programa de Doctorado en Ingeniería Electrónica. No sustituye la normativa, la guía docente vigente ni los acuerdos del órgano competente.",
+  "contexts": [
+    {
+      "situationId": "preparar-guia-docente",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La coordinación prepara la propuesta; la CAT decide en GIET, GIEI y GIT, y la CCA en el MUIE. El DIE coordina la aportación de su profesorado, pero no sustituye al órgano académico del título.",
+      "documentTypes": ["verifica", "plan"],
+      "differences": [
+        "En los grados, identifica la CAT y comprueba que la guía concreta las competencias y resultados comprometidos en la memoria del título.",
+        "En el MUIE, tramita la coordinación por la CCA y contrasta la ejecución actual con las modificaciones posteriores a la memoria original."
+      ],
+      "example": "Si coordinas una asignatura de electrónica y quieres introducir una práctica de caracterización de un fotodiodo, compara primero competencias, resultados, actividades y sistema de evaluación de la memoria con la guía del curso. Redacta qué cambia, por qué, qué recursos de laboratorio exige y cómo se evaluará; remítelo a la coordinación para CAT o CCA antes de anunciarlo al estudiantado.",
+      "approvalGate": "No publiques como definitiva una guía ni prometas un cambio evaluativo mientras no conste la validación por el cauce y el órgano del título."
+    },
+    {
+      "situationId": "cambiar-horario-aula-examen",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La ETSE gestiona horarios, aulas y calendario de exámenes; la coordinación y la CAT o CCA intervienen cuando el cambio afecta a la planificación aprobada. El profesor no debe modificarlo unilateralmente.",
+      "documentTypes": ["ficha", "plan"],
+      "differences": [
+        "En GIET, GIEI y GIT confirma la coordinación del curso y la CAT correspondiente, especialmente si hay grupos compartidos.",
+        "En el MUIE confirma la CCA y posibles solapamientos de un calendario más concentrado."
+      ],
+      "example": "Si el laboratorio reservado no dispone del analizador de redes necesario, documenta el requisito, localiza una alternativa y pide a la ETSE el cambio. Antes de avisar por Aula Virtual, espera confirmación escrita de aula, fecha, franja y grupos afectados; después publica un único aviso coherente con el calendario oficial.",
+      "approvalGate": "No comuniques como confirmado un nuevo horario, aula o examen hasta disponer de autorización o confirmación trazable de la ETSE y, cuando corresponda, de CAT o CCA."
+    },
+    {
+      "situationId": "copia-plagio-ia",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado reúne evidencias y aplica el sistema de evaluación; la coordinación, la CAT o CCA y los órganos de la ETSE encauzan revisión, reclamación o eventual responsabilidad. Una sospecha no equivale por sí sola a una sanción.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "La guía de cada asignatura debe permitir identificar qué ayuda, colaboración o uso de IA estaba autorizado y qué resultado de aprendizaje se evaluaba.",
+        "En el MUIE puede haber entregas ligadas a investigación o código; eso no elimina la necesidad de reglas previas, autoría verificable y audiencia."
+      ],
+      "example": "Si dos memorias de una práctica de circuitos contienen resultados, figuras y errores idénticos, conserva los originales y metadatos, compara con el enunciado y la guía, y cita al estudiantado por separado para aclaraciones. Describe hechos observables; no redactes el correo como una condena ni uses un detector de IA como prueba única.",
+      "approvalGate": "Detente antes de imponer una consecuencia no prevista en la guía o de iniciar una vía disciplinaria sin confirmar el procedimiento competente."
+    },
+    {
+      "situationId": "revision-calificacion",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado califica y realiza la revisión conforme a la guía; la coordinación y la CAT o CCA atienden incidencias académicas, y la ETSE gestiona los cauces formales que correspondan.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En los grados revisa la guía del grupo y la coordinación entre profesorado para que los criterios sean homogéneos.",
+        "En el MUIE verifica si la evaluación combina entregas individuales, proyecto o defensa y conserva evidencia de cada componente."
+      ],
+      "example": "Tras publicar la nota de una práctica de microelectrónica, prepara para cada estudiante la rúbrica, la entrega original, anotaciones y cálculo de la nota. En la revisión explica criterio por criterio, rectifica si hay un error material y deja constancia del resultado sin discutir datos de otros estudiantes.",
+      "approvalGate": "No cierres actas ni destruyas evidencias mientras esté abierta la revisión o pueda activarse una reclamación."
+    },
+    {
+      "situationId": "impugnacion-calificacion",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La reclamación debe seguir el cauce formal de la UV y la ETSE; el profesorado aporta expediente y motivación, mientras que el órgano o comisión competente resuelve sin que la coordinación informal sustituya el procedimiento.",
+      "documentTypes": ["plan", "ficha"],
+      "differences": [
+        "En GIET, GIEI y GIT identifica la CAT del título y el grupo concreto de la asignatura.",
+        "En el MUIE identifica la CCA y separa, si procede, evaluación de asignatura y evaluación del TFM."
+      ],
+      "example": "Si un estudiante impugna la calificación de un examen de electrónica analógica, congela el examen, criterios, corrección, convocatoria de revisión, comunicaciones y acta. Prepara una cronología breve y una respuesta técnica vinculada a la guía, sin reconstruir a posteriori criterios que no estaban publicados.",
+      "approvalGate": "No alteres el expediente ni acuerdes una solución al margen del órgano competente una vez iniciada la reclamación formal."
+    },
+    {
+      "situationId": "adaptacion-discapacidad",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La unidad especializada de la UV emite la orientación; el profesorado la aplica y coordina con ETSE, CAT o CCA cuando afecta a recursos, horarios o elementos estructurales, preservando la confidencialidad.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En laboratorios de los grados comprueba seguridad, accesibilidad del puesto y equivalencia de la actividad práctica.",
+        "En el MUIE evita que la adaptación reduzca los resultados de aprendizaje; ajusta medio, tiempo o formato con apoyo institucional."
+      ],
+      "example": "Si recibes una indicación de tiempo adicional y puesto accesible para una prueba con instrumentación, confirma con la unidad qué debe aplicarse, reserva con ETSE un espacio compatible y prepara el mismo nivel de competencia mediante un formato accesible. Comparte solo la información imprescindible.",
+      "approvalGate": "No improvises una adaptación incompatible con seguridad ni rechaces una medida por tu cuenta; escala cualquier imposibilidad material antes de la actividad."
+    },
+    {
+      "situationId": "malestar-estudiante",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado escucha, protege y deriva; los servicios especializados de la UV atienden el bienestar. CAT, CCA o ETSE solo deben conocer lo necesario para medidas académicas, y una emergencia exige activar ayuda inmediata.",
+      "documentTypes": ["ficha", "plan"],
+      "differences": [
+        "En cualquier grado, evita asumir funciones clínicas y separa apoyo personal de decisiones de evaluación.",
+        "En el MUIE, donde grupos y tutorización pueden ser más próximos, la cercanía no elimina límites profesionales ni confidencialidad."
+      ],
+      "example": "Si un estudiante te dice antes de un examen que no puede continuar y expresa desesperanza, llévalo a un lugar seguro sin aislarte si hay riesgo, escucha sin prometer secreto absoluto y contacta con los recursos adecuados. Después documenta solo las actuaciones necesarias y remite cualquier ajuste académico al cauce formal.",
+      "approvalGate": "Ante riesgo inmediato para la persona o terceros, deja de tramitarlo como una incidencia docente ordinaria y activa la respuesta de emergencia."
+    },
+    {
+      "situationId": "tfg-tfm-ordinario",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La CAT y la estructura de TFG de cada grado gobiernan GIET, GIEI y GIT; la CCA y la estructura de TFM gobiernan el MUIE. La ETSE gestiona oferta, matrícula, depósito y defensa según el procedimiento vigente.",
+      "documentTypes": ["ficha", "plan", "verifica"],
+      "differences": [
+        "En los grados debes encajar alcance y evaluación en el TFG y en las competencias del título; no conviertas el trabajo en una tesis de investigación inabarcable.",
+        "En el MUIE el TFM puede exigir mayor profundidad técnica, pero siguen mandando créditos, calendario, guía y criterios de la CCA."
+      ],
+      "example": "Para un TFG del GIET sobre un sensor fotónico integrado, define una pregunta acotada, entregables medibles, acceso real a simulación o laboratorio y un calendario con hitos. Para convertirlo en TFM del MUIE, no basta con añadir páginas: justifica mayor autonomía, validación, análisis crítico y complejidad conforme a la guía del título.",
+      "approvalGate": "No inicies trabajo experimental intensivo ni prometas defensa en una fecha hasta que tema, tutoría, matrícula y calendario estén regularizados."
+    },
+    {
+      "situationId": "tfg-tfm-confidencial",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "CAT o CCA y ETSE gobiernan depósito y defensa; la unidad de transferencia y, si existe, la empresa o proyecto ayudan a proteger resultados. El tutor no puede declarar confidencialidad o cesión de derechos unilateralmente.",
+      "documentTypes": ["ficha", "plan", "verifica"],
+      "differences": [
+        "En TFG aplica el procedimiento del grado y limita la reserva a lo imprescindible para poder evaluar el trabajo.",
+        "En TFM puede haber resultados de proyecto o empresa con mayor sensibilidad, pero el acuerdo previo y la defensa evaluable siguen siendo necesarios."
+      ],
+      "example": "Si un TFM del MUIE mejora un dispositivo memristivo potencialmente patentable, avisa antes de cualquier póster, repositorio o depósito abierto. Separa memoria evaluable, anexo sensible y resultados publicables; pide a ETSE/CCA y transferencia una ruta escrita y coordina los plazos de protección antes de divulgar.",
+      "approvalGate": "Detén publicación, defensa abierta o envío a congreso si una divulgación puede destruir novedad o incumplir un acuerdo; confirma la ruta con transferencia y el órgano académico."
+    },
+    {
+      "situationId": "practicas-externas",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La estructura de prácticas de la ETSE y la CAT gobiernan las prácticas curriculares de los grados; en el MUIE debe comprobarse primero si la modalidad concreta existe en el plan y curso vigentes. ADEIT y la entidad colaboradora intervienen según el programa aplicable.",
+      "documentTypes": ["ficha", "plan", "verifica"],
+      "programmeNotes": {
+        "giet": "Aplicación directa si la práctica está matriculada o autorizada en la modalidad vigente del grado.",
+        "giei": "Aplicación directa si la práctica está matriculada o autorizada en la modalidad vigente del grado.",
+        "git": "Aplicación directa si la práctica está matriculada o autorizada en la modalidad vigente del grado.",
+        "muie": "Aplicación condicionada: la memoria y el plan vigentes deben confirmar la modalidad; no extrapoles automáticamente la ruta de los grados."
+      },
+      "differences": [
+        "En GIET, GIEI y GIT confirma modalidad curricular o extracurricular, proyecto formativo, tutor académico y tutor de empresa.",
+        "En el MUIE no presupongas una práctica curricular por analogía: comprueba ficha, plan y CCA antes de ofrecerla o reconocerla."
+      ],
+      "example": "Si una empresa de instrumentación ofrece una estancia para calibrar sensores, no envíes simplemente al estudiante. Confirma primero titulación, modalidad, matrícula, convenio o cobertura, proyecto formativo, tutores, fechas y evaluación; solo entonces autoriza el inicio y conserva los informes de seguimiento.",
+      "approvalGate": "Ningún estudiante debe incorporarse a la entidad sin cobertura, proyecto formativo y autorizaciones formalizadas."
+    },
+    {
+      "situationId": "seguimiento-deposito-tesis",
+      "programmeIds": ["die-doctorado"],
+      "authority": "La Comisión Académica del Programa de Doctorado en Ingeniería Electrónica realiza el seguimiento académico; la Escuela de Doctorado gestiona los procedimientos institucionales de evaluación, depósito y defensa. El DIE organiza el programa, pero no sustituye a esos órganos.",
+      "documentTypes": ["ficha", "verifica", "plan", "seguimiento"],
+      "differences": [
+        "El documento de actividades, el plan de investigación y las evaluaciones anuales forman una trazabilidad continuada, no un trámite que se reconstruye al depositar.",
+        "Una tesis por compendio, una cotutela, una mención internacional o resultados confidenciales añaden requisitos y plazos que deben abrirse con antelación."
+      ],
+      "example": "Para una tesis del PDIE sobre computación neuromórfica con memristores, revisa cada año que plan, actividades, publicaciones, formación y autorizaciones estén reflejados en el expediente. Meses antes del depósito confirma modalidad, informes, conflicto de intereses, protección de resultados, formato y tribunal con la Comisión Académica y la Escuela de Doctorado.",
+      "approvalGate": "No fijes defensa ni difundas resultados sensibles hasta que depósito, informes, autorizaciones y protección intelectual estén confirmados por los cauces competentes."
+    },
+    {
+      "situationId": "coordinar-asignatura-varios-profesores",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "La persona coordinadora organiza la ejecución de la guía; el DIE distribuye y coordina su docencia, mientras CAT o CCA resuelven cambios que afectan al diseño académico del título.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En asignaturas de grado con varios grupos, documenta mínimos comunes, equivalencia de evaluación y responsables de cada grupo.",
+        "En el MUIE puede haber docencia más especializada o invitada; concreta igualmente quién evalúa, custodia evidencias y comunica incidencias."
+      ],
+      "example": "En una asignatura con teoría, laboratorio de dispositivos y tres docentes, crea antes del curso una matriz de semanas, responsable, recursos, entregables, criterio y evidencia. Reúne al equipo para resolver solapamientos y deja por escrito qué decisiones son operativas y cuáles deben elevarse a CAT o CCA.",
+      "approvalGate": "No cambies entre grupos porcentajes, resultados o pruebas que deban ser comunes sin validar la compatibilidad con la guía y la coordinación del título."
+    },
+    {
+      "situationId": "evaluacion-alternativa-ausencia-justificada",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado diseña una evaluación equivalente dentro de la guía; coordinación, CAT o CCA y ETSE confirman la procedencia de la causa y cualquier ajuste de calendario o recursos.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En grupos numerosos de grado controla que la alternativa mida los mismos resultados sin dar información indebida sobre la prueba original.",
+        "En el MUIE una defensa o demostración individual puede requerir reagendar tribunal, equipo o colaborador externo."
+      ],
+      "example": "Si un estudiante falta justificadamente a una práctica evaluable de laboratorio, confirma la resolución o indicación aplicable, identifica el resultado que debía demostrar y diseña una recuperación equivalente. Reserva equipo y fecha por el cauce de ETSE y documenta en qué se basa la nota.",
+      "approvalGate": "No prometas una fecha o formato alternativo antes de confirmar que la ausencia encaja en el cauce aplicable y que la alternativa respeta la guía."
+    },
+    {
+      "situationId": "ausencia-imprevista-profesor",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesor avisa inmediatamente; el DIE y la coordinación docente reorganizan la actividad, y ETSE, CAT o CCA intervienen si se altera horario, evaluación o cumplimiento de la guía.",
+      "documentTypes": ["plan", "ficha"],
+      "differences": [
+        "En grados con varios grupos, prioriza una solución homogénea que no adelante contenidos o pruebas a un grupo respecto de otro.",
+        "En el MUIE una sesión intensiva o con equipamiento específico puede no ser sustituible; documenta la reprogramación y su equivalencia."
+      ],
+      "example": "Si enfermas el día de una práctica con láser, avisa al DIE, coordinación y alumnado por los canales previstos; no pidas a una persona no autorizada que abra el laboratorio. Confirma si se sustituye, recupera o reprograma y conserva el mensaje definitivo con fecha, aula y responsable.",
+      "approvalGate": "No improvises sustituciones que comprometan seguridad, POD, acceso a laboratorio o evaluación; escala la cobertura al DIE y a la coordinación."
+    },
+    {
+      "situationId": "fallo-tecnico-durante-examen",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado protege la igualdad y documenta la incidencia; coordinación y CAT o CCA valoran la respuesta académica, y ETSE atiende espacio, equipos y registro de la incidencia.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En pruebas masivas de grado registra puestos, grupos y tiempo efectivo para no aplicar soluciones desiguales.",
+        "En el MUIE una prueba con software o instrumentación especializada exige conservar configuración, versiones y datos además del examen."
+      ],
+      "example": "Si falla la licencia del simulador durante un examen, anota hora, puestos afectados y mensajes de error; congela la prueba si la igualdad no puede mantenerse y guarda evidencias técnicas. No decidas en caliente una nota compensatoria: eleva una propuesta trazable conforme a guía y coordinación.",
+      "approvalGate": "Detén la prueba cuando continuar produzca una desigualdad no corregible; cualquier repetición o cambio sustancial debe validarse por el cauce académico."
+    },
+    {
+      "situationId": "custodiar-examenes-evidencias",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado y la coordinación custodian las evidencias conforme a normativa y política institucional; ETSE, CAT o CCA requieren acceso cuando hay revisión, reclamación o control de calidad.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En los grados, incluye versiones de examen, listas, rúbricas, entregas y cálculo cuando hay múltiples grupos o docentes.",
+        "En el MUIE conserva también código, datos, informes o actas de defensa necesarios para reconstruir la evaluación."
+      ],
+      "example": "Para una asignatura con examen, prácticas y proyecto, crea una carpeta de curso con guía, versiones, enunciados, rúbricas, entregas originales y hoja de cálculo bloqueada. Separa datos personales, controla accesos y no borres nada mientras pueda existir revisión o reclamación.",
+      "approvalGate": "No destruyas ni devuelvas el único original de una evidencia hasta cumplir el periodo aplicable y cerrar cualquier procedimiento abierto."
+    },
+    {
+      "situationId": "conducta-disruptiva-amenaza-aula",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado protege a las personas y solicita ayuda; seguridad y los órganos institucionales atienden la amenaza. ETSE, CAT o CCA gestionan después las consecuencias académicas sin sustituir la respuesta de emergencia.",
+      "documentTypes": ["ficha", "plan"],
+      "differences": [
+        "En laboratorios de grado, corta de forma segura energía, láseres, herramientas o equipos si la conducta eleva el riesgo.",
+        "En grupos pequeños de máster no minimices una amenaza por conocer al estudiante; aplica los mismos límites y cauces."
+      ],
+      "example": "Si una discusión escala junto a una mesa óptica con láser activo, prioriza detener la actividad de forma segura, alejar al grupo y pedir ayuda. Después registra hechos, testigos y actuaciones sin diagnósticos ni juicios, y coordina con ETSE la continuidad docente.",
+      "approvalGate": "Ante amenaza creíble, agresión o riesgo físico, abandona la gestión académica ordinaria y activa inmediatamente seguridad o emergencias."
+    },
+    {
+      "situationId": "invitar-profesional-sesion-docente",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El responsable de la asignatura encaja la sesión en la guía; coordinación y DIE confirman la organización, y ETSE, CAT o CCA intervienen si hay acceso, gasto, cambio docente o alteración del plan.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En grado explica el nivel previo y evita convertir una sesión evaluable en publicidad o contenido no coordinado.",
+        "En el MUIE una persona experta puede aportar especialización, pero debes aclarar autoría de materiales, confidencialidad y quién evalúa."
+      ],
+      "example": "Para invitar a una ingeniera de una empresa de fotónica, define resultado de aprendizaje, fecha, formato y materiales; pregunta antes si habrá honorarios, viaje, acceso a laboratorio o datos sensibles. Confirma por escrito quién autoriza y paga antes de comprometer gasto con la invitada.",
+      "approvalGate": "No prometas pago, viaje, acceso restringido ni participación evaluadora sin autorización y encaje académico confirmados."
+    },
+    {
+      "situationId": "visita-docente-externa",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El responsable docente propone la visita; coordinación, DIE y ETSE gestionan encaje académico, autorización, cobertura y gasto, con CAT o CCA si modifica actividades o evaluación.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En grupos de grado dimensiona transporte, accesibilidad, supervisión y alternativa para quien no pueda asistir.",
+        "En el MUIE una visita técnica especializada puede implicar NDA o control de acceso; tramítalo antes de recopilar datos personales."
+      ],
+      "example": "Para visitar una planta de fabricación electrónica, prepara objetivo docente, lista provisional, fecha, transporte, coste, accesibilidad, riesgos, seguros y plan alternativo. Pide confirmación institucional antes de reservar y comunica al alumnado solo cuando cobertura y condiciones estén cerradas.",
+      "approvalGate": "No contrates transporte ni desplaces al grupo sin autorización, cobertura, responsables y tratamiento de datos confirmados."
+    },
+    {
+      "situationId": "usar-materiales-derechos-autor-aula-virtual",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado selecciona materiales y debe respetar licencias; la biblioteca y los servicios UV orientan sobre uso permitido. Coordinación, CAT o CCA aseguran el encaje docente, pero no convierten una copia ilícita en lícita.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En los grados prioriza enlaces, recursos con licencia UV y fragmentos justificados frente a subir manuales completos.",
+        "En el MUIE distingue material docente de artículos o normas usados en investigación; el acceso institucional no autoriza redistribución."
+      ],
+      "example": "Si quieres usar un capítulo de un manual de fotónica, comprueba licencia y acceso de biblioteca; enlaza la copia autorizada o utiliza solo el fragmento necesario con referencia y finalidad docente. No descargues el PDF desde tu cuenta y lo redistribuyas completo por comodidad.",
+      "approvalGate": "Detente si no puedes identificar licencia, excepción aplicable o autorización; pide orientación a biblioteca antes de publicar el archivo."
+    },
+    {
+      "situationId": "grabar-clase-estudiantado",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El profesorado define la necesidad docente; los servicios de protección de datos y docencia orientan el tratamiento, y ETSE, CAT o CCA intervienen si la grabación forma parte estructural de la actividad o evaluación.",
+      "documentTypes": ["plan", "verifica"],
+      "differences": [
+        "En clases numerosas de grado minimiza captación del alumnado y evita que una grabación general sustituya el análisis de necesidad y base jurídica.",
+        "En el MUIE una presentación individual evaluada puede exigir conservación limitada y acceso restringido; informa antes de grabar."
+      ],
+      "example": "Si quieres grabar defensas de proyectos para revisar la evaluación, define finalidad, personas captadas, acceso, plazo de conservación y alternativa si procede. Informa antes, usa la herramienta institucional y restringe la grabación al equipo evaluador; no la reutilices como material promocional.",
+      "approvalGate": "No grabes ni publiques cuando finalidad, información previa, acceso y conservación no estén resueltos por el cauce institucional."
+    }
+  ]
+}
