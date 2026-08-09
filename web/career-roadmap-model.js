@@ -1,27 +1,30 @@
 export const PROFILE_DEFAULTS = Object.freeze({
   category: "ayudante-doctor",
   contractEnd: "",
-  accreditation: "not-started",
+  accreditation: "favorable",
   mobility: "likely",
   teaching: "likely",
   research: "portfolio",
-  c1: "unknown",
+  c1: "yes",
   sexennia: 0,
-  projectRole: "member",
+  projectRole: "ip",
+  emergingProject: "awarded",
   defendedTheses: 0,
   weeklyHours: 6
 });
 
 export function buildCareerAssessment(rawProfile, data, asOf = new Date()) {
   const profile = normalizeProfile(rawProfile);
-  const gates = [
+  let gates = [
     mobilityGate(profile.mobility),
     teachingGate(profile.teaching),
     researchGate(profile.research, profile.sexennia),
     languageGate(profile.c1),
     accreditationGate(profile.accreditation),
-    contractGate(profile.contractEnd, asOf)
+    contractGate(profile.contractEnd, asOf),
+    projectGate(profile.emergingProject, profile.projectRole)
   ];
+  if (profile.accreditation === "favorable") gates = closePtuGates(gates);
   const ptuInputs = gates.slice(0, 3);
   const ptuEvidenceReady = ptuInputs.every((gate) => gate.status === "ready");
   const ptuLooksPlausible = ptuInputs.every((gate) => ["ready", "evidence"].includes(gate.status));
@@ -112,6 +115,7 @@ function normalizeProfile(raw = {}) {
     c1: allowed(raw.c1, ["unknown", "no", "yes"], PROFILE_DEFAULTS.c1),
     sexennia: Math.round(clampNumber(raw.sexennia, 0, 6, PROFILE_DEFAULTS.sexennia)),
     projectRole: allowed(raw.projectRole, ["none", "member", "ip"], PROFILE_DEFAULTS.projectRole),
+    emergingProject: allowed(raw.emergingProject, ["none", "awarded"], PROFILE_DEFAULTS.emergingProject),
     defendedTheses: Math.round(clampNumber(raw.defendedTheses, 0, 20, PROFILE_DEFAULTS.defendedTheses)),
     weeklyHours: clampNumber(raw.weeklyHours, 1, 30, PROFILE_DEFAULTS.weeklyHours)
   };
@@ -156,6 +160,19 @@ function contractGate(value, asOf) {
   return gate("contract", "Fin de contrato y ventana UV", "future", `Quedan aproximadamente ${months} meses; revisar anualmente los criterios UV y no esperar a la última convocatoria para acreditar.`);
 }
 
+function projectGate(value, role) {
+  if (value !== "awarded") return gate("emerging-project", "Proyecto GVA Grupos Emergentes", "gap", "No consta una concesión activa; construir la siguiente oportunidad de financiación desde el hito científico prioritario.");
+  const roleText = role === "ip" ? "como IP" : role === "member" ? "como miembro del equipo" : "con el papel nominal pendiente de corregir";
+  return gate("emerging-project", "Proyecto GVA Grupos Emergentes", "ready", `Concedido, con inicio en septiembre de 2026 ${roleText}: cerrar antes del arranque presupuesto, responsables, compras/contratación, datos, protección y primer hito.`);
+}
+
+function closePtuGates(gates) {
+  const completed = new Set(["mobility", "teaching", "research"]);
+  return gates.map((item) => completed.has(item.id)
+    ? { ...item, status: "ready", next: "Suficiencia ya superada en la acreditación PTU favorable; conservar resolución y evidencias para concurso, sexenio y futuras evaluaciones." }
+    : item);
+}
+
 function careerStage(profile, ready, plausible) {
   if (profile.accreditation === "favorable") return "post-ptu";
   if (profile.accreditation === "submitted") return "waiting-ptu";
@@ -184,14 +201,15 @@ function interpretationFor(stage) {
 
 function choosePriorities(profile, actions, ptuReady) {
   const ids = [];
-  if (!["certified", "exempt"].includes(profile.mobility)) ids.push("certify-mobility");
-  if (!["certified", "quinquennium"].includes(profile.teaching)) ids.push("certify-teaching");
+  if (profile.accreditation !== "favorable" && !["certified", "exempt"].includes(profile.mobility)) ids.push("certify-mobility");
+  if (profile.accreditation !== "favorable" && !["certified", "quinquennium"].includes(profile.teaching)) ids.push("certify-teaching");
   if (profile.c1 !== "yes") ids.push("obtain-c1");
   if (profile.accreditation === "not-started") ids.push("audit-academia");
   if ((ptuReady || profile.accreditation === "preparing") && profile.accreditation !== "favorable") ids.push("submit-ptu");
   if (profile.accreditation === "favorable") ids.push("notify-uv");
+  if (profile.emergingProject === "awarded") ids.push("launch-ge-project", "research-pipeline");
   if (profile.sexennia === 0 && profile.research !== "sexennium") ids.push("first-sexennium");
-  ids.push("evidence-bank", "research-pipeline", "funding-ladder", "student-pipeline");
+  ids.push("funding-ladder", "evidence-bank", "research-pipeline", "student-pipeline");
   const unique = [...new Set(ids)];
   return unique.map((id) => actions.find((action) => action.id === id)).filter(Boolean).slice(0, 5);
 }
@@ -199,9 +217,9 @@ function choosePriorities(profile, actions, ptuReady) {
 function buildRoadmap(profile, priorities) {
   const first = priorities.slice(0, 3).map((item) => `${item.title}: ${item.deliverable}`);
   const ninety = [
-    profile.accreditation === "favorable" ? "Registrar la acreditación en la UV y confirmar el siguiente ciclo de promoción." : "Cerrar una matriz PTU con evidencia, puntos orientativos, huecos y decisión presentar/no presentar.",
+    profile.emergingProject === "awarded" ? "Tener el proyecto GE en ejecución real: claves y elegibilidad confirmadas, primer pedido o contratación tramitado y primer hito técnico con responsable y criterio de éxito." : profile.accreditation === "favorable" ? "Registrar la acreditación en la UV y confirmar el siguiente ciclo de promoción." : "Cerrar una matriz PTU con evidencia, puntos orientativos, huecos y decisión presentar/no presentar.",
     profile.sexennia > 0 || profile.research === "sexennium" ? "Actualizar el banco de evidencias con el sexenio y seleccionar la siguiente cartera de resultados." : "Preparar cinco aportaciones y sustitutas para el primer sexenio, con contribución e impacto demostrables.",
-    "Elegir una convocatoria que financie el siguiente hito técnico, con calendario inverso y alternativa si no se concede."
+    profile.emergingProject === "awarded" ? "Definir qué evidencia del GE habilitará la siguiente propuesta estatal o europea, sin precipitar una solicitud antes de producir ese resultado." : "Elegir una convocatoria que financie el siguiente hito técnico, con calendario inverso y alternativa si no se concede."
   ];
   const year = [
     "Conseguir una salida científica principal, un activo reproducible y una decisión de protección/transferencia dentro de la misma línea.",
@@ -217,7 +235,9 @@ function buildRoadmap(profile, priorities) {
 }
 
 function allocateWeeklyTime(profile, stage) {
-  let weights = stage === "post-ptu"
+  let weights = stage === "post-ptu" && profile.emergingProject === "awarded"
+    ? [["Ejecución científica del proyecto GE", 35], ["Producción y primer sexenio", 20], ["Equipo y liderazgo", 20], ["Siguiente financiación", 15], ["Docencia reutilizable", 10]]
+    : stage === "post-ptu"
     ? [["Investigación y resultados", 35], ["Financiación e independencia", 25], ["Liderazgo y personas", 20], ["Docencia reutilizable", 10], ["Sistema de evidencias", 10]]
     : [["Acreditación y evidencias", 35], ["Investigación y sexenio", 30], ["Financiación", 20], ["Docencia reutilizable", 10], ["Sistema de evidencias", 5]];
   if (profile.c1 === "no" && stage !== "post-ptu") weights = [["C1 de valenciano", 20], ["Acreditación y evidencias", 30], ["Investigación y sexenio", 25], ["Financiación", 15], ["Docencia y evidencias", 10]];
@@ -230,8 +250,8 @@ function allocateWeeklyTime(profile, stage) {
 }
 
 function buildWarnings(profile, gates, asOf) {
-  const warnings = ["La herramienta ordena trabajo; no calcula ni predice una evaluación ANECA."];
-  if (profile.research === "portfolio" && profile.sexennia === 0) warnings.push("Veintiocho publicaciones listadas públicamente no equivalen por sí solas a 50 puntos ni a un sexenio.");
+  const warnings = [profile.accreditation === "favorable" ? "La acreditación favorable habilita el siguiente paso, pero no equivale a una plaza ni a promoción automática." : "La herramienta ordena trabajo; no calcula ni predice una evaluación ANECA."];
+  if (profile.accreditation !== "favorable" && profile.research === "portfolio" && profile.sexennia === 0) warnings.push("Veintiocho publicaciones listadas públicamente no equivalen por sí solas a 50 puntos ni a un sexenio.");
   const contract = gates.find((item) => item.id === "contract");
   if (contract.status === "evidence") warnings.push("Sin fecha final de contrato no puede determinarse tu ventana concreta de promoción UV.");
   if (asOf.getFullYear() > 2026) warnings.push("Los acuerdos UV citados son de 2026–2027: verifica si existe un ciclo posterior.");

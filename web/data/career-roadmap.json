@@ -17,6 +17,21 @@
       "sourceId": "uv-profile"
     },
     {
+      "label": "Acreditación PTU",
+      "value": "Resolución favorable obtenida en agosto de 2026",
+      "status": "declared"
+    },
+    {
+      "label": "Valenciano",
+      "value": "C1 obtenido",
+      "status": "declared"
+    },
+    {
+      "label": "Proyecto competitivo",
+      "value": "Proyecto GVA de grupos de investigación emergentes concedido, con inicio en septiembre de 2026",
+      "status": "declared"
+    },
+    {
       "label": "Docencia pública inventariada",
       "value": "UPV 2019–2025 y UV 2025–2026, en grado y máster",
       "status": "verify",
@@ -114,6 +129,18 @@
       "deliverable": "Justificante de registro o comunicación incorporada al expediente personal UV.",
       "stop": "No confiar en que ANECA transmita de oficio la resolución a la unidad y ciclo de promoción correctos.",
       "sourceIds": ["uv-career-2026", "uv-promotion-page"]
+    },
+    {
+      "id": "launch-ge-project",
+      "title": "Preparar el arranque del proyecto GVA antes de septiembre",
+      "domain": "Proyecto + liderazgo",
+      "kind": "flywheel",
+      "trigger": "project-awarded",
+      "effort": "alta",
+      "why": "La concesión permite convertir financiación en independencia, resultados, personas y la siguiente propuesta; un arranque administrativo tardío puede consumir el primer semestre sin evidencia científica.",
+      "deliverable": "Plan de arranque de una página con paquetes de trabajo, hitos trimestrales, responsables, presupuesto por anualidad, compras y contratación críticas, datos, riesgos, decisión de protección/publicación y primer criterio de éxito experimental.",
+      "stop": "No comprometer gastos ni incorporar personal hasta que la unidad gestora confirme clave, fecha de elegibilidad, procedimiento y crédito; no divulgar un resultado protegible antes de decidir con Transferencia.",
+      "sourceIds": ["gva-ge", "funding-guide", "uv-transfer"]
     },
     {
       "id": "first-sexennium",
@@ -236,6 +263,7 @@
     { "id": "uv-promotion-page", "label": "UV · promoción del profesorado 2026–2027", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/login/otras-convocatorias/promocion/promocion-profesorado-1285931619776.html" },
     { "id": "uv-pdi-regulations", "label": "UV · normativa específica del PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html" },
     { "id": "uv-research-programme", "label": "UV · programa propio de ayudas a la investigación", "url": "https://www.uv.es/uvweb/universidad/es/investigacion-transferencia/financiacion/programa-ayudas-investigacion-uv/introduccion-1285946452436.html" },
+    { "id": "gva-ge", "label": "Generalitat Valenciana · grupos de investigación emergentes", "url": "https://sede.gva.es/es/detall-tramit?id_proc=G104733" },
     { "id": "funding-guide", "label": "Guía personal · explorador de financiación", "url": "https://jorpago2.github.io/uv-administracion/financiacion/" },
     { "id": "uv-transfer", "label": "UV · Servicio de Transferencia e Innovación", "url": "https://www.uv.es/uvweb/servicio-investigacion/es/servicio-transferencia-innovacion-1285906393707.html" }
   ]

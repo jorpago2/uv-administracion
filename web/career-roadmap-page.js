@@ -2,7 +2,8 @@ import "./site-shell.js";
 import careerData from "./data/career-roadmap.json";
 import { PROFILE_DEFAULTS, buildCareerAssessment, evaluateOpportunity, exportCareerRoadmapMarkdown } from "./career-roadmap-model.js";
 
-const STORAGE_KEY = "uv-career-roadmap-profile-v1";
+const STORAGE_KEY = "uv-career-roadmap-profile-v2";
+const LEGACY_STORAGE_KEY = "uv-career-roadmap-profile-v1";
 const form = document.querySelector("#careerProfileForm");
 let assessment;
 
@@ -19,6 +20,7 @@ form.addEventListener("submit", (event) => {
 form.addEventListener("input", updateAssessment);
 document.querySelector("#careerReset").addEventListener("click", () => {
   localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(LEGACY_STORAGE_KEY);
   writeForm(PROFILE_DEFAULTS);
   updateAssessment();
 });
@@ -78,9 +80,10 @@ function updateOpportunity() {
 }
 
 function renderStaticContent() {
+  const factStatus = { public: "Público", declared: "Declarado por Jorge", verify: "Verificar" };
   document.querySelector("#careerDeferList").innerHTML = careerData.deferByDefault.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   document.querySelector("#careerFacts").innerHTML = careerData.knownFacts.map((fact) => `
-    <article><span>${fact.status === "public" ? "Público" : "Verificar"}</span><h3>${escapeHtml(fact.label)}</h3><p>${escapeHtml(fact.value)}</p>${sourceLinks([fact.sourceId])}</article>`).join("");
+    <article><span>${factStatus[fact.status] ?? "Verificar"}</span><h3>${escapeHtml(fact.label)}</h3><p>${escapeHtml(fact.value)}</p>${sourceLinks(fact.sourceId ? [fact.sourceId] : [])}</article>`).join("");
   document.querySelector("#careerSources").innerHTML = careerData.sources.map((source) => `<li id="fuente-${escapeHtml(source.id)}"><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join("");
   document.querySelector("#careerReviewed").textContent = `Criterios y enlaces revisados el ${formatDate(careerData.reviewedOn)}. Comprueba si existe una convocatoria posterior antes de actuar.`;
 }
@@ -99,7 +102,19 @@ function writeForm(profile) {
 
 function loadProfile() {
   try {
-    writeForm({ ...PROFILE_DEFAULTS, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") });
+    const current = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+    if (current) return writeForm({ ...PROFILE_DEFAULTS, ...current });
+    const legacy = JSON.parse(localStorage.getItem(LEGACY_STORAGE_KEY) || "{}");
+    writeForm({
+      ...PROFILE_DEFAULTS,
+      contractEnd: legacy.contractEnd || "",
+      mobility: legacy.mobility || PROFILE_DEFAULTS.mobility,
+      teaching: legacy.teaching || PROFILE_DEFAULTS.teaching,
+      research: legacy.research || PROFILE_DEFAULTS.research,
+      sexennia: legacy.sexennia ?? PROFILE_DEFAULTS.sexennia,
+      defendedTheses: legacy.defendedTheses ?? PROFILE_DEFAULTS.defendedTheses,
+      weeklyHours: legacy.weeklyHours ?? PROFILE_DEFAULTS.weeklyHours
+    });
   } catch {
     writeForm(PROFILE_DEFAULTS);
   }

@@ -4,19 +4,29 @@ import test from "node:test";
 import { PROFILE_DEFAULTS, buildCareerAssessment, evaluateOpportunity, exportCareerRoadmapMarkdown } from "../career-roadmap-model.js";
 
 const data = JSON.parse(await readFile(new URL("../data/career-roadmap.json", import.meta.url), "utf8"));
-const asOf = new Date("2026-08-09T12:00:00+02:00");
+const asOf = new Date("2026-08-10T12:00:00+02:00");
 
-test("el diagnóstico público no convierte indicios en requisitos acreditados", () => {
+test("los nuevos datos sitúan el plan después de la acreditación PTU", () => {
   const result = buildCareerAssessment(PROFILE_DEFAULTS, data, asOf);
+  assert.equal(result.stage, "post-ptu");
+  assert.equal(result.gates.find((gate) => gate.id === "accreditation").status, "ready");
+  assert.equal(result.gates.find((gate) => gate.id === "c1").status, "ready");
+  assert.equal(result.gates.find((gate) => gate.id === "emerging-project").status, "ready");
+  assert.equal(result.priorities[0].id, "notify-uv");
+  assert.equal(result.priorities[1].id, "launch-ge-project");
+  assert.match(result.headline, /promoción/);
+});
+
+test("un expediente no resuelto conserva la distinción entre indicios y evidencia", () => {
+  const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, accreditation: "not-started", c1: "unknown", emergingProject: "none", projectRole: "member" }, data, asOf);
   assert.equal(result.stage, "document-ptu");
   assert.equal(result.gates.find((gate) => gate.id === "mobility").status, "evidence");
   assert.equal(result.gates.find((gate) => gate.id === "teaching").status, "evidence");
   assert.equal(result.gates.find((gate) => gate.id === "research").status, "evidence");
-  assert.match(result.headline, /más cerca de PTU/);
 });
 
 test("un sexenio reconocido marca el mínimo investigador sin prometer la acreditación completa", () => {
-  const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, research: "sexennium", sexennia: 1 }, data, asOf);
+  const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, accreditation: "not-started", research: "sexennium", sexennia: 1 }, data, asOf);
   assert.equal(result.gates.find((gate) => gate.id === "research").status, "ready");
   assert.match(result.warnings[0], /no calcula ni predice/);
 });
@@ -31,7 +41,7 @@ test("la fecha de contrato activa una alerta cuando queda poco margen", () => {
 test("el presupuesto semanal conserva exactamente las horas disponibles", () => {
   const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, weeklyHours: 7.5 }, data, asOf);
   const total = result.weeklyAllocation.reduce((sum, item) => sum + item.hours, 0);
-  assert.equal(total, 7.5);
+  assert.ok(Math.abs(total - 7.5) < 1e-9);
 });
 
 test("el filtro de oportunidades penaliza carga recurrente y desplazamiento", () => {
