@@ -34,6 +34,17 @@ test("las rejillas densas esperan a disponer de 75 rem", () => {
   assert.match(wideDesktop, /\.funding-planner__basics[^}]*repeat\(3/);
 });
 
+test("los seis accesos rapidos apilan su rotulo sin recortar texto", () => {
+  const routeLink = ruleFor(".route-strip a");
+  const extraWide = styles.slice(styles.indexOf("@media (min-width: 90rem)"));
+
+  assert.match(routeLink, /min-width:\s*0/);
+  assert.match(routeLink, /overflow-wrap:\s*anywhere/);
+  assert.match(routeLink, /white-space:\s*normal/);
+  assert.match(extraWide, /\.route-strip\s*\{[^}]*repeat\(6/);
+  assert.match(extraWide, /\.route-strip a\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+});
+
 test("el planificador puede contraerse sin desbordar", () => {
   assert.match(styles, /\.funding-plan-output > \*,[^}]*min-width:\s*0/);
   assert.match(ruleFor(".funding-plan-result"), /min-width:\s*0/);
