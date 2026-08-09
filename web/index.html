@@ -22,8 +22,8 @@
   </header>
 
   <aside class="index-panel" id="indexPanel" aria-label="Índice del manual">
-    <div class="index-panel__head"><strong>Capítulos</strong><button class="control control--close" id="closeMenuButton" type="button">Cerrar</button></div>
-    <nav id="chapterIndex" aria-label="Capítulos de la guía"><p class="loading-copy">Cargando índice…</p></nav>
+    <div class="index-panel__head"><strong>Ámbitos</strong><button class="control control--close" id="closeMenuButton" type="button">Cerrar</button></div>
+    <nav id="chapterIndex" aria-label="Ámbitos y capítulos de la guía"><p class="loading-copy">Cargando índice…</p></nav>
     <div class="index-panel__foot"><a href="MANUAL_PROCEDIMIENTOS.md">Abrir Markdown</a><a href="ALERTAS.md">Ver alertas</a></div>
   </aside>
 
@@ -33,7 +33,7 @@
         <div class="intro__copy">
           <p class="context-line">Procedimientos · derechos · plazos · fuentes</p>
           <h1 id="pageTitle">Guía operativa UV</h1>
-          <p class="intro__lead">Consulta práctica para profesorado e investigación de la ETSE, el Departamento de Ingeniería Electrónica y el ICMUV.</p>
+          <p class="intro__lead">Resuelve una necesidad concreta o entra por tu ámbito de trabajo. Cada respuesta conserva el vínculo con el procedimiento y la fuente oficial.</p>
         </div>
         <aside class="revision-note" aria-label="Alcance y revisión">
           <strong>Documento vivo</strong>
@@ -53,20 +53,48 @@
           <label for="searchInput">Buscar en toda la guía</label>
           <div class="search__row" id="searchControl" data-state="default">
             <input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Ej.: sexenio, examen, patente, viaje…" aria-describedby="searchHelp searchStatus">
+            <button class="control control--primary search__submit" type="submit">Buscar</button>
             <button class="control control--clear" id="clearSearch" type="button" disabled>Limpiar</button>
           </div>
           <p class="search__help" id="searchHelp">La búsqueda se realiza en este navegador; no se envía ningún dato.</p>
-          <p class="sr-only" id="searchStatus" aria-live="polite"></p>
+          <p class="search__status" id="searchStatus" aria-live="polite"></p>
         </form>
       </section>
 
-      <nav class="route-strip" aria-label="Accesos frecuentes">
-        <a href="#asistente-tramites"><span>Asistente</span>Resolver un trámite</a>
-        <a href="#calendario-anual"><span>Planificación</span>Crear calendario</a>
-        <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
-        <a href="#calculadora-pod"><span>Docencia</span>Calcular POD</a>
-        <a href="#calculadora-compras"><span>Compras</span>Elegir tramitación</a>
-        <a href="#explorador-financiacion"><span>Investigación</span>Explorar financiación</a>
+      <section class="task-board" id="tareas-frecuentes" aria-labelledby="taskBoardTitle">
+        <header class="task-board__heading">
+          <div><p class="context-line">Empieza por la acción</p><h2 id="taskBoardTitle">¿Qué necesitas hacer?</h2></div>
+          <p>Accesos directos a las decisiones más frecuentes. No necesitas conocer previamente el nombre administrativo del procedimiento.</p>
+        </header>
+        <nav class="task-grid" aria-label="Tareas frecuentes">
+          <a href="#asistente-tramites"><span>Orientación</span><strong>Resolver un trámite</strong><small>Recibe una ruta según ámbito, papel y momento.</small></a>
+          <a href="#preparador-candidatura"><span>Investigación</span><strong>Preparar una propuesta</strong><small>Comprueba elegibilidad y crea un calendario inverso.</small></a>
+          <a href="#calculadora-pod"><span>Docencia</span><strong>Revisar mi POD</strong><small>Estima dedicación y reducciones con la regla aplicada.</small></a>
+          <a href="#calculadora-personal"><span>Investigación</span><strong>Contratar personal</strong><small>Calcula el coste presupuestario completo.</small></a>
+          <a href="#calculadora-compras"><span>Gestión</span><strong>Tramitar una compra</strong><small>Identifica la ruta antes de hacer el pedido.</small></a>
+          <a href="#calculadora-retributiva"><span>Carrera PDI</span><strong>Consultar mi salario</strong><small>Combina categoría, antigüedad y complementos.</small></a>
+          <a href="#calculadora-viajes"><span>Gestión</span><strong>Preparar un viaje</strong><small>Planifica alojamiento, dietas y desplazamiento.</small></a>
+          <a href="#recursos-administrativos-y-defensa-de-derechos"><span>Derechos</span><strong>Actuar ante una resolución</strong><small>Conserva notificación, plazo, expediente y registro.</small></a>
+        </nav>
+      </section>
+
+      <aside class="attention-strip" aria-label="Actualizaciones y planificación">
+        <div><span>Antes de actuar</span><strong>Comprueba cambios y alertas</strong><p>Las normas, cuantías y convocatorias pueden cambiar después de la fecha de revisión.</p><a href="ALERTAS.md">Ver alertas documentadas</a></div>
+        <div><span>Durante el curso</span><strong>Anticipa hitos anuales</strong><p>Crea un calendario local con recordatorios orientativos y verifica después cada fecha oficial.</p><a href="#calendario-anual">Abrir calendario anual</a></div>
+      </aside>
+
+      <section class="domain-directory" id="ambitos" aria-labelledby="domainDirectoryTitle">
+        <header class="domain-directory__heading">
+          <div><p class="context-line">Segunda vía de entrada</p><h2 id="domainDirectoryTitle">Explorar por ámbito</h2></div>
+          <p>Cada ámbito reúne sus trámites habituales, herramientas relacionadas y capítulos del manual. La numeración canónica se mantiene.</p>
+        </header>
+        <div class="domain-grid" id="domainDirectory"><p class="loading-copy">Preparando ámbitos…</p></div>
+      </section>
+
+      <nav class="content-map" aria-label="Bloques de contenido detallado">
+        <a href="#herramientas-operativas"><span>01</span>Resolver y planificar</a>
+        <a href="#calculadoras-operativas"><span>02</span>Calcular y decidir</a>
+        <a href="#indice-capitulos"><span>03</span>Consultar capítulos</a>
       </nav>
 
       <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
@@ -464,6 +492,14 @@
 
         <section class="case-library" id="casos-completos" aria-labelledby="caseLibraryTitle">
           <header><div><p class="context-line">De la situación al expediente</p><h3 id="caseLibraryTitle">Casos completos</h3></div><p>Ocho escenarios realistas con hechos, decisión, documentos, secuencia, errores y resultado. Los cinco calculables pueden cargarse con un clic.</p></header>
+          <div class="case-filters" role="group" aria-label="Filtrar casos por ámbito">
+            <button class="filter is-active" type="button" data-case-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter" type="button" data-case-filter="docencia" aria-pressed="false">Docencia</button>
+            <button class="filter" type="button" data-case-filter="investigacion" aria-pressed="false">Investigación</button>
+            <button class="filter" type="button" data-case-filter="gestion" aria-pressed="false">Gestión</button>
+            <button class="filter" type="button" data-case-filter="cumplimiento" aria-pressed="false">Derechos</button>
+          </div>
+          <p class="tool-status" id="decisionCaseStatus" aria-live="polite">8 casos visibles.</p>
           <div class="case-list" id="decisionCaseList"></div>
         </section>
       </section>
@@ -554,8 +590,8 @@
         </footer>
       </section>
 
-      <section class="filter-area" aria-labelledby="filterTitle">
-        <h2 id="filterTitle">Explorar por ámbito</h2>
+      <section class="filter-area" id="indice-capitulos" aria-labelledby="filterTitle">
+        <div><p class="context-line">Manual completo</p><h2 id="filterTitle">Capítulos por ámbito</h2><p>Filtra el contenido o utiliza el índice lateral para saltar directamente a un capítulo.</p></div>
         <div class="filters" role="group" aria-label="Filtrar capítulos por ámbito">
           <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todo</button>
           <button class="filter" type="button" data-filter="planificacion" aria-pressed="false">Orientación</button>

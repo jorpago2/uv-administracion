@@ -4,6 +4,7 @@
   "cases": [
     {
       "id": "pod-tu-tres-sexenios",
+      "category": "docencia",
       "area": "Docencia y PDI",
       "title": "POD de TU con tres sexenios y reducciones",
       "summary": "Una profesora titular con tercer sexenio activo dirige una tesis internacional y es IP de dos proyectos públicos en 2027-28.",
@@ -19,6 +20,7 @@
     },
     {
       "id": "compra-osciloscopio-proyecto",
+      "category": "gestion",
       "area": "Compras",
       "title": "Osciloscopio de 18.000 € para un proyecto",
       "summary": "Un IP necesita un osciloscopio por 18.000 € sin IVA, con cargo a un proyecto de investigación y entrega en cuatro meses.",
@@ -34,6 +36,7 @@
     },
     {
       "id": "compra-sonda-exclusiva",
+      "category": "gestion",
       "area": "Compras",
       "title": "Sonda exclusiva de 9.000 €",
       "summary": "Solo el fabricante del equipo comercializa una sonda compatible; la oferta asciende a 9.000 € sin IVA.",
@@ -49,6 +52,7 @@
     },
     {
       "id": "viaje-congreso-eindhoven",
+      "category": "gestion",
       "area": "Viajes",
       "title": "Congreso de tres noches en Eindhoven",
       "summary": "Un investigador viaja a Países Bajos con fondos propios UV: tres noches, dos dietas completas, dos medias dietas y transporte público.",
@@ -64,6 +68,7 @@
     },
     {
       "id": "contrato-investigador-doce-meses",
+      "category": "investigacion",
       "area": "Personal",
       "title": "Presupuesto para contratar personal investigador 12 meses",
       "summary": "Una propuesta prevé 32.000 € brutos anuales y necesita estimar el coste patronal antes de cerrar el presupuesto.",
@@ -79,6 +84,7 @@
     },
     {
       "id": "tfm-resultado-protegible",
+      "category": "investigacion",
       "area": "Docencia y transferencia",
       "title": "TFM con un resultado potencialmente patentable",
       "summary": "Un estudiante obtiene una arquitectura de sensor nueva dentro de un proyecto con resultados aún no publicados.",
@@ -94,6 +100,7 @@
     },
     {
       "id": "denegacion-licencia-recurso",
+      "category": "cumplimiento",
       "area": "Derechos y administración",
       "title": "Denegación de una licencia con plazo de recurso",
       "summary": "El PDI recibe una resolución desfavorable y necesita actuar sin perder el plazo ni discutir informalmente sin registro.",
@@ -109,6 +116,7 @@
     },
     {
       "id": "brecha-calificaciones",
+      "category": "cumplimiento",
       "area": "Protección de datos",
       "title": "Hoja de calificaciones enviada al grupo equivocado",
       "summary": "Una hoja con nombres, identificadores y notas se remite por error a una lista de distribución no prevista.",

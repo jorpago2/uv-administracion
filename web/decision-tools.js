@@ -20,6 +20,7 @@ export function initDecisionTools(root) {
   updateTravelFields();
   renderCases(root.querySelector("#decisionCaseList"));
   root.addEventListener("click", handleExampleClick);
+  root.querySelector(".case-filters").addEventListener("click", (event) => handleCaseFilter(event, root));
   root.querySelectorAll("form").forEach((form) => form.dispatchEvent(new Event("input", { bubbles: true })));
 }
 
@@ -186,6 +187,7 @@ function renderCases(container) {
   casesData.cases.forEach((item, index) => {
     const details = document.createElement("details");
     details.className = "case-file";
+    details.dataset.caseCategory = item.category;
     if (index === 0) details.open = true;
     const summary = document.createElement("summary");
     const title = document.createElement("span");
@@ -227,6 +229,24 @@ function renderCases(container) {
     fragment.append(details);
   });
   container.replaceChildren(fragment);
+}
+
+function handleCaseFilter(event, root) {
+  const button = event.target.closest("[data-case-filter]");
+  if (!button) return;
+  const filter = button.dataset.caseFilter;
+  let visible = 0;
+  root.querySelectorAll("[data-case-filter]").forEach((candidate) => {
+    const active = candidate === button;
+    candidate.classList.toggle("is-active", active);
+    candidate.setAttribute("aria-pressed", String(active));
+  });
+  root.querySelectorAll(".case-file").forEach((item) => {
+    const show = filter === "all" || item.dataset.caseCategory === filter;
+    item.hidden = !show;
+    if (show) visible += 1;
+  });
+  root.querySelector("#decisionCaseStatus").textContent = `${visible} ${visible === 1 ? "caso visible" : "casos visibles"}.`;
 }
 
 function caseSection(title, items, ordered) {
@@ -316,6 +336,7 @@ function validateCases(data) {
   const ids = new Set();
   data.cases.forEach((item) => {
     if (!item.id || ids.has(item.id) || !item.title || !item.sourceUrl) throw new Error("Hay un caso incompleto o duplicado.");
+    if (!["docencia", "investigacion", "gestion", "cumplimiento"].includes(item.category)) throw new Error("Hay un caso sin ámbito válido.");
     ids.add(item.id);
   });
 }

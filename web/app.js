@@ -12,7 +12,7 @@ const FILTER_MAP = Object.freeze({
   ...Object.fromEntries(CATEGORIES.map((category) => [category.id, new Set(category.sections)]))
 });
 
-const state = { sections: [], activeFilter: "all", query: "", searchTimer: null, observer: null };
+const state = { sections: [], activeFilter: "all", query: "", searchTimer: null, observer: null, indexExpandedAll: false };
 const desktopMenuMedia = window.matchMedia("(min-width: 60rem)");
 const elements = {
   manual: document.querySelector("#manual"),
@@ -32,6 +32,8 @@ const elements = {
   menuScrim: document.querySelector("#menuScrim"),
   pageShell: document.querySelector(".page-shell"),
   filters: document.querySelector(".filters"),
+  domainDirectory: document.querySelector("#domainDirectory"),
+  chapterFilterArea: document.querySelector("#indice-capitulos"),
   backToTop: document.querySelector("#backToTop"),
   operationalHub: document.querySelector("#herramientas-operativas")
 };
@@ -62,6 +64,7 @@ async function loadManual() {
     renderMetadata(data.meta, parsed.sections.length, countLinks(data.markdown), countExamples(data.markdown));
     renderIntroduction(parsed.introduction);
     renderSections(parsed.sections);
+    renderDomainDirectory(parsed.sections);
     renderIndex(parsed.sections);
     setSearchState("success");
     elements.manual.dataset.state = "success";
@@ -162,16 +165,90 @@ function renderSections(sections) {
   elements.manual.append(fragment);
 }
 
+function renderDomainDirectory(sections) {
+  const fragment = document.createDocumentFragment();
+  CATEGORIES.forEach((category, index) => {
+    const card = document.createElement("article");
+    card.className = "domain-card";
+    card.id = `ambito-${category.id}`;
+
+    const heading = document.createElement("header");
+    const number = document.createElement("span");
+    number.className = "domain-card__number";
+    number.textContent = String(index + 1).padStart(2, "0");
+    const titleBlock = document.createElement("div");
+    const title = document.createElement("h3");
+    title.textContent = category.shortLabel;
+    const summary = document.createElement("p");
+    summary.textContent = category.summary;
+    titleBlock.append(title, summary);
+    heading.append(number, titleBlock);
+
+    const columns = document.createElement("div");
+    columns.className = "domain-card__columns";
+    columns.append(
+      domainLinkGroup("Trámites destacados", category.featuredSections.map((number) => {
+        const section = sections.find((candidate) => candidate.number === number);
+        return { label: section?.title ?? `Capítulo ${number}`, href: section ? `#${section.slug}` : "#indice-capitulos" };
+      })),
+      domainLinkGroup("Herramientas", category.tools)
+    );
+
+    const footer = document.createElement("footer");
+    const open = document.createElement("a");
+    open.className = "domain-card__open";
+    open.href = "#indice-capitulos";
+    open.dataset.domainTarget = category.id;
+    open.textContent = `Ver ${category.sections.length} capítulos`;
+    const count = document.createElement("span");
+    count.textContent = `${category.tools.length} ${category.tools.length === 1 ? "herramienta" : "herramientas"}`;
+    footer.append(open, count);
+    card.append(heading, columns, footer);
+    fragment.append(card);
+  });
+  elements.domainDirectory.replaceChildren(fragment);
+}
+
+function domainLinkGroup(title, links) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h4");
+  heading.textContent = title;
+  const list = document.createElement("ul");
+  links.forEach(({ label, href }) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = label;
+    item.append(link);
+    list.append(item);
+  });
+  section.append(heading, list);
+  return section;
+}
+
 function renderIndex(sections) {
   const fragment = document.createDocumentFragment();
+  const shortcuts = document.createElement("div");
+  shortcuts.className = "index-shortcuts";
+  [["Inicio", "#inicio"], ["Tareas frecuentes", "#tareas-frecuentes"], ["Resolver un trámite", "#asistente-tramites"]].forEach(([label, href]) => {
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = label;
+    shortcuts.append(link);
+  });
+  fragment.append(shortcuts);
   CATEGORIES.forEach((category) => {
     const categorySections = sections.filter((section) => section.categoryId === category.id);
     if (!categorySections.length) return;
-    const group = document.createElement("section");
+    const group = document.createElement("details");
     group.className = "index-group";
-    const heading = document.createElement("h2");
-    heading.className = "index-group__title";
-    heading.textContent = category.label;
+    group.dataset.indexCategory = category.id;
+    const heading = document.createElement("summary");
+    const headingLabel = document.createElement("span");
+    headingLabel.textContent = category.shortLabel;
+    const headingCount = document.createElement("span");
+    headingCount.textContent = String(categorySections.length).padStart(2, "0");
+    heading.append(headingLabel, headingCount);
     const list = document.createElement("ol");
     list.className = "index-list";
     categorySections.forEach((section) => {
@@ -190,8 +267,20 @@ function renderIndex(sections) {
       list.append(item);
     });
     group.append(heading, list);
+    group.addEventListener("toggle", () => {
+      if (!group.open || state.indexExpandedAll) return;
+      elements.index.querySelectorAll(".index-group[open]").forEach((candidate) => {
+        if (candidate !== group) candidate.open = false;
+      });
+    });
     fragment.append(group);
   });
+  const toggle = document.createElement("button");
+  toggle.className = "index-all-toggle";
+  toggle.id = "indexAllToggle";
+  toggle.type = "button";
+  toggle.textContent = "Ver índice completo";
+  fragment.append(toggle);
   elements.index.replaceChildren(fragment);
 }
 
@@ -316,6 +405,35 @@ function applyFilters() {
   elements.clearSearch.disabled = !state.query;
 }
 
+function setActiveFilter(filter, apply = true) {
+  if (!(filter in FILTER_MAP)) return;
+  state.activeFilter = filter;
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    const active = button.dataset.filter === filter;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  const selectedGroup = elements.index.querySelector(`[data-index-category="${filter}"]`);
+  if (selectedGroup) {
+    state.indexExpandedAll = false;
+    elements.index.querySelectorAll(".index-group").forEach((group) => { group.open = group === selectedGroup; });
+    updateIndexToggleLabel();
+  }
+  if (apply) applyFilters();
+}
+
+function toggleCompleteIndex() {
+  const groups = [...elements.index.querySelectorAll(".index-group:not([hidden])")];
+  state.indexExpandedAll = groups.some((group) => !group.open);
+  groups.forEach((group) => { group.open = state.indexExpandedAll; });
+  updateIndexToggleLabel();
+}
+
+function updateIndexToggleLabel() {
+  const button = elements.index.querySelector("#indexAllToggle");
+  if (button) button.textContent = state.indexExpandedAll ? "Contraer índice" : "Ver índice completo";
+}
+
 function highlightText(root, query) {
   if (!query) return;
   const needle = normalizeText(query);
@@ -344,10 +462,17 @@ function clearHighlights(root) {
 }
 
 function bindEvents() {
-  elements.searchForm.addEventListener("submit", (event) => event.preventDefault());
+  elements.searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    state.query = elements.searchInput.value;
+    if (state.query) setActiveFilter("all", false);
+    applyFilters();
+    elements.chapterFilterArea.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+  });
   elements.searchInput.addEventListener("input", () => {
     window.clearTimeout(state.searchTimer);
     state.query = elements.searchInput.value;
+    if (state.query && state.activeFilter !== "all") setActiveFilter("all", false);
     setSearchState("loading");
     state.searchTimer = window.setTimeout(() => { applyFilters(); setSearchState("success"); }, 250);
   });
@@ -361,13 +486,11 @@ function bindEvents() {
   elements.filters.addEventListener("click", (event) => {
     const button = event.target.closest("[data-filter]");
     if (!button) return;
-    state.activeFilter = button.dataset.filter;
-    document.querySelectorAll("[data-filter]").forEach((candidate) => {
-      const active = candidate === button;
-      candidate.classList.toggle("is-active", active);
-      candidate.setAttribute("aria-pressed", String(active));
-    });
-    applyFilters();
+    setActiveFilter(button.dataset.filter);
+  });
+  elements.domainDirectory.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-domain-target]");
+    if (link) setActiveFilter(link.dataset.domainTarget);
   });
   elements.manual.addEventListener("click", async (event) => {
     const button = event.target.closest("[data-copy-target]");
@@ -380,7 +503,15 @@ function bindEvents() {
   elements.menuButton.addEventListener("click", openMenu);
   elements.closeMenuButton.addEventListener("click", closeMenu);
   elements.menuScrim.addEventListener("click", closeMenu);
-  elements.index.addEventListener("click", (event) => { if (event.target.closest("a")) closeMenu(); });
+  elements.index.addEventListener("click", (event) => {
+    if (event.target.closest("#indexAllToggle")) { toggleCompleteIndex(); return; }
+    const chapterLink = event.target.closest("[data-index-section]");
+    if (chapterLink) {
+      const chapter = state.sections.find((section) => section.number === Number(chapterLink.dataset.indexSection));
+      if (chapter) setActiveFilter(chapter.categoryId);
+    }
+    if (event.target.closest("a")) closeMenu();
+  });
   desktopMenuMedia.addEventListener("change", syncMenuMode);
   window.addEventListener("hashchange", applyHashFocus);
   document.addEventListener("keydown", (event) => {
@@ -503,5 +634,9 @@ function isTypingTarget(target) { return target instanceof HTMLInputElement || t
 function prefersReducedMotion() { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
 function applyHashFocus() {
   if (!window.location.hash) return;
-  try { document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" }); } catch { /* La URL puede contener un hash externo no seleccionable. */ }
+  try {
+    const target = document.querySelector(window.location.hash);
+    if (target?.matches(".chapter")) setActiveFilter(target.dataset.category);
+    target?.scrollIntoView({ block: "start" });
+  } catch { /* La URL puede contener un hash externo no seleccionable. */ }
 }
