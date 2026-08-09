@@ -7,6 +7,7 @@ Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; e
 La portada es una mesa de trabajo ligera. El contenido se distribuye en rutas independientes para evitar cargar y representar a la vez todo el manual, los 105 casos y las calculadoras:
 
 - `/resolver/`: 105 situaciones operativas.
+- `/plan-carrera/`: diagnóstico personal, prioridades y hoja de ruta 30/90/365 para la carrera académica.
 - `/administracion/`, `/docencia/`, `/carrera-pdi/`, `/investigacion/`, `/gestion/` y `/cumplimiento/`: ámbitos con sus casos, capítulos y herramientas.
 - `/programas/`: GIET, GIEI, GIT, MUIE y Programa de Doctorado en Ingeniería Electrónica, con memorias Verifica, planes, guías y calidad.
 - `/financiacion/`: explorador y preparador de candidaturas.
@@ -37,6 +38,8 @@ pnpm dev
 ```
 
 Vite mostrará la URL local, normalmente `http://localhost:5173/`.
+
+El plan de carrera se ejecuta íntegramente en el navegador: guarda el perfil en `localStorage` y permite descargarlo como Markdown, sin enviar datos a un servidor.
 
 ## Build de producción
 

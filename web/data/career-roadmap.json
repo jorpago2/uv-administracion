@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-08-10",
+  "title": "Hoja de ruta personal de carrera académica",
+  "scope": "Jorge Parra · Profesor Ayudante Doctor UV · ETSE/DIE · ICMUV",
+  "knownFacts": [
+    {
+      "label": "Etapa actual",
+      "value": "Profesor Ayudante Doctor en la UV desde 2025",
+      "status": "public",
+      "sourceId": "uv-profile"
+    },
+    {
+      "label": "Doctorado",
+      "value": "UPV, 2022, con premio extraordinario",
+      "status": "public",
+      "sourceId": "uv-profile"
+    },
+    {
+      "label": "Docencia pública inventariada",
+      "value": "UPV 2019–2025 y UV 2025–2026, en grado y máster",
+      "status": "verify",
+      "sourceId": "personal-teaching"
+    },
+    {
+      "label": "Investigación pública inventariada",
+      "value": "28 artículos listados hasta 2026 y una línea coherente en fotónica integrada, materiales funcionales y dispositivos emergentes",
+      "status": "verify",
+      "sourceId": "personal-research"
+    },
+    {
+      "label": "Recursos docentes",
+      "value": "Libro de problemas, simuladores y tutorización de TFG/TFM",
+      "status": "public",
+      "sourceId": "personal-teaching"
+    }
+  ],
+  "principles": [
+    "Primero se eliminan requisitos binarios: un expediente excelente no compensa un requisito de admisión incumplido.",
+    "Se priorizan resultados que sirvan simultáneamente para acreditación, sexenio, financiación, liderazgo y reputación científica.",
+    "La docencia se convierte en evidencia reutilizable y cantera de TFG/TFM; no se multiplica trabajo docente sin impacto demostrable.",
+    "La gestión se acepta si desbloquea recursos, red o liderazgo acreditable y tiene alcance y duración definidos.",
+    "La cantidad de actividades no sustituye una narrativa coherente de contribución, calidad, independencia e impacto."
+  ],
+  "actions": [
+    {
+      "id": "audit-academia",
+      "title": "Hacer una auditoría PTU contribución por contribución",
+      "domain": "Acreditación",
+      "kind": "gate",
+      "trigger": "accreditation-open",
+      "effort": "media",
+      "why": "Determina si ya alcanzas los 50 puntos en investigación y docencia y evita seguir acumulando méritos que no cubren el hueco real.",
+      "deliverable": "Matriz ANECA con bloque, apartado, contribución elegida, indicios, evidencia, puntos orientativos y hueco.",
+      "stop": "No presentar mientras un requisito de admisión o un mínimo imprescindible siga sin acreditarse.",
+      "sourceIds": ["aneca-overview", "aneca-manual-2026", "aneca-research", "aneca-teaching"]
+    },
+    {
+      "id": "certify-mobility",
+      "title": "Certificar los nueve meses fuera de la universidad de la tesis",
+      "domain": "Acreditación",
+      "kind": "gate",
+      "trigger": "mobility-evidence",
+      "effort": "baja",
+      "why": "Es requisito de admisión a PTU. ANECA confirma que un contrato en otra universidad puede computar; la mera participación en proyectos no.",
+      "deliverable": "Certificado UV con fechas y actividades docentes o investigadoras, unido al certificado de tesis UPV.",
+      "stop": "No asumir que hoja de servicios o contrato prueban por sí solos todas las actividades requeridas.",
+      "sourceIds": ["aneca-mobility", "rd678"]
+    },
+    {
+      "id": "certify-teaching",
+      "title": "Reconstruir y certificar toda la docencia UPV y UV",
+      "domain": "Docencia",
+      "kind": "gate",
+      "trigger": "teaching-evidence",
+      "effort": "media",
+      "why": "La web personal muestra docencia desde 2019, pero ANECA exige duración, horas y equivalencia según el tipo de contrato, además de calidad.",
+      "deliverable": "Tabla por curso con figura contractual, asignatura oficial, nivel, idioma, horas/ECTS, responsabilidad, encuestas y certificado institucional.",
+      "stop": "No sumar años de figuras distintas como si todas fueran dedicación completa; en trayectoria mixta el mínimo se calcula proporcionalmente.",
+      "sourceIds": ["aneca-teaching", "personal-teaching"]
+    },
+    {
+      "id": "obtain-c1",
+      "title": "Acreditar el C1 de valenciano",
+      "domain": "Promoción UV",
+      "kind": "gate",
+      "trigger": "c1-open",
+      "effort": "alta",
+      "why": "Los criterios UV 2026–2027 lo incorporan a la promoción de Ayudante Doctor; puede condicionar la transformación aunque ANECA sea favorable.",
+      "deliverable": "Certificado C1 reconocido y comunicado por el cauce UV aplicable.",
+      "stop": "No esperar al año de fin de contrato: convocatoria, examen, resolución y comunicación consumen margen.",
+      "sourceIds": ["uv-career-2026", "uv-pdi-regulations"]
+    },
+    {
+      "id": "submit-ptu",
+      "title": "Presentar la acreditación a PTU en cuanto los bloques sean suficientes",
+      "domain": "Acreditación",
+      "kind": "gate",
+      "trigger": "ready-to-submit",
+      "effort": "alta",
+      "why": "La fecha de acreditación puede convertirse en criterio de ordenación y elimina riesgo antes de la ventana de promoción.",
+      "deliverable": "Solicitud ANECA registrada, expediente íntegro y calendario de seguimiento y alegaciones.",
+      "stop": "No confundir acreditación con plaza; después siguen la comunicación UV, transformación, convocatoria y concurso.",
+      "sourceIds": ["aneca-overview", "aneca-manual-2026", "uv-career-2026", "rd678"]
+    },
+    {
+      "id": "notify-uv",
+      "title": "Comunicar inmediatamente la acreditación favorable a la UV",
+      "domain": "Promoción UV",
+      "kind": "gate",
+      "trigger": "accreditation-favorable",
+      "effort": "baja",
+      "why": "Los ciclos UV usan fechas de corte para conocer la categoría acreditada y ordenar o transformar plazas.",
+      "deliverable": "Justificante de registro o comunicación incorporada al expediente personal UV.",
+      "stop": "No confiar en que ANECA transmita de oficio la resolución a la unidad y ciclo de promoción correctos.",
+      "sourceIds": ["uv-career-2026", "uv-promotion-page"]
+    },
+    {
+      "id": "first-sexennium",
+      "title": "Preparar el primer sexenio como un paquete de cinco aportaciones",
+      "domain": "Investigación",
+      "kind": "flywheel",
+      "trigger": "sexennium-open",
+      "effort": "media",
+      "why": "Un sexenio reconoce automáticamente el mínimo de actividad investigadora para PTU y también mejora retribución y, según la normativa UV, puede afectar al POD.",
+      "deliverable": "Cinco aportaciones seleccionadas con narrativa, contribución propia, calidad, ciencia abierta e impacto, más sustitutas.",
+      "stop": "No seleccionar solo por cuartil: coherencia, contribución, evidencia e impacto contextualizado son esenciales.",
+      "sourceIds": ["aneca-research", "cneai-2025"]
+    },
+    {
+      "id": "evidence-bank",
+      "title": "Mantener un banco único de evidencias",
+      "domain": "Sistema personal",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "baja",
+      "why": "Evita reconstruir el mismo mérito para ANECA, CNEAI, proyectos, complementos, concursos y memorias.",
+      "deliverable": "Registro vivo con DOI, ORCID, contribución CRediT, proyecto, dataset/código, indicadores fechados, certificado y posibles usos.",
+      "stop": "No almacenar solo PDFs finales; conserva la evidencia que permite demostrar tu contribución y el contexto del mérito.",
+      "sourceIds": ["aneca-overview", "aneca-research"]
+    },
+    {
+      "id": "research-pipeline",
+      "title": "Concentrar la investigación en una tubería de resultados conectados",
+      "domain": "Investigación",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "alta",
+      "why": "Un mismo programa coherente puede producir artículos sólidos, datos, patente, propuesta, TFM/tesis, colaboración e independencia científica.",
+      "deliverable": "Mapa de 18 meses con tres hitos: evidencia física, dispositivo demostrador y resultado protegible/publicable, cada uno con responsable y financiación.",
+      "stop": "No abrir una nueva línea si no existe una pregunta diferenciada, recurso crítico, primera evidencia y decisión de cierre.",
+      "sourceIds": ["personal-research", "aneca-research"]
+    },
+    {
+      "id": "funding-ladder",
+      "title": "Construir una escalera de financiación, no una lista de convocatorias",
+      "domain": "Financiación",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "alta",
+      "why": "La financiación debe comprar el siguiente hito y aumentar autonomía: ayuda interna/precompetitiva, proyecto como IP y después consorcio o ERC cuando exista evidencia.",
+      "deliverable": "Secuencia de tres convocatorias con hito financiado, elegibilidad, socio necesario, fecha de no retorno y plan alternativo.",
+      "stop": "No presentar la misma idea sin adaptar madurez, beneficiario, impacto y recursos al instrumento.",
+      "sourceIds": ["uv-research-programme", "funding-guide"]
+    },
+    {
+      "id": "student-pipeline",
+      "title": "Alinear TFG, TFM y doctorado con módulos del programa científico",
+      "domain": "Docencia + investigación",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "media",
+      "why": "La tutela genera evidencia docente y, bien diseñada, forma personas y crea componentes reproducibles sin convertir al estudiante en mano de obra del proyecto.",
+      "deliverable": "Banco de proyectos escalonados con pregunta formativa, datos de partida, alcance, supervisor, resultado docente y posible continuidad investigadora.",
+      "stop": "No asignar una tarea crítica de proyecto a un TFG/TFM sin alternativa ni separar evaluación académica de necesidades del grupo.",
+      "sourceIds": ["personal-teaching", "aneca-teaching", "aneca-leadership"]
+    },
+    {
+      "id": "teaching-reuse",
+      "title": "Convertir una mejora docente real en evidencia abierta y medible",
+      "domain": "Docencia",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "media",
+      "why": "Un recurso abierto aplicado y evaluado puede reforzar calidad, innovación y materiales docentes; acumular cursos sin aplicación tiene poco retorno.",
+      "deliverable": "Un módulo abierto vinculado a GIET/GIEI/GIT/MUIE, con licencia, actividad, evidencia de uso y mejora observada.",
+      "stop": "No crear recursos decorativos sin integración en guía docente, evaluación o evidencia de aprendizaje.",
+      "sourceIds": ["personal-teaching", "aneca-teaching"]
+    },
+    {
+      "id": "protect-transfer",
+      "title": "Evaluar protección y transferencia antes de cada divulgación relevante",
+      "domain": "Transferencia",
+      "kind": "flywheel",
+      "trigger": "always",
+      "effort": "baja",
+      "why": "Una decisión temprana conserva opciones de patente, contrato, prueba de concepto o spin-off sin obligar a patentar todo.",
+      "deliverable": "Decisión fechada publicar/proteger/secreto con titularidad, inventores, financiación y siguiente hito.",
+      "stop": "No retrasar indefinidamente una publicación por una patente sin interés, titularidad o plan de explotación plausibles.",
+      "sourceIds": ["aneca-research", "uv-transfer"]
+    },
+    {
+      "id": "bounded-management",
+      "title": "Aceptar solo gestión acotada y con resultado visible",
+      "domain": "Gestión",
+      "kind": "later",
+      "trigger": "leadership-later",
+      "effort": "alta",
+      "why": "La acreditación a PTU no exige el bloque de liderazgo; para CU sí cuentan dirección, equipos, tesis y gestión con impacto.",
+      "deliverable": "Mandato con duración, horas, autoridad, cambio concreto, indicador de resultado y fecha de salida.",
+      "stop": "Rechazar gestión indefinida, sin autoridad o que desplace el trabajo que desbloquea PTU, sexenio o financiación.",
+      "sourceIds": ["aneca-leadership"]
+    }
+  ],
+  "deferByDefault": [
+    "Cursos y certificados sin aplicación posterior demostrable.",
+    "Congresos sin contribución, reunión estratégica o resultado de colaboración definido.",
+    "Comisiones y gestión rutinaria sin autoridad, duración ni resultado acreditable.",
+    "Revisiones, capítulos o divulgación dispersa que no refuercen el perfil ni una relación estratégica.",
+    "Nuevas líneas científicas que no compartan plataforma, pregunta, datos, financiación o narrativa con el núcleo actual.",
+    "Solicitudes de financiación sin hito financiable, elegibilidad confirmada o capacidad real de ejecución."
+  ],
+  "sources": [
+    { "id": "uv-profile", "label": "UV · ficha oficial de Jorge Parra", "url": "https://www.uv.es/uvweb/universitat/ca/fitxa-persona-1285950309813.html?p2=jorpago2" },
+    { "id": "personal-research", "label": "Jorge Parra · investigación y publicaciones", "url": "https://www.uv.es/jorpago2/research/" },
+    { "id": "personal-teaching", "label": "Jorge Parra · docencia y recursos", "url": "https://www.uv.es/jorpago2/teaching/" },
+    { "id": "rd678", "label": "BOE · Real Decreto 678/2023", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-19027" },
+    { "id": "aneca-overview", "label": "ANECA · suficiencia y criterios ACADEMIA", "url": "https://ayuda.aneca.es/hc/es/articles/21627871603868-Informaci%C3%B3n-sobre-los-criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-requeridos-para-obtener-la-acreditaci%C3%B3n-estatal-para-el-acceso-a-los-cuerpos-docentes-universitarios" },
+    { "id": "aneca-manual-2026", "label": "ANECA · manual de puntuación de las comisiones ACADEMIA, julio de 2026", "url": "https://www.aneca.es/documents/d/guest/2026-doc-instrucciones-comisiones-acreditacion-rd6782023-pdf" },
+    { "id": "aneca-research", "label": "ANECA · criterios de investigación y transferencia", "url": "https://ayuda.aneca.es/hc/es/articles/21629372377756-1-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-de-investigaci%C3%B3n-transferencia-e-intercambio-del-conocimiento" },
+    { "id": "aneca-teaching", "label": "ANECA · criterios de docencia", "url": "https://ayuda.aneca.es/hc/es/articles/21629475619996-2-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencia-de-docencia" },
+    { "id": "aneca-leadership", "label": "ANECA · criterios de liderazgo para CU", "url": "https://ayuda.aneca.es/hc/es/articles/21629887575964-3-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-de-liderazgo" },
+    { "id": "aneca-mobility", "label": "ANECA · comprobación de los nueve meses", "url": "https://ayuda.aneca.es/hc/es/articles/21625767709596-5-Comprobaci%C3%B3n-del-requisito-exigido-por-el-art%C3%ADculo-4-3-para-la-acreditaci%C3%B3n-a-Titular-Universitario" },
+    { "id": "cneai-2025", "label": "ANECA/CNEAI · criterios de sexenios 2025", "url": "https://www.aneca.es/web/guest/criterios-de-evaluaci%C3%B3n-convocatoria-de-sexenios-de-investigaci%C3%B3n-2025" },
+    { "id": "uv-career-2026", "label": "UV · ACGUV 36/2026, carrera docente 2026–2027", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html" },
+    { "id": "uv-promotion-page", "label": "UV · promoción del profesorado 2026–2027", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/login/otras-convocatorias/promocion/promocion-profesorado-1285931619776.html" },
+    { "id": "uv-pdi-regulations", "label": "UV · normativa específica del PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html" },
+    { "id": "uv-research-programme", "label": "UV · programa propio de ayudas a la investigación", "url": "https://www.uv.es/uvweb/universidad/es/investigacion-transferencia/financiacion/programa-ayudas-investigacion-uv/introduccion-1285946452436.html" },
+    { "id": "funding-guide", "label": "Guía personal · explorador de financiación", "url": "https://jorpago2.github.io/uv-administracion/financiacion/" },
+    { "id": "uv-transfer", "label": "UV · Servicio de Transferencia e Innovación", "url": "https://www.uv.es/uvweb/servicio-investigacion/es/servicio-transferencia-innovacion-1285906393707.html" }
+  ]
+}

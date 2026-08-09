@@ -10,6 +10,8 @@ const auditHtml = await readFile(new URL("../auditoria/index.html", import.meta.
 const glossaryHtml = await readFile(new URL("../glosario/index.html", import.meta.url), "utf8");
 const manualHtml = await readFile(new URL("../manual/index.html", import.meta.url), "utf8");
 const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "utf8");
+const careerPlanHtml = await readFile(new URL("../plan-carrera/index.html", import.meta.url), "utf8");
+const careerPlanPage = await readFile(new URL("../career-roadmap-page.js", import.meta.url), "utf8");
 const researchArea = await readFile(new URL("../investigacion/index.html", import.meta.url), "utf8");
 const manualPage = await readFile(new URL("../manual-page.js", import.meta.url), "utf8");
 const resolverPage = await readFile(new URL("../resolver-page.js", import.meta.url), "utf8");
@@ -48,8 +50,20 @@ test("la portada prioriza buscar, actuar y explorar antes de la consulta", () =>
   assert.ok(searchIndex < personalNoticeIndex, "la búsqueda debe estar antes del aviso extenso en móvil");
   assert.match(html, /<dt>Situaciones<\/dt><dd>105<\/dd>/);
   assert.match(html, /href="resolver\/"/);
+  assert.match(html, /href="plan-carrera\/"/);
   for (const route of ["administracion", "docencia", "carrera-pdi", "investigacion", "gestion", "cumplimiento"]) assert.match(html, new RegExp(`href="${route}/"`));
   assert.match(html, /href="consulta\.html"/);
+});
+
+test("la carrera PDI incluye un plan personal sin presentar hipótesis como hechos", () => {
+  const pdiCategory = CATEGORIES.find((category) => category.id === "pdi");
+  assert.ok(pdiCategory.tools.some((tool) => tool.href === "../plan-carrera/"));
+  assert.match(careerPlanHtml, /id="careerProfileForm"/);
+  assert.match(careerPlanHtml, /id="careerRoadmap"/);
+  assert.match(careerPlanHtml, /id="opportunityForm"/);
+  assert.match(careerPlanHtml, /No garantiza acreditación, plaza o promoción/);
+  assert.match(careerPlanPage, /localStorage/);
+  assert.match(careerPlanPage, /exportCareerRoadmapMarkdown/);
 });
 
 test("las 105 situaciones tienen una subweb principal y buscable", () => {

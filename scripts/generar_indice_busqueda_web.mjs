@@ -108,6 +108,7 @@ for (const gap of contentAudit.missingCases) {
 }
 
 entries.push(
+  route("Plan personal", "Trazar mi hoja de ruta de carrera", "Diagnóstico PTU, prioridades 30/90/365, tiempo y filtro de oportunidades", "carrera profesional circulo virtuoso acreditacion PTU titular ANECA promocion C1 sexenio prioridades plan estrategia Jorge Parra", "plan-carrera/", 13),
   route("Auditoría", contentAudit.title, "Cobertura, pertinencia, fuentes y casos pendientes", `${contentAudit.scope} control calidad casos genericos incompletos mapa institucional`, "auditoria/", 11),
   route("Perfil", personalResearchContext.title, "ICMUV · UMDO+ · ciclo completo de dispositivos", `${personalResearchContext.summary} ${personalResearchContext.themes.map((theme) => theme.label).join(" ")} ${personalResearchContext.stages.map((stage) => stage.label).join(" ")}`, "investigacion/#researchProfile", 11),
   route("Herramienta", "Comprar mediante SDA", "Suministros homologados, pedido y unidad gestora", "SDA lente thorlabs material laboratorio proveedor compra", "herramientas/#calculadora-compras", 10),

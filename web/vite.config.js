@@ -15,6 +15,7 @@ export default defineConfig({
         docencia: fileURLToPath(new URL("./docencia/index.html", import.meta.url)),
         programas: fileURLToPath(new URL("./programas/index.html", import.meta.url)),
         carreraPdi: fileURLToPath(new URL("./carrera-pdi/index.html", import.meta.url)),
+        planCarrera: fileURLToPath(new URL("./plan-carrera/index.html", import.meta.url)),
         investigacion: fileURLToPath(new URL("./investigacion/index.html", import.meta.url)),
         gestion: fileURLToPath(new URL("./gestion/index.html", import.meta.url)),
         cumplimiento: fileURLToPath(new URL("./cumplimiento/index.html", import.meta.url)),

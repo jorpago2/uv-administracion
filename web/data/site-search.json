@@ -1,5 +1,13 @@
 [
   {
+    "kind": "Plan personal",
+    "title": "Trazar mi hoja de ruta de carrera",
+    "context": "Diagnóstico PTU, prioridades 30/90/365, tiempo y filtro de oportunidades",
+    "keywords": "carrera profesional circulo virtuoso acreditacion PTU titular ANECA promocion C1 sexenio prioridades plan estrategia Jorge Parra",
+    "href": "plan-carrera/",
+    "priority": 13
+  },
+  {
     "kind": "Auditoría",
     "title": "Auditoría de pertinencia de las 105 situaciones",
     "context": "Cobertura, pertinencia, fuentes y casos pendientes",

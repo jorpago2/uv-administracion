@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Hoja de ruta personal e interactiva para priorizar acreditación, investigación, docencia, financiación y gestión en la carrera académica de Jorge Parra.">
+  <meta name="theme-color" content="#f5d328">
+  <title>Plan personal de carrera · Guía operativa UV</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../hub.css">
+  <link rel="stylesheet" href="../career-roadmap.css">
+  <script type="module" src="../career-roadmap-page.js"></script>
+</head>
+<body data-root="../" data-page="plan-carrera">
+  <a class="hub-skip" href="#contenido">Saltar al contenido</a>
+  <site-header></site-header>
+  <main class="career-main" id="contenido">
+    <section class="career-hero" aria-labelledby="pageTitle">
+      <div>
+        <p class="hub-kicker">Plan personal · decisión basada en evidencia</p>
+        <h1 id="pageTitle">Cerrar puertas. Crear impulso.</h1>
+        <p class="career-hero__lead">Una hoja de ruta para que acreditación, sexenio, financiación, personas, resultados y promoción se refuercen entre sí, sin dispersar el tiempo en méritos de bajo retorno.</p>
+      </div>
+      <div class="career-thesis">
+        <strong>Hipótesis de trabajo</strong>
+        <p>Tu trayectoria pública sugiere que puedes estar más cerca de la acreditación a PTU de lo que indica tu categoría. Antes de producir más, hay que demostrar lo ya hecho y localizar el hueco real.</p>
+      </div>
+    </section>
+
+    <aside class="career-disclaimer" aria-label="Límites de la herramienta">
+      <strong>Uso exclusivamente personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a>.</strong>
+      <p>No es asesoramiento ni una evaluación oficial. No garantiza acreditación, plaza o promoción; puede contener errores y quedar desactualizada. Las fuentes y convocatorias vigentes prevalecen.</p>
+    </aside>
+
+    <nav class="career-jump" aria-label="Contenido del plan">
+      <a href="#diagnostico">01 Diagnóstico</a>
+      <a href="#prioridades">02 Prioridades</a>
+      <a href="#ruta">03 Hoja de ruta</a>
+      <a href="#decidir">04 Decidir</a>
+      <a href="#evidencia">05 Evidencia</a>
+    </nav>
+
+    <section class="career-section career-diagnosis" id="diagnostico" aria-labelledby="diagnosisTitle">
+      <div class="career-section__head">
+        <p class="hub-kicker">01 · No inventar lo desconocido</p>
+        <h2 id="diagnosisTitle">Diagnóstico personal</h2>
+        <p>Los valores iniciales solo reflejan información pública. Corrige lo que sepas; los cambios se guardan únicamente en este navegador.</p>
+      </div>
+      <form class="career-form" id="careerProfileForm">
+        <fieldset>
+          <legend>Situación contractual</legend>
+          <div class="career-known-field"><span>Categoría actual</span><strong>Profesor Ayudante Doctor</strong><small>Dato público UV desde 2025; revisar cuando cambie la situación.</small><input name="category" type="hidden" value="ayudante-doctor"></div>
+          <label>Fecha final del contrato actual <small>Déjala vacía si no la has comprobado.</small>
+            <input name="contractEnd" type="date">
+          </label>
+          <label>Estado de acreditación PTU
+            <select name="accreditation">
+              <option value="not-started">No iniciada</option>
+              <option value="preparing">Preparando expediente</option>
+              <option value="submitted">Presentada</option>
+              <option value="favorable">Favorable</option>
+            </select>
+          </label>
+          <label>C1 de valenciano reconocido
+            <select name="c1">
+              <option value="unknown">No comprobado</option>
+              <option value="no">No lo tengo</option>
+              <option value="yes">Sí, consta en UV</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Puertas ANECA</legend>
+          <label>9 meses fuera de la universidad de la tesis
+            <select name="mobility">
+              <option value="likely">Probable por contrato UV; sin certificado específico</option>
+              <option value="certified">Certificado y listo para aportar</option>
+              <option value="incomplete">Periodo insuficiente</option>
+              <option value="exempt">Exención formal aplicable</option>
+              <option value="unknown">No analizado</option>
+            </select>
+          </label>
+          <label>Docencia mínima PTU
+            <select name="teaching">
+              <option value="likely">Probable por trayectoria; sin cálculo/certificado cerrado</option>
+              <option value="certified">Mínimo calculado y certificado</option>
+              <option value="quinquennium">Quinquenio evaluado positivamente</option>
+              <option value="below">Por debajo del mínimo aplicable</option>
+              <option value="unknown">No analizada</option>
+            </select>
+          </label>
+          <label>Investigación y transferencia PTU
+            <select name="research">
+              <option value="portfolio">Cartera pública sólida; puntos no auditados</option>
+              <option value="sexennium">Sexenio reconocido</option>
+              <option value="developing">Cartera todavía insuficiente</option>
+              <option value="unknown">No auditada</option>
+            </select>
+          </label>
+          <label>Sexenios reconocidos
+            <input name="sexennia" type="number" min="0" max="6" step="1" value="0">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Círculo virtuoso</legend>
+          <label>Mayor papel en proyectos competitivos
+            <select name="projectRole">
+              <option value="member">Miembro de equipo</option>
+              <option value="ip">IP o co-IP</option>
+              <option value="none">Sin participación</option>
+            </select>
+          </label>
+          <label>Tesis defendidas dirigidas o codirigidas
+            <input name="defendedTheses" type="number" min="0" max="20" step="1" value="0">
+          </label>
+          <label>Horas semanales realmente disponibles <small>Fuera de docencia, reuniones y obligaciones.</small>
+            <input name="weeklyHours" type="number" min="1" max="30" step="0.5" value="6">
+          </label>
+          <div class="career-form__actions">
+            <button class="hub-button hub-button--primary" type="submit">Actualizar plan</button>
+            <button class="hub-button" id="careerReset" type="button">Restablecer</button>
+          </div>
+        </fieldset>
+      </form>
+      <div class="career-result" id="careerResult" aria-live="polite"></div>
+    </section>
+
+    <section class="career-section" id="prioridades" aria-labelledby="prioritiesTitle">
+      <div class="career-section__head">
+        <p class="hub-kicker">02 · Orden de ejecución</p>
+        <h2 id="prioritiesTitle">Qué hacer primero</h2>
+        <p>Una puerta binaria incumplida tiene prioridad sobre otro mérito incremental. Después se buscan resultados que alimenten varios bloques a la vez.</p>
+      </div>
+      <ol class="career-priorities" id="careerPriorities"></ol>
+      <details class="career-defer">
+        <summary>Lista de “no por defecto”</summary>
+        <p>No significa “nunca”; exige justificar qué puerta cierra o qué activo produce.</p>
+        <ul id="careerDeferList"></ul>
+      </details>
+    </section>
+
+    <section class="career-section" id="ruta" aria-labelledby="roadmapTitle">
+      <div class="career-section__head">
+        <p class="hub-kicker">03 · Del expediente al sistema</p>
+        <h2 id="roadmapTitle">Hoja de ruta 30 / 90 / 365</h2>
+      </div>
+      <div class="career-roadmap" id="careerRoadmap"></div>
+      <div class="career-week">
+        <div>
+          <h3>Presupuesto semanal de atención</h3>
+          <p>Reparto sugerido de las horas discrecionales que has indicado. No incluye las obligaciones docentes ya asignadas.</p>
+        </div>
+        <div id="careerWeek"></div>
+      </div>
+      <button class="hub-button" id="careerExport" type="button">Descargar mi plan en Markdown</button>
+    </section>
+
+    <section class="career-section" id="decidir" aria-labelledby="decisionTitle">
+      <div class="career-section__head">
+        <p class="hub-kicker">04 · Proteger el foco</p>
+        <h2 id="decisionTitle">¿Acepto esta oportunidad?</h2>
+        <p>Heurística personal, no baremo oficial. Puntúa el retorno estratégico frente al tiempo, recurrencia y coste de oportunidad.</p>
+      </div>
+      <form class="opportunity-form" id="opportunityForm">
+        <div class="opportunity-checks">
+          <label><input type="checkbox" name="gate"> Cierra una puerta de acreditación/promoción</label>
+          <label><input type="checkbox" name="reusable"> Sirve para dos o más objetivos</label>
+          <label><input type="checkbox" name="concreteOutput"> Deja un resultado verificable</label>
+          <label><input type="checkbox" name="fundingOrNetwork"> Aporta financiación o una relación estratégica</label>
+          <label><input type="checkbox" name="leadership"> Demuestra independencia o liderazgo</label>
+          <label><input type="checkbox" name="displacesCore"> Desplaza una prioridad crítica</label>
+          <label><input type="checkbox" name="recurring"> Crea carga recurrente o indefinida</label>
+        </div>
+        <label class="opportunity-hours">Horas totales estimadas
+          <input name="hours" type="number" min="0" max="80" step="1" value="8">
+        </label>
+      </form>
+      <div class="opportunity-result" id="opportunityResult" aria-live="polite"></div>
+    </section>
+
+    <section class="career-section" id="evidencia" aria-labelledby="evidenceTitle">
+      <div class="career-section__head">
+        <p class="hub-kicker">05 · Hechos, hipótesis y fuentes</p>
+        <h2 id="evidenceTitle">Base informativa</h2>
+        <p>“Público” significa localizado en una fuente enlazada; “verificar” significa que debe confirmarse con un certificado o expediente antes de usarlo.</p>
+      </div>
+      <div class="career-facts" id="careerFacts"></div>
+      <h3 class="career-sources-title">Fuentes oficiales y contexto personal</h3>
+      <ul class="career-sources" id="careerSources"></ul>
+      <p class="career-reviewed" id="careerReviewed"></p>
+    </section>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>

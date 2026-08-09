@@ -33,6 +33,7 @@ export const CATEGORIES = Object.freeze([
     sections: [16, 17, 18, 19],
     featuredSections: [16, 17, 18],
     tools: [
+      ["Trazar hoja de ruta personal", "../plan-carrera/"],
       ["Calcular salario bruto", "#calculadora-retributiva"],
       ["Revisar dedicación POD", "#calculadora-pod"],
       ["Resolver un trámite PDI", "#asistente-tramites"]
