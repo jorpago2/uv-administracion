@@ -35,7 +35,8 @@ test("la portada prioriza tareas, alertas y ambitos antes de las herramientas", 
 
 test("la portada identifica el uso personal y el caracter no oficial", () => {
   assert.match(html, /class="personal-use-notice"/);
-  assert.match(html, /uso personal de Jorge Parra/i);
+  assert.match(html, /uso personal de <a href="https:\/\/www\.uv\.es\/jorpago2">Jorge Parra<\/a>/i);
+  assert.equal((html.match(/href="https:\/\/www\.uv\.es\/jorpago2">Jorge Parra<\/a>/g) ?? []).length, 3);
   assert.match(html, /No constituye asesoramiento, recomendación, instrucción administrativa ni interpretación oficial/);
   assert.match(html, /Puede contener errores, omisiones o información incompleta o desactualizada/);
   assert.match(html, /verifica siempre la norma, convocatoria, sede, plazo y criterio vigentes/);
