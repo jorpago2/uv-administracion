@@ -7,5 +7,14 @@
     "nav": "N3 Side-rail",
     "footer": "Ft4 Dense colophon",
     "brief": "Guía operativa UV para PDI de ETSE, DIE e ICMUV"
+  },
+  {
+    "date": "2026-08-09",
+    "macrostructure": "Workbench",
+    "theme": "Brutal",
+    "enrichment": "none",
+    "nav": "N7 Brutal slab",
+    "footer": "Ft2 Inline rule",
+    "brief": "Arquitectura multipágina de la guía operativa UV"
   }
 ]

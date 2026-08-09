@@ -55,6 +55,15 @@ export function initProjectBudget(root) {
   });
   elements.download.addEventListener("click", () => downloadBudget(elements));
   window.addEventListener("funding:budget-preset", (event) => applyFundingPreset(elements, event.detail));
+  applyStoredFundingPreset(elements);
+}
+
+function applyStoredFundingPreset(elements) {
+  let rawPreset;
+  try { rawPreset = sessionStorage.getItem("funding:budget-preset"); } catch { return; }
+  if (!rawPreset) return;
+  try { sessionStorage.removeItem("funding:budget-preset"); } catch { /* La lectura ya se ha completado. */ }
+  try { applyFundingPreset(elements, JSON.parse(rawPreset)); } catch { /* Un preajuste inválido no debe bloquear la calculadora. */ }
 }
 
 function applyFundingPreset(elements, preset) {

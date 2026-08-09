@@ -1,0 +1,2122 @@
+[
+  {
+    "kind": "Glosario",
+    "title": "Caja fija",
+    "context": "Anticipo, pago y justificación",
+    "keywords": "adelantar dinero efectivo reintegro",
+    "href": "glosario/?q=caja%20fija",
+    "priority": 10
+  },
+  {
+    "kind": "Herramienta",
+    "title": "Calcular salario bruto",
+    "context": "Categoría, trienios, quinquenios, sexenios y complementos",
+    "keywords": "nomina retribucion sueldo salario",
+    "href": "herramientas/#calculadora-retributiva",
+    "priority": 10
+  },
+  {
+    "kind": "Herramienta",
+    "title": "Comprar mediante SDA",
+    "context": "Suministros homologados, pedido y unidad gestora",
+    "keywords": "SDA lente thorlabs material laboratorio proveedor compra",
+    "href": "herramientas/#calculadora-compras",
+    "priority": 10
+  },
+  {
+    "kind": "Área",
+    "title": "Crear una spin-off",
+    "context": "Investigación y transferencia",
+    "keywords": "empresa derivada compatibilidad participacion",
+    "href": "investigacion/#capitulo-27",
+    "priority": 10
+  },
+  {
+    "kind": "Área",
+    "title": "Patentes y protección de resultados",
+    "context": "Investigación y transferencia",
+    "keywords": "invencion propiedad industrial secreto software divulgar",
+    "href": "investigacion/#capitulo-24",
+    "priority": 10
+  },
+  {
+    "kind": "Herramienta",
+    "title": "Planificar viaje o congreso",
+    "context": "Autorización, inscripción, transporte, alojamiento, caja fija y reintegro",
+    "keywords": "dieta billete hotel congreso quien paga viaje",
+    "href": "herramientas/#calculadora-viajes",
+    "priority": 10
+  },
+  {
+    "kind": "Situación",
+    "title": "Abrir una notificación y responder una subsanación",
+    "context": "Recibes un aviso de notificación o un requerimiento que pide corregir documentos dentro de un plazo.",
+    "keywords": "notificación subsanación días hábiles requerimiento plazo",
+    "href": "example.html?caso=notificacion-y-subsanacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Abstenerte por un conflicto de interés",
+    "context": "Debes evaluar, contratar, seleccionar o decidir sobre una persona o entidad con la que tienes relación personal, científica, económica o competitiva.",
+    "keywords": "conflicto de interés abstención recusación DACI familiar colaborador competidor Presidencia u órgano responsable del procedimiento; UVintegritat o asesoría cuando sea dudoso o sensible Declaración escrita y registro o acta oficial, con DACI si el procedimiento la exige",
+    "href": "example.html?caso=abstenerse-conflicto-interes",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Aceptar un regalo, comida o invitación de un proveedor",
+    "context": "Una empresa que vende, financia o colabora con tu grupo ofrece un obsequio, viaje, comida, entrada o actividad que podría influir o parecer que influye en tus decisiones.",
+    "keywords": "regalo proveedor comida empresa invitación viaje hospitality obsequio entrada VIP compliance Responsable de la estructura o procedimiento; unidad económica/contratación y UVintegritat si existe duda Rechazo o declaración escrita y registro en el expediente afectado cuando proceda",
+    "href": "example.html?caso=aceptar-regalo-invitacion-proveedor",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Aceptar una consultoría o actividad privada compatible",
+    "context": "Una empresa ofrece asesoramiento, cargo o colaboración remunerada relacionada con tu especialidad o proyectos UV.",
+    "keywords": "consultoría compatibilidad segunda actividad empresa conflicto interés abstención",
+    "href": "example.html?caso=consultoria-incompatibilidad",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Aceptar una donación, cesión gratuita o patrocinio",
+    "context": "Una empresa ofrece equipo, dinero, licencias o muestras sin precio aparente y pide visibilidad, acceso, datos, pruebas o una relación continuada.",
+    "keywords": "donación cesión gratuita comodato patrocinio equipo regalado sponsorship mecenazgo Gerencia o unidad patrimonial/económica, estructura receptora; STI, Marketing, asesoría o contratación según condiciones Acuerdo institucional de donación, cesión, patrocinio o contrato y alta patrimonial",
+    "href": "example.html?caso=aceptar-donacion-cesion-patrocinio",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Acoger a un profesor o investigador visitante",
+    "context": "Una persona externa realizará una estancia en el DIE o ICMUV y necesita autorización, seguro, carta, accesos y prevención antes de entrar en instalaciones.",
+    "keywords": "visitante investigador invitado carta invitación seguro personal no vinculado estancia Dirección de departamento, centro o instituto anfitrión; RR. HH. PDI y responsables de espacios Solicitud de autorización de estancia, carta posterior y peticiones nominativas de acceso",
+    "href": "example.html?caso=acoger-pdi-investigador-visitante",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actualizar datos personales, bancarios o de IRPF",
+    "context": "Necesitas cambiar la cuenta de nómina, domicilio, datos personales o retención de IRPF y quieres comprobar que la modificación produce efecto.",
+    "keywords": "cuenta bancaria nómina IRPF modelo 145 domicilio Portal del Empleado Portal del Empleado y Servicio de RR. HH. PDI; unidad de nóminas cuando el efecto sea económico Trámite específico del Portal del Empleado y consulta a servei.pdi@uv.es si no aparece o no cambia de estado",
+    "href": "example.html?caso=datos-personales-bancarios-irpf",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actuar ante acoso o discriminación",
+    "context": "Recibes o conoces mensajes, conductas, amenazas, aislamiento o represalias potencialmente discriminatorias en docencia o investigación.",
+    "keywords": "acoso discriminación igualdad represalias violencia Unidad Igualdad",
+    "href": "example.html?caso=acoso-discriminacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actuar ante conducta disruptiva, amenaza o agresión en clase",
+    "context": "Una conducta impide desarrollar la docencia o genera miedo y necesitas proteger, documentar y activar el cauce apropiado sin escalar innecesariamente.",
+    "keywords": "conducta disruptiva amenaza aula agresión expulsar estudiante convivencia seguridad Dirección de la ETSE y departamento; seguridad o emergencias; Comisión de Convivencia o unidad especializada según hechos Comunicación factual y confidencial al órgano competente, con emergencia por 112 cuando proceda",
+    "href": "example.html?caso=conducta-disruptiva-amenaza-aula",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actuar ante copia, plagio o uso no autorizado de IA",
+    "context": "Detectas indicios en un examen, memoria, código o TFG/TFM y necesitas preservar evidencias y aplicar las reglas sin prejuzgar.",
+    "keywords": "copia plagio fraude académico IA ChatGPT Turnitin Profesorado responsable y, cuando exceda la calificación ordinaria, coordinación, ETSE o comisión académica competente Expediente de evaluación, audiencia o procedimiento institucional; nunca exposición en canales del grupo",
+    "href": "example.html?caso=copia-plagio-ia",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actuar ante un accidente laboral o in itinere",
+    "context": "Sufres un accidente en el trabajo o durante el desplazamiento y necesitas atención, comunicación y declaración correcta según seas PDI laboral o funcionario.",
+    "keywords": "accidente trabajo in itinere acto de servicio UMIVALE MUFACE parte accidente Emergencias, UMIVALE o MUFACE según vínculo, RR. HH. PDI y Servicio de Prevención Atención urgente y modelos UV de declaración enviados a RR. HH. PDI",
+    "href": "example.html?caso=accidente-laboral-in-itinere",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Actuar ante un fallo técnico durante un examen",
+    "context": "Durante una prueba falla Aula Virtual, la red, la electricidad, el software o varios ordenadores y las personas afectadas no están en igualdad.",
+    "keywords": "fallo examen Aula Virtual caída ordenador averiado corte luz incidencia técnica cuestionario Profesorado responsable y coordinación; SIUV o soporte del aula; ETSE si afecta a espacio o convocatoria Incidencia SIUV con datos técnicos y acta académica comunicada individualmente o al grupo",
+    "href": "example.html?caso=fallo-tecnico-durante-examen",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Aplicar una adaptación por discapacidad",
+    "context": "Recibes un informe técnico que exige adaptar tiempo, formato, espacio, tecnología o comunicación en una actividad docente.",
+    "keywords": "UVdiscapacidad adaptación necesidades específicas examen accesible",
+    "href": "example.html?caso=adaptacion-discapacidad",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Atender a un estudiante con malestar psicológico",
+    "context": "Durante una tutoría observas malestar intenso, una petición de ayuda o posible riesgo y necesitas actuar sin asumir funciones sanitarias.",
+    "keywords": "salud mental crisis tutoría asesoría psicológica SEDI",
+    "href": "example.html?caso=malestar-estudiante",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Cambiar de IP, socio o institución en un proyecto",
+    "context": "El IP se traslada, una entidad abandona, cambia el equipo o se pretende transferir parte del proyecto y hay tareas, personal, equipos y resultados en curso.",
+    "keywords": "cambio IP cambio socio transferir proyecto amendment baja beneficiario traslado investigador Servicio de Investigación o STI, financiador, RR. HH., gestión económica y Transferencia según efectos Solicitud institucional al financiador o portal de gestión y acuerdos internos de entrega",
+    "href": "example.html?caso=cambiar-ip-socio-institucion-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Cambiar horario, aula, laboratorio o fecha de examen",
+    "context": "Surge una incompatibilidad o incidencia y quieres mover una actividad sin perjudicar derechos, reservas ni coordinación del curso.",
+    "keywords": "cambio horario reserva aula laboratorio fecha examen calendario Coordinación de asignatura y titulación, DIE y secretaría ETSE según calendario y espacio Solicitud institucional de cambio o reserva y comunicación posterior por Aula Virtual y canales oficiales",
+    "href": "example.html?caso=cambiar-horario-aula-examen",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Comercializar software con dependencias de código abierto",
+    "context": "Un prototipo incorpora paquetes open source, contribuciones de estudiantes y código de proyectos y se quiere licenciar a una empresa o spin-off.",
+    "keywords": "software comercial open source GPL MIT dependencias SBOM doble licencia STI UV y responsables del software; SIUV o asesoría técnica para seguridad y dependencias Comunicación de resultado, auditoría de licencias y contrato o licencia institucional",
+    "href": "example.html?caso=comercializar-software-open-source",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Completar mi incorporación inicial como PDI",
+    "context": "Acabas de tomar posesión o firmar el contrato y necesitas activar identidad UV, correo, tarjeta, VPN, espacios, prevención y accesos del DIE, la ETSE y el ICMUV sin asumir que todo se crea automáticamente.",
+    "keywords": "nuevo PDI primer día alta cuenta UV correo tarjeta VPN llaves acceso laboratorio RR. HH. PDI para la vinculación; SIUV para identidad digital; DIE, ETSE e ICMUV para espacios y funciones locales; Prevención para riesgos Portal del Empleado, gestión de cuentas UV, solicitudes SIUV y petición escrita a cada responsable local",
+    "href": "example.html?caso=incorporacion-inicial",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Comprar a un proveedor exclusivo",
+    "context": "Solo el fabricante o distribuidor autorizado ofrece una pieza compatible y no puedes obtener tres ofertas equivalentes.",
+    "keywords": "exclusividad proveedor único compatibilidad sonda distribuidor",
+    "href": "example.html?caso=proveedor-exclusivo",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Comprar una lente Thorlabs mediante SDA",
+    "context": "Necesitas una referencia concreta de lente, filtro, fibra o montura incluida en el catálogo de material de laboratorio y quieres tramitarla con cargo a una clave UV.",
+    "keywords": "Thorlabs lente SDA catálogo material laboratorio centro de coste",
+    "href": "example.html?caso=comprar-lente-sda",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Comprobar elegibilidad en una convocatoria recurrente",
+    "context": "Quieres saber si persona, grupo, UV, consorcio, fecha de doctorado, movilidad o resultado previo cumplen una edición concreta.",
+    "keywords": "elegibilidad ERC MSCA Pathfinder AICO PROMETEO PDC",
+    "href": "example.html?caso=comprobar-elegibilidad",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Comunicar una brecha de datos o incidente",
+    "context": "Envías notas al grupo equivocado, publicas un enlace abierto, pierdes un dispositivo o detectas acceso indebido a datos.",
+    "keywords": "brecha datos personales correo equivocado enlace público DPD incidente",
+    "href": "example.html?caso=brecha-datos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Construir el presupuesto completo de un proyecto",
+    "context": "Debes presupuestar personal, equipos, viajes, consumibles, IVA, indirectos, cofinanciación y anualidades sin confundir coste con ayuda solicitada.",
+    "keywords": "presupuesto coste personal IVA indirectos cofinanciación anualidades",
+    "href": "example.html?caso=presupuesto-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Contratar personal con cargo a un proyecto",
+    "context": "Necesitas incorporar personal investigador o técnico y debes encajar perfil, coste, duración, selección y fecha real de alta.",
+    "keywords": "contrato personal técnico predoctoral postdoctoral baremo",
+    "href": "example.html?caso=contratar-personal-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Coordinar una asignatura con varios profesores y grupos",
+    "context": "El equipo comparte asignatura pero existen diferencias en contenidos, evaluación, prácticas o comunicación que pueden afectar a la igualdad entre grupos.",
+    "keywords": "coordinación asignatura varios profesores grupos criterios comunes equipo docente Coordinación de asignatura y de titulación, departamento y ETSE cuando afecte a la programación Acta o documento compartido del equipo y cauce del centro para cambios que requieran aprobación",
+    "href": "example.html?caso=coordinar-asignatura-varios-profesores",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Corregir o retractar un artículo publicado",
+    "context": "Detectas un error en datos, análisis, figura, autoría o conclusiones y necesitas decidir si basta corrección o afecta a la fiabilidad del trabajo.",
+    "keywords": "erratum correction retraction retractar artículo error publicado expresión preocupación Autores y revista; responsables de integridad UV, financiador y repositorio según alcance Comunicación documentada al editor y cauce de integridad si existe posible mala conducta",
+    "href": "example.html?caso=corregir-retractar-articulo",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Corregir un POD u OCA incorrecto",
+    "context": "El borrador de POD no refleja correctamente categoría, horas, asignaturas, idioma, reducciones o responsabilidades.",
+    "keywords": "POD OCA horas docentes reducciones dedicación",
+    "href": "example.html?caso=corregir-pod-oca",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Crear una spin-off universitaria",
+    "context": "El equipo quiere comercializar tecnología desarrollada en la UV y combinar sociedad, licencia, participación, funciones y uso de instalaciones.",
+    "keywords": "spin-off startup empresa derivada licencia participación UV compatibilidad",
+    "href": "example.html?caso=crear-spin-off",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Cumplir las obligaciones de acceso abierto del financiador",
+    "context": "Un artículo está aceptado y debes elegir licencia, versión y repositorio y comprobar si existe acuerdo transformativo sin incumplir la ayuda.",
+    "keywords": "open access acceso abierto APC acuerdo transformativo RODERIC versión aceptada embargo Biblioteca UV y Servicio de Investigación; autor de correspondencia y financiador Flujo del editor, GREC/RODERIC y repositorio o portal exigido por la ayuda",
+    "href": "example.html?caso=cumplir-acceso-abierto-financiador",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Custodiar exámenes y evidencias de evaluación",
+    "context": "Debes conservar pruebas, entregas, rúbricas y revisiones y necesitas saber cómo organizarlas, controlar acceso y actuar si falta una evidencia.",
+    "keywords": "custodia exámenes guardar pruebas pérdida examen evidencia evaluación conservación Profesorado responsable y departamento; centro ante impugnación; DPD o SIUV ante pérdida o exposición Repositorio institucional autorizado e inventario de custodia; comunicación formal de incidentes",
+    "href": "example.html?caso=custodiar-examenes-evidencias",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Detectar una revista o congreso depredador",
+    "context": "Recibes una invitación halagadora con revisión rápida, indexación prometida y APC o inscripción urgente y quieres saber si es legítima.",
+    "keywords": "revista depredadora congreso depredador editorial fraudulenta APC sospechosa indexación falsa Biblioteca UV para evaluación de fuentes y equipo investigador para la decisión científica Consulta a La Bibliotec@ Respon y verificación independiente de cada afirmación",
+    "href": "example.html?caso=detectar-revista-congreso-depredador",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Documentar la calidad de mi docencia para promoción",
+    "context": "Quieres preparar DOCENTIA, un quinquenio o una acreditación y necesitas conservar evidencias útiles de docencia, coordinación, innovación y mejora.",
+    "keywords": "DOCENTIA calidad docente quinquenio autoinforme encuestas innovación docente promoción Unidad de Calidad para DOCENTIA; RR. HH. PDI para quinquenios; agencia en acreditación SysDocentia y trámites o convocatorias específicas de RR. HH. PDI o agencia",
+    "href": "example.html?caso=documentar-calidad-docencia",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Ejecutar correctamente un proyecto concedido",
+    "context": "Recibes la concesión y debes traducir resolución, presupuesto, hitos y obligaciones en reglas de trabajo para el equipo.",
+    "keywords": "proyecto concedido ejecución gasto elegible hitos clave",
+    "href": "example.html?caso=ejecutar-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Elegir el orden entre patente, preprint, congreso y tesis",
+    "context": "Tienes un resultado nuevo, una fecha de defensa o congreso próxima y dudas si depositar, enviar, presentar o comunicar primero la invención.",
+    "keywords": "patente antes publicar preprint congreso tesis novedad embargo Sección de Innovación y Valorización del STI, Escuela de Doctorado o centro y equipo autor Trámite de comunicación de resultado y coordinación escrita del calendario de divulgación",
+    "href": "example.html?caso=orden-patente-preprint-congreso-tesis",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Elegir entre recurso, queja, Sindicatura o denuncia",
+    "context": "Recibes una decisión desfavorable o conoces una actuación irregular y necesitas usar el canal que realmente puede producir el efecto buscado.",
+    "keywords": "recurso queja Sindicatura denuncia canal interno represalias resolución",
+    "href": "example.html?caso=elegir-recurso-queja-denuncia",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Elegir la convocatoria adecuada para una idea",
+    "context": "Tienes una idea, resultados preliminares y una necesidad de personal, equipo, red o demostrador, pero varias convocatorias parecen posibles.",
+    "keywords": "financiación convocatoria ERC Pathfinder PID AICO PROMETEO TRL",
+    "href": "example.html?caso=elegir-financiacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Enviar muestras, prototipos o tecnología al extranjero",
+    "context": "Debes enviar un chip, láser, material, código o documentación técnica fuera de España y pueden existir aduanas, mercancía peligrosa, sanciones o control de doble uso.",
+    "keywords": "exportación doble uso aduanas enviar muestras prototipo extranjero tecnología láser STI y gestión económica/aduanera UV; Ministerio de Economía para licencias; transportista autorizado y Prevención Expediente institucional de exportación, aduana y transferencia; nunca envío personal no declarado",
+    "href": "example.html?caso=enviar-tecnologia-muestras-extranjero",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Firmar un NDA, MTA o acuerdo de transferencia de datos",
+    "context": "Una empresa o grupo quiere intercambiar información, muestras, software o datos y envía un documento para firmar antes de una reunión o envío.",
+    "keywords": "NDA confidencialidad MTA DTA transferencia material data transfer agreement Servicio de Transferencia e Innovación; DPD, ética, bioseguridad o Prevención cuando proceda Negociación institucional y firma por representante autorizado antes del intercambio",
+    "href": "example.html?caso=firmar-nda-mta-dta",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Gestionar la finalización de un contrato temporal",
+    "context": "Tu contrato termina pronto y necesitas cerrar docencia, proyecto, vacaciones, accesos, certificados, liquidación y posible prestación sin perder información o responsabilidades.",
+    "keywords": "fin contrato cese finiquito liquidación certificado empresa desempleo vacaciones RR. HH. PDI, departamento, unidad económica o proyecto y Seguridad Social o SEPE cuando proceda Consulta y certificados de RR. HH.; acta de entrega interna y sedes externas para prestaciones",
+    "href": "example.html?caso=fin-contrato-temporal",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Gestionar un TFG o TFM confidencial o patentable",
+    "context": "El trabajo contiene información empresarial o un resultado potencialmente protegible y se aproxima el depósito o la defensa.",
+    "keywords": "TFM confidencial patente defensa no pública empresa anexo confidencialidad",
+    "href": "example.html?caso=tfg-tfm-confidencial",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Grabar una clase o intervención del alumnado",
+    "context": "Quieres grabar una sesión, presentación o práctica para docencia y aparecen imagen, voz, pantalla o datos del alumnado.",
+    "keywords": "grabar clase vídeo estudiantes derecho imagen consentimiento Zoom mUVie Profesorado y centro; DPD UV para la base y SIUV o servicio multimedia para la solución técnica Sistemas corporativos UV con información previa y permisos restringidos",
+    "href": "example.html?caso=grabar-clase-estudiantado",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Identificar qué unidad debe resolver mi asunto",
+    "context": "Tienes una necesidad que afecta a docencia, personal, investigación o presupuesto y no sabes si empezar por el DIE, la ETSE, el ICMUV o un servicio central.",
+    "keywords": "a quién pregunto unidad competente ETSE DIE ICMUV servicio central",
+    "href": "example.html?caso=identificar-unidad-competente",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Incorporarme a un consorcio antes de presentar una propuesta",
+    "context": "Un coordinador extranjero pide confirmar participación, presupuesto y tareas en pocos días y puede enviar cartas o compromisos para firma.",
+    "keywords": "consorcio europeo letter of commitment socio proyecto Horizon Europe presupuesto socio Sección de I+D+i Internacional del STI, IP UV y representantes institucionales autorizados Circuito UV de propuestas y Funding & Tenders Portal o plataforma de la convocatoria",
+    "href": "example.html?caso=incorporarse-consorcio-propuesta",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Instalar un láser o actuar ante un accidente de laboratorio",
+    "context": "Incorporas una estación láser o se produce exposición, derrame, descarga, incendio u otro accidente en el laboratorio.",
+    "keywords": "láser PRL accidente laboratorio emergencia EPI",
+    "href": "example.html?caso=laser-accidente-laboratorio",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Invitar a un profesional externo a una sesión docente",
+    "context": "Quieres que una persona de empresa o universidad imparta una charla, práctica o demostración y puede necesitar acceso, pago, viaje o uso de materiales.",
+    "keywords": "ponente externo clase invitada profesional empresa honorarios docente charla Coordinación de asignatura y departamento; unidad económica; ETSE para espacio y acceso Propuesta interna aprobada y encargo o invitación institucional antes de la actividad",
+    "href": "example.html?caso=invitar-profesional-sesion-docente",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Licenciar una patente o know-how a una empresa",
+    "context": "Una empresa quiere explotar un resultado UV y pide exclusividad, acceso al know-how, opción de licencia o condiciones económicas.",
+    "keywords": "licencia patente know-how exclusividad regalías royalties opción licencia Sección de Innovación y Valorización del STI, titulares y representante autorizado de la UV Negociación institucional bajo confidencialidad y contrato de licencia firmado",
+    "href": "example.html?caso=licenciar-patente-know-how-empresa",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Mostrar un prototipo a una empresa interesada",
+    "context": "Una empresa quiere ver un sensor o chip funcionando y pide una demo, muestras, medidas o acceso al laboratorio antes de decidir una colaboración.",
+    "keywords": "demo empresa mostrar prototipo prueba concepto visita laboratorio evaluación tecnología sample STI UV, responsable de laboratorio y Prevención; empresa bajo acuerdo institucional NDA/MTA, agenda y autorización nominativa de acceso o envío",
+    "href": "example.html?caso=mostrar-prototipo-empresa",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Negociar un acuerdo de consorcio tras concederse un proyecto",
+    "context": "El proyecto europeo ha sido seleccionado y circula un DESCA con reglas de gobierno, responsabilidad, pagos, background, resultados y publicaciones.",
+    "keywords": "consortium agreement DESCA grant agreement background access rights joint ownership STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio Negociación de versiones controladas y firma institucional antes de la fecha exigida",
+    "href": "example.html?caso=negociar-acuerdo-consorcio",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Organizar un workshop o congreso en la UV",
+    "context": "Quieres celebrar una reunión científica con inscripciones, ponentes, viajes, catering, espacios, patrocinadores, web y tratamiento de datos de asistentes.",
+    "keywords": "organizar congreso workshop evento científico inscripciones evento ponentes catering patrocinadores Estructura UV organizadora y unidad económica; Marketing/Eventos, contratación, privacidad y Prevención según alcance Proyecto o centro de coste del evento, plataforma institucional de inscripción y expedientes de gasto",
+    "href": "example.html?caso=organizar-workshop-congreso-uv",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Organizar una evaluación alternativa por ausencia justificada",
+    "context": "Un estudiante no puede acudir a una prueba por una causa que afirma justificada y pide otra fecha o modalidad.",
+    "keywords": "examen alternativo ausencia justificada otra fecha fuerza mayor coincidencia exámenes Profesorado responsable, coordinación de titulación y ETSE o unidad que valide la justificación Solicitud institucional del estudiante y comunicación individual por Aula Virtual o correo UV",
+    "href": "example.html?caso=evaluacion-alternativa-ausencia-justificada",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Organizar una visita docente fuera del campus",
+    "context": "Quieres llevar un grupo a una empresa, feria o instalación y necesitas encajar la actividad, transporte, accesibilidad, seguridad y datos de participantes.",
+    "keywords": "visita empresa salida docente excursión actividad fuera campus transporte estudiantes Coordinación de titulación, ETSE y departamento; entidad anfitriona y Prevención según actividad Solicitud interna y comunicación individual al alumnado por canales UV",
+    "href": "example.html?caso=visita-docente-externa",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Pagar la inscripción a un congreso",
+    "context": "Han aceptado tu comunicación y debes decidir quién paga, cómo obtener factura y si cabe pago directo, anticipo o reintegro.",
+    "keywords": "congreso inscripción factura reintegro pago directo early bird",
+    "href": "example.html?caso=inscripcion-congreso",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Pagar un servicio científico interno de la UV",
+    "context": "Necesitas microscopía, fabricación, análisis o soporte de una unidad UV y debes saber si se tramita como encargo interno, tarifa o compra externa.",
+    "keywords": "SCSIE servicio interno tarifa interna microscopía caracterización cargo interno unidad científica Unidad científica prestadora y unidad de gestión del crédito Solicitud o plataforma interna de servicio y documento contable interno indicado",
+    "href": "example.html?caso=pagar-servicio-cientifico-interno",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Pagar una actividad organizada por la propia UV",
+    "context": "Quieres inscribirte en un curso, jornada o actividad facturada por una unidad de la UV con cargo a otra clave UV.",
+    "keywords": "compensación interna curso UV inscripción interna caja fija",
+    "href": "example.html?caso=inscripcion-interna-uv",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Pagar una APC, suscripción, base de datos o cuota científica",
+    "context": "Necesitas pagar publicación, acceso digital, membresía o cuota y debes distinguir proveedor, periodo, impuestos, elegibilidad y vía de pago.",
+    "keywords": "APC open access suscripción base de datos cuota sociedad publicación",
+    "href": "example.html?caso=apc-suscripcion-cuota",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Pagar una proforma o un anticipo a un proveedor",
+    "context": "El proveedor exige pago anticipado para fabricar, reservar o enviar un equipo y solo ha emitido una factura proforma.",
+    "keywords": "proforma prepago pago anticipado anticipo proveedor advance payment pago antes entrega Unidad de gestión económica, responsable de crédito y órgano de contratación o autorización competente Pedido o expediente previo con autorización expresa de anticipo y posterior factura definitiva",
+    "href": "example.html?caso=pagar-factura-proforma-anticipo-proveedor",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Preparar la justificación o una auditoría de proyecto",
+    "context": "Se aproxima el cierre o llega un requerimiento y debes demostrar actividades, gastos, pagos, contratación, inventario y resultados.",
+    "keywords": "justificación auditoría requerimiento cierre evidencias",
+    "href": "example.html?caso=justificar-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Preparar o modificar una guía docente",
+    "context": "El equipo docente necesita definir o cambiar actividades, evaluación, software, prácticas o reglas de IA manteniendo coherencia con la memoria de la titulación.",
+    "keywords": "guía docente evaluación CAT CCA coordinación IA docente Coordinación de asignatura y titulación, DIE y CAT/CCA según el cambio Circuito de planificación docente y aprobación de la titulación antes de la publicación",
+    "href": "example.html?caso=preparar-guia-docente",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Preparar un plan de gestión de datos y cumplir ciencia abierta",
+    "context": "Un proyecto exige DMP y acceso abierto y necesitas decidir formatos, almacenamiento, metadatos, repositorio, licencias, embargos y excepciones.",
+    "keywords": "DMP plan gestión datos FAIR ciencia abierta RODERIC repositorio open data IP y data steward; Bibliotecas UV; DPD, ética, SIUV o Transferencia según restricciones Plantilla del financiador o ARGOS y repositorios institucionales o disciplinares autorizados",
+    "href": "example.html?caso=plan-gestion-datos-ciencia-abierta",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Preparar una acreditación ANECA o AVAP",
+    "context": "Quieres acreditarte para PTU, CU o una figura laboral y necesitas elegir agencia, demostrar requisitos y presentar un expediente verificable sin confundir acreditación con concurso.",
+    "keywords": "ANECA AVAP ACADEMIA acreditación titular cátedra PPL méritos ANECA o AVAP como órgano evaluador; RR. HH. PDI y Unidad de Calidad para certificados UV Sede electrónica de la agencia y solicitudes UV de certificados o evaluación docente",
+    "href": "example.html?caso=preparar-acreditacion-aneca-avap",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Preparar una propuesta competitiva desde cero",
+    "context": "Has elegido convocatoria y necesitas organizar idea, socios, memoria, presupuesto, documentos, revisión y cierre interno.",
+    "keywords": "propuesta memoria grant calendario inverso presupuesto cierre interno",
+    "href": "example.html?caso=preparar-propuesta",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Presentar correctamente una solicitud por sede o registro",
+    "context": "Debes presentar una solicitud o aportar documentos con efectos administrativos y necesitas demostrar destinatario, contenido y fecha.",
+    "keywords": "sede registro instancia firma justificante",
+    "href": "example.html?caso=registro-electronico",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Presentarse a una plaza o concurso de PDI",
+    "context": "Se publica una plaza que encaja con tu perfil y necesitas interpretar bases, presentar la instancia, acreditar méritos y seguir admisión, pruebas y reclamaciones.",
+    "keywords": "concurso PDI plaza PPL titular catedrático baremo admitidos reclamación Sección de Selección del PDI y comisión de selección designada para la plaza Formulario o sede indicados en la convocatoria y Tablón Oficial UV para actuaciones",
+    "href": "example.html?caso=presentarse-concurso-pdi",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Prestar o trasladar un equipo fuera de la UV",
+    "context": "Quieres llevar un instrumento, portátil o prototipo a otra institución, empresa, campaña de medida o domicilio para trabajar temporalmente.",
+    "keywords": "préstamo equipo salida inventario traslado equipo llevar portátil equipo fuera UV cesión temporal Unidad responsable e inventario/patrimonio; Prevención, SIUV, aseguramiento o STI según el equipo Autorización y acta de salida, préstamo o cesión con actualización de ubicación",
+    "href": "example.html?caso=prestar-trasladar-equipo-fuera-uv",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Proponer, tutorizar y cerrar un TFG o TFM ordinario",
+    "context": "Vas a proponer o aceptar un trabajo y necesitas definir alcance, seguimiento, evaluación, depósito y cierre sin improvisar requisitos.",
+    "keywords": "TFG TFM tutor depósito defensa tribunal",
+    "href": "example.html?caso=tfg-tfm-ordinario",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Proteger un resultado antes de divulgarlo",
+    "context": "Tienes un dispositivo, proceso, material o arquitectura nueva y se aproxima un artículo, congreso, tesis, repositorio o conversación con empresa.",
+    "keywords": "patente invención novedad congreso publicar resultado protegible",
+    "href": "example.html?caso=proteger-patente",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Proteger un resultado creado con otra universidad o empresa",
+    "context": "La invención tiene contribuciones de personal UV y externo y es necesario acordar inventores, titulares, porcentajes, costes y gestión antes de patentar.",
+    "keywords": "cotitularidad joint ownership varias universidades inventores externos porcentajes patente STI UV y oficinas homólogas de las entidades participantes Comunicación de resultado y negociación de acuerdo de cotitularidad antes de solicitud o licencia",
+    "href": "example.html?caso=proteger-resultado-cotitular",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Publicar calificaciones y realizar una revisión",
+    "context": "Debes publicar resultados y explicar a un estudiante cómo se aplicaron prueba, rúbrica y ponderaciones.",
+    "keywords": "notas revisión examen rúbrica calificación",
+    "href": "example.html?caso=revision-calificacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Publicar software, código o datos con una licencia adecuada",
+    "context": "Quieres depositar código, modelos o datos y debes decidir versión, repositorio, licencia, metadatos y restricciones.",
+    "keywords": "software GitHub RODERIC datos licencia open source DOI",
+    "href": "example.html?caso=publicar-software-datos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Realizar seguimiento y depósito de una tesis",
+    "context": "Diriges una tesis y debes controlar plan, actividades, evaluación anual, publicaciones, autoría, protección, depósito y defensa.",
+    "keywords": "doctorado tesis plan investigación depósito defensa compendio",
+    "href": "example.html?caso=seguimiento-deposito-tesis",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Recibir, inventariar, reparar, trasladar o dar de baja un equipo",
+    "context": "Un equipo llega, falla calibración, necesita reparación, cambia de ubicación o termina su vida útil.",
+    "keywords": "inventario recepción calibración avería reparación traslado baja",
+    "href": "example.html?caso=ciclo-vida-equipo",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Reconocer servicios prestados en otra administración",
+    "context": "Has trabajado con contrato en otra universidad o administración y quieres que la UV reconozca esos periodos para antigüedad y trienios.",
+    "keywords": "servicios previos antigüedad trienios anexo I anexo II otra universidad Sección de Gestión de RR. HH. PDI de la Universitat de València Trámite de reconocimiento de servicios previos y registro o sede indicados por RR. HH. PDI",
+    "href": "example.html?caso=reconocer-servicios-previos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Recuperar un gasto que has pagado personalmente",
+    "context": "Has adelantado una inscripción, material urgente u otro gasto relacionado con la UV y necesitas saber si puede reintegrarse y con cargo a qué presupuesto.",
+    "keywords": "reembolso gasto de bolsillo pagué yo recuperar dinero caja fija indemnización Unidad de gestión económica del departamento, instituto o proyecto; responsable del crédito Expediente de reintegro o caja fija indicado por la unidad, nunca compensación informal",
+    "href": "example.html?caso=recuperar-gasto-pagado-personalmente",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Registrar dedicaciones y hojas de tiempo en varios proyectos",
+    "context": "Participas en varias ayudas y debes declarar horas o dedicación sin superar disponibilidad ni imputar dos veces el mismo trabajo.",
+    "keywords": "DEDICA-i timesheet hojas de tiempo dedicación proyectos doble imputación horas Servicio de Investigación, responsables de proyecto y PDI o PI que declara en DEDICA-i DEDICA-i y sistemas específicos del financiador cuando sean adicionales",
+    "href": "example.html?caso=registrar-dedicaciones-proyectos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Repartir una compra entre varios proyectos",
+    "context": "Un equipo, licencia o servicio beneficia a dos o más proyectos y quieres distribuir su coste sin incumplir elegibilidad ni fraccionar artificialmente la contratación.",
+    "keywords": "cofinanciar compra varios proyectos reparto coste imputación múltiple split funding fraccionamiento Unidades gestoras y responsables de todos los proyectos; contratación e inventario cuando proceda Un único expediente de compra con distribución contable y conformidades múltiples",
+    "href": "example.html?caso=repartir-compra-varios-proyectos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Resolver autoría, integridad o uso de IA en investigación",
+    "context": "Surge desacuerdo sobre autores, orden, contribuciones, datos, figura, código o uso de IA antes de enviar un trabajo.",
+    "keywords": "autoría CRediT integridad mala conducta IA retractación",
+    "href": "example.html?caso=autoria-integridad-ia",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Resolver una ausencia imprevista del profesor",
+    "context": "Una enfermedad o incidencia impide impartir una clase, práctica, tutoría o examen y hay que reorganizarla sin dejar al alumnado sin información.",
+    "keywords": "profesor enfermo cancelar clase sustitución recuperar clase ausencia docente Dirección y coordinación departamental para cobertura; ETSE para espacios o exámenes; RR. HH. PDI para la situación laboral Aviso institucional al responsable y anuncio en Aula Virtual; trámite laboral separado",
+    "href": "example.html?caso=ausencia-imprevista-profesor",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Responder a una impugnación de calificación",
+    "context": "La ETSE te comunica una impugnación y debes aportar el expediente de evaluación sin intentar resolver el procedimiento por tu cuenta.",
+    "keywords": "impugnación reclamación de nota tribunal acta",
+    "href": "example.html?caso=impugnacion-calificacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Responder a una petición de datos o código tras publicar",
+    "context": "Otro equipo pide datos brutos, scripts o parámetros para reproducir un artículo y existen compromisos de disponibilidad, datos personales o software de terceros.",
+    "keywords": "data availability pedir datos código reproducibilidad datos brutos repositorio request data Equipo autor, custodio de datos, Biblioteca; DPD, ética o Transferencia según restricción Repositorio persistente o procedimiento de acceso controlado, no adjuntos improvisados",
+    "href": "example.html?caso=responder-peticion-datos-codigo",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Responder a una resolución provisional de una ayuda",
+    "context": "Una propuesta aparece concedida, denegada o con importe distinto en una resolución provisional y debes aceptar, alegar, subsanar o esperar.",
+    "keywords": "resolución provisional alegaciones proyecto aceptación ayuda denegación subsanación convocatoria Servicio de Gestión de la Investigación o STI UV y órgano concedente de la convocatoria Sede o aplicación indicada por la convocatoria, coordinada con la unidad UV competente",
+    "href": "example.html?caso=responder-resolucion-provisional-ayuda",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Reutilizar datos, muestras o consentimientos de otro proyecto",
+    "context": "Quieres usar en un nuevo estudio datos o muestras ya recogidos y te dicen que están anonimizados o que el consentimiento anterior sirve.",
+    "keywords": "reutilizar datos uso secundario muestras humanas consentimiento anterior anonimización biobanco CEIH o comité aplicable, DPD UV, entidad custodio o biobanco e IP del nuevo estudio Solicitud ética y de acceso institucional antes de transferir o analizar",
+    "href": "example.html?caso=reutilizar-datos-muestras-consentimiento",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Revisar y reclamar una diferencia en la nómina",
+    "context": "El bruto, un complemento, un atraso o una deducción no coincide con tu categoría, dedicación o resoluciones.",
+    "keywords": "nómina salario atrasos IRPF cotización complemento",
+    "href": "example.html?caso=revisar-error-nomina",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar evaluación ética con personas o muestras humanas",
+    "context": "El estudio incluye participantes, datos identificables, intervención o muestras humanas y aún no ha comenzado la fase afectada.",
+    "keywords": "CEIH ética personas muestras humanas consentimiento hospital",
+    "href": "example.html?caso=etica-personas-muestras",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar excedencia y posterior reingreso",
+    "context": "Necesitas dejar temporalmente el servicio activo o volver y quieres escoger la modalidad correcta y conocer reserva, antigüedad, incompatibilidades y reingreso.",
+    "keywords": "excedencia reingreso servicio activo reserva puesto situación administrativa Sección de Gestión de RR. HH. PDI y órgano que resuelva la situación administrativa Solicitud formal registrada con documentación de la causa y posterior trámite de reingreso",
+    "href": "example.html?caso=excedencia-reingreso",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar permiso, licencia, vacaciones, estancia o sabático",
+    "context": "Necesitas ausentarte por actividad académica o personal y debes clasificar la figura, obtener autorización y cubrir la docencia.",
+    "keywords": "permiso licencia vacaciones estancia sabático ausencia",
+    "href": "example.html?caso=permiso-licencia-vacaciones",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar trienios, quinquenios, sexenios o complemento autonómico",
+    "context": "Cumples o crees cumplir un nuevo periodo de antigüedad, docencia, investigación o méritos autonómicos y necesitas presentar la solicitud correcta.",
+    "keywords": "trienio quinquenio sexenio complemento autonómico CNEAI méritos",
+    "href": "example.html?caso=solicitar-complementos",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar un cambio de dedicación",
+    "context": "Quieres pasar de tiempo completo a parcial o al contrario y necesitas conocer autorización, fecha efectiva, docencia, incompatibilidades y retribución.",
+    "keywords": "cambio dedicación tiempo completo tiempo parcial jornada POD nómina RR. HH. PDI para el expediente y departamento para planificación docente Solicitud registrada o modelo indicado por RR. HH. PDI y comunicación trazable al departamento",
+    "href": "example.html?caso=cambiar-dedicacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar una adaptación del puesto por motivos de salud",
+    "context": "Una condición de salud, embarazo, parto o lactancia requiere ajustar espacio, tareas, horario o exposición sin difundir tu diagnóstico.",
+    "keywords": "adaptación puesto salud laboral embarazo lactancia especial sensibilidad ergonomía Área de Salud del Servicio de Prevención y Medio Ambiente, con RR. HH. y estructura para ejecutar medidas Instancia interna dirigida al grupo de adaptación correspondiente y circuito confidencial de salud laboral",
+    "href": "example.html?caso=adaptacion-puesto-salud",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Solicitar una modificación o prórroga de proyecto",
+    "context": "Un retraso, cambio de personal, equipo, presupuesto, socio, ubicación o alcance amenaza el plan aprobado.",
+    "keywords": "prórroga modificación cambio presupuesto cambio IP retraso",
+    "href": "example.html?caso=modificar-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Subcontratar un servicio científico especializado",
+    "context": "Un proyecto necesita fabricación, caracterización, consultoría o ensayo externo y debes decidir si es compra, subcontratación de tarea o colaboración.",
+    "keywords": "subcontratación servicio científico ensayo externo fabricación externa tercero proyecto Servicio de Investigación y unidad de contratación o gestión económica; STI para IP y confidencialidad Consulta de elegibilidad y expediente de contratación o modificación antes del encargo",
+    "href": "example.html?caso=subcontratar-servicio-cientifico",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar incapacidad temporal, nacimiento o conciliación",
+    "context": "Una baja médica, nacimiento, lactancia, permiso parental, cuidado o reducción de jornada afecta a tu actividad y docencia.",
+    "keywords": "baja médica IT maternidad paternidad nacimiento lactancia permiso parental conciliación RR. HH. PDI para la situación personal; dirección del DIE para cobertura docente Canal laboral o Portal del Empleado indicado por RR. HH. PDI y comunicación funcional al departamento",
+    "href": "example.html?caso=it-nacimiento-conciliacion",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar investigación con animales, agentes biológicos u OMG",
+    "context": "El proyecto incorpora organismos, vectores, muestras, instalaciones o procedimientos que pueden requerir comité y nivel de contención.",
+    "keywords": "bioseguridad OMG animales agentes biológicos contención residuos",
+    "href": "example.html?caso=bioseguridad-animales-omg",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar un contrato artículo 60 con una empresa",
+    "context": "Una empresa solicita ensayos, asesoramiento, prototipo o I+D y propone precio, calendario, confidencialidad o propiedad de resultados.",
+    "keywords": "artículo 60 empresa contrato ensayo consultoría institucional transferencia",
+    "href": "example.html?caso=contrato-articulo-60",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar una compra desde 5.000 € sin IVA",
+    "context": "El equipo, componente o servicio alcanza 5.000 euros sin IVA o más y necesita expediente previo, ofertas o justificación y adjudicación.",
+    "keywords": "tres ofertas AD UV-plyca 9000 18000 contrato menor",
+    "href": "example.html?caso=compra-desde-5000",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar una compra ordinaria inferior a 5.000 € sin IVA",
+    "context": "Necesitas un suministro o servicio puntual no cubierto por acuerdo marco o SDA y su valor estimado queda por debajo de 5.000 euros sin IVA.",
+    "keywords": "compra menor menos 5000 factura proveedor crédito",
+    "href": "example.html?caso=compra-menor-5000",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar una factura de un proveedor extranjero",
+    "context": "Compras software, material o un servicio a una empresa extranjera y la factura llega en otra moneda, sin IVA español o con datos fiscales incompletos.",
+    "keywords": "factura extranjera VAT IVA intracomunitario divisa invoice proveedor internacional importación Unidad de gestión económica y Servicio de Contabilidad y Presupuesto; aduanas o compras cuando haya importación Expediente de compra y factura original por el canal económico indicado",
+    "href": "example.html?caso=tramitar-factura-extranjera",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tramitar viaje, dietas y anticipo de caja fija",
+    "context": "Viajas por congreso, proyecto o estancia y necesitas autorizar ausencia, transporte, alojamiento, manutención, anticipo y liquidación.",
+    "keywords": "viaje dietas hotel kilometraje caja fija BCF comisión servicio",
+    "href": "example.html?caso=viaje-caja-fija",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Tutorizar o modificar unas prácticas externas",
+    "context": "La empresa, el estudiante o el calendario plantean cambios de horario, tareas o condiciones antes o durante la práctica.",
+    "keywords": "prácticas empresa tutor académico ADEIT proyecto formativo",
+    "href": "example.html?caso=practicas-externas",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Usar el nombre o logotipo de la UV en una iniciativa externa",
+    "context": "Una empresa, congreso, proyecto o web quiere mostrar el logo UV o presentarte de forma que podría parecer respaldo institucional.",
+    "keywords": "logo UV marca UV identidad corporativa aval institucional afiliación web empresa Unidad Web y Marketing o Servicio de Marketing y Comunicación; estructura UV responsable de la relación Solicitud de autorización y uso de recursos oficiales de identidad visual",
+    "href": "example.html?caso=usar-nombre-logotipo-uv-iniciativa-externa",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Usar materiales con derechos de autor en Aula Virtual",
+    "context": "Quieres compartir capítulos, artículos, imágenes, vídeos o diapositivas y necesitas distinguir enlace, cita, licencia y distribución no permitida.",
+    "keywords": "copyright derechos autor Aula Virtual fotocopias artículos PDF imágenes licencia Profesorado responsable; Biblioteca para acceso y licencias; asesoramiento institucional en propiedad intelectual Aula Virtual con acceso restringido y recursos o enlaces autorizados",
+    "href": "example.html?caso=usar-materiales-derechos-autor-aula-virtual",
+    "priority": 6
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Actuar ante acoso o discriminación",
+    "context": "Unidad de Igualdad; emergencias si existe riesgo inmediato",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Aplicar una adaptación docente",
+    "context": "UVdiscapacidad y coordinación de la ETSE",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Autorizar y liquidar un viaje o congreso",
+    "context": "Dirección de la estructura y unidad gestora",
+    "keywords": "gestion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Ayudas Juan de la Cierva",
+    "context": "",
+    "keywords": "state Persona en etapa postdoctoral inicial y entidad receptora; condiciones personales fijadas en cada edición.",
+    "href": "financiacion/?q=Ayudas%20Juan%20de%20la%20Cierva",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Ayudas postdoctorales APOSTD",
+    "context": "",
+    "keywords": "regional Persona postdoctoral y entidades de origen/destino conforme a movilidad, fecha de doctorado y vinculación.",
+    "href": "financiacion/?q=Ayudas%20postdoctorales%20APOSTD",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Ayudas Ramón y Cajal",
+    "context": "",
+    "keywords": "state Persona postdoctoral con trayectoria competitiva y entidad receptora que cumple selección y vinculación.",
+    "href": "financiacion/?q=Ayudas%20Ram%C3%B3n%20y%20Cajal",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Becas Leonardo de la Fundación BBVA",
+    "context": "",
+    "keywords": "private Persona investigadora o creadora en la etapa profesional y área delimitadas por la edición.",
+    "href": "financiacion/?q=Becas%20Leonardo%20de%20la%20Fundaci%C3%B3n%20BBVA",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "CaixaResearch: investigación e innovación",
+    "context": "",
+    "keywords": "private Equipo que responde a las modalidades de salud y ciencias de la vida definidas en cada convocatoria.",
+    "href": "financiacion/?q=CaixaResearch%3A%20investigaci%C3%B3n%20e%20innovaci%C3%B3n",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Captación de proyectos europeos e internacionales",
+    "context": "",
+    "keywords": "regional Grupo que prepara una propuesta internacional concreta o persona que prepara una candidatura ERC.",
+    "href": "financiacion/?q=Captaci%C3%B3n%20de%20proyectos%20europeos%20e%20internacionales",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "CDTI: Proyectos de I+D",
+    "context": "",
+    "keywords": "state Empresa beneficiaria en proyecto individual o cooperativo; la universidad participa mediante la figura admitida.",
+    "href": "financiacion/?q=CDTI%3A%20Proyectos%20de%20I%2BD",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Comprar material de laboratorio mediante SDA",
+    "context": "Unidad gestora y estructura responsable SDA del SCSIE",
+    "keywords": "gestion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Comunicar un resultado protegible",
+    "context": "Servicio de Transferencia e Innovación",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Comunicar una brecha de datos o incidente",
+    "context": "Seguridad de la Información y DPD cuando afecte a datos personales",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Contratar personal con cargo a un proyecto",
+    "context": "Gestión de Investigación y RR. HH. de investigación",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Contratos de Personal Técnico de I+D+i",
+    "context": "",
+    "keywords": "state Personal técnico para operar infraestructuras, equipos y servicios científico-técnicos.",
+    "href": "financiacion/?q=Contratos%20de%20Personal%20T%C3%A9cnico%20de%20I%2BD%2Bi",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Contratos predoctorales ACIF",
+    "context": "",
+    "keywords": "regional Persona candidata a formación doctoral y grupo receptor que cumplen expediente, titulación y vinculación.",
+    "href": "financiacion/?q=Contratos%20predoctorales%20ACIF",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Contratos y convenios del artículo 60 LOSU",
+    "context": "",
+    "keywords": "uv Equipo UV que presta I+D, asistencia técnica, licencia o codesarrollo a una entidad externa.",
+    "href": "financiacion/?q=Contratos%20y%20convenios%20del%20art%C3%ADculo%2060%20LOSU",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Corregir dedicación, OCA o POD",
+    "context": "Dirección y secretaría del DIE; ETSE cuando afecte a la titulación",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "COST Actions",
+    "context": "",
+    "keywords": "european Red internacional con composición geográfica y participación definidas en cada colección.",
+    "href": "financiacion/?q=COST%20Actions",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "EIC Pathfinder Open y Challenges",
+    "context": "",
+    "keywords": "european Equipo multidisciplinar de deep tech; Open exige normalmente tres entidades y Challenges puede admitir otras composiciones.",
+    "href": "financiacion/?q=EIC%20Pathfinder%20Open%20y%20Challenges",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "EIC Transition",
+    "context": "",
+    "keywords": "european Entidad o consorcio que parte de un resultado generado por una actuación UE expresamente elegible.",
+    "href": "financiacion/?q=EIC%20Transition",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Elevar una propuesta a un órgano colegiado",
+    "context": "Secretaría del órgano competente",
+    "keywords": "planificacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Encontrar y presentar financiación de investigación",
+    "context": "Servicio de Gestión de la Investigación",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Equipamiento Científico-Técnico",
+    "context": "",
+    "keywords": "state Solicitud institucional para equipos de servicios comunes e infraestructuras de uso compartido.",
+    "href": "financiacion/?q=Equipamiento%20Cient%C3%ADfico-T%C3%A9cnico",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "ERC Advanced Grant",
+    "context": "",
+    "keywords": "european IP activo con trayectoria sobresaliente, evaluada principalmente sobre los últimos diez años.",
+    "href": "financiacion/?q=ERC%20Advanced%20Grant",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "ERC Consolidator Grant",
+    "context": "",
+    "keywords": "european IP con independencia científica; desde 2027, entre 5 y 15 años desde la defensa, con extensiones.",
+    "href": "financiacion/?q=ERC%20Consolidator%20Grant",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "ERC Proof of Concept",
+    "context": "",
+    "keywords": "european IP de una ayuda ERC principal elegible con un resultado vinculado a ella.",
+    "href": "financiacion/?q=ERC%20Proof%20of%20Concept",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "ERC Starting Grant",
+    "context": "",
+    "keywords": "european IP con doctorado que inicia independencia; desde 2027, hasta 10 años desde la defensa, con extensiones admitidas.",
+    "href": "financiacion/?q=ERC%20Starting%20Grant",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "ERC Synergy Grant",
+    "context": "",
+    "keywords": "european Grupo de 2 a 4 IP cuya combinación sea necesaria para resolver el problema de frontera.",
+    "href": "financiacion/?q=ERC%20Synergy%20Grant",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Europa Excelencia",
+    "context": "",
+    "keywords": "state Candidatura ERC elegible y evaluada favorablemente, pero no financiada por limitación presupuestaria.",
+    "href": "financiacion/?q=Europa%20Excelencia",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "FECYT: cultura científica",
+    "context": "",
+    "keywords": "state Entidad con programa de comunicación social, educación o participación científica evaluable.",
+    "href": "financiacion/?q=FECYT%3A%20cultura%20cient%C3%ADfica",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Gestionar un proyecto concedido",
+    "context": "Unidad gestora y Servicio de Gestión de la Investigación",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Grupos de investigación consolidados",
+    "context": "",
+    "keywords": "regional Grupo consolidado dirigido por uno o dos IP, con composición y méritos mínimos colectivos.",
+    "href": "financiacion/?q=Grupos%20de%20investigaci%C3%B3n%20consolidados",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Grupos de investigación emergentes",
+    "context": "",
+    "keywords": "regional Grupo que cumple la definición autonómica de emergente y los límites de financiación previa.",
+    "href": "financiacion/?q=Grupos%20de%20investigaci%C3%B3n%20emergentes",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Horizonte Europa: RIA, IA y CSA",
+    "context": "",
+    "keywords": "european Consorcio que responde literalmente a un topic y cubre sus capacidades, resultados y composición exigida.",
+    "href": "financiacion/?q=Horizonte%20Europa%3A%20RIA%2C%20IA%20y%20CSA",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "IVACE+i Innovación",
+    "context": "",
+    "keywords": "regional Empresa, organismo de investigación o colaboración regional, según la línea concreta.",
+    "href": "financiacion/?q=IVACE%2Bi%20Innovaci%C3%B3n",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "MSCA Postdoctoral Fellowships",
+    "context": "",
+    "keywords": "european Persona doctora y entidad de acogida; regla de movilidad y límite de experiencia definidos en la convocatoria.",
+    "href": "financiacion/?q=MSCA%20Postdoctoral%20Fellowships",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Preparar seguimiento o depósito de tesis",
+    "context": "Comisión académica y Escola de Doctorat",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Preparar un cambio de situación, cese o jubilación",
+    "context": "Servicio de RR. HH. PDI y organismo de previsión social",
+    "keywords": "pdi",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Preparar una spin-off universitaria",
+    "context": "Servicio de Transferencia e Innovación y RR. HH. PDI",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Presentar un recurso administrativo",
+    "context": "Órgano indicado en la resolución",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Presentar una reclamación ante la Sindicatura",
+    "context": "Sindicatura Universitària de Greuges",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Programa PROMETEO para grupos de excelencia",
+    "context": "",
+    "keywords": "regional Grupo de excelencia con trayectoria conjunta, liderazgo, masa crítica y dedicación demostrables.",
+    "href": "financiacion/?q=Programa%20PROMETEO%20para%20grupos%20de%20excelencia",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Programa propio y convocatorias UV",
+    "context": "",
+    "keywords": "uv Personal y grupos UV según cada convocatoria de predoctorales, estancias, visitantes o internacionalización.",
+    "href": "financiacion/?q=Programa%20propio%20y%20convocatorias%20UV",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Proyectos de Colaboración Internacional",
+    "context": "",
+    "keywords": "state Socio español de un proyecto ya seleccionado en una asociación o convocatoria internacional elegible.",
+    "href": "financiacion/?q=Proyectos%20de%20Colaboraci%C3%B3n%20Internacional",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Proyectos de Colaboración Público-Privada",
+    "context": "",
+    "keywords": "state Consorcio de empresa y organismo de investigación para desarrollo experimental próximo al mercado.",
+    "href": "financiacion/?q=Proyectos%20de%20Colaboraci%C3%B3n%20P%C3%BAblico-Privada",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Proyectos de Generación de Conocimiento",
+    "context": "",
+    "keywords": "state IP y equipo que cumplen vinculación, dedicación e incompatibilidades en investigación orientada o no orientada.",
+    "href": "financiacion/?q=Proyectos%20de%20Generaci%C3%B3n%20de%20Conocimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Proyectos de la Fundación Ramón Areces",
+    "context": "",
+    "keywords": "private Equipo que encaja en las áreas científicas expresamente definidas por el programa vigente.",
+    "href": "financiacion/?q=Proyectos%20de%20la%20Fundaci%C3%B3n%20Ram%C3%B3n%20Areces",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Proyectos de Prueba de Concepto",
+    "context": "",
+    "keywords": "state Normalmente el mismo IP de un proyecto previo expresamente elegible, con resultado susceptible de valorización.",
+    "href": "financiacion/?q=Proyectos%20de%20Prueba%20de%20Concepto",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Realizar la revisión de una calificación",
+    "context": "Profesorado responsable de la asignatura",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Redes de Investigación",
+    "context": "",
+    "keywords": "state Grupos que necesitan coordinación, intercambio y programación conjunta.",
+    "href": "financiacion/?q=Redes%20de%20Investigaci%C3%B3n",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Registrar una solicitud o subsanación",
+    "context": "Órgano indicado en el trámite o la notificación",
+    "keywords": "planificacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Responder a una impugnación de calificación",
+    "context": "Dirección de la ETSE y comisión de revisión",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Solicitar evaluación de bioseguridad",
+    "context": "Comité de Bioseguridad",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Solicitar evaluación ética de un estudio con personas",
+    "context": "Comité de Ética de Investigación en Humanos",
+    "keywords": "cumplimiento",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Solicitar licencia de estudios superior a un mes",
+    "context": "DIE y Servicio de RR. HH. PDI/vicerrectorado",
+    "keywords": "pdi",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Solicitar permiso o licencia de hasta un mes",
+    "context": "Dirección del DIE",
+    "keywords": "pdi",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Tramitar un contrato o convenio con una empresa",
+    "context": "Servicio de Transferencia e Innovación",
+    "keywords": "investigacion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Tramitar un TFG o TFM confidencial",
+    "context": "Comisión de TFG/TFM y ETSE; Transferencia si hay resultados protegibles",
+    "keywords": "docencia",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Tramitar una compra desde 5.000 € sin IVA",
+    "context": "Unidad gestora",
+    "keywords": "gestion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Procedimiento",
+    "title": "Tramitar una compra inferior a 5.000 € sin IVA",
+    "context": "Unidad gestora",
+    "keywords": "gestion",
+    "href": "herramientas/#fichas-procedimiento",
+    "priority": 4
+  },
+  {
+    "kind": "Financiación",
+    "title": "Valoritza i Transfereix y acciones UV de transferencia",
+    "context": "",
+    "keywords": "uv Equipo UV con resultado protegible o transferible y una hipótesis concreta de validación o explotación.",
+    "href": "financiacion/?q=Valoritza%20i%20Transfereix%20y%20acciones%20UV%20de%20transferencia",
+    "priority": 4
+  },
+  {
+    "kind": "Glosario",
+    "title": "Acreditación",
+    "context": "Evaluación que certifica el cumplimiento de requisitos para optar a determinadas figuras o cuerpos docentes universitarios.",
+    "keywords": "ANECA AVAP acreditación TU acreditación CU",
+    "href": "glosario/#termino-acreditacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Acta de calificaciones",
+    "context": "Documento oficial en el que se incorporan y cierran las calificaciones de una asignatura y convocatoria.",
+    "keywords": "acta cierre de actas calificación definitiva",
+    "href": "glosario/#termino-acta-calificaciones",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Acta de recepción o conformidad",
+    "context": "Documento mediante el que la persona responsable confirma que el bien o servicio se ha recibido correctamente y puede continuar la tramitación del pago.",
+    "keywords": "conformar factura recepción validación del solicitante",
+    "href": "glosario/#termino-acta-recepcion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Acuerdo marco",
+    "context": "Instrumento de contratación que fija condiciones para contratos posteriores con uno o varios proveedores seleccionados durante un periodo.",
+    "keywords": "contrato derivado proveedor homologado",
+    "href": "glosario/#termino-acuerdo-marco",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Anonimización y seudonimización",
+    "context": "Anonimizar impide razonablemente reidentificar a las personas; seudonimizar sustituye identificadores, pero mantiene una vía separada para relacionar los datos con ellas.",
+    "keywords": "datos anónimos datos codificados seudónimo pseudonimización",
+    "href": "glosario/#termino-anonimizacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Anticipo de caja fija (BCF)",
+    "context": "Fondos que la UV entrega antes de una actividad autorizada para cubrir gastos que después deberán justificarse y regularizarse.",
+    "keywords": "BCF adelanto UV anticipo de viaje",
+    "href": "glosario/#termino-anticipo-caja-fija",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Anualidad",
+    "context": "Parte temporal y presupuestaria de una ayuda asignada a un año o periodo concreto de ejecución.",
+    "keywords": "presupuesto anual año de proyecto",
+    "href": "glosario/#termino-anualidad",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Caja fija",
+    "context": "Sistema de pago gestionado por una unidad administrativa autorizada para tramitar determinados gastos y reponer después los fondos justificados.",
+    "keywords": "sistema de caja fija responsable de caja fija",
+    "href": "glosario/#termino-caja-fija",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "CAT y CCA",
+    "context": "Órganos académicos que coordinan y supervisan aspectos de una titulación de grado o máster dentro de las competencias atribuidas.",
+    "keywords": "Comisión Académica de Título y Comisión de Coordinación Académica CAT CCA comisión de título comisión de máster",
+    "href": "glosario/#termino-cat-cca",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "CEIH",
+    "context": "Comité que evalúa aspectos éticos de proyectos con personas, intervenciones o muestras humanas dentro de su ámbito.",
+    "keywords": "Comité de Ética de Investigación en Humanos comité de ética ética en humanos informe favorable",
+    "href": "glosario/#termino-ceih",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Centro de coste",
+    "context": "Identificador utilizado por una plataforma o unidad para dirigir el gasto y su circuito de aprobación hacia la estructura y presupuesto correctos.",
+    "keywords": "centro de gasto cost centre",
+    "href": "glosario/#termino-centro-coste",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Clave orgánica o específica",
+    "context": "Código presupuestario que identifica la estructura o actividad concreta a la que se imputa un ingreso o gasto.",
+    "keywords": "partida orgánica específica centro de gasto imputación",
+    "href": "glosario/#termino-clave-presupuestaria",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Cofinanciación",
+    "context": "Parte del coste de una actividad que no cubre la ayuda y debe aportar la entidad beneficiaria u otra fuente compatible.",
+    "keywords": "aportación propia porcentaje de financiación matching funds",
+    "href": "glosario/#termino-cofinanciacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Comisión de servicio",
+    "context": "Autorización para realizar temporalmente una actividad fuera del puesto o localidad habitual por razón del servicio, con o sin derecho a indemnización según el caso.",
+    "keywords": "orden de comisión comisión con derecho a indemnización permiso de viaje",
+    "href": "glosario/#termino-comision-servicio",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Compensación interna",
+    "context": "Movimiento presupuestario entre unidades de la propia UV para cargar un gasto a una y reconocer el ingreso en otra sin pago personal.",
+    "keywords": "vale de compensación interna pago entre unidades UV",
+    "href": "glosario/#termino-compensacion-interna",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Complemento autonómico",
+    "context": "Retribución adicional convocada y reconocida conforme al régimen de la Comunitat Valenciana y a las condiciones publicadas para cada colectivo PDI.",
+    "keywords": "complemento Generalitat tramo autonómico",
+    "href": "glosario/#termino-complemento-autonomico",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Conflicto de interés",
+    "context": "Situación en la que intereses personales, profesionales, familiares o económicos pueden afectar o parecer afectar a la imparcialidad de una decisión pública.",
+    "keywords": "abstención imparcialidad interés personal",
+    "href": "glosario/#termino-conflicto-interes",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Contrato artículo 60 LOSU",
+    "context": "Instrumento institucional para contratar con terceros trabajos científicos, tecnológicos, artísticos, de formación o transferencia en los términos de la LOSU y la normativa UV.",
+    "keywords": "artículo 60 contrato con empresa I+D contratada asistencia técnica",
+    "href": "glosario/#termino-articulo-60",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Contrato menor",
+    "context": "Procedimiento simplificado de contratación pública para necesidades puntuales cuyo valor y duración quedan por debajo de los límites legales aplicables.",
+    "keywords": "gasto menor compra menor contratación menor",
+    "href": "glosario/#termino-contrato-menor",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Coste directo",
+    "context": "Coste que puede vincularse de forma identificable a una actividad, tarea o proyecto, como personal, material, viajes o servicios elegibles.",
+    "keywords": "costes directos personal fungible equipamiento",
+    "href": "glosario/#termino-coste-directo",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Coste indirecto",
+    "context": "Coste general necesario para sostener la actividad que no se atribuye de forma exclusiva a una tarea, como administración, espacios o servicios comunes.",
+    "keywords": "indirectos overheads gastos generales",
+    "href": "glosario/#termino-coste-indirecto",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Crédito presupuestario",
+    "context": "Importe disponible y autorizado en el presupuesto para una finalidad y periodo determinados.",
+    "keywords": "saldo disponibilidad presupuestaria tener dinero",
+    "href": "glosario/#termino-credito-presupuestario",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Días hábiles",
+    "context": "Días que se computan en un plazo administrativo excluyendo, con carácter general, sábados, domingos y festivos aplicables.",
+    "keywords": "plazo hábil días naturales cómputo de plazo",
+    "href": "glosario/#termino-dias-habiles",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Documento AD",
+    "context": "Documento contable que autoriza un gasto y compromete crédito para una finalidad y adjudicatario determinados.",
+    "keywords": "Autorización y disposición del gasto AD autorización de gasto disposición de gasto compromiso",
+    "href": "glosario/#termino-documento-ad",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "DPD",
+    "context": "Unidad especializada que asesora y supervisa el cumplimiento de protección de datos y participa en la gestión de posibles brechas.",
+    "keywords": "Delegación de Protección de Datos delegado de protección de datos lopd privacidad",
+    "href": "glosario/#termino-dpd",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "ETSE, DIE e ICMUV",
+    "context": "Son estructuras distintas de la UV: la ETSE organiza titulaciones y servicios del centro; el DIE gestiona docencia y plantilla departamental; el ICMUV organiza su actividad investigadora.",
+    "keywords": "Centro, departamento e instituto de investigación ETSE DIE ICMUV centro departamento instituto",
+    "href": "glosario/#termino-estructuras-uv",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Expediente administrativo",
+    "context": "Conjunto ordenado de documentos y actuaciones que fundamentan y registran una decisión o procedimiento administrativo.",
+    "keywords": "número de expediente expediente electrónico",
+    "href": "glosario/#termino-expediente",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Gasto elegible",
+    "context": "Gasto que cumple finalidad, concepto, periodo, importe, documentación y demás condiciones de la fuente que lo financia.",
+    "keywords": "elegibilidad gasto financiable coste subvencionable",
+    "href": "glosario/#termino-gasto-elegible",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Guía docente",
+    "context": "Documento académico publicado que concreta resultados, contenidos, actividades, evaluación, bibliografía y condiciones de una asignatura.",
+    "keywords": "programa de asignatura criterios de evaluación",
+    "href": "glosario/#termino-guia-docente",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "IP",
+    "context": "Persona responsable de la dirección científica y del cumplimiento de las obligaciones de una actividad o proyecto de investigación.",
+    "keywords": "Investigador o investigadora principal investigador principal responsable científico principal investigator PI",
+    "href": "glosario/#termino-ip",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "IVA",
+    "context": "Impuesto incluido o añadido en muchas facturas cuyo tratamiento puede variar según actividad, proveedor, país y posibilidad de recuperación.",
+    "keywords": "Impuesto sobre el valor añadido VAT impuesto IVA deducible IVA elegible",
+    "href": "glosario/#termino-iva",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Licencia o permiso",
+    "context": "Autorización laboral o administrativa para ausentarse o modificar temporalmente la prestación de servicios por una causa regulada.",
+    "keywords": "permiso PDI licencia de estudios sabático ausencia",
+    "href": "glosario/#termino-licencia",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Notificación administrativa",
+    "context": "Comunicación formal de un acto administrativo que deja constancia de su contenido, recepción y fecha a efectos de plazos.",
+    "keywords": "aviso de notificación notificación electrónica",
+    "href": "glosario/#termino-notificacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "OCA",
+    "context": "Planificación institucional de la docencia ofertada en un curso: titulaciones, asignaturas, grupos, actividades, áreas responsables, idioma y demás condiciones aprobadas.",
+    "keywords": "Oferta de curso académico oferta docente oferta de curso",
+    "href": "glosario/#termino-oca",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Órgano competente",
+    "context": "Persona u órgano colegiado al que una norma o delegación atribuye la capacidad de autorizar, aprobar o resolver una actuación.",
+    "keywords": "quien autoriza quién firma órgano que resuelve",
+    "href": "glosario/#termino-organo-competente",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Pago en firme",
+    "context": "Pago de una obligación ya acreditada mediante factura y documentación válida, normalmente directamente al proveedor o entidad.",
+    "keywords": "pago directo pago centralizado pago al proveedor",
+    "href": "glosario/#termino-pago-en-firme",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "PDI",
+    "context": "Personal que desarrolla funciones docentes e investigadoras en la universidad bajo alguna de las figuras funcionariales o laborales previstas.",
+    "keywords": "Personal docente e investigador profesorado personal docente investigador",
+    "href": "glosario/#termino-pdi",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Periodo de ejecución y periodo de justificación",
+    "context": "El primero delimita cuándo debe realizarse la actividad o producirse el gasto; el segundo, cuándo se presenta la documentación que acredita lo ejecutado.",
+    "keywords": "fecha de ejecución plazo de justificación cierre de proyecto",
+    "href": "glosario/#termino-ejecucion-justificacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "POD",
+    "context": "Asignación y registro de la carga docente del profesorado y su relación con la oferta aprobada, dedicación, reducciones y responsabilidades.",
+    "keywords": "Plan de ordenación docente plan docente carga docente dedicación docente",
+    "href": "glosario/#termino-pod",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "PRL",
+    "context": "Conjunto de responsabilidades y medidas para identificar, evaluar y controlar riesgos derivados del trabajo.",
+    "keywords": "Prevención de riesgos laborales prevención seguridad laboral evaluación de riesgos EPI",
+    "href": "glosario/#termino-prl",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Prórroga o modificación de proyecto",
+    "context": "Cambio formal autorizado en plazo, presupuesto, equipo, objetivos u otras condiciones de una ayuda concedida.",
+    "keywords": "extensión cambio de partida modificación presupuestaria",
+    "href": "glosario/#termino-prorroga-modificacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "PTGAS",
+    "context": "Personal que presta apoyo técnico, administrativo y de gestión a la docencia, la investigación y el funcionamiento institucional.",
+    "keywords": "Personal técnico, de gestión y de administración y servicios PAS personal de administración personal técnico de gestión",
+    "href": "glosario/#termino-ptgas",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Quinquenio docente",
+    "context": "Complemento o reconocimiento ligado a la evaluación de periodos de cinco años de actividad docente conforme al procedimiento aplicable.",
+    "keywords": "mérito docente componente por méritos docentes",
+    "href": "glosario/#termino-quinquenio",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Recurso administrativo",
+    "context": "Escrito formal para impugnar un acto administrativo ante el órgano y dentro del plazo que indique la norma o el pie de recursos.",
+    "keywords": "alzada reposición impugnar resolución pie de recursos",
+    "href": "glosario/#termino-recurso-administrativo",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Registro electrónico",
+    "context": "Servicio que recibe formalmente escritos y documentos y genera un asiento con fecha, hora, destinatario y justificante.",
+    "keywords": "registro justificante de registro asiento registral",
+    "href": "glosario/#termino-registro-electronico",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Reintegro de un pago adelantado",
+    "context": "Devolución a una persona del importe que pagó por cuenta de la UV cuando el gasto, la modalidad y la documentación son admisibles.",
+    "keywords": "reembolso devolución pago personal",
+    "href": "glosario/#termino-reintegro",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Resolución",
+    "context": "Acto formal que decide un procedimiento o una cuestión dentro de él e identifica, cuando corresponde, los recursos disponibles.",
+    "keywords": "resolución definitiva acto administrativo concesión denegación",
+    "href": "glosario/#termino-resolucion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Resultado protegible",
+    "context": "Resultado de investigación que podría protegerse o gestionarse mediante patente, modelo, software, secreto u otro derecho antes de divulgarlo.",
+    "keywords": "invención patente software propiedad intelectual secreto empresarial",
+    "href": "glosario/#termino-resultado-protegible",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "RGPD",
+    "context": "Norma europea que regula el tratamiento de datos personales y los derechos, responsabilidades y garantías asociados.",
+    "keywords": "Reglamento general de protección de datos GDPR protección de datos datos personales",
+    "href": "glosario/#termino-rgpd",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "SDA",
+    "context": "Procedimiento electrónico en el que proveedores previamente admitidos compiten por contratos específicos dentro de categorías definidas.",
+    "keywords": "Sistema Dinámico de Adquisición sistema dinámico catálogo SDA material de laboratorio gases",
+    "href": "glosario/#termino-sda",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Sede electrónica",
+    "context": "Dirección electrónica oficial desde la que se accede a trámites, registros, expedientes y notificaciones con garantías de identificación y fecha.",
+    "keywords": "sede UV seu entreu trámite electrónico",
+    "href": "glosario/#termino-sede-electronica",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Sexenio de investigación",
+    "context": "Reconocimiento de un periodo de seis años de actividad investigadora evaluado conforme a criterios y convocatoria específicos.",
+    "keywords": "mérito investigador tramo de investigación CNEAI",
+    "href": "glosario/#termino-sexenio",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "SGI",
+    "context": "Servicio UV que apoya la preparación, tramitación, ejecución, seguimiento y justificación de actividades de investigación dentro de su ámbito.",
+    "keywords": "Servicio de Gestión de la Investigación Servicio de Gestión de la Investigación servicio de investigación",
+    "href": "glosario/#termino-sgi",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Subsanación",
+    "context": "Actuación mediante la que se corrige o completa una solicitud después de que la Administración identifique un defecto o falta documental.",
+    "keywords": "subsanar requerimiento corregir solicitud",
+    "href": "glosario/#termino-subsanacion",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Tercero y alta de tercero",
+    "context": "Persona o entidad externa identificada en el sistema económico para poder contratar, facturar, cobrar o recibir un pago de la UV.",
+    "keywords": "alta de proveedor datos bancarios perceptor",
+    "href": "glosario/#termino-tercero",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Trienio",
+    "context": "Complemento de antigüedad asociado a periodos de tres años de servicios reconocidos, con reglas e importes según el régimen aplicable.",
+    "keywords": "antigüedad servicios previos",
+    "href": "glosario/#termino-trienio",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "TRL",
+    "context": "Escala orientativa de 1 a 9 que describe desde principios básicos hasta un sistema probado en operación.",
+    "keywords": "Technology Readiness Level · nivel de madurez tecnológica madurez tecnológica technology readiness",
+    "href": "glosario/#termino-trl",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Unidad funcional",
+    "context": "Estructura organizativa que gestiona contratación y gasto dentro del ámbito que tiene atribuido, por ejemplo un centro, departamento, instituto o servicio.",
+    "keywords": "unidad coordinadora estructura de gasto",
+    "href": "glosario/#termino-unidad-funcional",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "Unidad gestora",
+    "context": "Unidad administrativa que tramita y contabiliza un expediente o presupuesto determinado y comprueba la documentación necesaria.",
+    "keywords": "unidad de gestión gestor gestora administración del departamento",
+    "href": "glosario/#termino-unidad-gestora",
+    "priority": 3
+  },
+  {
+    "kind": "Glosario",
+    "title": "UV-plyca",
+    "context": "Aplicación utilizada por la UV para tramitar electrónicamente expedientes de contratación y vincular solicitud, adjudicación, recepción, factura y documentos contables.",
+    "keywords": "PLYCA plataforma de contratos menores expediente de compra",
+    "href": "glosario/#termino-uv-plyca",
+    "priority": 3
+  },
+  {
+    "kind": "Capítulo 5",
+    "title": "Administración electrónica UV",
+    "context": "Manual operativo",
+    "keywords": "Administración electrónica UV",
+    "href": "manual/#administracion-electronica-uv",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 12",
+    "title": "Calidad docente, Docentia e innovación educativa",
+    "context": "Manual operativo",
+    "keywords": "Calidad docente, Docentia e innovación educativa",
+    "href": "manual/#calidad-docente-docentia-e-innovacion-educativa",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 19",
+    "title": "Cambio de situación, cese y jubilación",
+    "context": "Manual operativo",
+    "keywords": "Cambio de situación, cese y jubilación",
+    "href": "manual/#cambio-de-situacion-cese-y-jubilacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 17",
+    "title": "Carrera, acreditación y promoción",
+    "context": "Manual operativo",
+    "keywords": "Carrera, acreditación y promoción",
+    "href": "manual/#carrera-acreditacion-y-promocion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 26",
+    "title": "Ciencia abierta y gestión de datos de investigación",
+    "context": "Manual operativo",
+    "keywords": "Ciencia abierta y gestión de datos de investigación",
+    "href": "manual/#ciencia-abierta-y-gestion-de-datos-de-investigacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 1",
+    "title": "Cómo utilizar este manual",
+    "context": "Manual operativo",
+    "keywords": "Cómo utilizar este manual",
+    "href": "manual/#como-utilizar-este-manual",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 29",
+    "title": "Compras y contratos menores",
+    "context": "Manual operativo",
+    "keywords": "Compras y contratos menores",
+    "href": "manual/#compras-y-contratos-menores",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 22",
+    "title": "Contratación de personal con cargo a proyectos",
+    "context": "Manual operativo",
+    "keywords": "Contratación de personal con cargo a proyectos",
+    "href": "manual/#contratacion-de-personal-con-cargo-a-proyectos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 23",
+    "title": "Contratos y convenios con empresas — artículo 60 LOSU",
+    "context": "Manual operativo",
+    "keywords": "Contratos y convenios con empresas — artículo 60 LOSU",
+    "href": "manual/#contratos-y-convenios-con-empresas-articulo-60-losu",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 8",
+    "title": "Dedicación docente, OCA y POD",
+    "context": "Manual operativo",
+    "keywords": "Dedicación docente, OCA y POD",
+    "href": "manual/#dedicacion-docente-oca-y-pod",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 2",
+    "title": "Directorio rápido de procedimientos",
+    "context": "Manual operativo",
+    "keywords": "Directorio rápido de procedimientos",
+    "href": "manual/#directorio-rapido-de-procedimientos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 9",
+    "title": "Docencia, evaluación y exámenes",
+    "context": "Manual operativo",
+    "keywords": "Docencia, evaluación y exámenes",
+    "href": "manual/#docencia-evaluacion-y-examenes",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 15",
+    "title": "Doctorado y dirección de tesis",
+    "context": "Manual operativo",
+    "keywords": "Doctorado y dirección de tesis",
+    "href": "manual/#doctorado-y-direccion-de-tesis",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 28",
+    "title": "Equipamiento científico e infraestructuras comunes",
+    "context": "Manual operativo",
+    "keywords": "Equipamiento científico e infraestructuras comunes",
+    "href": "manual/#equipamiento-cientifico-e-infraestructuras-comunes",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 32",
+    "title": "Ética de la investigación y bioseguridad",
+    "context": "Manual operativo",
+    "keywords": "Ética de la investigación y bioseguridad",
+    "href": "manual/#etica-de-la-investigacion-y-bioseguridad",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 21",
+    "title": "Gestión de proyectos concedidos",
+    "context": "Manual operativo",
+    "keywords": "Gestión de proyectos concedidos",
+    "href": "manual/#gestion-de-proyectos-concedidos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 6",
+    "title": "Gobierno de la ETSE, el DIE y el ICMUV",
+    "context": "Manual operativo",
+    "keywords": "Gobierno de la ETSE, el DIE y el ICMUV",
+    "href": "manual/#gobierno-de-la-etse-el-die-y-el-icmuv",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 34",
+    "title": "Igualdad, convivencia, acoso y discriminación",
+    "context": "Manual operativo",
+    "keywords": "Igualdad, convivencia, acoso y discriminación",
+    "href": "manual/#igualdad-convivencia-acoso-y-discriminacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 35",
+    "title": "Incompatibilidades, conflicto de interés y uso de recursos",
+    "context": "Manual operativo",
+    "keywords": "Incompatibilidades, conflicto de interés y uso de recursos",
+    "href": "manual/#incompatibilidades-conflicto-de-interes-y-uso-de-recursos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 25",
+    "title": "Integridad científica, autoría e inteligencia artificial",
+    "context": "Manual operativo",
+    "keywords": "Integridad científica, autoría e inteligencia artificial",
+    "href": "manual/#integridad-cientifica-autoria-e-inteligencia-artificial",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 4",
+    "title": "Lista de comprobación documental personal",
+    "context": "Manual operativo",
+    "keywords": "Lista de comprobación documental personal",
+    "href": "manual/#lista-de-comprobacion-documental-personal",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 7",
+    "title": "Mantenimiento del manual",
+    "context": "Manual operativo",
+    "keywords": "Mantenimiento del manual",
+    "href": "manual/#mantenimiento-del-manual",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 14",
+    "title": "Movilidad e internacionalización",
+    "context": "Manual operativo",
+    "keywords": "Movilidad e internacionalización",
+    "href": "manual/#movilidad-e-internacionalizacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 18",
+    "title": "Nómina, retribuciones y previsión social",
+    "context": "Manual operativo",
+    "keywords": "Nómina, retribuciones y previsión social",
+    "href": "manual/#nomina-retribuciones-y-prevision-social",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 16",
+    "title": "Permisos, licencias, vacaciones y sabáticos",
+    "context": "Manual operativo",
+    "keywords": "Permisos, licencias, vacaciones y sabáticos",
+    "href": "manual/#permisos-licencias-vacaciones-y-sabaticos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 11",
+    "title": "Prácticas externas en la ETSE",
+    "context": "Manual operativo",
+    "keywords": "Prácticas externas en la ETSE",
+    "href": "manual/#practicas-externas-en-la-etse",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 33",
+    "title": "Prevención de riesgos y laboratorios",
+    "context": "Manual operativo",
+    "keywords": "Prevención de riesgos y laboratorios",
+    "href": "manual/#prevencion-de-riesgos-y-laboratorios",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 24",
+    "title": "Propiedad intelectual, patentes, software y secretos",
+    "context": "Manual operativo",
+    "keywords": "Propiedad intelectual, patentes, software y secretos",
+    "href": "manual/#propiedad-intelectual-patentes-software-y-secretos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 31",
+    "title": "Protección de datos y seguridad de la información",
+    "context": "Manual operativo",
+    "keywords": "Protección de datos y seguridad de la información",
+    "href": "manual/#proteccion-de-datos-y-seguridad-de-la-informacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 37",
+    "title": "Quejas, denuncias y protección frente a represalias",
+    "context": "Manual operativo",
+    "keywords": "Quejas, denuncias y protección frente a represalias",
+    "href": "manual/#quejas-denuncias-y-proteccion-frente-a-represalias",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 36",
+    "title": "Recursos administrativos y defensa de derechos",
+    "context": "Manual operativo",
+    "keywords": "Recursos administrativos y defensa de derechos",
+    "href": "manual/#recursos-administrativos-y-defensa-de-derechos",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 3",
+    "title": "Rutina anual recomendada",
+    "context": "Manual operativo",
+    "keywords": "Rutina anual recomendada",
+    "href": "manual/#rutina-anual-recomendada",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 20",
+    "title": "Solicitud de proyectos competitivos y ayudas de investigación",
+    "context": "Manual operativo",
+    "keywords": "Solicitud de proyectos competitivos y ayudas de investigación",
+    "href": "manual/#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 10",
+    "title": "TFG y TFM",
+    "context": "Manual operativo",
+    "keywords": "TFG y TFM",
+    "href": "manual/#tfg-y-tfm",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 27",
+    "title": "Transferencia, emprendimiento y empresas derivadas",
+    "context": "Manual operativo",
+    "keywords": "Transferencia, emprendimiento y empresas derivadas",
+    "href": "manual/#transferencia-emprendimiento-y-empresas-derivadas",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 13",
+    "title": "Tutorías, atención al estudiantado y situaciones especiales",
+    "context": "Manual operativo",
+    "keywords": "Tutorías, atención al estudiantado y situaciones especiales",
+    "href": "manual/#tutorias-atencion-al-estudiantado-y-situaciones-especiales",
+    "priority": 2
+  },
+  {
+    "kind": "Capítulo 30",
+    "title": "Viajes, congresos, dietas e inscripciones",
+    "context": "Manual operativo",
+    "keywords": "Viajes, congresos, dietas e inscripciones",
+    "href": "manual/#viajes-congresos-dietas-e-inscripciones",
+    "priority": 2
+  }
+]

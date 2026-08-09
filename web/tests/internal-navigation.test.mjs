@@ -4,7 +4,7 @@ import test from "node:test";
 import { CATEGORIES } from "../chapter-categories.js";
 import { NAV_LANDMARKS, pickCurrentNavigationItem } from "../navigation-model.js";
 
-const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const html = await readFile(new URL("../consulta.html", import.meta.url), "utf8");
 const styles = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 const manualData = JSON.parse(await readFile(new URL("../data/manual.json", import.meta.url), "utf8"));
 const staticIds = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);

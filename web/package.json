@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:search": "node ../scripts/generar_indice_busqueda_web.mjs",
+    "prebuild": "pnpm generate:search",
     "build": "vite build",
     "preview": "vite preview",
     "test": "node --test tests/*.test.mjs"

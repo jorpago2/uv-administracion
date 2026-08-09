@@ -2,6 +2,20 @@
 
 Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene en `data/glossary.json` y las 100 situaciones operativas verificables en `data/situations.json` y `data/situations-51-100.json`.
 
+## Arquitectura multipágina
+
+La portada es una mesa de trabajo ligera. El contenido se distribuye en rutas independientes para evitar cargar y representar a la vez todo el manual, los 100 casos y las calculadoras:
+
+- `/resolver/`: 100 situaciones operativas.
+- `/administracion/`, `/docencia/`, `/carrera-pdi/`, `/investigacion/`, `/gestion/` y `/cumplimiento/`: ámbitos con sus casos, capítulos y herramientas.
+- `/financiacion/`: explorador y preparador de candidaturas.
+- `/herramientas/`: asistente, fichas, calendario y calculadoras.
+- `/glosario/`: vocabulario operativo.
+- `/manual/`: 37 capítulos con índice y seguimiento de lectura.
+- `/consulta.html`: interfaz completa anterior, conservada por compatibilidad.
+
+`data/site-search.json` es un índice reducido generado por `../scripts/generar_indice_busqueda_web.mjs`. `pnpm build` lo actualiza antes de compilar.
+
 ## Regenerar los datos
 
 Desde la raíz del repositorio:
@@ -54,7 +68,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `chapter-links.js`: enlaces canónicos compartidos de los 37 capítulos.
 - `situations.js`: directorio, búsqueda y filtros de las 100 situaciones operativas.
 - `situation-model.js`: validación estricta, composición con las guías base y búsqueda de situaciones.
-- `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías por capítulo y las 50 resoluciones mediante `example.html?caso=ID`.
+- `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías por capítulo y las 100 resoluciones mediante `example.html?caso=ID`.
 - `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
 - `example-transferability.js`: alcance reutilizable de cada caso: situaciones equivalentes, variables que deben adaptarse y condiciones que cambian la ruta.
 - `example-guide-model.js`: extracción comprobable de ejemplos, procedimientos, documentos y fuentes oficiales.

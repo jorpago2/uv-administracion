@@ -1,702 +1,92 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Guía operativa de procedimientos para PDI de la Universitat de València en la ETSE, el DIE y el ICMUV.">
+  <meta name="description" content="Mesa de trabajo personal de Jorge Parra para localizar procedimientos, casos, herramientas y fuentes oficiales de la Universitat de València.">
   <meta name="theme-color" content="#f5d328">
-  <title>Guía operativa UV · ETSE · DIE · ICMUV</title>
+  <title>Guía operativa UV · Mesa de trabajo</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hub.css">
+  <script type="module" src="hub.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="masthead">
-    <a class="brand" href="#inicio" aria-label="Inicio de la guía">
-      <span class="brand__uv">UV</span><span class="brand__name">Guía operativa</span>
-    </a>
-    <div class="masthead__meta" aria-label="Ámbito de la guía"><span>ETSE</span><span>DIE</span><span>ICMUV</span></div>
-    <button class="control control--menu" id="menuButton" type="button" aria-expanded="false" aria-controls="indexPanel">Índice</button>
-  </header>
+<body data-root="./" data-page="inicio">
+  <a class="hub-skip" href="#contenido">Saltar al contenido</a>
+  <site-header></site-header>
 
-  <aside class="index-panel" id="indexPanel" aria-label="Índice del manual">
-    <div class="index-panel__head"><strong>Ámbitos</strong><button class="control control--close" id="closeMenuButton" type="button">Cerrar</button></div>
-    <nav id="chapterIndex" aria-label="Ámbitos y capítulos de la guía"><p class="loading-copy">Cargando índice…</p></nav>
-    <div class="index-panel__foot"><a href="MANUAL_PROCEDIMIENTOS.md">Abrir Markdown</a><a href="ALERTAS.md">Ver alertas</a></div>
-  </aside>
+  <main class="hub-main" id="contenido">
+    <section class="hub-intro" aria-labelledby="pageTitle">
+      <div class="hub-intro__copy">
+        <p class="hub-kicker">PDI · UV · ETSE · DIE · ICMUV</p>
+        <h1 id="pageTitle">Encuentra la ruta. Ejecuta el trámite.</h1>
+        <p class="hub-lead">Una mesa de trabajo personal para pasar de una duda concreta a la unidad, los documentos, la secuencia y la evidencia de cierre.</p>
+      </div>
+      <dl class="hub-facts" aria-label="Alcance de la guía">
+        <div><dt>Situaciones</dt><dd>100</dd></div>
+        <div><dt>Capítulos</dt><dd>37</dd></div>
+        <div><dt>Ámbitos</dt><dd>6</dd></div>
+      </dl>
+    </section>
 
-  <div class="page-shell">
-    <main id="contenido">
-      <section class="intro" id="inicio" aria-labelledby="pageTitle">
-        <div class="intro__copy">
-          <p class="context-line">Procedimientos · derechos · plazos · fuentes</p>
-          <h1 id="pageTitle">Guía operativa UV</h1>
-          <p class="intro__lead">Resuelve una necesidad concreta o entra por tu ámbito de trabajo. Cada respuesta conserva el vínculo con el procedimiento y la fuente oficial.</p>
+    <aside class="personal-notice personal-use-notice" aria-labelledby="personalNoticeTitle">
+      <strong id="personalNoticeTitle">Uso exclusivamente personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a>.</strong>
+      <p>No es una web oficial ni contiene recomendaciones. Puede incluir errores o información desactualizada y no sustituye normas, convocatorias, instrucciones, asesoramiento ni el criterio de la unidad competente. Prevalecen siempre las fuentes oficiales y las disposiciones vigentes.</p>
+    </aside>
+
+    <section class="hub-search" aria-labelledby="searchTitle">
+      <div>
+        <h2 id="searchTitle">¿Qué necesitas resolver?</h2>
+        <p>Busca por acción, sigla, unidad o problema. El resultado te llevará a la subweb adecuada.</p>
+      </div>
+      <form id="hubSearchForm" role="search" novalidate>
+        <label for="hubSearch">Describe la duda</label>
+        <div class="hub-search__control">
+          <input id="hubSearch" name="q" type="search" autocomplete="off" placeholder="Ej.: comprar lente Thorlabs, caja fija, patente…" aria-describedby="hubSearchHelp hubSearchStatus">
+          <button class="hub-button hub-button--primary" type="submit">Buscar</button>
         </div>
-        <aside class="revision-note" aria-label="Alcance y revisión">
-          <strong>Documento vivo</strong>
-          <p>La convocatoria, la sede y la norma vigente prevalecen siempre sobre esta síntesis.</p>
-          <dl>
-            <div><dt>Revisión</dt><dd id="revisionDate">—</dd></div>
-            <div><dt>Capítulos</dt><dd id="sectionCount">—</dd></div>
-            <div><dt>Enlaces</dt><dd id="linkCount">—</dd></div>
-            <div><dt>Casos prácticos</dt><dd id="exampleCount">—</dd></div>
-          </dl>
-        </aside>
-      </section>
+        <p class="hub-field-help" id="hubSearchHelp">También reconoce variantes sin acentos y términos habituales del PDI.</p>
+        <p class="hub-search__status" id="hubSearchStatus" aria-live="polite"></p>
+      </form>
+      <div class="hub-search-results" id="hubSearchResults" hidden></div>
+    </section>
 
-      <aside class="personal-use-notice" aria-labelledby="personalUseTitle">
-        <p class="personal-use-notice__label">Uso personal · contenido no oficial</p>
-        <div class="personal-use-notice__body">
-          <div>
-            <h2 id="personalUseTitle">Herramienta personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a></h2>
-            <p>Esta web y todo su contenido han sido preparados exclusivamente para el uso personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a> como apoyo para organizar y consultar información.</p>
-          </div>
-          <ul>
-            <li>No representa ni expresa criterios oficiales de la Universitat de València, la ETSE, el DIE, el ICMUV ni ninguna otra entidad.</li>
-            <li>No constituye asesoramiento, recomendación, instrucción administrativa ni interpretación oficial de normas o convocatorias.</li>
-            <li>Puede contener errores, omisiones o información incompleta o desactualizada.</li>
-          </ul>
-        </div>
-        <p class="personal-use-notice__verification"><strong>Antes de actuar:</strong> verifica siempre la norma, convocatoria, sede, plazo y criterio vigentes con la fuente oficial y, cuando corresponda, con la unidad competente.</p>
-      </aside>
+    <section class="hub-actions" aria-labelledby="actionsTitle">
+      <div class="hub-section-head"><h2 id="actionsTitle">Empieza por la acción</h2><p>Cuatro entradas para las tareas que más decisiones concentran.</p></div>
+      <div class="action-ledger">
+        <a class="action-ledger__primary" href="resolver/"><span>Resolver</span><strong>Partir de una situación real</strong><small>100 casos con responsables, documentos, pasos, condiciones de parada y evidencias.</small></a>
+        <a href="herramientas/#calculadora-compras"><span>Comprar</span><strong>Elegir tramitación</strong><small>SDA, contrato menor, caja fija y circuito económico.</small></a>
+        <a href="financiacion/"><span>Investigar</span><strong>Localizar financiación</strong><small>Convocatorias, encaje y calendario inverso.</small></a>
+        <a href="herramientas/#calculadora-retributiva"><span>Carrera PDI</span><strong>Estimar retribución</strong><small>Categoría, antigüedad y complementos.</small></a>
+      </div>
+    </section>
 
-      <section class="finder" aria-labelledby="finderTitle">
-        <div class="finder__heading"><h2 id="finderTitle">¿Qué necesitas resolver?</h2><p>Busca una palabra, un trámite, una unidad o una norma. Atajo: <kbd>/</kbd></p></div>
-        <form class="search" id="searchForm" role="search">
-          <label for="searchInput">Buscar en toda la guía</label>
-          <div class="search__row" id="searchControl" data-state="default">
-            <input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Ej.: patente, permiso, ERC, salario…" aria-describedby="searchHelp searchStatus" aria-controls="searchResults" aria-keyshortcuts="/">
-            <button class="control control--primary search__submit" type="submit">Buscar</button>
-            <button class="control control--clear" id="clearSearch" type="button" disabled>Limpiar</button>
-          </div>
-          <p class="search__help" id="searchHelp">Admite varias palabras, sinónimos habituales y pequeñas erratas. La búsqueda se realiza en este navegador.</p>
-          <p class="search__status" id="searchStatus" aria-live="polite"></p>
-          <div class="search-suggestions" id="searchSuggestions" aria-label="Búsquedas sugeridas">
-            <span>Prueba:</span>
-            <button type="button" data-search-suggestion="patentes">Patentes</button>
-            <button type="button" data-search-suggestion="POD">POD</button>
-            <button type="button" data-search-suggestion="permisos">Permisos</button>
-            <button type="button" data-search-suggestion="financiación europea">Financiación europea</button>
-            <button type="button" data-search-suggestion="compras">Compras</button>
-            <button type="button" data-search-suggestion="caja fija">Caja fija</button>
-          </div>
-          <section class="search-results" id="searchResults" aria-label="Resultados de búsqueda" hidden></section>
-        </form>
-      </section>
+    <section class="hub-domains" aria-labelledby="domainsTitle">
+      <div class="hub-section-head"><h2 id="domainsTitle">Explora por ámbito</h2><p>Cada área reúne sus situaciones, capítulos y herramientas; el contenido transversal se enlaza, no se duplica.</p></div>
+      <div class="domain-ledger">
+        <a href="administracion/"><b>Administración y gobierno</b><span>Incorporación, sede, órganos, plazos y trazabilidad.</span></a>
+        <a href="docencia/"><b>Docencia</b><span>POD, evaluación, TFG/TFM, prácticas, movilidad y doctorado.</span></a>
+        <a href="carrera-pdi/"><b>Carrera PDI</b><span>Permisos, acreditación, promoción, retribuciones y cese.</span></a>
+        <a href="investigacion/"><b>Investigación y transferencia</b><span>Proyectos, contratos, patentes, spin-offs e infraestructuras.</span></a>
+        <a href="gestion/"><b>Gestión económica</b><span>Compras, SDA, facturas, viajes, congresos y dietas.</span></a>
+        <a href="cumplimiento/"><b>Derechos y cumplimiento</b><span>Datos, ética, seguridad, igualdad, recursos y denuncias.</span></a>
+      </div>
+    </section>
 
-      <section class="situations" id="situaciones" aria-labelledby="situationsTitle">
-        <header class="situations__heading">
-          <div>
-            <p class="context-line">De la duda al cierre verificable</p>
-            <h2 id="situationsTitle">Resolver 100 situaciones reales</h2>
-            <p>Cada ruta separa decisiones, responsables, documentos, pasos, condiciones de parada, evidencias de cierre, escalado y fuentes oficiales. Busca por lo que quieres hacer, aunque no conozcas el nombre del trámite.</p>
-          </div>
-          <dl class="situations__meta" aria-label="Cobertura de situaciones">
-            <div><dt>Situaciones</dt><dd id="situationCount">—</dd></div>
-            <div><dt>Estructura</dt><dd>10 bloques</dd></div>
-          </dl>
-        </header>
-        <div class="situation-toolbar">
-          <label for="situationQuery">Describe la necesidad
-            <input id="situationQuery" type="search" autocomplete="off" placeholder="Ej.: cambiar IRPF, copiar en un examen, comprar una lente…" aria-describedby="situationStatus">
-          </label>
-          <label for="situationCategory">Ámbito
-            <select id="situationCategory"></select>
-          </label>
-          <button class="control" id="situationClear" type="button" disabled>Limpiar</button>
-        </div>
-        <p class="tool-status" id="situationStatus" aria-live="polite"></p>
-        <div class="situation-list" id="situationList"></div>
-      </section>
-
-      <section class="glossary" id="glosario" aria-labelledby="glossaryTitle">
-        <header class="glossary__heading">
-          <div>
-            <p class="context-line">Entender antes de tramitar</p>
-            <h2 id="glossaryTitle">Glosario para PDI recién incorporado</h2>
-            <p>Definiciones en lenguaje directo, ejemplos de uso y confusiones que conviene evitar. No sustituye el significado jurídico o técnico de la fuente enlazada.</p>
-            <a class="glossary__markdown" href="GLOSARIO_PDI.md">Abrir el glosario en Markdown</a>
-          </div>
-          <dl class="glossary__meta" aria-label="Cobertura del glosario">
-            <div><dt>Términos</dt><dd id="glossaryCount">—</dd></div>
-            <div><dt>Revisión</dt><dd id="glossaryReviewed">—</dd></div>
-          </dl>
-        </header>
-        <div class="glossary-toolbar">
-          <label for="glossaryQuery">Buscar término, sigla o significado
-            <input id="glossaryQuery" type="search" autocomplete="off" placeholder="Ej.: caja fija, AD, POD, TRL…" aria-describedby="glossaryStatus">
-          </label>
-          <label for="glossaryCategory">Ámbito
-            <select id="glossaryCategory"></select>
-          </label>
-          <button class="control" id="glossaryClear" type="button" disabled>Limpiar</button>
-        </div>
-        <p class="tool-status" id="glossaryStatus" aria-live="polite"></p>
-        <div class="glossary-list" id="glossaryList"></div>
-      </section>
-
-      <section class="task-board" id="tareas-frecuentes" aria-labelledby="taskBoardTitle">
-        <header class="task-board__heading">
-          <div><p class="context-line">Empieza por la acción</p><h2 id="taskBoardTitle">¿Qué necesitas hacer?</h2></div>
-          <p>Accesos directos a las decisiones más frecuentes. No necesitas conocer previamente el nombre administrativo del procedimiento.</p>
-        </header>
-        <nav class="task-grid" aria-label="Tareas frecuentes">
-          <a href="#asistente-tramites"><span>Orientación</span><strong>Resolver un trámite</strong><small>Recibe una ruta según ámbito, papel y momento.</small></a>
-          <a href="#preparador-candidatura"><span>Investigación</span><strong>Preparar una propuesta</strong><small>Comprueba elegibilidad y crea un calendario inverso.</small></a>
-          <a href="#calculadora-pod"><span>Docencia</span><strong>Revisar mi POD</strong><small>Estima dedicación y reducciones con la regla aplicada.</small></a>
-          <a href="#calculadora-personal"><span>Investigación</span><strong>Contratar personal</strong><small>Calcula el coste presupuestario completo.</small></a>
-          <a href="#calculadora-compras"><span>Gestión</span><strong>Tramitar una compra</strong><small>Identifica la ruta antes de hacer el pedido.</small></a>
-          <a href="#calculadora-retributiva"><span>Carrera PDI</span><strong>Consultar mi salario</strong><small>Combina categoría, antigüedad y complementos.</small></a>
-          <a href="#calculadora-viajes"><span>Gestión</span><strong>Preparar un viaje</strong><small>Planifica alojamiento, dietas y desplazamiento.</small></a>
-          <a href="#recursos-administrativos-y-defensa-de-derechos"><span>Derechos</span><strong>Actuar ante una resolución</strong><small>Conserva notificación, plazo, expediente y registro.</small></a>
-        </nav>
-      </section>
-
-      <aside class="attention-strip" aria-label="Actualizaciones y planificación">
-        <div><span>Antes de actuar</span><strong>Comprueba cambios y alertas</strong><p>Las normas, cuantías y convocatorias pueden cambiar después de la fecha de revisión.</p><a href="ALERTAS.md">Ver alertas documentadas</a></div>
-        <div><span>Durante el curso</span><strong>Anticipa hitos anuales</strong><p>Crea un calendario local con recordatorios orientativos y verifica después cada fecha oficial.</p><a href="#calendario-anual">Abrir calendario anual</a></div>
-      </aside>
-
-      <section class="domain-directory" id="ambitos" aria-labelledby="domainDirectoryTitle">
-        <header class="domain-directory__heading">
-          <div><p class="context-line">Segunda vía de entrada</p><h2 id="domainDirectoryTitle">Explorar por ámbito</h2></div>
-          <p>Cada ámbito reúne sus trámites habituales, herramientas relacionadas y capítulos del manual. La numeración canónica se mantiene.</p>
-        </header>
-        <div class="domain-grid" id="domainDirectory"><p class="loading-copy">Preparando ámbitos…</p></div>
-      </section>
-
-      <nav class="content-map" aria-label="Bloques de contenido detallado">
-        <a href="#situaciones"><span>01</span>Resolver situaciones</a>
-        <a href="#glosario"><span>02</span>Entender términos</a>
-        <a href="#herramientas-operativas"><span>03</span>Resolver y planificar</a>
-        <a href="#calculadoras-operativas"><span>04</span>Calcular y decidir</a>
-        <a href="#indice-capitulos"><span>05</span>Consultar capítulos</a>
+    <section class="hub-reference" aria-labelledby="referenceTitle">
+      <div class="hub-section-head"><h2 id="referenceTitle">Consulta y cálculo</h2><p>Recursos de apoyo separados del recorrido principal.</p></div>
+      <nav class="reference-strip" aria-label="Recursos de consulta">
+        <a href="herramientas/"><strong>Herramientas</strong><span>Asistentes y calculadoras</span></a>
+        <a href="glosario/"><strong>Glosario</strong><span>Términos nuevos del PDI</span></a>
+        <a href="manual/"><strong>Manual</strong><span>37 capítulos completos</span></a>
+        <a href="consulta.html"><strong>Vista completa</strong><span>Interfaz anterior en una página</span></a>
       </nav>
+    </section>
+  </main>
 
-      <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
-        <header class="operational-hub__heading">
-          <div>
-            <p class="context-line">Decidir · preparar · registrar · comprobar</p>
-            <h2 id="operationsTitle">Herramientas operativas</h2>
-            <p>Convierte una necesidad en una ruta de trabajo, consulta fichas homogéneas y crea recordatorios anuales sin enviar información fuera del navegador.</p>
-          </div>
-          <dl class="operations-meta" aria-label="Cobertura de las herramientas">
-            <div><dt>Fichas</dt><dd id="operationsProcedureCount">—</dd></div>
-            <div><dt>Hitos anuales</dt><dd id="operationsMilestoneCount">—</dd></div>
-            <div><dt>Datos revisados</dt><dd id="operationsReviewedDate">—</dd></div>
-          </dl>
-        </header>
-
-        <nav class="operations-nav" aria-label="Herramientas disponibles">
-          <a href="#asistente-tramites">01 · Asistente</a>
-          <a href="#fichas-procedimiento">02 · Fichas</a>
-          <a href="#calendario-anual">03 · Calendario</a>
-        </nav>
-
-        <article class="worktool worktool--assistant" id="asistente-tramites" aria-labelledby="wizardTitle">
-          <header class="worktool__heading">
-            <p class="worktool__number" aria-hidden="true">01</p>
-            <div><h3 id="wizardTitle">Asistente de procedimientos</h3><p>Selecciona el contexto. El resultado propone hasta cuatro rutas; no guarda ni transmite las respuestas.</p></div>
-          </header>
-          <form class="wizard-form" id="procedureWizardForm">
-            <fieldset>
-              <legend>Describe la necesidad</legend>
-              <div class="wizard-fields">
-                <label>Ámbito principal
-                  <select id="procedureArea" name="area"></select>
-                </label>
-                <label>Tu papel en el trámite
-                  <select id="procedureRole" name="role">
-                    <option value="all">Cualquier papel</option>
-                    <option value="docente">Docente o solicitante</option>
-                    <option value="ip">IP de proyecto</option>
-                    <option value="tutor">Tutor/a o director/a</option>
-                    <option value="responsable">Cargo o responsable</option>
-                  </select>
-                </label>
-                <label>Momento actual
-                  <select id="procedureMoment" name="moment">
-                    <option value="all">Cualquier momento</option>
-                    <option value="preparar">Estoy planificando</option>
-                    <option value="tramitar">Tengo que tramitarlo</option>
-                    <option value="incidencia">Ha surgido un problema</option>
-                    <option value="cerrar">Debo justificar o cerrar</option>
-                  </select>
-                </label>
-              </div>
-              <button class="control wizard-submit" type="submit">Obtener una ruta</button>
-            </fieldset>
-          </form>
-          <p class="sr-only" id="wizardStatus" aria-live="polite"></p>
-          <div class="procedure-stack procedure-stack--recommended" id="wizardResults"></div>
-        </article>
-
-        <article class="worktool" id="fichas-procedimiento" aria-labelledby="cardsTitle">
-          <header class="worktool__heading">
-            <p class="worktool__number" aria-hidden="true">02</p>
-            <div><h3 id="cardsTitle">Fichas normalizadas</h3><p>Cada ficha usa la misma estructura: unidad inicial, plazo, canal, documentos, secuencia, riesgo y fuente oficial.</p></div>
-          </header>
-          <div class="procedure-toolbar">
-            <label>Filtrar por ámbito
-              <select id="procedureCardArea"></select>
-            </label>
-            <label>Buscar en las fichas
-              <input id="procedureCardSearch" type="search" autocomplete="off" placeholder="Ej.: confidencialidad, presupuesto, examen…">
-            </label>
-          </div>
-          <p class="tool-status" id="procedureCardStatus" aria-live="polite"></p>
-          <div class="procedure-stack" id="procedureCardList"></div>
-        </article>
-
-        <article class="worktool worktool--calendar" id="calendario-anual" aria-labelledby="calendarTitle">
-          <header class="worktool__heading">
-            <p class="worktool__number" aria-hidden="true">03</p>
-            <div><h3 id="calendarTitle">Calendario anual</h3><p>Recordatorios internos orientativos. No representan fechas oficiales: cada convocatoria, notificación y calendario UV debe comprobarse.</p></div>
-          </header>
-          <div class="calendar-toolbar">
-            <label>Año del calendario
-              <select id="calendarYear"></select>
-            </label>
-            <div class="calendar-selection" role="group" aria-label="Seleccionar recordatorios">
-              <button class="control" id="calendarSelectAll" type="button">Seleccionar todo</button>
-              <button class="control" id="calendarSelectNone" type="button">Quitar todo</button>
-            </div>
-          </div>
-          <div class="calendar-list" id="calendarList"></div>
-          <p class="tool-status" id="calendarStatus" aria-live="polite"></p>
-          <div class="calendar-actions">
-            <button class="control control--primary" id="downloadCalendar" type="button">Descargar calendario .ics</button>
-            <button class="control" id="printCalendar" type="button">Imprimir checklist</button>
-          </div>
-          <p class="calendar-caveat"><strong>Privacidad:</strong> el archivo se genera localmente. No contiene datos personales ni se conecta con tu calendario; debes importarlo manualmente en la aplicación que utilices.</p>
-        </article>
-      </section>
-
-      <section class="funding-explorer" id="explorador-financiacion" aria-labelledby="fundingTitle">
-        <header class="funding-explorer__heading">
-          <div>
-            <p class="context-line">Filtrar · contrastar · verificar</p>
-            <h2 id="fundingTitle">Explorador de financiación I+D+i</h2>
-            <p>Encuentra instrumentos compatibles con tu necesidad y compara hasta tres. El resultado indica encaje con los filtros, no una probabilidad de concesión.</p>
-          </div>
-          <dl class="funding-meta" aria-label="Cobertura del catálogo de financiación">
-            <div><dt>Vías catalogadas</dt><dd id="fundingCallCount">—</dd></div>
-            <div><dt>Niveles</dt><dd id="fundingLevelCount">—</dd></div>
-            <div><dt>Revisión</dt><dd id="fundingReviewedDate">—</dd></div>
-          </dl>
-        </header>
-
-        <form class="funding-filters" id="fundingFilters">
-          <fieldset>
-            <legend>Define el encaje que necesitas</legend>
-            <div class="funding-filter-grid">
-              <label class="funding-filter--search" for="fundingQuery">Buscar programa, acrónimo o condición
-                <input id="fundingQuery" name="query" type="search" autocomplete="off" placeholder="Ej.: Pathfinder, fotónica, movilidad…">
-              </label>
-              <label for="fundingLevel">Nivel
-                <select id="fundingLevel" name="level"></select>
-              </label>
-              <label for="fundingPurpose">Finalidad principal
-                <select id="fundingPurpose" name="purpose"></select>
-              </label>
-              <label for="fundingProfile">Perfil
-                <select id="fundingProfile" name="profile"></select>
-              </label>
-              <label for="fundingParticipation">Participación
-                <select id="fundingParticipation" name="participation"></select>
-              </label>
-              <label for="fundingBeneficiary">Beneficiario directo
-                <select id="fundingBeneficiary" name="beneficiary"></select>
-              </label>
-              <label for="fundingTrl">TRL objetivo <span class="funding-label-note">orientativo</span>
-                <select id="fundingTrl" name="trl"></select>
-              </label>
-              <label for="fundingFrequency">Periodicidad
-                <select id="fundingFrequency" name="frequency"></select>
-              </label>
-            </div>
-            <div class="funding-filter-actions">
-              <button class="control" type="reset">Limpiar filtros</button>
-              <a href="#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion">Abrir la guía completa del capítulo 20</a>
-            </div>
-          </fieldset>
-        </form>
-
-        <aside class="funding-method" aria-label="Cómo interpretar el resultado">
-          <strong>Lectura responsable</strong>
-          <p>El TRL se usa como orientación, salvo cuando la convocatoria fija uno. Edición, plazo, elegibilidad, costes y cierre interno UV deben confirmarse siempre en la fuente enlazada.</p>
-        </aside>
-
-        <div class="funding-workspace">
-          <section class="funding-results" aria-labelledby="fundingResultsTitle">
-            <header class="funding-results__heading">
-              <div><h3 id="fundingResultsTitle">Resultados compatibles</h3><p id="fundingActiveFilters">Sin filtros aplicados.</p></div>
-              <p class="tool-status" id="fundingStatus" aria-live="polite"></p>
-            </header>
-            <div class="funding-card-list" id="fundingCardList"></div>
-          </section>
-
-          <section class="funding-comparison" id="fundingComparison" aria-labelledby="fundingComparisonTitle">
-            <header class="funding-comparison__heading">
-              <div><p class="context-line">Máximo 3</p><h3 id="fundingComparisonTitle">Comparación</h3></div>
-              <button class="control" id="clearFundingComparison" type="button" disabled>Vaciar comparación</button>
-            </header>
-            <p class="funding-comparison__status" id="fundingComparisonStatus" aria-live="polite">Selecciona dos o tres convocatorias para compararlas.</p>
-            <div id="fundingComparisonContent"></div>
-          </section>
-        </div>
-
-        <section class="funding-planner" id="preparador-candidatura" aria-labelledby="fundingPlannerTitle">
-          <header class="funding-planner__heading">
-            <div>
-              <p class="context-line">Go/no-go · calendario inverso · expediente</p>
-              <h3 id="fundingPlannerTitle">Preparador de candidatura</h3>
-              <p>Comprueba reglas decisivas y convierte una fecha límite en un plan con responsables. El resultado es preliminar: no certifica elegibilidad ni estima probabilidades.</p>
-            </div>
-            <p class="funding-planner__privacy"><strong>Local y privado.</strong> Los datos no salen de este navegador ni se almacenan.</p>
-          </header>
-
-          <form class="funding-planner__form" id="fundingPlannerForm">
-            <fieldset>
-              <legend>1 · Define la candidatura</legend>
-              <div class="funding-planner__basics">
-                <label class="funding-planner__call">Convocatoria
-                  <select name="callId" required></select>
-                </label>
-                <label>Título de trabajo
-                  <input name="projectTitle" type="text" maxlength="140" autocomplete="off" placeholder="Ej.: PIC-NVM · fotónica neuromórfica integrada">
-                </label>
-                <label>Tu papel
-                  <select name="role"><option value="pi">IP / solicitante</option><option value="coordinator">Coordinación de consorcio</option><option value="partner">Socio de consorcio</option><option value="institutional">Responsable institucional</option></select>
-                </label>
-                <label>Fecha límite externa
-                  <input name="externalDeadline" type="date" required>
-                </label>
-                <label>Cierre interno UV <span class="funding-label-note">si está confirmado</span>
-                  <input name="internalDeadline" type="date">
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>2 · Comprueba requisitos</legend>
-              <header class="funding-rule-head">
-                <div><h4 id="fundingRuleTitle"></h4><p id="fundingRuleMeta"></p></div>
-                <p id="fundingRuleCaveat"></p>
-              </header>
-              <div class="funding-planner__questions" id="fundingEligibilityQuestions"></div>
-            </fieldset>
-
-            <div class="funding-planner__form-actions">
-              <button class="control control--primary" type="submit">Evaluar y crear plan</button>
-              <button class="control" type="reset">Empezar de nuevo</button>
-            </div>
-          </form>
-
-          <section class="funding-plan-output" id="fundingPlanOutput" aria-labelledby="fundingPlanResultTitle" aria-live="polite" hidden>
-            <header class="funding-plan-result">
-              <div>
-                <p class="funding-eligibility-badge" id="fundingEligibilityBadge" data-status="review">Debe verificarse</p>
-                <h4 id="fundingPlanResultTitle">Resultado preliminar y plan de trabajo</h4>
-                <p id="fundingEligibilitySummary"></p>
-              </div>
-              <div class="funding-plan-actions">
-                <button class="control" id="downloadFundingPlanMarkdown" type="button" disabled>Descargar plan .md</button>
-                <button class="control" id="downloadFundingPlanIcs" type="button" disabled>Descargar hitos .ics</button>
-                <button class="control control--primary" id="openFundingBudget" type="button" disabled>Enviar base a presupuesto</button>
-              </div>
-            </header>
-
-            <section class="funding-plan-block" aria-labelledby="fundingChecksTitle">
-              <h5 id="fundingChecksTitle">Reglas aplicadas</h5>
-              <ul class="funding-checks" id="fundingEligibilityChecks"></ul>
-            </section>
-
-            <section class="funding-plan-block" aria-labelledby="fundingTimelineTitle">
-              <h5 id="fundingTimelineTitle">Calendario inverso</h5>
-              <div class="funding-timeline-wrap" role="region" aria-label="Calendario inverso de la candidatura" tabindex="0">
-                <table class="funding-timeline"><thead><tr><th>Fecha</th><th>Hito</th><th>Responsable</th><th>Estado</th></tr></thead><tbody id="fundingTimelineBody"></tbody></table>
-              </div>
-            </section>
-
-            <section class="funding-plan-block" aria-labelledby="fundingChecklistTitle">
-              <h5 id="fundingChecklistTitle">Lista operativa</h5>
-              <div class="funding-plan-checklist" id="fundingPlanChecklist"></div>
-            </section>
-
-            <aside class="funding-plan-risks" aria-labelledby="fundingRisksTitle">
-              <h5 id="fundingRisksTitle">Riesgos y decisiones pendientes</h5>
-              <ul id="fundingPlanRisks"></ul>
-            </aside>
-
-            <footer class="funding-plan-source"><strong>Fuente de las reglas:</strong> <a id="fundingPlannerSource" target="_blank" rel="noopener noreferrer"></a>. Verifica siempre la edición abierta y el circuito interno UV.</footer>
-          </section>
-        </section>
-      </section>
-
-      <section class="decision-tools" id="calculadoras-operativas" aria-labelledby="decisionToolsTitle">
-        <header class="decision-tools__heading">
-          <div><p class="context-line">Regla aplicada · desglose · advertencias</p><h2 id="decisionToolsTitle">Calculadoras para decidir</h2></div>
-          <p>Cinco estimadores locales para preparar una decisión antes de iniciar el expediente. Los datos no salen del navegador y cada herramienta enlaza su norma oficial.</p>
-        </header>
-
-        <nav class="decision-tools__nav" aria-label="Calculadoras disponibles">
-          <a href="#calculadora-pod">01 · POD</a><a href="#calculadora-compras">02 · Compras</a><a href="#calculadora-viajes">03 · Viajes</a><a href="#calculadora-personal">04 · Personal</a><a href="#calculadora-presupuesto">05 · Presupuesto</a>
-        </nav>
-
-        <div class="decision-grid">
-          <details class="decision-card" id="calculadora-pod" open>
-            <summary><span><small>01 · Docencia</small><strong>Dedicación POD</strong><span>Base anual y reducciones reconocibles.</span></span><b aria-hidden="true">+</b></summary>
-            <div class="decision-card__body">
-              <form class="decision-form" id="podForm">
-                <fieldset><legend>Situación de partida</legend><div class="decision-fields">
-                  <label>Categoría<select name="category"><option value="permanent">PDI permanente · no CU</option><option value="cu">Catedrático/a de universidad</option><option value="assistant_doctor">Ayudante Doctor/a</option></select></label>
-                  <label>Curso<select name="course"><option value="2026-27">2026-27</option><option value="2027-28">2027-28</option><option value="2028-29">2028-29</option><option value="2029-30">2029-30 o posterior</option></select></label>
-                  <label>Sexenios reconocidos<input name="sexennia" type="number" min="0" max="6" step="1" value="3"></label>
-                  <label>Años desde que dejó de estar activo<input name="inactiveYears" type="number" min="0" max="30" step="1" value="0"></label>
-                </div><label class="decision-check"><input name="active" type="checkbox" checked><span>El último sexenio está activo</span></label></fieldset>
-                <fieldset><legend>Reducciones a comprobar</legend><div class="decision-fields">
-                  <label>Proyectos públicos como IP<input name="publicProjects" type="number" min="0" max="20" step="1" value="2"></label>
-                  <label>Proyectos Erasmus+ elegibles<input name="erasmusProjects" type="number" min="0" max="20" step="1" value="0"></label>
-                  <label>Horas reconocidas por tesis<input name="thesisHours" type="number" min="0" max="60" step="5" value="30"></label>
-                  <label>Otras horas ya reconocidas<input name="otherHours" type="number" min="0" max="300" step="1" value="0"></label>
-                </div><label class="decision-check"><input name="exceptionalEuropean" type="checkbox"><span>Proyecto europeo con reducción excepcional de 40 h reconocida</span></label><label class="decision-check"><input name="age63" type="checkbox"><span>63 años o más al inicio del curso</span></label></fieldset>
-                <button class="control" type="reset">Restablecer</button>
-              </form>
-              <section class="decision-result" aria-label="Resultado POD"><p class="decision-result__eyebrow">Dedicación estimada</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
-            </div>
-            <footer class="decision-source"><strong>Fuente:</strong> <a href="https://webges.uv.es/uvTaeWeb/MuestraInformacionEdictoPublicoFrontAction.do?idEdictoSeleccionado=94719">ACGUV 4/2026</a>. Resultado orientativo: la asignación aprobada en POD prevalece.</footer>
-          </details>
-
-          <details class="decision-card" id="calculadora-compras">
-            <summary><span><small>02 · Gestión</small><strong>Ruta de una compra</strong><span>Límite, ofertas, AD y secuencia.</span></span><b aria-hidden="true">+</b></summary>
-            <div class="decision-card__body">
-              <form class="decision-form" id="purchaseForm">
-                <fieldset><legend>Necesidad</legend><div class="decision-fields">
-                  <label>Tipo<select name="type"><option value="supplies">Suministro general</option><option value="services">Servicio general</option><option value="works">Obra</option><option value="research" selected>Suministro/servicio de investigación · DA 54</option><option value="database">Base de datos o suscripción</option><option value="scientific-publication">Publicación/revisión de artículo científico</option><option value="conference-registration">Inscripción en congreso o jornada</option><option value="scientific-membership">Cuota de sociedad científica</option></select></label>
-                  <label>Importe sin IVA<input name="amount" type="number" min="0" max="100000000" step="0.01" value="18000"></label>
-                  <label>Duración prevista · meses<input name="durationMonths" type="number" min="1" max="240" step="1" value="4"></label>
-                </div></fieldset>
-                <fieldset><legend>Condiciones</legend><label class="decision-check"><input name="recurring" type="checkbox"><span>Necesidad recurrente o previsible cada año</span></label><label class="decision-check"><input name="framework" type="checkbox"><span>Existe acuerdo marco o sistema dinámico aplicable</span></label><label class="decision-check"><input name="exclusive" type="checkbox"><span>Proveedor objetivamente exclusivo y documentable</span></label><label class="decision-check"><input name="periodicOrForeign" type="checkbox"><span>Factura periódica o pago al extranjero</span></label></fieldset>
-                <button class="control" type="reset">Restablecer</button>
-              </form>
-              <section class="decision-result" aria-label="Resultado de compra"><p class="decision-result__eyebrow">Ruta propuesta</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><h4>Secuencia</h4><ol class="decision-steps"></ol><ul class="decision-warnings"></ul></section>
-            </div>
-            <footer class="decision-source"><strong>Fuente:</strong> <a href="https://www.uv.es/uvweb/gerencia/ca/novetats/instruccio-iuv-1/2025-sobre-regim-tramitacio-contractes-menors-1285923488803/Novetat.html?id=1286428168023">IUV 1/2025 sobre contratos menores</a>. Importes siempre sin IVA.</footer>
-          </details>
-
-          <details class="decision-card" id="calculadora-viajes">
-            <summary><span><small>03 · Gestión</small><strong>Comisión de servicios</strong><span>Alojamiento, manutención y desplazamiento.</span></span><b aria-hidden="true">+</b></summary>
-            <div class="decision-card__body">
-              <form class="decision-form" id="travelForm">
-                <fieldset><legend>Régimen y destino</legend><div class="decision-fields">
-                  <label>Financiación<select id="travelFunding" name="funding"><option value="uv">Fondos propios UV · régimen UV</option><option value="age-gva">Ayuda AGE/GVA u otro régimen</option></select></label>
-                  <label>Destino<select id="travelDestinationType" name="destinationType"><option value="rest-spain">Resto de España</option><option value="madrid-barcelona">Madrid o Barcelona</option><option value="foreign" selected>Extranjero</option></select></label>
-                  <label>País · denominación del anexo<select id="travelForeign" name="foreignId"></select></label>
-                  <label>Distancia desde el origen · km<input name="distance" type="number" min="0" max="100000" step="1" value="1800"></label>
-                  <label>Salida<input name="departureDateTime" type="datetime-local" value="2026-09-14T09:00"></label>
-                  <label>Regreso<input name="returnDateTime" type="datetime-local" value="2026-09-17T18:30"></label>
-                </div><label class="decision-check"><input name="exceedsWorkday" type="checkbox" checked><span>El servicio obliga a exceder la jornada ordinaria y está motivado</span></label><label class="decision-check"><input id="travelHighOffice" name="highOffice" type="checkbox"><span>Alto cargo UV en comisión por razón del cargo · importes reales justificados</span></label></fieldset>
-                <fieldset><legend>Gastos previstos</legend><div class="decision-fields">
-                  <label>Alojamiento real total<input name="actualLodging" type="number" min="0" max="1000000" step="0.01" value="510"></label>
-                  <label>Restauración real · solo alto cargo<input id="travelActualMeals" name="actualMeals" type="number" min="0" max="1000000" step="0.01" value="0" disabled></label>
-                  <label>Transporte público<input name="publicTransport" type="number" min="0" max="1000000" step="0.01" value="185"></label>
-                  <label>Inscripción planificada<input name="registration" type="number" min="0" max="1000000" step="0.01" value="420"></label>
-                  <label>Vehículo particular<select name="vehicle"><option value="car">Automóvil · 0,26 €/km</option><option value="motorcycle">Motocicleta · 0,106 €/km</option></select></label>
-                  <label>Kilómetros de vehículo particular<input name="kilometres" type="number" min="0" max="100000" step="1" value="0"></label>
-                </div></fieldset>
-                <button class="control" type="reset">Restablecer</button>
-              </form>
-              <section class="decision-result" aria-label="Resultado de viaje"><p class="decision-result__eyebrow">Máximo planificado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
-            </div>
-            <footer class="decision-source"><strong>Fuentes:</strong> <a href="https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf">reglas del Anexo 1a</a> y <a href="https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf">cuantías del Anexo 1b · 2026</a>.</footer>
-          </details>
-
-          <details class="decision-card" id="calculadora-personal">
-            <summary><span><small>04 · Investigación</small><strong>Coste de contratación</strong><span>Salario, cuotas empresariales y reserva.</span></span><b aria-hidden="true">+</b></summary>
-            <div class="decision-card__body">
-              <form class="decision-form" id="personnelForm">
-                <fieldset><legend>Hipótesis presupuestaria</legend><div class="decision-fields">
-                  <label>Salario bruto anual<input name="grossAnnual" type="number" min="0.01" max="10000000" step="0.01" value="32000"></label>
-                  <label>Duración · meses<input name="months" type="number" min="0.1" max="120" step="0.1" value="12"></label>
-                  <label>Tipo de contrato<select name="contractType"><option value="indefinite">Indefinido</option><option value="fixed" selected>Temporal ordinario · desempleo 6,70 %</option><option value="fixed-reduced">Temporal con desempleo reducido · 5,50 %</option></select></label>
-                  <label>Grupo de cotización<select name="contributionGroup"><option value="1" selected>1 · Titulación superior</option><option value="2">2 · Titulación técnica</option><option value="3">3</option><option value="4-7">4 a 7</option></select></label>
-                  <label>Horas contratadas al mes<input name="monthlyHours" type="number" min="1" max="160" step="0.1" value="160"></label>
-                  <label>Días exactos · solo si menos de un mes<input name="contractDays" type="number" min="1" max="29" step="1" value=""></label>
-                  <label>AT/EP empresarial · %<input name="accidentRate" type="number" min="0" max="20" step="0.01" value="1.5"></label>
-                  <label>Otros tipos empresariales · %<input name="otherRate" type="number" min="0" max="50" step="0.01" value="0"></label>
-                  <label>Otros costes del periodo<input name="otherCosts" type="number" min="0" max="10000000" step="0.01" value="0"></label>
-                  <label>Reserva de desviación · %<input name="reserveRate" type="number" min="0" max="50" step="0.1" value="2"></label>
-                </div><label class="decision-check"><input name="shortTermSurchargeExempt" type="checkbox"><span>El contrato inferior a 30 días está legalmente exento del recargo</span></label><p>Usa «temporal con desempleo reducido» solo para modalidades legalmente incluidas, como formación, prácticas, relevo, sustitución o contratación de personas con discapacidad. En tiempo parcial, indica las horas mensuales pactadas para aplicar la base mínima por hora.</p></fieldset>
-                <button class="control" type="reset">Restablecer</button>
-              </form>
-              <section class="decision-result" aria-label="Resultado de coste de personal"><p class="decision-result__eyebrow">Coste total estimado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
-            </div>
-            <footer class="decision-source"><strong>Fuentes:</strong> <a href="https://www.boe.es/eli/es/o/2026/03/30/pjc297">Orden PJC/297/2026</a> y <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/9932/4315?changeLanguage=es">tipos de cotización de la Seguridad Social</a>.</footer>
-          </details>
-
-          <details class="decision-card decision-card--budget" id="calculadora-presupuesto">
-            <summary><span><small>05 · Investigación</small><strong>Presupuesto de proyecto</strong><span>Costes, IVA, indirectos, cofinanciación y anualidades.</span></span><b aria-hidden="true">+</b></summary>
-            <div class="decision-card__body decision-card__body--budget">
-              <form class="decision-form budget-form" id="projectBudgetForm">
-                <fieldset><legend>Proyecto y reglas de la convocatoria</legend><div class="decision-fields">
-                  <label>Título de trabajo<input name="projectTitle" type="text" value="Proyecto de sensor fotónico integrado" autocomplete="off"></label>
-                  <label>Anualidades<select name="years"><option value="1">1 año</option><option value="2">2 años</option><option value="3" selected>3 años</option><option value="4">4 años</option><option value="5">5 años</option></select></label>
-                  <label>Financiación de costes elegibles · %<input name="fundingRate" type="number" min="0" max="100" step="0.1" value="100"></label>
-                  <label>Costes indirectos · %<input name="indirectRate" type="number" min="0" max="100" step="0.1" value="25"></label>
-                  <label>Reserva de planificación · %<input name="reserveRate" type="number" min="0" max="50" step="0.1" value="3"></label>
-                  <label>Límite máximo de ayuda · €<input name="grantCeiling" type="number" min="0" max="100000000" step="0.01" value="200000"></label>
-                </div><p class="budget-help">Los valores son un ejemplo editable, no una convocatoria. La reserva no se solicita como gasto salvo que las bases lo permitan.</p></fieldset>
-
-                <fieldset><legend>Distribución por anualidades</legend><div class="decision-fields budget-annualities" id="budgetAnnualities"></div><p class="budget-help">La distribución debe sumar exactamente el 100 %.</p></fieldset>
-
-                <fieldset><legend>Personal a contratar</legend><div class="budget-lines" id="budgetPersonnelRows"></div><button class="control budget-add" id="addBudgetPersonnel" type="button">Añadir personal</button></fieldset>
-
-                <fieldset><legend>Otros costes directos</legend><div class="budget-lines" id="budgetDirectRows"></div><button class="control budget-add" id="addBudgetDirect" type="button">Añadir partida</button></fieldset>
-
-                <div class="budget-form__actions"><button class="control" type="reset">Restablecer ejemplo</button></div>
-              </form>
-
-              <section class="decision-result budget-result" aria-label="Resultado del presupuesto de proyecto">
-                <p class="decision-result__eyebrow">Financiación solicitada</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl>
-                <section><h4>Por categoría</h4><div class="table-wrap"><table class="budget-table"><thead><tr><th>Categoría</th><th>Coste</th><th>Elegible</th></tr></thead><tbody id="budgetCategoryBody"></tbody></table></div></section>
-                <section><h4>Anualidades</h4><div class="table-wrap"><table class="budget-table"><thead><tr><th>Año</th><th>%</th><th>Presupuesto</th><th>Solicitado</th></tr></thead><tbody id="budgetAnnualityBody"></tbody></table></div></section>
-                <ul class="decision-warnings"></ul>
-                <button class="control control--primary budget-download" id="downloadProjectBudget" type="button">Descargar presupuesto .md</button>
-              </section>
-            </div>
-            <footer class="decision-source"><strong>Fuentes y criterio:</strong> <a href="https://www.boe.es/eli/es/l/2003/11/17/38/con">art. 31 de la Ley General de Subvenciones</a>, <a href="https://www.aei.gob.es/sites/default/files/convocatory_info/file/2026-03/Instrucciones_ejecuci%C3%B3n_justificaci%C3%B3n_PID_2024_v1_30032026.pdf">ejemplo AEI de indirectos</a>, <a href="https://www.boe.es/eli/es/o/2026/03/30/pjc297">cotización 2026</a> e <a href="https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/proyectos-investigacion/invesweb-1285867372160.html">INVESWEB UV</a>. Cada convocatoria puede definir reglas distintas.</footer>
-          </details>
-        </div>
-
-        <section class="case-library" id="casos-completos" aria-labelledby="caseLibraryTitle">
-          <header><div><p class="context-line">De la situación al expediente</p><h3 id="caseLibraryTitle">Casos completos</h3></div><p>Ocho escenarios realistas con hechos, decisión, documentos, secuencia, errores y resultado. Los cinco calculables pueden cargarse con un clic.</p></header>
-          <div class="case-filters" role="group" aria-label="Filtrar casos por ámbito">
-            <button class="filter is-active" type="button" data-case-filter="all" aria-pressed="true">Todos</button>
-            <button class="filter" type="button" data-case-filter="docencia" aria-pressed="false">Docencia</button>
-            <button class="filter" type="button" data-case-filter="investigacion" aria-pressed="false">Investigación</button>
-            <button class="filter" type="button" data-case-filter="gestion" aria-pressed="false">Gestión</button>
-            <button class="filter" type="button" data-case-filter="cumplimiento" aria-pressed="false">Derechos</button>
-          </div>
-          <p class="tool-status" id="decisionCaseStatus" aria-live="polite">8 casos visibles.</p>
-          <div class="case-list" id="decisionCaseList"></div>
-        </section>
-      </section>
-
-      <section class="salary-tool" id="calculadora-retributiva" aria-labelledby="salaryTitle">
-        <header class="salary-tool__heading">
-          <div>
-            <p class="context-line">PDI · retribuciones 2026</p>
-            <h2 id="salaryTitle">Calculadora de salario bruto</h2>
-          </div>
-          <p>Estimación con las tablas oficiales de la UV. Selecciona solo periodos y complementos que ya tengas reconocidos.</p>
-        </header>
-
-        <div class="salary-layout" id="salaryCalculator">
-          <form class="salary-form" id="salaryForm">
-            <fieldset>
-              <legend>Puesto y dedicación</legend>
-              <div class="salary-fields">
-                <label>Categoría PDI
-                  <select id="salaryCategory" name="category"></select>
-                </label>
-                <label>Dedicación
-                  <select id="salaryDedication" name="dedication"></select>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Antigüedad y méritos reconocidos</legend>
-              <div class="salary-fields salary-fields--three">
-                <label>N.º de trienios
-                  <input id="salaryTriennia" name="triennia" type="number" min="0" max="20" step="1" value="0" inputmode="numeric">
-                </label>
-                <label>N.º de quinquenios
-                  <input id="salaryQuinquenios" name="teachingPeriods" type="number" min="0" max="10" step="1" value="0" inputmode="numeric">
-                </label>
-                <label>N.º de sexenios
-                  <input id="salarySexenios" name="researchPeriods" type="number" min="0" max="10" step="1" value="0" inputmode="numeric">
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Complementos potenciales</legend>
-              <div class="salary-fields">
-                <label>Cargo académico
-                  <select id="academicRole" name="academicRole"></select>
-                </label>
-                <label>Otros complementos autonómicos reconocidos · €/año
-                  <input id="otherAutonomic" name="otherAutonomic" type="number" min="0" max="1000000" step="0.01" value="0" inputmode="decimal">
-                </label>
-              </div>
-              <label class="salary-check">
-                <input id="includeAutonomic" name="includeAutonomic" type="checkbox">
-                <span>Incluir el tramo autonómico 2026 por número total de quinquenios + sexenios</span>
-              </label>
-              <p class="salary-hint" id="salaryAutonomicHint"></p>
-            </fieldset>
-
-            <button class="control salary-reset" type="reset">Restablecer</button>
-          </form>
-
-          <section class="salary-result" aria-labelledby="salaryResultTitle">
-            <h3 id="salaryResultTitle">Resultado estimado</h3>
-            <div class="salary-totals">
-              <div class="salary-total salary-total--annual">
-                <span>Bruto anual</span>
-                <strong id="salaryAnnual">—</strong>
-              </div>
-              <div class="salary-total">
-                <span>Bruto mensual equivalente · 14 pagas</span>
-                <strong id="salaryPerPayment">—</strong>
-              </div>
-            </div>
-            <p class="salary-status sr-only" id="salaryStatus" aria-live="polite"></p>
-            <p class="salary-warning" id="salaryWarning" role="alert" hidden></p>
-            <h4>Desglose anual</h4>
-            <dl class="salary-breakdown" id="salaryBreakdown"></dl>
-            <p class="salary-caveat"><strong>No es una nómina.</strong> No incluye IRPF, cotizaciones, atrasos, incidencias personales ni el eventual 0,5 % condicionado al IPC de 2026. El importe «por paga» es un promedio: las extras reales pueden diferir.</p>
-          </section>
-        </div>
-
-        <footer class="salary-sources">
-          <strong>Fuentes oficiales:</strong>
-          <a href="https://www.uv.es/transparent/pdi/retribucions_pdi-UV.pdf">tabla retributiva UV 2026</a>,
-          <a href="https://www.uv.es/pdi/Complement%20Autonomic/2026/2026_6844_va.pdf">convocatoria autonómica 2026</a> y
-          <a href="https://www.uv.es/pdi/Complement%20Autonomic/2026/Annex%20355SG.pdf">ACGUV 355/2025</a>.
-        </footer>
-      </section>
-
-      <section class="filter-area" id="indice-capitulos" aria-labelledby="filterTitle">
-        <div><p class="context-line">Manual completo</p><h2 id="filterTitle">Capítulos por ámbito</h2><p>Filtra el contenido o utiliza el índice lateral para saltar directamente a un capítulo.</p></div>
-        <div class="filters" role="group" aria-label="Filtrar capítulos por ámbito">
-          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todo</button>
-          <button class="filter" type="button" data-filter="planificacion" aria-pressed="false">Orientación</button>
-          <button class="filter" type="button" data-filter="docencia" aria-pressed="false">Docencia</button>
-          <button class="filter" type="button" data-filter="pdi" aria-pressed="false">Carrera PDI</button>
-          <button class="filter" type="button" data-filter="investigacion" aria-pressed="false">Investigación</button>
-          <button class="filter" type="button" data-filter="gestion" aria-pressed="false">Gestión administrativa</button>
-          <button class="filter" type="button" data-filter="cumplimiento" aria-pressed="false">Cumplimiento y seguridad</button>
-        </div>
-      </section>
-
-      <section class="manual" id="manual" aria-label="Contenido del manual" aria-busy="true" data-state="loading">
-        <div class="loading-panel"><span class="loading-panel__block" aria-hidden="true"></span><p>Cargando la guía…</p></div>
-      </section>
-    </main>
-
-    <footer class="colophon"><p><strong>Uso personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a> · contenido no oficial.</strong> Esta web no representa a la Universitat de València, la ETSE, el DIE ni el ICMUV; no contiene recomendaciones ni sustituye normas, convocatorias, instrucciones, asesoramiento o criterios de las unidades competentes. Puede contener errores o información desactualizada. Las fuentes oficiales y las disposiciones vigentes prevalecen siempre. Interfaz estática generada a partir de <a href="MANUAL_PROCEDIMIENTOS.md">MANUAL_PROCEDIMIENTOS.md</a>.</p></footer>
-  </div>
-
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Volver al inicio">Arriba</button>
-  <div class="menu-scrim" id="menuScrim" hidden></div>
-  <noscript><div class="noscript">Esta interfaz necesita JavaScript para transformar y buscar el manual. El contenido completo sigue disponible en <a href="MANUAL_PROCEDIMIENTOS.md">formato Markdown</a>.</div></noscript>
+  <site-footer></site-footer>
+  <noscript><div class="hub-noscript">La búsqueda necesita JavaScript. Puedes acceder directamente al <a href="manual/">manual</a> o al <a href="resolver/">resolutor de situaciones</a>.</div></noscript>
 </body>
 </html>

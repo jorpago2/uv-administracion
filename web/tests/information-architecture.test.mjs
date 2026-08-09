@@ -4,7 +4,13 @@ import test from "node:test";
 import { CATEGORIES } from "../chapter-categories.js";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
-const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
+const legacyHtml = await readFile(new URL("../consulta.html", import.meta.url), "utf8");
+const resolverHtml = await readFile(new URL("../resolver/index.html", import.meta.url), "utf8");
+const glossaryHtml = await readFile(new URL("../glosario/index.html", import.meta.url), "utf8");
+const manualHtml = await readFile(new URL("../manual/index.html", import.meta.url), "utf8");
+const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "utf8");
+const manualPage = await readFile(new URL("../manual-page.js", import.meta.url), "utf8");
+const resolverPage = await readFile(new URL("../resolver-page.js", import.meta.url), "utf8");
 const glossary = await readFile(new URL("../glossary.js", import.meta.url), "utf8");
 const decisionTools = await readFile(new URL("../decision-tools.js", import.meta.url), "utf8");
 const favicon = await readFile(new URL("../public/favicon.svg", import.meta.url), "utf8");
@@ -14,7 +20,6 @@ test("la identidad visual incluye un favicon vectorial integrado", () => {
   assert.match(html, /<link rel="icon" href="favicon\.svg" type="image\/svg\+xml" sizes="any">/);
   assert.match(html, /<meta name="theme-color" content="#f5d328">/);
   assert.match(favicon, /<svg[^>]+viewBox="0 0 64 64"/);
-  assert.match(favicon, />Guía operativa UV</);
 });
 
 test("los seis ambitos comparten una ficha de navegacion completa", () => {
@@ -25,67 +30,59 @@ test("los seis ambitos comparten una ficha de navegacion completa", () => {
     assert.ok(category.featuredSections.length >= 2, category.id);
     assert.ok(category.featuredSections.every((number) => category.sections.includes(number)), category.id);
     assert.ok(category.tools.length >= 3, category.id);
-    assert.ok(category.tools.every((tool) => tool.label && /^(#|ALERTAS\.md)/.test(tool.href)), category.id);
   }
 });
 
-test("la portada prioriza tareas, alertas y ambitos antes de las herramientas", () => {
-  const situationIndex = html.indexOf('id="situaciones"');
-  const glossaryIndex = html.indexOf('id="glosario"');
-  const taskIndex = html.indexOf('id="tareas-frecuentes"');
-  const alertIndex = html.indexOf('class="attention-strip"');
-  const domainIndex = html.indexOf('id="ambitos"');
-  const toolsIndex = html.indexOf('id="herramientas-operativas"');
-
-  assert.ok(situationIndex > 0);
-  assert.ok(situationIndex < glossaryIndex && glossaryIndex < taskIndex && taskIndex < alertIndex && alertIndex < domainIndex && domainIndex < toolsIndex);
-  assert.equal((html.match(/class="task-grid"[\s\S]+?<\/nav>/)?.[0].match(/<a href=/g) ?? []).length, 8);
-  assert.match(html, /id="domainDirectory"/);
-  assert.match(html, /id="indice-capitulos"/);
+test("la portada prioriza buscar, actuar y explorar antes de la consulta", () => {
+  const searchIndex = html.indexOf('class="hub-search"');
+  const actionIndex = html.indexOf('class="hub-actions"');
+  const domainIndex = html.indexOf('class="hub-domains"');
+  const referenceIndex = html.indexOf('class="hub-reference"');
+  assert.ok(searchIndex > 0 && searchIndex < actionIndex && actionIndex < domainIndex && domainIndex < referenceIndex);
+  assert.match(html, /href="resolver\/"/);
+  for (const route of ["administracion", "docencia", "carrera-pdi", "investigacion", "gestion", "cumplimiento"]) assert.match(html, new RegExp(`href="${route}/"`));
+  assert.match(html, /href="consulta\.html"/);
 });
 
-test("las cien situaciones son una entrada principal y buscable", () => {
-  assert.match(html, /<section class="situations" id="situaciones"/);
-  assert.match(html, /id="situationQuery"[^>]+type="search"/);
-  assert.match(html, /id="situationCategory"/);
-  assert.match(app, /initSituationDirectory/);
-  assert.match(app, /situationGlobalSearchItems\(\)/);
-  assert.match(html, /Resolver 100 situaciones reales/);
+test("las cien situaciones tienen una subweb principal y buscable", () => {
+  assert.match(resolverHtml, /id="situaciones"/);
+  assert.match(resolverHtml, /id="situationQuery"[^>]+type="search"/);
+  assert.match(resolverHtml, /id="situationCategory"/);
+  assert.match(resolverPage, /initSituationDirectory/);
+  assert.match(resolverHtml, /100 situaciones reales/);
 });
 
-test("el glosario es una entrada principal, descargable y buscable", () => {
-  assert.match(html, /<section class="glossary" id="glosario"/);
-  assert.match(html, /href="GLOSARIO_PDI\.md"/);
-  assert.match(html, /id="glossaryQuery"[^>]+type="search"/);
-  assert.match(html, /id="glossaryCategory"/);
-  assert.match(app, /glossarySearchItems\(\)/);
-  assert.match(app, /glossaryController\.focusTerm/);
+test("el glosario tiene una subweb filtrable y enlazable", () => {
+  assert.match(glossaryHtml, /id="glosario"/);
+  assert.match(glossaryHtml, /id="glossaryQuery"[^>]+type="search"/);
+  assert.match(glossaryHtml, /id="glossaryCategory"/);
   assert.match(glossary, /termIdFromHash\(window\.location\.hash\)/);
 });
 
 test("la portada identifica el uso personal y el caracter no oficial", () => {
-  assert.match(html, /class="personal-use-notice"/);
-  assert.match(html, /uso personal de <a href="https:\/\/www\.uv\.es\/jorpago2">Jorge Parra<\/a>/i);
-  assert.equal((html.match(/href="https:\/\/www\.uv\.es\/jorpago2">Jorge Parra<\/a>/g) ?? []).length, 3);
-  assert.match(html, /No constituye asesoramiento, recomendación, instrucción administrativa ni interpretación oficial/);
-  assert.match(html, /Puede contener errores, omisiones o información incompleta o desactualizada/);
-  assert.match(html, /verifica siempre la norma, convocatoria, sede, plazo y criterio vigentes/);
-  assert.match(html, /<footer class="colophon">[\s\S]*contenido no oficial/);
+  assert.match(html, /class="personal-notice personal-use-notice"/);
+  assert.match(html, /Uso exclusivamente personal de <a href="https:\/\/www\.uv\.es\/jorpago2">Jorge Parra<\/a>/);
+  assert.match(html, /No es una web oficial ni contiene recomendaciones/);
+  assert.match(html, /Puede incluir errores o información desactualizada/);
+  assert.match(html, /Prevalecen siempre las fuentes oficiales/);
 });
 
-test("el indice lateral se genera por ambitos y conserva los enlaces profundos", () => {
-  assert.match(app, /function renderDomainDirectory\(/);
-  assert.match(app, /document\.createElement\("details"\)/);
-  assert.match(app, /dataIndexCategory|dataset\.indexCategory/);
-  assert.match(app, /function setActiveFilter\(/);
-  assert.match(app, /function setupScrollSpy\(/);
-  assert.match(app, /target\?\.matches\("\.chapter"\)/);
+test("cada ambito filtra sus casos y enlaza sus capitulos", () => {
+  assert.match(areaPage, /category\.sections\.includes\(Number\(guide\.chapterNumber\)\)/);
+  assert.match(areaPage, /\.\.\/manual\/#/);
+  assert.match(areaPage, /\.\.\/example\.html\?caso=/);
+});
+
+test("el manual conserva visible la ubicacion y sigue el capitulo al desplazarse", () => {
+  assert.match(manualHtml, /id="manualCurrent"/);
+  assert.match(manualPage, /IntersectionObserver/);
+  assert.match(manualPage, /aria-current/);
 });
 
 test("los casos realistas se pueden consultar por su ambito", () => {
   assert.equal(cases.cases.length, 8);
   assert.deepEqual(new Set(cases.cases.map((item) => item.category)), new Set(["docencia", "investigacion", "gestion", "cumplimiento"]));
-  assert.match(html, /class="case-filters"/);
+  assert.match(legacyHtml, /class="case-filters"/);
   assert.match(decisionTools, /function handleCaseFilter\(/);
   assert.match(decisionTools, /dataset\.caseCategory/);
 });

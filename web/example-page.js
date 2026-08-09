@@ -30,8 +30,8 @@ function renderGuide(item) {
   const breadcrumb = el("nav", "breadcrumb");
   breadcrumb.setAttribute("aria-label", "Migas de pan");
   if (item.situationNumber) {
-    breadcrumb.append(link("Situaciones", "index.html#situaciones"), text(" / "), link(`Situación ${item.situationNumber}`, `example.html?caso=${encodeURIComponent(item.id)}`), text(" / "), link(`Capítulo ${item.chapterNumber}`, `index.html#${item.chapterSlug}`));
-  } else breadcrumb.append(link("Manual", "index.html#indice-capitulos"), text(" / "), link(`Capítulo ${item.chapterNumber}`, `index.html#${item.chapterSlug}`));
+    breadcrumb.append(link("Situaciones", "resolver/"), text(" / "), link(`Situación ${item.situationNumber}`, `example.html?caso=${encodeURIComponent(item.id)}`), text(" / "), link(`Capítulo ${item.chapterNumber}`, `manual/#${item.chapterSlug}`));
+  } else breadcrumb.append(link("Manual", "manual/"), text(" / "), link(`Capítulo ${item.chapterNumber}`, `manual/#${item.chapterSlug}`));
 
   const hero = el("header", "guide-hero");
   const heroCopy = el("div", "guide-hero__copy");
@@ -272,7 +272,7 @@ function renderRelatedNavigation(item) {
   const next = activeGuides[index + 1];
   const guideHref = (guide) => guide.situationNumber ? `example.html?caso=${encodeURIComponent(guide.id)}` : `example.html?capitulo=${guide.chapterNumber}`;
   if (previous) section.append(link(`← ${previous.title}`, guideHref(previous)));
-  section.append(link("Volver al capítulo", `index.html#${item.chapterSlug}`));
+  section.append(link("Volver al capítulo", `manual/#${item.chapterSlug}`));
   if (next) section.append(link(`${next.title} →`, guideHref(next)));
   return section;
 }

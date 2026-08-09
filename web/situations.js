@@ -16,7 +16,7 @@ export function situationGlobalSearchItems() {
   return situationSearchItems(situationGuides);
 }
 
-export function initSituationDirectory(root) {
+export function initSituationDirectory(root, options = {}) {
   if (!(root instanceof HTMLElement)) throw new TypeError("Falta la sección de situaciones.");
   const elements = {
     query: root.querySelector("#situationQuery"), category: root.querySelector("#situationCategory"), clear: root.querySelector("#situationClear"),
@@ -43,7 +43,7 @@ export function initSituationDirectory(root) {
   function render() {
     const guides = searchSituationGuides(situationGuides, state.query, state.category);
     const fragment = document.createDocumentFragment();
-    guides.forEach((guide) => fragment.append(renderCard(guide)));
+    guides.forEach((guide) => fragment.append(renderCard(guide, options.detailBase ?? "example.html")));
     if (!guides.length) fragment.append(renderEmpty());
     elements.list.replaceChildren(fragment);
     elements.status.textContent = guides.length === 1 ? `1 situación visible de ${situationGuides.length}.` : `${guides.length} situaciones visibles de ${situationGuides.length}.`;
@@ -51,7 +51,7 @@ export function initSituationDirectory(root) {
   }
 }
 
-function renderCard(guide) {
+function renderCard(guide, detailBase) {
   const article = document.createElement("article");
   article.className = "situation-card";
   article.id = `situacion-${guide.id}`;
@@ -77,7 +77,7 @@ function renderCard(guide) {
   outcome.append(outcomeLabel, document.createTextNode(` ${guide.outcome}`));
   const link = document.createElement("a");
   link.className = "situation-card__open";
-  link.href = `example.html?caso=${encodeURIComponent(guide.id)}`;
+  link.href = `${detailBase}?caso=${encodeURIComponent(guide.id)}`;
   link.textContent = "Abrir resolución paso a paso";
   article.append(header, scenario, outcome, link);
   return article;

@@ -3,7 +3,7 @@ import { BUDGET_PRESETS, getRulePackage } from "./funding-planner-data.js";
 import { buildApplicationPlan, buildPlanIcs, buildPlanMarkdown, evaluateEligibility } from "./funding-planner-model.js";
 import { FUNDING_LEVELS, formatIsoDate, validateFundingData } from "./funding-explorer-model.js";
 
-export function initFundingPlanner(root) {
+export function initFundingPlanner(root, options = {}) {
   if (!root) throw new Error("No se encontró el planificador de candidaturas.");
   const data = validateFundingData(fundingData);
   const elements = getElements(root);
@@ -33,7 +33,7 @@ export function initFundingPlanner(root) {
   });
   elements.downloadMarkdown.addEventListener("click", () => downloadPlan("markdown", state));
   elements.downloadIcs.addEventListener("click", () => downloadPlan("ics", state));
-  elements.openBudget.addEventListener("click", () => applyBudgetPreset(elements, state));
+  elements.openBudget.addEventListener("click", () => applyBudgetPreset(elements, state, options.budgetHref));
   root.addEventListener("funding:select", (event) => {
     if (!data.calls.some((call) => call.id === event.detail?.callId)) return;
     elements.call.value = event.detail.callId;
@@ -277,11 +277,17 @@ function downloadPlan(type, state) {
   URL.revokeObjectURL(url);
 }
 
-function applyBudgetPreset(elements, state) {
+function applyBudgetPreset(elements, state, budgetHref) {
   const call = state.call;
   const preset = call ? BUDGET_PRESETS[call.id] : null;
   if (!preset) return;
-  window.dispatchEvent(new CustomEvent("funding:budget-preset", { detail: { ...preset, projectTitle: elements.projectTitle.value.trim() || `Candidatura ${call.shortName}` } }));
+  const detail = { ...preset, projectTitle: elements.projectTitle.value.trim() || `Candidatura ${call.shortName}` };
+  if (budgetHref) {
+    try { sessionStorage.setItem("funding:budget-preset", JSON.stringify(detail)); } catch { /* La navegación sigue disponible sin preajuste. */ }
+    window.location.href = budgetHref;
+    return;
+  }
+  window.dispatchEvent(new CustomEvent("funding:budget-preset", { detail }));
   window.location.hash = "calculadora-presupuesto";
 }
 
