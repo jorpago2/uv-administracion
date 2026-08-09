@@ -65,5 +65,11 @@ Get-ChildItem -LiteralPath (Join-Path $repositoryRoot 'catalogos') -Filter '*.cs
 }
 
 $sectionCount = ([regex]::Matches($markdown, '(?m)^##\s+\d+\.\s+')).Count
+
+& node (Join-Path $PSScriptRoot 'generar_glosario.mjs')
+if ($LASTEXITCODE -ne 0) {
+    throw 'No se pudo generar el glosario Markdown.'
+}
+
 Write-Host "Generado: $outputPath"
 Write-Host "Capítulos detectados: $sectionCount"

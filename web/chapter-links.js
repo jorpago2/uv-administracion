@@ -1,0 +1,43 @@
+export const CHAPTER_ANCHORS = Object.freeze({
+  1: "como-utilizar-este-manual",
+  2: "directorio-rapido-de-procedimientos",
+  3: "rutina-anual-recomendada",
+  4: "lista-de-comprobacion-documental-personal",
+  5: "administracion-electronica-uv",
+  6: "gobierno-de-la-etse-el-die-y-el-icmuv",
+  7: "mantenimiento-del-manual",
+  8: "dedicacion-docente-oca-y-pod",
+  9: "docencia-evaluacion-y-examenes",
+  10: "tfg-y-tfm",
+  11: "practicas-externas-en-la-etse",
+  12: "calidad-docente-docentia-e-innovacion-educativa",
+  13: "tutorias-atencion-al-estudiantado-y-situaciones-especiales",
+  14: "movilidad-e-internacionalizacion",
+  15: "doctorado-y-direccion-de-tesis",
+  16: "permisos-licencias-vacaciones-y-sabaticos",
+  17: "carrera-acreditacion-y-promocion",
+  18: "nomina-retribuciones-y-prevision-social",
+  19: "cambio-de-situacion-cese-y-jubilacion",
+  20: "solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion",
+  21: "gestion-de-proyectos-concedidos",
+  22: "contratacion-de-personal-con-cargo-a-proyectos",
+  23: "contratos-y-convenios-con-empresas-articulo-60-losu",
+  24: "propiedad-intelectual-patentes-software-y-secretos",
+  25: "integridad-cientifica-autoria-e-inteligencia-artificial",
+  26: "ciencia-abierta-y-gestion-de-datos-de-investigacion",
+  27: "transferencia-emprendimiento-y-empresas-derivadas",
+  28: "equipamiento-cientifico-e-infraestructuras-comunes",
+  29: "compras-y-contratos-menores",
+  30: "viajes-congresos-dietas-e-inscripciones",
+  31: "proteccion-de-datos-y-seguridad-de-la-informacion",
+  32: "etica-de-la-investigacion-y-bioseguridad",
+  33: "prevencion-de-riesgos-y-laboratorios",
+  34: "igualdad-convivencia-acoso-y-discriminacion",
+  35: "incompatibilidades-conflicto-de-interes-y-uso-de-recursos",
+  36: "recursos-administrativos-y-defensa-de-derechos",
+  37: "quejas-denuncias-y-proteccion-frente-a-represalias"
+});
+
+export function chapterHref(number) {
+  return `#${CHAPTER_ANCHORS[number] ?? "indice-capitulos"}`;
+}

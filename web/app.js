@@ -16,6 +16,7 @@ import {
 import { initDecisionTools } from "./decision-tools.js";
 import { initFundingExplorer } from "./funding-explorer.js";
 import { initFundingPlanner } from "./funding-planner.js";
+import { glossarySearchItems, initGlossary } from "./glossary.js";
 import { initOperationalTools } from "./operational-tools.js";
 import { initProjectBudget } from "./project-budget.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
@@ -62,6 +63,7 @@ assertRequiredElements(elements);
 bindEvents();
 syncMenuMode();
 initOperationalTools(elements.operationalHub);
+const glossaryController = initGlossary(document.querySelector("#glosario"));
 initFundingExplorer(document.querySelector("#explorador-financiacion"));
 initFundingPlanner(document.querySelector("#explorador-financiacion"));
 initDecisionTools(document.querySelector("#calculadoras-operativas"));
@@ -207,8 +209,20 @@ function buildSearchEntries(sections) {
     priority: 10
   }));
 
+  const glossary = glossarySearchItems().map((item) => prepareSearchEntry({
+    id: `glossary-${item.id}`,
+    type: "glossary",
+    typeLabel: "Glosario",
+    title: item.term,
+    category: item.category,
+    content: item.content,
+    href: `#termino-${item.id}`,
+    queryValue: item.id,
+    priority: 40
+  }));
+
   const tools = NAV_LANDMARKS
-    .filter((item) => !["inicio", "tareas-frecuentes", "ambitos", "indice-capitulos"].includes(item.id))
+    .filter((item) => !["inicio", "glosario", "tareas-frecuentes", "ambitos", "indice-capitulos"].includes(item.id))
     .map((item) => prepareSearchEntry({
       id: `tool-${item.id}`,
       type: "tool",
@@ -221,7 +235,7 @@ function buildSearchEntries(sections) {
       priority: 35
     }));
 
-  return [...chapters, ...examples, ...procedures, ...tools, ...fundingCalls, ...cases];
+  return [...chapters, ...examples, ...procedures, ...glossary, ...tools, ...fundingCalls, ...cases];
 }
 
 function categoryLabelFor(categoryId) {
@@ -640,7 +654,7 @@ function updateSearchStatus() {
     elements.searchStatus.textContent = `${resultLabel}; ${chapterLabel}.`;
     return;
   }
-  elements.searchStatus.textContent = `${state.sections.length} capítulos, trámites, herramientas, convocatorias y casos indexados.`;
+  elements.searchStatus.textContent = `${state.sections.length} capítulos y ${glossaryController.count} términos, además de trámites, herramientas, convocatorias y casos indexados.`;
 }
 
 function applyFilters() {
@@ -795,6 +809,12 @@ function bindEvents() {
         fundingInput.value = entry.queryValue;
         fundingInput.dispatchEvent(new Event("input", { bubbles: true }));
       }
+    }
+    if (entry.type === "glossary") {
+      event.preventDefault();
+      glossaryController.focusTerm(entry.queryValue);
+      history.replaceState(null, "", entry.href);
+      return;
     }
     const target = entry.href.startsWith("#") ? document.querySelector(entry.href) : null;
     if (target?.hidden || target?.closest("[hidden]")) {

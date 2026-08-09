@@ -83,9 +83,36 @@
             <button type="button" data-search-suggestion="permisos">Permisos</button>
             <button type="button" data-search-suggestion="financiación europea">Financiación europea</button>
             <button type="button" data-search-suggestion="compras">Compras</button>
+            <button type="button" data-search-suggestion="caja fija">Caja fija</button>
           </div>
           <section class="search-results" id="searchResults" aria-label="Resultados de búsqueda" hidden></section>
         </form>
+      </section>
+
+      <section class="glossary" id="glosario" aria-labelledby="glossaryTitle">
+        <header class="glossary__heading">
+          <div>
+            <p class="context-line">Entender antes de tramitar</p>
+            <h2 id="glossaryTitle">Glosario para PDI recién incorporado</h2>
+            <p>Definiciones en lenguaje directo, ejemplos de uso y confusiones que conviene evitar. No sustituye el significado jurídico o técnico de la fuente enlazada.</p>
+            <a class="glossary__markdown" href="GLOSARIO_PDI.md">Abrir el glosario en Markdown</a>
+          </div>
+          <dl class="glossary__meta" aria-label="Cobertura del glosario">
+            <div><dt>Términos</dt><dd id="glossaryCount">—</dd></div>
+            <div><dt>Revisión</dt><dd id="glossaryReviewed">—</dd></div>
+          </dl>
+        </header>
+        <div class="glossary-toolbar">
+          <label for="glossaryQuery">Buscar término, sigla o significado
+            <input id="glossaryQuery" type="search" autocomplete="off" placeholder="Ej.: caja fija, AD, POD, TRL…" aria-describedby="glossaryStatus">
+          </label>
+          <label for="glossaryCategory">Ámbito
+            <select id="glossaryCategory"></select>
+          </label>
+          <button class="control" id="glossaryClear" type="button" disabled>Limpiar</button>
+        </div>
+        <p class="tool-status" id="glossaryStatus" aria-live="polite"></p>
+        <div class="glossary-list" id="glossaryList"></div>
       </section>
 
       <section class="task-board" id="tareas-frecuentes" aria-labelledby="taskBoardTitle">
@@ -119,9 +146,10 @@
       </section>
 
       <nav class="content-map" aria-label="Bloques de contenido detallado">
-        <a href="#herramientas-operativas"><span>01</span>Resolver y planificar</a>
-        <a href="#calculadoras-operativas"><span>02</span>Calcular y decidir</a>
-        <a href="#indice-capitulos"><span>03</span>Consultar capítulos</a>
+        <a href="#glosario"><span>01</span>Entender términos</a>
+        <a href="#herramientas-operativas"><span>02</span>Resolver y planificar</a>
+        <a href="#calculadoras-operativas"><span>03</span>Calcular y decidir</a>
+        <a href="#indice-capitulos"><span>04</span>Consultar capítulos</a>
       </nav>
 
       <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">

@@ -43,6 +43,17 @@ test("las nuevas entradas por tareas y ambitos responden sin columnas rigidas", 
   assert.match(wide, /\.task-grid\s*\{[^}]*repeat\(4,\s*minmax\(0,\s*1fr\)/);
 });
 
+test("el glosario pasa de una a dos columnas sin perder controles contraibles", () => {
+  const toolbar = ruleFor(".glossary-toolbar");
+  const wideDesktop = mediaBetween("@media (min-width: 75rem)", "@media (min-width: 90rem)");
+
+  assert.match(toolbar, /display:\s*grid/);
+  assert.match(styles, /\.glossary-toolbar input, \.glossary-toolbar select\s*\{[^}]*min-width:\s*0/);
+  assert.match(ruleFor(".glossary-card"), /min-width:\s*0/);
+  assert.match(wideDesktop, /\.glossary-list\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)/);
+  assert.match(wideDesktop, /\.glossary-card\[open\]\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/);
+});
+
 test("el planificador puede contraerse sin desbordar", () => {
   assert.match(styles, /\.funding-plan-output > \*,[^}]*min-width:\s*0/);
   assert.match(ruleFor(".funding-plan-result"), /min-width:\s*0/);

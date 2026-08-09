@@ -1,6 +1,6 @@
 # Interfaz web de la guía operativa UV
 
-Frontend Vite sin backend. El contenido procede de `../MANUAL_PROCEDIMIENTOS.md` y se transforma en `data/manual.json`.
+Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene como dato estructurado en `data/glossary.json` y se publica también como Markdown.
 
 ## Regenerar los datos
 
@@ -10,7 +10,7 @@ Desde la raíz del repositorio:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\generar_datos_web.ps1
 ```
 
-Ejecuta este paso después de modificar el manual. También actualiza `public/` con el manual, las alertas y los catálogos enlazados.
+Ejecuta este paso después de modificar el manual o el glosario. También actualiza `public/` con ambos documentos, las alertas y los catálogos enlazados.
 
 ## Desarrollo local
 
@@ -50,6 +50,8 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `tokens.css`: paleta, tipografías, escalas, bordes, sombras y movimiento.
 - `styles.css`: diseño responsive, impresión y estados de interacción.
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
+- `glossary.js`: representación, búsqueda y filtros accesibles del glosario PDI.
+- `chapter-links.js`: enlaces canónicos compartidos de los 37 capítulos.
 - `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías detalladas, accesibles mediante `example.html?capitulo=N`.
 - `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
 - `example-transferability.js`: alcance reutilizable de cada caso: situaciones equivalentes, variables que deben adaptarse y condiciones que cambian la ruta.
@@ -66,6 +68,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `salary-calculator.js`: controles y representación de la calculadora retributiva.
 - `salary-model.js`: cálculo puro y validable de los importes anuales.
 - `data/manual.json`: dato generado; no debe editarse a mano.
+- `data/glossary.json`: términos, ejemplos, advertencias y fuentes oficiales del glosario.
 - `data/operations.json`: fichas normalizadas e hitos anuales; cada cambio debe conservar su fuente y fecha de revisión.
 - `data/funding-calls.json`: convocatorias estructuradas por nivel, finalidad, perfil, participación, beneficiario, TRL orientativo, financiación, periodicidad, edición y fuente oficial.
 - `data/decision-cases.json`: ocho expedientes realistas y sus fuentes oficiales.

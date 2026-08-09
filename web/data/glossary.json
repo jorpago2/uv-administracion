@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "reviewed": "2026-08-09",
+    "scope": "Vocabulario operativo para PDI de nueva incorporación en la Universitat de València"
+  },
+  "categories": [
+    { "id": "estructura", "label": "Personas y estructuras" },
+    { "id": "administracion", "label": "Administración" },
+    { "id": "economia", "label": "Gestión económica" },
+    { "id": "investigacion", "label": "Investigación" },
+    { "id": "docencia", "label": "Docencia y carrera PDI" },
+    { "id": "cumplimiento", "label": "Cumplimiento y seguridad" }
+  ],
+  "sources": {
+    "estatutos": { "label": "Estatutos de la Universitat de València", "url": "https://www.uv.es/comunicacio/estatutos.pdf" },
+    "sede": { "label": "Administración electrónica UV", "url": "https://www.uv.es/servicio-sistemas-informacion-digitalizacion/es/sede-electronica-digitalizacion/sede-electronica.html" },
+    "ley39": { "label": "Ley 39/2015 del procedimiento administrativo común", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565" },
+    "anexo1a": { "label": "Presupuesto UV 2026 · Anexo 1a", "url": "https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf" },
+    "iuv1": { "label": "IUV 1/2025 sobre contratos menores", "url": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693" },
+    "lcsp": { "label": "Ley 9/2017 de contratos del sector público", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902" },
+    "sda": { "label": "Acuerdos marco y SDA de suministros UV", "url": "https://www.uv.es/uvweb/servicio-contratacion-administrativa/es/documentacion-acuerdos-marco-sda-suministros-1286077243115.html" },
+    "oca": { "label": "Sección de Planificación y Análisis de RR. HH. PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-planificacion-analisis-1285902628792.html" },
+    "rrhh": { "label": "Servicios y contacto de RR. HH. PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/ubicacion-contacto/horario-atencion-al-publico-1285911217756.html" },
+    "sgi": { "label": "Servicio de Gestión de la Investigación UV", "url": "https://www.uv.es/uvweb/servicio-investigacion/es/servicio-gestion-investigacion-1285913826831.html" },
+    "losu": { "label": "Ley Orgánica 2/2023 del Sistema Universitario", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-7500" },
+    "transferencia": { "label": "Contratos al amparo de la legislación universitaria", "url": "https://www.uv.es/uvweb/servicio-investigacion/es/colaboracion-empresa/contratos-al-amparo-legislacion-universitaria-1286322242007.html" },
+    "horizon": { "label": "Horizonte Europa · cómo participar", "url": "https://rea.ec.europa.eu/horizon-europe-how-apply_en" },
+    "aneca": { "label": "ANECA · acreditación estatal", "url": "https://ayuda.aneca.es/hc/es/articles/21625407058204-4-Inicio-e-instrucci%C3%B3n-del-procedimiento-para-la-obtenci%C3%B3n-de-la-acreditaci%C3%B3n-estatal-para-el-acceso-a-los-cuerpos-docentes-universitarios" },
+    "retribuciones": { "label": "Sección de Gestión de PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html" },
+    "rgpd": { "label": "Reglamento general de protección de datos", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj" },
+    "dpd": { "label": "Delegación de Protección de Datos UV", "url": "https://www.uv.es/uvweb/universidad/es/universitat/delegacion-proteccion-datos-/delegacion-1286042855523.html" },
+    "ceih": { "label": "CEIH · instrucciones para investigación con personas", "url": "https://www.uv.es/comision-etica-investigacion-experimental/es/etica-investigacion-humanos/instrucciones.html" },
+    "prevencion": { "label": "Servicio de Prevención y Medio Ambiente UV", "url": "https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/servicio-prevencion-medio-ambiente-1285862846538.html" }
+  },
+  "terms": [
+    {
+      "id": "pdi", "term": "PDI", "expanded": "Personal docente e investigador", "category": "estructura",
+      "definition": "Personal que desarrolla funciones docentes e investigadoras en la universidad bajo alguna de las figuras funcionariales o laborales previstas.",
+      "practical": "Tu categoría, dedicación y relación jurídica determinan docencia, permisos, retribuciones y algunos trámites.",
+      "caution": "PDI no identifica una categoría concreta: TU, CU, permanente laboral, ayudante doctor o asociado tienen regímenes diferentes.",
+      "aliases": ["profesorado", "personal docente investigador"], "sourceIds": ["losu", "rrhh"], "chapters": [8, 16, 18]
+    },
+    {
+      "id": "ptgas", "term": "PTGAS", "expanded": "Personal técnico, de gestión y de administración y servicios", "category": "estructura",
+      "definition": "Personal que presta apoyo técnico, administrativo y de gestión a la docencia, la investigación y el funcionamiento institucional.",
+      "practical": "Muchas unidades gestoras y servicios centrales están atendidos por PTGAS, pero sus integrantes actúan dentro de competencias y circuitos concretos.",
+      "caution": "Que una persona te ayude a tramitar no significa que pueda autorizar o resolver el expediente.",
+      "aliases": ["PAS", "personal de administración", "personal técnico de gestión"], "sourceIds": ["losu", "estatutos"], "chapters": [1, 2, 6]
+    },
+    {
+      "id": "estructuras-uv", "term": "ETSE, DIE e ICMUV", "expanded": "Centro, departamento e instituto de investigación", "category": "estructura",
+      "definition": "Son estructuras distintas de la UV: la ETSE organiza titulaciones y servicios del centro; el DIE gestiona docencia y plantilla departamental; el ICMUV organiza su actividad investigadora.",
+      "practical": "Un mismo asunto puede necesitar actuaciones coordinadas de dos o tres estructuras.",
+      "caution": "La adscripción a una estructura no transfiere automáticamente competencias, presupuesto o capacidad de firma a otra.",
+      "aliases": ["ETSE", "DIE", "ICMUV", "centro", "departamento", "instituto"], "sourceIds": ["estatutos"], "chapters": [2, 6]
+    },
+    {
+      "id": "ip", "term": "IP", "expanded": "Investigador o investigadora principal", "category": "estructura",
+      "definition": "Persona responsable de la dirección científica y del cumplimiento de las obligaciones de una actividad o proyecto de investigación.",
+      "practical": "Suele validar necesidad, elegibilidad y relación con el proyecto, además de supervisar ejecución científica y entregables.",
+      "caution": "Ser IP no te convierte en representante legal de la UV ni en comprador, empleador o propietario personal de los equipos.",
+      "aliases": ["investigador principal", "responsable científico", "principal investigator", "PI"], "sourceIds": ["sgi", "estatutos"], "chapters": [20, 21, 22]
+    },
+    {
+      "id": "sgi", "term": "SGI", "expanded": "Servicio de Gestión de la Investigación", "category": "estructura",
+      "definition": "Servicio UV que apoya la preparación, tramitación, ejecución, seguimiento y justificación de actividades de investigación dentro de su ámbito.",
+      "practical": "Conviene contactarlo antes del cierre interno de una propuesta y antes de ejecutar cambios o gastos dudosos de un proyecto concedido.",
+      "caution": "El SGI asesora y tramita, pero el IP conserva sus responsabilidades científicas y la entidad financiadora resuelve la ayuda.",
+      "aliases": ["Servicio de Gestión de la Investigación", "servicio de investigación"], "sourceIds": ["sgi"], "chapters": [20, 21, 22]
+    },
+    {
+      "id": "unidad-gestora", "term": "Unidad gestora", "category": "estructura",
+      "definition": "Unidad administrativa que tramita y contabiliza un expediente o presupuesto determinado y comprueba la documentación necesaria.",
+      "practical": "Es tu primera consulta para saber qué circuito, clave, factura, autorización o modalidad de pago corresponde.",
+      "caution": "No siempre es el órgano que autoriza ni quien soporta finalmente el coste; pregunta qué papel desempeña en tu caso.",
+      "aliases": ["unidad de gestión", "gestor", "gestora", "administración del departamento"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [1, 21, 29, 30]
+    },
+    {
+      "id": "organo-competente", "term": "Órgano competente", "category": "estructura",
+      "definition": "Persona u órgano colegiado al que una norma o delegación atribuye la capacidad de autorizar, aprobar o resolver una actuación.",
+      "practical": "Debe identificarse antes de elevar una propuesta, solicitar una licencia, autorizar un viaje o presentar un recurso.",
+      "caution": "Una conformidad técnica, correo o conversación con la unidad tramitadora no sustituye su firma, acuerdo o resolución.",
+      "aliases": ["quien autoriza", "quién firma", "órgano que resuelve"], "sourceIds": ["estatutos", "ley39"], "chapters": [1, 6, 16, 36]
+    },
+    {
+      "id": "unidad-funcional", "term": "Unidad funcional", "category": "estructura",
+      "definition": "Estructura organizativa que gestiona contratación y gasto dentro del ámbito que tiene atribuido, por ejemplo un centro, departamento, instituto o servicio.",
+      "practical": "En una compra compartida puede designarse una unidad funcional coordinadora que mantenga el expediente único.",
+      "caution": "No la confundas con el proyecto o clave que financia el gasto: varias partidas pueden participar en un expediente coordinado.",
+      "aliases": ["unidad coordinadora", "estructura de gasto"], "sourceIds": ["iuv1"], "chapters": [6, 29]
+    },
+    {
+      "id": "expediente", "term": "Expediente administrativo", "category": "administracion",
+      "definition": "Conjunto ordenado de documentos y actuaciones que fundamentan y registran una decisión o procedimiento administrativo.",
+      "practical": "Incluye solicitud, informes, requerimientos, aportaciones, documentos contables, resolución y justificantes de notificación.",
+      "caution": "Una carpeta personal o una cadena de correos ayuda a organizarte, pero no sustituye lo incorporado formalmente al expediente.",
+      "aliases": ["número de expediente", "expediente electrónico"], "sourceIds": ["ley39", "sede"], "chapters": [5, 21, 29, 36]
+    },
+    {
+      "id": "sede-electronica", "term": "Sede electrónica", "category": "administracion",
+      "definition": "Dirección electrónica oficial desde la que se accede a trámites, registros, expedientes y notificaciones con garantías de identificación y fecha.",
+      "practical": "Úsala cuando el procedimiento exige presentar una solicitud, subsanar, recurrir o consultar una notificación formal.",
+      "caution": "La web informativa o el correo institucional pueden orientar, pero no sustituyen la sede cuando se exige presentación formal.",
+      "aliases": ["sede UV", "seu", "entreu", "trámite electrónico"], "sourceIds": ["sede", "ley39"], "chapters": [5, 20, 32, 36]
+    },
+    {
+      "id": "registro-electronico", "term": "Registro electrónico", "category": "administracion",
+      "definition": "Servicio que recibe formalmente escritos y documentos y genera un asiento con fecha, hora, destinatario y justificante.",
+      "practical": "Descarga el recibo y conserva la copia exacta de todos los archivos presentados.",
+      "caution": "Enviar un correo o subir un archivo a una plataforma auxiliar no siempre genera un registro válido.",
+      "aliases": ["registro", "justificante de registro", "asiento registral"], "sourceIds": ["sede", "ley39"], "chapters": [5, 36]
+    },
+    {
+      "id": "subsanacion", "term": "Subsanación", "category": "administracion",
+      "definition": "Actuación mediante la que se corrige o completa una solicitud después de que la Administración identifique un defecto o falta documental.",
+      "practical": "Aporta únicamente lo requerido dentro del expediente original y antes del plazo indicado.",
+      "caution": "Responder al correo de aviso o abrir una solicitud distinta puede no subsanar el expediente correcto.",
+      "aliases": ["subsanar", "requerimiento", "corregir solicitud"], "sourceIds": ["ley39", "sede"], "chapters": [5]
+    },
+    {
+      "id": "notificacion", "term": "Notificación administrativa", "category": "administracion",
+      "definition": "Comunicación formal de un acto administrativo que deja constancia de su contenido, recepción y fecha a efectos de plazos.",
+      "practical": "Guarda el documento completo y anota la fecha efectiva de acceso o rechazo.",
+      "caution": "El correo que avisa de una notificación normalmente no es la notificación misma ni inicia por sí solo el cómputo.",
+      "aliases": ["aviso de notificación", "notificación electrónica"], "sourceIds": ["ley39", "sede"], "chapters": [5, 36]
+    },
+    {
+      "id": "resolucion", "term": "Resolución", "category": "administracion",
+      "definition": "Acto formal que decide un procedimiento o una cuestión dentro de él e identifica, cuando corresponde, los recursos disponibles.",
+      "practical": "Comprueba parte dispositiva, fecha, efectos, condiciones y pie de recursos.",
+      "caution": "Una propuesta, lista provisional, informe favorable o comunicación informal no equivale necesariamente a resolución definitiva.",
+      "aliases": ["resolución definitiva", "acto administrativo", "concesión", "denegación"], "sourceIds": ["ley39"], "chapters": [5, 17, 20, 36]
+    },
+    {
+      "id": "dias-habiles", "term": "Días hábiles", "category": "administracion",
+      "definition": "Días que se computan en un plazo administrativo excluyendo, con carácter general, sábados, domingos y festivos aplicables.",
+      "practical": "Empieza por identificar el hecho que inicia el plazo y consulta el calendario oficial aplicable.",
+      "caution": "No conviertas automáticamente un plazo en días hábiles: si la norma dice días naturales, se cuentan de otra forma.",
+      "aliases": ["plazo hábil", "días naturales", "cómputo de plazo"], "sourceIds": ["ley39"], "chapters": [1, 5, 9, 36]
+    },
+    {
+      "id": "comision-servicio", "term": "Comisión de servicio", "category": "administracion",
+      "definition": "Autorización para realizar temporalmente una actividad fuera del puesto o localidad habitual por razón del servicio, con o sin derecho a indemnización según el caso.",
+      "practical": "Para un congreso o viaje debe existir orden, crédito y documentación del objeto antes de desplazarte.",
+      "caution": "La aceptación del congreso, una ayuda de movilidad o una invitación no sustituyen la autorización de la comisión.",
+      "aliases": ["orden de comisión", "comisión con derecho a indemnización", "permiso de viaje"], "sourceIds": ["anexo1a"], "chapters": [14, 16, 30]
+    },
+    {
+      "id": "licencia", "term": "Licencia o permiso", "category": "administracion",
+      "definition": "Autorización laboral o administrativa para ausentarse o modificar temporalmente la prestación de servicios por una causa regulada.",
+      "practical": "La figura, órgano y antelación dependen de la finalidad y duración de la ausencia.",
+      "caution": "No toda ausencia se tramita igual y tener permiso no implica necesariamente financiación o indemnización.",
+      "aliases": ["permiso PDI", "licencia de estudios", "sabático", "ausencia"], "sourceIds": ["rrhh", "estatutos"], "chapters": [14, 16, 19]
+    },
+    {
+      "id": "recurso-administrativo", "term": "Recurso administrativo", "category": "administracion",
+      "definition": "Escrito formal para impugnar un acto administrativo ante el órgano y dentro del plazo que indique la norma o el pie de recursos.",
+      "practical": "Separa hechos, fundamentos y petición; presenta por registro y conserva justificante.",
+      "caution": "Una queja, consulta sindical, mediación o correo no preserva normalmente el plazo del recurso.",
+      "aliases": ["alzada", "reposición", "impugnar resolución", "pie de recursos"], "sourceIds": ["ley39"], "chapters": [9, 18, 36]
+    },
+    {
+      "id": "credito-presupuestario", "term": "Crédito presupuestario", "category": "economia",
+      "definition": "Importe disponible y autorizado en el presupuesto para una finalidad y periodo determinados.",
+      "practical": "La unidad gestora debe comprobar que existe crédito suficiente antes de autorizar un viaje, contratar o emitir un pedido.",
+      "caution": "Que una cuenta muestre saldo no demuestra que el gasto sea elegible, esté libre de compromisos o pueda usarse para cualquier concepto.",
+      "aliases": ["saldo", "disponibilidad presupuestaria", "tener dinero"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [6, 21, 29, 30]
+    },
+    {
+      "id": "clave-presupuestaria", "term": "Clave orgánica o específica", "category": "economia",
+      "definition": "Código presupuestario que identifica la estructura o actividad concreta a la que se imputa un ingreso o gasto.",
+      "practical": "Una clave específica suele vincularse a un proyecto, contrato o ayuda; la orgánica identifica una unidad o presupuesto estructural.",
+      "caution": "Indicar una clave no autoriza el gasto: todavía deben cumplirse elegibilidad, competencia y procedimiento.",
+      "aliases": ["partida", "orgánica", "específica", "centro de gasto", "imputación"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [20, 21, 29, 30]
+    },
+    {
+      "id": "centro-coste", "term": "Centro de coste", "category": "economia",
+      "definition": "Identificador utilizado por una plataforma o unidad para dirigir el gasto y su circuito de aprobación hacia la estructura y presupuesto correctos.",
+      "practical": "En el SDA determina quién puede comprar, aprobar y gestionar el pedido.",
+      "caution": "Seleccionar el centro de coste equivocado puede dirigir el pedido a otra estructura o dejarlo sin aprobador válido.",
+      "aliases": ["centro de gasto", "cost centre"], "sourceIds": ["sda"], "chapters": [29]
+    },
+    {
+      "id": "gasto-elegible", "term": "Gasto elegible", "category": "economia",
+      "definition": "Gasto que cumple finalidad, concepto, periodo, importe, documentación y demás condiciones de la fuente que lo financia.",
+      "practical": "Contrasta convocatoria, resolución, instrucciones de ejecución y norma UV antes de comprometerlo.",
+      "caution": "Un gasto legal y permitido por la UV puede no ser elegible para una ayuda concreta.",
+      "aliases": ["elegibilidad", "gasto financiable", "coste subvencionable"], "sourceIds": ["sgi", "horizon"], "chapters": [20, 21, 22, 30]
+    },
+    {
+      "id": "iva", "term": "IVA", "expanded": "Impuesto sobre el valor añadido", "category": "economia",
+      "definition": "Impuesto incluido o añadido en muchas facturas cuyo tratamiento puede variar según actividad, proveedor, país y posibilidad de recuperación.",
+      "practical": "Presupuesta siempre precio sin IVA, IVA y coste finalmente imputable como datos separados.",
+      "caution": "No asumas que el IVA es siempre elegible, recuperable o inexistente en compras al extranjero.",
+      "aliases": ["VAT", "impuesto", "IVA deducible", "IVA elegible"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [18, 20, 23, 29]
+    },
+    {
+      "id": "caja-fija", "term": "Caja fija", "category": "economia",
+      "definition": "Sistema de pago gestionado por una unidad administrativa autorizada para tramitar determinados gastos y reponer después los fondos justificados.",
+      "practical": "En una inscripción puede permitir pago directo de la UV, reintegro de un adelanto admitido o un anticipo previo.",
+      "caution": "No es una caja, cuenta o tarjeta personal del profesor, ni significa que puedas pagar primero y justificar después sin confirmación.",
+      "aliases": ["sistema de caja fija", "responsable de caja fija"], "sourceIds": ["anexo1a"], "chapters": [30]
+    },
+    {
+      "id": "anticipo-caja-fija", "term": "Anticipo de caja fija (BCF)", "category": "economia",
+      "definition": "Fondos que la UV entrega antes de una actividad autorizada para cubrir gastos que después deberán justificarse y regularizarse.",
+      "practical": "En viajes e inscripciones se solicita antes de la actividad con la orden firmada y se justifica dentro de los 15 días posteriores.",
+      "caution": "No es ingreso personal ni financiación adicional; el remanente debe reintegrarse y no se concede otro si quedan anticipos pendientes.",
+      "aliases": ["BCF", "adelanto UV", "anticipo de viaje"], "sourceIds": ["anexo1a"], "chapters": [30]
+    },
+    {
+      "id": "reintegro", "term": "Reintegro de un pago adelantado", "category": "economia",
+      "definition": "Devolución a una persona del importe que pagó por cuenta de la UV cuando el gasto, la modalidad y la documentación son admisibles.",
+      "practical": "Conserva factura correcta, prueba de pago y autorización previa cuando sea exigible.",
+      "caution": "Adelantar dinero no crea automáticamente derecho al reintegro; un gasto no autorizado o mal facturado puede quedar a tu cargo.",
+      "aliases": ["reembolso", "devolución", "pago personal"], "sourceIds": ["anexo1a"], "chapters": [29, 30]
+    },
+    {
+      "id": "pago-en-firme", "term": "Pago en firme", "category": "economia",
+      "definition": "Pago de una obligación ya acreditada mediante factura y documentación válida, normalmente directamente al proveedor o entidad.",
+      "practical": "La unidad tramita el pago después de comprobar recepción, factura, conformidad y documentos contables aplicables.",
+      "caution": "No es lo mismo que un anticipo: en el pago en firme la obligación y su soporte documental ya existen.",
+      "aliases": ["pago directo", "pago centralizado", "pago al proveedor"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [29, 30]
+    },
+    {
+      "id": "compensacion-interna", "term": "Compensación interna", "category": "economia",
+      "definition": "Movimiento presupuestario entre unidades de la propia UV para cargar un gasto a una y reconocer el ingreso en otra sin pago personal.",
+      "practical": "Es la vía exclusiva para inscripciones en actividades organizadas y facturadas por la propia UV.",
+      "caution": "No pagues personalmente una inscripción interna: el Anexo 1a indica que ese adelanto no puede reintegrarse.",
+      "aliases": ["vale de compensación interna", "pago entre unidades UV"], "sourceIds": ["anexo1a"], "chapters": [30]
+    },
+    {
+      "id": "tercero", "term": "Tercero y alta de tercero", "category": "economia",
+      "definition": "Persona o entidad externa identificada en el sistema económico para poder contratar, facturar, cobrar o recibir un pago de la UV.",
+      "practical": "La unidad puede pedir datos fiscales, bancarios y el formulario de alta antes de tramitar el primer pago.",
+      "caution": "El alta no adjudica un contrato ni valida una factura; solo habilita la identificación económica del proveedor o perceptor.",
+      "aliases": ["alta de proveedor", "datos bancarios", "perceptor"], "sourceIds": ["anexo1a", "iuv1"], "chapters": [23, 29, 30]
+    },
+    {
+      "id": "documento-ad", "term": "Documento AD", "expanded": "Autorización y disposición del gasto", "category": "economia",
+      "definition": "Documento contable que autoriza un gasto y compromete crédito para una finalidad y adjudicatario determinados.",
+      "practical": "En determinados contratos menores debe tramitarse y firmarse antes de comunicar el pedido al proveedor.",
+      "caution": "No es una factura ni un pago: reserva y compromete presupuesto dentro del expediente.",
+      "aliases": ["AD", "autorización de gasto", "disposición de gasto", "compromiso"], "sourceIds": ["iuv1"], "chapters": [29]
+    },
+    {
+      "id": "acta-recepcion", "term": "Acta de recepción o conformidad", "category": "economia",
+      "definition": "Documento mediante el que la persona responsable confirma que el bien o servicio se ha recibido correctamente y puede continuar la tramitación del pago.",
+      "practical": "Comprueba cantidades, prestaciones, daños, fecha y albarán antes de validarla.",
+      "caution": "Conformar sin verificar puede cerrar incidencias y certificar una prestación que todavía no se ha realizado correctamente.",
+      "aliases": ["conformar factura", "recepción", "validación del solicitante"], "sourceIds": ["iuv1"], "chapters": [21, 29]
+    },
+    {
+      "id": "contrato-menor", "term": "Contrato menor", "category": "economia",
+      "definition": "Procedimiento simplificado de contratación pública para necesidades puntuales cuyo valor y duración quedan por debajo de los límites legales aplicables.",
+      "practical": "La necesidad completa, no cada factura aislada, determina objeto, valor estimado y procedimiento.",
+      "caution": "No puede usarse para fraccionar una necesidad, evitar competencia o cubrir una prestación recurrente de forma indefinida.",
+      "aliases": ["gasto menor", "compra menor", "contratación menor"], "sourceIds": ["lcsp", "iuv1"], "chapters": [29]
+    },
+    {
+      "id": "acuerdo-marco", "term": "Acuerdo marco", "category": "economia",
+      "definition": "Instrumento de contratación que fija condiciones para contratos posteriores con uno o varios proveedores seleccionados durante un periodo.",
+      "practical": "Si tu necesidad está cubierta, se utiliza el contrato derivado o circuito previsto y no un contrato menor ordinario.",
+      "caution": "No permite comprar cualquier producto al proveedor: deben respetarse objeto, catálogo, condiciones y procedimiento del acuerdo.",
+      "aliases": ["contrato derivado", "proveedor homologado"], "sourceIds": ["lcsp", "sda"], "chapters": [29]
+    },
+    {
+      "id": "sda", "term": "SDA", "expanded": "Sistema Dinámico de Adquisición", "category": "economia",
+      "definition": "Procedimiento electrónico en el que proveedores previamente admitidos compiten por contratos específicos dentro de categorías definidas.",
+      "practical": "La UV lo utiliza, entre otros ámbitos, para catálogos de material y gases de laboratorio.",
+      "caution": "No es una tienda libre ni evita la contratación: la cesta necesita centro de coste, aprobaciones y validación correspondiente.",
+      "aliases": ["sistema dinámico", "catálogo SDA", "material de laboratorio", "gases"], "sourceIds": ["lcsp", "sda"], "chapters": [29]
+    },
+    {
+      "id": "uv-plyca", "term": "UV-plyca", "category": "economia",
+      "definition": "Aplicación utilizada por la UV para tramitar electrónicamente expedientes de contratación y vincular solicitud, adjudicación, recepción, factura y documentos contables.",
+      "practical": "La unidad gestora registra y valida el expediente; la persona solicitante interviene en justificación de necesidad y recepción.",
+      "caution": "Introducir datos en UV-plyca no autoriza por sí solo el pedido: deben completarse las firmas y fases exigidas.",
+      "aliases": ["PLYCA", "plataforma de contratos menores", "expediente de compra"], "sourceIds": ["iuv1"], "chapters": [29]
+    },
+    {
+      "id": "trl", "term": "TRL", "expanded": "Technology Readiness Level · nivel de madurez tecnológica", "category": "investigacion",
+      "definition": "Escala orientativa de 1 a 9 que describe desde principios básicos hasta un sistema probado en operación.",
+      "practical": "Se usa para comprobar si la madurez real encaja con una convocatoria y para definir la evidencia de entrada y salida.",
+      "caution": "No es una etiqueta comercial: debe justificarse con experimentos, entorno, integración y validación coherentes con el nivel declarado.",
+      "aliases": ["madurez tecnológica", "technology readiness"], "sourceIds": ["horizon"], "chapters": [20]
+    },
+    {
+      "id": "coste-directo", "term": "Coste directo", "category": "investigacion",
+      "definition": "Coste que puede vincularse de forma identificable a una actividad, tarea o proyecto, como personal, material, viajes o servicios elegibles.",
+      "practical": "Debe estar presupuestado, justificado y trazado a la actividad financiada.",
+      "caution": "Que sea necesario científicamente no garantiza que la convocatoria admita esa categoría o forma de cálculo.",
+      "aliases": ["costes directos", "personal", "fungible", "equipamiento"], "sourceIds": ["horizon", "sgi"], "chapters": [20, 21, 23]
+    },
+    {
+      "id": "coste-indirecto", "term": "Coste indirecto", "category": "investigacion",
+      "definition": "Coste general necesario para sostener la actividad que no se atribuye de forma exclusiva a una tarea, como administración, espacios o servicios comunes.",
+      "practical": "Muchas convocatorias lo calculan como un porcentaje de una base de costes directos; los contratos artículo 60 aplican sus reglas UV específicas.",
+      "caution": "No es una bolsa libre del IP y su porcentaje o destino depende de la convocatoria y de la normativa institucional.",
+      "aliases": ["indirectos", "overheads", "gastos generales"], "sourceIds": ["horizon", "transferencia"], "chapters": [20, 23]
+    },
+    {
+      "id": "cofinanciacion", "term": "Cofinanciación", "category": "investigacion",
+      "definition": "Parte del coste de una actividad que no cubre la ayuda y debe aportar la entidad beneficiaria u otra fuente compatible.",
+      "practical": "Identifica importe, procedencia, autorización y disponibilidad antes de presentar la propuesta.",
+      "caution": "No comprometas fondos, personal o equipos de la UV como cofinanciación sin validación institucional.",
+      "aliases": ["aportación propia", "porcentaje de financiación", "matching funds"], "sourceIds": ["sgi", "horizon"], "chapters": [20, 22]
+    },
+    {
+      "id": "anualidad", "term": "Anualidad", "category": "investigacion",
+      "definition": "Parte temporal y presupuestaria de una ayuda asignada a un año o periodo concreto de ejecución.",
+      "practical": "Distribuye tareas y costes según calendario real, límites y posibilidad de mover crédito entre anualidades.",
+      "caution": "El máximo anual no equivale al total concedido ni permite gastar fuera de las fechas o conceptos autorizados.",
+      "aliases": ["presupuesto anual", "año de proyecto"], "sourceIds": ["sgi"], "chapters": [20, 21]
+    },
+    {
+      "id": "ejecucion-justificacion", "term": "Periodo de ejecución y periodo de justificación", "category": "investigacion",
+      "definition": "El primero delimita cuándo debe realizarse la actividad o producirse el gasto; el segundo, cuándo se presenta la documentación que acredita lo ejecutado.",
+      "practical": "Anota ambos calendarios por separado y confirma qué fecha cuenta para pedido, entrega, factura y pago.",
+      "caution": "Poder justificar después no permite ejecutar o recibir fuera del periodo elegible.",
+      "aliases": ["fecha de ejecución", "plazo de justificación", "cierre de proyecto"], "sourceIds": ["sgi"], "chapters": [20, 21]
+    },
+    {
+      "id": "prorroga-modificacion", "term": "Prórroga o modificación de proyecto", "category": "investigacion",
+      "definition": "Cambio formal autorizado en plazo, presupuesto, equipo, objetivos u otras condiciones de una ayuda concedida.",
+      "practical": "Consulta y solicita antes de que ocurra el cambio o venza el plazo, aportando motivo e impacto.",
+      "caution": "Una conversación con la unidad o el silencio del financiador no modifican por sí solos la resolución de concesión.",
+      "aliases": ["extensión", "cambio de partida", "modificación presupuestaria"], "sourceIds": ["sgi"], "chapters": [21]
+    },
+    {
+      "id": "articulo-60", "term": "Contrato artículo 60 LOSU", "category": "investigacion",
+      "definition": "Instrumento institucional para contratar con terceros trabajos científicos, tecnológicos, artísticos, de formación o transferencia en los términos de la LOSU y la normativa UV.",
+      "practical": "Se tramita por Transferencia con memoria, precio, costes, entregables, propiedad intelectual, confidencialidad y firmas UV.",
+      "caution": "No es una factura privada del profesor ni una autorización para empezar por un correo de la empresa.",
+      "aliases": ["artículo 60", "contrato con empresa", "I+D contratada", "asistencia técnica"], "sourceIds": ["losu", "transferencia"], "chapters": [23, 27, 35]
+    },
+    {
+      "id": "resultado-protegible", "term": "Resultado protegible", "category": "investigacion",
+      "definition": "Resultado de investigación que podría protegerse o gestionarse mediante patente, modelo, software, secreto u otro derecho antes de divulgarlo.",
+      "practical": "Comunícalo a Transferencia con contribuciones, fechas y divulgaciones previstas antes de enviar artículo, resumen, tesis o código público.",
+      "caution": "Autoría de publicación, condición de inventor y titularidad institucional no son equivalentes.",
+      "aliases": ["invención", "patente", "software", "propiedad intelectual", "secreto empresarial"], "sourceIds": ["losu", "estatutos"], "chapters": [10, 15, 24]
+    },
+    {
+      "id": "oca", "term": "OCA", "expanded": "Oferta de curso académico", "category": "docencia",
+      "definition": "Planificación institucional de la docencia ofertada en un curso: titulaciones, asignaturas, grupos, actividades, áreas responsables, idioma y demás condiciones aprobadas.",
+      "practical": "Condiciona qué docencia debe asignarse después en el POD y limita cambios informales de grupo, área o idioma.",
+      "caution": "No es tu asignación personal: describe la oferta que la UV debe cubrir.",
+      "aliases": ["oferta docente", "oferta de curso"], "sourceIds": ["oca"], "chapters": [8]
+    },
+    {
+      "id": "pod", "term": "POD", "expanded": "Plan de ordenación docente", "category": "docencia",
+      "definition": "Asignación y registro de la carga docente del profesorado y su relación con la oferta aprobada, dedicación, reducciones y responsabilidades.",
+      "practical": "Revisa categoría, horas, asignaturas, idioma, reducciones y responsabilidades antes del cierre departamental.",
+      "caution": "El horario o un acuerdo verbal no corrigen por sí solos un POD equivocado; la modificación debe quedar tramitada.",
+      "aliases": ["plan docente", "carga docente", "dedicación docente"], "sourceIds": ["oca"], "chapters": [8]
+    },
+    {
+      "id": "cat-cca", "term": "CAT y CCA", "expanded": "Comisión Académica de Título y Comisión de Coordinación Académica", "category": "docencia",
+      "definition": "Órganos académicos que coordinan y supervisan aspectos de una titulación de grado o máster dentro de las competencias atribuidas.",
+      "practical": "Pueden intervenir en guías docentes, coordinación, TFG/TFM, prácticas o incidencias académicas según la titulación.",
+      "caution": "Consulta el reglamento y la titulación: el nombre del órgano no permite asumir que decide cualquier asunto docente.",
+      "aliases": ["CAT", "CCA", "comisión de título", "comisión de máster"], "sourceIds": ["estatutos"], "chapters": [6, 10, 11, 15]
+    },
+    {
+      "id": "guia-docente", "term": "Guía docente", "category": "docencia",
+      "definition": "Documento académico publicado que concreta resultados, contenidos, actividades, evaluación, bibliografía y condiciones de una asignatura.",
+      "practical": "Alinea práctica, evaluación, revisión y adaptaciones con lo aprobado y anunciado al estudiantado.",
+      "caution": "No conviene cambiar durante el curso criterios esenciales o ponderaciones fuera de los cauces y garantías aplicables.",
+      "aliases": ["programa de asignatura", "criterios de evaluación"], "sourceIds": ["estatutos"], "chapters": [9, 12, 13]
+    },
+    {
+      "id": "acta-calificaciones", "term": "Acta de calificaciones", "category": "docencia",
+      "definition": "Documento oficial en el que se incorporan y cierran las calificaciones de una asignatura y convocatoria.",
+      "practical": "Comprueba que revisión, cambios justificados, alumnado y convocatoria son correctos antes de firmar o cerrar.",
+      "caution": "Una nota publicada en Aula Virtual puede ser provisional y no equivale necesariamente al acta definitiva.",
+      "aliases": ["acta", "cierre de actas", "calificación definitiva"], "sourceIds": ["estatutos"], "chapters": [9]
+    },
+    {
+      "id": "trienio", "term": "Trienio", "category": "docencia",
+      "definition": "Complemento de antigüedad asociado a periodos de tres años de servicios reconocidos, con reglas e importes según el régimen aplicable.",
+      "practical": "Comprueba hoja de servicios, fecha de cumplimiento, reconocimiento y efectos en nómina.",
+      "caution": "El tiempo trabajado no siempre aparece automáticamente ni se calcula igual en todas las relaciones jurídicas.",
+      "aliases": ["antigüedad", "servicios previos"], "sourceIds": ["retribuciones", "rrhh"], "chapters": [18]
+    },
+    {
+      "id": "quinquenio", "term": "Quinquenio docente", "category": "docencia",
+      "definition": "Complemento o reconocimiento ligado a la evaluación de periodos de cinco años de actividad docente conforme al procedimiento aplicable.",
+      "practical": "Solicita o revisa el periodo evaluable, docencia y evidencias dentro de la convocatoria correspondiente.",
+      "caution": "La evaluación Docentia y el quinquenio económico son procedimientos relacionados con docencia, pero no equivalentes.",
+      "aliases": ["mérito docente", "componente por méritos docentes"], "sourceIds": ["retribuciones", "rrhh"], "chapters": [3, 18]
+    },
+    {
+      "id": "sexenio", "term": "Sexenio de investigación", "category": "docencia",
+      "definition": "Reconocimiento de un periodo de seis años de actividad investigadora evaluado conforme a criterios y convocatoria específicos.",
+      "practical": "La resolución puede producir efectos retributivos y, según reglas UV vigentes, afectar a la dedicación docente.",
+      "caution": "Tener seis años trabajados o publicaciones suficientes no equivale a tener un sexenio reconocido y vigente.",
+      "aliases": ["mérito investigador", "tramo de investigación", "CNEAI"], "sourceIds": ["retribuciones", "rrhh"], "chapters": [8, 18]
+    },
+    {
+      "id": "complemento-autonomico", "term": "Complemento autonómico", "category": "docencia",
+      "definition": "Retribución adicional convocada y reconocida conforme al régimen de la Comunitat Valenciana y a las condiciones publicadas para cada colectivo PDI.",
+      "practical": "Comprueba convocatoria anual, modalidad, periodos reconocidos y fecha de efectos.",
+      "caution": "No lo confundas con trienios, quinquenios o sexenios, aunque utilice méritos o periodos relacionados.",
+      "aliases": ["complemento Generalitat", "tramo autonómico"], "sourceIds": ["retribuciones", "rrhh"], "chapters": [18]
+    },
+    {
+      "id": "acreditacion", "term": "Acreditación", "category": "docencia",
+      "definition": "Evaluación que certifica el cumplimiento de requisitos para optar a determinadas figuras o cuerpos docentes universitarios.",
+      "practical": "Prepara la acreditación y la convocatoria de plaza o promoción como expedientes distintos.",
+      "caution": "Obtener la acreditación no crea automáticamente una plaza, promoción, nombramiento o cambio salarial.",
+      "aliases": ["ANECA", "AVAP", "acreditación TU", "acreditación CU"], "sourceIds": ["aneca", "losu"], "chapters": [17]
+    },
+    {
+      "id": "dpd", "term": "DPD", "expanded": "Delegación de Protección de Datos", "category": "cumplimiento",
+      "definition": "Unidad especializada que asesora y supervisa el cumplimiento de protección de datos y participa en la gestión de posibles brechas.",
+      "practical": "Consúltala ante tratamientos de riesgo, dudas sobre bases jurídicas o incidentes que afecten a datos personales.",
+      "caution": "El DPD no sustituye al responsable de la actividad ni convierte un consentimiento ético en base jurídica suficiente.",
+      "aliases": ["delegado de protección de datos", "lopd", "privacidad"], "sourceIds": ["dpd", "rgpd"], "chapters": [31, 32]
+    },
+    {
+      "id": "rgpd", "term": "RGPD", "expanded": "Reglamento general de protección de datos", "category": "cumplimiento",
+      "definition": "Norma europea que regula el tratamiento de datos personales y los derechos, responsabilidades y garantías asociados.",
+      "practical": "Antes de recoger datos define finalidad, base jurídica, minimización, acceso, conservación y seguridad.",
+      "caution": "Que los datos sean útiles para investigar o enseñar no permite tratarlos sin una base y condiciones adecuadas.",
+      "aliases": ["GDPR", "protección de datos", "datos personales"], "sourceIds": ["rgpd", "dpd"], "chapters": [31, 32]
+    },
+    {
+      "id": "anonimizacion", "term": "Anonimización y seudonimización", "category": "cumplimiento",
+      "definition": "Anonimizar impide razonablemente reidentificar a las personas; seudonimizar sustituye identificadores, pero mantiene una vía separada para relacionar los datos con ellas.",
+      "practical": "Guarda la tabla de correspondencias separada, limita accesos y evalúa combinaciones de variables y metadatos.",
+      "caution": "Cambiar nombres por códigos no anonimiza automáticamente: los datos seudonimizados siguen siendo datos personales.",
+      "aliases": ["datos anónimos", "datos codificados", "seudónimo", "pseudonimización"], "sourceIds": ["rgpd", "dpd"], "chapters": [25, 26, 31, 32]
+    },
+    {
+      "id": "ceih", "term": "CEIH", "expanded": "Comité de Ética de Investigación en Humanos", "category": "cumplimiento",
+      "definition": "Comité que evalúa aspectos éticos de proyectos con personas, intervenciones o muestras humanas dentro de su ámbito.",
+      "practical": "Presenta protocolo, información, consentimiento y documentación de datos al menos con la antelación publicada y antes de iniciar.",
+      "caution": "Un informe ético favorable no sustituye protección de datos, bioseguridad, convenio o autorización de muestras.",
+      "aliases": ["comité de ética", "ética en humanos", "informe favorable"], "sourceIds": ["ceih"], "chapters": [32]
+    },
+    {
+      "id": "prl", "term": "PRL", "expanded": "Prevención de riesgos laborales", "category": "cumplimiento",
+      "definition": "Conjunto de responsabilidades y medidas para identificar, evaluar y controlar riesgos derivados del trabajo.",
+      "practical": "Antes de introducir equipos, láseres, sustancias o procesos nuevos actualiza evaluación, formación, protecciones y emergencia.",
+      "caution": "El marcado CE, un manual o un EPI aislado no demuestran que la instalación y su uso real sean seguros.",
+      "aliases": ["prevención", "seguridad laboral", "evaluación de riesgos", "EPI"], "sourceIds": ["prevencion"], "chapters": [28, 33]
+    },
+    {
+      "id": "conflicto-interes", "term": "Conflicto de interés", "category": "cumplimiento",
+      "definition": "Situación en la que intereses personales, profesionales, familiares o económicos pueden afectar o parecer afectar a la imparcialidad de una decisión pública.",
+      "practical": "Decláralo y consulta si debes abstenerte en compras, selección, evaluación, proyectos o relaciones con empresas.",
+      "caution": "No basta con no votar si has preparado, influido o participado en la deliberación cuando concurre una causa de abstención.",
+      "aliases": ["abstención", "imparcialidad", "interés personal"], "sourceIds": ["ley39", "estatutos"], "chapters": [6, 27, 29, 35, 37]
+    }
+  ]
+}

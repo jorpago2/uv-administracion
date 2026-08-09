@@ -39,6 +39,8 @@ Una instrucción inferior no puede eliminar un derecho reconocido por una norma 
 
 Los casos prácticos de esta guía son ficticios, aunque describen situaciones plausibles en la ETSE, el DIE y el ICMUV. Sirven para identificar la ruta de actuación y la documentación que conviene conservar; no sustituyen la convocatoria vigente, el criterio de la unidad gestora ni una resolución administrativa.
 
+Si aparece una sigla o una expresión nueva —por ejemplo, caja fija, BCF, AD, unidad gestora, OCA, POD, SGI o TRL—, consulta primero el [glosario para PDI recién incorporado](GLOSARIO_PDI.md). Cada ficha ofrece una definición sencilla, una aplicación práctica, una confusión habitual y enlaces a las fuentes oficiales. En la web, el glosario también se puede buscar y filtrar.
+
 ### Cómo aclarar quién hace qué
 
 Cuando un trámite plantea dudas, no preguntes únicamente «¿puedo hacerlo?». Separa estos papeles y pide que quede claro cuál corresponde a cada persona o unidad:

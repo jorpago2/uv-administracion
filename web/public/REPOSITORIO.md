@@ -2,7 +2,7 @@
 
 ## Interfaz web
 
-La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, 26 fichas operativas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Incluye además ocho casos completos que recorren hechos, decisión, documentos, secuencia, errores y resultado. El contenido documental se genera desde `MANUAL_PROCEDIMIENTOS.md` mediante `scripts/generar_datos_web.ps1`.
+La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, un [glosario operativo para PDI de nueva incorporación](GLOSARIO_PDI.md), 26 fichas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Incluye además ocho casos completos que recorren hechos, decisión, documentos, secuencia, errores y resultado. El contenido documental se genera mediante `scripts/generar_datos_web.ps1`.
 
 **Web publicada:** <https://jorpago2.github.io/uv-administracion/>
 
@@ -23,10 +23,11 @@ Los inventarios registran URL de origen, ruta local, tamaño, estado, fecha y ha
 ## Entrada recomendada
 
 1. Empezar por [`MANUAL_PROCEDIMIENTOS.md`](MANUAL_PROCEDIMIENTOS.md) para resolver una situación práctica.
-2. Consultar [`catalogos/unidades_especificas.csv`](catalogos/unidades_especificas.csv) para las reglas más cercanas al trabajo diario en ETSE, DIE e ICMUV.
-3. Consultar [`catalogos/nucleo_estatal_autonomico.csv`](catalogos/nucleo_estatal_autonomico.csv) para el marco estatal, europeo y valenciano.
-4. Buscar por referencia o palabras clave en [`catalogos/uv_reglamentos.csv`](catalogos/uv_reglamentos.csv) para cualquier reglamento publicado en el portal general de la UV.
-5. Revisar [`ALERTAS.md`](ALERTAS.md) antes de tomar una decisión con efectos jurídicos o administrativos.
+2. Buscar una sigla o expresión desconocida en [`GLOSARIO_PDI.md`](GLOSARIO_PDI.md).
+3. Consultar [`catalogos/unidades_especificas.csv`](catalogos/unidades_especificas.csv) para las reglas más cercanas al trabajo diario en ETSE, DIE e ICMUV.
+4. Consultar [`catalogos/nucleo_estatal_autonomico.csv`](catalogos/nucleo_estatal_autonomico.csv) para el marco estatal, europeo y valenciano.
+5. Buscar por referencia o palabras clave en [`catalogos/uv_reglamentos.csv`](catalogos/uv_reglamentos.csv) para cualquier reglamento publicado en el portal general de la UV.
+6. Revisar [`ALERTAS.md`](ALERTAS.md) antes de tomar una decisión con efectos jurídicos o administrativos.
 
 ## Mapa rápido por necesidad
 
