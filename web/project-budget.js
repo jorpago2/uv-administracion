@@ -93,13 +93,17 @@ function createPersonnelRow(values = {}) {
   row.dataset.rowId = `personnel-${++rowSequence}`;
   row.append(
     labeledInput("Descripción", "label", "text", values.label ?? "Nueva contratación"),
-    labeledInput("Bruto anual · €", "grossAnnual", "number", values.grossAnnual ?? 30000, { min: 0, max: 10000000, step: 0.01 }),
+    labeledInput("Bruto anual · €", "grossAnnual", "number", values.grossAnnual ?? 30000, { min: 0.01, max: 10000000, step: 0.01 }),
     labeledInput("Meses", "months", "number", values.months ?? 12, { min: 0.1, max: 60, step: 0.1 }),
-    labeledSelect("Contrato", "contractType", [["indefinite", "Indefinido"], ["fixed", "Temporal · hipótesis"]], values.contractType ?? "fixed"),
+    labeledSelect("Contrato", "contractType", [["indefinite", "Indefinido"], ["fixed", "Temporal ordinario"], ["fixed-reduced", "Temporal con desempleo reducido"]], values.contractType ?? "fixed"),
+    labeledSelect("Grupo cotización", "contributionGroup", [["1", "1 · Titulación superior"], ["2", "2 · Titulación técnica"], ["3", "3"], ["4-7", "4 a 7"]], values.contributionGroup ?? "1"),
+    labeledInput("Horas contratadas/mes", "monthlyHours", "number", values.monthlyHours ?? 160, { min: 1, max: 160, step: 0.1 }),
+    labeledInput("Días · si < 1 mes", "contractDays", "number", values.contractDays ?? "", { min: 1, max: 29, step: 1 }),
     labeledInput("AT/EP · %", "accidentRate", "number", values.accidentRate ?? 1.5, { min: 0, max: 20, step: 0.01 }),
     labeledInput("Otros tipos · %", "otherRate", "number", values.otherRate ?? 0, { min: 0, max: 50, step: 0.01 }),
     labeledInput("Otros costes · €", "otherCosts", "number", values.otherCosts ?? 0, { min: 0, max: 10000000, step: 0.01 }),
     labeledInput("Elegible · %", "eligibilityPercent", "number", values.eligibilityPercent ?? 100, { min: 0, max: 100, step: 0.1 }),
+    labeledCheck("Exento del recargo < 30 días", "shortTermSurchargeExempt", values.shortTermSurchargeExempt ?? false),
     labeledCheck("Incluir en la base de indirectos", "indirectBase", values.indirectBase ?? true),
     removeButton("Quitar personal")
   );
@@ -135,6 +139,7 @@ function renderAnnualityInputs(container, years, values = null) {
 }
 
 function update(elements) {
+  normalizePersonnelRows(elements.personnel);
   try {
     const result = calculateProjectBudget(readBudget(elements));
     elements.form.dataset.state = "valid";
@@ -167,6 +172,22 @@ function update(elements) {
   }
 }
 
+function normalizePersonnelRows(container) {
+  container.querySelectorAll(".budget-personnel-row").forEach((row) => {
+    const months = Number(row.querySelector('[data-budget-field="months"]').value);
+    const contractType = row.querySelector('[data-budget-field="contractType"]').value;
+    const days = row.querySelector('[data-budget-field="contractDays"]');
+    const exempt = row.querySelector('[data-budget-field="shortTermSurchargeExempt"]');
+    const shortContract = months < 1;
+    days.disabled = !shortContract;
+    exempt.disabled = !shortContract || contractType === "indefinite";
+    if (!shortContract) {
+      days.value = "";
+      exempt.checked = false;
+    }
+  });
+}
+
 function readBudget(elements) {
   const form = elements.form;
   return {
@@ -176,7 +197,7 @@ function readBudget(elements) {
     reserveRate: form.elements.reserveRate.value,
     grantCeiling: form.elements.grantCeiling.value,
     annualityPercentages: [...elements.annualities.querySelectorAll("input")].map((input) => input.value),
-    personnel: [...elements.personnel.querySelectorAll(".budget-personnel-row")].map((row) => readRow(row, ["label", "grossAnnual", "months", "contractType", "accidentRate", "otherRate", "otherCosts", "eligibilityPercent", "indirectBase"])),
+    personnel: [...elements.personnel.querySelectorAll(".budget-personnel-row")].map((row) => readRow(row, ["label", "grossAnnual", "months", "contractType", "contributionGroup", "monthlyHours", "contractDays", "shortTermSurchargeExempt", "accidentRate", "otherRate", "otherCosts", "eligibilityPercent", "indirectBase"])),
     directItems: [...elements.direct.querySelectorAll(".budget-direct-row")].map((row) => readRow(row, ["label", "category", "netAmount", "vatRate", "vatTreatment", "eligibilityPercent", "indirectBase"]))
   };
 }

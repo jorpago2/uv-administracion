@@ -8,6 +8,15 @@ const POD_BASELINES = Object.freeze({
   6: { active: 160, inactive: 160 }
 });
 
+const DATABASE_SARA_LIMIT_2026 = 216_000;
+const EXCLUDED_PURCHASE_TYPES = new Set(["scientific-publication", "conference-registration", "scientific-membership"]);
+const CONTRIBUTION_2026 = Object.freeze({
+  maximumMonthlyBase: 5_101.20,
+  minimumMonthlyBase: Object.freeze({ "1": 1_989.30, "2": 1_649.70, "3": 1_435.20, "4-7": 1_424.40 }),
+  minimumHourlyBase: Object.freeze({ "1": 11.98, "2": 9.94, "3": 8.65, "4-7": 8.58 }),
+  shortFixedTermSurcharge: 33.62
+});
+
 export function calculatePod(input) {
   const category = oneOf(input.category, ["cu", "permanent", "assistant_doctor"], "categoría POD");
   const course = oneOf(input.course, ["2026-27", "2027-28", "2028-29", "2029-30"], "curso");
@@ -50,18 +59,31 @@ export function calculatePod(input) {
   if (input.age63 && course !== "2029-30") warnings.push("La reducción por edad comienza en 2029-30; no se aplica en el curso seleccionado.");
   if (input.age63 && course === "2029-30" && ageReduction === 0) warnings.push("La reducción por edad no puede llevar la dedicación base por debajo de 160 horas.");
   if (category === "assistant_doctor" && sexennia) warnings.push("Los sexenios no modifican la base específica de Ayudante Doctor en este estimador.");
+  if (active && inactiveYears > 0) warnings.push("Has indicado un sexenio activo y, a la vez, años desde que dejó de estarlo. Se ignoran esos años mientras el sexenio figure como activo.");
+  if (input.exceptionalEuropean && projectCount === 0) warnings.push("La reducción europea excepcional exige al menos un proyecto público reconocido como IP; no se aplican las 40 horas.");
 
   return { baseline, baselineRule, reductions, requestedReduction, theoretical, finalHours, warnings };
 }
 
 export function classifyPurchase(input) {
-  const type = oneOf(input.type, ["supplies", "services", "works", "research", "database"], "tipo de compra");
+  const type = oneOf(input.type, ["supplies", "services", "works", "research", "database", ...EXCLUDED_PURCHASE_TYPES], "tipo de compra");
   const amount = numberInRange(input.amount, 0, 100_000_000, "importe sin IVA");
   const durationMonths = integer(input.durationMonths, 1, 240, "duración");
   const warnings = [];
   const steps = [];
-  const minorLimit = type === "works" ? 40_000 : type === "research" ? 50_000 : type === "database" ? null : 15_000;
-  const thresholdAllowsMinor = type === "database" || (type === "research" ? amount <= minorLimit : amount < minorLimit);
+  const minorLimit = type === "works" ? 40_000 : type === "research" ? 50_000 : type === "database" ? DATABASE_SARA_LIMIT_2026 : 15_000;
+  const thresholdAllowsMinor = type === "research" ? amount <= minorLimit : amount < minorLimit;
+
+  if (EXCLUDED_PURCHASE_TYPES.has(type)) {
+    const excludedRoutes = {
+      "scientific-publication": ["Publicación o revisión de artículo científico", "Acredita la necesidad y conserva la factura o documento equivalente.", "Tramita el gasto con la unidad gestora por su vía contable; no lo registres como contrato menor en UV-plyca."],
+      "conference-registration": ["Inscripción en congreso, jornada o conferencia", "Aporta el programa, la inscripción y la justificación exigida por el Anexo 1a.", "Sigue el procedimiento de pago o reintegro de inscripciones; no lo registres como contrato menor en UV-plyca."],
+      "scientific-membership": ["Cuota de asociación o sociedad científica", "Acredita la necesidad, el periodo y la vinculación con la actividad universitaria.", "Tramita la cuota con la unidad gestora por su vía contable; no la registres como contrato menor en UV-plyca."]
+    };
+    const [label, ...excludedSteps] = excludedRoutes[type];
+    return purchaseResult("excluded", `${label}: gasto excluido de la IUV 1/2025`, amount, 0, false, excludedSteps,
+      ["La exclusión de UV-plyca no elimina la necesidad de acreditar el gasto ni las reglas de elegibilidad de la financiación."], null);
+  }
 
   if (input.framework) {
     return purchaseResult("derived", "Compra derivada de acuerdo marco", amount, 0, false,
@@ -76,7 +98,7 @@ export function classifyPurchase(input) {
     return purchaseResult("not-minor", "No tramitar como contrato menor", amount, 0, false, steps, warnings, minorLimit);
   }
 
-  if (type === "database") warnings.push("El límite superior de bases de datos y suscripciones depende del umbral SARA vigente: debe comprobarlo la unidad gestora.");
+  if (type === "database") warnings.push(`Se aplica el umbral SARA 2026-2027 de ${formatPlain(DATABASE_SARA_LIMIT_2026)} € sin IVA; debe revisarse cuando cambie el bienio regulatorio.`);
   if (amount < 5_000) {
     steps.push(
       ...(amount > 200 ? ["Antes de comprometer el gasto, remite a la unidad gestora el formulario inicial o presupuesto."] : []),
@@ -98,8 +120,8 @@ export function classifyPurchase(input) {
     "Espera la resolución de adjudicación y la contabilización AD antes de encargar la prestación.",
     "Tras la prestación, conforma y tramita la factura."
   );
-  const status = type === "database" ? "verify-threshold" : "minor";
-  const title = type === "database" ? "Posible contrato menor: verifica el umbral SARA" : "Contrato menor: tramitación previa";
+  const status = "minor";
+  const title = type === "database" ? "Contrato menor de suscripción: tramitación previa" : "Contrato menor: tramitación previa";
   return purchaseResult(status, title, amount, offers, true, steps, warnings, minorLimit);
 }
 
@@ -114,15 +136,16 @@ export function calculateTravel(input, data) {
     };
   }
   const destinationType = oneOf(input.destinationType, ["madrid-barcelona", "rest-spain", "foreign"], "destino");
-  const lodgingDays = integer(input.lodgingDays ?? 0, 0, 365, "noches");
-  const fullMealDays = numberInRange(input.fullMealDays ?? 0, 0, 365, "dietas completas");
-  const halfMealDays = numberInRange(input.halfMealDays ?? 0, 0, 365, "medias dietas");
+  const travelPeriod = parseTravelPeriod(input.departureDateTime, input.returnDateTime);
+  const lodgingDays = travelPeriod.calendarDays;
   const actualLodging = numberInRange(input.actualLodging ?? 0, 0, 1_000_000, "alojamiento real");
+  const actualMeals = numberInRange(input.actualMeals ?? 0, 0, 1_000_000, "restauración real");
   const publicTransport = numberInRange(input.publicTransport ?? 0, 0, 1_000_000, "transporte público");
   const registration = numberInRange(input.registration ?? 0, 0, 1_000_000, "inscripción");
   const kilometres = numberInRange(input.kilometres ?? 0, 0, 100_000, "kilómetros");
   const vehicle = oneOf(input.vehicle ?? "car", ["car", "motorcycle"], "vehículo");
   const distance = numberInRange(input.distance ?? 0, 0, 100_000, "distancia");
+  const highOffice = Boolean(input.highOffice);
   let lodgingRate;
   let mealRate;
   let destinationLabel;
@@ -140,8 +163,9 @@ export function calculateTravel(input, data) {
   }
 
   const lodgingCap = lodgingRate * lodgingDays;
-  const eligibleLodging = Math.min(actualLodging, lodgingCap);
-  const mealsRequested = mealRate * (fullMealDays + halfMealDays * 0.5);
+  const eligibleLodging = highOffice ? actualLodging : Math.min(actualLodging, lodgingCap);
+  const mealUnits = calculateMealUnits(travelPeriod);
+  const mealsRequested = highOffice ? actualMeals : mealRate * mealUnits;
   const mealsEligible = distance > 30 && Boolean(input.exceedsWorkday) ? mealsRequested : 0;
   const mileage = kilometres * data.mileage[vehicle];
   const breakdown = {
@@ -150,44 +174,69 @@ export function calculateTravel(input, data) {
   };
   const total = roundMoney(Object.values(breakdown).reduce((sum, value) => sum + value, 0));
   const warnings = [];
-  if (actualLodging > lodgingCap) warnings.push(`El alojamiento supera el máximo de ${formatPlain(lodgingCap)} € para ${lodgingDays} noche(s); el exceso no se incluye.`);
+  if (!highOffice && actualLodging > lodgingCap) warnings.push(`El alojamiento supera el máximo de ${formatPlain(lodgingCap)} € para ${lodgingDays} noche(s); el exceso no se incluye.`);
+  if (highOffice) warnings.push("Se aplican importes reales por alto cargo, sin los topes del Anexo 1b; conserva la justificación completa y confirma que la comisión se realiza por razón del cargo.");
   if (mealsRequested && distance <= 30) warnings.push("A 30 km o menos no corresponde manutención, aunque pueden abonarse gastos de viaje justificados.");
   if (mealsRequested && distance > 30 && !input.exceedsWorkday) warnings.push("La manutención a más de 30 km exige que el servicio obligue a exceder la jornada ordinaria y autorización motivada.");
   if (kilometres) warnings.push("Comprueba que los kilómetros corresponden al trayecto más corto desde residencia o puesto de trabajo.");
-  warnings.push("La inscripción se suma como coste planificado, pero no es una dieta; debe ser elegible y justificarse por su vía propia.");
-  return { applicable: true, destinationLabel, lodgingRate, mealRate, lodgingCap: roundMoney(lodgingCap), breakdown, total, warnings };
+  if (registration) warnings.push("La inscripción se suma como coste planificado, pero no es una dieta; debe ser elegible y justificarse por su vía propia.");
+  return {
+    applicable: true, destinationLabel, lodgingRate, mealRate, lodgingDays, mealUnits, highOffice,
+    lodgingCap: highOffice ? null : roundMoney(lodgingCap), breakdown, total, warnings
+  };
 }
 
 export function estimatePersonnelCost(input) {
-  const grossAnnual = numberInRange(input.grossAnnual, 0, 10_000_000, "salario bruto anual");
+  const grossAnnual = numberInRange(input.grossAnnual, 0.01, 10_000_000, "salario bruto anual");
   const months = numberInRange(input.months, 0.1, 120, "meses");
-  const contractType = oneOf(input.contractType, ["indefinite", "fixed"], "tipo de contrato");
+  const contractType = oneOf(input.contractType, ["indefinite", "fixed", "fixed-reduced"], "tipo de contrato");
+  const contributionGroup = oneOf(String(input.contributionGroup ?? "1"), Object.keys(CONTRIBUTION_2026.minimumMonthlyBase), "grupo de cotización");
+  const monthlyHours = numberInRange(input.monthlyHours ?? 160, 1, 160, "horas mensuales contratadas");
+  const contractDays = optionalInteger(input.contractDays, 1, 29, "duración exacta del contrato corto");
+  if (months < 1 && contractDays === null) throw new RangeError("Para una duración inferior a un mes, indica la duración exacta entre 1 y 29 días.");
+  if (months >= 1 && contractDays !== null) throw new RangeError("Indica días exactos únicamente cuando la duración sea inferior a un mes.");
   const accidentRate = numberInRange(input.accidentRate, 0, 20, "tipo de accidentes");
   const otherRate = numberInRange(input.otherRate ?? 0, 0, 50, "otros porcentajes");
   const otherCosts = numberInRange(input.otherCosts ?? 0, 0, 10_000_000, "otros costes");
   const reserveRate = numberInRange(input.reserveRate ?? 0, 0, 50, "reserva");
-  const salary = grossAnnual * months / 12;
+  const effectiveMonths = contractDays === null ? months : contractDays / 30;
+  const salary = grossAnnual * effectiveMonths / 12;
+  const grossMonthly = grossAnnual / 12;
+  const minimumMonthlyBase = monthlyHours < 160
+    ? CONTRIBUTION_2026.minimumHourlyBase[contributionGroup] * monthlyHours
+    : CONTRIBUTION_2026.minimumMonthlyBase[contributionGroup];
+  const maximumMonthlyBase = CONTRIBUTION_2026.maximumMonthlyBase;
+  const contributionBaseMonthly = Math.min(maximumMonthlyBase, Math.max(minimumMonthlyBase, grossMonthly));
+  const contributionBase = contributionBaseMonthly * effectiveMonths;
   const rates = {
     common: 23.6,
-    unemployment: contractType === "indefinite" ? 5.5 : 6.7,
+    unemployment: contractType === "fixed" ? 6.7 : 5.5,
     fogasa: 0.2,
     training: 0.6,
     mei: 0.75,
     accidents: accidentRate,
     other: otherRate
   };
-  const contributions = Object.fromEntries(Object.entries(rates).map(([key, rate]) => [key, roundMoney(salary * rate / 100)]));
+  const contributions = Object.fromEntries(Object.entries(rates).map(([key, rate]) => [key, roundMoney(contributionBase * rate / 100)]));
+  contributions.solidarity = roundMoney(calculateEmployerSolidarity(grossMonthly) * effectiveMonths);
+  contributions.shortFixedTerm = contractType !== "indefinite" && contractDays !== null && !input.shortTermSurchargeExempt
+    ? CONTRIBUTION_2026.shortFixedTermSurcharge : 0;
   const contributionTotal = roundMoney(Object.values(contributions).reduce((sum, value) => sum + value, 0));
   const subtotal = salary + contributionTotal + otherCosts;
   const reserve = roundMoney(subtotal * reserveRate / 100);
   const total = roundMoney(subtotal + reserve);
+  const warnings = ["Estimación presupuestaria uniforme: la nómina real puede variar por días de alta, pagas, bonificaciones, indemnizaciones y reglas de la convocatoria."];
+  if (contractDays !== null) warnings.push(`Para el prorrateo se usan los ${contractDays} días exactos indicados, que prevalecen sobre la duración aproximada en meses.`);
+  if (grossMonthly > maximumMonthlyBase) warnings.push(`Se aplica la base máxima de ${formatPlain(maximumMonthlyBase)} €/mes y la cotización adicional de solidaridad sobre el exceso.`);
+  if (grossMonthly < minimumMonthlyBase) warnings.push(`Se aplica la base mínima de ${formatPlain(minimumMonthlyBase)} €/mes para el grupo ${contributionGroup} y ${formatPlain(monthlyHours)} horas mensuales.`);
+  if (contributions.shortFixedTerm) warnings.push(`Se añade la cotización de ${formatPlain(contributions.shortFixedTerm)} € por contrato temporal inferior a 30 días; no procede en contratos de sustitución ni en las demás excepciones legales.`);
+  warnings.push("Confirma el coste definitivo y la elegibilidad con la unidad gestora antes de publicar o formalizar el contrato.");
   return {
-    salary: roundMoney(salary), rates, contributions, contributionTotal, otherCosts: roundMoney(otherCosts), reserve,
-    total, monthlyAverage: roundMoney(total / months),
-    warnings: [
-      "Estimación presupuestaria: topes y bases de cotización, bonificaciones, tarifa exacta de accidentes, indemnizaciones y reglas de la convocatoria pueden cambiar el coste real.",
-      "Confirma el coste definitivo y la elegibilidad con la unidad gestora antes de publicar o formalizar el contrato."
-    ]
+    salary: roundMoney(salary), grossMonthly: roundMoney(grossMonthly), contributionGroup, monthlyHours, contractDays, effectiveMonths,
+    minimumMonthlyBase: roundMoney(minimumMonthlyBase), maximumMonthlyBase, contributionBaseMonthly: roundMoney(contributionBaseMonthly),
+    contributionBase: roundMoney(contributionBase), rates, contributions, contributionTotal, otherCosts: roundMoney(otherCosts), reserve,
+    total, monthlyAverage: roundMoney(total / effectiveMonths),
+    warnings
   };
 }
 
@@ -199,6 +248,50 @@ export function validateTravelData(data) {
 
 function purchaseResult(status, title, amount, offers, requiresAd, steps, warnings, minorLimit) {
   return { status, title, amount, offers, requiresAd, steps, warnings, minorLimit };
+}
+
+function parseTravelPeriod(departureValue, returnValue) {
+  const departure = parseLocalDateTime(departureValue, "salida");
+  const arrival = parseLocalDateTime(returnValue, "regreso");
+  if (arrival.timestamp <= departure.timestamp) throw new RangeError("El regreso debe ser posterior a la salida.");
+  const departureDay = Date.UTC(departure.year, departure.month - 1, departure.day);
+  const arrivalDay = Date.UTC(arrival.year, arrival.month - 1, arrival.day);
+  const calendarDays = Math.round((arrivalDay - departureDay) / 86_400_000);
+  if (calendarDays > 365) throw new RangeError("La comisión no puede superar 365 noches en este estimador.");
+  return { departure, arrival, calendarDays };
+}
+
+function parseLocalDateTime(value, label) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/.exec(String(value || ""));
+  if (!match) throw new RangeError(`Indica una fecha y hora de ${label} válida.`);
+  const [, year, month, day, hour, minute] = match.map(Number);
+  const date = new Date(year, month - 1, day, hour, minute);
+  if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day || date.getHours() !== hour || date.getMinutes() !== minute) {
+    throw new RangeError(`Indica una fecha y hora de ${label} válida.`);
+  }
+  return { year, month, day, minutes: hour * 60 + minute, timestamp: date.getTime() };
+}
+
+function calculateMealUnits({ departure, arrival, calendarDays }) {
+  const lunchBoundary = 15 * 60 + 30;
+  const dinnerBoundary = 21 * 60;
+  if (calendarDays === 0) {
+    if (departure.minutes < lunchBoundary && arrival.minutes > dinnerBoundary) return 1;
+    if (departure.minutes < lunchBoundary && arrival.minutes >= lunchBoundary) return 0.5;
+    if (departure.minutes >= lunchBoundary && arrival.minutes > dinnerBoundary) return 0.5;
+    return 0;
+  }
+  const firstDay = departure.minutes < lunchBoundary ? 1 : 0.5;
+  const intermediateDays = Math.max(0, calendarDays - 1);
+  const lastDay = arrival.minutes > dinnerBoundary ? 1 : arrival.minutes >= lunchBoundary ? 0.5 : 0;
+  return firstDay + intermediateDays + lastDay;
+}
+
+function calculateEmployerSolidarity(grossMonthly) {
+  const firstBand = Math.min(Math.max(grossMonthly - 5_101.20, 0), 510.12);
+  const secondBand = Math.min(Math.max(grossMonthly - 5_611.32, 0), 2_040.48);
+  const thirdBand = Math.max(grossMonthly - 7_651.80, 0);
+  return firstBand * 0.0096 + secondBand * 0.0104 + thirdBand * 0.0122;
 }
 
 function oneOf(value, allowed, label) {
@@ -218,8 +311,14 @@ function integer(value, min, max, label) {
   return number;
 }
 
+function optionalInteger(value, min, max, label) {
+  if (value === "" || value === null || value === undefined) return null;
+  return integer(value, min, max, label);
+}
+
 function roundMoney(value) {
-  return Math.round((value + Number.EPSILON) * 100) / 100;
+  const scaled = value * 100;
+  return Math.round(scaled + Number.EPSILON * Math.max(1, Math.abs(scaled)) * 2) / 100;
 }
 
 function formatPlain(value) {

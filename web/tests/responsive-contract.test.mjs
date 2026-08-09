@@ -50,6 +50,11 @@ test("el planificador puede contraerse sin desbordar", () => {
   assert.match(ruleFor(".funding-eligibility-badge"), /overflow-wrap:\s*anywhere/);
 });
 
+test("las calculadoras conservan una columna contraíble en móvil", () => {
+  assert.match(ruleFor(".decision-tools"), /grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+  assert.match(styles, /\.decision-form input\[type="datetime-local"\][^{]*\{[^}]*max-width:\s*100%/);
+});
+
 test("el menu movil queda fuera del foco cuando esta cerrado", () => {
   assert.match(app, /syncMenuMode\(\);/);
   assert.match(app, /indexPanel\.toggleAttribute\("inert",\s*!desktop && !open\)/);

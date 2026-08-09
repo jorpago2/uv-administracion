@@ -45,6 +45,21 @@ test("rechaza anualidades que no suman cien y personal fuera del proyecto", () =
   assert.throws(() => calculateProjectBudget(scenario), /supera las 3 anualidad/);
 });
 
+test("aplica topes y solidaridad también al personal del presupuesto", () => {
+  const scenario = baseScenario();
+  scenario.personnel = [{
+    ...scenario.personnel[0], grossAnnual: 100000, months: 12, contractType: "indefinite",
+    contributionGroup: "1", monthlyHours: 160
+  }];
+  scenario.directItems = [];
+  scenario.indirectRate = 0;
+  scenario.reserveRate = 0;
+  scenario.grantCeiling = null;
+  const result = calculateProjectBudget(scenario);
+  assert.equal(result.lines[0].detail.contributionTotal, 20093.63);
+  assert.equal(result.directEconomicCost, 120093.63);
+});
+
 test("exporta un presupuesto Markdown auditable", () => {
   const markdown = buildProjectBudgetMarkdown("Sensor fotónico", calculateProjectBudget(baseScenario()));
   assert.match(markdown, /^# Presupuesto · Sensor fotónico/m);

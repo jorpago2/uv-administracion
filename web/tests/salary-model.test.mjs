@@ -60,6 +60,17 @@ test("no aplica el tramo autonómico a una categoría no elegible", () => {
   assert.equal(result.breakdown.autonomic, 0);
 });
 
+test("rechaza periodos decimales o fuera de los límites del formulario", () => {
+  assert.throws(() => calculateSalary(data, { ...selection("tu", "tc"), triennia: "10.9" }), /trienios/);
+  assert.throws(() => calculateSalary(data, { ...selection("tu", "tc"), triennia: 999 }), /trienios/);
+  assert.throws(() => calculateSalary(data, { ...selection("tu", "tc"), researchPeriods: 11 }), /sexenios/);
+});
+
+test("rechaza complementos negativos y cargos inexistentes", () => {
+  assert.throws(() => calculateSalary(data, { ...selection("tu", "tc"), otherAutonomic: -1 }), /complementos/);
+  assert.throws(() => calculateSalary(data, { ...selection("tu", "tc"), roleId: "inventado" }), /cargo académico/);
+});
+
 function selection(categoryId, dedicationId) {
   return {
     categoryId,

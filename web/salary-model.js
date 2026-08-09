@@ -8,11 +8,12 @@ export function calculateSalary(data, selection) {
   const profile = category.dedications.find((item) => item.id === selection.dedicationId);
   if (!profile) throw new Error("La dedicación seleccionada no existe para esta categoría.");
 
-  const role = data.academicRoles.find((item) => item.id === selection.roleId) ?? data.academicRoles[0];
-  const triennia = toNonNegativeInteger(selection.triennia);
-  const teachingPeriods = toNonNegativeInteger(selection.teachingPeriods);
-  const researchPeriods = toNonNegativeInteger(selection.researchPeriods);
-  const otherAutonomic = toNonNegativeMoney(selection.otherAutonomic);
+  const role = data.academicRoles.find((item) => item.id === selection.roleId);
+  if (!role) throw new Error("El cargo académico seleccionado no existe.");
+  const triennia = toNonNegativeInteger(selection.triennia, 20, "trienios");
+  const teachingPeriods = toNonNegativeInteger(selection.teachingPeriods, 10, "quinquenios");
+  const researchPeriods = toNonNegativeInteger(selection.researchPeriods, 10, "sexenios");
+  const otherAutonomic = toNonNegativeMoney(selection.otherAutonomic, 1_000_000, "otros complementos autonómicos");
 
   const isFunctionary = profile.mode === "functionary";
   const salary = isFunctionary
@@ -58,7 +59,7 @@ export function calculateSalary(data, selection) {
 }
 
 export function getAutonomicAnnual(tiers, recognizedPeriods) {
-  const count = toNonNegativeInteger(recognizedPeriods);
+  const count = toNonNegativeInteger(recognizedPeriods, 20, "periodos reconocidos");
   const tier = tiers.find(({ minimumPeriods, maximumPeriods }) =>
     count >= minimumPeriods && (maximumPeriods === null || count <= maximumPeriods));
   return tier?.annual ?? 0;
@@ -73,16 +74,23 @@ export function validateSalaryData(data) {
   }
 }
 
-function toNonNegativeInteger(value) {
-  const parsed = Number.parseInt(value, 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+function toNonNegativeInteger(value, maximum, label) {
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed) || parsed < 0 || parsed > maximum) {
+    throw new RangeError(`${label} debe ser un número entero entre 0 y ${maximum}.`);
+  }
+  return parsed;
 }
 
-function toNonNegativeMoney(value) {
+function toNonNegativeMoney(value, maximum, label) {
   const parsed = Number(value);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+  if (!Number.isFinite(parsed) || parsed < 0 || parsed > maximum) {
+    throw new RangeError(`${label} debe estar entre 0 y ${maximum}.`);
+  }
+  return parsed;
 }
 
 function roundMoney(value) {
-  return Math.round((value + Number.EPSILON) * MONEY_PRECISION) / MONEY_PRECISION;
+  const scaled = value * MONEY_PRECISION;
+  return Math.round(scaled + Number.EPSILON * Math.max(1, Math.abs(scaled)) * 2) / MONEY_PRECISION;
 }

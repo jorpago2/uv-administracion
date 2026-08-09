@@ -130,6 +130,10 @@ function render(elements) {
     elements.warning.textContent = warnings.join(" ");
     elements.status.textContent = `Estimación actualizada: ${currency.format(result.annual)} brutos anuales y ${currency.format(result.perPayment)} por paga.`;
   } catch (error) {
+    elements.annual.textContent = "—";
+    elements.perPayment.textContent = "—";
+    elements.breakdown.replaceChildren();
+    elements.hint.textContent = "Corrige el campo indicado para volver a calcular.";
     elements.warning.hidden = false;
     elements.warning.textContent = error.message;
     elements.status.textContent = "No se pudo calcular la retribución.";

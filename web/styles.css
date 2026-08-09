@@ -497,7 +497,7 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .funding-plan-source a { font-weight: 700; }
 
 .decision-tools {
-  min-width: 0; display: grid; gap: var(--space-xl); margin-block-start: var(--space-2xl); padding: var(--space-lg);
+  min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); margin-block-start: var(--space-2xl); padding: var(--space-lg);
   background: var(--color-paper-muted); border: var(--rule-thick) solid var(--color-rule); box-shadow: var(--shadow-lg);
 }
 .decision-tools__heading { display: grid; gap: var(--space-lg); padding-block-end: var(--space-lg); border-block-end: var(--rule-thick) solid var(--color-rule); }
@@ -522,7 +522,7 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .decision-form legend { padding-inline: var(--space-xs); font-family: var(--font-display); font-weight: 800; }
 .decision-fields { display: grid; gap: var(--space-md); }
 .decision-form label:not(.decision-check) { min-width: 0; display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 700; }
-.decision-form input[type="number"], .decision-form input[type="text"], .decision-form select { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-xs) var(--space-sm); background: var(--color-paper); color: var(--color-ink); border: var(--rule) solid var(--color-rule); border-radius: 0; }
+.decision-form input[type="number"], .decision-form input[type="text"], .decision-form input[type="datetime-local"], .decision-form select { width: 100%; max-width: 100%; min-width: 0; min-height: 48px; padding: var(--space-xs) var(--space-sm); background: var(--color-paper); color: var(--color-ink); border: var(--rule) solid var(--color-rule); border-radius: 0; }
 .decision-form input:hover, .decision-form select:hover { background: var(--color-paper-muted); }
 .decision-form input:active, .decision-form select:active { background: var(--color-paper-raised); }
 .decision-form input:disabled, .decision-form select:disabled { opacity: 0.55; cursor: not-allowed; }

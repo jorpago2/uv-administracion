@@ -413,7 +413,7 @@
             <div class="decision-card__body">
               <form class="decision-form" id="purchaseForm">
                 <fieldset><legend>Necesidad</legend><div class="decision-fields">
-                  <label>Tipo<select name="type"><option value="supplies">Suministro general</option><option value="services">Servicio general</option><option value="works">Obra</option><option value="research" selected>Suministro/servicio de investigación · DA 54</option><option value="database">Base de datos o suscripción</option></select></label>
+                  <label>Tipo<select name="type"><option value="supplies">Suministro general</option><option value="services">Servicio general</option><option value="works">Obra</option><option value="research" selected>Suministro/servicio de investigación · DA 54</option><option value="database">Base de datos o suscripción</option><option value="scientific-publication">Publicación/revisión de artículo científico</option><option value="conference-registration">Inscripción en congreso o jornada</option><option value="scientific-membership">Cuota de sociedad científica</option></select></label>
                   <label>Importe sin IVA<input name="amount" type="number" min="0" max="100000000" step="0.01" value="18000"></label>
                   <label>Duración prevista · meses<input name="durationMonths" type="number" min="1" max="240" step="1" value="4"></label>
                 </div></fieldset>
@@ -434,12 +434,12 @@
                   <label>Destino<select id="travelDestinationType" name="destinationType"><option value="rest-spain">Resto de España</option><option value="madrid-barcelona">Madrid o Barcelona</option><option value="foreign" selected>Extranjero</option></select></label>
                   <label>País · denominación del anexo<select id="travelForeign" name="foreignId"></select></label>
                   <label>Distancia desde el origen · km<input name="distance" type="number" min="0" max="100000" step="1" value="1800"></label>
-                </div><label class="decision-check"><input name="exceedsWorkday" type="checkbox" checked><span>El servicio obliga a exceder la jornada ordinaria y está motivado</span></label></fieldset>
+                  <label>Salida<input name="departureDateTime" type="datetime-local" value="2026-09-14T09:00"></label>
+                  <label>Regreso<input name="returnDateTime" type="datetime-local" value="2026-09-17T18:30"></label>
+                </div><label class="decision-check"><input name="exceedsWorkday" type="checkbox" checked><span>El servicio obliga a exceder la jornada ordinaria y está motivado</span></label><label class="decision-check"><input id="travelHighOffice" name="highOffice" type="checkbox"><span>Alto cargo UV en comisión por razón del cargo · importes reales justificados</span></label></fieldset>
                 <fieldset><legend>Gastos previstos</legend><div class="decision-fields">
-                  <label>Noches<input name="lodgingDays" type="number" min="0" max="365" step="1" value="3"></label>
                   <label>Alojamiento real total<input name="actualLodging" type="number" min="0" max="1000000" step="0.01" value="510"></label>
-                  <label>Días de manutención completa<input name="fullMealDays" type="number" min="0" max="365" step="0.5" value="2"></label>
-                  <label>Medias dietas<input name="halfMealDays" type="number" min="0" max="365" step="0.5" value="2"></label>
+                  <label>Restauración real · solo alto cargo<input id="travelActualMeals" name="actualMeals" type="number" min="0" max="1000000" step="0.01" value="0" disabled></label>
                   <label>Transporte público<input name="publicTransport" type="number" min="0" max="1000000" step="0.01" value="185"></label>
                   <label>Inscripción planificada<input name="registration" type="number" min="0" max="1000000" step="0.01" value="420"></label>
                   <label>Vehículo particular<select name="vehicle"><option value="car">Automóvil · 0,26 €/km</option><option value="motorcycle">Motocicleta · 0,106 €/km</option></select></label>
@@ -457,14 +457,17 @@
             <div class="decision-card__body">
               <form class="decision-form" id="personnelForm">
                 <fieldset><legend>Hipótesis presupuestaria</legend><div class="decision-fields">
-                  <label>Salario bruto anual<input name="grossAnnual" type="number" min="0" max="10000000" step="0.01" value="32000"></label>
+                  <label>Salario bruto anual<input name="grossAnnual" type="number" min="0.01" max="10000000" step="0.01" value="32000"></label>
                   <label>Duración · meses<input name="months" type="number" min="0.1" max="120" step="0.1" value="12"></label>
-                  <label>Tipo de contrato<select name="contractType"><option value="indefinite">Indefinido</option><option value="fixed" selected>Temporal · hipótesis</option></select></label>
+                  <label>Tipo de contrato<select name="contractType"><option value="indefinite">Indefinido</option><option value="fixed" selected>Temporal ordinario · desempleo 6,70 %</option><option value="fixed-reduced">Temporal con desempleo reducido · 5,50 %</option></select></label>
+                  <label>Grupo de cotización<select name="contributionGroup"><option value="1" selected>1 · Titulación superior</option><option value="2">2 · Titulación técnica</option><option value="3">3</option><option value="4-7">4 a 7</option></select></label>
+                  <label>Horas contratadas al mes<input name="monthlyHours" type="number" min="1" max="160" step="0.1" value="160"></label>
+                  <label>Días exactos · solo si menos de un mes<input name="contractDays" type="number" min="1" max="29" step="1" value=""></label>
                   <label>AT/EP empresarial · %<input name="accidentRate" type="number" min="0" max="20" step="0.01" value="1.5"></label>
                   <label>Otros tipos empresariales · %<input name="otherRate" type="number" min="0" max="50" step="0.01" value="0"></label>
                   <label>Otros costes del periodo<input name="otherCosts" type="number" min="0" max="10000000" step="0.01" value="0"></label>
                   <label>Reserva de desviación · %<input name="reserveRate" type="number" min="0" max="50" step="0.1" value="2"></label>
-                </div></fieldset>
+                </div><label class="decision-check"><input name="shortTermSurchargeExempt" type="checkbox"><span>El contrato inferior a 30 días está legalmente exento del recargo</span></label><p>Usa «temporal con desempleo reducido» solo para modalidades legalmente incluidas, como formación, prácticas, relevo, sustitución o contratación de personas con discapacidad. En tiempo parcial, indica las horas mensuales pactadas para aplicar la base mínima por hora.</p></fieldset>
                 <button class="control" type="reset">Restablecer</button>
               </form>
               <section class="decision-result" aria-label="Resultado de coste de personal"><p class="decision-result__eyebrow">Coste total estimado</p><strong class="decision-result__primary">—</strong><p class="decision-result__status" aria-live="polite"></p><dl class="decision-breakdown"></dl><ul class="decision-warnings"></ul></section>
@@ -565,7 +568,7 @@
                   <select id="academicRole" name="academicRole"></select>
                 </label>
                 <label>Otros complementos autonómicos reconocidos · €/año
-                  <input id="otherAutonomic" name="otherAutonomic" type="number" min="0" step="0.01" value="0" inputmode="decimal">
+                  <input id="otherAutonomic" name="otherAutonomic" type="number" min="0" max="1000000" step="0.01" value="0" inputmode="decimal">
                 </label>
               </div>
               <label class="salary-check">

@@ -118,6 +118,10 @@ function calculatePersonnelLine(line, index, years) {
     grossAnnual: line.grossAnnual,
     months,
     contractType: line.contractType,
+    contributionGroup: line.contributionGroup ?? "1",
+    monthlyHours: line.monthlyHours ?? 160,
+    contractDays: line.contractDays ?? "",
+    shortTermSurchargeExempt: Boolean(line.shortTermSurchargeExempt),
     accidentRate: line.accidentRate,
     otherRate: line.otherRate ?? 0,
     otherCosts: line.otherCosts ?? 0,
@@ -213,7 +217,8 @@ function integer(value, min, max, label) {
 }
 
 function roundMoney(value) {
-  return Math.round((value + Number.EPSILON) * 100) / 100;
+  const scaled = value * 100;
+  return Math.round(scaled + Number.EPSILON * Math.max(1, Math.abs(scaled)) * 2) / 100;
 }
 
 function formatNumber(value) {
