@@ -46,12 +46,12 @@ test("la portada prioriza buscar, actuar y explorar antes de la consulta", () =>
   assert.match(html, /href="consulta\.html"/);
 });
 
-test("las cien situaciones tienen una subweb principal y buscable", () => {
+test("las 104 situaciones tienen una subweb principal y buscable", () => {
   assert.match(resolverHtml, /id="situaciones"/);
   assert.match(resolverHtml, /id="situationQuery"[^>]+type="search"/);
   assert.match(resolverHtml, /id="situationCategory"/);
   assert.match(resolverPage, /initSituationDirectory/);
-  assert.match(resolverHtml, /100 situaciones reales/);
+  assert.match(resolverHtml, /104 situaciones reales/);
   assert.match(resolverHtml, /href="\.\.\/auditoria\/"/);
   assert.match(auditHtml, /id="auditCaseList"/);
   assert.match(html, /href="auditoria\/"/);

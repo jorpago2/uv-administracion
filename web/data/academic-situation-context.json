@@ -272,6 +272,26 @@
       ],
       "example": "Si quieres grabar defensas de proyectos para revisar la evaluación, define finalidad, personas captadas, acceso, plazo de conservación y alternativa si procede. Informa antes, usa la herramienta institucional y restringe la grabación al equipo evaluador; no la reutilices como material promocional.",
       "approvalGate": "No grabes ni publiques cuando finalidad, información previa, acceso y conservación no estén resueltos por el cauce institucional."
+    },
+    {
+      "situationId": "incorporar-estudiante-laboratorio",
+      "programmeIds": ["giet", "giei", "git", "muie", "die-doctorado"],
+      "authority": "En TFG/TFM, la ETSE y la CAT o CCA gobiernan propuesta, tutoría, evaluación, depósito y confidencialidad académica; en doctorado intervienen la comisión académica y la Escuela de Doctorado. ICMUV/LFNN decide el alta y la habilitación local, y el tutor no puede dispensar prevención, cobertura ni autorización técnica.",
+      "documentTypes": ["ficha", "plan", "verifica", "seguimiento"],
+      "programmeNotes": {
+        "giet": "Relacionar el trabajo experimental con las competencias, alcance y procedimiento de TFG vigentes del GIET, sin convertir la memoria Verifica en una autorización de laboratorio.",
+        "giei": "Alinear el TFG con las competencias del GIEI y separar claramente tutoría académica, supervisión experimental y habilitación de equipos.",
+        "git": "Si el TFG incluye fotónica o telecomunicación experimental, documentar además interfaces, instrumentación y trazabilidad de las medidas respecto de los resultados evaluados.",
+        "muie": "En el TFM del MUIE, ajustar autonomía y complejidad al nivel de máster, pero conservar formación y autorización nominal para cada proceso o equipo.",
+        "die-doctorado": "El plan de investigación y la supervisión doctoral justifican la actividad científica, pero no sustituyen el alta ICMUV, la prevención ni las reglas locales de LFNN."
+      },
+      "differences": [
+        "TFG y TFM siguen el calendario, propuesta, tutoría, depósito y defensa definidos por la ETSE y la comisión del título; el doctorado sigue su plan, seguimiento anual y normativa propia.",
+        "La profundidad científica y autonomía esperadas cambian entre grado, máster y doctorado, pero el umbral preventivo y la autorización local dependen del riesgo y del equipo, no del nivel académico.",
+        "La confidencialidad o patente puede exigir medidas previas diferentes en memoria, depósito, tribunal y publicación, siempre tramitadas institucionalmente."
+      ],
+      "example": "Jorge incorpora a una estudiante del MUIE para simular, fabricar y medir un dispositivo fotónico en ICMUV. Primero formaliza el TFM y la tutoría; después confirma cobertura, alta y prevención; finalmente autoriza de modo progresivo software, preparación de muestras, LFNN y banco óptico. Si aparece un resultado protegible, coordina STI y CCA antes de resumen, depósito o defensa.",
+      "approvalGate": "No comenzar trabajo experimental hasta que estén documentados estatus académico, cobertura, alta ICMUV, supervisor directo, formación preventiva y alcance inicial autorizado. La comisión académica valida lo académico; el responsable local mantiene la última palabra sobre acceso y equipos."
     }
   ]
 }

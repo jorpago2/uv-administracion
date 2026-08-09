@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-08-09",
-  "title": "Auditoría de pertinencia de las 100 situaciones",
+  "title": "Auditoría de pertinencia de las 104 situaciones",
   "scope": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+.",
   "methodology": [
     "Pertinencia: el caso se relaciona con funciones reales de docencia, investigación, gestión o empleo de Jorge Parra.",
@@ -71,7 +71,11 @@
     "firmar-nda-mta-dta",
     "subcontratar-servicio-cientifico",
     "orden-patente-preprint-congreso-tesis",
-    "pagar-servicio-cientifico-interno"
+    "pagar-servicio-cientifico-interno",
+    "acceso-lfnn-sala-limpia",
+    "fabricacion-foundry-run",
+    "licencia-simulacion-calculo-nube",
+    "incorporar-estudiante-laboratorio"
   ],
   "institutionMap": [
     {
@@ -165,27 +169,6 @@
   ],
   "missingCases": [
     {
-      "id": "acceso-lfnn-sala-limpia",
-      "priority": "alta",
-      "title": "Obtener acceso y habilitación para LFNN o sala limpia",
-      "reason": "El alta general y la prevención no explican todavía la secuencia local de solicitud, formación, autorización, reserva y trabajo autónomo o supervisado.",
-      "nearbySituationIds": ["incorporacion-inicial", "laser-accidente-laboratorio", "pagar-servicio-cientifico-interno"]
-    },
-    {
-      "id": "fabricacion-foundry-run",
-      "priority": "alta",
-      "title": "Contratar una fabricación externa o un foundry run",
-      "reason": "La subcontratación científica existente no concreta PDK, versión GDS, reglas de proceso, propiedad de máscaras, aceptación de obleas/dies, NDA y riesgos de plazo.",
-      "nearbySituationIds": ["subcontratar-servicio-cientifico", "firmar-nda-mta-dta", "proveedor-exclusivo"]
-    },
-    {
-      "id": "licencia-simulacion-calculo-nube",
-      "priority": "alta",
-      "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
-      "reason": "La compra general no resuelve usuario nominal o concurrente, duración, renovación, tratamiento de datos, exportación de modelos, costes variables y continuidad tras el proyecto.",
-      "nearbySituationIds": ["compra-menor-5000", "proveedor-exclusivo", "publicar-software-datos"]
-    },
-    {
       "id": "instalar-modificar-equipo-laboratorio",
       "priority": "alta",
       "title": "Instalar o modificar un equipo o infraestructura de laboratorio",
@@ -198,13 +181,6 @@
       "title": "Enviar un instrumento a calibración o reparación",
       "reason": "El ciclo de vida del equipo es demasiado amplio para decidir diagnóstico, presupuesto, salida de inventario, datos almacenados, transporte, garantía y certificado de calibración.",
       "nearbySituationIds": ["ciclo-vida-equipo", "prestar-trasladar-equipo-fuera-uv", "subcontratar-servicio-cientifico"]
-    },
-    {
-      "id": "incorporar-estudiante-laboratorio",
-      "priority": "alta",
-      "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
-      "reason": "Las guías académicas no reúnen en una sola secuencia alcance, supervisión, prevención, acceso, propiedad de datos, confidencialidad, cuaderno y retirada de permisos.",
-      "nearbySituationIds": ["tfg-tfm-ordinario", "tfg-tfm-confidencial", "seguimiento-deposito-tesis"]
     },
     {
       "id": "gestionar-datos-instrumentales",

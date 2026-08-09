@@ -1,7 +1,7 @@
 [
   {
     "kind": "Auditoría",
-    "title": "Auditoría de pertinencia de las 100 situaciones",
+    "title": "Auditoría de pertinencia de las 104 situaciones",
     "context": "Cobertura, pertinencia, fuentes y casos pendientes",
     "keywords": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+. control calidad casos genericos incompletos mapa institucional",
     "href": "auditoria/",
@@ -104,22 +104,6 @@
     "priority": 10
   },
   {
-    "kind": "Hueco detectado",
-    "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
-    "context": "La compra general no resuelve usuario nominal o concurrente, duración, renovación, tratamiento de datos, exportación de modelos, costes variables y continuidad tras el proyecto.",
-    "keywords": "alta compra-menor-5000 proveedor-exclusivo publicar-software-datos",
-    "href": "auditoria/#gapsTitle",
-    "priority": 9
-  },
-  {
-    "kind": "Hueco detectado",
-    "title": "Contratar una fabricación externa o un foundry run",
-    "context": "La subcontratación científica existente no concreta PDK, versión GDS, reglas de proceso, propiedad de máscaras, aceptación de obleas/dies, NDA y riesgos de plazo.",
-    "keywords": "alta subcontratar-servicio-cientifico firmar-nda-mta-dta proveedor-exclusivo",
-    "href": "auditoria/#gapsTitle",
-    "priority": 9
-  },
-  {
     "kind": "Titulación",
     "title": "GIEI · Grado en Ingeniería Electrónica Industrial",
     "context": "ETSE-UV · código UV 1404 · RUCT 2501411",
@@ -145,14 +129,6 @@
   },
   {
     "kind": "Hueco detectado",
-    "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
-    "context": "Las guías académicas no reúnen en una sola secuencia alcance, supervisión, prevención, acceso, propiedad de datos, confidencialidad, cuaderno y retirada de permisos.",
-    "keywords": "alta tfg-tfm-ordinario tfg-tfm-confidencial seguimiento-deposito-tesis",
-    "href": "auditoria/#gapsTitle",
-    "priority": 9
-  },
-  {
-    "kind": "Hueco detectado",
     "title": "Instalar o modificar un equipo o infraestructura de laboratorio",
     "context": "Falta una ruta única para cargas eléctricas, extracción, gases, refrigeración, láser, obra, mantenimiento, puesta en servicio y autorización del espacio.",
     "keywords": "alta ciclo-vida-equipo laser-accidente-laboratorio aceptar-donacion-cesion-patrocinio",
@@ -165,14 +141,6 @@
     "context": "ETSE-UV · código UV 2269 · RUCT 4311716",
     "keywords": "Máster DIE y profesorado participante en el título Comisión de Coordinación Académica (CCA) y órganos de la ETSE-UV Ficha oficial Ficha oficial del MUIE Plan, competencias, admisión, movilidad, responsables y calidad. Memoria Verifica Memoria de verificación publicada del MUIE Diseño verificado de origen del máster; debe leerse con las modificaciones posteriores. Plan y guías Plan de estudios y guías docentes del MUIE Estructura vigente y acceso a las guías de las asignaturas. Calidad Modificaciones, seguimiento y acreditación del MUIE Informes ANECA, modificaciones de 2010, 2013, 2014 y 2023, y renovación de la acreditación.",
     "href": "programas/#muie",
-    "priority": 9
-  },
-  {
-    "kind": "Hueco detectado",
-    "title": "Obtener acceso y habilitación para LFNN o sala limpia",
-    "context": "El alta general y la prevención no explican todavía la secuencia local de solicitud, formación, autorización, reserva y trabajo autónomo o supervisado.",
-    "keywords": "alta incorporacion-inicial laser-accidente-laboratorio pagar-servicio-cientifico-interno",
-    "href": "auditoria/#gapsTitle",
     "priority": 9
   },
   {
@@ -465,6 +433,14 @@
   },
   {
     "kind": "Situación",
+    "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
+    "context": "Jorge necesita software de electromagnetismo o dispositivos, una licencia concurrente, capacidad HPC o créditos de nube y debe decidir si ya existe cobertura UV o si hay que comprarla.",
+    "keywords": "licencia simulación COMSOL Lumerical Ansys HPC GPU cloud cálculo en nube licencia concurrente software investigación Primero SIUV para catálogo y cobertura institucional; centro para necesidad docente compartida; unidad gestora para compra de investigación Catálogo software.uv.es y consulta escrita al canal competente antes de oferta, alta, prueba con datos reales o pedido design simulation data management Afecta a electromagnetismo, fotónica, transporte de semiconductores, materiales y dispositivos emergentes, donde solver, versión, licencia y recursos alteran coste y reproducibilidad. Antes de comprar una licencia concurrente para FDTD o TCAD, ejecuta un caso representativo, estima memoria y horas por barrido y comprueba cómo exportar malla, geometría, materiales y resultados al finalizar. icmuv umdo serinves",
+    "href": "example.html?caso=licencia-simulacion-calculo-nube",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
     "title": "Comprobar elegibilidad en una convocatoria recurrente",
     "context": "Quieres saber si persona, grupo, UV, consorcio, fecha de doctorado, movilidad o resultado previo cumplen una edición concreta.",
     "keywords": "elegibilidad ERC MSCA Pathfinder AICO PROMETEO PDC management Separa el excelente encaje científico de la elegibilidad administrativa: adscripción ICMUV/UMDO, categoría contractual, fecha de doctorado, dedicación, composición del grupo y papel UV deben comprobarse por separado. Una propuesta técnicamente perfecta sobre dispositivos neuromórficos puede ser inadmisible si la figura de IP o el beneficiario no cumplen; valida primero ese árbol de requisitos. jorge-uv serinves",
@@ -493,6 +469,14 @@
     "context": "Necesitas incorporar personal investigador o técnico y debes encajar perfil, coste, duración, selección y fecha real de alta.",
     "keywords": "contrato personal técnico predoctoral postdoctoral baremo simulation fabrication characterization data management Define capacidades observables y formación necesaria: FDTD o dispositivo, layouts, sala limpia, instrumentación óptica/eléctrica, automatización, análisis y trazabilidad; evita perfiles imposibles que mezclen todo sin prioridad. Decide si necesitas una persona de simulación, proceso o caracterización y fija entregables compatibles con duración contractual y acceso real a instalaciones. umdo lfnn scsie",
     "href": "example.html?caso=contratar-personal-proyecto",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Contratar una fabricación externa o un foundry run",
+    "context": "Jorge quiere enviar un GDS a una foundry para una corrida MPW o una fabricación de obleas y debe coordinar PDK, NDA, compra, proyecto, entrega y aceptación técnica.",
+    "keywords": "foundry MPW wafer run GDS PDK máscaras tape-out fabricación externa corrida de obleas Unidad gestora del proyecto y contratación; STI si existen NDA, PDK, derechos o colaboración más allá de una compra estándar Consulta previa y expediente UV-plyca o cauce vigente; STI antes de aceptar términos o transferir información protegida design fabrication protection management Conecta diseño y simulación con una fabricación externa cuando LFNN no cubre el proceso, se necesita una MPW industrial o el dispositivo exige una plataforma y PDK de tercero. Para un circuito fotónico con una capa funcional posterior, separa el tape-out de foundry de la posfabricación ICMUV y conserva correspondencia entre celda, die, oblea, receta y medida. icmuv umdo serinves",
+    "href": "example.html?caso=fabricacion-foundry-run",
     "priority": 6
   },
   {
@@ -649,6 +633,14 @@
   },
   {
     "kind": "Situación",
+    "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
+    "context": "Un estudiante de GIET, GIEI, GIT, MUIE o del Doctorado en Ingeniería Electrónica va a diseñar, fabricar o caracterizar un dispositivo en ICMUV y necesita una incorporación segura y trazable.",
+    "keywords": "alta estudiante laboratorio TFG experimental TFM laboratorio doctorando ICMUV onboarding seguro estudiante acceso equipos ETSE/CAT/CCA o programa de doctorado para lo académico; ICMUV/LFNN y SPMA para alta, acceso, prevención y operación local Procedimiento académico vigente y protocolo de alta ICMUV, con confirmaciones escritas de cobertura y habilitación antes del acceso giet giei git muie die-doctorado En TFG/TFM, la ETSE y la CAT o CCA gobiernan propuesta, tutoría, evaluación, depósito y confidencialidad académica; en doctorado intervienen la comisión académica y la Escuela de Doctorado. ICMUV/LFNN decide el alta y la habilitación local, y el tutor no puede dispensar prevención, cobertura ni autorización técnica. Jorge incorpora a una estudiante del MUIE para simular, fabricar y medir un dispositivo fotónico en ICMUV. Primero formaliza el TFM y la tutoría; después confirma cobertura, alta y prevención; finalmente autoriza de modo progresivo software, preparación de muestras, LFNN y banco óptico. Si aparece un resultado protegible, coordina STI y CCA antes de resumen, depósito o defensa. TFG y TFM siguen el calendario, propuesta, tutoría, depósito y defensa definidos por la ETSE y la comisión del título; el doctorado sigue su plan, seguimiento anual y normativa propia. La profundidad científica y autonomía esperadas cambian entre grado, máster y doctorado, pero el umbral preventivo y la autorización local dependen del riesgo y del equipo, no del nivel académico. La confidencialidad o patente puede exigir medidas previas diferentes en memoria, depósito, tribunal y publicación, siempre tramitadas institucionalmente. design fabrication characterization data management Es recurrente al integrar TFG, TFM y doctorado en proyectos ICMUV donde una persona novel puede pasar de modelos y layouts a procesos LFNN y bancos ópticos o eléctricos. Un TFM sobre un memristor fotónico empieza con simulación y muestras testigo, progresa a un equipo cada vez y solo accede a una receta o banco autónomamente cuando queda registrada la formación correspondiente. icmuv umdo lfnn prevencion",
+    "href": "example.html?caso=incorporar-estudiante-laboratorio",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
     "title": "Incorporarme a un consorcio antes de presentar una propuesta",
     "context": "Un coordinador extranjero pide confirmar participación, presupuesto y tareas en pocos días y puede enviar cartas o compromisos para firma.",
     "keywords": "consorcio europeo letter of commitment socio proyecto Horizon Europe presupuesto socio Sección de I+D+i Internacional del STI, IP UV y representantes institucionales autorizados Circuito UV de propuestas y Funding & Tenders Portal o plataforma de la convocatoria simulation fabrication characterization protection management Define la aportación UV como capacidad y entregable verificable, indicando qué se hace en ICMUV/LFNN, qué en SCSIE y qué depende de socios o foundry externa. En un consorcio de fotónica neuromórfica, evita prometer fabricación completa si tu papel real es diseño, integración de material y caracterización funcional. icmuv umdo lfnn scsie serinves",
@@ -693,6 +685,14 @@
     "context": "El proyecto europeo ha sido seleccionado y circula un DESCA con reglas de gobierno, responsabilidad, pagos, background, resultados y publicaciones.",
     "keywords": "consortium agreement DESCA grant agreement background access rights joint ownership STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio Negociación de versiones controladas y firma institucional antes de la fecha exigida design simulation fabrication data protection transfer Identifica como background los modelos, librerías de diseño, layouts, recetas, materiales, bancos de medida y software previos; regula acceso y explotación del foreground conjunto. Si un socio fabrica tu diseño y otro aporta el material funcional, acuerda antes quién puede reutilizar GDS, proceso y datos para proyectos o productos posteriores. serinves",
     "href": "example.html?caso=negociar-acuerdo-consorcio",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Obtener acceso y habilitación para LFNN o sala limpia",
+    "context": "Jorge necesita realizar litografía, deposición, grabado o preparación de muestras en LFNN y quiere saber qué debe completar antes de entrar, reservar y operar de forma autónoma.",
+    "keywords": "LFNN sala limpia cleanroom litografía microfabricación formación de equipo reserva LFNN autorización laboratorio ICMUV/LFNN: responsable local vigente del laboratorio y de cada equipo; SPMA cuando proceda revisar riesgos Protocolo de alta ICMUV y solicitud escrita al contacto funcional vigente de LFNN o del equipo fabrication characterization management Es una ruta central para pasar del diseño de dispositivos fotónicos, semiconductores avanzados o memorias a litografía, deposición, grabado y preparación reproducible dentro de LFNN. Para fabricar un dispositivo con material funcional sobre silicio, identifica sustrato, resist, litografía, deposición, lift-off o grabado, compatibilidad de materiales y equipos antes de aprender una receta concreta. icmuv umdo lfnn prevencion",
+    "href": "example.html?caso=acceso-lfnn-sala-limpia",
     "priority": 6
   },
   {

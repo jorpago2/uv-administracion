@@ -5,8 +5,8 @@ import path from "node:path";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = path.join(repositoryRoot, "web", "data");
 
-const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext, personalResearchContext, contentAudit] = await Promise.all([
-  readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"),
+const [manual, situationsA, situationsB, situationsC, glossary, funding, operations, academicProgrammes, academicSituationContext, personalResearchContext, contentAudit] = await Promise.all([
+  readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"), readJson("situations-101-104.json"),
   readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json"),
   readJson("academic-situation-context.json"), readJson("personal-research-context.json"), readJson("content-audit.json")
 ]);
@@ -24,7 +24,7 @@ const entries = [
   priority: 2
 }));
 
-for (const situation of [...situationsA.situations, ...situationsB.situations]) {
+for (const situation of [...situationsA.situations, ...situationsB.situations, ...situationsC.situations]) {
   const academicContext = academicContextBySituation.get(situation.id);
   const personalContext = personalContextBySituation.get(situation.id);
   entries.push({

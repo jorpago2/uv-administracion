@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Situaciones operativas 101–104",
+    "reviewedOn": "2026-08-09"
+  },
+  "categories": [
+    { "id": "incorporacion", "label": "Incorporación y carrera" },
+    { "id": "docencia", "label": "Docencia y estudiantado" },
+    { "id": "investigacion", "label": "Investigación y transferencia" },
+    { "id": "gestion", "label": "Compras, equipos y viajes" },
+    { "id": "cumplimiento", "label": "Cumplimiento y derechos" }
+  ],
+  "profiles": {
+    "standalone-detailed": {}
+  },
+  "situations": [
+    {
+      "id": "acceso-lfnn-sala-limpia",
+      "number": 101,
+      "category": "investigacion",
+      "baseChapter": 28,
+      "profile": "standalone-detailed",
+      "title": "Obtener acceso y habilitación para LFNN o sala limpia",
+      "scenario": "Jorge necesita realizar litografía, deposición, grabado o preparación de muestras en LFNN y quiere saber qué debe completar antes de entrar, reservar y operar de forma autónoma.",
+      "aliases": ["LFNN", "sala limpia", "cleanroom", "litografía", "microfabricación", "formación de equipo", "reserva LFNN", "autorización laboratorio"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "El alta ICMUV, la información preventiva, la formación local y la habilitación de cada equipo quedan confirmadas por escrito; también queda claro si el primer proceso será supervisado o autónomo.",
+        "firstMove": "Envía al contacto vigente de LFNN/ICMUV una ficha de una página con proceso, equipos, materiales, riesgos, experiencia previa y fechas; pide por escrito la secuencia local de alta, formación, reserva y autorización.",
+        "questions": [
+          "¿Accede como miembro ICMUV, estudiante, visitante o colaborador externo y quién es su responsable directo?",
+          "¿Qué equipos, materiales y pasos de proceso necesita, y cuáles requieren formación o autorización independiente?",
+          "¿Puede trabajar de forma autónoma o debe hacerlo bajo supervisión, especialmente en la primera ejecución?",
+          "¿Cómo se gestionan reserva, acceso físico, emergencias, consumibles, contaminación y residuos?"
+        ],
+        "successChecks": [
+          "El alta y la información preventiva constan como completadas.",
+          "Existe confirmación nominal de los equipos y procesos autorizados y del nivel de supervisión.",
+          "La primera ejecución, la reserva y el registro de uso están acordados con el responsable local."
+        ],
+        "responsibilities": [
+          { "actor": "Jorge o persona usuaria", "task": "Describir proceso y riesgos, completar documentación y limitarse a los equipos y condiciones autorizados." },
+          { "actor": "Responsable directo ICMUV", "task": "Avalar la necesidad, asegurar la supervisión inicial y verificar que el trabajo encaja en el laboratorio." },
+          { "actor": "Responsable vigente de LFNN/equipo", "task": "Indicar formación, reglas locales, reserva y alcance de la habilitación técnica." },
+          { "actor": "ICMUV y SPMA", "task": "Gestionar el alta local y la prevención general o específica que corresponda, sin sustituir la autorización del equipo." }
+        ],
+        "unit": "ICMUV/LFNN: responsable local vigente del laboratorio y de cada equipo; SPMA cuando proceda revisar riesgos",
+        "channel": "Protocolo de alta ICMUV y solicitud escrita al contacto funcional vigente de LFNN o del equipo",
+        "deadline": "Antes de entrar en zona restringida, reservar, introducir muestras o químicos, o accionar cualquier equipo",
+        "documents": [
+          "Ficha de proceso con equipos, materiales, muestras y secuencia prevista",
+          "Datos de alta ICMUV y justificante firmado de lectura de prevención",
+          "Fichas de datos de seguridad y evaluación de riesgos cuando corresponda",
+          "Registro de formación y habilitación por equipo o proceso",
+          "Confirmación de supervisión, reserva, consumibles, residuos y respuesta a emergencias"
+        ],
+        "steps": [
+          { "action": "Traducir el experimento a una matriz proceso–equipo–material–riesgo y separar lo imprescindible de lo opcional.", "evidence": "Ficha técnica versionada y revisable" },
+          { "action": "Completar el alta de nuevo miembro o la ruta equivalente indicada por ICMUV, incluida la lectura preventiva exigida.", "evidence": "Correo de alta y justificante remitido" },
+          { "action": "Contrastar sustancias, muestras, contaminación cruzada, residuos, láseres y emergencias con las reglas locales.", "evidence": "Lista de riesgos y medidas aceptada" },
+          { "action": "Realizar la formación y demostración exigida para cada equipo, sin extrapolar una autorización a otros instrumentos.", "evidence": "Registro nominal de formación" },
+          { "action": "Obtener confirmación del acceso físico, alcance autorizado, reserva y condición autónoma o supervisada.", "evidence": "Confirmación escrita del responsable vigente" },
+          { "action": "Ejecutar el primer proceso acompañado, registrar incidencias y conservar receta, muestras y parámetros usados.", "evidence": "Primer parte de uso y receta trazable" }
+        ],
+        "risks": [
+          "Confundir tarjeta o alta general con habilitación técnica para todos los equipos.",
+          "Introducir materiales incompatibles o alterar una línea de proceso sin revisión local.",
+          "Trabajar solo en una operación que el responsable considera supervisada.",
+          "Dar por pública una secuencia local que la web de LFNN no documenta."
+        ],
+        "alsoApplies": "A estudiantes, visitantes y colaboradores que deban acceder a instalaciones o equipos de microfabricación del ICMUV.",
+        "adapt": "La formación previa en otra sala puede reducir aprendizaje, pero no sustituye el alta ni la autorización local de LFNN.",
+        "stopsApplying": "Si el trabajo se encarga como servicio y la persona no entra ni opera, la ruta principal pasa a ser la solicitud y aceptación del servicio.",
+        "doNotAssume": "La web pública de LFNN enumera instalaciones, pero no acredita que una persona concreta pueda acceder u operar; exige confirmación local vigente.",
+        "sources": [
+          { "label": "ICMUV · Instalaciones LFNN", "url": "https://www.uv.es/uvweb/instituto-ciencia-materiales-icmuv/es/unidades-investigacion/materiales-dispositivos-optoelectronicos/instalaciones/lfnn-1285929587297.html" },
+          { "label": "ICMUV · Protocolo de alta de nuevos miembros", "url": "https://www.uv.es/uvweb/institut-ciencia-materials-icmuv/ca/informacio/protocolo-alta-nuevos-miembros-1286445458790.html" },
+          { "label": "SPMA · Protocolos de prevención", "url": "https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/salud-prevencion/preguntas-frecuentes/protocolos-1285906052723.html" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": [
+          "Alta ICMUV, prevención, acceso físico y habilitación técnica son controles distintos; completa todos los que correspondan.",
+          "La autorización debe ser nominal y acotada a equipos, procesos y nivel de supervisión, no inferida por analogía."
+        ],
+        "stopConditions": [
+          "No entres, reserves ni operes si falta confirmación del responsable local vigente.",
+          "Detén el proceso si cambia material, receta, riesgo, equipo o condición de supervisión respecto de lo autorizado."
+        ],
+        "completionEvidence": [
+          "Alta y prevención completadas.",
+          "Habilitación nominal y alcance documentados.",
+          "Primera ejecución y registro de uso aceptados."
+        ],
+        "escalation": [
+          "Si la web y la práctica local no coinciden, pide al responsable de LFNN/ICMUV la instrucción aplicable por escrito.",
+          "Si aparecen riesgos no cubiertos, paraliza y consulta al responsable local y al SPMA antes de adaptar el proceso."
+        ]
+      }
+    },
+    {
+      "id": "fabricacion-foundry-run",
+      "number": 102,
+      "category": "investigacion",
+      "baseChapter": 29,
+      "profile": "standalone-detailed",
+      "title": "Contratar una fabricación externa o un foundry run",
+      "scenario": "Jorge quiere enviar un GDS a una foundry para una corrida MPW o una fabricación de obleas y debe coordinar PDK, NDA, compra, proyecto, entrega y aceptación técnica.",
+      "aliases": ["foundry", "MPW", "wafer run", "GDS", "PDK", "máscaras", "tape-out", "fabricación externa", "corrida de obleas"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La fabricación se contrata por la ruta correcta, con versión de diseño congelada, condiciones de PDK y confidencialidad revisadas, coste elegible, pedido autorizado y criterios verificables de entrega y aceptación.",
+        "firstMove": "Prepara un brief sin entregar todavía el GDS final: objeto, foundry, PDK y versión, área, opciones, entregables, calendario, coste total, proyecto pagador, NDA y derechos; remítelo a la unidad gestora para clasificar la operación.",
+        "questions": [
+          "¿Es una fabricación estándar comprada, una tarea subcontratada del proyecto o una colaboración con resultados compartidos?",
+          "¿Qué versión de PDK, reglas, celdas de terceros, archivos y checksum definen el tape-out?",
+          "¿Quién posee o puede reutilizar diseño, máscaras, datos de proceso, dies sobrantes y resultados de caracterización?",
+          "¿Qué constituye entrega conforme y qué sucede ante retraso, lote fallido, rendimiento bajo o cambio de proceso?",
+          "¿Hay anticipo, divisa, aduana, exportación, envío de muestras o restricción de país que deba tramitarse?"
+        ],
+        "successChecks": [
+          "La unidad gestora ha confirmado clasificación, elegibilidad, crédito y procedimiento antes del compromiso.",
+          "El paquete de tape-out tiene versión, revisión, checksum y responsable de liberación identificados.",
+          "Pedido o contrato, NDA/PDK y criterios de aceptación están vigentes antes de transferir archivos."
+        ],
+        "responsibilities": [
+          { "actor": "Jorge y equipo de diseño", "task": "Definir especificación, ejecutar revisiones DRC y científicas, congelar versión y validar entregables." },
+          { "actor": "Unidad gestora/contratación", "task": "Clasificar la operación, verificar crédito y elegibilidad y tramitar expediente, pedido y pago." },
+          { "actor": "STI", "task": "Intervenir si NDA, PDK, clickwrap, cotitularidad, background, foreground o explotación requieren instrumento institucional." },
+          { "actor": "Proveedor/foundry", "task": "Confirmar reglas, calendario, archivos aceptados, fabricación, entrega, trazabilidad y tratamiento de no conformidades." }
+        ],
+        "unit": "Unidad gestora del proyecto y contratación; STI si existen NDA, PDK, derechos o colaboración más allá de una compra estándar",
+        "channel": "Consulta previa y expediente UV-plyca o cauce vigente; STI antes de aceptar términos o transferir información protegida",
+        "deadline": "Antes de reservar slot, aceptar clickwrap, pagar depósito, emitir pedido o subir GDS, PDK, datos o muestras",
+        "documents": [
+          "Especificación de proceso, PDK y versión, opciones, área, cantidad y calendario",
+          "Matriz de entregables y aceptación: obleas/dies, mapas, informes, máscaras y datos",
+          "Presupuesto completo con divisa, IVA, portes, aduana, anticipo y proyecto",
+          "Memoria de necesidad, ofertas o justificación verificable de exclusividad",
+          "NDA, licencia PDK y cláusulas de IP, uso, confidencialidad y publicación",
+          "Checklist de tape-out con revisión, DRC, versión, checksum y aprobaciones",
+          "Pedido o contrato autorizado e informe final de recepción y conformidad"
+        ],
+        "steps": [
+          { "action": "Separar compra estándar, subcontratación de una tarea y colaboración, explicando quién diseña, fabrica e interpreta.", "evidence": "Clasificación funcional remitida a gestión" },
+          { "action": "Definir baseline técnico y aceptación antes de comparar ofertas: PDK, versión, opciones, formatos, cantidad, tolerancias y plazo.", "evidence": "Especificación y matriz de aceptación" },
+          { "action": "Verificar elegibilidad, crédito, anualidad, subcontratación prevista y coste total, incluidos anticipo, impuestos y aduana.", "evidence": "Validación escrita del gestor" },
+          { "action": "Revisar NDA, licencia PDK, clickwrap, background, foreground, máscaras, publicación y exportación con STI cuando proceda.", "evidence": "Instrumento institucional o conformidad aplicable" },
+          { "action": "Tramitar competencia, exclusividad si es real y expediente antes de comunicar una aceptación firme al proveedor.", "evidence": "Pedido o contrato autorizado" },
+          { "action": "Congelar y liberar el paquete mediante doble revisión, lista de archivos, versión y checksum; conservar copia exacta enviada.", "evidence": "Acta de tape-out y paquete inmutable" },
+          { "action": "Recibir, identificar y verificar la entrega contra los criterios pactados antes de dar conformidad a la factura.", "evidence": "Informe de recepción, mapa de lote y aceptación o incidencia" }
+        ],
+        "risks": [
+          "Subir el GDS o aceptar términos del portal antes de que la UV haya autorizado compra y condiciones.",
+          "Tratar como proveedor exclusivo a la opción preferida sin probar la ausencia real de alternativas.",
+          "No fijar versión de PDK/GDS o aceptar la entrega solo por número de dies sin criterio técnico.",
+          "Confundir una compra con una colaboración o con subcontratación elegible del proyecto.",
+          "Olvidar anticipo, divisa, aduana, transporte o cierre de anualidad en el coste y calendario."
+        ],
+        "alsoApplies": "A fabricación de máscaras, deposiciones especiales, encapsulado, dicing, bonding y otros servicios externos con archivos o muestras sensibles.",
+        "adapt": "En una MPW el slot y las reglas pueden ser rígidos; en una corrida dedicada habrá más margen contractual, pero también mayor coste y necesidad de especificación.",
+        "stopsApplying": "Si una entidad colabora científicamente sin precio de mercado o comparte resultados, no basta la compra: debe definirse el acuerdo institucional correspondiente.",
+        "doNotAssume": "Que la foundry sea la única compatible científicamente no acredita por sí solo exclusividad jurídica ni autoriza subir el diseño.",
+        "sources": [
+          { "label": "UV · Instrucción IUV 1/2025 sobre UV-plyca", "url": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693" },
+          { "label": "UV · Contratos menores en PLYCA", "url": "https://www.uv.es/uvweb/servicio-contratacion-administrativa/es/login/personal-uv/contratos-menores/contratos-menores-plyca-1286363570212.html" },
+          { "label": "UV · Valorización, transferencia y NDA", "url": "https://www.uv.es/vds/es/transferencia/valorizacion-transferencia.html" },
+          { "label": "BOE · Ley 9/2017 de Contratos del Sector Público", "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": [
+          "Una fabricación pagada y estándar suele comenzar como compra; si ejecuta una tarea del proyecto o crea resultados compartidos, añade los controles de subcontratación o colaboración que correspondan.",
+          "La transferencia del GDS solo se produce cuando expediente y condiciones de confidencialidad, PDK e IP permiten hacerlo."
+        ],
+        "stopConditions": [
+          "No reserves, pagues, aceptes términos ni subas archivos antes de la autorización UV aplicable.",
+          "No liberes el tape-out si falta revisión independiente, versión, checksum o criterio de aceptación."
+        ],
+        "completionEvidence": [
+          "Clasificación, elegibilidad y expediente aprobados.",
+          "Paquete enviado y términos aplicables trazables.",
+          "Entrega técnica verificada y factura conformada."
+        ],
+        "escalation": [
+          "Eleva a STI cualquier condición de NDA, PDK, propiedad o publicación que no sea estándar o que el PDI deba aceptar personalmente.",
+          "Notifica a gestión y proveedor de inmediato una no conformidad; no cierres recepción mientras se decide repetición, abono o aceptación condicionada."
+        ]
+      }
+    },
+    {
+      "id": "licencia-simulacion-calculo-nube",
+      "number": 103,
+      "category": "gestion",
+      "baseChapter": 29,
+      "profile": "standalone-detailed",
+      "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
+      "scenario": "Jorge necesita software de electromagnetismo o dispositivos, una licencia concurrente, capacidad HPC o créditos de nube y debe decidir si ya existe cobertura UV o si hay que comprarla.",
+      "aliases": ["licencia simulación", "COMSOL", "Lumerical", "Ansys", "HPC", "GPU cloud", "cálculo en nube", "licencia concurrente", "software investigación"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "Se usa primero la cobertura institucional disponible o se adquiere la modalidad adecuada, con usuarios, hosts, coste total, renovación, datos, salida y elegibilidad definidos antes de activar o consumir.",
+        "firstMove": "Completa una matriz de uso: software/servicio y versión, finalidad docente o investigadora, usuarios, hosts, concurrencia, módulos, duración, datos que saldrían de UV, consumo máximo, proyecto y fecha límite; comprueba después el catálogo central.",
+        "questions": [
+          "¿Existe ya una licencia central, de centro, departamento, grupo o proyecto que cubra versión, módulo y uso?",
+          "¿La necesidad es docente compartida, individual de investigación, concurrente, por nodo, por token o consumo variable de nube?",
+          "¿Qué modelos, layouts, datos personales, información bajo NDA o resultados protegibles saldrán del entorno UV?",
+          "¿Cómo se limita gasto, renovación automática, incremento de tarifa, bloqueo del proveedor y exportación al finalizar?",
+          "¿Quién será propietario funcional, administrador, usuario autorizado y responsable de renovar o cancelar?"
+        ],
+        "successChecks": [
+          "La inexistencia o insuficiencia de cobertura institucional se ha comprobado antes de comprar.",
+          "La modalidad satisface usuarios, capacidad y uso permitido sin pagar módulos o concurrencia innecesarios.",
+          "Pedido, seguridad de datos, límite de consumo, renovación y plan de salida quedan documentados."
+        ],
+        "responsibilities": [
+          { "actor": "Jorge y usuarios científicos", "task": "Definir modelos, cargas, módulos, usuarios, datos y criterios de rendimiento reproducibles." },
+          { "actor": "SIUV", "task": "Informar sobre catálogo central y canalizar licencias generales o propuestas compartidas de centro según su competencia publicada." },
+          { "actor": "Centro o unidad gestora", "task": "Evaluar propuesta docente compartida o tramitar la compra de investigación con crédito y elegibilidad." },
+          { "actor": "Responsables de seguridad, datos o STI", "task": "Revisar nube, transferencias, NDA, propiedad, exportación y condiciones no estándar cuando proceda." }
+        ],
+        "unit": "Primero SIUV para catálogo y cobertura institucional; centro para necesidad docente compartida; unidad gestora para compra de investigación",
+        "channel": "Catálogo software.uv.es y consulta escrita al canal competente antes de oferta, alta, prueba con datos reales o pedido",
+        "deadline": "Antes de aceptar licencia, activar renovación, introducir datos sensibles, comprometer consumo o imputar el gasto",
+        "documents": [
+          "Matriz de usuarios, hosts, concurrencia, módulos, versión, duración y finalidad",
+          "Estimación de cargas y coste total con escenarios de consumo y tope",
+          "Comprobación de catálogo y de licencias ya disponibles en UV",
+          "Oferta y términos de licencia, nube, datos, soporte, renovación y salida",
+          "Validación de crédito, elegibilidad, procedimiento y pedido autorizado",
+          "Registro de propietario, administradores, usuarios, activos, renovación y baja"
+        ],
+        "steps": [
+          { "action": "Inventariar cobertura central y local y verificar versión, módulos, uso docente/investigador y restricciones de licencia.", "evidence": "Resultado de catálogo y consultas conservado" },
+          { "action": "Dimensionar la modalidad mediante casos de uso y cargas representativas, no solo por la recomendación comercial.", "evidence": "Matriz de uso y benchmark o estimación" },
+          { "action": "Clasificar la ruta: catálogo central, propuesta compartida de centro o compra de investigación tramitada por la unidad gestora.", "evidence": "Unidad y procedimiento confirmados" },
+          { "action": "Revisar datos, región, subencargados, NDA, IP, exportación, borrado, continuidad y credenciales antes de usar nube o SaaS.", "evidence": "Checklist de seguridad, datos y derechos" },
+          { "action": "Comparar coste total, soporte, formación, renovación, incremento, portabilidad y salida; fijar alerta o tope para consumo variable.", "evidence": "Comparativa y decisión motivada" },
+          { "action": "Tramitar el pedido antes de activar la suscripción y registrar propietario, administradores, usuarios y fecha de revisión.", "evidence": "Pedido, inventario de licencia y calendario" },
+          { "action": "Validar con un caso reproducible y documentar exportación, copia y baja antes de que termine proyecto o contrato.", "evidence": "Prueba de aceptación y plan de salida" }
+        ],
+        "risks": [
+          "Comprar una licencia individual que ya cubre el catálogo UV o que no permite el uso previsto.",
+          "Confundir la ruta de licencias docentes compartidas del SIUV con cualquier compra individual de investigación.",
+          "Activar renovación automática o consumo sin límite ni responsable presupuestario.",
+          "Subir GDS, modelos, datos o resultados bajo NDA a una nube no revisada.",
+          "Perder acceso, archivos o reproducibilidad al acabar la relación UV, el proyecto o la suscripción."
+        ],
+        "alsoApplies": "A licencias de control de instrumentos, CAD electrónico, TCAD, almacenamiento científico y plataformas de cálculo por créditos.",
+        "adapt": "Para docencia compartida, el centro evalúa y justifica la propuesta; para investigación individual, la compra y elegibilidad se tramitan con la unidad gestora, incorporando SIUV cuando aporte cobertura o revisión técnica.",
+        "stopsApplying": "Si la herramienta es gratuita y no trata datos ni impone términos problemáticos, puede no existir compra, pero siguen aplicando seguridad, licencia, reproducibilidad y continuidad.",
+        "doNotAssume": "Una prueba gratuita, una tarjeta personal o la disponibilidad técnica para crear una cuenta equivalen a autorización de compra o de tratamiento de datos.",
+        "sources": [
+          { "label": "SIUV · Adquisición de licencias", "url": "https://www.uv.es/uvweb/servicio-informatica/es/servicios/generales/area-software/licencias/adquisicion-licencias-1285901669859.html" },
+          { "label": "UV · Catálogo central de software", "url": "https://software.uv.es/index.php?lang=es" },
+          { "label": "UV · nÚVol, almacenamiento institucional", "url": "https://www.uv.es/uv-docencia/es/organizacion-docencia/herramientas-docencia/almacenamiento/nuvol.html" },
+          { "label": "UV · Instrucción IUV 1/2025 sobre UV-plyca", "url": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": [
+          "Si ya existe cobertura central suficiente, úsala; una propuesta docente compartida se eleva por el centro, mientras la necesidad individual de investigación se tramita con su unidad gestora.",
+          "En nube o consumo variable, autorización económica y revisión de datos preceden a la activación y se acompañan de límites y salida."
+        ],
+        "stopConditions": [
+          "No aceptes términos, renovación o consumo vinculante antes de confirmar ruta y pedido.",
+          "No introduzcas información confidencial, protegible o personal hasta validar las condiciones aplicables."
+        ],
+        "completionEvidence": [
+          "Cobertura y modalidad justificadas.",
+          "Compra o acceso autorizados con responsables y límites.",
+          "Aceptación técnica, renovación y salida documentadas."
+        ],
+        "escalation": [
+          "Eleva al centro una necesidad docente compartida y a la unidad gestora una compra individual de investigación; pide al SIUV aclaración si existe cobertura o dependencia técnica institucional.",
+          "Si proveedor, región, datos o términos cambian, suspende migración o renovación hasta revalidar seguridad, derechos y coste."
+        ]
+      }
+    },
+    {
+      "id": "incorporar-estudiante-laboratorio",
+      "number": 104,
+      "category": "investigacion",
+      "baseChapter": 28,
+      "profile": "standalone-detailed",
+      "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
+      "scenario": "Un estudiante de GIET, GIEI, GIT, MUIE o del Doctorado en Ingeniería Electrónica va a diseñar, fabricar o caracterizar un dispositivo en ICMUV y necesita una incorporación segura y trazable.",
+      "aliases": ["alta estudiante laboratorio", "TFG experimental", "TFM laboratorio", "doctorando ICMUV", "onboarding", "seguro estudiante", "acceso equipos"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La situación académica, cobertura, alta ICMUV, prevención, acceso, formación, supervisión, datos y confidencialidad quedan resueltos antes del trabajo; al terminar se cierran permisos, muestras y archivos.",
+        "firstMove": "Redacta una ficha de incorporación antes de dar acceso: programa y modalidad, tutor y supervisor directo, fechas, laboratorio, tareas, equipos, materiales, riesgos, proyecto, datos, posible confidencialidad o patente y entregables.",
+        "questions": [
+          "¿Es TFG, TFM, doctorado, prácticas, beca o visita, y están formalizados tutoría, matrícula o acuerdo que corresponda?",
+          "¿Qué cobertura de seguro y prevención aplica exactamente a sus fechas, lugar, actividad y situación administrativa?",
+          "¿Qué tareas puede hacer, con qué equipos, tras qué formación y bajo qué presencia o supervisión?",
+          "¿Dónde se guardan cuaderno, archivos, GDS, recetas, datos y código, y quién puede acceder o reutilizarlos?",
+          "¿Hay NDA, empresa, material de tercero o resultado patentable que limite memoria, defensa, repositorio o publicación?",
+          "¿Qué se revoca, devuelve, transfiere o conserva al finalizar?"
+        ],
+        "successChecks": [
+          "La situación académica y cobertura se han confirmado para actividad, lugar y periodo concretos.",
+          "El alta ICMUV, prevención y autorizaciones nominales de laboratorio/equipo están completadas.",
+          "Existe un plan de supervisión, datos, confidencialidad, hitos y cierre conocido por estudiante y responsables."
+        ],
+        "responsibilities": [
+          { "actor": "Tutor académico", "task": "Asegurar el encaje académico, alcance, seguimiento y evaluación conforme al programa y procedimiento ETSE o de doctorado." },
+          { "actor": "Supervisor experimental", "task": "Descomponer tareas, formar, autorizar progresivamente y asegurar presencia o revisión según riesgo y experiencia." },
+          { "actor": "Estudiante o doctorando", "task": "Completar altas y formación, respetar límites, registrar trabajo e informar incidencias y cambios." },
+          { "actor": "ICMUV/LFNN y SPMA", "task": "Gestionar alta local, prevención y habilitación aplicable sin que la matrícula las sustituya." },
+          { "actor": "ETSE/CAT/CCA o programa de doctorado", "task": "Resolver la gobernanza académica, depósito y medidas de confidencialidad dentro de su competencia." }
+        ],
+        "unit": "ETSE/CAT/CCA o programa de doctorado para lo académico; ICMUV/LFNN y SPMA para alta, acceso, prevención y operación local",
+        "channel": "Procedimiento académico vigente y protocolo de alta ICMUV, con confirmaciones escritas de cobertura y habilitación antes del acceso",
+        "deadline": "Antes del primer acceso, entrega de credenciales, trabajo con muestras, uso de equipo o recepción de información confidencial",
+        "documents": [
+          "Propuesta o acuerdo académico, matrícula y designación de tutor/supervisor",
+          "Ficha de incorporación con tareas, fechas, lugar, riesgos y responsables",
+          "Confirmación de cobertura o seguro aplicable a la actividad concreta",
+          "Alta ICMUV y justificante preventivo firmado",
+          "Registros de formación y autorización por laboratorio, equipo o proceso",
+          "Plan de supervisión, hitos, trabajo en solitario y respuesta a incidentes",
+          "Plan de datos, cuaderno, muestras, confidencialidad, IP y publicación",
+          "Checklist final de accesos, archivos, material, muestras y devolución"
+        ],
+        "steps": [
+          { "action": "Formalizar la relación académica y distinguir TFG/TFM, doctorado, prácticas, beca o visita; no mezclar sus coberturas.", "evidence": "Matrícula, propuesta/acuerdo y responsables identificados" },
+          { "action": "Confirmar por el canal competente que lugar, periodo y actividad experimental están cubiertos; corregir huecos antes del inicio.", "evidence": "Confirmación de cobertura conservada" },
+          { "action": "Completar el alta ICMUV con usuario UV, ubicación, responsable y laboratorio, además de la información preventiva firmada.", "evidence": "Alta y justificante enviados" },
+          { "action": "Convertir el proyecto en tareas autorizables y formar por equipo, proceso y riesgo; comenzar con trabajo acompañado.", "evidence": "Matriz de competencias y registros de formación" },
+          { "action": "Acordar supervisión, presencia, emergencias, horarios, reserva, credenciales y prohibición de usar cuentas ajenas.", "evidence": "Plan de supervisión aceptado" },
+          { "action": "Configurar cuaderno, nombres de muestra, repositorio, copias, permisos, NDA, IP y secuencia patente–memoria–defensa–publicación.", "evidence": "Plan de datos y divulgación versionado" },
+          { "action": "Revisar periódicamente alcance y autonomía; cualquier equipo, material o tarea nueva vuelve al punto de autorización.", "evidence": "Revisiones e incidencias registradas" },
+          { "action": "Cerrar la estancia revocando accesos, recuperando llaves y material, transfiriendo archivos y registrando muestras, residuos y pendientes.", "evidence": "Checklist de salida firmado o confirmado" }
+        ],
+        "risks": [
+          "Suponer que matrícula, tutoría o tarjeta UV autorizan entrada y operación de equipos.",
+          "No comprobar que seguro o cobertura incluye esa actividad, ubicación y periodo.",
+          "Delegar supervisión de hecho sin nombrar responsable ni definir trabajo en solitario.",
+          "Compartir cuentas, credenciales o carpetas sin permisos nominales.",
+          "Depositar o defender un resultado patentable o confidencial antes de coordinar protección.",
+          "Finalizar sin retirar acceso ni transferir datos, muestras, cuaderno y tareas abiertas."
+        ],
+        "alsoApplies": "A estudiantes visitantes, personal en formación y colaboradores jóvenes, adaptando la formalización y cobertura a su vínculo real.",
+        "adapt": "En TFG/TFM manda además el calendario y procedimiento ETSE; en doctorado, la comisión académica y Escuela de Doctorado gobiernan el progreso académico, mientras ICMUV mantiene la autoridad local del laboratorio.",
+        "stopsApplying": "Si el trabajo es exclusivamente remoto y no usa instalaciones, muestras ni datos restringidos, se simplifican acceso y prevención, pero no tutoría, datos, IP, confidencialidad y cierre.",
+        "doNotAssume": "El tutor académico puede habilitar por sí solo un laboratorio o equipo, ni que una póliza genérica cubre cualquier actividad experimental sin confirmación.",
+        "sources": [
+          { "label": "ICMUV · Protocolo de alta de nuevos miembros", "url": "https://www.uv.es/uvweb/institut-ciencia-materials-icmuv/ca/informacio/protocolo-alta-nuevos-miembros-1286445458790.html" },
+          { "label": "ETSE · Información de TFG para estudiantado", "url": "https://www.uv.es/uv-docencia/es/informacion-del-tfg-centros/informacion-del-tfg-centros/etse/informacion-al-estudiantado.html" },
+          { "label": "UV · Seguros", "url": "https://www.uv.es/uvweb/gerencia/es/gestion-economica/seguros-1285910748641.html" },
+          { "label": "SPMA · Protocolos de prevención", "url": "https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/salud-prevencion/preguntas-frecuentes/protocolos-1285906052723.html" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": [
+          "La autorización académica no sustituye cobertura, alta ICMUV, prevención ni habilitación técnica; cada responsable decide dentro de su competencia.",
+          "La autonomía se concede progresivamente por tarea y equipo, con evidencia de formación y posibilidad de volver a supervisión."
+        ],
+        "stopConditions": [
+          "No permitas acceso ni trabajo experimental si vínculo, cobertura, alta, prevención o supervisor no están confirmados.",
+          "Detén una tarea nueva o modificada hasta revisar riesgo, formación, datos y autorización."
+        ],
+        "completionEvidence": [
+          "Situación académica y cobertura verificadas.",
+          "Alta, formación, acceso y supervisión documentados.",
+          "Datos, muestras, divulgación y cierre trazables."
+        ],
+        "escalation": [
+          "Si no está claro quién cubre o autoriza, separa la pregunta académica, de seguro, preventiva y local y solicita respuesta a cada unidad competente.",
+          "Ante accidente, acceso indebido, pérdida de datos o posible divulgación, detén la actividad y activa los canales de prevención, seguridad o transferencia aplicables."
+        ]
+      }
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
+import situationsSpecialisedData from "./data/situations-101-104.json";
 import academicContextData from "./data/academic-situation-context.json";
 import academicProgrammesData from "./data/academic-programmes.json";
 import personalResearchData from "./data/personal-research-context.json";
@@ -15,7 +16,7 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides, academicContextData, personalResearchData);
+const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData, situationsSpecialisedData), guides, academicContextData, personalResearchData);
 const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 const researchStageById = new Map(personalResearchData.stages.map((stage) => [stage.id, stage]));
 const researchResourceById = new Map(personalResearchData.resources.map((resource) => [resource.id, resource]));
