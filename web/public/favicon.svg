@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Guía operativa UV</title>
+  <rect width="64" height="64" fill="#61afea"/>
+  <rect x="2" y="2" width="54" height="54" fill="#f5d328" stroke="#211f1a" stroke-width="4"/>
+  <path fill="#211f1a" d="M9 14h6v25h8V14h6v27l-5 6H14l-5-6V14Zm22 0h7l5 23 5-23h7l-8 33h-8l-8-33Z"/>
+</svg>

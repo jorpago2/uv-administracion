@@ -6,7 +6,15 @@ import { CATEGORIES } from "../chapter-categories.js";
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
 const decisionTools = await readFile(new URL("../decision-tools.js", import.meta.url), "utf8");
+const favicon = await readFile(new URL("../public/favicon.svg", import.meta.url), "utf8");
 const cases = JSON.parse(await readFile(new URL("../data/decision-cases.json", import.meta.url), "utf8"));
+
+test("la identidad visual incluye un favicon vectorial integrado", () => {
+  assert.match(html, /<link rel="icon" href="favicon\.svg" type="image\/svg\+xml" sizes="any">/);
+  assert.match(html, /<meta name="theme-color" content="#f5d328">/);
+  assert.match(favicon, /<svg[^>]+viewBox="0 0 64 64"/);
+  assert.match(favicon, />Guía operativa UV</);
+});
 
 test("los seis ambitos comparten una ficha de navegacion completa", () => {
   assert.equal(CATEGORIES.length, 6);
