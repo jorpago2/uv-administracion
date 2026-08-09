@@ -2,8 +2,8 @@ import "./site-shell.js";
 import careerData from "./data/career-roadmap.json";
 import { PROFILE_DEFAULTS, buildCareerAssessment, evaluateOpportunity, exportCareerRoadmapMarkdown } from "./career-roadmap-model.js";
 
-const STORAGE_KEY = "uv-career-roadmap-profile-v2";
-const LEGACY_STORAGE_KEY = "uv-career-roadmap-profile-v1";
+const STORAGE_KEY = "uv-career-roadmap-profile-v3";
+const PREVIOUS_STORAGE_KEYS = ["uv-career-roadmap-profile-v2", "uv-career-roadmap-profile-v1"];
 const form = document.querySelector("#careerProfileForm");
 let assessment;
 
@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
 form.addEventListener("input", updateAssessment);
 document.querySelector("#careerReset").addEventListener("click", () => {
   localStorage.removeItem(STORAGE_KEY);
-  localStorage.removeItem(LEGACY_STORAGE_KEY);
+  for (const key of PREVIOUS_STORAGE_KEYS) localStorage.removeItem(key);
   writeForm(PROFILE_DEFAULTS);
   updateAssessment();
 });
@@ -104,7 +104,8 @@ function loadProfile() {
   try {
     const current = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
     if (current) return writeForm({ ...PROFILE_DEFAULTS, ...current });
-    const legacy = JSON.parse(localStorage.getItem(LEGACY_STORAGE_KEY) || "{}");
+    const previousKey = PREVIOUS_STORAGE_KEYS.find((key) => localStorage.getItem(key));
+    const legacy = previousKey ? JSON.parse(localStorage.getItem(previousKey)) : {};
     writeForm({
       ...PROFILE_DEFAULTS,
       contractEnd: legacy.contractEnd || "",
@@ -113,7 +114,8 @@ function loadProfile() {
       research: legacy.research || PROFILE_DEFAULTS.research,
       sexennia: legacy.sexennia ?? PROFILE_DEFAULTS.sexennia,
       defendedTheses: legacy.defendedTheses ?? PROFILE_DEFAULTS.defendedTheses,
-      weeklyHours: legacy.weeklyHours ?? PROFILE_DEFAULTS.weeklyHours
+      weeklyHours: legacy.weeklyHours ?? PROFILE_DEFAULTS.weeklyHours,
+      projectRole: legacy.projectRole || PROFILE_DEFAULTS.projectRole
     });
   } catch {
     writeForm(PROFILE_DEFAULTS);

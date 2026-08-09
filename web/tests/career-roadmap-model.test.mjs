@@ -12,13 +12,16 @@ test("los nuevos datos sitúan el plan después de la acreditación PTU", () => 
   assert.equal(result.gates.find((gate) => gate.id === "accreditation").status, "ready");
   assert.equal(result.gates.find((gate) => gate.id === "c1").status, "ready");
   assert.equal(result.gates.find((gate) => gate.id === "emerging-project").status, "ready");
-  assert.equal(result.priorities[0].id, "notify-uv");
+  assert.equal(result.profile.sexennia, 1);
+  assert.equal(result.profile.teaching, "quinquennium");
+  assert.equal(result.profile.accreditationNotified, "yes");
+  assert.equal(result.priorities[0].id, "confirm-promotion-window");
   assert.equal(result.priorities[1].id, "launch-ge-project");
   assert.match(result.headline, /promoción/);
 });
 
 test("un expediente no resuelto conserva la distinción entre indicios y evidencia", () => {
-  const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, accreditation: "not-started", c1: "unknown", emergingProject: "none", projectRole: "member" }, data, asOf);
+  const result = buildCareerAssessment({ ...PROFILE_DEFAULTS, accreditation: "not-started", accreditationNotified: "no", c1: "unknown", teaching: "likely", research: "portfolio", sexennia: 0, emergingProject: "none", projectRole: "member" }, data, asOf);
   assert.equal(result.stage, "document-ptu");
   assert.equal(result.gates.find((gate) => gate.id === "mobility").status, "evidence");
   assert.equal(result.gates.find((gate) => gate.id === "teaching").status, "evidence");

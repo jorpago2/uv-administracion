@@ -6,9 +6,8 @@
   "knownFacts": [
     {
       "label": "Etapa actual",
-      "value": "Profesor Ayudante Doctor en la UV desde 2025",
-      "status": "public",
-      "sourceId": "uv-profile"
+      "value": "Profesor Ayudante Doctor en la UV; contrato iniciado en junio de 2025",
+      "status": "declared"
     },
     {
       "label": "Doctorado",
@@ -18,12 +17,22 @@
     },
     {
       "label": "Acreditación PTU",
-      "value": "Resolución favorable obtenida en agosto de 2026",
+      "value": "Resolución favorable obtenida y ya comunicada a la UV en agosto de 2026",
       "status": "declared"
     },
     {
       "label": "Valenciano",
       "value": "C1 obtenido",
+      "status": "declared"
+    },
+    {
+      "label": "Evaluación investigadora",
+      "value": "Un sexenio reconocido",
+      "status": "declared"
+    },
+    {
+      "label": "Evaluación docente",
+      "value": "Un quinquenio reconocido",
       "status": "declared"
     },
     {
@@ -129,6 +138,18 @@
       "deliverable": "Justificante de registro o comunicación incorporada al expediente personal UV.",
       "stop": "No confiar en que ANECA transmita de oficio la resolución a la unidad y ciclo de promoción correctos.",
       "sourceIds": ["uv-career-2026", "uv-promotion-page"]
+    },
+    {
+      "id": "confirm-promotion-window",
+      "title": "Obtener la fecha final exacta y la ruta de promoción UV",
+      "domain": "Promoción UV",
+      "kind": "gate",
+      "trigger": "contract-end-unknown",
+      "effort": "baja",
+      "why": "Con PTU, C1 y comunicación ya resueltos, el calendario depende del fin contractual que conste formalmente y de los criterios UV aplicables a ese ciclo, no solo del mes de inicio.",
+      "deliverable": "Contrato u hoja de servicios con fecha final exacta, confirmación de incorporación de la acreditación y respuesta trazable de DIE/RR. HH. PDI sobre el siguiente hito, fecha de corte y procedimiento.",
+      "stop": "No deducir automáticamente junio de 2031: prórrogas, suspensiones, disposiciones transitorias o el propio título contractual pueden alterar la fecha y la vía aplicable.",
+      "sourceIds": ["uv-career-2026", "uv-promotion-page", "uv-pdi-regulations"]
     },
     {
       "id": "launch-ge-project",

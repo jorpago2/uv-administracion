@@ -1,12 +1,14 @@
 export const PROFILE_DEFAULTS = Object.freeze({
   category: "ayudante-doctor",
+  contractStartMonth: "2025-06",
   contractEnd: "",
   accreditation: "favorable",
+  accreditationNotified: "yes",
   mobility: "likely",
-  teaching: "likely",
-  research: "portfolio",
+  teaching: "quinquennium",
+  research: "sexennium",
   c1: "yes",
-  sexennia: 0,
+  sexennia: 1,
   projectRole: "ip",
   emergingProject: "awarded",
   defendedTheses: 0,
@@ -20,7 +22,7 @@ export function buildCareerAssessment(rawProfile, data, asOf = new Date()) {
     teachingGate(profile.teaching),
     researchGate(profile.research, profile.sexennia),
     languageGate(profile.c1),
-    accreditationGate(profile.accreditation),
+    accreditationGate(profile.accreditation, profile.accreditationNotified),
     contractGate(profile.contractEnd, asOf),
     projectGate(profile.emergingProject, profile.projectRole)
   ];
@@ -107,8 +109,10 @@ export function exportCareerRoadmapMarkdown(assessment, data, generatedOn = new 
 function normalizeProfile(raw = {}) {
   return {
     category: String(raw.category || PROFILE_DEFAULTS.category),
+    contractStartMonth: /^\d{4}-\d{2}$/.test(String(raw.contractStartMonth || "")) ? String(raw.contractStartMonth) : PROFILE_DEFAULTS.contractStartMonth,
     contractEnd: /^\d{4}-\d{2}-\d{2}$/.test(String(raw.contractEnd || "")) ? String(raw.contractEnd) : "",
     accreditation: allowed(raw.accreditation, ["not-started", "preparing", "submitted", "favorable"], PROFILE_DEFAULTS.accreditation),
+    accreditationNotified: allowed(raw.accreditationNotified, ["no", "yes"], PROFILE_DEFAULTS.accreditationNotified),
     mobility: allowed(raw.mobility, ["unknown", "incomplete", "likely", "certified", "exempt"], PROFILE_DEFAULTS.mobility),
     teaching: allowed(raw.teaching, ["unknown", "below", "likely", "certified", "quinquennium"], PROFILE_DEFAULTS.teaching),
     research: allowed(raw.research, ["unknown", "developing", "portfolio", "sexennium"], PROFILE_DEFAULTS.research),
@@ -145,7 +149,8 @@ function languageGate(value) {
   return gate("c1", "C1 de valenciano para promoción UV", "evidence", "Comprobar certificado reconocido y su incorporación al expediente; si no existe, tratarlo como brecha.");
 }
 
-function accreditationGate(value) {
+function accreditationGate(value, notified) {
+  if (value === "favorable" && notified === "yes") return gate("accreditation", "Acreditación PTU", "ready", "Resolución favorable ya comunicada a la UV; conservar el justificante y confirmar que consta en el expediente y en el ciclo de promoción aplicable.");
   if (value === "favorable") return gate("accreditation", "Acreditación PTU", "ready", "Comunicar la resolución a la UV y seguir el ciclo de promoción/plaza aplicable.");
   if (value === "submitted") return gate("accreditation", "Acreditación PTU", "waiting", "Vigilar notificaciones y tener preparada una respuesta documental para subsanación o alegaciones.");
   return gate("accreditation", "Acreditación PTU", "gap", value === "preparing" ? "Cerrar la matriz de suficiencia y presentar cuando admisión, investigación y docencia estén acreditadas." : "Hacer una auditoría ACADEMIA antes de acumular más méritos sin objetivo.");
@@ -206,7 +211,8 @@ function choosePriorities(profile, actions, ptuReady) {
   if (profile.c1 !== "yes") ids.push("obtain-c1");
   if (profile.accreditation === "not-started") ids.push("audit-academia");
   if ((ptuReady || profile.accreditation === "preparing") && profile.accreditation !== "favorable") ids.push("submit-ptu");
-  if (profile.accreditation === "favorable") ids.push("notify-uv");
+  if (profile.accreditation === "favorable" && profile.accreditationNotified !== "yes") ids.push("notify-uv");
+  if (profile.accreditation === "favorable" && profile.accreditationNotified === "yes" && !profile.contractEnd) ids.push("confirm-promotion-window");
   if (profile.emergingProject === "awarded") ids.push("launch-ge-project", "research-pipeline");
   if (profile.sexennia === 0 && profile.research !== "sexennium") ids.push("first-sexennium");
   ids.push("funding-ladder", "evidence-bank", "research-pipeline", "student-pipeline");
