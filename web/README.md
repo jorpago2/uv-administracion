@@ -50,6 +50,9 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `tokens.css`: paleta, tipografías, escalas, bordes, sombras y movimiento.
 - `styles.css`: diseño responsive, impresión y estados de interacción.
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
+- `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías detalladas, accesibles mediante `example.html?capitulo=N`.
+- `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
+- `example-guide-model.js`: extracción comprobable de ejemplos, procedimientos, documentos y fuentes oficiales.
 - `chapter-categories.js`: mapa comprobable entre capítulos y ámbitos de la guía.
 - `operational-tools.js`: interfaz del asistente, fichas y calendario anual.
 - `operational-tools-model.js`: validación, búsqueda, recomendaciones y generación iCalendar, sin dependencias del DOM.

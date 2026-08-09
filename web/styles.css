@@ -689,6 +689,8 @@ blockquote { padding: var(--space-md); background: var(--color-accent); color: v
 .case-example { background: var(--color-paper-muted); color: var(--color-ink); box-shadow: var(--shadow-sm); }
 .case-example strong { display: block; margin-block-end: var(--space-xs); font-family: var(--font-display); font-size: var(--text-md); line-height: 1.15; }
 mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: var(--color-accent-ink); }
+.case-example__open { display: block; width: fit-content; margin-block-start: var(--space-md); padding: var(--space-sm) var(--space-md); background: var(--color-ink); color: var(--color-paper); border: var(--rule-thin) solid var(--color-rule); box-shadow: var(--shadow-sm); font-weight: 700; text-decoration: none; }
+.case-example__open:hover, .case-example__open:focus-visible { background: var(--color-secondary); color: var(--color-secondary-ink); transform: translate(-2px, -2px); box-shadow: var(--shadow-md); }
 
 .colophon { padding: var(--space-xl) var(--space-md); background: var(--color-ink); color: var(--color-paper); border-block-start: var(--rule-thick) solid var(--color-rule); font-size: var(--text-sm); }
 .colophon p { max-width: 72ch; margin: 0; }

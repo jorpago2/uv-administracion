@@ -1,6 +1,7 @@
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import { buildExampleGuides } from "../web/example-guide-model.js";
 
 const repositoryRoot = path.resolve(import.meta.dirname, "..");
 const manualPath = path.join(repositoryRoot, "MANUAL_PROCEDIMIENTOS.md");
@@ -16,8 +17,9 @@ const webIndex = await readFile(webIndexPath, "utf8");
 const markdownLinks = [...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
 const procedureLinks = Array.isArray(operations.procedures) ? operations.procedures.map((procedure) => procedure.sourceUrl) : [];
 const caseLinks = Array.isArray(decisionCases.cases) ? decisionCases.cases.map((item) => item.sourceUrl) : [];
+const guideLinks = buildExampleGuides(markdown, operations.procedures).flatMap((guide) => guide.sources.map((source) => source.url));
 const webExternalLinks = [...webIndex.matchAll(/<a\s[^>]*href="(https?:\/\/[^"#]+(?:#[^"]*)?)"/gi)].map((match) => match[1].replace(/&amp;/g, "&"));
-const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, travel.source, ...webExternalLinks])];
+const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, ...guideLinks, travel.source, ...webExternalLinks])];
 const externalLinks = links.filter((link) => /^https?:\/\//i.test(link));
 const localLinks = links.filter((link) => !/^[a-z][a-z0-9+.-]*:/i.test(link));
 

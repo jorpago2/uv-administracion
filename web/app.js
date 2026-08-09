@@ -146,6 +146,22 @@ function buildSearchEntries(sections) {
     priority: 20
   }));
 
+  const examples = sections.flatMap((section) => {
+    const match = section.body.match(/^>\s+\*\*Ejemplo realista\s*[—-]\s*(.+?)\.\*\*\s+(.+)$/m);
+    if (!match) return [];
+    return [prepareSearchEntry({
+      id: `example-${section.number}`,
+      type: "guide",
+      typeLabel: "Guía paso a paso",
+      title: match[1],
+      category: section.categoryLabel,
+      content: match[2],
+      href: `example.html?capitulo=${section.number}`,
+      chapterNumber: section.number,
+      priority: 30
+    })];
+  });
+
   const procedures = operationsData.procedures.map((procedure) => prepareSearchEntry({
     id: `procedure-${procedure.id}`,
     type: "procedure",
@@ -197,7 +213,7 @@ function buildSearchEntries(sections) {
       priority: 35
     }));
 
-  return [...chapters, ...procedures, ...tools, ...fundingCalls, ...cases];
+  return [...chapters, ...examples, ...procedures, ...tools, ...fundingCalls, ...cases];
 }
 
 function categoryLabelFor(categoryId) {
@@ -254,7 +270,7 @@ function renderSections(sections) {
     copyButton.setAttribute("aria-label", `Copiar enlace al capítulo ${section.number}: ${section.title}`);
     const body = document.createElement("div");
     body.className = "chapter__body";
-    body.innerHTML = renderMarkdown(section.body);
+    body.innerHTML = renderMarkdown(section.body, section.number);
     titleBlock.append(category, title);
     header.append(titleBlock, copyButton);
     article.append(header, body);
@@ -410,7 +426,7 @@ function renderIndex(sections) {
   elements.index.replaceChildren(fragment);
 }
 
-function renderMarkdown(markdown) {
+function renderMarkdown(markdown, chapterNumber = null) {
   const lines = markdown.replace(/\r\n?/g, "\n").split("\n");
   const html = [];
   let index = 0;
@@ -446,8 +462,12 @@ function renderMarkdown(markdown) {
       const quote = [];
       while (index < lines.length && /^>\s?/.test(lines[index])) { quote.push(lines[index].replace(/^>\s?/, "")); index += 1; }
       const quoteText = quote.join(" ");
-      const className = /^\*\*Ejemplo realista\b/.test(quoteText) ? " class=\"case-example\"" : "";
-      html.push(`<blockquote${className}>${renderInline(quoteText)}</blockquote>`);
+      const isExample = /^\*\*Ejemplo realista\b/.test(quoteText);
+      const className = isExample ? " class=\"case-example\"" : "";
+      const detailLink = isExample && Number.isInteger(chapterNumber)
+        ? `<a class="case-example__open" href="example.html?capitulo=${chapterNumber}">Abrir guía detallada paso a paso</a>`
+        : "";
+      html.push(`<blockquote${className}>${renderInline(quoteText)}${detailLink}</blockquote>`);
       continue;
     }
     if (/^---+$/.test(line.trim())) { html.push("<hr>"); index += 1; continue; }
@@ -768,7 +788,7 @@ function bindEvents() {
         fundingInput.dispatchEvent(new Event("input", { bubbles: true }));
       }
     }
-    const target = document.querySelector(entry.href);
+    const target = entry.href.startsWith("#") ? document.querySelector(entry.href) : null;
     if (target?.hidden || target?.closest("[hidden]")) {
       target.hidden = false;
       target.closest("[hidden]")?.removeAttribute("hidden");
