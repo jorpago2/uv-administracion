@@ -66,7 +66,7 @@
         <a href="#calculadora-retributiva"><span>Retribuciones</span>Calcular salario</a>
         <a href="#calculadora-pod"><span>Docencia</span>Calcular POD</a>
         <a href="#calculadora-compras"><span>Compras</span>Elegir tramitación</a>
-        <a href="#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion"><span>Investigación</span>Encontrar financiación</a>
+        <a href="#explorador-financiacion"><span>Investigación</span>Explorar financiación</a>
       </nav>
 
       <section class="operational-hub" id="herramientas-operativas" aria-labelledby="operationsTitle">
@@ -166,6 +166,81 @@
           </div>
           <p class="calendar-caveat"><strong>Privacidad:</strong> el archivo se genera localmente. No contiene datos personales ni se conecta con tu calendario; debes importarlo manualmente en la aplicación que utilices.</p>
         </article>
+      </section>
+
+      <section class="funding-explorer" id="explorador-financiacion" aria-labelledby="fundingTitle">
+        <header class="funding-explorer__heading">
+          <div>
+            <p class="context-line">Filtrar · contrastar · verificar</p>
+            <h2 id="fundingTitle">Explorador de financiación I+D+i</h2>
+            <p>Encuentra instrumentos compatibles con tu necesidad y compara hasta tres. El resultado indica encaje con los filtros, no una probabilidad de concesión.</p>
+          </div>
+          <dl class="funding-meta" aria-label="Cobertura del catálogo de financiación">
+            <div><dt>Vías catalogadas</dt><dd id="fundingCallCount">—</dd></div>
+            <div><dt>Niveles</dt><dd id="fundingLevelCount">—</dd></div>
+            <div><dt>Revisión</dt><dd id="fundingReviewedDate">—</dd></div>
+          </dl>
+        </header>
+
+        <form class="funding-filters" id="fundingFilters">
+          <fieldset>
+            <legend>Define el encaje que necesitas</legend>
+            <div class="funding-filter-grid">
+              <label class="funding-filter--search" for="fundingQuery">Buscar programa, acrónimo o condición
+                <input id="fundingQuery" name="query" type="search" autocomplete="off" placeholder="Ej.: Pathfinder, fotónica, movilidad…">
+              </label>
+              <label for="fundingLevel">Nivel
+                <select id="fundingLevel" name="level"></select>
+              </label>
+              <label for="fundingPurpose">Finalidad principal
+                <select id="fundingPurpose" name="purpose"></select>
+              </label>
+              <label for="fundingProfile">Perfil
+                <select id="fundingProfile" name="profile"></select>
+              </label>
+              <label for="fundingParticipation">Participación
+                <select id="fundingParticipation" name="participation"></select>
+              </label>
+              <label for="fundingBeneficiary">Beneficiario directo
+                <select id="fundingBeneficiary" name="beneficiary"></select>
+              </label>
+              <label for="fundingTrl">TRL objetivo <span class="funding-label-note">orientativo</span>
+                <select id="fundingTrl" name="trl"></select>
+              </label>
+              <label for="fundingFrequency">Periodicidad
+                <select id="fundingFrequency" name="frequency"></select>
+              </label>
+            </div>
+            <div class="funding-filter-actions">
+              <button class="control" type="reset">Limpiar filtros</button>
+              <a href="#solicitud-de-proyectos-competitivos-y-ayudas-de-investigacion">Abrir la guía completa del capítulo 20</a>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="funding-method" aria-label="Cómo interpretar el resultado">
+          <strong>Lectura responsable</strong>
+          <p>El TRL se usa como orientación, salvo cuando la convocatoria fija uno. Edición, plazo, elegibilidad, costes y cierre interno UV deben confirmarse siempre en la fuente enlazada.</p>
+        </aside>
+
+        <div class="funding-workspace">
+          <section class="funding-results" aria-labelledby="fundingResultsTitle">
+            <header class="funding-results__heading">
+              <div><h3 id="fundingResultsTitle">Resultados compatibles</h3><p id="fundingActiveFilters">Sin filtros aplicados.</p></div>
+              <p class="tool-status" id="fundingStatus" aria-live="polite"></p>
+            </header>
+            <div class="funding-card-list" id="fundingCardList"></div>
+          </section>
+
+          <section class="funding-comparison" id="fundingComparison" aria-labelledby="fundingComparisonTitle">
+            <header class="funding-comparison__heading">
+              <div><p class="context-line">Máximo 3</p><h3 id="fundingComparisonTitle">Comparación</h3></div>
+              <button class="control" id="clearFundingComparison" type="button" disabled>Vaciar comparación</button>
+            </header>
+            <p class="funding-comparison__status" id="fundingComparisonStatus" aria-live="polite">Selecciona dos o tres convocatorias para compararlas.</p>
+            <div id="fundingComparisonContent"></div>
+          </section>
+        </div>
       </section>
 
       <section class="decision-tools" id="calculadoras-operativas" aria-labelledby="decisionToolsTitle">

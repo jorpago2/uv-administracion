@@ -1,6 +1,7 @@
 import manualData from "./data/manual.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { initDecisionTools } from "./decision-tools.js";
+import { initFundingExplorer } from "./funding-explorer.js";
 import { initOperationalTools } from "./operational-tools.js";
 import { initProjectBudget } from "./project-budget.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
@@ -36,6 +37,7 @@ const elements = {
 assertRequiredElements(elements);
 bindEvents();
 initOperationalTools(elements.operationalHub);
+initFundingExplorer(document.querySelector("#explorador-financiacion"));
 initDecisionTools(document.querySelector("#calculadoras-operativas"));
 initProjectBudget(document.querySelector("#calculadora-presupuesto"));
 initSalaryCalculator(document.querySelector("#salaryCalculator"));
