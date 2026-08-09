@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Auditoría personal de pertinencia, profundidad y fuentes de las 100 situaciones de la Guía operativa UV de Jorge Parra.">
+  <meta name="theme-color" content="#f5d328">
+  <title>Auditoría de contenido · Guía operativa UV</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../hub.css">
+  <link rel="stylesheet" href="../audit.css">
+  <script type="module" src="../content-audit-page.js"></script>
+</head>
+<body data-root="../" data-page="resolver">
+  <a class="hub-skip" href="#contenido">Saltar al contenido</a>
+  <site-header></site-header>
+  <main class="page-main" id="contenido">
+    <section class="page-hero audit-hero">
+      <p class="hub-kicker">Control de calidad · revisado el <time id="auditReviewedOn">—</time></p>
+      <h1>Qué resuelve la guía. Qué falta todavía.</h1>
+      <p>No todo caso extenso está suficientemente adaptado. Esta auditoría separa contenido específico, rutas todavía genéricas, evidencia que debe reforzarse y situaciones poco relevantes para tu perfil actual.</p>
+    </section>
+
+    <section class="audit-overview" aria-labelledby="auditOverviewTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker">Estado comprobable</p><h2 id="auditOverviewTitle">Cobertura de los 100 casos</h2></div>
+        <p id="auditScope"></p>
+      </div>
+      <dl class="audit-stats" id="auditStats" aria-label="Resumen de la auditoría"></dl>
+      <div class="audit-status-key" id="auditStatusKey"></div>
+      <details class="audit-method">
+        <summary>Cómo se ha clasificado cada caso</summary>
+        <ol id="auditMethodology"></ol>
+        <p><strong>Límite:</strong> la clasificación mide la utilidad interna de la guía; no certifica que una fuente siga vigente ni sustituye la confirmación de la unidad competente.</p>
+      </details>
+    </section>
+
+    <section class="audit-routing" aria-labelledby="routingTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker">Mapa institucional</p><h2 id="routingTitle">Quién resuelve qué</h2></div>
+        <p>El punto de inicio no siempre coincide con quien autoriza, tramita o paga. Estas fronteras evitan derivaciones circulares y compromisos prematuros.</p>
+      </div>
+      <div class="institution-map" id="institutionMap"></div>
+    </section>
+
+    <section class="audit-gaps" aria-labelledby="gapsTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker"><span id="missingCount">—</span> operaciones no cubiertas</p><h2 id="gapsTitle">Casos importantes que faltan</h2></div>
+        <p>No son duplicados de los 100 casos. Cada hueco indica qué guía cercana existe y por qué todavía no basta para ejecutar la operación con seguridad.</p>
+      </div>
+      <div class="audit-gap-list" id="auditGapList"></div>
+    </section>
+
+    <section class="audit-catalogue" aria-labelledby="catalogueTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker">Inventario trazable</p><h2 id="catalogueTitle">Auditoría caso por caso</h2></div>
+        <p>Los casos de prioridad alta y los que requieren refuerzo aparecen primero. Abre cualquier resolución para revisar sus fuentes y pasos completos.</p>
+      </div>
+      <form class="audit-filters" id="auditFilters" role="search">
+        <label>Buscar
+          <input id="auditQuery" type="search" autocomplete="off" placeholder="Ej.: foundry, congreso, POD…">
+        </label>
+        <label>Estado
+          <select id="auditStatus"><option value="all">Todos los estados</option></select>
+        </label>
+        <label>Ámbito
+          <select id="auditCategory"><option value="all">Todos los ámbitos</option></select>
+        </label>
+        <label>Prioridad
+          <select id="auditPriority">
+            <option value="all">Todas</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="normal">Normal</option>
+          </select>
+        </label>
+        <button class="hub-button" id="auditClear" type="button">Limpiar</button>
+      </form>
+      <p class="audit-result-status" id="auditResultStatus" aria-live="polite"></p>
+      <div class="audit-case-list" id="auditCaseList"></div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+  <noscript><div class="hub-noscript">La auditoría interactiva necesita JavaScript. Las resoluciones siguen disponibles en el <a href="../resolver/">directorio de casos</a>.</div></noscript>
+</body>
+</html>

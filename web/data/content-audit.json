@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-08-09",
+  "title": "Auditoría de pertinencia de las 100 situaciones",
+  "scope": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+.",
+  "methodology": [
+    "Pertinencia: el caso se relaciona con funciones reales de docencia, investigación, gestión o empleo de Jorge Parra.",
+    "Contexto: distingue una adaptación concreta a titulaciones o al ciclo ICMUV de una guía UV aplicable pero genérica.",
+    "Operatividad: comprueba que existan resultado, primer movimiento, responsables, documentos, pasos, límites y evidencia de cierre.",
+    "Respaldo: cuenta fuentes enlazadas, pero no confunde cantidad con vigencia, jerarquía normativa o suficiencia.",
+    "Prioridad: atiende primero los casos frecuentes, costosos, irreversibles o capaces de bloquear docencia, financiación, compra, publicación o seguridad."
+  ],
+  "statuses": [
+    {
+      "id": "specific",
+      "label": "Específico y suficiente",
+      "shortLabel": "Específico",
+      "description": "Aplicable y contextualizado, con una ruta operativa utilizable y respaldo enlazado."
+    },
+    {
+      "id": "generic",
+      "label": "Aplicable, todavía genérico",
+      "shortLabel": "Genérico",
+      "description": "Resuelve la estructura básica, pero falta concretar mejor la unidad, el canal o el ejemplo personal."
+    },
+    {
+      "id": "reinforce",
+      "label": "Incompleto o evidencia débil",
+      "shortLabel": "Reforzar",
+      "description": "Tiene contenido operativo, pero una sola fuente no basta para dar la ruta por cerrada."
+    },
+    {
+      "id": "low",
+      "label": "Poco relevante ahora",
+      "shortLabel": "Condicional",
+      "description": "Se conserva porque puede ser necesario, aunque no encaja directamente con la actividad actual declarada."
+    }
+  ],
+  "reinforceSituationIds": [
+    "copia-plagio-ia",
+    "practicas-externas",
+    "ejecutar-proyecto",
+    "modificar-proyecto",
+    "justificar-proyecto",
+    "contrato-articulo-60",
+    "autoria-integridad-ia",
+    "crear-spin-off",
+    "laser-accidente-laboratorio"
+  ],
+  "lowRelevanceSituationIds": [
+    "etica-personas-muestras",
+    "bioseguridad-animales-omg",
+    "reutilizar-datos-muestras-consentimiento"
+  ],
+  "highPrioritySituationIds": [
+    "incorporacion-inicial",
+    "identificar-unidad-competente",
+    "corregir-pod-oca",
+    "preparar-guia-docente",
+    "tfg-tfm-confidencial",
+    "presupuesto-proyecto",
+    "ejecutar-proyecto",
+    "proteger-patente",
+    "crear-spin-off",
+    "comprar-lente-sda",
+    "compra-menor-5000",
+    "proveedor-exclusivo",
+    "inscripcion-congreso",
+    "viaje-caja-fija",
+    "laser-accidente-laboratorio",
+    "firmar-nda-mta-dta",
+    "subcontratar-servicio-cientifico",
+    "orden-patente-preprint-congreso-tesis",
+    "pagar-servicio-cientifico-interno"
+  ],
+  "institutionMap": [
+    {
+      "id": "die",
+      "name": "DIE",
+      "role": "Departamento de Ingeniería Electrónica",
+      "startHere": "POD, asignación y coordinación departamental de docencia, personal adscrito y decisiones propias del departamento.",
+      "boundary": "No sustituye a la CAT/CCA, la ETSE, RR. HH. ni a los servicios centrales que tramitan o resuelven el expediente.",
+      "source": {
+        "label": "DIE · estructura y contacto",
+        "url": "https://www.uv.es/uvweb/departamento-ingenieria-electronica/es/departamento-ingenieria-electronica-1285859443270.html"
+      }
+    },
+    {
+      "id": "etse",
+      "name": "ETSE-UV",
+      "role": "Centro docente",
+      "startHere": "Horarios, aulas, exámenes, TFG/TFM, prácticas, espacios docentes y procedimientos de GIET, GIEI, GIT y MUIE.",
+      "boundary": "No aprueba por sí sola cambios que correspondan al DIE, a una CAT/CCA o a un servicio central.",
+      "source": {
+        "label": "ETSE-UV",
+        "url": "https://www.uv.es/etse"
+      }
+    },
+    {
+      "id": "icmuv",
+      "name": "ICMUV / UMDO+",
+      "role": "Estructura y unidad de investigación",
+      "startHere": "Encaje científico, responsables locales, instalaciones propias, coordinación del grupo y necesidades del ciclo diseño–fabricación–caracterización.",
+      "boundary": "La autorización científica o local no reemplaza contratación, prevención, protección de resultados ni gestión económica.",
+      "source": {
+        "label": "UMDO · presentación oficial",
+        "url": "https://www.uv.es/uvweb/instituto-ciencia-materiales-icmuv/es/unidades-investigacion/materiales-dispositivos-optoelectronicos/presentacion-1285918317971.html"
+      }
+    },
+    {
+      "id": "sgi",
+      "name": "SGI",
+      "role": "Servicio de Gestión de la Investigación",
+      "startHere": "Convocatorias competitivas, propuestas, aceptación, ejecución, modificaciones, personal y justificación de proyectos.",
+      "boundary": "No decide el contenido científico ni asume automáticamente funciones de contratación, transferencia o prevención.",
+      "source": {
+        "label": "Gestión y trámites de investigación",
+        "url": "https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"
+      }
+    },
+    {
+      "id": "sti",
+      "name": "STI",
+      "role": "Servicio de Transferencia e Innovación",
+      "startHere": "Patentes, comunicación de resultados, NDA/MTA, cotitularidad, licencias, contratos de I+D+i y creación de spin-offs.",
+      "boundary": "Debe intervenir antes de divulgar o comprometer derechos; una conversación con una empresa no sustituye el instrumento institucional.",
+      "source": {
+        "label": "Transferencia de resultados UV",
+        "url": "https://www.uv.es/uvweb/universidad/es/investigacion-transferencia/transferencia-resultados-1286270807627.html"
+      }
+    },
+    {
+      "id": "scsie",
+      "name": "SCSIE",
+      "role": "Servicios científicos internos",
+      "startHere": "Caracterización y servicios experimentales del catálogo SCSIE, incluida la definición técnica de muestras, tarifa y entrega de resultados.",
+      "boundary": "La solicitud técnica no demuestra por sí sola que el cargo sea elegible ni sustituye la autorización del proyecto.",
+      "source": {
+        "label": "SCSIE · presentación",
+        "url": "https://www.uv.es/uvweb/servicio-central-soporte-investigacion-experimental/es/presentacion-1285877078016.html"
+      }
+    },
+    {
+      "id": "gestion-economica",
+      "name": "Unidad gestora",
+      "role": "Gestión económica de la orgánica o proyecto",
+      "startHere": "Crédito, elegibilidad, reserva, expediente de compra, pedido, factura, viaje, caja fija, cargo interno y conciliación.",
+      "boundary": "Tener presupuesto no autoriza al PDI a comprometer gasto personalmente ni convierte cualquier coste en elegible.",
+      "source": {
+        "label": "Servicio de Contabilidad y Presupuesto",
+        "url": "https://www.uv.es/uvweb/gerencia/es/gestio-economica/serveis-unitats-gestio-economica/comptabilitat-pressupost/presentacio-1285910539667.html"
+      }
+    },
+    {
+      "id": "prevencion",
+      "name": "SPMA",
+      "role": "Prevención y Medio Ambiente",
+      "startHere": "Riesgos de laboratorio, láseres, sustancias, instalaciones, accidentes, residuos y medidas preventivas.",
+      "boundary": "La formación general no sustituye la evaluación del puesto, el procedimiento local ni la autorización de equipos concretos.",
+      "source": {
+        "label": "Servicio de Prevención y Medio Ambiente",
+        "url": "https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/servicio/presentacion-1285899540519.html"
+      }
+    }
+  ],
+  "missingCases": [
+    {
+      "id": "acceso-lfnn-sala-limpia",
+      "priority": "alta",
+      "title": "Obtener acceso y habilitación para LFNN o sala limpia",
+      "reason": "El alta general y la prevención no explican todavía la secuencia local de solicitud, formación, autorización, reserva y trabajo autónomo o supervisado.",
+      "nearbySituationIds": ["incorporacion-inicial", "laser-accidente-laboratorio", "pagar-servicio-cientifico-interno"]
+    },
+    {
+      "id": "fabricacion-foundry-run",
+      "priority": "alta",
+      "title": "Contratar una fabricación externa o un foundry run",
+      "reason": "La subcontratación científica existente no concreta PDK, versión GDS, reglas de proceso, propiedad de máscaras, aceptación de obleas/dies, NDA y riesgos de plazo.",
+      "nearbySituationIds": ["subcontratar-servicio-cientifico", "firmar-nda-mta-dta", "proveedor-exclusivo"]
+    },
+    {
+      "id": "licencia-simulacion-calculo-nube",
+      "priority": "alta",
+      "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
+      "reason": "La compra general no resuelve usuario nominal o concurrente, duración, renovación, tratamiento de datos, exportación de modelos, costes variables y continuidad tras el proyecto.",
+      "nearbySituationIds": ["compra-menor-5000", "proveedor-exclusivo", "publicar-software-datos"]
+    },
+    {
+      "id": "instalar-modificar-equipo-laboratorio",
+      "priority": "alta",
+      "title": "Instalar o modificar un equipo o infraestructura de laboratorio",
+      "reason": "Falta una ruta única para cargas eléctricas, extracción, gases, refrigeración, láser, obra, mantenimiento, puesta en servicio y autorización del espacio.",
+      "nearbySituationIds": ["ciclo-vida-equipo", "laser-accidente-laboratorio", "aceptar-donacion-cesion-patrocinio"]
+    },
+    {
+      "id": "calibrar-reparar-instrumento",
+      "priority": "media",
+      "title": "Enviar un instrumento a calibración o reparación",
+      "reason": "El ciclo de vida del equipo es demasiado amplio para decidir diagnóstico, presupuesto, salida de inventario, datos almacenados, transporte, garantía y certificado de calibración.",
+      "nearbySituationIds": ["ciclo-vida-equipo", "prestar-trasladar-equipo-fuera-uv", "subcontratar-servicio-cientifico"]
+    },
+    {
+      "id": "incorporar-estudiante-laboratorio",
+      "priority": "alta",
+      "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
+      "reason": "Las guías académicas no reúnen en una sola secuencia alcance, supervisión, prevención, acceso, propiedad de datos, confidencialidad, cuaderno y retirada de permisos.",
+      "nearbySituationIds": ["tfg-tfm-ordinario", "tfg-tfm-confidencial", "seguimiento-deposito-tesis"]
+    },
+    {
+      "id": "gestionar-datos-instrumentales",
+      "priority": "media",
+      "title": "Organizar datos crudos de simulación y caracterización",
+      "reason": "El plan de gestión de datos cubre gobernanza, pero no una rutina mínima para identificadores de muestra, calibración, metadatos, versiones, copia y trazabilidad figura–dataset.",
+      "nearbySituationIds": ["plan-gestion-datos-ciencia-abierta", "publicar-software-datos", "responder-peticion-datos-codigo"]
+    },
+    {
+      "id": "retirar-residuos-muestras-equipos",
+      "priority": "media",
+      "title": "Retirar residuos, muestras, obleas, químicos o equipos al cerrar una actividad",
+      "reason": "No existe un cierre operativo que separe residuo peligroso, muestra conservada, equipo inventariado, soporte con datos y documentación exigida por el proyecto.",
+      "nearbySituationIds": ["ciclo-vida-equipo", "laser-accidente-laboratorio", "prestar-trasladar-equipo-fuera-uv"]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { CATEGORIES } from "../chapter-categories.js";
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const legacyHtml = await readFile(new URL("../consulta.html", import.meta.url), "utf8");
 const resolverHtml = await readFile(new URL("../resolver/index.html", import.meta.url), "utf8");
+const auditHtml = await readFile(new URL("../auditoria/index.html", import.meta.url), "utf8");
 const glossaryHtml = await readFile(new URL("../glosario/index.html", import.meta.url), "utf8");
 const manualHtml = await readFile(new URL("../manual/index.html", import.meta.url), "utf8");
 const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "utf8");
@@ -51,6 +52,9 @@ test("las cien situaciones tienen una subweb principal y buscable", () => {
   assert.match(resolverHtml, /id="situationCategory"/);
   assert.match(resolverPage, /initSituationDirectory/);
   assert.match(resolverHtml, /100 situaciones reales/);
+  assert.match(resolverHtml, /href="\.\.\/auditoria\/"/);
+  assert.match(auditHtml, /id="auditCaseList"/);
+  assert.match(html, /href="auditoria\/"/);
 });
 
 test("el glosario tiene una subweb filtrable y enlazable", () => {

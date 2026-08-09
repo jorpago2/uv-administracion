@@ -10,6 +10,7 @@ export default defineConfig({
         example: fileURLToPath(new URL("./example.html", import.meta.url)),
         consulta: fileURLToPath(new URL("./consulta.html", import.meta.url)),
         resolver: fileURLToPath(new URL("./resolver/index.html", import.meta.url)),
+        auditoria: fileURLToPath(new URL("./auditoria/index.html", import.meta.url)),
         administracion: fileURLToPath(new URL("./administracion/index.html", import.meta.url)),
         docencia: fileURLToPath(new URL("./docencia/index.html", import.meta.url)),
         programas: fileURLToPath(new URL("./programas/index.html", import.meta.url)),

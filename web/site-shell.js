@@ -47,7 +47,7 @@ class SiteFooter extends HTMLElement {
     this.innerHTML = `
       <footer class="hub-footer">
         <p><strong>Guía personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a>.</strong> No oficial; puede contener errores. Verifica siempre la fuente vigente.</p>
-        <nav aria-label="Enlaces de cierre"><a href="${root}glosario/">Glosario</a><a href="${root}consulta.html">Vista completa</a><a href="${root}MANUAL_PROCEDIMIENTOS.md">Markdown</a></nav>
+        <nav aria-label="Enlaces de cierre"><a href="${root}auditoria/">Auditoría</a><a href="${root}glosario/">Glosario</a><a href="${root}consulta.html">Vista completa</a><a href="${root}MANUAL_PROCEDIMIENTOS.md">Markdown</a></nav>
       </footer>`;
   }
 }

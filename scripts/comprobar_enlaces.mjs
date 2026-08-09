@@ -13,6 +13,7 @@ const situationsExtensionPath = path.join(repositoryRoot, "web", "data", "situat
 const travelPath = path.join(repositoryRoot, "web", "data", "travel-2026.json");
 const academicProgrammesPath = path.join(repositoryRoot, "web", "data", "academic-programmes.json");
 const personalResearchPath = path.join(repositoryRoot, "web", "data", "personal-research-context.json");
+const contentAuditPath = path.join(repositoryRoot, "web", "data", "content-audit.json");
 const webIndexPath = path.join(repositoryRoot, "web", "index.html");
 const markdown = await readFile(manualPath, "utf8");
 const operations = JSON.parse(await readFile(operationsPath, "utf8"));
@@ -22,6 +23,7 @@ const situationsExtension = JSON.parse(await readFile(situationsExtensionPath, "
 const travel = JSON.parse(await readFile(travelPath, "utf8"));
 const academicProgrammes = JSON.parse(await readFile(academicProgrammesPath, "utf8"));
 const personalResearch = JSON.parse(await readFile(personalResearchPath, "utf8"));
+const contentAudit = JSON.parse(await readFile(contentAuditPath, "utf8"));
 const webIndex = await readFile(webIndexPath, "utf8");
 const markdownLinks = [...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
 const procedureLinks = Array.isArray(operations.procedures) ? operations.procedures.map((procedure) => procedure.sourceUrl) : [];
@@ -35,7 +37,8 @@ const academicLinks = [
   ...(academicProgrammes.programmes ?? []).flatMap((programme) => programme.documents.map((document) => document.url))
 ];
 const personalResearchLinks = (personalResearch.resources ?? []).map((resource) => resource.url);
-const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, ...guideLinks, ...situationLinks, travel.source, ...academicLinks, ...personalResearchLinks, ...webExternalLinks])];
+const contentAuditLinks = (contentAudit.institutionMap ?? []).map((unit) => unit.source.url);
+const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, ...guideLinks, ...situationLinks, travel.source, ...academicLinks, ...personalResearchLinks, ...contentAuditLinks, ...webExternalLinks])];
 const externalLinks = links.filter((link) => /^https?:\/\//i.test(link));
 const localLinks = links.filter((link) => !/^[a-z][a-z0-9+.-]*:/i.test(link));
 

@@ -3,10 +3,13 @@
 <body data-root="../" data-page="resolver"><a class="hub-skip" href="#contenido">Saltar al contenido</a><site-header></site-header>
 <main class="page-main" id="contenido">
   <section class="page-hero"><p class="hub-kicker"><span id="resolverTotal">100</span> situaciones · resolución verificable</p><h1>Empieza por el problema concreto.</h1><p>Selecciona un ámbito o describe la necesidad. Cada caso separa quién solicita, tramita, autoriza, paga y ejecuta; incluye documentos, pasos, límites y evidencia de cierre.</p></section>
+  <aside class="resolver-audit-callout" aria-labelledby="resolverAuditTitle">
+    <div><p class="hub-kicker">Control de calidad</p><h2 id="resolverAuditTitle">No todos los casos tienen la misma madurez.</h2><p>Consulta qué rutas están adaptadas a tu contexto, cuáles siguen siendo genéricas, qué fuentes deben reforzarse y qué operaciones todavía faltan.</p></div>
+    <a href="../auditoria/">Abrir auditoría de los 100 casos</a>
+  </aside>
   <section class="situations resolver-directory" id="situaciones" aria-labelledby="situationsTitle">
     <header class="situations__header"><div><p class="context-line">Directorio operativo</p><h2 id="situationsTitle">100 situaciones reales</h2><p>Los ejemplos son plausibles, pero debes confirmar normativa, convocatoria y criterio vigente de la unidad competente.</p></div><dl class="tool-stats"><div><dt>Situaciones</dt><dd id="situationCount">—</dd></div></dl></header>
     <div class="situation-controls"><label>Buscar una situación<input id="situationQuery" type="search" autocomplete="off" placeholder="Ej.: comprar lente, patente, congreso…"></label><label>Filtrar por ámbito<select id="situationCategory"></select></label><button class="control" id="situationClear" type="button" disabled>Limpiar</button></div>
     <p class="tool-status" id="situationStatus" aria-live="polite"></p><div class="situation-list" id="situationList"></div>
   </section>
 </main><site-footer></site-footer></body></html>
-

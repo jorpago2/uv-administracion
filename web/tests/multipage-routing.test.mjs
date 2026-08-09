@@ -4,6 +4,7 @@ import test from "node:test";
 
 const routes = [
   "index.html", "consulta.html", "example.html", "resolver/index.html", "administracion/index.html",
+  "auditoria/index.html",
   "docencia/index.html", "carrera-pdi/index.html", "investigacion/index.html", "gestion/index.html",
   "cumplimiento/index.html", "financiacion/index.html", "herramientas/index.html", "glosario/index.html", "manual/index.html",
   "programas/index.html"
@@ -32,6 +33,6 @@ test("el indice ligero solo genera destinos internos seguros", () => {
     assert.ok(entry.title && entry.kind && entry.href, entry.title);
     assert.doesNotMatch(entry.href, /^(?:javascript|data|vbscript):/i, entry.title);
     const firstSegment = entry.href.split(/[/?#]/)[0];
-    assert.ok(["example.html", "manual", "financiacion", "herramientas", "glosario", "investigacion", "programas"].includes(firstSegment), `${entry.title}: ${entry.href}`);
+    assert.ok(["example.html", "manual", "financiacion", "herramientas", "glosario", "investigacion", "programas", "auditoria"].includes(firstSegment), `${entry.title}: ${entry.href}`);
   }
 });

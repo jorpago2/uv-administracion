@@ -1,5 +1,13 @@
 [
   {
+    "kind": "Auditoría",
+    "title": "Auditoría de pertinencia de las 100 situaciones",
+    "context": "Cobertura, pertinencia, fuentes y casos pendientes",
+    "keywords": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+. control calidad casos genericos incompletos mapa institucional",
+    "href": "auditoria/",
+    "priority": 11
+  },
+  {
     "kind": "Perfil",
     "title": "Investigación en dispositivos y semiconductores avanzados en el ICMUV",
     "context": "ICMUV · UMDO+ · ciclo completo de dispositivos",
@@ -96,6 +104,22 @@
     "priority": 10
   },
   {
+    "kind": "Hueco detectado",
+    "title": "Comprar una licencia de simulación, HPC o cálculo en la nube",
+    "context": "La compra general no resuelve usuario nominal o concurrente, duración, renovación, tratamiento de datos, exportación de modelos, costes variables y continuidad tras el proyecto.",
+    "keywords": "alta compra-menor-5000 proveedor-exclusivo publicar-software-datos",
+    "href": "auditoria/#gapsTitle",
+    "priority": 9
+  },
+  {
+    "kind": "Hueco detectado",
+    "title": "Contratar una fabricación externa o un foundry run",
+    "context": "La subcontratación científica existente no concreta PDK, versión GDS, reglas de proceso, propiedad de máscaras, aceptación de obleas/dies, NDA y riesgos de plazo.",
+    "keywords": "alta subcontratar-servicio-cientifico firmar-nda-mta-dta proveedor-exclusivo",
+    "href": "auditoria/#gapsTitle",
+    "priority": 9
+  },
+  {
     "kind": "Titulación",
     "title": "GIEI · Grado en Ingeniería Electrónica Industrial",
     "context": "ETSE-UV · código UV 1404 · RUCT 2501411",
@@ -120,11 +144,35 @@
     "priority": 9
   },
   {
+    "kind": "Hueco detectado",
+    "title": "Incorporar un TFG, TFM o doctorando al trabajo experimental",
+    "context": "Las guías académicas no reúnen en una sola secuencia alcance, supervisión, prevención, acceso, propiedad de datos, confidencialidad, cuaderno y retirada de permisos.",
+    "keywords": "alta tfg-tfm-ordinario tfg-tfm-confidencial seguimiento-deposito-tesis",
+    "href": "auditoria/#gapsTitle",
+    "priority": 9
+  },
+  {
+    "kind": "Hueco detectado",
+    "title": "Instalar o modificar un equipo o infraestructura de laboratorio",
+    "context": "Falta una ruta única para cargas eléctricas, extracción, gases, refrigeración, láser, obra, mantenimiento, puesta en servicio y autorización del espacio.",
+    "keywords": "alta ciclo-vida-equipo laser-accidente-laboratorio aceptar-donacion-cesion-patrocinio",
+    "href": "auditoria/#gapsTitle",
+    "priority": 9
+  },
+  {
     "kind": "Titulación",
     "title": "MUIE · Máster Universitario en Ingeniería Electrónica",
     "context": "ETSE-UV · código UV 2269 · RUCT 4311716",
     "keywords": "Máster DIE y profesorado participante en el título Comisión de Coordinación Académica (CCA) y órganos de la ETSE-UV Ficha oficial Ficha oficial del MUIE Plan, competencias, admisión, movilidad, responsables y calidad. Memoria Verifica Memoria de verificación publicada del MUIE Diseño verificado de origen del máster; debe leerse con las modificaciones posteriores. Plan y guías Plan de estudios y guías docentes del MUIE Estructura vigente y acceso a las guías de las asignaturas. Calidad Modificaciones, seguimiento y acreditación del MUIE Informes ANECA, modificaciones de 2010, 2013, 2014 y 2023, y renovación de la acreditación.",
     "href": "programas/#muie",
+    "priority": 9
+  },
+  {
+    "kind": "Hueco detectado",
+    "title": "Obtener acceso y habilitación para LFNN o sala limpia",
+    "context": "El alta general y la prevención no explican todavía la secuencia local de solicitud, formación, autorización, reserva y trabajo autónomo o supervisado.",
+    "keywords": "alta incorporacion-inicial laser-accidente-laboratorio pagar-servicio-cientifico-interno",
+    "href": "auditoria/#gapsTitle",
     "priority": 9
   },
   {
@@ -552,6 +600,14 @@
     "priority": 6
   },
   {
+    "kind": "Hueco detectado",
+    "title": "Enviar un instrumento a calibración o reparación",
+    "context": "El ciclo de vida del equipo es demasiado amplio para decidir diagnóstico, presupuesto, salida de inventario, datos almacenados, transporte, garantía y certificado de calibración.",
+    "keywords": "media ciclo-vida-equipo prestar-trasladar-equipo-fuera-uv subcontratar-servicio-cientifico",
+    "href": "auditoria/#gapsTitle",
+    "priority": 6
+  },
+  {
     "kind": "Situación",
     "title": "Firmar un NDA, MTA o acuerdo de transferencia de datos",
     "context": "Una empresa o grupo quiere intercambiar información, muestras, software o datos y envía un documento para firmar antes de una reunión o envío.",
@@ -637,6 +693,14 @@
     "context": "El proyecto europeo ha sido seleccionado y circula un DESCA con reglas de gobierno, responsabilidad, pagos, background, resultados y publicaciones.",
     "keywords": "consortium agreement DESCA grant agreement background access rights joint ownership STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio Negociación de versiones controladas y firma institucional antes de la fecha exigida design simulation fabrication data protection transfer Identifica como background los modelos, librerías de diseño, layouts, recetas, materiales, bancos de medida y software previos; regula acceso y explotación del foreground conjunto. Si un socio fabrica tu diseño y otro aporta el material funcional, acuerda antes quién puede reutilizar GDS, proceso y datos para proyectos o productos posteriores. serinves",
     "href": "example.html?caso=negociar-acuerdo-consorcio",
+    "priority": 6
+  },
+  {
+    "kind": "Hueco detectado",
+    "title": "Organizar datos crudos de simulación y caracterización",
+    "context": "El plan de gestión de datos cubre gobernanza, pero no una rutina mínima para identificadores de muestra, calibración, metadatos, versiones, copia y trazabilidad figura–dataset.",
+    "keywords": "media plan-gestion-datos-ciencia-abierta publicar-software-datos responder-peticion-datos-codigo",
+    "href": "auditoria/#gapsTitle",
     "priority": 6
   },
   {
@@ -893,6 +957,14 @@
     "context": "Una propuesta aparece concedida, denegada o con importe distinto en una resolución provisional y debes aceptar, alegar, subsanar o esperar.",
     "keywords": "resolución provisional alegaciones proyecto aceptación ayuda denegación subsanación convocatoria Servicio de Gestión de la Investigación o STI UV y órgano concedente de la convocatoria Sede o aplicación indicada por la convocatoria, coordinada con la unidad UV competente management Comprueba cómo cada recorte o condición afecta a personal, lotes de fabricación, acceso a equipos y métricas comprometidas; una reducción lineal del presupuesto puede hacer inviable una dependencia crítica. Si eliminan subcontratación de foundry, no aceptes sin más: explica qué dispositivo deja de fabricarse y propone una reconfiguración técnica y económica admisible. serinves",
     "href": "example.html?caso=responder-resolucion-provisional-ayuda",
+    "priority": 6
+  },
+  {
+    "kind": "Hueco detectado",
+    "title": "Retirar residuos, muestras, obleas, químicos o equipos al cerrar una actividad",
+    "context": "No existe un cierre operativo que separe residuo peligroso, muestra conservada, equipo inventariado, soporte con datos y documentación exigida por el proyecto.",
+    "keywords": "media ciclo-vida-equipo laser-accidente-laboratorio prestar-trasladar-equipo-fuera-uv",
+    "href": "auditoria/#gapsTitle",
     "priority": 6
   },
   {

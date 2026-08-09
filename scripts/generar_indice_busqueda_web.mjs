@@ -5,10 +5,10 @@ import path from "node:path";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = path.join(repositoryRoot, "web", "data");
 
-const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext, personalResearchContext] = await Promise.all([
+const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext, personalResearchContext, contentAudit] = await Promise.all([
   readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"),
   readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json"),
-  readJson("academic-situation-context.json"), readJson("personal-research-context.json")
+  readJson("academic-situation-context.json"), readJson("personal-research-context.json"), readJson("content-audit.json")
 ]);
 const academicContextBySituation = new Map(academicSituationContext.contexts.map((context) => [context.situationId, context]));
 const personalContextBySituation = new Map(personalResearchContext.contexts.map((context) => [context.situationId, context]));
@@ -96,7 +96,19 @@ for (const programme of academicProgrammes.programmes ?? []) {
   }
 }
 
+for (const gap of contentAudit.missingCases) {
+  entries.push({
+    kind: "Hueco detectado",
+    title: gap.title,
+    context: gap.reason,
+    keywords: `${gap.priority} ${gap.nearbySituationIds.join(" ")}`,
+    href: `auditoria/#gapsTitle`,
+    priority: gap.priority === "alta" ? 9 : 6
+  });
+}
+
 entries.push(
+  route("Auditoría", contentAudit.title, "Cobertura, pertinencia, fuentes y casos pendientes", `${contentAudit.scope} control calidad casos genericos incompletos mapa institucional`, "auditoria/", 11),
   route("Perfil", personalResearchContext.title, "ICMUV · UMDO+ · ciclo completo de dispositivos", `${personalResearchContext.summary} ${personalResearchContext.themes.map((theme) => theme.label).join(" ")} ${personalResearchContext.stages.map((stage) => stage.label).join(" ")}`, "investigacion/#researchProfile", 11),
   route("Herramienta", "Comprar mediante SDA", "Suministros homologados, pedido y unidad gestora", "SDA lente thorlabs material laboratorio proveedor compra", "herramientas/#calculadora-compras", 10),
   route("Herramienta", "Calcular salario bruto", "Categoría, trienios, quinquenios, sexenios y complementos", "nomina retribucion sueldo salario", "herramientas/#calculadora-retributiva", 10),
