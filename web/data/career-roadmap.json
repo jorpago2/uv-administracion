@@ -6,7 +6,7 @@
   "knownFacts": [
     {
       "label": "Etapa actual",
-      "value": "Profesor Ayudante Doctor en la UV; contrato iniciado en junio de 2025",
+      "value": "Profesor Ayudante Doctor en la UV; contrato de junio de 2025 a junio de 2031",
       "status": "declared"
     },
     {
@@ -149,6 +149,18 @@
       "why": "Con PTU, C1 y comunicación ya resueltos, el calendario depende del fin contractual que conste formalmente y de los criterios UV aplicables a ese ciclo, no solo del mes de inicio.",
       "deliverable": "Contrato u hoja de servicios con fecha final exacta, confirmación de incorporación de la acreditación y respuesta trazable de DIE/RR. HH. PDI sobre el siguiente hito, fecha de corte y procedimiento.",
       "stop": "No deducir automáticamente junio de 2031: prórrogas, suspensiones, disposiciones transitorias o el propio título contractual pueden alterar la fecha y la vía aplicable.",
+      "sourceIds": ["uv-career-2026", "uv-promotion-page", "uv-pdi-regulations"]
+    },
+    {
+      "id": "track-promotion-cycle",
+      "title": "Vigilar cuándo la promoción UV incorpora los contratos de 2031",
+      "domain": "Promoción UV",
+      "kind": "later",
+      "trigger": "contract-end-known",
+      "effort": "baja",
+      "why": "El contrato finaliza en junio de 2031 y los criterios 2026–2027 actualmente enlazados alcanzan otras ventanas anteriores; la acreditación ya comunicada debe estar preparada cuando se abra el ciclo aplicable.",
+      "deliverable": "Revisión anual fechada de acuerdo de carrera, oferta de empleo y página de promoción UV, con aviso a DIE/RR. HH. PDI cuando aparezca la cohorte de 2031.",
+      "stop": "No extrapolar automáticamente los requisitos, cortes o procedimientos de 2026 a la promoción de 2031; prevalecerá el acuerdo del ciclo correspondiente.",
       "sourceIds": ["uv-career-2026", "uv-promotion-page", "uv-pdi-regulations"]
     },
     {

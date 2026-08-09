@@ -1,6 +1,7 @@
 export const PROFILE_DEFAULTS = Object.freeze({
   category: "ayudante-doctor",
   contractStartMonth: "2025-06",
+  contractEndMonth: "2031-06",
   contractEnd: "",
   accreditation: "favorable",
   accreditationNotified: "yes",
@@ -23,7 +24,7 @@ export function buildCareerAssessment(rawProfile, data, asOf = new Date()) {
     researchGate(profile.research, profile.sexennia),
     languageGate(profile.c1),
     accreditationGate(profile.accreditation, profile.accreditationNotified),
-    contractGate(profile.contractEnd, asOf),
+    contractGate(profile.contractEnd, profile.contractEndMonth, asOf),
     projectGate(profile.emergingProject, profile.projectRole)
   ];
   if (profile.accreditation === "favorable") gates = closePtuGates(gates);
@@ -110,6 +111,7 @@ function normalizeProfile(raw = {}) {
   return {
     category: String(raw.category || PROFILE_DEFAULTS.category),
     contractStartMonth: /^\d{4}-\d{2}$/.test(String(raw.contractStartMonth || "")) ? String(raw.contractStartMonth) : PROFILE_DEFAULTS.contractStartMonth,
+    contractEndMonth: /^\d{4}-\d{2}$/.test(String(raw.contractEndMonth || "")) ? String(raw.contractEndMonth) : "",
     contractEnd: /^\d{4}-\d{2}-\d{2}$/.test(String(raw.contractEnd || "")) ? String(raw.contractEnd) : "",
     accreditation: allowed(raw.accreditation, ["not-started", "preparing", "submitted", "favorable"], PROFILE_DEFAULTS.accreditation),
     accreditationNotified: allowed(raw.accreditationNotified, ["no", "yes"], PROFILE_DEFAULTS.accreditationNotified),
@@ -156,12 +158,13 @@ function accreditationGate(value, notified) {
   return gate("accreditation", "Acreditación PTU", "gap", value === "preparing" ? "Cerrar la matriz de suficiencia y presentar cuando admisión, investigación y docencia estén acreditadas." : "Hacer una auditoría ACADEMIA antes de acumular más méritos sin objetivo.");
 }
 
-function contractGate(value, asOf) {
-  if (!value) return gate("contract", "Fin de contrato y ventana UV", "evidence", "Consultar la fecha exacta en contrato/hoja de servicios y revisar cada nuevo acuerdo y oferta de empleo UV.");
-  const end = new Date(`${value}T12:00:00`);
+function contractGate(value, monthValue, asOf) {
+  if (!value && !monthValue) return gate("contract", "Fin de contrato y ventana UV", "evidence", "Consultar la fecha en contrato/hoja de servicios y revisar cada nuevo acuerdo y oferta de empleo UV.");
+  const end = value ? new Date(`${value}T12:00:00`) : new Date(`${monthValue}-01T12:00:00`);
   const months = Math.round((end - asOf) / 2629800000);
   if (months < 0) return gate("contract", "Fin de contrato y ventana UV", "gap", "La fecha introducida ya ha pasado; corregir el dato o consultar inmediatamente a RR. HH. PDI.");
   if (months <= 18) return gate("contract", "Fin de contrato y ventana UV", "gap", `Quedan aproximadamente ${months} meses: confirmar por escrito transformación, requisitos y fechas de corte con DIE y RR. HH. PDI.`);
+  if (!value) return gate("contract", "Fin de contrato y ventana UV", "future", `Finalización comunicada: junio de 2031, aproximadamente dentro de ${months} meses. Vigilar cada ciclo UV; confirmar el día exacto solo cuando un plazo lo requiera.`);
   return gate("contract", "Fin de contrato y ventana UV", "future", `Quedan aproximadamente ${months} meses; revisar anualmente los criterios UV y no esperar a la última convocatoria para acreditar.`);
 }
 
@@ -212,10 +215,12 @@ function choosePriorities(profile, actions, ptuReady) {
   if (profile.accreditation === "not-started") ids.push("audit-academia");
   if ((ptuReady || profile.accreditation === "preparing") && profile.accreditation !== "favorable") ids.push("submit-ptu");
   if (profile.accreditation === "favorable" && profile.accreditationNotified !== "yes") ids.push("notify-uv");
-  if (profile.accreditation === "favorable" && profile.accreditationNotified === "yes" && !profile.contractEnd) ids.push("confirm-promotion-window");
+  if (profile.accreditation === "favorable" && profile.accreditationNotified === "yes" && !profile.contractEnd && !profile.contractEndMonth) ids.push("confirm-promotion-window");
   if (profile.emergingProject === "awarded") ids.push("launch-ge-project", "research-pipeline");
   if (profile.sexennia === 0 && profile.research !== "sexennium") ids.push("first-sexennium");
-  ids.push("funding-ladder", "evidence-bank", "research-pipeline", "student-pipeline");
+  ids.push("funding-ladder");
+  if (profile.contractEndMonth || profile.contractEnd) ids.push("track-promotion-cycle");
+  ids.push("evidence-bank", "research-pipeline", "student-pipeline");
   const unique = [...new Set(ids)];
   return unique.map((id) => actions.find((action) => action.id === id)).filter(Boolean).slice(0, 5);
 }

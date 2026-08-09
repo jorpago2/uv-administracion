@@ -109,6 +109,7 @@ function loadProfile() {
     writeForm({
       ...PROFILE_DEFAULTS,
       contractEnd: legacy.contractEnd || "",
+      contractEndMonth: legacy.contractEndMonth || legacy.contractEnd?.slice(0, 7) || PROFILE_DEFAULTS.contractEndMonth,
       mobility: legacy.mobility || PROFILE_DEFAULTS.mobility,
       teaching: legacy.teaching || PROFILE_DEFAULTS.teaching,
       research: legacy.research || PROFILE_DEFAULTS.research,

@@ -15,8 +15,9 @@ test("los nuevos datos sitúan el plan después de la acreditación PTU", () => 
   assert.equal(result.profile.sexennia, 1);
   assert.equal(result.profile.teaching, "quinquennium");
   assert.equal(result.profile.accreditationNotified, "yes");
-  assert.equal(result.priorities[0].id, "confirm-promotion-window");
-  assert.equal(result.priorities[1].id, "launch-ge-project");
+  assert.equal(result.gates.find((gate) => gate.id === "contract").status, "future");
+  assert.equal(result.priorities[0].id, "launch-ge-project");
+  assert.ok(result.priorities.some((item) => item.id === "track-promotion-cycle"));
   assert.match(result.headline, /promoción/);
 });
 
