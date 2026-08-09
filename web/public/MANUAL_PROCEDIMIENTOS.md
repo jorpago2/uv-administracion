@@ -7,7 +7,7 @@ ambito: "Profesorado e investigación en la Universitat de València"
 
 # Manual operativo para PDI de la UV — ETSE, DIE e ICMUV
 
-Este manual traduce la normativa recopilada en procedimientos de trabajo. Está pensado para una persona adscrita al Departamento de Ingeniería Electrónica (DIE), con docencia en la ETSE y adscripción investigadora al ICMUV.
+Este manual traduce la normativa recopilada en procedimientos de trabajo. Está pensado para una persona adscrita al Departamento de Ingeniería Electrónica (DIE), con docencia en la ETSE en el GIET, GIEI, GIT y Máster Universitario en Ingeniería Electrónica, y con adscripción investigadora al ICMUV. El Programa de Doctorado en Ingeniería Electrónica se trata como formación investigadora.
 
 No sustituye a una resolución, convocatoria o publicación oficial. Cuando exista diferencia entre este manual y la sede, el tablón oficial, el DOGV o el BOE, prevalece la fuente oficial.
 
@@ -65,9 +65,9 @@ Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algu
 | Ámbito | Capítulos | Contenido principal |
 |---|---:|---|
 | Orientación, administración y gobierno | 1–7 | Uso de la guía, directorio, rutina anual, administración electrónica, órganos UV y mantenimiento |
-| Docencia | 8–15 | POD y OCA, evaluación, TFG/TFM, prácticas, calidad, tutorías, movilidad y doctorado |
+| Docencia | 8–14 | POD y OCA, evaluación, TFG/TFM, prácticas, calidad, tutorías y movilidad en GIET, GIEI, GIT y MUIE |
 | Carrera y condiciones PDI | 16–19 | Permisos, carrera, retribuciones, situaciones administrativas, cese y jubilación |
-| Investigación y transferencia | 20–28 | Solicitud y gestión de proyectos, contratación, artículo 60, resultados, integridad, ciencia abierta, empresas e infraestructuras |
+| Investigación y transferencia | 15 y 20–28 | Doctorado, solicitud y gestión de proyectos, contratación, artículo 60, resultados, integridad, ciencia abierta, empresas e infraestructuras |
 | Gestión administrativa y económica | 29–30 | Compras, contratos menores, viajes, congresos, dietas e inscripciones |
 | Cumplimiento, seguridad y derechos | 31–37 | Datos, ética y bioseguridad, prevención, igualdad, incompatibilidades, recursos y denuncias |
 
@@ -380,7 +380,34 @@ Para prácticas curriculares de grado, el expediente de evaluación incluye al m
 
 La calidad docente no se reduce a las encuestas. Requiere coherencia entre memoria verificada, guía docente, actividades realizadas, evaluación, resultados y acciones de mejora. En la ETSE debe consultarse el [Sistema de Aseguramiento Interno de la Calidad](https://www.uv.es/etsedoc/Calidad/Manual%20del%20SAIC_JC.pdf) y las instrucciones de la titulación.
 
-### 12.1 Evidencias y mejora
+### 12.1 Titulaciones y jerarquía documental
+
+El ámbito docente concreto comprende tres grados y un máster. La ETSE-UV es el centro en el que se imparten; el DIE coordina la docencia de sus áreas y participa junto con otros departamentos. La responsabilidad académica del título no corresponde al DIE de forma exclusiva: en los grados interviene la Comisión Académica del Título (CAT) y en el máster la Comisión de Coordinación Académica (CCA), además de los órganos del centro y de la UV.
+
+| Sigla | Titulación | Código UV | Documento de diseño | Portal operativo y de calidad |
+|---|---|---:|---|---|
+| GIET | Grado en Ingeniería Electrónica de Telecomunicación | 1402 | [Memoria publicada, 16/07/2025](https://www.uv.es/graus/verifica/Eng_%20Electronica_Telecomunicacio/1402_MV_2025.pdf) | [Ficha oficial ETSE-UV](https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-telecomunicacion-1285847234367/Titulacio.html?id=1285847366749) |
+| GIEI | Grado en Ingeniería Electrónica Industrial | 1404 | [Memoria publicada](https://www.uv.es/graus/qualitat/MV/1404_MV.pdf) | [Ficha oficial ETSE-UV](https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-industrial-1285847234367/Titulacio.html?id=1285847366625) |
+| GIT | Grado en Ingeniería Telemática | 1403 | [Memoria publicada, 16/07/2025](https://www.uv.es/graus/verifica/Eng_Telematica/1403_MV_2025.pdf) | [Ficha oficial UV](https://www.uv.es/uvweb/transparencia-uv/es/docencia-investigacion/informacion-academica/estudios-grado/oferta-grados/grado-ingenieria-telematica-1285924665453/Titulacio.html?id=1285847322251) |
+| MUIE | Máster Universitario en Ingeniería Electrónica | 2269 | [Memoria publicada, 30/11/2023](https://www.uv.es/pop/docs-M/INFORMES/MEMORIA/2269_MV.pdf) | [Ficha oficial del máster](https://www.uv.es/uvweb/master-ingenieria-electronica/es/programa-del-master/plan-estudios/plan-estudios/master-universitario-ingenieria-electronica-1285905409251/Titulacio.html?id=1285850882287&p2=6-1) |
+
+Antes de decidir, identifica qué documento responde realmente a la pregunta:
+
+| Pregunta | Documento que debes abrir primero | Comprobación adicional |
+|---|---|---|
+| ¿Qué competencias, resultados, créditos o sistemas de evaluación tiene comprometidos el título? | Memoria Verifica consolidada y sus modificaciones | Informe de verificación y, si procede, orden CIN de la profesión regulada |
+| ¿Qué debo impartir y cómo evaluar este curso? | Guía docente aprobada del curso | Acuerdos de coordinación/CAT/CCA, calendario, horarios y Aula Virtual |
+| ¿Puedo cambiar contenidos, ponderaciones o actividades? | Guía vigente y procedimiento de modificación | Coherencia con la memoria y aprobación por el órgano competente; no aplicar unilateralmente |
+| ¿Qué asignaturas se ofertan y quién asume la docencia? | OCA y POD vigentes | Acuerdos del DIE, departamentos implicados y ETSE; la memoria no asigna por sí sola el POD anual |
+| ¿Qué observaciones externas debe atender el título? | Informes de seguimiento y renovación de acreditación | Plan de mejora, SAIC, indicadores y evidencias de cierre |
+| ¿Qué regla aplico a TFG/TFM, prácticas o evaluación? | Normativa UV/ETSE y guía docente vigente | Memoria, acuerdos del título y calendario específico |
+
+> [!IMPORTANT]
+> La memoria Verifica es el marco de diseño aprobado, pero no sustituye la guía docente del curso, el OCA/POD, los acuerdos vigentes ni una norma posterior. En el MUIE, la memoria publicada está fechada el 30/11/2023 y el portal conserva el histórico de modificaciones; no debe utilizarse una copia antigua sin comprobar esa secuencia.
+
+La web ofrece un [catálogo filtrable de titulaciones y documentos oficiales](https://jorpago2.github.io/uv-administracion/programas/) para localizar cada familia documental sin mezclar docencia de grado/máster con formación doctoral.
+
+### 12.2 Evidencias y mejora
 
 1. Antes del curso, revisa resultados del año anterior, guía, coordinación horizontal/vertical y cambios aprobados.
 2. Durante el curso, conserva evidencias proporcionadas: materiales, rúbricas, incidencias, coordinación y ajustes adoptados.
@@ -388,7 +415,7 @@ La calidad docente no se reduce a las encuestas. Requiere coherencia entre memor
 4. Formula acciones concretas, con responsable, plazo e indicador; «mejorar la asignatura» no es verificable.
 5. Si la CAT/CCA o la comisión de calidad solicita información, entrega datos agregados y evita documentos con datos personales innecesarios.
 
-### 12.2 Docentia e innovación
+### 12.3 Docentia e innovación
 
 El [Manual Docentia UV](https://www.uv.es/uq/docs/c/Docentia%20UV.pdf) regula la evaluación institucional de la actividad docente. No equivale al reconocimiento económico de quinquenios. Conviene mantener actualizado el expediente, revisar los datos importados y aportar solo evidencias correspondientes al periodo evaluado.
 
@@ -442,7 +469,9 @@ Antes de invitar a una persona, define estatus, duración, financiación, puesto
 
 ## 15. Doctorado y dirección de tesis
 
-La dirección de tesis implica seguimiento académico, integridad, viabilidad y protección de la persona doctoranda; no se limita a firmar formularios. Deben aplicarse el RD 99/2011, el [RRI de la Escuela de Doctorado](https://www.uv.es/escoladoct/REGLAMENTOS/02%20PROPUESTA%20DE%20RRI%20DE%20LA_ED_Y%20DE%20ESTUDIOS%20DE%20DOCTORADO%20DE%20LA%20UV_C.pdf), la normativa de depósito y las reglas del programa.
+La dirección de tesis implica seguimiento académico, integridad, viabilidad y protección de la persona doctoranda; no se limita a firmar formularios. En esta guía se clasifica en **investigación**, no en docencia ordinaria. El [Programa de Doctorado en Ingeniería Electrónica](https://www.uv.es/uvweb/universidad/es/estudios-postgrado/doctorados/oferta-programas-doctorado/programa-doctorado-ingenieria-electronica-1285957462233/Titulacio.html?id=1285887608365) tiene código UV 3131, RUCT 5600364, está organizado por el DIE y se gestiona con la Escuela de Doctorado y la Comisión Académica del programa.
+
+Deben leerse conjuntamente el RD 99/2011, el [RRI de la Escuela de Doctorado](https://www.uv.es/escoladoct/REGLAMENTOS/02%20PROPUESTA%20DE%20RRI%20DE%20LA_ED_Y%20DE%20ESTUDIOS%20DE%20DOCTORADO%20DE%20LA%20UV_C.pdf), la normativa de depósito, la [memoria de verificación del programa](https://www.uv.es/fatwireed/userfiles/file/Ingenieria%20Electonica%20nuevo%282%29.pdf), las instrucciones anuales y las reglas específicas del programa. La memoria define acceso, actividades, supervisión y recursos, pero no sustituye los trámites vigentes de matrícula, seguimiento anual o depósito. Como comprobación externa reciente, está disponible el [informe final de acreditación AVAP 2025](https://www.uv.es/uq/Acred/Doctorat/INF2025/3131-ACR2-Avap.pdf).
 
 ### 15.1 Incorporación y seguimiento
 

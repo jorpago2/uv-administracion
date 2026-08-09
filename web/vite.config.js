@@ -12,6 +12,7 @@ export default defineConfig({
         resolver: fileURLToPath(new URL("./resolver/index.html", import.meta.url)),
         administracion: fileURLToPath(new URL("./administracion/index.html", import.meta.url)),
         docencia: fileURLToPath(new URL("./docencia/index.html", import.meta.url)),
+        programas: fileURLToPath(new URL("./programas/index.html", import.meta.url)),
         carreraPdi: fileURLToPath(new URL("./carrera-pdi/index.html", import.meta.url)),
         investigacion: fileURLToPath(new URL("./investigacion/index.html", import.meta.url)),
         gestion: fileURLToPath(new URL("./gestion/index.html", import.meta.url)),

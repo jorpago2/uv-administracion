@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-09",
+  "scopeNote": "La ETSE-UV es el centro de docencia de los grados y del máster; el DIE participa en la organización y asignación de la docencia. Las decisiones de cada título corresponden a su CAT o CCA y a los órganos competentes, no al departamento de forma exclusiva. El programa de doctorado se clasifica en investigación y se gestiona con la Escuela de Doctorado.",
+  "structures": [
+    {
+      "id": "etse",
+      "name": "Escola Tècnica Superior d’Enginyeria (ETSE-UV)",
+      "role": "Centro en el que se imparten los tres grados y el Máster Universitario en Ingeniería Electrónica.",
+      "url": "https://www.uv.es/etse"
+    },
+    {
+      "id": "die",
+      "name": "Departamento de Ingeniería Electrónica (DIE)",
+      "role": "Departamento de adscripción que coordina enseñanzas de sus áreas y participa en las titulaciones indicadas.",
+      "url": "https://www.uv.es/die"
+    },
+    {
+      "id": "ed",
+      "name": "Escuela de Doctorado de la Universitat de València",
+      "role": "Centro de gestión del Programa de Doctorado en Ingeniería Electrónica.",
+      "url": "https://www.uv.es/escoladoct"
+    }
+  ],
+  "programmes": [
+    {
+      "id": "giet",
+      "acronym": "GIET",
+      "name": "Grado en Ingeniería Electrónica de Telecomunicación",
+      "level": "grado",
+      "levelLabel": "Grado",
+      "scope": "docencia",
+      "scopeLabel": "Docencia",
+      "uvCode": "1402",
+      "ructId": "2501410",
+      "centre": "ETSE-UV",
+      "department": "DIE y otros departamentos con docencia en el título",
+      "governance": "Comisión Académica del Título (CAT) y órganos de la ETSE-UV",
+      "firstCheck": "Para preparar o modificar una asignatura, contrasta la memoria publicada con la guía docente del curso y con los acuerdos vigentes de coordinación/CAT.",
+      "documents": [
+        {
+          "type": "ficha",
+          "typeLabel": "Ficha oficial",
+          "title": "Ficha oficial del GIET en la ETSE-UV",
+          "purpose": "Resumen, plan, competencias, prácticas, TFG, movilidad y acceso a calidad.",
+          "status": "Portal vigente",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-telecomunicacion-1285847234367/Titulacio.html?id=1285847366749"
+        },
+        {
+          "type": "verifica",
+          "typeLabel": "Memoria Verifica",
+          "title": "Memoria de verificación publicada del GIET",
+          "purpose": "Diseño oficial consolidado: competencias, estructura, créditos, actividades y sistemas de evaluación.",
+          "status": "Documento fechado 16/07/2025",
+          "url": "https://www.uv.es/graus/verifica/Eng_%20Electronica_Telecomunicacio/1402_MV_2025.pdf"
+        },
+        {
+          "type": "plan",
+          "typeLabel": "Plan y guías",
+          "title": "Plan de estudios y guías docentes del GIET",
+          "purpose": "Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+          "status": "Comprobar el curso académico",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-telecomunicacion-1285847234367/Titulacio.html?id=1285847366749&p2=2-2"
+        },
+        {
+          "type": "seguimiento",
+          "typeLabel": "Calidad",
+          "title": "Seguimiento, acreditación y sello EUR-ACE del GIET",
+          "purpose": "Informes de seguimiento, renovaciones de acreditación, resoluciones y evaluación externa.",
+          "status": "Histórico oficial UV",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-telecomunicacion-1285847234367/Titulacio.html?id=1285847366749&p2=6-5"
+        }
+      ]
+    },
+    {
+      "id": "giei",
+      "acronym": "GIEI",
+      "name": "Grado en Ingeniería Electrónica Industrial",
+      "level": "grado",
+      "levelLabel": "Grado",
+      "scope": "docencia",
+      "scopeLabel": "Docencia",
+      "uvCode": "1404",
+      "ructId": "2501411",
+      "centre": "ETSE-UV",
+      "department": "DIE y otros departamentos con docencia en el título",
+      "governance": "Comisión Académica del Título (CAT) y órganos de la ETSE-UV",
+      "firstCheck": "Si la duda afecta a competencias profesionales o evaluación, revisa la memoria y la Orden CIN/351/2009; para ejecutar el curso prevalecen además la guía docente y los acuerdos vigentes.",
+      "documents": [
+        {
+          "type": "ficha",
+          "typeLabel": "Ficha oficial",
+          "title": "Ficha oficial del GIEI en la ETSE-UV",
+          "purpose": "Resumen, responsables, plan, competencias, prácticas, TFG y calidad.",
+          "status": "Portal vigente",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-industrial-1285847234367/Titulacio.html?id=1285847366625"
+        },
+        {
+          "type": "verifica",
+          "typeLabel": "Memoria Verifica",
+          "title": "Memoria de verificación publicada del GIEI",
+          "purpose": "Diseño oficial del título, incluidas competencias de Electrónica Industrial y planificación docente.",
+          "status": "Versión publicada por la UV; revisar modificaciones en la ficha",
+          "url": "https://www.uv.es/graus/qualitat/MV/1404_MV.pdf"
+        },
+        {
+          "type": "plan",
+          "typeLabel": "Plan y guías",
+          "title": "Plan de estudios y guías docentes del GIEI",
+          "purpose": "Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+          "status": "Comprobar el curso académico",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-industrial-1285847234367/Titulacio.html?id=1285847366625&p2=2-2"
+        },
+        {
+          "type": "seguimiento",
+          "typeLabel": "Calidad",
+          "title": "Seguimiento, acreditación y sello EUR-ACE del GIEI",
+          "purpose": "Informes de seguimiento y renovación, resoluciones y evaluación externa.",
+          "status": "Histórico oficial UV",
+          "url": "https://www.uv.es/uvweb/ingenieria/es/estudios-grado/oferta-grados/grados-etse-uv/grado-ingenieria-electronica-industrial-1285847234367/Titulacio.html?id=1285847366625&p2=6-5"
+        }
+      ]
+    },
+    {
+      "id": "git",
+      "acronym": "GIT",
+      "name": "Grado en Ingeniería Telemática",
+      "level": "grado",
+      "levelLabel": "Grado",
+      "scope": "docencia",
+      "scopeLabel": "Docencia",
+      "uvCode": "1403",
+      "ructId": "2501532",
+      "centre": "ETSE-UV",
+      "department": "DIE y otros departamentos con docencia en el título",
+      "governance": "Comisión Académica del Título (CAT) y órganos de la ETSE-UV",
+      "firstCheck": "Usa la memoria para comprobar compromisos del título y la guía del curso para contenidos, metodología, evaluación, fechas y coordinación operativa.",
+      "documents": [
+        {
+          "type": "ficha",
+          "typeLabel": "Ficha oficial",
+          "title": "Ficha oficial del GIT en la UV",
+          "purpose": "Resumen, plan, competencias, prácticas, TFG, movilidad y calidad.",
+          "status": "Portal vigente",
+          "url": "https://www.uv.es/uvweb/transparencia-uv/es/docencia-investigacion/informacion-academica/estudios-grado/oferta-grados/grado-ingenieria-telematica-1285924665453/Titulacio.html?id=1285847322251"
+        },
+        {
+          "type": "verifica",
+          "typeLabel": "Memoria Verifica",
+          "title": "Memoria de verificación publicada del GIT",
+          "purpose": "Diseño oficial consolidado: competencias, estructura, créditos, actividades y evaluación.",
+          "status": "Documento publicado en 2025",
+          "url": "https://www.uv.es/graus/verifica/Eng_Telematica/1403_MV_2025.pdf"
+        },
+        {
+          "type": "plan",
+          "typeLabel": "Plan y guías",
+          "title": "Plan de estudios y guías docentes del GIT",
+          "purpose": "Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+          "status": "Comprobar el curso académico",
+          "url": "https://www.uv.es/uvweb/transparencia-uv/es/docencia-investigacion/informacion-academica/estudios-grado/oferta-grados/grado-ingenieria-telematica-1285924665453/Titulacio.html?id=1285847322251&p2=2-2"
+        },
+        {
+          "type": "seguimiento",
+          "typeLabel": "Calidad",
+          "title": "Seguimiento y acreditación del GIT",
+          "purpose": "Informes de seguimiento, renovaciones de acreditación y resoluciones.",
+          "status": "Histórico oficial UV",
+          "url": "https://www.uv.es/uvweb/transparencia-uv/es/docencia-investigacion/informacion-academica/estudios-grado/oferta-grados/grado-ingenieria-telematica-1285924665453/Titulacio.html?id=1285847322251&p2=6-5"
+        }
+      ]
+    },
+    {
+      "id": "muie",
+      "acronym": "MUIE",
+      "name": "Máster Universitario en Ingeniería Electrónica",
+      "level": "master",
+      "levelLabel": "Máster",
+      "scope": "docencia",
+      "scopeLabel": "Docencia",
+      "uvCode": "2269",
+      "ructId": "4311716",
+      "centre": "ETSE-UV",
+      "department": "DIE y profesorado participante en el título",
+      "governance": "Comisión de Coordinación Académica (CCA) y órganos de la ETSE-UV",
+      "firstCheck": "Comprueba la modificación aprobada en 2023/2024 y la guía del curso: la memoria histórica de 2009, por sí sola, no refleja necesariamente la ejecución actual.",
+      "documents": [
+        {
+          "type": "ficha",
+          "typeLabel": "Ficha oficial",
+          "title": "Ficha oficial del MUIE",
+          "purpose": "Plan, competencias, admisión, movilidad, responsables y calidad.",
+          "status": "Portal vigente",
+          "url": "https://www.uv.es/uvweb/master-ingenieria-electronica/es/programa-del-master/plan-estudios/plan-estudios/master-universitario-ingenieria-electronica-1285905409251/Titulacio.html?id=1285850882287"
+        },
+        {
+          "type": "verifica",
+          "typeLabel": "Memoria Verifica",
+          "title": "Memoria de verificación publicada del MUIE",
+          "purpose": "Diseño verificado de origen del máster; debe leerse con las modificaciones posteriores.",
+          "status": "Memoria de origen; histórico de modificaciones en la ficha",
+          "url": "https://www.uv.es/pop/docs-M/INFORMES/MEMORIA/2269_MV.pdf"
+        },
+        {
+          "type": "plan",
+          "typeLabel": "Plan y guías",
+          "title": "Plan de estudios y guías docentes del MUIE",
+          "purpose": "Estructura vigente y acceso a las guías de las asignaturas.",
+          "status": "Comprobar el curso académico",
+          "url": "https://www.uv.es/uvweb/master-ingenieria-electronica/es/programa-del-master/plan-estudios/plan-estudios/master-universitario-ingenieria-electronica-1285905409251/Titulacio.html?id=1285850882287&p2=2-2"
+        },
+        {
+          "type": "seguimiento",
+          "typeLabel": "Calidad",
+          "title": "Modificaciones, seguimiento y acreditación del MUIE",
+          "purpose": "Informes ANECA, modificaciones de 2010, 2013, 2014 y 2023, y renovación de la acreditación.",
+          "status": "Incluye acreditación AVAP 2025",
+          "url": "https://www.uv.es/uvweb/master-ingenieria-electronica/es/programa-del-master/plan-estudios/plan-estudios/master-universitario-ingenieria-electronica-1285905409251/Titulacio.html?id=1285850882287&p2=6-1"
+        }
+      ]
+    },
+    {
+      "id": "die-doctorado",
+      "acronym": "PDIE",
+      "name": "Programa de Doctorado en Ingeniería Electrónica",
+      "level": "doctorado",
+      "levelLabel": "Doctorado",
+      "scope": "investigacion",
+      "scopeLabel": "Investigación",
+      "uvCode": "3131",
+      "ructId": "5600364",
+      "centre": "Escuela de Doctorado",
+      "department": "Organizado por el Departamento de Ingeniería Electrónica",
+      "governance": "Comisión Académica del Programa de Doctorado y Escuela de Doctorado",
+      "firstCheck": "Para dirigir o tutorizar una tesis combina la memoria del programa con el RD 99/2011, la normativa UV de doctorado y las instrucciones anuales; la memoria define el programa, pero no sustituye esos procedimientos.",
+      "documents": [
+        {
+          "type": "ficha",
+          "typeLabel": "Ficha oficial",
+          "title": "Ficha oficial del Programa de Doctorado en Ingeniería Electrónica",
+          "purpose": "Estructura, organización, admisión, dirección, líneas, actividades y calidad.",
+          "status": "Portal vigente",
+          "url": "https://www.uv.es/uvweb/universidad/es/estudios-postgrado/doctorados/oferta-programas-doctorado/programa-doctorado-ingenieria-electronica-1285957462233/Titulacio.html?id=1285887608365"
+        },
+        {
+          "type": "verifica",
+          "typeLabel": "Memoria Verifica",
+          "title": "Memoria de verificación del Programa de Doctorado",
+          "purpose": "Acceso, actividades formativas, supervisión, recursos, seguimiento y resultados previstos.",
+          "status": "Programa verificado el 26/07/2013",
+          "url": "https://www.uv.es/fatwireed/userfiles/file/Ingenieria%20Electonica%20nuevo%282%29.pdf"
+        },
+        {
+          "type": "plan",
+          "typeLabel": "Organización",
+          "title": "Actividades específicas del programa",
+          "purpose": "Criterios de formación investigadora, tipos de actividad y reconocimiento de horas.",
+          "status": "Comprobar instrucciones del curso",
+          "url": "https://www.uv.es/uvweb/doctorado-ingenieria-electronica/es/actividades/actividades-especificas/informacion-1286011336781.html"
+        },
+        {
+          "type": "seguimiento",
+          "typeLabel": "Calidad",
+          "title": "Informe final de acreditación AVAP 2025",
+          "purpose": "Evaluación externa más reciente localizada del desarrollo y resultados del programa.",
+          "status": "Informe 2025",
+          "url": "https://www.uv.es/uq/Acred/Doctorat/INF2025/3131-ACR2-Avap.pdf"
+        }
+      ]
+    }
+  ]
+}

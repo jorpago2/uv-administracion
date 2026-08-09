@@ -2,13 +2,13 @@
 
 ## Interfaz web
 
-La guía dispone de una [interfaz web estática](web/README.md) con un directorio de 100 situaciones resueltas paso a paso, búsqueda global, filtros, índice navegable, un [glosario operativo para PDI de nueva incorporación](GLOSARIO_PDI.md), 27 fichas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Cada situación exige decisiones, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre, escalado y fuentes oficiales. El contenido documental se genera mediante `scripts/generar_datos_web.ps1`.
+La guía dispone de una [interfaz web estática](web/README.md) con un directorio de 100 situaciones resueltas paso a paso, búsqueda global, filtros, índice navegable, un catálogo oficial de titulaciones —GIET, GIEI, GIT, MUIE y Doctorado en Ingeniería Electrónica—, un [glosario operativo para PDI de nueva incorporación](GLOSARIO_PDI.md), 27 fichas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Cada situación exige decisiones, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre, escalado y fuentes oficiales. El contenido documental se genera mediante `scripts/generar_datos_web.ps1`.
 
 **Web publicada:** <https://jorpago2.github.io/uv-administracion/>
 
 Recopilación reproducible de fuentes oficiales para el trabajo docente, investigador y administrativo de un profesor de la Universitat de València adscrito al Departamento de Ingeniería Electrónica, con docencia en la ETSE y actividad en el ICMUV.
 
-**Fecha de comprobación:** 8 de agosto de 2026.
+**Fecha de comprobación:** 9 de agosto de 2026.
 
 ## Qué contiene
 

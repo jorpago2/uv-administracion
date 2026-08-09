@@ -32,11 +32,51 @@
     "priority": 10
   },
   {
+    "kind": "Memoria Verifica",
+    "title": "GIEI · Memoria de verificación publicada del GIEI",
+    "context": "Versión publicada por la UV; revisar modificaciones en la ficha",
+    "keywords": "Grado en Ingeniería Electrónica Industrial 1404 2501411 Diseño oficial del título, incluidas competencias de Electrónica Industrial y planificación docente.",
+    "href": "programas/?programa=GIEI#giei",
+    "priority": 10
+  },
+  {
+    "kind": "Memoria Verifica",
+    "title": "GIET · Memoria de verificación publicada del GIET",
+    "context": "Documento fechado 16/07/2025",
+    "keywords": "Grado en Ingeniería Electrónica de Telecomunicación 1402 2501410 Diseño oficial consolidado: competencias, estructura, créditos, actividades y sistemas de evaluación.",
+    "href": "programas/?programa=GIET#giet",
+    "priority": 10
+  },
+  {
+    "kind": "Memoria Verifica",
+    "title": "GIT · Memoria de verificación publicada del GIT",
+    "context": "Documento publicado en 2025",
+    "keywords": "Grado en Ingeniería Telemática 1403 2501532 Diseño oficial consolidado: competencias, estructura, créditos, actividades y evaluación.",
+    "href": "programas/?programa=GIT#git",
+    "priority": 10
+  },
+  {
+    "kind": "Memoria Verifica",
+    "title": "MUIE · Memoria de verificación publicada del MUIE",
+    "context": "Memoria de origen; histórico de modificaciones en la ficha",
+    "keywords": "Máster Universitario en Ingeniería Electrónica 2269 4311716 Diseño verificado de origen del máster; debe leerse con las modificaciones posteriores.",
+    "href": "programas/?programa=MUIE#muie",
+    "priority": 10
+  },
+  {
     "kind": "Área",
     "title": "Patentes y protección de resultados",
     "context": "Investigación y transferencia",
     "keywords": "invencion propiedad industrial secreto software divulgar",
     "href": "investigacion/#capitulo-24",
+    "priority": 10
+  },
+  {
+    "kind": "Memoria Verifica",
+    "title": "PDIE · Memoria de verificación del Programa de Doctorado",
+    "context": "Programa verificado el 26/07/2013",
+    "keywords": "Programa de Doctorado en Ingeniería Electrónica 3131 5600364 Acceso, actividades formativas, supervisión, recursos, seguimiento y resultados previstos.",
+    "href": "programas/?programa=PDIE#die-doctorado",
     "priority": 10
   },
   {
@@ -46,6 +86,166 @@
     "keywords": "dieta billete hotel congreso quien paga viaje",
     "href": "herramientas/#calculadora-viajes",
     "priority": 10
+  },
+  {
+    "kind": "Titulación",
+    "title": "GIEI · Grado en Ingeniería Electrónica Industrial",
+    "context": "ETSE-UV · código UV 1404 · RUCT 2501411",
+    "keywords": "Grado DIE y otros departamentos con docencia en el título Comisión Académica del Título (CAT) y órganos de la ETSE-UV Ficha oficial Ficha oficial del GIEI en la ETSE-UV Resumen, responsables, plan, competencias, prácticas, TFG y calidad. Memoria Verifica Memoria de verificación publicada del GIEI Diseño oficial del título, incluidas competencias de Electrónica Industrial y planificación docente. Plan y guías Plan de estudios y guías docentes del GIEI Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia. Calidad Seguimiento, acreditación y sello EUR-ACE del GIEI Informes de seguimiento y renovación, resoluciones y evaluación externa.",
+    "href": "programas/#giei",
+    "priority": 9
+  },
+  {
+    "kind": "Titulación",
+    "title": "GIET · Grado en Ingeniería Electrónica de Telecomunicación",
+    "context": "ETSE-UV · código UV 1402 · RUCT 2501410",
+    "keywords": "Grado DIE y otros departamentos con docencia en el título Comisión Académica del Título (CAT) y órganos de la ETSE-UV Ficha oficial Ficha oficial del GIET en la ETSE-UV Resumen, plan, competencias, prácticas, TFG, movilidad y acceso a calidad. Memoria Verifica Memoria de verificación publicada del GIET Diseño oficial consolidado: competencias, estructura, créditos, actividades y sistemas de evaluación. Plan y guías Plan de estudios y guías docentes del GIET Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia. Calidad Seguimiento, acreditación y sello EUR-ACE del GIET Informes de seguimiento, renovaciones de acreditación, resoluciones y evaluación externa.",
+    "href": "programas/#giet",
+    "priority": 9
+  },
+  {
+    "kind": "Titulación",
+    "title": "GIT · Grado en Ingeniería Telemática",
+    "context": "ETSE-UV · código UV 1403 · RUCT 2501532",
+    "keywords": "Grado DIE y otros departamentos con docencia en el título Comisión Académica del Título (CAT) y órganos de la ETSE-UV Ficha oficial Ficha oficial del GIT en la UV Resumen, plan, competencias, prácticas, TFG, movilidad y calidad. Memoria Verifica Memoria de verificación publicada del GIT Diseño oficial consolidado: competencias, estructura, créditos, actividades y evaluación. Plan y guías Plan de estudios y guías docentes del GIT Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia. Calidad Seguimiento y acreditación del GIT Informes de seguimiento, renovaciones de acreditación y resoluciones.",
+    "href": "programas/#git",
+    "priority": 9
+  },
+  {
+    "kind": "Titulación",
+    "title": "MUIE · Máster Universitario en Ingeniería Electrónica",
+    "context": "ETSE-UV · código UV 2269 · RUCT 4311716",
+    "keywords": "Máster DIE y profesorado participante en el título Comisión de Coordinación Académica (CCA) y órganos de la ETSE-UV Ficha oficial Ficha oficial del MUIE Plan, competencias, admisión, movilidad, responsables y calidad. Memoria Verifica Memoria de verificación publicada del MUIE Diseño verificado de origen del máster; debe leerse con las modificaciones posteriores. Plan y guías Plan de estudios y guías docentes del MUIE Estructura vigente y acceso a las guías de las asignaturas. Calidad Modificaciones, seguimiento y acreditación del MUIE Informes ANECA, modificaciones de 2010, 2013, 2014 y 2023, y renovación de la acreditación.",
+    "href": "programas/#muie",
+    "priority": 9
+  },
+  {
+    "kind": "Doctorado",
+    "title": "PDIE · Programa de Doctorado en Ingeniería Electrónica",
+    "context": "Escuela de Doctorado · código UV 3131 · RUCT 5600364",
+    "keywords": "Doctorado Organizado por el Departamento de Ingeniería Electrónica Comisión Académica del Programa de Doctorado y Escuela de Doctorado Ficha oficial Ficha oficial del Programa de Doctorado en Ingeniería Electrónica Estructura, organización, admisión, dirección, líneas, actividades y calidad. Memoria Verifica Memoria de verificación del Programa de Doctorado Acceso, actividades formativas, supervisión, recursos, seguimiento y resultados previstos. Organización Actividades específicas del programa Criterios de formación investigadora, tipos de actividad y reconocimiento de horas. Calidad Informe final de acreditación AVAP 2025 Evaluación externa más reciente localizada del desarrollo y resultados del programa.",
+    "href": "programas/#die-doctorado",
+    "priority": 9
+  },
+  {
+    "kind": "Ficha oficial",
+    "title": "GIEI · Ficha oficial del GIEI en la ETSE-UV",
+    "context": "Portal vigente",
+    "keywords": "Grado en Ingeniería Electrónica Industrial 1404 2501411 Resumen, responsables, plan, competencias, prácticas, TFG y calidad.",
+    "href": "programas/?programa=GIEI#giei",
+    "priority": 7
+  },
+  {
+    "kind": "Plan y guías",
+    "title": "GIEI · Plan de estudios y guías docentes del GIEI",
+    "context": "Comprobar el curso académico",
+    "keywords": "Grado en Ingeniería Electrónica Industrial 1404 2501411 Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+    "href": "programas/?programa=GIEI#giei",
+    "priority": 7
+  },
+  {
+    "kind": "Calidad",
+    "title": "GIEI · Seguimiento, acreditación y sello EUR-ACE del GIEI",
+    "context": "Histórico oficial UV",
+    "keywords": "Grado en Ingeniería Electrónica Industrial 1404 2501411 Informes de seguimiento y renovación, resoluciones y evaluación externa.",
+    "href": "programas/?programa=GIEI#giei",
+    "priority": 7
+  },
+  {
+    "kind": "Ficha oficial",
+    "title": "GIET · Ficha oficial del GIET en la ETSE-UV",
+    "context": "Portal vigente",
+    "keywords": "Grado en Ingeniería Electrónica de Telecomunicación 1402 2501410 Resumen, plan, competencias, prácticas, TFG, movilidad y acceso a calidad.",
+    "href": "programas/?programa=GIET#giet",
+    "priority": 7
+  },
+  {
+    "kind": "Plan y guías",
+    "title": "GIET · Plan de estudios y guías docentes del GIET",
+    "context": "Comprobar el curso académico",
+    "keywords": "Grado en Ingeniería Electrónica de Telecomunicación 1402 2501410 Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+    "href": "programas/?programa=GIET#giet",
+    "priority": 7
+  },
+  {
+    "kind": "Calidad",
+    "title": "GIET · Seguimiento, acreditación y sello EUR-ACE del GIET",
+    "context": "Histórico oficial UV",
+    "keywords": "Grado en Ingeniería Electrónica de Telecomunicación 1402 2501410 Informes de seguimiento, renovaciones de acreditación, resoluciones y evaluación externa.",
+    "href": "programas/?programa=GIET#giet",
+    "priority": 7
+  },
+  {
+    "kind": "Ficha oficial",
+    "title": "GIT · Ficha oficial del GIT en la UV",
+    "context": "Portal vigente",
+    "keywords": "Grado en Ingeniería Telemática 1403 2501532 Resumen, plan, competencias, prácticas, TFG, movilidad y calidad.",
+    "href": "programas/?programa=GIT#git",
+    "priority": 7
+  },
+  {
+    "kind": "Plan y guías",
+    "title": "GIT · Plan de estudios y guías docentes del GIT",
+    "context": "Comprobar el curso académico",
+    "keywords": "Grado en Ingeniería Telemática 1403 2501532 Asignaturas, créditos y acceso a la guía, horarios y exámenes de cada materia.",
+    "href": "programas/?programa=GIT#git",
+    "priority": 7
+  },
+  {
+    "kind": "Calidad",
+    "title": "GIT · Seguimiento y acreditación del GIT",
+    "context": "Histórico oficial UV",
+    "keywords": "Grado en Ingeniería Telemática 1403 2501532 Informes de seguimiento, renovaciones de acreditación y resoluciones.",
+    "href": "programas/?programa=GIT#git",
+    "priority": 7
+  },
+  {
+    "kind": "Ficha oficial",
+    "title": "MUIE · Ficha oficial del MUIE",
+    "context": "Portal vigente",
+    "keywords": "Máster Universitario en Ingeniería Electrónica 2269 4311716 Plan, competencias, admisión, movilidad, responsables y calidad.",
+    "href": "programas/?programa=MUIE#muie",
+    "priority": 7
+  },
+  {
+    "kind": "Calidad",
+    "title": "MUIE · Modificaciones, seguimiento y acreditación del MUIE",
+    "context": "Incluye acreditación AVAP 2025",
+    "keywords": "Máster Universitario en Ingeniería Electrónica 2269 4311716 Informes ANECA, modificaciones de 2010, 2013, 2014 y 2023, y renovación de la acreditación.",
+    "href": "programas/?programa=MUIE#muie",
+    "priority": 7
+  },
+  {
+    "kind": "Plan y guías",
+    "title": "MUIE · Plan de estudios y guías docentes del MUIE",
+    "context": "Comprobar el curso académico",
+    "keywords": "Máster Universitario en Ingeniería Electrónica 2269 4311716 Estructura vigente y acceso a las guías de las asignaturas.",
+    "href": "programas/?programa=MUIE#muie",
+    "priority": 7
+  },
+  {
+    "kind": "Organización",
+    "title": "PDIE · Actividades específicas del programa",
+    "context": "Comprobar instrucciones del curso",
+    "keywords": "Programa de Doctorado en Ingeniería Electrónica 3131 5600364 Criterios de formación investigadora, tipos de actividad y reconocimiento de horas.",
+    "href": "programas/?programa=PDIE#die-doctorado",
+    "priority": 7
+  },
+  {
+    "kind": "Ficha oficial",
+    "title": "PDIE · Ficha oficial del Programa de Doctorado en Ingeniería Electrónica",
+    "context": "Portal vigente",
+    "keywords": "Programa de Doctorado en Ingeniería Electrónica 3131 5600364 Estructura, organización, admisión, dirección, líneas, actividades y calidad.",
+    "href": "programas/?programa=PDIE#die-doctorado",
+    "priority": 7
+  },
+  {
+    "kind": "Calidad",
+    "title": "PDIE · Informe final de acreditación AVAP 2025",
+    "context": "Informe 2025",
+    "keywords": "Programa de Doctorado en Ingeniería Electrónica 3131 5600364 Evaluación externa más reciente localizada del desarrollo y resultados del programa.",
+    "href": "programas/?programa=PDIE#die-doctorado",
+    "priority": 7
   },
   {
     "kind": "Situación",

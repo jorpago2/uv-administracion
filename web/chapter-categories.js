@@ -16,8 +16,8 @@ export const CATEGORIES = Object.freeze([
     id: "docencia",
     label: "Docencia",
     shortLabel: "Docencia",
-    summary: "Organiza POD, evaluación, trabajos finales, prácticas, tutorías, movilidad y doctorado.",
-    sections: [8, 9, 10, 11, 12, 13, 14, 15],
+    summary: "Organiza POD, evaluación, trabajos finales, prácticas, tutorías y movilidad en GIET, GIEI, GIT y MUIE.",
+    sections: [8, 9, 10, 11, 12, 13, 14],
     featuredSections: [8, 9, 10],
     tools: [
       ["Calcular POD", "#calculadora-pod"],
@@ -42,9 +42,9 @@ export const CATEGORIES = Object.freeze([
     id: "investigacion",
     label: "Investigación y transferencia",
     shortLabel: "Investigación",
-    summary: "Localiza financiación y prepara, ejecuta, contrata, protege y transfiere resultados.",
-    sections: [20, 21, 22, 23, 24, 25, 26, 27, 28],
-    featuredSections: [20, 21, 22],
+    summary: "Dirige doctorado y localiza, ejecuta, protege y transfiere investigación y sus resultados.",
+    sections: [15, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+    featuredSections: [15, 20, 24],
     tools: [
       ["Explorar financiación", "#explorador-financiacion"],
       ["Preparar candidatura", "#preparador-candidatura"],

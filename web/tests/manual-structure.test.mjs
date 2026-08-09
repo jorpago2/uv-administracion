@@ -19,8 +19,13 @@ test("el manual contiene 37 capítulos consecutivos", () => {
 
 test("cada capítulo pertenece exactamente a un ámbito", () => {
   const categorized = CATEGORIES.flatMap((category) => category.sections);
-  assert.deepEqual(categorized, chapterNumbers);
+  assert.deepEqual([...categorized].sort((left, right) => left - right), chapterNumbers);
   assert.equal(new Set(categorized).size, categorized.length);
+});
+
+test("el doctorado se clasifica como investigación y no como docencia", () => {
+  assert.ok(CATEGORIES.find((category) => category.id === "investigacion").sections.includes(15));
+  assert.ok(!CATEGORIES.find((category) => category.id === "docencia").sections.includes(15));
 });
 
 test("la numeración de los subapartados coincide con su capítulo", () => {

@@ -8,6 +8,7 @@ La portada es una mesa de trabajo ligera. El contenido se distribuye en rutas in
 
 - `/resolver/`: 100 situaciones operativas.
 - `/administracion/`, `/docencia/`, `/carrera-pdi/`, `/investigacion/`, `/gestion/` y `/cumplimiento/`: ámbitos con sus casos, capítulos y herramientas.
+- `/programas/`: GIET, GIEI, GIT, MUIE y Programa de Doctorado en Ingeniería Electrónica, con memorias Verifica, planes, guías y calidad.
 - `/financiacion/`: explorador y preparador de candidaturas.
 - `/herramientas/`: asistente, fichas, calendario y calculadoras.
 - `/glosario/`: vocabulario operativo.
@@ -73,6 +74,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `example-transferability.js`: alcance reutilizable de cada caso: situaciones equivalentes, variables que deben adaptarse y condiciones que cambian la ruta.
 - `example-guide-model.js`: extracción comprobable de ejemplos, procedimientos, documentos y fuentes oficiales.
 - `chapter-categories.js`: mapa comprobable entre capítulos y ámbitos de la guía.
+- `academic-programmes-page.js` y `academic-programmes-model.js`: catálogo filtrable y validación de los programas académicos.
 - `operational-tools.js`: interfaz del asistente, fichas y calendario anual.
 - `operational-tools-model.js`: validación, búsqueda, recomendaciones y generación iCalendar, sin dependencias del DOM.
 - `funding-explorer.js`: filtros, fichas trazables y comparación de convocatorias.
@@ -88,6 +90,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `data/situations.json`: situaciones 1–50 con reglas de decisión, paradas, cierre, escalado y variantes específicas.
 - `data/situations-51-100.json`: situaciones 51–100 y perfiles reutilizables para mantener el mismo contrato detallado.
 - `data/operations.json`: fichas normalizadas e hitos anuales; cada cambio debe conservar su fuente y fecha de revisión.
+- `data/academic-programmes.json`: estructuras, titulaciones y familias documentales oficiales revisadas.
 - `data/funding-calls.json`: convocatorias estructuradas por nivel, finalidad, perfil, participación, beneficiario, TRL orientativo, financiación, periodicidad, edición y fuente oficial.
 - `data/decision-cases.json`: ocho expedientes realistas y sus fuentes oficiales.
 - `data/travel-2026.json`: cuantías UV 2026 para kilometraje, España y 97 destinos extranjeros.

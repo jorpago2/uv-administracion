@@ -5,9 +5,9 @@ import path from "node:path";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = path.join(repositoryRoot, "web", "data");
 
-const [manual, situationsA, situationsB, glossary, funding, operations] = await Promise.all([
+const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes] = await Promise.all([
   readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"),
-  readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json")
+  readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json")
 ]);
 
 const entries = [
@@ -63,6 +63,27 @@ for (const procedure of operations.procedures ?? []) {
     href: `herramientas/#fichas-procedimiento`,
     priority: 4
   });
+}
+
+for (const programme of academicProgrammes.programmes ?? []) {
+  entries.push({
+    kind: programme.scope === "investigacion" ? "Doctorado" : "Titulación",
+    title: `${programme.acronym} · ${programme.name}`,
+    context: `${programme.centre} · código UV ${programme.uvCode} · RUCT ${programme.ructId}`,
+    keywords: [programme.levelLabel, programme.department, programme.governance, ...programme.documents.flatMap((document) => [document.typeLabel, document.title, document.purpose])].join(" "),
+    href: `programas/#${programme.id}`,
+    priority: 9
+  });
+  for (const document of programme.documents) {
+    entries.push({
+      kind: document.typeLabel,
+      title: `${programme.acronym} · ${document.title}`,
+      context: document.status,
+      keywords: `${programme.name} ${programme.uvCode} ${programme.ructId} ${document.purpose}`,
+      href: `programas/?programa=${encodeURIComponent(programme.acronym)}#${programme.id}`,
+      priority: document.type === "verifica" ? 10 : 7
+    });
+  }
 }
 
 entries.push(

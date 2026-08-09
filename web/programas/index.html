@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Documentos oficiales del GIET, GIEI, GIT, MUIE y Programa de Doctorado en Ingeniería Electrónica de la Universitat de València.">
+  <title>Titulaciones y doctorado · Guía operativa UV</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../hub.css">
+  <script type="module" src="../academic-programmes-page.js"></script>
+</head>
+<body data-root="../" data-page="programas">
+  <a class="hub-skip" href="#contenido">Saltar al contenido</a>
+  <site-header></site-header>
+  <main class="page-main" id="contenido">
+    <section class="page-hero programme-hero">
+      <p class="hub-kicker">ETSE-UV · DIE · Escuela de Doctorado</p>
+      <h1>Titulaciones y documentos oficiales</h1>
+      <p>Acceso ordenado a las memorias Verifica, planes y guías, fichas de calidad e informes de seguimiento de los programas en los que desarrollas docencia o formación investigadora.</p>
+      <p class="programme-reviewed">Fuentes revisadas el <strong id="catalogueReviewedAt"></strong>. Comprueba siempre la versión y el curso en la página oficial.</p>
+    </section>
+
+    <section class="page-section programme-boundary" aria-labelledby="boundaryTitle">
+      <h2 id="boundaryTitle">Quién interviene</h2>
+      <p id="catalogueScopeNote"></p>
+      <div class="academic-structures" id="academicStructures"></div>
+    </section>
+
+    <section class="page-section document-guide" aria-labelledby="documentGuideTitle">
+      <h2 id="documentGuideTitle">No todos los documentos sirven para lo mismo</h2>
+      <div class="document-guide__grid">
+        <article><span>01</span><h3>Diseño del título</h3><p>Memoria Verifica y modificaciones: resultados de aprendizaje, estructura, créditos, actividades y sistemas de evaluación comprometidos.</p></article>
+        <article><span>02</span><h3>Ejecución del curso</h3><p>Guía docente, OCA/POD, horarios, calendario y acuerdos vigentes de CAT o CCA. Son los documentos operativos que debes aplicar ese curso.</p></article>
+        <article><span>03</span><h3>Revisión y mejora</h3><p>SAIC, seguimiento y acreditación: evidencias, recomendaciones externas, indicadores y acciones de mejora del título.</p></article>
+      </div>
+      <p class="document-guide__warning"><strong>Regla práctica:</strong> la memoria no autoriza por sí sola a cambiar una guía, una evaluación o el POD. Si dos documentos parecen contradecirse, conserva la evidencia y consulta a coordinación/CAT/CCA antes de aplicar el cambio.</p>
+    </section>
+
+    <section class="page-section programme-directory" aria-labelledby="programmeDirectoryTitle">
+      <div class="page-section__head"><div><h2 id="programmeDirectoryTitle">Catálogo por programa</h2><p>Tres grados y un máster en docencia; el doctorado queda clasificado en investigación.</p></div></div>
+      <form class="programme-filters" id="programmeFilters" role="search">
+        <label>Buscar<input id="programmeQuery" type="search" autocomplete="off" placeholder="Ej.: GIET, memoria, acreditación…"></label>
+        <label>Ámbito<select id="programmeScope"><option value="">Todos</option><option value="docencia">Docencia</option><option value="investigacion">Investigación</option></select></label>
+        <label>Nivel<select id="programmeLevel"><option value="">Todos</option><option value="grado">Grado</option><option value="master">Máster</option><option value="doctorado">Doctorado</option></select></label>
+        <label>Documento<select id="programmeDocumentType"></select></label>
+        <button class="hub-button" type="reset">Limpiar filtros</button>
+      </form>
+      <p class="programme-status" id="programmeStatus" aria-live="polite"></p>
+      <div class="programme-list" id="programmeList"></div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>

@@ -11,6 +11,7 @@ const decisionCasesPath = path.join(repositoryRoot, "web", "data", "decision-cas
 const situationsPath = path.join(repositoryRoot, "web", "data", "situations.json");
 const situationsExtensionPath = path.join(repositoryRoot, "web", "data", "situations-51-100.json");
 const travelPath = path.join(repositoryRoot, "web", "data", "travel-2026.json");
+const academicProgrammesPath = path.join(repositoryRoot, "web", "data", "academic-programmes.json");
 const webIndexPath = path.join(repositoryRoot, "web", "index.html");
 const markdown = await readFile(manualPath, "utf8");
 const operations = JSON.parse(await readFile(operationsPath, "utf8"));
@@ -18,6 +19,7 @@ const decisionCases = JSON.parse(await readFile(decisionCasesPath, "utf8"));
 const situations = JSON.parse(await readFile(situationsPath, "utf8"));
 const situationsExtension = JSON.parse(await readFile(situationsExtensionPath, "utf8"));
 const travel = JSON.parse(await readFile(travelPath, "utf8"));
+const academicProgrammes = JSON.parse(await readFile(academicProgrammesPath, "utf8"));
 const webIndex = await readFile(webIndexPath, "utf8");
 const markdownLinks = [...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1]);
 const procedureLinks = Array.isArray(operations.procedures) ? operations.procedures.map((procedure) => procedure.sourceUrl) : [];
@@ -26,7 +28,11 @@ const guideLinks = buildExampleGuides(markdown, operations.procedures).flatMap((
 const situationCatalog = combineSituationCatalogs(situations, situationsExtension);
 const situationLinks = buildSituationGuides(situationCatalog, buildExampleGuides(markdown, operations.procedures)).flatMap((guide) => guide.sources.map((source) => source.url));
 const webExternalLinks = [...webIndex.matchAll(/<a\s[^>]*href="(https?:\/\/[^"#]+(?:#[^"]*)?)"/gi)].map((match) => match[1].replace(/&amp;/g, "&"));
-const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, ...guideLinks, ...situationLinks, travel.source, ...webExternalLinks])];
+const academicLinks = [
+  ...(academicProgrammes.structures ?? []).map((structure) => structure.url),
+  ...(academicProgrammes.programmes ?? []).flatMap((programme) => programme.documents.map((document) => document.url))
+];
+const links = [...new Set([...markdownLinks, ...procedureLinks, ...caseLinks, ...guideLinks, ...situationLinks, travel.source, ...academicLinks, ...webExternalLinks])];
 const externalLinks = links.filter((link) => /^https?:\/\//i.test(link));
 const localLinks = links.filter((link) => !/^[a-z][a-z0-9+.-]*:/i.test(link));
 
