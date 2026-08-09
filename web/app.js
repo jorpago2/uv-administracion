@@ -1,5 +1,6 @@
 import manualData from "./data/manual.json";
 import { EXAMPLE_TRANSFERABILITY } from "./example-transferability.js";
+import { responsibilitiesFor } from "./example-responsibilities.js";
 import decisionCasesData from "./data/decision-cases.json";
 import fundingCallsData from "./data/funding-calls.json";
 import operationsData from "./data/operations.json";
@@ -151,13 +152,18 @@ function buildSearchEntries(sections) {
     const match = section.body.match(/^>\s+\*\*Ejemplo realista\s*[—-]\s*(.+?)\.\*\*\s+(.+)$/m);
     if (!match) return [];
     const transferability = EXAMPLE_TRANSFERABILITY[section.number];
+    const responsibilities = responsibilitiesFor(section.number);
     return [prepareSearchEntry({
       id: `example-${section.number}`,
       type: "guide",
       typeLabel: "Guía paso a paso",
       title: match[1],
       category: section.categoryLabel,
-      content: [match[2], transferability?.alsoApplies, transferability?.adapt, transferability?.stopsApplying].filter(Boolean).join(" "),
+      content: [
+        match[2], transferability?.alsoApplies, transferability?.adapt, transferability?.stopsApplying,
+        "quién solicita quién tramita quién autoriza quién paga quién ejecuta",
+        ...responsibilities.roles.flatMap((role) => [role.actor, role.task]), responsibilities.doNotAssume
+      ].filter(Boolean).join(" "),
       href: `example.html?capitulo=${section.number}`,
       chapterNumber: section.number,
       priority: 30

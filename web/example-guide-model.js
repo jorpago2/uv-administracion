@@ -1,5 +1,6 @@
 import { EXAMPLE_GUIDANCE, EXTRA_OFFICIAL_SOURCES } from "./example-guidance.js";
 import { EXAMPLE_TRANSFERABILITY } from "./example-transferability.js";
+import { responsibilitiesFor } from "./example-responsibilities.js";
 
 const DEFAULT_DOCUMENTS = Object.freeze([
   "Norma, convocatoria o instrucción vigente aplicable al caso",
@@ -18,6 +19,7 @@ export function buildExampleGuides(markdown, procedures) {
     if (!guidance) throw new Error(`Falta orientación experta para el ejemplo del capítulo ${chapter.number}.`);
     const transferability = EXAMPLE_TRANSFERABILITY[chapter.number];
     if (!transferability) throw new Error(`Falta definir la transferibilidad del ejemplo del capítulo ${chapter.number}.`);
+    const responsibilities = responsibilitiesFor(chapter.number);
     const matchingProcedures = procedures.filter((procedure) => procedure.chapter === chapter.number);
     const documents = unique([
       ...matchingProcedures.flatMap((procedure) => procedure.documents ?? []),
@@ -42,6 +44,8 @@ export function buildExampleGuides(markdown, procedures) {
       alsoApplies: transferability.alsoApplies,
       adapt: transferability.adapt,
       stopsApplying: transferability.stopsApplying,
+      responsibilities: responsibilities.roles.map((role) => ({ ...role })),
+      doNotAssume: responsibilities.doNotAssume,
       unit: guidance.unit || unique(matchingProcedures.map((procedure) => procedure.unit)).join(" · ") || "Unidad competente indicada por la norma o convocatoria",
       channel: unique(matchingProcedures.map((procedure) => procedure.channel)).join(" · ") || "Consulta previa y, cuando proceda, Sede Electrónica UV",
       deadline: unique(matchingProcedures.map((procedure) => procedure.deadline)).join(" · ") || "Antes de actuar y dentro del plazo de la norma, convocatoria o calendario vigente",

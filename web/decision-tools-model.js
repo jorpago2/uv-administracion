@@ -179,7 +179,7 @@ export function calculateTravel(input, data) {
   if (mealsRequested && distance <= 30) warnings.push("A 30 km o menos no corresponde manutención, aunque pueden abonarse gastos de viaje justificados.");
   if (mealsRequested && distance > 30 && !input.exceedsWorkday) warnings.push("La manutención a más de 30 km exige que el servicio obligue a exceder la jornada ordinaria y autorización motivada.");
   if (kilometres) warnings.push("Comprueba que los kilómetros corresponden al trayecto más corto desde residencia o puesto de trabajo.");
-  if (registration) warnings.push("La inscripción se suma como coste planificado, pero no es una dieta; debe ser elegible y justificarse por su vía propia.");
+  if (registration) warnings.push("La inscripción se suma como coste planificado, pero no es una dieta. Confirma antes si habrá pago directo UV, reintegro de adelanto o anticipo; desde 600 € sin IVA el adelanto personal exige autorización previa de caja fija, y una actividad organizada por la UV solo admite compensación interna.");
   return {
     applicable: true, destinationLabel, lodgingRate, mealRate, lodgingDays, mealUnits, highOffice,
     lodgingCap: highOffice ? null : roundMoney(lodgingCap), breakdown, total, warnings

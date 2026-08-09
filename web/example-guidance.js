@@ -152,10 +152,10 @@ export const EXAMPLE_GUIDANCE = Object.freeze({
     "Unidad gestora del DIE o ICMUV y, para el SDA, estructura responsable publicada por el SCSIE"
   ),
   30: guide(
-    "El congreso está autorizado y financiado antes de asumir gastos, y la liquidación admite cada coste sin mezclar días personales.",
-    "Confirma elegibilidad, crédito y régimen de cuantías; después solicita comisión de servicio con programa, aceptación, fechas y medio de transporte.",
-    ["¿Qué norma de dietas aplica a la fuente financiadora?", "¿La inscripción requiere un procedimiento distinto del viaje?", "¿Hay noches, comidas o trayectos no indemnizables?"],
-    ["Autorización y crédito son anteriores al viaje.", "Facturas, billetes y asistencia coinciden con fechas aprobadas.", "Los costes personales están separados y no se imputan."]
+    "El congreso está autorizado y financiado antes de asumir gastos; sabes quién paga inicialmente cada concepto y la liquidación admite cada coste sin mezclar días personales.",
+    "Confirma elegibilidad, crédito, régimen de cuantías y modalidad de desembolso; después solicita comisión de servicio con programa, aceptación, fechas y medio de transporte. No uses tu tarjeta hasta saber si procede pago directo, reintegro o anticipo.",
+    ["¿Qué norma de dietas aplica a la fuente financiadora?", "¿Quién paga inicialmente inscripción, transporte y hotel y con qué modalidad?", "¿A nombre de quién debe emitirse cada factura?", "¿Hay noches, comidas o trayectos no indemnizables?"],
+    ["Autorización y crédito son anteriores al viaje.", "La modalidad de pago o anticipo está confirmada antes de desembolsar.", "Facturas, billetes y asistencia coinciden con fechas aprobadas.", "Los costes personales están separados y no se imputan."]
   ),
   31: guide(
     "El acceso público se corta sin destruir evidencias y la posible brecha se comunica de inmediato para que la UV evalúe alcance, riesgos y notificaciones.",

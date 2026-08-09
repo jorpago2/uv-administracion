@@ -76,6 +76,8 @@ test("calcula el caso de viaje a Países Bajos con topes oficiales", () => {
   assert.equal(result.breakdown.lodging, 510);
   assert.equal(result.breakdown.meals, 319.73);
   assert.equal(result.total, 1434.73);
+  assert.match(result.warnings.join(" "), /pago directo UV/);
+  assert.match(result.warnings.join(" "), /600 € sin IVA/);
 });
 
 test("deriva únicamente dietas del 50 o 100 por ciento desde las horas", () => {

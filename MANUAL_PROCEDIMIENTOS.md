@@ -39,6 +39,21 @@ Una instrucción inferior no puede eliminar un derecho reconocido por una norma 
 
 Los casos prácticos de esta guía son ficticios, aunque describen situaciones plausibles en la ETSE, el DIE y el ICMUV. Sirven para identificar la ruta de actuación y la documentación que conviene conservar; no sustituyen la convocatoria vigente, el criterio de la unidad gestora ni una resolución administrativa.
 
+### Cómo aclarar quién hace qué
+
+Cuando un trámite plantea dudas, no preguntes únicamente «¿puedo hacerlo?». Separa estos papeles y pide que quede claro cuál corresponde a cada persona o unidad:
+
+| Papel | Pregunta que debe quedar respondida | Evidencia mínima |
+|---|---|---|
+| Persona interesada o solicitante | ¿Quién inicia, aporta documentos y responde de su veracidad? | Solicitud o comunicación fechada |
+| Responsable de fondos o actividad | ¿Qué partida soporta el gasto y quién confirma crédito y elegibilidad? | Clave y conformidad escrita |
+| Órgano competente | ¿Quién puede autorizar, aprobar o resolver? | Orden, firma, acuerdo o resolución |
+| Unidad tramitadora | ¿Quién prepara, incorpora, contabiliza o impulsa el expediente? | Número de expediente, asiento o respuesta de la unidad |
+| Ejecutor material | ¿Quién hace el pedido, firma, paga, publica o comunica externamente? | Pedido, contrato, documento contable o comunicación autorizada |
+| Persona que adelanta dinero | ¿Hay pago directo, anticipo o reintegro? ¿Qué ocurre si el gasto no se admite? | Modalidad confirmada antes de pagar |
+
+Una misma persona puede desempeñar varios papeles, pero no deben confundirse. **Tramitar no es autorizar; disponer de crédito no es poder contratar; solicitar no es obtener; y adelantar un pago no garantiza su reintegro.** En cualquier compromiso económico, aclara antes de usar una tarjeta quién soporta el gasto, quién lo autoriza, quién lo paga inicialmente y qué documento permitirá recuperarlo.
+
 ### Mapa de capítulos por ámbito
 
 Cada capítulo se asigna a un ámbito principal para facilitar la consulta. Algunos procedimientos son transversales: por ejemplo, la protección de datos puede afectar tanto a docencia como a investigación, aunque se agrupa con cumplimiento para evitar duplicidades.
@@ -1006,28 +1021,52 @@ Los pagos al extranjero, exclusividades, gastos compartidos y anticipos tienen r
 
 La norma vigente está en el [Anexo 1a del Presupuesto UV 2026](https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf); las cuantías están en el [Anexo 1b](https://www.uv.es/contab/documents/Presup/P26_3_Annex1b_D1.pdf).
 
-### 30.1 Antes del viaje
+### 30.1 Antes de comprometer o pagar un gasto
 
 1. Confirma que existe crédito y que el gasto es elegible para el proyecto.
 2. Tramita la orden/autorización de comisión de servicio.
 3. Adjunta programa, invitación o convocatoria con objeto, fechas y horarios.
 4. Identifica transporte autorizado y partida presupuestaria.
-5. Si el gasto se imputa a un proyecto, obtiene también la conformidad de la persona responsable.
+5. Si el gasto se imputa a un proyecto, obtén también la conformidad de la persona responsable.
+6. Pide a la unidad gestora que confirme la modalidad de pago de inscripción, transporte y alojamiento. No supongas que debes adelantarlo personalmente.
 
-La dirección del DIE o del ICMUV puede autorizar comisiones del personal adscrito según el ámbito y la fuente de financiación. Si un proyecto se gestiona en una estructura distinta de la adscripción, puede autorizar su dirección, pero el profesor sigue siendo responsable de cumplir su docencia.
+La dirección del DIE o del ICMUV puede autorizar comisiones del personal adscrito según el ámbito y la fuente de financiación. Si un proyecto se gestiona en una estructura distinta de la adscripción, puede autorizar su dirección, pero el profesor sigue siendo responsable de cumplir su docencia. La comisión no puede autorizarse si no existe crédito; cuando se financia con fondos de investigación, la persona responsable de la actividad debe firmar también la orden y la liquidación para certificar la imputación.
 
-### 30.2 Reglas operativas
+### 30.2 Quién paga la inscripción
+
+El Anexo 1a de 2026 contempla varias modalidades. La unidad gestora o la persona responsable de caja fija debe indicar cuál se aplicará:
+
+| Situación | Quién desembolsa inicialmente | Qué debes hacer | Condición crítica |
+|---|---|---|---|
+| Pago en firme directo | La UV paga a la entidad organizadora | Entregar factura y documentación del artículo 21 | Entidades españolas: caja fija; extranjeras: unidad de divisas |
+| Reintegro de adelanto personal inferior a 600 € sin IVA | Tú pagas y la UV te reintegra por caja fija | Conservar factura UV, prueba de pago, programa y asistencia; solicitar el reintegro con modelo 15 | Aunque la norma admite esta opción, confírmala antes con tu unidad |
+| Reintegro de adelanto personal desde 600 € sin IVA | Tú pagas y la UV te reintegra por caja fija | Obtener **antes de pagar** autorización de la persona responsable de caja fija mediante modelo 16; después, modelo 17 | Sin autorización previa no debe darse por garantizado el reintegro |
+| Pago anticipado directo sin factura todavía | La UV adelanta el pago al organizador | Acreditar que se ha solicitado la factura a nombre de la UV y completar después el expediente | Debe preverse obtener la factura en un plazo razonable |
+| Anticipo de caja fija para viaje e inscripción | La UV te entrega fondos antes de la actividad | Solicitarlo antes, con la orden de comisión firmada, y justificarlo | Debe justificarse en los 15 días siguientes al final del viaje; no se concede otro con anticipos pendientes |
+| Congreso o actividad organizada y facturada por la propia UV | No pagas personalmente; se mueve presupuesto entre unidades | Pedir a la unidad gestora solicitante que coordine un vale de compensación interna con la organizadora | Es la única vía: un adelanto personal no se reintegra |
+
+La **factura de inscripción siempre debe emitirse a nombre de la UV**, incluso cuando la hayas pagado tú, e identificar a la persona inscrita. Si el organizador no puede emitirla, conserva las gestiones realizadas; el recibo alternativo puede impedir deducir IVA y, con carácter general, hacer el gasto elegible en subvenciones públicas.
+
+### 30.3 Quién paga viaje, alojamiento y manutención
+
+- La fuente identificada —proyecto, contrato, ayuda o presupuesto de estructura— soporta únicamente los conceptos elegibles y autorizados. Los días personales, servicios no admitidos, duplicidades y excesos no autorizados corresponden a la persona que los contrata.
+- Si la UV paga directamente alojamiento, transporte de larga distancia o vehículo de alquiler, las facturas se emiten a nombre de la UV. Si los paga la persona comisionada para su reintegro o para justificar un anticipo, las facturas se emiten a su nombre, con las excepciones documentales previstas en el artículo 17.
+- La manutención se calcula por fechas y horas y no exige tiques con el régimen propio UV. No se indemniza cuando consta que la entidad organizadora la ha sufragado, salvo que no se use ese servicio y se justifique el gasto propio.
+- Si se participa como ponente en un curso, conferencia o acto organizado por otra entidad, se presume que la organizadora soporta asistencia, viaje y dietas salvo acuerdo expreso en contra. La UV solo puede resarcirlos con autorización y declaración de no haber percibido el mismo concepto.
+- Un gasto por encima de los límites necesita autorización previa de mayor cuantía; si se adelanta sin ella, el reintegro queda limitado al importe autorizado.
+
+### 30.4 Reglas operativas
 
 - No se devengan dietas dentro del municipio o en desplazamientos inferiores a 30 km; sí pueden indemnizarse gastos de viaje.
 - A más de 30 km solo se devenga dieta cuando el servicio exige exceder el horario laboral y se motiva en la autorización.
 - Avión y alta velocidad: clase turista o equivalente, salvo autorización excepcional.
-- Alojamiento y transporte deben justificarse normalmente con factura a nombre de la UV.
+- El destinatario de la factura de alojamiento o transporte depende de quién haya pagado: UV para pago directo; persona comisionada para gasto adelantado y reintegrable. La inscripción es siempre a nombre de la UV.
 - Conserva billetes, tarjetas de embarque, justificante de asistencia, facturas y tiques admitidos.
 - Toda la liquidación se formaliza en un único formulario, aunque se reparta entre varias claves.
 - Si financia AGE o Generalitat, pueden aplicarse sus importes y reglas específicas en lugar de las propias de la UV.
 - Durante licencia de estudios o sabático no existe, como regla general, derecho a indemnización con cargo al presupuesto UV, salvo el supuesto extraordinario previsto y autorizado.
 
-> **Ejemplo realista — congreso internacional.** Un profesor recibe la aceptación de una comunicación en un congreso de Eindhoven. Antes de pagar inscripción y hotel, identifica el proyecto que financiará el viaje, solicita autorización, confirma qué gastos y límites son elegibles y conserva aceptación, agenda y justificantes. Si combina el viaje con días personales, separa claramente fechas y costes para no imputarlos al proyecto.
+> **Ejemplo realista — congreso internacional.** Un profesor recibe la aceptación de una comunicación en un congreso de Eindhoven. Antes de confirmar reservas, pide a la unidad gestora que verifique proyecto, crédito, régimen aplicable y comisión de servicio. Para una inscripción de 420 € sin IVA pregunta si la UV pagará directamente o si se admite que la adelante y solicite reintegro; en ambos casos pide factura a nombre de la UV con su nombre como asistente. Pregunta, además, si le conviene un anticipo de caja fija para transporte y alojamiento. Si decide adelantarlos, obtiene facturas a su nombre y conserva prueba de pago, billetes y tarjetas de embarque. Al regresar aporta el certificado de asistencia y liquida todo en un único formulario. Si combina el viaje con días personales, separa fechas y costes: la partida solo soporta lo elegible y autorizado.
 
 ## 31. Protección de datos y seguridad de la información
 

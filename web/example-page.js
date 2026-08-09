@@ -50,6 +50,7 @@ function renderGuide(item) {
   content.append(
     renderOrientation(item),
     renderTransferability(item),
+    renderResponsibilities(item),
     renderPreparation(item),
     renderRoute(item),
     renderTimeline(item),
@@ -78,9 +79,9 @@ function renderNavigation() {
   nav.setAttribute("aria-label", "Secciones de la guía");
   const list = el("ol");
   [
-    ["orientacion", "1. Entender el caso"], ["transferibilidad", "2. Saber cuándo sirve"], ["preparacion", "3. Prepararlo"],
-    ["ruta", "4. Ejecutarlo"], ["calendario", "5. Controlar tiempos"], ["comunicacion", "6. Pedir ayuda"],
-    ["control", "7. Verificar"], ["bloqueos", "8. Resolver bloqueos"], ["fuentes", "9. Consultar fuentes"]
+    ["orientacion", "1. Entender el caso"], ["transferibilidad", "2. Saber cuándo sirve"], ["responsabilidades", "3. Saber quién hace qué"],
+    ["preparacion", "4. Prepararlo"], ["ruta", "5. Ejecutarlo"], ["calendario", "6. Controlar tiempos"], ["comunicacion", "7. Pedir ayuda"],
+    ["control", "8. Verificar"], ["bloqueos", "9. Resolver bloqueos"], ["fuentes", "10. Consultar fuentes"]
   ].forEach(([id, label]) => {
     const item = el("li");
     item.append(link(label, `#${id}`));
@@ -117,8 +118,29 @@ function renderTransferability(item) {
   return section;
 }
 
+function renderResponsibilities(item) {
+  const section = guideSection("responsabilidades", "3. Saber quién hace qué", "Responsabilidades");
+  section.append(paragraph("Separa siempre iniciativa, tramitación, autorización y ejecución. Una misma persona puede asumir varios papeles, pero cada actuación necesita la competencia y la evidencia correspondientes."));
+  const table = el("div", "responsibility-table");
+  table.setAttribute("role", "table");
+  table.setAttribute("aria-label", "Mapa de responsabilidades del caso");
+  const header = el("div", "responsibility-row responsibility-row--header");
+  header.setAttribute("role", "row");
+  header.append(tableCell("Quién", "columnheader"), tableCell("Qué le corresponde", "columnheader"));
+  table.append(header);
+  item.responsibilities.forEach((responsibility) => {
+    const row = el("div", "responsibility-row");
+    row.setAttribute("role", "row");
+    row.append(tableCell(responsibility.actor), tableCell(responsibility.task));
+    table.append(row);
+  });
+  section.append(table, callout("No des por supuesto", item.doNotAssume, "warning"));
+  appendSourceNote(section, item.sources);
+  return section;
+}
+
 function renderPreparation(item) {
-  const section = guideSection("preparacion", "3. Preparar un expediente que otra persona pueda entender", "Antes de empezar");
+  const section = guideSection("preparacion", "4. Preparar un expediente que otra persona pueda entender", "Antes de empezar");
   section.append(callout("Primer movimiento", item.firstMove, "secondary"));
   section.append(heading(3, "Carpeta de trabajo recomendada"));
   const tree = el("div", "folder-tree");
@@ -130,7 +152,7 @@ function renderPreparation(item) {
 }
 
 function renderRoute(item) {
-  const section = guideSection("ruta", "4. Ruta paso a paso", "Ejecución");
+  const section = guideSection("ruta", "5. Ruta paso a paso", "Ejecución");
   const steps = detailedSteps(item);
   const listElement = el("ol", "route-steps");
   steps.forEach((step, index) => {
@@ -150,7 +172,7 @@ function renderRoute(item) {
 }
 
 function renderTimeline(item) {
-  const section = guideSection("calendario", "5. Calendario de control", "Plazos");
+  const section = guideSection("calendario", "6. Calendario de control", "Plazos");
   section.append(callout("Regla que prevalece", item.deadline, "warning"));
   const timeline = el("ol", "timeline");
   [
@@ -169,7 +191,7 @@ function renderTimeline(item) {
 }
 
 function renderCommunication(item) {
-  const section = guideSection("comunicacion", "6. Correo inicial para no empezar por el sitio equivocado", "Comunicación");
+  const section = guideSection("comunicacion", "7. Correo inicial para no empezar por el sitio equivocado", "Comunicación");
   section.append(paragraph("Este texto es una plantilla de consulta, no sustituye la presentación formal. Complétalo con datos mínimos y no incluyas información sensible innecesaria."));
   const template = el("pre", "email-template");
   template.id = "emailTemplate";
@@ -179,7 +201,7 @@ function renderCommunication(item) {
 }
 
 function renderChecklist(item) {
-  const section = guideSection("control", "7. Control final antes de darlo por resuelto", "Verificación");
+  const section = guideSection("control", "8. Control final antes de darlo por resuelto", "Verificación");
   const toolbar = el("div", "checklist-toolbar");
   const progress = paragraph("0 elementos completados", "checklist-progress");
   progress.id = "checklistProgress";
@@ -197,7 +219,7 @@ function renderChecklist(item) {
 }
 
 function renderProblems(item) {
-  const section = guideSection("bloqueos", "8. Errores frecuentes y qué hacer si te bloqueas", "Contingencias");
+  const section = guideSection("bloqueos", "9. Errores frecuentes y qué hacer si te bloqueas", "Contingencias");
   section.append(heading(3, "No hagas esto"), list(item.risks, "risk-list"));
   const grid = el("div", "blocker-grid");
   [
@@ -215,7 +237,7 @@ function renderProblems(item) {
 }
 
 function renderSources(item) {
-  const section = guideSection("fuentes", "9. Fuentes oficiales que debes abrir", "Base documental");
+  const section = guideSection("fuentes", "10. Fuentes oficiales que debes abrir", "Base documental");
   section.append(paragraph(`Fuentes recopiladas o revisadas en la actualización ${formatDate(manualData.meta.fecha_revision)}. Comprueba siempre si existe una versión posterior.`));
   const listElement = el("ul", "source-list");
   item.sources.forEach((source, index) => {
@@ -337,6 +359,13 @@ function fact(listElement, label, value) {
   description.textContent = value;
   wrapper.append(term, description);
   listElement.append(wrapper);
+}
+
+function tableCell(value, role = "cell") {
+  const node = el("div", "responsibility-cell");
+  node.setAttribute("role", role);
+  node.textContent = value;
+  return node;
 }
 
 function buildEmail(item) {

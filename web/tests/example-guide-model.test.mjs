@@ -26,6 +26,9 @@ test("cada guía ofrece orientación suficiente para una persona principiante", 
     assert.ok(guide.alsoApplies.length > 70, `casos equivalentes ${guide.chapterNumber}`);
     assert.ok(guide.adapt.length > 60, `variables adaptables ${guide.chapterNumber}`);
     assert.ok(guide.stopsApplying.length > 70, `límites del caso ${guide.chapterNumber}`);
+    assert.ok(guide.responsibilities.length >= 3, `responsabilidades ${guide.chapterNumber}`);
+    assert.ok(guide.responsibilities.every((role) => role.actor && role.task.length > 40), `papeles ${guide.chapterNumber}`);
+    assert.ok(guide.doNotAssume.length > 70, `límite de responsabilidad ${guide.chapterNumber}`);
   }
 });
 
@@ -44,6 +47,13 @@ test("todas las guías enlazan fuentes oficiales seguras", () => {
     assert.ok(guide.sources.length >= 1, `fuentes ${guide.chapterNumber}`);
     assert.ok(guide.sources.every((source) => source.label && /^https:\/\//.test(source.url)), `URL ${guide.chapterNumber}`);
   }
+});
+
+test("el caso de congreso distingue autorización, fondos y modalidad de pago", () => {
+  const congress = findExampleGuide(guides, 30);
+  assert.match(congress.firstMove, /pago directo, reintegro o anticipo/);
+  assert.match(congress.responsibilities.map((role) => `${role.actor} ${role.task}`).join(" "), /caja fija/);
+  assert.match(congress.doNotAssume, /compensación interna/);
 });
 
 test("localiza una guía por capítulo y rechaza identificadores inválidos", () => {

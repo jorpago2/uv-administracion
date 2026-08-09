@@ -380,9 +380,9 @@
       "unit": "Dirección de la estructura y unidad gestora",
       "deadline": "Autorización y crédito antes del viaje",
       "channel": "Comisión de servicio y liquidación de gastos",
-      "documents": ["Programa, invitación o aceptación", "Autorización y clave presupuestaria", "Facturas, billetes y prueba de asistencia"],
-      "steps": ["Confirmar elegibilidad y autorización", "Conservar justificantes válidos", "Liquidar conjuntamente todos los gastos"],
-      "risk": "Separar días personales y no asumir que la ayuda concedida cubre todos los conceptos.",
+        "documents": ["Programa, invitación o aceptación", "Autorización y clave presupuestaria", "Modalidad de pago o anticipo confirmada", "Facturas, billetes y prueba de asistencia"],
+        "steps": ["Confirmar elegibilidad, crédito y autorización", "Acordar con la unidad pago directo, reintegro o anticipo antes de desembolsar", "Conservar justificantes válidos y liquidar conjuntamente todos los gastos"],
+        "risk": "No adelantar gastos sin confirmar su reintegro; separar días personales y no asumir que la ayuda concedida cubre todos los conceptos.",
       "sourceLabel": "Normas de ejecución presupuestaria UV 2026",
       "sourceUrl": "https://www.uv.es/contab/documents/Presup/P26_8_Anexo1a_D1.pdf",
       "validity": "annual"
