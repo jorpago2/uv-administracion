@@ -10,9 +10,15 @@ export function buildSituationGuides(catalog, baseGuides) {
   const guides = catalog.situations.map((situation) => {
     const base = situation.baseChapter ? baseByChapter.get(situation.baseChapter) : null;
     if (situation.baseChapter && !base) throw new Error(`No existe la guía base del capítulo ${situation.baseChapter} para ${situation.id}.`);
+    const profile = situation.profile ? catalog.profiles?.[situation.profile] : null;
+    if (situation.profile && !profile) throw new Error(`No existe el perfil ${situation.profile} para ${situation.id}.`);
+    // Los perfiles ampliados ya aportan el contrato operativo completo. Heredar
+    // además las listas del ejemplo general del capítulo mezclaría rutas distintas.
+    const inheritedLists = profile ? null : base;
     const overrides = situation.guide ?? {};
     const guide = {
       ...(base ?? {}),
+      ...(profile ?? {}),
       ...overrides,
       id: situation.id,
       situationNumber: situation.number,
@@ -24,14 +30,14 @@ export function buildSituationGuides(catalog, baseGuides) {
       chapterNumber: situation.baseChapter ?? overrides.chapterNumber,
       chapterTitle: base?.chapterTitle ?? overrides.chapterTitle ?? "Orientación y administración",
       chapterSlug: base?.chapterSlug ?? overrides.chapterSlug ?? "como-utilizar-este-manual",
-      questions: merge(overrides.questions, base?.questions),
-      successChecks: merge(overrides.successChecks, base?.successChecks, situation.resolution.completionEvidence),
-      responsibilities: mergeObjects(overrides.responsibilities, base?.responsibilities),
-      documents: merge(overrides.documents, base?.documents),
-      steps: mergeSteps(overrides.steps, base?.steps),
-      risks: merge(overrides.risks, base?.risks, situation.resolution.stopConditions),
-      sources: mergeSources(overrides.sources, base?.sources),
-      procedureTitles: merge(overrides.procedureTitles, base?.procedureTitles),
+      questions: merge(overrides.questions, profile?.questions, inheritedLists?.questions),
+      successChecks: merge(overrides.successChecks, profile?.successChecks, inheritedLists?.successChecks, situation.resolution.completionEvidence),
+      responsibilities: mergeObjects(overrides.responsibilities, profile?.responsibilities, inheritedLists?.responsibilities),
+      documents: merge(overrides.documents, profile?.documents, inheritedLists?.documents),
+      steps: mergeSteps(overrides.steps, profile?.steps, inheritedLists?.steps),
+      risks: merge(overrides.risks, profile?.risks, inheritedLists?.risks, profile ? [] : situation.resolution.stopConditions),
+      sources: mergeSources(overrides.sources, profile?.sources, inheritedLists?.sources),
+      procedureTitles: merge(overrides.procedureTitles, profile?.procedureTitles, inheritedLists?.procedureTitles),
       decisionRules: [...situation.resolution.decisionRules],
       stopConditions: [...situation.resolution.stopConditions],
       completionEvidence: [...situation.resolution.completionEvidence],
@@ -54,6 +60,27 @@ export function searchSituationGuides(guides, query = "", category = "all") {
     .filter(({ score }) => !terms.length || score > 0)
     .sort((left, right) => right.score - left.score || left.guide.situationNumber - right.guide.situationNumber)
     .map(({ guide }) => guide);
+}
+
+export function combineSituationCatalogs(...catalogs) {
+  if (!catalogs.length) throw new TypeError("Falta al menos un catálogo de situaciones.");
+  const [first, ...rest] = catalogs;
+  if (first?.schemaVersion !== 1 || !Array.isArray(first.categories) || !Array.isArray(first.situations)) {
+    throw new TypeError("El primer catálogo de situaciones no tiene el formato esperado.");
+  }
+  const categorySignature = JSON.stringify(first.categories);
+  rest.forEach((catalog) => {
+    if (catalog?.schemaVersion !== 1 || JSON.stringify(catalog.categories) !== categorySignature || !Array.isArray(catalog.situations)) {
+      throw new TypeError("Los catálogos de situaciones no son compatibles.");
+    }
+  });
+  return Object.freeze({
+    schemaVersion: 1,
+    meta: { ...first.meta, ...(rest.at(-1)?.meta ?? {}) },
+    categories: first.categories.map((category) => ({ ...category })),
+    profiles: Object.assign({}, ...catalogs.map((catalog) => catalog.profiles ?? {})),
+    situations: catalogs.flatMap((catalog) => catalog.situations)
+  });
 }
 
 export function findSituationGuide(guides, id) {
@@ -85,6 +112,7 @@ function validateCatalog(catalog) {
     if (!categoryIds.has(situation.category) || !situation.title || !situation.scenario || !Array.isArray(situation.aliases)) {
       throw new Error(`Situación incompleta: ${situation.id}.`);
     }
+    if (situation.profile && typeof situation.profile !== "string") throw new Error(`Perfil inválido en ${situation.id}.`);
     for (const field of ["decisionRules", "stopConditions", "completionEvidence", "escalation"]) {
       if (!Array.isArray(situation.resolution?.[field]) || situation.resolution[field].length < 2) {
         throw new Error(`La situación ${situation.id} no define al menos dos elementos en ${field}.`);

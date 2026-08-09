@@ -44,12 +44,13 @@ test("la portada prioriza tareas, alertas y ambitos antes de las herramientas", 
   assert.match(html, /id="indice-capitulos"/);
 });
 
-test("las cincuenta situaciones son una entrada principal y buscable", () => {
+test("las cien situaciones son una entrada principal y buscable", () => {
   assert.match(html, /<section class="situations" id="situaciones"/);
   assert.match(html, /id="situationQuery"[^>]+type="search"/);
   assert.match(html, /id="situationCategory"/);
   assert.match(app, /initSituationDirectory/);
   assert.match(app, /situationGlobalSearchItems\(\)/);
+  assert.match(html, /Resolver 100 situaciones reales/);
 });
 
 test("el glosario es una entrada principal, descargable y buscable", () => {

@@ -101,7 +101,7 @@ code, pre { font-family: var(--font-mono); }
 
 @media (min-width: 40rem) {
   .example-topbar > p { display: flex; }
-  .guide-hero { grid-template-columns: minmax(0, 1fr) auto; padding: var(--space-xl); }
+  .guide-hero { padding: var(--space-xl); }
   .guide-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-facts > div + div { border-block-start: 0; }
   .guide-facts > div:nth-child(even) { border-inline-start: var(--rule-thin) solid var(--color-rule); }
@@ -113,6 +113,7 @@ code, pre { font-family: var(--font-mono); }
   .responsibility-cell + .responsibility-cell { border-inline-start: var(--rule-thin) solid var(--color-rule); }
 }
 @media (min-width: 64rem) {
+  .guide-hero { grid-template-columns: minmax(0, 1fr) auto; }
   .guide-layout { grid-template-columns: minmax(14rem, 0.28fr) minmax(0, 1fr); align-items: start; }
   .guide-index { position: sticky; inset-block-start: 6rem; }
   .guide-section { padding: var(--space-xl); }

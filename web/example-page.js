@@ -1,9 +1,10 @@
 import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
+import situationsExtensionData from "./data/situations-51-100.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { buildExampleGuides, findExampleGuide } from "./example-guide-model.js";
-import { buildSituationGuides, findSituationGuide } from "./situation-model.js";
+import { buildSituationGuides, combineSituationCatalogs, findSituationGuide } from "./situation-model.js";
 
 const elements = {
   loading: document.querySelector("#exampleLoading"),
@@ -11,7 +12,7 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const situationGuides = buildSituationGuides(situationsData, guides);
+const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides);
 const parameters = new URLSearchParams(window.location.search);
 const situationId = parameters.get("caso");
 const chapterNumber = parameters.get("capitulo");

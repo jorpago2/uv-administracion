@@ -1,11 +1,14 @@
 import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
+import situationsExtensionData from "./data/situations-51-100.json";
 import { buildExampleGuides } from "./example-guide-model.js";
-import { buildSituationGuides, searchSituationGuides, situationSearchItems } from "./situation-model.js";
+import { buildSituationGuides, combineSituationCatalogs, searchSituationGuides, situationSearchItems } from "./situation-model.js";
+
+export const situationCatalog = combineSituationCatalogs(situationsData, situationsExtensionData);
 
 export const situationGuides = buildSituationGuides(
-  situationsData,
+  situationCatalog,
   buildExampleGuides(manualData.markdown, operationsData.procedures)
 );
 
@@ -96,7 +99,7 @@ function populateCategories(select) {
   all.value = "all";
   all.textContent = "Todos los ámbitos";
   select.append(all);
-  situationsData.categories.forEach((category) => {
+  situationCatalog.categories.forEach((category) => {
     const option = document.createElement("option");
     option.value = category.id;
     option.textContent = category.label;

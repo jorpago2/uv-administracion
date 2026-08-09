@@ -1,6 +1,6 @@
 # Interfaz web de la guía operativa UV
 
-Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene en `data/glossary.json` y las 50 situaciones operativas verificables en `data/situations.json`.
+Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene en `data/glossary.json` y las 100 situaciones operativas verificables en `data/situations.json` y `data/situations-51-100.json`.
 
 ## Regenerar los datos
 
@@ -52,7 +52,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
 - `glossary.js`: representación, búsqueda y filtros accesibles del glosario PDI.
 - `chapter-links.js`: enlaces canónicos compartidos de los 37 capítulos.
-- `situations.js`: directorio, búsqueda y filtros de las 50 situaciones operativas.
+- `situations.js`: directorio, búsqueda y filtros de las 100 situaciones operativas.
 - `situation-model.js`: validación estricta, composición con las guías base y búsqueda de situaciones.
 - `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías por capítulo y las 50 resoluciones mediante `example.html?caso=ID`.
 - `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
@@ -71,7 +71,8 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `salary-model.js`: cálculo puro y validable de los importes anuales.
 - `data/manual.json`: dato generado; no debe editarse a mano.
 - `data/glossary.json`: términos, ejemplos, advertencias y fuentes oficiales del glosario.
-- `data/situations.json`: cincuenta situaciones con reglas de decisión, paradas, cierre, escalado y variantes específicas.
+- `data/situations.json`: situaciones 1–50 con reglas de decisión, paradas, cierre, escalado y variantes específicas.
+- `data/situations-51-100.json`: situaciones 51–100 y perfiles reutilizables para mantener el mismo contrato detallado.
 - `data/operations.json`: fichas normalizadas e hitos anuales; cada cambio debe conservar su fuente y fecha de revisión.
 - `data/funding-calls.json`: convocatorias estructuradas por nivel, finalidad, perfil, participación, beneficiario, TRL orientativo, financiación, periodicidad, edición y fuente oficial.
 - `data/decision-cases.json`: ocho expedientes realistas y sus fuentes oficiales.

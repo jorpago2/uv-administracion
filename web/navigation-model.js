@@ -1,6 +1,6 @@
 export const NAV_LANDMARKS = Object.freeze([
   landmark("inicio", "Inicio", { shortcut: true, typeLabel: "Portada" }),
-  landmark("situaciones", "50 situaciones", { shortcut: true, typeLabel: "Resolución" }),
+  landmark("situaciones", "100 situaciones", { shortcut: true, typeLabel: "Resolución" }),
   landmark("glosario", "Glosario PDI", { shortcut: true, typeLabel: "Consulta" }),
   landmark("tareas-frecuentes", "Tareas frecuentes", { shortcut: true, typeLabel: "Accesos directos" }),
   landmark("ambitos", "Ámbitos de trabajo", { shortcut: true, typeLabel: "Exploración" }),

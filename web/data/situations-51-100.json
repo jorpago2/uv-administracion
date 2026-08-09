@@ -1,0 +1,968 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Situaciones operativas ampliadas del PDI",
+    "reviewedOn": "2026-08-09",
+    "scope": "Cien situaciones verificables para PDI de la Universitat de València"
+  },
+  "categories": [
+    { "id": "incorporacion", "label": "Incorporación y carrera" },
+    { "id": "docencia", "label": "Docencia y estudiantado" },
+    { "id": "investigacion", "label": "Investigación y transferencia" },
+    { "id": "gestion", "label": "Compras, equipos y viajes" },
+    { "id": "cumplimiento", "label": "Cumplimiento y derechos" }
+  ],
+  "profiles": {
+    "career-admin": {
+      "alsoApplies": "También sirve para procedimientos de carrera o vida administrativa que exigen solicitud personal, acreditación documental y comprobación posterior de efectos.",
+      "adapt": "Sustituye categoría, vínculo, convocatoria, periodo, órgano y efecto solicitado; conserva una matriz mérito-requisito-documento y el justificante de presentación.",
+      "stopsApplying": "No basta cuando la convocatoria establece un formulario, baremo, plazo o recurso específico, ni cuando la decisión corresponde a una agencia u órgano externo.",
+      "successChecks": ["La figura y el procedimiento aplicables están identificados.", "Cada requisito se vincula a un documento admisible.", "La presentación, subsanación y resolución quedan archivadas."],
+      "responsibilities": [
+        { "actor": "PDI interesado", "task": "Comprobar requisitos, reunir evidencias, presentar y seguir el expediente dentro de plazo." },
+        { "actor": "RR. HH. PDI o unidad instructora", "task": "Informar del cauce, instruir el expediente y comunicar requerimientos o resolución." }
+      ],
+      "documents": ["Convocatoria o norma aplicable", "Documento de identidad y vinculación", "Relación indexada de requisitos y evidencias", "Solicitud y justificante de registro"],
+      "risks": ["Confiar en datos precargados sin revisarlos.", "Aportar un currículum sin certificados cuando se exige acreditación.", "Confundir consulta informal con solicitud o recurso registrado."],
+      "doNotAssume": "Que un mérito conste en una base de datos no significa que el órgano evaluador lo incorpore de oficio ni que produzca efectos sin solicitud."
+    },
+    "teaching-case": {
+      "alsoApplies": "También sirve para incidencias docentes que obligan a coordinar derechos del alumnado, guía docente, evidencias y autorización del centro.",
+      "adapt": "Sustituye asignatura, grupo, convocatoria, actividad, personas afectadas y órgano del título; documenta siempre la solución equivalente adoptada.",
+      "stopsApplying": "No permite alterar unilateralmente la guía docente, el calendario oficial, los criterios de evaluación o una adaptación emitida por la unidad competente.",
+      "successChecks": ["La decisión respeta guía docente y normativa de evaluación.", "Todas las personas afectadas reciben la misma información trazable.", "La evidencia permite revisar después lo ocurrido y la solución."],
+      "responsibilities": [
+        { "actor": "Profesorado responsable", "task": "Detectar la incidencia, preservar evidencias y proponer una respuesta académicamente equivalente." },
+        { "actor": "Coordinación y centro", "task": "Validar cambios que afecten calendario, espacios, derechos o aplicación común del título." }
+      ],
+      "documents": ["Guía docente vigente", "Calendario y convocatoria oficial", "Relación de personas afectadas", "Acta o evidencia de la decisión y comunicación"],
+      "risks": ["Resolver casos equivalentes de forma distinta sin justificación.", "Comunicar datos personales o de salud al grupo.", "Modificar de hecho la evaluación sin autorización ni trazabilidad."],
+      "doNotAssume": "La urgencia docente no elimina la necesidad de igualdad, competencia del órgano y conservación de evidencias."
+    },
+    "research-governance": {
+      "alsoApplies": "También sirve para acuerdos, cambios y obligaciones de proyectos con varios participantes, financiadores o unidades institucionales.",
+      "adapt": "Sustituye convocatoria, grant agreement, socios, tareas, presupuesto, resultados previos y reglas de propiedad; prevalece el documento firmado aplicable.",
+      "stopsApplying": "No autoriza al IP a firmar por la UV, comprometer recursos institucionales, ceder derechos o modificar un proyecto sin la competencia y aprobación necesarias.",
+      "successChecks": ["Obligaciones técnicas, económicas y jurídicas están conciliadas.", "La persona con competencia institucional ha aprobado o firmado.", "Versiones, comunicaciones y efectos quedan en el expediente."],
+      "responsibilities": [
+        { "actor": "IP o responsable científico", "task": "Definir necesidad, alcance técnico, socios, riesgos y calendario con información completa." },
+        { "actor": "Servicio de Investigación o Transferencia", "task": "Revisar elegibilidad, compromisos institucionales, presupuesto, acuerdos y tramitación ante el financiador." }
+      ],
+      "documents": ["Convocatoria y propuesta aprobada", "Acuerdo de subvención o contrato aplicable", "Presupuesto, tareas y cronograma", "Comunicaciones y autorizaciones institucionales"],
+      "risks": ["Prometer firma, fondos o derechos antes de la revisión institucional.", "Empezar una actividad que requería autorización previa.", "Usar una versión de acuerdo distinta de la finalmente firmada."],
+      "doNotAssume": "Ser IP da dirección científica, pero no representación jurídica general de la Universitat ni capacidad para firmar cualquier compromiso."
+    },
+    "publication-transfer": {
+      "alsoApplies": "También sirve para decisiones de divulgación, licencia, explotación y corrección de resultados científicos o tecnológicos.",
+      "adapt": "Sustituye resultado, autores, titulares, financiadores, editorial, licencia, territorios y compromisos previos; separa autoría, invención y titularidad.",
+      "stopsApplying": "No publiques, licencies ni entregues un resultado cuando existan dudas de titularidad, confidencialidad, patentabilidad, datos personales o restricciones del financiador.",
+      "successChecks": ["Autores, inventores y titulares están correctamente diferenciados.", "La divulgación o licencia respeta contratos y financiadores.", "Existe una versión final y evidencia de depósito, comunicación o firma."],
+      "responsibilities": [
+        { "actor": "Equipo investigador", "task": "Documentar contribuciones, origen del resultado, datos, software y divulgaciones previstas." },
+        { "actor": "Transferencia, Bibliotecas o Integridad", "task": "Asesorar según protección, licencia, ciencia abierta, publicación o corrección del registro científico." }
+      ],
+      "documents": ["Descripción y autores o inventores del resultado", "Contratos, ayudas y obligaciones de acceso abierto", "Versiones, licencias y materiales de soporte", "Aprobaciones y comunicaciones con terceros"],
+      "risks": ["Divulgar antes de proteger.", "Aceptar condiciones editoriales o de licencia incompatibles.", "Confundir correspondencia académica con autorización institucional."],
+      "doNotAssume": "Poder acceder a un resultado o repositorio no implica tener derecho a divulgarlo, relicenciarlo o explotarlo comercialmente."
+    },
+    "economic-case": {
+      "alsoApplies": "También sirve para gastos excepcionales que combinan necesidad científica, presupuesto público, factura, recepción y justificación.",
+      "adapt": "Sustituye proveedor, país, importe, moneda, proyecto, órgano y modalidad de pago; valida el procedimiento antes de ordenar o pagar.",
+      "stopsApplying": "No permite eludir contratación, fiscalidad, inventario, autorización del gasto o reglas del financiador mediante pago personal, fraccionamiento o factura posterior.",
+      "successChecks": ["Existe crédito y elegibilidad antes del compromiso.", "Pedido, factura, pago y recepción son coherentes.", "El expediente permite justificar finalidad, competencia y trazabilidad."],
+      "responsibilities": [
+        { "actor": "PDI proponente", "task": "Definir necesidad, financiación, especificación y recepción sin comprometer el gasto por su cuenta." },
+        { "actor": "Unidad de gestión económica", "task": "Determinar procedimiento, fiscalidad, documentos contables, pago, inventario y archivo." }
+      ],
+      "documents": ["Memoria de necesidad y elegibilidad", "Disponibilidad presupuestaria", "Oferta, pedido o instrumento contractual", "Factura y evidencia de recepción o prestación"],
+      "risks": ["Pagar antes de obtener autorización.", "Aceptar factura a nombre del PDI.", "Imputar a un proyecto sin relación demostrable con su actividad."],
+      "doNotAssume": "Disponer de saldo no equivale a tener autorización para contratar, pagar o imputar cualquier gasto."
+    },
+    "integrity-case": {
+      "alsoApplies": "También sirve para decisiones colegiadas o relaciones con terceros en las que pueda cuestionarse imparcialidad, integridad o apariencia institucional.",
+      "adapt": "Sustituye órgano, expediente, relación personal o económica, tercero interesado y decisión; describe hechos sin minimizar conflictos aparentes.",
+      "stopsApplying": "No continúes interviniendo cuando concurra una causa de abstención o un riesgo razonable de influencia hasta recibir instrucción y dejar constancia.",
+      "successChecks": ["El posible conflicto se declara antes de intervenir.", "La sustitución o decisión queda documentada.", "No se obtiene ventaja privada ni se compromete la apariencia de imparcialidad."],
+      "responsibilities": [
+        { "actor": "PDI afectado", "task": "Detectar, declarar y abstenerse cuando proceda, aportando información suficiente sin participar en la decisión sobre sí mismo." },
+        { "actor": "Presidencia u órgano gestor", "task": "Valorar el conflicto, acordar sustitución y conservar DACI, abstención o decisión motivada." }
+      ],
+      "documents": ["Nombramiento y expediente afectado", "Declaración de ausencia de conflicto o comunicación", "Descripción factual de la relación relevante", "Acuerdo de sustitución o decisión del órgano"],
+      "risks": ["Declarar el conflicto después de participar.", "Reducir el análisis a parentesco formal ignorando intereses profesionales o económicos.", "Resolver informalmente sin acta ni sustitución."],
+      "doNotAssume": "No votar al final puede ser insuficiente si ya se preparó, evaluó o deliberó el asunto."
+    }
+  },
+  "situations": [
+    {
+      "id": "preparar-acreditacion-aneca-avap", "number": 51, "category": "incorporacion", "baseChapter": 13, "profile": "career-admin",
+      "title": "Preparar una acreditación ANECA o AVAP", "scenario": "Quieres acreditarte para PTU, CU o una figura laboral y necesitas elegir agencia, demostrar requisitos y presentar un expediente verificable sin confundir acreditación con concurso.",
+      "aliases": ["ANECA", "AVAP", "ACADEMIA", "acreditación", "titular", "cátedra", "PPL", "méritos"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La solicitud se presenta ante la agencia y figura correctas, con requisitos previos comprobados y cada aportación enlazada a una evidencia admitida.",
+        "firstMove": "Decide primero la figura objetivo y abre la convocatoria o procedimiento vigente de la agencia; no empieces por copiar un CV antiguo.",
+        "questions": ["¿La figura exige ANECA, AVAP u otra evaluación?", "¿Cumplo los requisitos previos de doctorado, antigüedad o categoría?", "¿Qué aportaciones seleccionadas sostienen cada dimensión evaluada?"],
+        "unit": "ANECA o AVAP como órgano evaluador; RR. HH. PDI y Unidad de Calidad para certificados UV",
+        "channel": "Sede electrónica de la agencia y solicitudes UV de certificados o evaluación docente",
+        "deadline": "Procedimiento abierto o convocatoria vigente; reserva margen para certificados y una eventual subsanación",
+        "documents": ["Procedimiento y criterios vigentes de la figura", "Título de doctor y certificados de vinculación", "DOCENTIA, docencia, proyectos, publicaciones, transferencia y gestión acreditadas", "Índice de aportaciones con archivo, página y criterio asociado"],
+        "steps": [
+          {"action":"Elegir figura y agencia y guardar los criterios vigentes.","evidence":"PDF o URL fechada del procedimiento aplicado"},
+          {"action":"Construir una matriz criterio-aportación-evidencia y detectar huecos.","evidence":"hoja de control con cada requisito marcado"},
+          {"action":"Solicitar certificados UV que no puedan generarse desde las plataformas.","evidence":"certificados firmados y solicitudes registradas"},
+          {"action":"Redactar méritos contextualizados sin duplicar una misma aportación de forma incompatible.","evidence":"versión final del CV y selección de aportaciones"},
+          {"action":"Presentar, descargar justificante y vigilar requerimientos hasta resolución.","evidence":"registro, expediente, subsanaciones y certificado final"}
+        ],
+        "sources": [
+          {"label":"ANECA · Procedimiento ACADEMIA 2024","url":"https://www.aneca.es/es/web/guest/procedimiento-de-acreditaci%C3%B3n-2024"},
+          {"label":"AVAP · Evaluación para la acreditación","url":"https://avap.es/es/profesorado/evaluacion-para-la-acreditacion/"},
+          {"label":"UV · Manual DOCENTIA","url":"https://www.uv.es/uvweb/unidad-calidad/es/calidad-del-profesorado/evaluacion-docente/manual-evaluacion-actividad-docente-docentia-/manual-1285964326005.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["ACADEMIA se utiliza para PTU y CU; comprueba el régimen vigente para la figura laboral antes de elegir ANECA o AVAP.", "Si un requisito previo no se cumple, no presentes una solicitud basada solo en que el currículum sea fuerte."],
+        "stopConditions": ["No uses criterios históricos o capturas de terceros como si fueran la convocatoria vigente.", "No declares méritos sin documento localizable y coherente con fechas, autoría y dedicación."],
+        "completionEvidence": ["Figura, agencia y criterios documentados.", "Matriz de evidencias sin requisitos vacíos.", "Justificante y resolución archivados."],
+        "escalation": ["Consulta a la agencia las dudas interpretativas sobre su procedimiento.", "Solicita a RR. HH. PDI o Calidad la corrección de certificados UV antes de presentar o subsanar."]
+      }
+    },
+    {
+      "id": "presentarse-concurso-pdi", "number": 52, "category": "incorporacion", "baseChapter": 13, "profile": "career-admin",
+      "title": "Presentarse a una plaza o concurso de PDI", "scenario": "Se publica una plaza que encaja con tu perfil y necesitas interpretar bases, presentar la instancia, acreditar méritos y seguir admisión, pruebas y reclamaciones.",
+      "aliases": ["concurso PDI", "plaza", "PPL", "titular", "catedrático", "baremo", "admitidos", "reclamación"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La candidatura entra en plazo, acredita requisitos y méritos conforme a las bases y conserva evidencia para subsanar o reclamar cada actuación.",
+        "firstMove": "Descarga convocatoria, bases, perfil, baremo y guía de presentación; crea un calendario con instancia, listas y actos del concurso.",
+        "questions": ["¿Qué categoría, área, perfil y requisitos tiene exactamente la plaza?", "¿Qué formato y fecha límite exige cada mérito?", "¿Dónde se publicarán listas, actos y plazos de reclamación?"],
+        "unit": "Sección de Selección del PDI y comisión de selección designada para la plaza",
+        "channel": "Formulario o sede indicados en la convocatoria y Tablón Oficial UV para actuaciones",
+        "deadline": "El literal de la convocatoria; las listas provisionales y propuestas abren plazos propios que deben vigilarse",
+        "documents": ["Convocatoria, bases, perfil y baremo", "Acreditación y requisitos de participación", "Currículum en el modelo exigido con justificantes ordenados", "Proyecto docente o investigador y documentación de los actos cuando proceda"],
+        "steps": [
+          {"action":"Comprobar requisitos y compatibilidad entre perfil de plaza y acreditación.","evidence":"lista de requisitos con documento asociado"},
+          {"action":"Indexar méritos según el baremo sin mezclar apartados ni periodos.","evidence":"CV y carpeta numerada de justificantes"},
+          {"action":"Presentar por el canal exacto y validar firma, anexos y tasa si existe.","evidence":"justificante íntegro de registro"},
+          {"action":"Revisar listas provisional y definitiva y subsanar solo lo permitido.","evidence":"captura o anuncio y escrito de subsanación"},
+          {"action":"Preparar actos, conservar publicaciones y valorar reclamación por el cauce indicado.","evidence":"material presentado, actas y recurso o cierre"}
+        ],
+        "sources": [
+          {"label":"UV · Concursos de selección de PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/concursos-seleccion-pdi-1286399188666.html"},
+          {"label":"UV · Sección de Selección del PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccio-seleccio-del-pdi-1286306881563.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Las bases específicas prevalecen sobre cualquier guía general o convocatoria anterior.", "Distingue subsanar un requisito documental de añadir méritos nuevos fuera de plazo."],
+        "stopConditions": ["No esperes una notificación personal si las bases hacen del tablón el medio de publicación.", "No alteres documentos ni fechas para hacer encajar un mérito."],
+        "completionEvidence": ["Instancia y anexos registrados.", "Admisión y participación documentadas.", "Propuesta, nombramiento o reclamación archivados."],
+        "escalation": ["Traslada incidencias técnicas o de admisión a la Sección de Selección dentro del plazo publicado.", "Si discrepas del resultado, usa únicamente la reclamación o recurso previsto en las bases y su pie de recursos."]
+      }
+    },
+    {
+      "id": "reconocer-servicios-previos", "number": 53, "category": "incorporacion", "baseChapter": 12, "profile": "career-admin",
+      "title": "Reconocer servicios prestados en otra administración", "scenario": "Has trabajado con contrato en otra universidad o administración y quieres que la UV reconozca esos periodos para antigüedad y trienios.",
+      "aliases": ["servicios previos", "antigüedad", "trienios", "anexo I", "anexo II", "otra universidad"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "Los periodos computables quedan reconocidos por resolución y sus efectos se comprueban en expediente y nómina sin duplicidades.",
+        "firstMove": "Pide a cada administración de origen el Anexo I oficial con fechas, vínculo, grupo y dedicación; una vida laboral no lo sustituye.",
+        "questions": ["¿Mi categoría UV pertenece al colectivo que puede solicitarlo?", "¿Los periodos fueron servicios con vínculo computable y no becas sin contrato?", "¿Existen solapamientos o servicios ya reconocidos?"],
+        "unit": "Sección de Gestión de RR. HH. PDI de la Universitat de València",
+        "channel": "Trámite de reconocimiento de servicios previos y registro o sede indicados por RR. HH. PDI",
+        "deadline": "A petición de la persona interesada; conviene solicitarlo tras el alta para no demorar efectos económicos",
+        "documents": ["Anexo II de solicitud", "Anexo I emitido por cada administración distinta de la UV", "Contratos o nombramientos para aclarar incidencias", "Relación cronológica de periodos y solapamientos"],
+        "steps": [
+          {"action":"Verificar colectivo y periodos potencialmente computables.","evidence":"tabla cronológica con tipo de vínculo"},
+          {"action":"Solicitar Anexo I a cada administración de origen.","evidence":"certificados oficiales recibidos"},
+          {"action":"Completar Anexo II y conciliar fechas, grupos y dedicaciones.","evidence":"solicitud revisada sin solapamientos ocultos"},
+          {"action":"Registrar la petición y atender aclaraciones de RR. HH.","evidence":"justificante y respuestas presentadas"},
+          {"action":"Comprobar resolución, expediente, trienio y atrasos que correspondan.","evidence":"resolución y nómina posterior conciliadas"}
+        ],
+        "sources": [
+          {"label":"UV · Reconocimiento de servicios previos","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/gestiones-del-pdi/servicios-previos-1286320186598.html"},
+          {"label":"UV · Sección de Gestión de PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Para servicios de otra administración se exige el Anexo I emitido por ella; no sustituyas ese certificado por vida laboral.", "Separa reconocimiento del periodo y concesión o fecha de devengo del trienio."],
+        "stopConditions": ["No incluyas becas sin contrato como servicios si el procedimiento las excluye.", "No aceptes una cronología con periodos superpuestos sin aclaración."],
+        "completionEvidence": ["Anexos I y II registrados.", "Resolución de servicios reconocidos.", "Efecto en expediente y nómina comprobado."],
+        "escalation": ["Pide rectificación a la administración emisora si el Anexo I contiene fechas o grupo erróneos.", "Reclama a RR. HH. PDI con resolución y nómina si el reconocimiento no produce el efecto esperado."]
+      }
+    },
+    {
+      "id": "cambiar-dedicacion", "number": 54, "category": "incorporacion", "baseChapter": 14, "profile": "career-admin",
+      "title": "Solicitar un cambio de dedicación", "scenario": "Quieres pasar de tiempo completo a parcial o al contrario y necesitas conocer autorización, fecha efectiva, docencia, incompatibilidades y retribución.",
+      "aliases": ["cambio dedicación", "tiempo completo", "tiempo parcial", "jornada", "POD", "nómina"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "El cambio se autoriza antes de aplicarse y la fecha efectiva queda coordinada con contrato o nombramiento, POD, compatibilidad y nómina.",
+        "firstMove": "Explica por escrito dedicación actual, solicitada, motivo y fecha deseada a RR. HH. PDI y al departamento antes de reorganizar docencia o actividad externa.",
+        "questions": ["¿Mi figura permite la dedicación solicitada?", "¿Qué órgano debe autorizarla y desde qué fecha puede tener efecto?", "¿Cómo cambia docencia, salario, cotización y compatibilidad?"],
+        "unit": "RR. HH. PDI para el expediente y departamento para planificación docente",
+        "channel": "Solicitud registrada o modelo indicado por RR. HH. PDI y comunicación trazable al departamento",
+        "deadline": "Antes de la fecha pretendida y con margen para afectar POD, contrato, compatibilidad y presupuesto",
+        "documents": ["Contrato o nombramiento y dedicación vigente", "Solicitud motivada con fecha de efectos", "Informe o acuerdo departamental cuando proceda", "Simulación de POD, retribución e incompatibilidades"],
+        "steps": [
+          {"action":"Confirmar que categoría y norma permiten el cambio.","evidence":"respuesta o referencia normativa de RR. HH."},
+          {"action":"Calcular efectos docentes, económicos y de actividad externa.","evidence":"comparativa antes-después"},
+          {"action":"Obtener informes internos exigibles sin modificar todavía el POD.","evidence":"acuerdo o informe firmado"},
+          {"action":"Registrar la solicitud con fecha propuesta.","evidence":"justificante de presentación"},
+          {"action":"Aplicar solo tras resolución y verificar sistemas.","evidence":"resolución, POD y nómina coherentes"}
+        ],
+        "sources": [
+          {"label":"UV · Sección de Gestión de PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html"},
+          {"label":"UV · Contacto de RR. HH. PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/ubicacion-contacto/horario-atencion-al-publico-1285911217756.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["La dedicación no cambia por acuerdo informal con el departamento; requiere el acto de personal aplicable.", "Si existe actividad externa, revisa de nuevo compatibilidad con la dedicación resultante."],
+        "stopConditions": ["No empieces una segunda actividad ni reduzcas unilateralmente la docencia antes de la resolución.", "No uses la calculadora salarial como reconocimiento de efectos jurídicos."],
+        "completionEvidence": ["Resolución con fecha efectiva.", "POD y dedicación actualizados.", "Nómina y compatibilidad comprobadas."],
+        "escalation": ["Si la fecha afecta al curso, coordina RR. HH., OCA y dirección departamental.", "Si sistemas o nómina no coinciden con la resolución, abre reclamación adjuntándola."]
+      }
+    },
+    {
+      "id": "excedencia-reingreso", "number": 55, "category": "incorporacion", "baseChapter": 14, "profile": "career-admin",
+      "title": "Solicitar excedencia y posterior reingreso", "scenario": "Necesitas dejar temporalmente el servicio activo o volver y quieres escoger la modalidad correcta y conocer reserva, antigüedad, incompatibilidades y reingreso.",
+      "aliases": ["excedencia", "reingreso", "servicio activo", "reserva puesto", "situación administrativa"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La situación administrativa queda resuelta con modalidad, fecha, efectos y condiciones de reingreso explícitas, sin abandonar el puesto por mera solicitud.",
+        "firstMove": "Pide a RR. HH. PDI una clasificación escrita de la modalidad posible según vínculo y motivo antes de fijar compromisos externos.",
+        "questions": ["¿Soy personal funcionario o laboral y qué modalidad corresponde?", "¿Existe reserva de puesto o solo derecho a reingreso?", "¿Qué plazo, permanencia mínima y forma de reingreso se aplican?"],
+        "unit": "Sección de Gestión de RR. HH. PDI y órgano que resuelva la situación administrativa",
+        "channel": "Solicitud formal registrada con documentación de la causa y posterior trámite de reingreso",
+        "deadline": "Antes del cese pretendido; el reingreso debe solicitarse en el plazo y forma de la modalidad concedida",
+        "documents": ["Vínculo, categoría y situación actual", "Solicitud y causa de excedencia", "Resolución con efectos y condiciones", "Calendario de reingreso y comunicaciones docentes"],
+        "steps": [
+          {"action":"Clasificar la modalidad y sus efectos con RR. HH.","evidence":"consulta y cuadro de reserva, antigüedad y reingreso"},
+          {"action":"Comprobar incompatibilidades y compromisos durante la excedencia.","evidence":"análisis de actividad prevista"},
+          {"action":"Registrar solicitud con antelación y avisar al departamento sin dar por concedida la salida.","evidence":"registro y comunicación condicionada"},
+          {"action":"Cerrar docencia, equipos, accesos y expedientes cuando exista resolución.","evidence":"acta de entrega y resolución"},
+          {"action":"Solicitar reingreso conforme a la modalidad y verificar el alta completa.","evidence":"solicitud, resolución de reingreso y sistemas activos"}
+        ],
+        "sources": [
+          {"label":"UV · Sección de Gestión de PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html"},
+          {"label":"UV · Normativas y gestiones del PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/mapa-web-1285902628812.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Reserva de puesto y derecho a reingreso no son equivalentes; exige que la resolución aclare el régimen.", "La relación funcionarial o laboral determina modalidades y procedimiento."],
+        "stopConditions": ["No abandones docencia o puesto por haber presentado la solicitud.", "No firmes un compromiso incompatible antes de conocer la situación concedida."],
+        "completionEvidence": ["Modalidad y efectos resueltos.", "Entrega de responsabilidades documentada.", "Reingreso y alta posterior verificados."],
+        "escalation": ["Solicita aclaración jurídica a RR. HH. si la resolución no identifica efectos o reingreso.", "Impugna dentro del pie de recursos si la modalidad o fecha resuelta no coincide con lo solicitado."]
+      }
+    },
+    {
+      "id": "fin-contrato-temporal", "number": 56, "category": "incorporacion", "baseChapter": 13, "profile": "career-admin",
+      "title": "Gestionar la finalización de un contrato temporal", "scenario": "Tu contrato termina pronto y necesitas cerrar docencia, proyecto, vacaciones, accesos, certificados, liquidación y posible prestación sin perder información o responsabilidades.",
+      "aliases": ["fin contrato", "cese", "finiquito", "liquidación", "certificado empresa", "desempleo", "vacaciones"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "El cese se produce en la fecha correcta, con responsabilidades entregadas, documentos laborales obtenidos y liquidación comprobada.",
+        "firstMove": "Confirma por escrito con RR. HH. la fecha y causa de fin y crea dos listas separadas: obligaciones UV y documentación laboral posterior.",
+        "questions": ["¿Existe renovación, prórroga o convocatoria pendiente que no debo presumir?", "¿Qué docencia, datos, equipos y proyectos debo entregar?", "¿Qué vacaciones, nómina, certificado y prestación pueden corresponder?"],
+        "unit": "RR. HH. PDI, departamento, unidad económica o proyecto y Seguridad Social o SEPE cuando proceda",
+        "channel": "Consulta y certificados de RR. HH.; acta de entrega interna y sedes externas para prestaciones",
+        "deadline": "Desde que se conoce la fecha; prestaciones y reclamaciones tienen plazos propios tras el cese",
+        "documents": ["Contrato y comunicaciones de fin o renovación", "Relación de docencia, proyectos, equipos y datos", "Vacaciones, nóminas y liquidación", "Certificados de servicios y empresa cuando procedan"],
+        "steps": [
+          {"action":"Confirmar fecha, causa y posibilidad real de continuidad.","evidence":"respuesta de RR. HH. y contrato"},
+          {"action":"Planificar cierre de docencia y transferencia responsable de expedientes.","evidence":"lista de responsables receptores"},
+          {"action":"Entregar equipos, llaves, fondos, datos y documentación sin copiar información indebidamente.","evidence":"acta o correos de entrega"},
+          {"action":"Solicitar certificados y revisar liquidación y última nómina.","evidence":"certificados y conciliación económica"},
+          {"action":"Tramitar prestación o reclamación por el cauce y plazo aplicables.","evidence":"solicitud externa o escrito registrado"}
+        ],
+        "sources": [
+          {"label":"UV · Sección de Gestión de PDI","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/carta-servicios/servicios-prestados/seccion-gestion-pdi-1285915888379.html"},
+          {"label":"SEPE · Protección por desempleo","url":"https://www.sepe.es/HomeSepe/prestaciones-desempleo.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Una expectativa de renovación no prolonga por sí sola el vínculo vigente.", "Separa el cierre institucional de la solicitud de prestaciones ante otra administración."],
+        "stopConditions": ["No conserves datos personales, exámenes o documentación confidencial fuera de los sistemas autorizados.", "No firmes una entrega o liquidación que no entiendas sin pedir desglose."],
+        "completionEvidence": ["Fecha y causa de cese confirmadas.", "Entrega de funciones y bienes acreditada.", "Certificados y liquidación revisados."],
+        "escalation": ["Comunica inmediatamente una discrepancia de fecha, cotización o liquidación a RR. HH. PDI.", "Consulta al SEPE o asesoramiento laboral si la prestación o impugnación depende de un plazo breve."]
+      }
+    },
+    {
+      "id": "adaptacion-puesto-salud", "number": 57, "category": "incorporacion", "baseChapter": 33, "profile": "career-admin",
+      "title": "Solicitar una adaptación del puesto por motivos de salud", "scenario": "Una condición de salud, embarazo, parto o lactancia requiere ajustar espacio, tareas, horario o exposición sin difundir tu diagnóstico.",
+      "aliases": ["adaptación puesto", "salud laboral", "embarazo", "lactancia", "especial sensibilidad", "ergonomía"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "Prevención evalúa la necesidad y propone medidas compatibles con el trabajo, comunicando a la estructura solo las restricciones o adaptaciones necesarias.",
+        "firstMove": "Presenta la solicitud al Servicio de Prevención por el grupo destinatario correcto; dirige los informes médicos al circuito confidencial, no a listas departamentales.",
+        "questions": ["¿La adaptación deriva de salud general o embarazo, parto o lactancia?", "¿Qué tareas o exposiciones concretas requieren valoración?", "¿Existe riesgo inmediato que obligue a suspender temporalmente una tarea?"],
+        "unit": "Área de Salud del Servicio de Prevención y Medio Ambiente, con RR. HH. y estructura para ejecutar medidas",
+        "channel": "Instancia interna dirigida al grupo de adaptación correspondiente y circuito confidencial de salud laboral",
+        "deadline": "Tan pronto aparece la necesidad y antes de mantener una exposición potencialmente incompatible",
+        "documents": ["Solicitud con puesto y tareas, sin difusión del diagnóstico", "Informes médicos para Salud Laboral", "Evaluación de riesgos del puesto", "Propuesta preventiva y constancia de implantación"],
+        "steps": [
+          {"action":"Identificar tareas, equipos o exposiciones que requieren evaluación.","evidence":"descripción funcional del puesto"},
+          {"action":"Registrar la solicitud en el grupo destinatario adecuado.","evidence":"justificante de instancia interna"},
+          {"action":"Entregar documentación clínica solo al personal sanitario competente.","evidence":"acuse del circuito confidencial"},
+          {"action":"Participar en la evaluación y acordar medidas temporales si hay riesgo.","evidence":"informe o propuesta preventiva"},
+          {"action":"Comprobar implantación y pedir revisión si cambian salud o tareas.","evidence":"medidas verificadas y seguimiento"}
+        ],
+        "sources": [
+          {"label":"UV · Área de Salud y adaptación de puesto","url":"https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/comunicados-solicitudes/salud-prevencion/area-salud-1285901687354.html"},
+          {"label":"UV · Evaluación de riesgos","url":"https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/salud-prevencion/unidades/unidad-seguridad-trabajo/evaluaciones/fases-actuaciones-1285902769997.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["El Servicio de Prevención valora aptitud y medidas; el departamento no debe decidir a partir del diagnóstico.", "Si hay riesgo grave o incompatible, prioriza una medida preventiva temporal mientras se evalúa."],
+        "stopConditions": ["No envíes informes médicos a órganos colegiados o grupos de correo.", "No sigas una exposición que Prevención haya indicado evitar."],
+        "completionEvidence": ["Solicitud confidencial registrada.", "Evaluación o propuesta emitida.", "Medidas implantadas y revisables."],
+        "escalation": ["Si no se implantan medidas, comunica la incidencia a Prevención y RR. HH. con la propuesta emitida.", "Ante riesgo inmediato, detén la tarea afectada y activa responsable de laboratorio o emergencia según gravedad."]
+      }
+    },
+    {
+      "id": "accidente-laboral-in-itinere", "number": 58, "category": "incorporacion", "baseChapter": 33, "profile": "career-admin",
+      "title": "Actuar ante un accidente laboral o in itinere", "scenario": "Sufres un accidente en el trabajo o durante el desplazamiento y necesitas atención, comunicación y declaración correcta según seas PDI laboral o funcionario.",
+      "aliases": ["accidente trabajo", "in itinere", "acto de servicio", "UMIVALE", "MUFACE", "parte accidente"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La urgencia se atiende, el accidente se comunica y documenta por el régimen correcto y Prevención puede investigar causas y medidas.",
+        "firstMove": "Protege, avisa y recibe atención; después identifica si tu régimen remite a UMIVALE o MUFACE y comunica el hecho a RR. HH. PDI.",
+        "questions": ["¿Existe emergencia o riesgo aún activo?", "¿Soy PDI laboral o funcionario y qué entidad asistencial corresponde?", "¿Ocurrió en el trabajo, misión o trayecto directo y qué evidencias existen?"],
+        "unit": "Emergencias, UMIVALE o MUFACE según vínculo, RR. HH. PDI y Servicio de Prevención",
+        "channel": "Atención urgente y modelos UV de declaración enviados a RR. HH. PDI",
+        "deadline": "Atención inmediata y comunicación sin demora; no esperes a que desaparezcan lesiones o evidencias",
+        "documents": ["Parte o informe asistencial", "Modelo de declaración y anexo UV", "Fecha, lugar, tarea, trayecto y testigos", "Fotografías o información preventiva pertinente sin alterar la escena"],
+        "steps": [
+          {"action":"Eliminar riesgo inmediato y solicitar asistencia adecuada.","evidence":"aviso y parte de atención"},
+          {"action":"Identificar régimen y contactar UMIVALE o MUFACE.","evidence":"número de asistencia o instrucciones"},
+          {"action":"Documentar hechos, tarea, horario, trayecto y testigos.","evidence":"relato fechado y evidencias"},
+          {"action":"Enviar modelos de declaración a RR. HH. PDI.","evidence":"correo o registro con anexos"},
+          {"action":"Colaborar con investigación preventiva y verificar reconocimiento.","evidence":"informe de causas, medidas y resolución"}
+        ],
+        "sources": [
+          {"label":"UV · Modelos para profesorado y accidentes laborales","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/modelos-documentos-tramites/modelos-profesorado-1286068019150.html"},
+          {"label":"UV · Servicio de Prevención y Medio Ambiente","url":"https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/servicio/presentacion-1285899540519.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["El vínculo laboral o funcionarial determina UMIVALE o MUFACE y la documentación asistencial.", "La atención sanitaria y la comunicación administrativa son flujos distintos y ambos pueden ser necesarios."],
+        "stopConditions": ["No retrases la asistencia para completar formularios.", "No reconstruyas ni ocultes hechos o alteres evidencias para encajar la calificación."],
+        "completionEvidence": ["Asistencia y parte conservados.", "Declaración comunicada a RR. HH.", "Medidas preventivas y calificación seguidas."],
+        "escalation": ["Ante gravedad llama al 112 y activa el plan de emergencia del edificio.", "Si se discute la contingencia, conserva todo y solicita revisión por el cauce indicado en la resolución."]
+      }
+    },
+    {
+      "id": "acoger-pdi-investigador-visitante", "number": 59, "category": "incorporacion", "baseChapter": 17, "profile": "research-governance",
+      "title": "Acoger a un profesor o investigador visitante", "scenario": "Una persona externa realizará una estancia en el DIE o ICMUV y necesita autorización, seguro, carta, accesos y prevención antes de entrar en instalaciones.",
+      "aliases": ["visitante", "investigador invitado", "carta invitación", "seguro", "personal no vinculado", "estancia"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La estancia se autoriza antes de emitir aceptación definitiva y el visitante dispone de seguro, responsable, accesos limitados, prevención y cierre documentado.",
+        "firstMove": "Define fechas, actividad, estructura anfitriona, espacios y riesgos y presenta el Anexo I al órgano competente antes de prometer acceso.",
+        "questions": ["¿La persona tiene vínculo UV o se tramita como visitante no vinculado?", "¿Qué seguro y límites exige la estancia?", "¿Accederá a laboratorios, datos, muestras o equipos con requisitos adicionales?"],
+        "unit": "Dirección de departamento, centro o instituto anfitrión; RR. HH. PDI y responsables de espacios",
+        "channel": "Solicitud de autorización de estancia, carta posterior y peticiones nominativas de acceso",
+        "deadline": "Antes de enviar aceptación firme, viajar o acceder; reserva tiempo para seguro y prevención",
+        "documents": ["Anexo I y programa de estancia", "Autorización del órgano competente", "Póliza de seguro con cobertura suficiente", "Carta, pasaporte o identidad y matriz de accesos y riesgos"],
+        "steps": [
+          {"action":"Definir estancia, financiación, tareas, espacios y persona responsable.","evidence":"programa fechado y responsable identificado"},
+          {"action":"Solicitar y obtener autorización institucional.","evidence":"Anexo I y resolución o firma competente"},
+          {"action":"Verificar seguro antes de emitir carta definitiva.","evidence":"póliza y periodo de cobertura"},
+          {"action":"Tramitar identidad, accesos y formación preventiva mínimos.","evidence":"lista de permisos y formación"},
+          {"action":"Cerrar accesos y registrar la estancia finalizada.","evidence":"certificado, formulario estadístico y revocación"}
+        ],
+        "sources": [
+          {"label":"UV · Personal visitante PDI/PI/PTGAS","url":"https://www.uv.es/uvweb/biologiques/es/movilidad-intercambio/movilidad-pdi/pas/personal-visitante-pdi/pi/ptgas/pdi-1286139075941.html"},
+          {"label":"UV · Modelos para profesorado","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/modelos-documentos-tramites/modelos-profesorado-1286068019150.html"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["La carta de aceptación se emite después de la autorización y de comprobar el seguro exigible.", "Cada acceso se limita a tarea, espacio y periodo y puede requerir prevención o acuerdo adicional."],
+        "stopConditions": ["No permitas acceso de laboratorio por acompañamiento informal.", "No presentes a la persona como contratada o miembro UV si solo tiene condición visitante."],
+        "completionEvidence": ["Estancia autorizada y asegurada.", "Accesos y prevención registrados.", "Cierre y formulario final completados."],
+        "escalation": ["Si la actividad implica muestras, datos o propiedad intelectual, activa además ética, DPD o Transferencia antes de empezar.", "Si no existe seguro suficiente, pospón la carta y el acceso hasta corregirlo."]
+      }
+    },
+    {
+      "id": "documentar-calidad-docencia", "number": 60, "category": "incorporacion", "baseChapter": 13, "profile": "career-admin",
+      "title": "Documentar la calidad de mi docencia para promoción", "scenario": "Quieres preparar DOCENTIA, un quinquenio o una acreditación y necesitas conservar evidencias útiles de docencia, coordinación, innovación y mejora.",
+      "aliases": ["DOCENTIA", "calidad docente", "quinquenio", "autoinforme", "encuestas", "innovación docente", "promoción"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "El periodo docente queda reconstruido con datos oficiales, evidencias proporcionadas y una reflexión verificable sobre incidencias y mejoras.",
+        "firstMove": "Abre el manual DOCENTIA vigente y exporta los datos disponibles antes de redactar; separa evaluación docente, quinquenio y acreditación.",
+        "questions": ["¿Qué periodo y procedimiento estoy documentando?", "¿Qué datos oficiales están precargados y cuáles debo aportar?", "¿Qué mejoras puedo vincular a una incidencia, acción y resultado?"],
+        "unit": "Unidad de Calidad para DOCENTIA; RR. HH. PDI para quinquenios; agencia en acreditación",
+        "channel": "SysDocentia y trámites o convocatorias específicas de RR. HH. PDI o agencia",
+        "deadline": "La convocatoria anual aplicable; conserva evidencias al finalizar cada curso, no solo al abrirse el plazo",
+        "documents": ["POD y certificados de docencia del periodo", "Guías docentes, coordinación y resultados", "Encuestas y contextualización de incidencias", "Proyectos de innovación, formación y evidencias de mejora"],
+        "steps": [
+          {"action":"Identificar periodo, procedimiento e instrumentos evaluados.","evidence":"manual y convocatoria guardados"},
+          {"action":"Validar datos precargados contra POD, actas y certificados.","evidence":"lista de discrepancias corregidas"},
+          {"action":"Seleccionar evidencias relevantes y no meramente voluminosas.","evidence":"índice de anexos"},
+          {"action":"Redactar autoinforme con contexto, acción y mejora comprobable.","evidence":"versión final y anexos"},
+          {"action":"Cerrar evaluación y solicitar por separado el efecto retributivo cuando proceda.","evidence":"resolución DOCENTIA y solicitud de quinquenio"}
+        ],
+        "sources": [
+          {"label":"UV · Manual DOCENTIA","url":"https://www.uv.es/uvweb/unidad-calidad/es/calidad-del-profesorado/evaluacion-docente/manual-evaluacion-actividad-docente-docentia-/manual-1285964326005.html"},
+          {"label":"UV · Procedimiento de evaluación docente","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio-recursos-humanos-pdi/procedimiento-evaluacion-actividad-docente-del-profesorado-1285902628698/Novetat.html?d=Desktop&id=1286199282095"}
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["DOCENTIA evalúa la actividad; la obtención del quinquenio exige su solicitud específica cuando proceda.", "Prioriza evidencias alineadas con instrumentos y periodo, no un archivo indiscriminado de materiales."],
+        "stopConditions": ["No atribuyas a una encuesta aislada un significado sin contexto de grupo, tasa y periodo.", "No declares una innovación o coordinación sin evidencia de ejecución."],
+        "completionEvidence": ["Datos docentes validados.", "Autoinforme y anexos presentados.", "Resolución y efecto posterior tramitados por separado."],
+        "escalation": ["Pide corrección a la unidad origen si SysDocentia muestra datos oficiales erróneos.", "Usa revisión o alegación del procedimiento si la evaluación omite evidencia presentada."]
+      }
+    },
+    {
+      "id":"coordinar-asignatura-varios-profesores","number":61,"category":"docencia","baseChapter":8,"profile":"teaching-case",
+      "title":"Coordinar una asignatura con varios profesores y grupos","scenario":"El equipo comparte asignatura pero existen diferencias en contenidos, evaluación, prácticas o comunicación que pueden afectar a la igualdad entre grupos.",
+      "aliases":["coordinación asignatura","varios profesores","grupos","criterios comunes","equipo docente"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El equipo aplica una guía común, reparte responsabilidades y documenta variaciones justificadas sin crear evaluaciones incompatibles entre grupos.","firstMove":"Convoca una reunión con guía docente, calendario y POD delante y convierte cada desacuerdo en una decisión, responsable y fecha.",
+        "questions":["¿Qué elementos son obligatoriamente comunes según la guía?","¿Qué variaciones por grupo son pedagógicas y equivalentes?","¿Quién responde de materiales, prácticas, incidencias, notas y actas?"],
+        "unit":"Coordinación de asignatura y de titulación, departamento y ETSE cuando afecte a la programación","channel":"Acta o documento compartido del equipo y cauce del centro para cambios que requieran aprobación","deadline":"Antes de publicar la guía y, para incidencias sobrevenidas, antes de aplicarlas al alumnado",
+        "documents":["Guía docente y memoria del título","POD, grupos, horarios y aulas","Matriz común de actividades, pesos y mínimos","Actas de coordinación y comunicaciones al alumnado"],
+        "steps":[{"action":"Separar elementos obligatorios de decisiones metodológicas por grupo.","evidence":"tabla común/variable validada"},{"action":"Asignar responsable y sustitución para cada actividad y acta.","evidence":"matriz RACI docente"},{"action":"Calibrar carga, dificultad, rúbricas y recuperación entre grupos.","evidence":"muestras y rúbricas comparadas"},{"action":"Aprobar y comunicar un calendario y reglas únicos.","evidence":"acta y anuncio común"},{"action":"Revisar incidencias y resultados sin cambiar criterios a posteriori.","evidence":"acta final con mejoras para el curso siguiente"}],
+        "sources":[{"label":"UVdocencia · Organización y evaluación","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"},{"label":"UVdocencia · Normativas de estudios de grado","url":"https://www.uv.es/uv-docencia/es/-es-uvdocencia-/normativas/reglamentos-uv-estudios/estudios-grado.html"}]
+      },
+      "resolution":{"decisionRules":["Resultados, sistema de evaluación y condiciones publicadas no pueden depender arbitrariamente del grupo.","Una variación es admisible solo si conserva competencias, carga y oportunidad equivalente."],"stopConditions":["No anuncies una regla distinta antes de validarla con el equipo y, si procede, el centro.","No cierres el acta sin conciliar todas las calificaciones y responsabilidades."],"completionEvidence":["Acuerdos y responsables documentados.","Información común publicada.","Incidencias y mejora final registradas."],"escalation":["Eleva desacuerdos que afecten la guía a dirección departamental y coordinación del título.","Si ya existe perjuicio evaluativo, consulta al centro antes de compensar o rectificar."]}
+    },
+    {
+      "id":"evaluacion-alternativa-ausencia-justificada","number":62,"category":"docencia","baseChapter":9,"profile":"teaching-case",
+      "title":"Organizar una evaluación alternativa por ausencia justificada","scenario":"Un estudiante no puede acudir a una prueba por una causa que afirma justificada y pide otra fecha o modalidad.",
+      "aliases":["examen alternativo","ausencia justificada","otra fecha","fuerza mayor","coincidencia exámenes"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La petición se clasifica conforme a normativa y guía, la causa se acredita por el canal adecuado y, si procede, se ofrece una prueba equivalente y trazable.","firstMove":"No pidas diagnósticos por correo ordinario: identifica el supuesto normativo y deriva la acreditación al cauce del centro cuando corresponda.",
+        "questions":["¿La causa y el momento están contemplados por normativa o instrucciones del centro?","¿Quién debe validar la justificación?","¿Cómo garantizar equivalencia, identidad y ausencia de ventaja informativa?"],
+        "unit":"Profesorado responsable, coordinación de titulación y ETSE o unidad que valide la justificación","channel":"Solicitud institucional del estudiante y comunicación individual por Aula Virtual o correo UV","deadline":"Antes de la prueba cuando sea previsible o inmediatamente después en una fuerza mayor acreditable",
+        "documents":["Guía docente y calendario de evaluación","Petición fechada del estudiante","Acreditación tratada por el cauce competente","Diseño y acta de la prueba alternativa"],
+        "steps":[{"action":"Registrar la petición sin prejuzgar ni difundir la causa.","evidence":"correo o solicitud institucional"},{"action":"Comprobar norma, guía y competencia para validar la justificación.","evidence":"supuesto y órgano identificados"},{"action":"Decidir motivadamente si procede alternativa.","evidence":"respuesta individual trazable"},{"action":"Diseñar prueba equivalente en competencias y exigencia.","evidence":"matriz de equivalencia y convocatoria"},{"action":"Realizar, custodiar y calificar con los mismos criterios.","evidence":"prueba, rúbrica y calificación conservadas"}],
+        "sources":[{"label":"UVdocencia · Evaluación de la docencia","url":"https://www.uv.es/uv-docencia/es/organizacion-docencia/evaluacion-docencia.html"},{"label":"UVdocencia · Desarrollo de pruebas de evaluación","url":"https://www.uv.es/uv-docencia/es/-planificacion-asignatura/evaluacion/desarrollo-pruebas-evaluacion.html"}]
+      },
+      "resolution":{"decisionRules":["No toda ausencia genera automáticamente derecho a otra prueba; aplica el supuesto y cauce vigente.","La alternativa debe ser equivalente, no necesariamente idéntica."],"stopConditions":["No recibas o archives información clínica más allá de lo necesario.","No concedas una ventaja incompatible con la igualdad del resto."],"completionEvidence":["Petición y clasificación conservadas.","Decisión comunicada.","Prueba y criterios equivalentes archivados."],"escalation":["Consulta al centro si el supuesto no está claro o afecta a calendario oficial.","Ante desacuerdo formal, informa del cauce de revisión sin negociar fuera de expediente."]}
+    },
+    {
+      "id":"ausencia-imprevista-profesor","number":63,"category":"docencia","baseChapter":8,"profile":"teaching-case",
+      "title":"Resolver una ausencia imprevista del profesor","scenario":"Una enfermedad o incidencia impide impartir una clase, práctica, tutoría o examen y hay que reorganizarla sin dejar al alumnado sin información.",
+      "aliases":["profesor enfermo","cancelar clase","sustitución","recuperar clase","ausencia docente"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La actividad se cubre, recupera o reprograma por decisión competente, el alumnado recibe información uniforme y la ausencia laboral se tramita por separado.","firstMove":"Avisa simultáneamente a coordinación o dirección departamental y al canal docente del grupo indicando solo la incidencia funcional y que se comunicará la solución.",
+        "questions":["¿Es una sesión ordinaria, laboratorio o prueba oficial?","¿Existe sustitución habilitada o hay que reprogramar espacio?","¿La ausencia activa un trámite de IT o permiso?"],
+        "unit":"Dirección y coordinación departamental para cobertura; ETSE para espacios o exámenes; RR. HH. PDI para la situación laboral","channel":"Aviso institucional al responsable y anuncio en Aula Virtual; trámite laboral separado","deadline":"Aviso inmediato y solución confirmada tan pronto sea posible, antes de que el grupo se desplace cuando pueda evitarse",
+        "documents":["Fecha, grupo y actividad afectada","Plan docente y disponibilidad de sustitución","Reserva o autorización de nueva sesión","Comunicación al alumnado y trámite laboral separado"],
+        "steps":[{"action":"Comunicar la imposibilidad al responsable académico.","evidence":"aviso con hora y actividad"},{"action":"Clasificar impacto y decidir cobertura o recuperación.","evidence":"respuesta del responsable"},{"action":"Confirmar docente, espacio y modalidad antes de anunciar.","evidence":"reserva y responsable asignado"},{"action":"Comunicar al grupo sin datos médicos.","evidence":"anuncio común en Aula Virtual"},{"action":"Registrar recuperación y tramitar la ausencia laboral por su cauce.","evidence":"actividad realizada y expediente laboral"}],
+        "sources":[{"label":"UVdocencia · Organización de la docencia","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"},{"label":"UV · Modelos y trámites del profesorado","url":"https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/modelos-documentos-tramites/modelos-profesorado-1286068019150.html"}]
+      },
+      "resolution":{"decisionRules":["La gestión académica de la sesión y la justificación laboral de la ausencia son procedimientos distintos.","Un examen o laboratorio exige más control que una sesión recuperable ordinaria."],"stopConditions":["No pidas a una persona no asignada que imparta o evalúe sin autorización.","No anuncies nueva fecha o aula antes de confirmarlas."],"completionEvidence":["Responsable avisado.","Solución y comunicación documentadas.","Actividad recuperada y ausencia tramitada."],"escalation":["Si afecta a examen o seguridad de laboratorio, eleva inmediatamente a dirección y ETSE.","Si la ausencia se prolonga, solicita cobertura formal en vez de encadenar arreglos informales."]}
+    },
+    {
+      "id":"fallo-tecnico-durante-examen","number":64,"category":"docencia","baseChapter":9,"profile":"teaching-case",
+      "title":"Actuar ante un fallo técnico durante un examen","scenario":"Durante una prueba falla Aula Virtual, la red, la electricidad, el software o varios ordenadores y las personas afectadas no están en igualdad.",
+      "aliases":["fallo examen","Aula Virtual caída","ordenador averiado","corte luz","incidencia técnica","cuestionario"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La incidencia se contiene, se preservan intentos y tiempos, se aplica una solución proporcional y queda evidencia técnica y académica revisable.","firstMove":"Anota hora y alcance, pide al alumnado que no reinicie ni abandone sin instrucción y abre incidencia SIUV mientras conservas el estado de la prueba.",
+        "questions":["¿Afecta a una persona, un aula o todo el servicio?","¿Pueden recuperarse intentos, respuestas y marcas temporales?","¿La solución mantiene igualdad o exige repetir parcial o totalmente?"],
+        "unit":"Profesorado responsable y coordinación; SIUV o soporte del aula; ETSE si afecta a espacio o convocatoria","channel":"Incidencia SIUV con datos técnicos y acta académica comunicada individualmente o al grupo","deadline":"Durante la prueba para preservar datos y antes de publicar calificaciones o destruir trazas",
+        "documents":["Configuración y versión de la prueba","Hora, equipos, usuarios y mensajes de error","Capturas, logs e incidencia SIUV","Acta de decisión, personas afectadas y compensación"],
+        "steps":[{"action":"Estabilizar la prueba y registrar alcance y hora.","evidence":"cronología inicial"},{"action":"Abrir incidencia con URL, captura, grupo y ejemplos.","evidence":"número SIUV"},{"action":"Exportar intentos y comprobar integridad antes de modificar.","evidence":"copia de resultados y logs"},{"action":"Decidir continuación, tiempo extra, recuperación o repetición proporcional.","evidence":"acta motivada y matriz de afectados"},{"action":"Comunicar, ejecutar y conservar la solución con la calificación.","evidence":"anuncio, nueva prueba y registro final"}],
+        "sources":[{"label":"UVdocencia · Cuestionarios y exámenes","url":"https://www.uv.es/uv-docencia/es/recursos-docencia-online/cuestionarios-ejercicios-examenes.html"},{"label":"UVdocencia · Desarrollo de pruebas","url":"https://www.uv.es/uv-docencia/es/-planificacion-asignatura/evaluacion/desarrollo-pruebas-evaluacion.html"}]
+      },
+      "resolution":{"decisionRules":["Distingue incidencia individual verificable de fallo sistémico; la compensación puede ser diferente si el impacto lo es.","Preserva datos antes de reiniciar, recalcular o invalidar preguntas."],"stopConditions":["No borres intentos ni cambies puntuaciones sin exportar el estado original.","No atribuyas fraude a quien reporta un fallo sin evidencia adicional."],"completionEvidence":["Incidencia técnica registrada.","Afectación y decisión académica documentadas.","Resultado final reproducible."],"escalation":["Si el soporte no puede determinar impacto, solicita informe técnico antes de cerrar notas.","Si la igualdad no puede restaurarse, consulta al centro sobre repetición o medida extraordinaria."]}
+    },
+    {
+      "id":"custodiar-examenes-evidencias","number":65,"category":"docencia","baseChapter":9,"profile":"teaching-case",
+      "title":"Custodiar exámenes y evidencias de evaluación","scenario":"Debes conservar pruebas, entregas, rúbricas y revisiones y necesitas saber cómo organizarlas, controlar acceso y actuar si falta una evidencia.",
+      "aliases":["custodia exámenes","guardar pruebas","pérdida examen","evidencia evaluación","conservación"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"Cada calificación puede reconstruirse desde una evidencia íntegra, accesible solo a quien corresponde y conservada durante el periodo aplicable.","firstMove":"Crea un inventario por asignatura, convocatoria y estudiante y guarda originales físicos o digitales en ubicación UV controlada, no en dispositivos personales sin protección.",
+        "questions":["¿Qué evidencias sostienen cada componente de nota?","¿Qué periodo de conservación y revisión se aplica?","¿Quién tiene acceso y cómo se documentan cambios o devoluciones?"],
+        "unit":"Profesorado responsable y departamento; centro ante impugnación; DPD o SIUV ante pérdida o exposición","channel":"Repositorio institucional autorizado e inventario de custodia; comunicación formal de incidentes","deadline":"Desde la recogida y durante revisión, impugnación y periodo de conservación aplicable",
+        "documents":["Relación de actividades y ponderaciones","Originales, entregas, rúbricas y retroalimentación","Registro de revisiones y modificaciones","Inventario de ubicación, acceso y destrucción autorizada"],
+        "steps":[{"action":"Mapear cada nota a su prueba y rúbrica.","evidence":"índice de evidencias"},{"action":"Guardar originales con control de acceso y copia segura cuando proceda.","evidence":"ubicación y permisos comprobados"},{"action":"Registrar revisiones, correcciones y diligencias sin sobrescribir el original.","evidence":"historial de cambios"},{"action":"Comprobar plazos antes de devolver o destruir.","evidence":"autorización o acta de eliminación"},{"action":"Si falta o se expone una prueba, preservar trazas y comunicar inmediatamente.","evidence":"incidente y medida reparadora"}],
+        "sources":[{"label":"UVdocencia · Evaluación y calificaciones","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"},{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"}]
+      },
+      "resolution":{"decisionRules":["La evidencia debe conservarse mientras pueda existir revisión, impugnación o obligación normativa.","Una copia de trabajo no sustituye al original si no garantiza integridad y trazabilidad."],"stopConditions":["No destruyas ni devuelvas pruebas con un procedimiento abierto.","No almacenes calificaciones identificadas en nubes o cuentas personales."],"completionEvidence":["Mapa nota-evidencia completo.","Acceso e historial controlados.","Eliminación o transferencia documentada."],"escalation":["Ante pérdida que impida justificar una nota, informa al centro antes de improvisar una calificación.","Si hubo acceso no autorizado, activa además el procedimiento de brecha de datos."]}
+    },
+    {
+      "id":"conducta-disruptiva-amenaza-aula","number":66,"category":"docencia","baseChapter":34,"profile":"teaching-case",
+      "title":"Actuar ante conducta disruptiva, amenaza o agresión en clase","scenario":"Una conducta impide desarrollar la docencia o genera miedo y necesitas proteger, documentar y activar el cauce apropiado sin escalar innecesariamente.",
+      "aliases":["conducta disruptiva","amenaza aula","agresión","expulsar estudiante","convivencia","seguridad"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La seguridad se prioriza, los hechos se registran de forma objetiva y el centro aplica medidas de convivencia o disciplinarias con garantías.","firstMove":"Si hay riesgo inmediato interrumpe la actividad, busca apoyo y llama a seguridad o 112; si no, establece el límite, finaliza la interacción y registra hechos y testigos.",
+        "questions":["¿Existe peligro inmediato o amenaza creíble?","¿Es un conflicto puntual, conducta reiterada, acoso o posible infracción?","¿Qué medidas permiten continuar la docencia sin represalias ni exposición pública?"],
+        "unit":"Dirección de la ETSE y departamento; seguridad o emergencias; Comisión de Convivencia o unidad especializada según hechos","channel":"Comunicación factual y confidencial al órgano competente, con emergencia por 112 cuando proceda","deadline":"Inmediato si hay riesgo; el mismo día o cuanto antes para conservar hechos y adoptar medidas",
+        "documents":["Cronología objetiva y palabras o conductas relevantes","Personas presentes y evidencias legítimas","Medidas inmediatas adoptadas","Comunicación y resolución del órgano competente"],
+        "steps":[{"action":"Valorar riesgo y proteger a las personas.","evidence":"aviso o intervención registrada"},{"action":"Finalizar la confrontación y evitar una investigación pública en el aula.","evidence":"descripción de medida proporcional"},{"action":"Documentar hechos, no diagnósticos ni rumores.","evidence":"informe fechado y testigos"},{"action":"Remitir al cauce de centro, convivencia, igualdad o seguridad.","evidence":"acuse y responsable del caso"},{"action":"Aplicar medidas y planificar continuidad académica.","evidence":"instrucciones y seguimiento"}],
+        "sources":[{"label":"UV · Código de convivencia y buenas prácticas","url":"https://www.uv.es/graus/normatives/Codi_convivencia_bones_practiques_UV.pdf"},{"label":"UV · Emergencias y seguridad","url":"https://www.uv.es/emergencias-uv/es/emergencias-seguridad.html"}]
+      },
+      "resolution":{"decisionRules":["Riesgo inmediato activa seguridad; conflicto sin riesgo se documenta y deriva por convivencia.","Acoso, discriminación o violencia de género tienen canales especializados además del académico."],"stopConditions":["No organices un careo público ni difundas acusaciones al grupo.","No mantengas la actividad si no puede garantizarse seguridad."],"completionEvidence":["Riesgo contenido.","Informe factual entregado.","Medidas y seguimiento asignados."],"escalation":["Llama al 112 ante violencia o amenaza inmediata.","Si las medidas ordinarias fallan o hay represalia, eleva a dirección, convivencia o protocolo especializado."]}
+    },
+    {
+      "id":"invitar-profesional-sesion-docente","number":67,"category":"docencia","baseChapter":8,"profile":"teaching-case",
+      "title":"Invitar a un profesional externo a una sesión docente","scenario":"Quieres que una persona de empresa o universidad imparta una charla, práctica o demostración y puede necesitar acceso, pago, viaje o uso de materiales.",
+      "aliases":["ponente externo","clase invitada","profesional empresa","honorarios docente","charla"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La participación externa tiene encaje docente, autorización, condiciones económicas y de acceso claras y materiales utilizables legalmente.","firstMove":"Define por escrito objetivo, fecha, duración, modalidad, público, pago o gastos, grabación y materiales antes de cursar una invitación firme.",
+        "questions":["¿Es colaboración gratuita, encargo retribuido o actividad dentro de un evento?","¿Quién autoriza y qué partida puede pagar?","¿Se tratarán datos, secretos empresariales, imágenes o demostraciones con riesgo?"],
+        "unit":"Coordinación de asignatura y departamento; unidad económica; ETSE para espacio y acceso","channel":"Propuesta interna aprobada y encargo o invitación institucional antes de la actividad","deadline":"Antes de confirmar al ponente, comprar viaje o anunciar la sesión",
+        "documents":["Ficha de actividad y relación con la guía docente","Aprobación y disponibilidad presupuestaria","Datos fiscales, encargo y condiciones de viaje o pago","Permisos de materiales, grabación, acceso y prevención"],
+        "steps":[{"action":"Definir alcance académico y formato.","evidence":"ficha validada por coordinación"},{"action":"Clasificar gratuidad, honorario, viaje y contratación.","evidence":"instrucción de la unidad económica"},{"action":"Obtener autorización y encargo antes de prometer pago.","evidence":"aprobación y documento de encargo"},{"action":"Preparar acceso, materiales, protección de datos y prevención.","evidence":"checklist y autorizaciones"},{"action":"Certificar realización y tramitar pago o gastos.","evidence":"acta, factura o justificantes"}],
+        "sources":[{"label":"UVdocencia · Organización docente","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"},{"label":"UV · Instrucciones para profesorado externo del SFPIE","url":"https://www.uv.es/uv-docencia/es/formacion-pdi/profesorado-cursos-/instrucciones.html"}]
+      },
+      "resolution":{"decisionRules":["Una invitación científica no crea por sí sola obligación de pago ni autorización de acceso.","Si existe contraprestación, la clasificación económica debe cerrarse antes de la actividad."],"stopConditions":["No adelantes dinero ni garantices honorarios sin expediente.","No grabes o difundas materiales del ponente sin base y permiso."],"completionEvidence":["Actividad y condiciones aprobadas.","Acceso y materiales regularizados.","Realización y pago o gratuidad cerrados."],"escalation":["Consulta a gestión económica si hay no residente, factura o retención.","Activa Prevención o Transferencia si la demostración usa equipos, muestras o información confidencial."]}
+    },
+    {
+      "id":"visita-docente-externa","number":68,"category":"docencia","baseChapter":33,"profile":"teaching-case",
+      "title":"Organizar una visita docente fuera del campus","scenario":"Quieres llevar un grupo a una empresa, feria o instalación y necesitas encajar la actividad, transporte, accesibilidad, seguridad y datos de participantes.",
+      "aliases":["visita empresa","salida docente","excursión","actividad fuera campus","transporte estudiantes"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La salida está autorizada e integrada en la docencia, identifica participantes y riesgos, ofrece información accesible y dispone de contacto e incidencias.","firstMove":"Consulta a coordinación y ETSE el procedimiento aplicable antes de reservar; pide a la entidad anfitriona programa, condiciones de acceso y riesgos.",
+        "questions":["¿La actividad es obligatoria, evaluable o voluntaria y está prevista?","¿Qué seguro, transporte y autorización institucional se requieren?","¿Hay menores, discapacidad, confidencialidad, fotos o zonas de riesgo?"],
+        "unit":"Coordinación de titulación, ETSE y departamento; entidad anfitriona y Prevención según actividad","channel":"Solicitud interna y comunicación individual al alumnado por canales UV","deadline":"Antes de contratar transporte o confirmar; con margen para accesibilidad y requisitos de acceso",
+        "documents":["Programa, resultados docentes y carácter de la actividad","Lista mínima de participantes y contactos de emergencia según procedimiento","Evaluación de riesgos e instrucciones de la entidad","Transporte, seguro, accesibilidad y autorizaciones"],
+        "steps":[{"action":"Validar encaje académico y aprobación del centro.","evidence":"autorización o acta"},{"action":"Recabar riesgos, acceso, confidencialidad y normas del anfitrión.","evidence":"instrucciones recibidas"},{"action":"Resolver transporte, seguro, coste y alternativa accesible.","evidence":"reservas y plan de accesibilidad"},{"action":"Informar y registrar participantes con minimización de datos.","evidence":"comunicación y lista controlada"},{"action":"Realizar, registrar incidencias y cerrar gastos y evaluación.","evidence":"parte de actividad y justificantes"}],
+        "sources":[{"label":"UV · Servicio de Prevención y Medio Ambiente","url":"https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/servicio/presentacion-1285899540519.html"},{"label":"UVdocencia · Organización docente","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"}]
+      },
+      "resolution":{"decisionRules":["El carácter obligatorio o evaluable exige alternativa o condiciones compatibles con derechos y accesibilidad.","Los riesgos y seguro dependen del lugar y actividad; no asumas que la matrícula cubre cualquier salida."],"stopConditions":["No confirmes una visita de riesgo sin autorización e instrucciones.","No compartas listados de estudiantes con más datos de los necesarios."],"completionEvidence":["Actividad autorizada.","Riesgos, transporte y participantes controlados.","Incidencias y gastos cerrados."],"escalation":["Si el anfitrión no aporta condiciones seguras, pospón y consulta a Prevención.","Ante accidente, aplica emergencia y declaración correspondiente, no solo el protocolo de la empresa."]}
+    },
+    {
+      "id":"usar-materiales-derechos-autor-aula-virtual","number":69,"category":"docencia","baseChapter":31,"profile":"teaching-case",
+      "title":"Usar materiales con derechos de autor en Aula Virtual","scenario":"Quieres compartir capítulos, artículos, imágenes, vídeos o diapositivas y necesitas distinguir enlace, cita, licencia y distribución no permitida.",
+      "aliases":["copyright","derechos autor","Aula Virtual","fotocopias","artículos PDF","imágenes","licencia"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El alumnado accede al recurso necesario mediante enlace, licencia, cita o uso permitido, con autoría y alcance documentados y sin publicar copias indiscriminadas.","firstMove":"Identifica titular, licencia y fuente de cada recurso; si la biblioteca ofrece acceso, enlaza al registro o recurso autorizado antes de subir un PDF.",
+        "questions":["¿Es material propio, licenciado, de dominio público o de tercero?","¿Necesito reproducirlo o basta enlazar?","¿La cantidad y finalidad encajan en cita o ilustración docente?"],
+        "unit":"Profesorado responsable; Biblioteca para acceso y licencias; asesoramiento institucional en propiedad intelectual","channel":"Aula Virtual con acceso restringido y recursos o enlaces autorizados","deadline":"Antes de poner el material a disposición o reutilizarlo en otro curso o publicación",
+        "documents":["Referencia completa y titular","Licencia o términos de uso","Justificación de fragmento y finalidad docente","Registro de fuente y versión compartida"],
+        "steps":[{"action":"Clasificar propiedad y licencia del recurso.","evidence":"ficha de derechos"},{"action":"Buscar versión bibliotecaria, abierta o enlazable.","evidence":"URL persistente o licencia"},{"action":"Reducir reproducción a lo necesario y atribuir.","evidence":"material final con cita"},{"action":"Restringir acceso al grupo y periodo cuando proceda.","evidence":"configuración de Aula Virtual"},{"action":"Retirar o sustituir si cambia licencia o finaliza la necesidad.","evidence":"revisión de materiales"}],
+        "sources":[{"label":"UVdocencia · Protección de datos y propiedad intelectual","url":"https://www.uv.es/uv-docencia/es/uvdocencia.html"},{"label":"UV · Instrucciones sobre materiales docentes","url":"https://www.uv.es/uv-docencia/es/formacion-pdi/profesorado-cursos-/instrucciones.html"}]
+      },
+      "resolution":{"decisionRules":["Enlazar a un recurso autorizado suele ser distinto de reproducir y redistribuir el archivo.","Citar la fuente no convierte automáticamente en lícita una copia completa."],"stopConditions":["No subas libros o colecciones completas porque el acceso sea técnicamente posible.","No elimines avisos de autoría, licencia o medidas de acceso."],"completionEvidence":["Derechos y fuente identificados.","Uso mínimo y atribuido.","Acceso y revisión documentados."],"escalation":["Consulta a la Biblioteca ante licencias editoriales o recursos electrónicos.","Si una persona titular solicita retirada, despublica preventivamente y pide asesoramiento."]}
+    },
+    {
+      "id":"grabar-clase-estudiantado","number":70,"category":"docencia","baseChapter":31,"profile":"teaching-case",
+      "title":"Grabar una clase o intervención del alumnado","scenario":"Quieres grabar una sesión, presentación o práctica para docencia y aparecen imagen, voz, pantalla o datos del alumnado.",
+      "aliases":["grabar clase","vídeo estudiantes","derecho imagen","consentimiento","Zoom","mUVie"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La grabación tiene finalidad, base, información previa, minimización, acceso y conservación definidos y no se reutiliza fuera de ese alcance.","firstMove":"Decide si realmente necesitas captar al alumnado; diseña primero una versión que grabe solo al docente o permita participar sin aparecer.",
+        "questions":["¿Cuál es la finalidad concreta y puede lograrse sin captar estudiantes?","¿La grabación es necesaria para la docencia o una difusión adicional?","¿Quién accederá, durante cuánto tiempo y por qué sistema corporativo?"],
+        "unit":"Profesorado y centro; DPD UV para la base y SIUV o servicio multimedia para la solución técnica","channel":"Sistemas corporativos UV con información previa y permisos restringidos","deadline":"Antes de grabar; cualquier reutilización o difusión nueva exige revisión previa",
+        "documents":["Finalidad, base y personas captadas","Texto de información y alternativa de participación","Configuración de acceso y conservación","Consentimientos o autorizaciones cuando sean necesarios"],
+        "steps":[{"action":"Aplicar necesidad y minimización a cámara, audio, nombres y pantallas.","evidence":"diseño de grabación"},{"action":"Consultar base y preparar información previa.","evidence":"texto validado y aviso"},{"action":"Configurar sistema UV, acceso y alternativa para no aparecer.","evidence":"prueba técnica y permisos"},{"action":"Grabar evitando conversaciones y datos ajenos a la finalidad.","evidence":"archivo revisado"},{"action":"Publicar solo al grupo autorizado y eliminar al vencer el plazo.","evidence":"registro de acceso y borrado"}],
+        "sources":[{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"},{"label":"UVdocencia · Grabaciones","url":"https://www.uv.es/uv-docencia/es/organizacion-docencia/grabaciones.html"},{"label":"UV · Grabación de recursos multimedia","url":"https://www.uv.es/uvweb/servicio-informatica/es/multimedia/grabacion-recursos-multimedia-1285904223938.html"}]
+      },
+      "resolution":{"decisionRules":["La grabación necesaria para una función docente y su difusión pública son finalidades distintas.","Si puede lograrse el objetivo sin captar al alumnado, aplica esa alternativa."],"stopConditions":["No uses cuentas personales ni publiques el enlace en abierto por comodidad.","No reutilices imagen o voz en promoción, investigación o redes sin cobertura específica."],"completionEvidence":["Finalidad e información documentadas.","Acceso corporativo restringido.","Conservación y borrado controlados."],"escalation":["Consulta al DPD cuando la finalidad o base no sea clara.","Comunica como incidente cualquier publicación o acceso no autorizado."]}
+    },
+    {
+      "id":"responder-resolucion-provisional-ayuda","number":71,"category":"investigacion","baseChapter":21,"profile":"research-governance",
+      "title":"Responder a una resolución provisional de una ayuda","scenario":"Una propuesta aparece concedida, denegada o con importe distinto en una resolución provisional y debes aceptar, alegar, subsanar o esperar.",
+      "aliases":["resolución provisional","alegaciones proyecto","aceptación ayuda","denegación","subsanación convocatoria"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La actuación correcta se presenta dentro del plazo con una petición compatible con la fase y el expediente conserva resolución, evaluación, escrito y justificante.","firstMove":"Guarda resolución completa y anexos, localiza tu expediente y separa hechos corregibles, discrepancias de evaluación y condiciones de aceptación.",
+        "questions":["¿La publicación abre aceptación, alegación, reformulación o solo información?","¿Qué plazo y órgano figuran literalmente?","¿Se permite aportar documento existente, corregir error o modificar contenido científico?"],
+        "unit":"Servicio de Gestión de la Investigación o STI UV y órgano concedente de la convocatoria","channel":"Sede o aplicación indicada por la convocatoria, coordinada con la unidad UV competente","deadline":"El plazo exacto de la resolución provisional, contado conforme a su publicación o notificación",
+        "documents":["Resolución provisional y anexos","Solicitud y memoria presentadas","Informe de evaluación o motivo de exclusión","Escrito de aceptación, alegación o reformulación y justificante"],
+        "steps":[{"action":"Archivar publicación y calcular plazo y hora límite.","evidence":"ficha de plazo y copia oficial"},{"action":"Clasificar resultado y actuación permitida.","evidence":"tabla aceptar/alegar/subsanar"},{"action":"Contrastar expediente con el motivo concreto.","evidence":"matriz hecho-evidencia-petición"},{"action":"Revisar el escrito con la unidad UV antes de firma institucional.","evidence":"versión aprobada"},{"action":"Presentar, verificar registro y seguir resolución definitiva.","evidence":"justificante y cierre"}],
+        "sources":[{"label":"UV · Gestión y trámites de investigación y transferencia","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"},{"label":"UV · Contacto del Servicio de Gestión de la Investigación","url":"https://www.uv.es/uvweb/servicio-investigacion/es/uv/servicios-gestion/servicio-gestion-investigacion/ubicacion-contacto/ubicacion-contacto-1285914284179.html"}]
+      },
+      "resolution":{"decisionRules":["Alegar combate un error o valoración; subsanar aporta o corrige lo permitido; reformular ajusta la ayuda cuando la convocatoria lo prevé.","La unidad UV debe conocer cualquier aceptación que comprometa presupuesto, personal o cofinanciación."],"stopConditions":["No añadas méritos o cambies la propuesta si la fase no lo permite.","No dejes pasar el plazo esperando respuesta informal del financiador."],"completionEvidence":["Plazo y actuación clasificados.","Escrito registrado.","Resolución definitiva y condiciones archivadas."],"escalation":["Si el motivo no coincide con el expediente, solicita acceso o aclaración sin renunciar al escrito en plazo.","Si la concesión reduce presupuesto o cambia obligaciones, pide revisión económica antes de aceptar."]}
+    },
+    {
+      "id":"incorporarse-consorcio-propuesta","number":72,"category":"investigacion","baseChapter":21,"profile":"research-governance",
+      "title":"Incorporarme a un consorcio antes de presentar una propuesta","scenario":"Un coordinador extranjero pide confirmar participación, presupuesto y tareas en pocos días y puede enviar cartas o compromisos para firma.",
+      "aliases":["consorcio europeo","letter of commitment","socio proyecto","Horizon Europe","presupuesto socio"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La UV participa con tareas, recursos, presupuesto, resultados previos y firmantes validados, sin aceptar por correo obligaciones que requieren aprobación institucional.","firstMove":"Envía al STI la convocatoria, coordinador, fecha, borrador, tareas y presupuesto antes de confirmar firma o cifra definitiva.",
+        "questions":["¿La UV será beneficiaria, afiliada, asociada o subcontratista?","¿Tareas y presupuesto cubren coste y capacidad reales?","¿Qué background, datos, equipos o derechos se comprometen?"],
+        "unit":"Sección de I+D+i Internacional del STI, IP UV y representantes institucionales autorizados","channel":"Circuito UV de propuestas y Funding & Tenders Portal o plataforma de la convocatoria","deadline":"Cierre interno anterior al europeo y antes de firmar cartas, declaraciones o presupuesto final",
+        "documents":["Convocatoria y topic","Ficha de socios, papel UV y tareas","Presupuesto y recursos comprometidos","Background, cartas y declaraciones solicitadas"],
+        "steps":[{"action":"Definir papel jurídico y científico de la UV.","evidence":"ficha de participación"},{"action":"Validar elegibilidad, tareas, personal y presupuesto.","evidence":"presupuesto revisado por STI"},{"action":"Declarar background y restricciones de terceros.","evidence":"lista de activos incluidos/excluidos"},{"action":"Enviar documentos a firma institucional competente.","evidence":"versiones firmadas y autorizadas"},{"action":"Comprobar propuesta final antes del envío coordinador.","evidence":"copia final y acuse del portal"}],
+        "sources":[{"label":"UV · Horizonte Europa","url":"https://www.uv.es/uvweb/servicio-investigacion/es/internacionalizacion/horizonte-europa-1286318329389.html"},{"label":"Comisión Europea · IP Helpdesk y acuerdos de consorcio","url":"https://intellectual-property-helpdesk.ec.europa.eu/regional-helpdesks/european-ip-helpdesk/europe-frequently-asked-questions_en"}]
+      },
+      "resolution":{"decisionRules":["Beneficiario, asociado y subcontratista tienen derechos y obligaciones diferentes.","Solo una persona autorizada puede firmar compromisos en nombre de la UV."],"stopConditions":["No confirmes cofinanciación, contratación o acceso a background no revisados.","No entregues una firma escaneada para que el coordinador la reutilice."],"completionEvidence":["Papel y tareas UV validados.","Presupuesto y documentos aprobados.","Propuesta final y envío conservados."],"escalation":["Si el coordinador exige firma inmediata, eleva al STI en vez de firmar personalmente.","Si una tarea implica empresa, datos o muestras, activa también Transferencia, DPD o ética."]}
+    },
+    {
+      "id":"negociar-acuerdo-consorcio","number":73,"category":"investigacion","baseChapter":26,"profile":"research-governance",
+      "title":"Negociar un acuerdo de consorcio tras concederse un proyecto","scenario":"El proyecto europeo ha sido seleccionado y circula un DESCA con reglas de gobierno, responsabilidad, pagos, background, resultados y publicaciones.",
+      "aliases":["consortium agreement","DESCA","grant agreement","background","access rights","joint ownership"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El acuerdo de consorcio es coherente con el grant agreement y protege el background, la publicación, la responsabilidad y la explotación de la UV antes del inicio efectivo.","firstMove":"No revises solo el presupuesto: entrega al STI y al equipo una tabla de cláusulas críticas, activos previos, tareas y escenarios de resultado conjunto.",
+        "questions":["¿Qué background aporta y excluye la UV?","¿Cómo se decide, paga, publica, protege y resuelve un incumplimiento?","¿Qué responsabilidad, acceso y propiedad conjunta aceptaríamos?"],
+        "unit":"STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio","channel":"Negociación de versiones controladas y firma institucional antes de la fecha exigida","deadline":"Durante grant preparation y antes de intercambiar background o ejecutar tareas sujetas al acuerdo",
+        "documents":["Grant agreement y anexos","Borrador DESCA y control de cambios","Lista de background y restricciones","Matriz de gobierno, pagos, IP, publicación y responsabilidad"],
+        "steps":[{"action":"Comparar CA con grant agreement y propuesta.","evidence":"tabla de coherencia"},{"action":"Inventariar background y excluir activos no disponibles.","evidence":"anexo validado"},{"action":"Negociar gobierno, pagos, responsabilidad y salida.","evidence":"comentarios institucionales consolidados"},{"action":"Definir propiedad, protección, acceso y publicación.","evidence":"cláusulas y escenarios aprobados"},{"action":"Firmar versión final y comunicar reglas al equipo.","evidence":"acuerdo firmado y briefing interno"}],
+        "sources":[{"label":"Comisión Europea · DESCA Horizon Europe 2.0","url":"https://intellectual-property-helpdesk.ec.europa.eu/ip-management-and-resources/publications/model-consortium-agreement-desca-horizon-europe-20_en"},{"label":"UV · Horizonte Europa","url":"https://www.uv.es/uvweb/servicio-investigacion/es/internacionalizacion/horizonte-europa-1286318329389.html"}]
+      },
+      "resolution":{"decisionRules":["El consortium agreement complementa, pero no puede contradecir, el grant agreement.","Background y resultados deben describirse por activo y derecho, no con fórmulas vagas como todo el conocimiento del grupo."],"stopConditions":["No firmes un DESCA sin lista de background revisada.","No aceptes responsabilidad ilimitada o cesión automática sin revisión institucional."],"completionEvidence":["Coherencia GA-CA comprobada.","Background y cláusulas críticas aprobados.","Acuerdo firmado y equipo informado."],"escalation":["Eleva cualquier desviación del modelo que afecte responsabilidad o IP al STI jurídico.","Si no hay acuerdo antes del inicio, limita intercambios a lo formalmente cubierto y pide instrucciones."]}
+    },
+    {
+      "id":"firmar-nda-mta-dta","number":74,"category":"investigacion","baseChapter":29,"profile":"research-governance",
+      "title":"Firmar un NDA, MTA o acuerdo de transferencia de datos","scenario":"Una empresa o grupo quiere intercambiar información, muestras, software o datos y envía un documento para firmar antes de una reunión o envío.",
+      "aliases":["NDA","confidencialidad","MTA","DTA","transferencia material","data transfer agreement"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"Se utiliza el instrumento correcto, firmado por la UV, con objeto, uso, trazabilidad, devolución, publicación, propiedad y protección de datos delimitados.","firstMove":"Detén el intercambio sustantivo y remite documento, contraparte, finalidad, material o dato y fecha al STI; no firmes como persona física en nombre de la UV.",
+        "questions":["¿Se transfiere información, material físico, datos personales, software o varios elementos?","¿Quién es titular y qué uso, análisis, publicación o devolución se permitirá?","¿Hay datos, muestras humanas, patógenos, aduanas o derechos de terceros?"],
+        "unit":"Servicio de Transferencia e Innovación; DPD, ética, bioseguridad o Prevención cuando proceda","channel":"Negociación institucional y firma por representante autorizado antes del intercambio","deadline":"Antes de revelar, recibir, enviar o usar el objeto cubierto",
+        "documents":["Descripción del intercambio y finalidad","Borrador NDA, MTA o DTA","Titularidad, proyectos y restricciones previas","Plan de transporte, acceso, devolución, destrucción y publicación"],
+        "steps":[{"action":"Clasificar objeto y riesgos del intercambio.","evidence":"ficha información/material/datos"},{"action":"Congelar la transferencia hasta contar con cobertura.","evidence":"comunicación a la contraparte"},{"action":"Revisar uso, confidencialidad, IP, publicaciones y responsabilidad.","evidence":"control de cambios institucional"},{"action":"Activar DPD, ética, bioseguridad o aduanas si aplica.","evidence":"informes o autorizaciones"},{"action":"Firmar, inventariar lo transferido y cerrar o destruir al terminar.","evidence":"acuerdo, recibos y acta final"}],
+        "sources":[{"label":"UV · Otros negocios jurídicos: NDA y MTA","url":"https://www.uv.es/vds/es/colaboracion-empresa/otros-negocios-juridicos.html"},{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"}]
+      },
+      "resolution":{"decisionRules":["NDA protege información; MTA regula material; DTA regula datos: pueden coexistir, pero no son intercambiables.","La firma del investigador puede crear obligaciones personales sin obligar válidamente a la UV."],"stopConditions":["No envíes muestras, datos o código mientras se negocia el documento.","No aceptes que todo resultado futuro pertenezca automáticamente a la contraparte."],"completionEvidence":["Instrumento y firmante correctos.","Transferencia inventariada.","Uso, publicaciones y cierre trazables."],"escalation":["Activa DPD o CEIH para datos o muestras humanas.","Si la contraparte rechaza la firma institucional, no realices el intercambio y eleva al STI."]}
+    },
+    {
+      "id":"cambiar-ip-socio-institucion-proyecto","number":75,"category":"investigacion","baseChapter":26,"profile":"research-governance",
+      "title":"Cambiar de IP, socio o institución en un proyecto","scenario":"El IP se traslada, una entidad abandona, cambia el equipo o se pretende transferir parte del proyecto y hay tareas, personal, equipos y resultados en curso.",
+      "aliases":["cambio IP","cambio socio","transferir proyecto","amendment","baja beneficiario","traslado investigador"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El cambio se clasifica, autoriza y formaliza antes de ejecutarse, con continuidad científica, económica, laboral y de resultados documentada.","firstMove":"Notifica al Servicio de Investigación y entrega una foto del proyecto: financiador, fechas, tareas, saldo, contratos, equipos, datos y resultados pendientes.",
+        "questions":["¿Basta comunicación o exige autorización o amendment?","¿Qué obligaciones y recursos permanecen en la UV?","¿Cómo se garantiza personal, datos, equipos, propiedad y entregables?"],
+        "unit":"Servicio de Investigación o STI, financiador, RR. HH., gestión económica y Transferencia según efectos","channel":"Solicitud institucional al financiador o portal de gestión y acuerdos internos de entrega","deadline":"Antes de que el cambio ocurra o se incumpla una tarea; nunca esperar a la justificación final",
+        "documents":["Resolución o grant agreement","Estado técnico y financiero actualizado","Relación de personal, equipos, datos y resultados","Propuesta de cambio, continuidad y aceptación de partes"],
+        "steps":[{"action":"Inventariar impacto completo del cambio.","evidence":"foto de proyecto fechada"},{"action":"Clasificar comunicación, autorización o modificación formal.","evidence":"criterio de la unidad gestora"},{"action":"Diseñar continuidad de tareas, personas y recursos.","evidence":"plan aprobado por las partes"},{"action":"Solicitar y obtener autorización antes de ejecutar.","evidence":"resolución o amendment"},{"action":"Actualizar sistemas, contratos, accesos y expediente.","evidence":"comprobación posterior integral"}],
+        "sources":[{"label":"Comisión Europea · Grants, reporting y amendments","url":"https://rea.ec.europa.eu/horizon-europe-grants-reporting_en"},{"label":"UV · Gestión y trámites de investigación","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"}]
+      },
+      "resolution":{"decisionRules":["Un cambio de afiliación del IP no transfiere automáticamente la ayuda, equipos o resultados.","La regla depende del grant agreement o convocatoria y puede exigir consentimiento de varias entidades."],"stopConditions":["No muevas equipos, saldo o datos por acuerdo personal.","No dejes personal contratado sin dirección o financiación mientras se negocia."],"completionEvidence":["Impacto inventariado.","Autorización formal obtenida.","Sistemas y recursos actualizados."],"escalation":["Informa al financiador a través de la unidad institucional cuando peligren entregables.","Activa RR. HH. y Transferencia si hay contratos o resultados protegidos."]}
+    },
+    {
+      "id":"registrar-dedicaciones-proyectos","number":76,"category":"investigacion","baseChapter":28,"profile":"research-governance",
+      "title":"Registrar dedicaciones y hojas de tiempo en varios proyectos","scenario":"Participas en varias ayudas y debes declarar horas o dedicación sin superar disponibilidad ni imputar dos veces el mismo trabajo.",
+      "aliases":["DEDICA-i","timesheet","hojas de tiempo","dedicación proyectos","doble imputación","horas"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"Las dedicaciones mensuales son compatibles con docencia, ausencias y jornada, corresponden a tareas reales y quedan confirmadas en DEDICA-i o sistema exigido.","firstMove":"Lista todos los proyectos y periodos activos y compara sus dedicaciones con calendario laboral, docencia y ausencias antes de confirmar ningún mes.",
+        "questions":["¿Qué proyectos exigen registro horario, porcentaje o declaración exclusiva?","¿Qué tareas reales se realizaron cada periodo?","¿Existen ausencias, viajes, docencia o topes que reduzcan horas disponibles?"],
+        "unit":"Servicio de Investigación, responsables de proyecto y PDI o PI que declara en DEDICA-i","channel":"DEDICA-i y sistemas específicos del financiador cuando sean adicionales","deadline":"Cierre mensual o periodo indicado; corregir antes de firma y justificación",
+        "documents":["Relación de proyectos y periodos","Jornada, calendario, docencia y ausencias","Tareas, entregables, reuniones y cuaderno de trabajo","Reportes mensuales confirmados y firmados"],
+        "steps":[{"action":"Construir calendario integrado de disponibilidad.","evidence":"tabla mensual de jornada y ausencias"},{"action":"Relacionar horas con tareas y evidencias reales.","evidence":"registro de actividad"},{"action":"Detectar solapamientos y topes antes de declarar.","evidence":"control de consistencia"},{"action":"Introducir y revisar cada mes en DEDICA-i.","evidence":"reporte confirmado"},{"action":"Conservar informes firmados y corregir por procedimiento.","evidence":"archivo de justificación"}],
+        "sources":[{"label":"UV · DEDICA-i","url":"https://www.uv.es/uvweb/servicio-investigacion/es/dedica-i-1286033854298.html"},{"label":"Comisión Europea · Grants y reporting","url":"https://rea.ec.europa.eu/horizon-europe-grants-reporting_en"}]
+      },
+      "resolution":{"decisionRules":["La dedicación se basa en trabajo real y disponibilidad, no en repartir automáticamente el presupuesto.","Docencia, ausencias y otros proyectos limitan las horas declarables."],"stopConditions":["No firmes reportes con doble imputación o horas en días no trabajados.","No reconstruyas meses antiguos solo para cuadrar un objetivo financiero."],"completionEvidence":["Calendario conciliado.","Meses confirmados sin solapamientos.","Informes firmados archivados."],"escalation":["Comunica una incompatibilidad al responsable y Servicio de Investigación antes de firmar.","Si el sistema precarga datos erróneos, abre incidencia y conserva la corrección autorizada."]}
+    },
+    {
+      "id":"subcontratar-servicio-cientifico","number":77,"category":"investigacion","baseChapter":29,"profile":"research-governance",
+      "title":"Subcontratar un servicio científico especializado","scenario":"Un proyecto necesita fabricación, caracterización, consultoría o ensayo externo y debes decidir si es compra, subcontratación de tarea o colaboración.",
+      "aliases":["subcontratación","servicio científico","ensayo externo","fabricación externa","tercero proyecto"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La participación externa se clasifica y autoriza correctamente, tiene precio y entregable definidos y no sustituye indebidamente una tarea esencial del beneficiario.","firstMove":"Describe qué hará el tercero, qué entregará, quién diseña e interpreta y dónde figura esa actividad en propuesta y presupuesto.",
+        "questions":["¿Se compra un resultado estándar o se delega una tarea de la acción?","¿La subcontratación estaba prevista y es elegible?","¿El tercero necesita datos, muestras, background o derechos sobre resultados?"],
+        "unit":"Servicio de Investigación y unidad de contratación o gestión económica; STI para IP y confidencialidad","channel":"Consulta de elegibilidad y expediente de contratación o modificación antes del encargo","deadline":"Antes de pedir oferta vinculante, entregar material o iniciar el trabajo",
+        "documents":["Descripción de tarea y entregable","Propuesta, presupuesto y reglas de subcontratación","Memoria de necesidad, ofertas y selección","Contrato o pedido con IP, datos, confidencialidad y aceptación"],
+        "steps":[{"action":"Separar compra estándar, subcontratación y colaboración.","evidence":"clasificación motivada"},{"action":"Comprobar previsión, elegibilidad y necesidad de autorización.","evidence":"validación del gestor"},{"action":"Definir especificación, entregable y derechos.","evidence":"pliego o memoria"},{"action":"Tramitar selección y encargo por procedimiento aplicable.","evidence":"expediente aprobado"},{"action":"Recibir, validar e imputar con evidencia científica.","evidence":"informe de aceptación y factura"}],
+        "sources":[{"label":"UV · Gestión y trámites de investigación","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"},{"label":"Comisión Europea · IP Helpdesk Horizon Europe","url":"https://intellectual-property-helpdesk.ec.europa.eu/regional-helpdesks/european-ip-helpdesk/europe-frequently-asked-questions_en"}]
+      },
+      "resolution":{"decisionRules":["Si el tercero ejecuta una task del proyecto, puede ser subcontratación aunque facture un servicio.","La mejor relación científica no elimina competencia, mejor relación calidad-precio ni conflicto de interés."],"stopConditions":["No empieces si la convocatoria exigía autorización previa.","No entregues material o datos antes del contrato y permisos."],"completionEvidence":["Clasificación y elegibilidad validadas.","Expediente y contrato aprobados.","Entregable aceptado e imputación trazable."],"escalation":["Solicita modificación si la tarea no estaba prevista.","Declara conflicto y abstente si existe relación relevante con el proveedor."]}
+    },
+    {
+      "id":"plan-gestion-datos-ciencia-abierta","number":78,"category":"investigacion","baseChapter":31,"profile":"research-governance",
+      "title":"Preparar un plan de gestión de datos y cumplir ciencia abierta","scenario":"Un proyecto exige DMP y acceso abierto y necesitas decidir formatos, almacenamiento, metadatos, repositorio, licencias, embargos y excepciones.",
+      "aliases":["DMP","plan gestión datos","FAIR","ciencia abierta","RODERIC","repositorio","open data"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El plan describe todo el ciclo de vida, se actualiza con el proyecto y abre publicaciones y datos tanto como sea posible sin vulnerar datos, seguridad, contratos o explotación.","firstMove":"Inventaría tipos de dato, volumen, sensibilidad, responsables y obligaciones de convocatoria antes de elegir repositorio o licencia.",
+        "questions":["¿Qué datos se crean, reciben o reutilizan y quién es responsable?","¿Qué impide abrirlos: personas, secreto, seguridad, IP o contrato?","¿Qué metadatos, formato, repositorio y coste de preservación se necesitan?"],
+        "unit":"IP y data steward; Bibliotecas UV; DPD, ética, SIUV o Transferencia según restricciones","channel":"Plantilla del financiador o ARGOS y repositorios institucionales o disciplinares autorizados","deadline":"Al inicio y en cada hito exigido; revisar al cambiar datos, método, socio o publicación",
+        "documents":["Inventario y flujo de datos","Requisitos del financiador y política UV","Matriz acceso-seguridad-conservación","Plan DMP, metadatos, repositorio y licencias"],
+        "steps":[{"action":"Inventariar datos, responsables y riesgos.","evidence":"registro de conjuntos"},{"action":"Diseñar almacenamiento, nombres, versiones y copias.","evidence":"procedimiento técnico"},{"action":"Definir acceso, anonimización, conservación y destrucción.","evidence":"matriz de gobernanza"},{"action":"Elegir metadatos, repositorio y licencia compatibles.","evidence":"plan de depósito"},{"action":"Aprobar, publicar cuando proceda y actualizar el DMP.","evidence":"versiones fechadas y depósitos"}],
+        "sources":[{"label":"UV · Guía para la gestión de datos de investigación","url":"https://www.uv.es/uvweb/servicio-bibliotecas-documentacion/es/servicio-bibliotecas-documentacion/guia-gestion-datos-investigacion-1285867215074/Novetat.html?id=1286280453948"},{"label":"UV · Comisión de Ciencia Abierta","url":"https://www.uv.es/comision-ciencia-abierta/es/comision-ciencia-abierta.html"},{"label":"UV · RODERIC","url":"https://roderic.uv.es/home"}]
+      },
+      "resolution":{"decisionRules":["FAIR no significa necesariamente abierto: restricciones justificadas pueden exigir acceso controlado.","El DMP es un documento vivo y debe reflejar el flujo real, no solo la plantilla inicial."],"stopConditions":["No deposites datos personales o confidenciales en abierto.","No elijas una licencia si la UV o terceros no tienen los derechos necesarios."],"completionEvidence":["Inventario y riesgos completos.","DMP aprobado y actualizado.","Publicaciones y datos depositados o excepción justificada."],"escalation":["Consulta al DPD para datos personales y a Transferencia para explotación o secreto.","Pide a Bibliotecas ayuda con repositorio, metadatos y política editorial."]}
+    },
+    {
+      "id":"reutilizar-datos-muestras-consentimiento","number":79,"category":"investigacion","baseChapter":32,"profile":"research-governance",
+      "title":"Reutilizar datos, muestras o consentimientos de otro proyecto","scenario":"Quieres usar en un nuevo estudio datos o muestras ya recogidos y te dicen que están anonimizados o que el consentimiento anterior sirve.",
+      "aliases":["reutilizar datos","uso secundario","muestras humanas","consentimiento anterior","anonimización","biobanco"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El uso secundario se inicia solo cuando finalidad, base, consentimiento o habilitación, anonimización, custodio y evaluación ética cubren exactamente el nuevo estudio.","firstMove":"No copies ni recibas el conjunto: solicita protocolo original, hoja de información, consentimiento, dictamen, responsable y descripción de anonimización.",
+        "questions":["¿Es anonimización irreversible o seudonimización con clave?","¿La finalidad y cesión nuevas estaban informadas y autorizadas?","¿Quién custodia, decide acceso y conserva la clave o muestras?"],
+        "unit":"CEIH o comité aplicable, DPD UV, entidad custodio o biobanco e IP del nuevo estudio","channel":"Solicitud ética y de acceso institucional antes de transferir o analizar","deadline":"Antes de recibir, combinar, reidentificar o usar el material en el nuevo objetivo",
+        "documents":["Protocolo y dictamen originales","Información y consentimiento o base habilitante","Diccionario de datos o inventario de muestras","Protocolo nuevo, evaluación ética y acuerdo de acceso"],
+        "steps":[{"action":"Caracterizar material, identificabilidad y custodio.","evidence":"ficha de procedencia"},{"action":"Comparar finalidad original y nueva.","evidence":"matriz de compatibilidad"},{"action":"Consultar DPD y comité con documentación completa.","evidence":"informes o dictamen"},{"action":"Formalizar acceso, seguridad y prohibición de reidentificación.","evidence":"acuerdo y permisos"},{"action":"Usar, auditar y destruir o devolver según autorización.","evidence":"registro de uso y cierre"}],
+        "sources":[{"label":"UV · Instrucciones del CEIH","url":"https://www.uv.es/comision-etica-investigacion-experimental/es/etica-investigacion-humanos/instrucciones.html"},{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"}]
+      },
+      "resolution":{"decisionRules":["Codificar con una clave no anonimiza si alguien puede reidentificar.","Un dictamen del proyecto original no cubre automáticamente una finalidad o equipo nuevos."],"stopConditions":["No recibas datos o muestras hasta documentar acceso y cobertura.","No intentes reidentificar ni combinar bases fuera de lo aprobado."],"completionEvidence":["Procedencia y base verificadas.","Dictamen y acceso autorizados.","Uso y cierre auditables."],"escalation":["Si falta consentimiento o documentación, consulta al CEIH y DPD sobre alternativa legal, no la presumas.","Si descubres identificabilidad no prevista, detén análisis y comunica el cambio."]}
+    },
+    {
+      "id":"enviar-tecnologia-muestras-extranjero","number":80,"category":"investigacion","baseChapter":33,"profile":"research-governance",
+      "title":"Enviar muestras, prototipos o tecnología al extranjero","scenario":"Debes enviar un chip, láser, material, código o documentación técnica fuera de España y pueden existir aduanas, mercancía peligrosa, sanciones o control de doble uso.",
+      "aliases":["exportación","doble uso","aduanas","enviar muestras","prototipo extranjero","tecnología","láser"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La UV clasifica mercancía, destino, usuario y uso final, obtiene licencias y documentación de transporte y conserva trazabilidad de salida, recepción y retorno.","firstMove":"Detén el envío comercial o por mensajería y entrega a gestión/STI descripción técnica, código arancelario si existe, valor, destino, usuario final, uso y retorno previsto.",
+        "questions":["¿Es bien, software, tecnología intangible o material peligroso?","¿Figura en listas de doble uso o existe cláusula catch-all o sanción por destino?","¿Es exportación temporal, definitiva, reparación, préstamo o MTA?"],
+        "unit":"STI y gestión económica/aduanera UV; Ministerio de Economía para licencias; transportista autorizado y Prevención","channel":"Expediente institucional de exportación, aduana y transferencia; nunca envío personal no declarado","deadline":"Antes de contratar transporte, liberar código o entregar documentación técnica a la contraparte",
+        "documents":["Ficha técnica y clasificación","Destino, usuario y declaración de uso final","Contrato, MTA o préstamo y valor aduanero","Licencia, declaración, transporte, seguro y retorno"],
+        "steps":[{"action":"Clasificar bien, tecnología, peligrosidad y operación.","evidence":"ficha técnica y código"},{"action":"Cribar doble uso, sanciones, destino y usuario final.","evidence":"consulta y resultado documentados"},{"action":"Obtener MTA, licencia, aduana y transporte necesarios.","evidence":"autorizaciones"},{"action":"Embalar, declarar y enviar con seguimiento institucional.","evidence":"documentos de expedición"},{"action":"Confirmar recepción, uso y retorno o cierre.","evidence":"acuse, inventario y aduana final"}],
+        "sources":[{"label":"Ministerio de Economía · Productos y tecnologías de doble uso","url":"https://comercio.gob.es/ImportacionExportacion/Regimenes/Paginas/productos-doble-uso.aspx"},{"label":"BOE · Reglamento UE 2021/821","url":"https://www.boe.es/buscar/doc.php?id=DOUE-L-2021-80765"}]
+      },
+      "resolution":{"decisionRules":["Electrónica, sensores, láseres, software y tecnología pueden estar controlados aunque sean de uso civil.","La exportación intangible por correo, nube o acceso remoto también puede requerir análisis."],"stopConditions":["No declares muestra sin valor para evitar aduanas.","No envíes a un destino o usuario dudoso mientras se consulta la clasificación."],"completionEvidence":["Clasificación y cribado documentados.","Licencias y transporte válidos.","Recepción y retorno o cierre acreditados."],"escalation":["Eleva cualquier duda de doble uso al STI y autoridad competente antes de transferir.","Ante material peligroso, usa transportista y embalaje homologados con Prevención."]}
+    },
+    {
+      "id":"orden-patente-preprint-congreso-tesis","number":81,"category":"investigacion","baseChapter":30,"profile":"publication-transfer",
+      "title":"Elegir el orden entre patente, preprint, congreso y tesis","scenario":"Tienes un resultado nuevo, una fecha de defensa o congreso próxima y dudas si depositar, enviar, presentar o comunicar primero la invención.",
+      "aliases":["patente antes publicar","preprint","congreso","tesis","novedad","embargo"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La divulgación se calendariza después de la comunicación y protección necesarias, preservando evaluación académica, contratos y plazos editoriales.","firstMove":"Congela resúmenes, repositorios, defensas públicas y envíos externos y comunica el resultado al STI con todas las divulgaciones previstas y sus fechas.",
+        "questions":["¿Qué elementos son nuevos y quién los generó?","¿Qué acto hará accesible el resultado y en qué fecha?","¿Hay cotitulares, financiadores, tesis o contratos que condicionen protección y publicación?"],
+        "unit":"Sección de Innovación y Valorización del STI, Escuela de Doctorado o centro y equipo autor","channel":"Trámite de comunicación de resultado y coordinación escrita del calendario de divulgación","deadline":"Antes de cualquier divulgación; la comunicación de invención debe respetar además el plazo legal aplicable",
+        "documents":["Memoria técnica y evidencias de fecha","Autores, inventores y entidades participantes","Lista de divulgaciones previstas","Contratos, ayudas y calendario de patente, tesis y publicación"],
+        "steps":[{"action":"Delimitar resultado, inventores y titulares potenciales.","evidence":"ficha de resultado"},{"action":"Inventariar toda divulgación pasada y prevista.","evidence":"cronología firmada"},{"action":"Comunicar al STI con margen para evaluar.","evidence":"acuse del trámite"},{"action":"Acordar protección y secuencia con cotitulares y órganos académicos.","evidence":"plan aprobado"},{"action":"Liberar envíos y depósitos solo tras el hito indicado.","evidence":"patente presentada y versiones publicadas"}],
+        "sources":[{"label":"UV · Comunicación y evaluación de resultados","url":"https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html"},{"label":"OEPM · Invenciones y patentes","url":"https://www.oepm.es/es/invenciones/"}]
+      },
+      "resolution":{"decisionRules":["La presentación de patente debe preceder a la divulgación pública si se quiere preservar novedad.","Depósito de tesis, repositorio, preprint, póster y charla pueden ser divulgación aunque no haya artículo."],"stopConditions":["No envíes el abstract mientras el STI evalúa sin confirmar su contenido.","No omitas inventores o cotitulares para acelerar la solicitud."],"completionEvidence":["Resultado comunicado.","Calendario acordado.","Protección y divulgaciones fechadas."],"escalation":["Si una fecha académica es inamovible, coordina embargo o medida válida con STI y órgano académico.","Si ya hubo divulgación, informa de inmediato con contenido, fecha y audiencia para evaluar opciones reales."]}
+    },
+    {
+      "id":"detectar-revista-congreso-depredador","number":82,"category":"investigacion","baseChapter":31,"profile":"publication-transfer",
+      "title":"Detectar una revista o congreso depredador","scenario":"Recibes una invitación halagadora con revisión rápida, indexación prometida y APC o inscripción urgente y quieres saber si es legítima.",
+      "aliases":["revista depredadora","congreso depredador","editorial fraudulenta","APC sospechosa","indexación falsa"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La decisión se basa en identidad editorial, indexación verificada, revisión, archivo, costes y experiencia contrastable, no en el correo recibido.","firstMove":"No pulses enlaces de pago ni envíes manuscrito; abre desde cero los directorios y bases oficiales de la Biblioteca y verifica título, ISSN, editorial y dominio.",
+        "questions":["¿La indexación se confirma en la fuente original?","¿Comité, dirección, revisión, archivo y tasas son transparentes?","¿El dominio, ISSN y cuenta de pago corresponden realmente al editor?"],
+        "unit":"Biblioteca UV para evaluación de fuentes y equipo investigador para la decisión científica","channel":"Consulta a La Bibliotec@ Respon y verificación independiente de cada afirmación","deadline":"Antes de enviar manuscrito, transferir copyright, pagar o aceptar formar parte de comité",
+        "documents":["Correo y dominio recibido","ISSN, editorial y política de revisión","Comprobaciones en índices y directorios originales","APC, contrato, archivo y política de retractación"],
+        "steps":[{"action":"Separar invitación de identidad real del título y editor.","evidence":"ficha ISSN-dominio-editor"},{"action":"Verificar indexación en cada base original.","evidence":"registros fechados"},{"action":"Revisar comité, revisión, archivo, ética y costes.","evidence":"checklist completo"},{"action":"Consultar a Biblioteca ante señales contradictorias.","evidence":"respuesta de asesoramiento"},{"action":"Documentar decisión y bloquear remitente si es fraude.","evidence":"informe breve y alternativa elegida"}],
+        "sources":[{"label":"UV · Formación para detectar revistas espurias","url":"https://www.uv.es/uvweb/servicio-formacion-permanente-innovacion-educativa/es/oferta-formativa/herramientas-recursos-publicacion-acceso-abierto-1286213964422/PDIFormacio.html?id=1286243414096"},{"label":"DOAJ · Directory of Open Access Journals","url":"https://doaj.org/"}]
+      },
+      "resolution":{"decisionRules":["Una indexación se confirma en la base citada, nunca en el logotipo de la revista.","Rapidez, APC o juventud no prueban por sí solas fraude; decide por el conjunto de evidencias."],"stopConditions":["No pagues por transferencia a una cuenta personal o dominio no verificado.","No cedas derechos antes de comprobar revista y contrato."],"completionEvidence":["Identidad e indexación verificadas.","Checklist editorial conservado.","Decisión y alternativa documentadas."],"escalation":["Pide a Biblioteca una segunda revisión si el título suplanta a otro o cambia de dominio.","Si ya enviaste o pagaste, conserva comunicaciones y solicita retirada y asesoramiento sin enviar más datos."]}
+    },
+    {
+      "id":"cumplir-acceso-abierto-financiador","number":83,"category":"investigacion","baseChapter":31,"profile":"publication-transfer",
+      "title":"Cumplir las obligaciones de acceso abierto del financiador","scenario":"Un artículo está aceptado y debes elegir licencia, versión y repositorio y comprobar si existe acuerdo transformativo sin incumplir la ayuda.",
+      "aliases":["open access","acceso abierto","APC","acuerdo transformativo","RODERIC","versión aceptada","embargo"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La publicación cumple mandato, depósito, licencia, plazo y agradecimientos usando la vía menos costosa y compatible con derechos.","firstMove":"Antes de seleccionar open access de pago, compara contrato de ayuda, política editorial, acuerdo transformativo y posibilidad de depositar la versión aceptada.",
+        "questions":["¿Qué versión, licencia y plazo exige el financiador?","¿La revista está cubierta y quedan fondos o cupos?","¿Qué derechos retiene la UV o autor para depositar?"],
+        "unit":"Biblioteca UV y Servicio de Investigación; autor de correspondencia y financiador","channel":"Flujo del editor, GREC/RODERIC y repositorio o portal exigido por la ayuda","deadline":"Antes de aceptar licencia editorial y dentro del plazo de depósito del financiador",
+        "documents":["Grant agreement o convocatoria","Política editorial y acuerdo transformativo vigente","Versión enviada, aceptada y publicada","Licencia, DOI, depósito y agradecimientos"],
+        "steps":[{"action":"Extraer obligaciones de acceso abierto y datos.","evidence":"tabla de requisitos"},{"action":"Verificar cobertura de acuerdo y elegibilidad del autor.","evidence":"consulta del título"},{"action":"Elegir vía y licencia compatibles antes de firmar.","evidence":"decisión documentada"},{"action":"Depositar versión permitida con metadatos y embargo correcto.","evidence":"registro RODERIC"},{"action":"Comprobar DOI, financiación y reporte del proyecto.","evidence":"publicación y portal conciliados"}],
+        "sources":[{"label":"UV · Descuentos para publicar en abierto","url":"https://www.uv.es/uvweb/servicio-bibliotecas-documentacion/es/investigacion/descuentos-publicar-oa/descuentos-publicar-abierto-1286386965819.html"},{"label":"UV · RODERIC","url":"https://roderic.uv.es/home"},{"label":"UV · Política y compromisos de ciencia abierta","url":"https://www.uv.es/comision-ciencia-abierta/es/comision/compromisos.html"}]
+      },
+      "resolution":{"decisionRules":["Un acuerdo transformativo depende del título, tipo de artículo, afiliación y cupo vigentes.","Pagar APC no sustituye el depósito o licencia exigidos por el financiador."],"stopConditions":["No elijas una licencia incompatible por cerrar rápido el flujo editorial.","No pagues APC sin comprobar cobertura y elegibilidad del proyecto."],"completionEvidence":["Requisitos identificados.","Licencia y vía justificadas.","Depósito y reporte completados."],"escalation":["Consulta a Biblioteca antes de aceptar el acuerdo editorial.","Si la política del editor contradice la ayuda, pide una solución de derechos o cambia de vía antes de publicar."]}
+    },
+    {
+      "id":"corregir-retractar-articulo","number":84,"category":"investigacion","baseChapter":34,"profile":"publication-transfer",
+      "title":"Corregir o retractar un artículo publicado","scenario":"Detectas un error en datos, análisis, figura, autoría o conclusiones y necesitas decidir si basta corrección o afecta a la fiabilidad del trabajo.",
+      "aliases":["erratum","correction","retraction","retractar artículo","error publicado","expresión preocupación"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El registro científico se corrige de forma transparente y proporcional, preservando originales, notificando a coautores, revista, financiadores e institución cuando corresponda.","firstMove":"Congela archivos y análisis, documenta el error con versión y alcance y convoca a todos los coautores; no sustituyas silenciosamente datos en repositorios.",
+        "questions":["¿El error cambia resultados, conclusiones o solo presentación?","¿Es accidental, metodológico o indicio de conducta irregular?","¿Qué artículos, datos, patentes, tesis o informes dependen del resultado?"],
+        "unit":"Autores y revista; responsables de integridad UV, financiador y repositorio según alcance","channel":"Comunicación documentada al editor y cauce de integridad si existe posible mala conducta","deadline":"Sin demora tras validar el error; prioriza evitar nuevas citas, decisiones o usos incorrectos",
+        "documents":["Datos y código originales preservados","Descripción reproducible del error","Acuerdo o posiciones de coautores","Correspondencia editorial y texto de corrección o retractación"],
+        "steps":[{"action":"Preservar estado original y reproducir el problema.","evidence":"copia inmutable y análisis"},{"action":"Evaluar alcance científico y documentos dependientes.","evidence":"mapa de impacto"},{"action":"Informar a coautores e institución cuando proceda.","evidence":"comunicaciones fechadas"},{"action":"Proponer al editor la medida proporcional.","evidence":"solicitud y texto transparente"},{"action":"Actualizar repositorios, proyectos y comunicaciones relacionadas.","evidence":"enlaces cruzados y cierre"}],
+        "sources":[{"label":"COPE · Retraction Guidelines","url":"https://publicationethics.org/sites/default/files/retraction-guidelines-cope.pdf"},{"label":"UV · Procedimiento de integridad","url":"https://www.uv.es/uvweb/universidad/es/uvintegridad/procedimiento-inicial-1286234683901.html"}]
+      },
+      "resolution":{"decisionRules":["Si el hallazgo principal sigue fiable, puede bastar una corrección; si no, considera retractación conforme al editor.","Un indicio de fabricación o manipulación exige preservar evidencia y activar integridad, no resolver solo entre autores."],"stopConditions":["No borres datos, correos o versiones originales.","No minimices públicamente el error antes de medir su alcance."],"completionEvidence":["Error reproducido y alcance evaluado.","Medida editorial publicada.","Registros dependientes actualizados."],"escalation":["Ante posible mala conducta, consulta a integridad UV separando hechos de sospechas.","Si un coautor bloquea la corrección, informa al editor con evidencia y posiciones documentadas."]}
+    },
+    {
+      "id":"responder-peticion-datos-codigo","number":85,"category":"investigacion","baseChapter":31,"profile":"publication-transfer",
+      "title":"Responder a una petición de datos o código tras publicar","scenario":"Otro equipo pide datos brutos, scripts o parámetros para reproducir un artículo y existen compromisos de disponibilidad, datos personales o software de terceros.",
+      "aliases":["data availability","pedir datos","código reproducibilidad","datos brutos","repositorio","request data"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La respuesta cumple la declaración publicada y comparte un paquete reproducible o explica una restricción legítima mediante acceso controlado.","firstMove":"Localiza la data availability statement, consentimiento, DMP, licencias y versión exacta del análisis antes de adjuntar archivos por correo.",
+        "questions":["¿Qué se prometió en artículo, repositorio y proyecto?","¿Los datos son anónimos, seudónimos, confidenciales o de tercero?","¿El código contiene claves, dependencias o componentes no redistribuibles?"],
+        "unit":"Equipo autor, custodio de datos, Biblioteca; DPD, ética o Transferencia según restricción","channel":"Repositorio persistente o procedimiento de acceso controlado, no adjuntos improvisados","deadline":"Responder en plazo razonable y según política editorial o compromiso contractual",
+        "documents":["Declaración de disponibilidad y DMP","Consentimiento, dictamen y acuerdos de datos","Inventario de archivos, versiones y dependencias","Licencia, README, metadatos y registro de acceso"],
+        "steps":[{"action":"Verificar compromiso y legitimación para compartir.","evidence":"matriz promesa-restricción"},{"action":"Preparar paquete reproducible sin secretos ni identificadores.","evidence":"revisión de archivos y metadatos"},{"action":"Elegir acceso abierto, embargo o comité de acceso.","evidence":"decisión motivada"},{"action":"Depositar o transferir con licencia y versión.","evidence":"DOI o acuerdo de acceso"},{"action":"Responder y registrar qué se entregó.","evidence":"comunicación y log de acceso"}],
+        "sources":[{"label":"UV · Guía de gestión de datos","url":"https://www.uv.es/uvweb/servicio-bibliotecas-documentacion/es/servicio-bibliotecas-documentacion/guia-gestion-datos-investigacion-1285867215074/Novetat.html?id=1286280453948"},{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"}]
+      },
+      "resolution":{"decisionRules":["Tan abierto como sea posible no autoriza a revelar datos personales, secretos o derechos de terceros.","Una restricción debe explicarse y, si es posible, sustituirse por acceso controlado o datos derivados."],"stopConditions":["No envíes bases identificables por correo ordinario.","No compartas credenciales, claves API o software sin derecho de redistribución."],"completionEvidence":["Compromiso y restricciones evaluados.","Paquete o acceso reproducible creado.","Entrega registrada."],"escalation":["Consulta al DPD o CEIH si el consentimiento no cubre el acceso solicitado.","Si la declaración publicada fue incorrecta, coordina corrección con la revista."]}
+    },
+    {
+      "id":"licenciar-patente-know-how-empresa","number":86,"category":"investigacion","baseChapter":30,"profile":"publication-transfer",
+      "title":"Licenciar una patente o know-how a una empresa","scenario":"Una empresa quiere explotar un resultado UV y pide exclusividad, acceso al know-how, opción de licencia o condiciones económicas.",
+      "aliases":["licencia patente","know-how","exclusividad","regalías","royalties","opción licencia"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La UV negocia una licencia con alcance, exclusividad, hitos, contraprestación, mejoras y reversión que favorecen explotación efectiva y protegen obligaciones previas.","firstMove":"Registra el interés en el STI y no envíes know-how no publicado ni aceptes términos comerciales antes de revisar titularidad y compromisos.",
+        "questions":["¿Qué activos y territorios necesita realmente la empresa?","¿Existen cotitulares, licencias previas o derechos del financiador?","¿Qué hitos, mínimos y retorno justifican una exclusividad?"],
+        "unit":"Sección de Innovación y Valorización del STI, titulares y representante autorizado de la UV","channel":"Negociación institucional bajo confidencialidad y contrato de licencia firmado","deadline":"Antes de entregar know-how, permitir explotación o anunciar acuerdo",
+        "documents":["Patente o resultado y cadena de titularidad","Acuerdos de cotitularidad y financiación","Plan de negocio o explotación de la empresa","Term sheet y licencia con anexos técnicos"],
+        "steps":[{"action":"Verificar activos, titulares y restricciones.","evidence":"informe de cadena de derechos"},{"action":"Recabar interés y capacidad de explotación.","evidence":"plan y due diligence"},{"action":"Definir alcance, exclusividad, hitos y economía.","evidence":"term sheet aprobado"},{"action":"Negociar know-how, mejoras, sublicencia y terminación.","evidence":"control de cambios jurídico"},{"action":"Firmar y monitorizar pagos e hitos.","evidence":"licencia y cuadro de seguimiento"}],
+        "sources":[{"label":"UV · Comunicación y evaluación de resultados","url":"https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html"},{"label":"UV · Valorización y transferencia","url":"https://www.uv.es/vds/es/transferencia/valorizacion-transferencia.html"}]
+      },
+      "resolution":{"decisionRules":["Exclusividad debe delimitarse por campo, territorio y tiempo y vincularse a explotación verificable.","Patente y know-how son activos distintos y pueden exigir obligaciones distintas."],"stopConditions":["No negocies en nombre de la UV ni reveles know-how sin NDA.","No prometas derechos de cotitulares o terceros."],"completionEvidence":["Titularidad validada.","Licencia institucional firmada.","Hitos y retornos monitorizados."],"escalation":["Si hay cotitularidad, el STI debe coordinar consentimiento y acuerdo.","Si la empresa no explota o incumple mínimos, activa revisión o terminación según contrato."]}
+    },
+    {
+      "id":"proteger-resultado-cotitular","number":87,"category":"investigacion","baseChapter":30,"profile":"publication-transfer",
+      "title":"Proteger un resultado creado con otra universidad o empresa","scenario":"La invención tiene contribuciones de personal UV y externo y es necesario acordar inventores, titulares, porcentajes, costes y gestión antes de patentar.",
+      "aliases":["cotitularidad","joint ownership","varias universidades","inventores externos","porcentajes patente"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"Inventoría y titularidad se determinan por contribuciones y vínculo, y un acuerdo regula porcentajes, protección, costes, licencias y decisiones.","firstMove":"Reúne cuadernos, versiones, contratos y contribuciones técnicas y comunica conjuntamente el resultado sin repartir porcentajes por cortesía o jerarquía.",
+        "questions":["¿Quién contribuyó a las características inventivas?","¿Qué entidad empleaba o vinculaba a cada inventor?","¿Qué contrato regula resultados y quién liderará protección y explotación?"],
+        "unit":"STI UV y oficinas homólogas de las entidades participantes","channel":"Comunicación de resultado y negociación de acuerdo de cotitularidad antes de solicitud o licencia","deadline":"Antes de divulgar y con margen para acordar la primera solicitud y sus costes",
+        "documents":["Memoria de invención y estado del arte","Registro de contribuciones y vínculos","Contratos, convenios y ayudas","Borrador de cotitularidad y estrategia de protección"],
+        "steps":[{"action":"Reconstruir contribuciones inventivas con evidencia.","evidence":"tabla persona-característica-fecha"},{"action":"Determinar entidad titular por cada vínculo y contrato.","evidence":"cadena de titularidad"},{"action":"Acordar porcentajes y liderazgo de protección.","evidence":"term sheet interinstitucional"},{"action":"Regular costes, licencias, publicación y decisiones.","evidence":"acuerdo de cotitularidad"},{"action":"Presentar y gestionar la protección coordinada.","evidence":"solicitud y calendario de acciones"}],
+        "sources":[{"label":"UV · Comunicación y evaluación de resultados","url":"https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html"},{"label":"Comisión Europea · Propiedad conjunta en Horizon Europe","url":"https://intellectual-property-helpdesk.ec.europa.eu/regional-helpdesks/european-ip-helpdesk/europe-frequently-asked-questions_en"}]
+      },
+      "resolution":{"decisionRules":["Inventoría responde a contribución inventiva; titularidad responde a ley, vínculo y contrato.","Porcentaje de autores, inventores y titulares no tiene por qué coincidir."],"stopConditions":["No presentes una solicitud unilateral omitiendo entidades participantes.","No uses orden de autoría como reparto automático de patente."],"completionEvidence":["Inventores y cadena de titularidad documentados.","Acuerdo de cotitularidad firmado.","Protección coordinada."],"escalation":["Si hay desacuerdo de inventores, preserva evidencia y deja que las oficinas y asesores especializados lo resuelvan.","Si una divulgación es inminente, coordina medida urgente común sin saltarte cotitulares."]}
+    },
+    {
+      "id":"comercializar-software-open-source","number":88,"category":"investigacion","baseChapter":31,"profile":"publication-transfer",
+      "title":"Comercializar software con dependencias de código abierto","scenario":"Un prototipo incorpora paquetes open source, contribuciones de estudiantes y código de proyectos y se quiere licenciar a una empresa o spin-off.",
+      "aliases":["software comercial","open source","GPL","MIT","dependencias","SBOM","doble licencia"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La cadena de autoría y licencias es verificable, las dependencias son compatibles y el modelo comercial no promete derechos que la UV no posee.","firstMove":"Congela una versión y genera inventario de archivos, autores, dependencias, licencias, datos de entrenamiento y componentes de terceros.",
+        "questions":["¿Quién escribió cada parte y bajo qué vínculo o encargo?","¿Qué dependencias se distribuyen, enlazan o usan como servicio?","¿Alguna licencia copyleft condiciona la distribución o código derivado?"],
+        "unit":"STI UV y responsables del software; SIUV o asesoría técnica para seguridad y dependencias","channel":"Comunicación de resultado, auditoría de licencias y contrato o licencia institucional","deadline":"Antes de entregar repositorio, binario, acceso comercial o firmar con empresa",
+        "documents":["Repositorio y versión etiquetada","Lista de autores, contribuciones y contratos","SBOM o inventario de dependencias y licencias","Modelo de distribución, licencia y oferta comercial"],
+        "steps":[{"action":"Congelar versión y reconstruir autoría.","evidence":"tag y tabla de contribuciones"},{"action":"Generar inventario de dependencias y activos.","evidence":"SBOM"},{"action":"Analizar compatibilidad con distribución prevista.","evidence":"matriz licencia-uso"},{"action":"Corregir componentes o permisos incompatibles.","evidence":"nueva versión auditada"},{"action":"Formalizar licencia, soporte y explotación por la UV.","evidence":"contrato y paquete entregado"}],
+        "sources":[{"label":"UV · Comunicación de resultados y software","url":"https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html"},{"label":"Comisión Europea · European IP Helpdesk","url":"https://intellectual-property-helpdesk.ec.europa.eu/index_en"}]
+      },
+      "resolution":{"decisionRules":["Código accesible no equivale a código sin licencia ni a derecho de relicenciar.","La compatibilidad depende de cómo se combine y distribuya cada componente."],"stopConditions":["No elimines avisos o atribuciones para facilitar la venta.","No incluyas código de estudiantes, socios o empresas sin cesión o permiso."],"completionEvidence":["Autoría y SBOM completos.","Compatibilidad documentada.","Licencia institucional firmada."],"escalation":["Sustituye o aísla una dependencia incompatible antes de negociar.","Consulta al STI si se plantea doble licencia, SaaS o cesión exclusiva."]}
+    },
+    {
+      "id":"mostrar-prototipo-empresa","number":89,"category":"investigacion","baseChapter":30,"profile":"publication-transfer",
+      "title":"Mostrar un prototipo a una empresa interesada","scenario":"Una empresa quiere ver un sensor o chip funcionando y pide una demo, muestras, medidas o acceso al laboratorio antes de decidir una colaboración.",
+      "aliases":["demo empresa","mostrar prototipo","prueba concepto","visita laboratorio","evaluación tecnología","sample"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La demostración revela solo lo necesario, está cubierta por confidencialidad y seguridad y deja claro que no es venta, garantía ni cesión de derechos.","firstMove":"Define qué verá, recibirá o medirá la empresa y qué permanecerá oculto; activa NDA o MTA y autorización de acceso antes de fijar la demo.",
+        "questions":["¿La empresa observará, operará, recibirá o se llevará el prototipo?","¿Qué información es pública, confidencial o pendiente de protección?","¿Quién asume riesgo, daños, transporte y resultados de la evaluación?"],
+        "unit":"STI UV, responsable de laboratorio y Prevención; empresa bajo acuerdo institucional","channel":"NDA/MTA, agenda y autorización nominativa de acceso o envío","deadline":"Antes de revelar arquitectura, enviar muestras o permitir entrada y uso de equipos",
+        "documents":["Descripción y estado del prototipo","Resultado comunicado o estrategia de protección","NDA, MTA o acuerdo de evaluación","Plan de demo, riesgos, asistentes y registro de lo entregado"],
+        "steps":[{"action":"Delimitar objetivo, información y material de la demo.","evidence":"guion aprobado"},{"action":"Comprobar protección y titularidad.","evidence":"respuesta del STI"},{"action":"Firmar NDA/MTA y regular resultados de prueba.","evidence":"acuerdo firmado"},{"action":"Autorizar acceso y preparar seguridad y acompañamiento.","evidence":"lista y briefing"},{"action":"Registrar demo, feedback y cualquier entrega o devolución.","evidence":"acta y recibos"}],
+        "sources":[{"label":"UV · Otros negocios jurídicos","url":"https://www.uv.es/vds/es/colaboracion-empresa/otros-negocios-juridicos.html"},{"label":"UV · Comunicación y evaluación de resultados","url":"https://www.uv.es/uvweb/servicio-investigacion/es/transferencia-resultados/comunicacion-evaluacion-resultados-1286312411604.html"}]
+      },
+      "resolution":{"decisionRules":["Observar una demo, recibir una muestra y operar el equipo requieren coberturas distintas.","El NDA no regula por sí solo daños, custodia, resultados o propiedad de mejoras."],"stopConditions":["No improvises una visita a un laboratorio con riesgos.","No entregues prototipo o datos brutos sin recibo y condiciones."],"completionEvidence":["Protección y acuerdos previos.","Acceso y demo controlados.","Entrega, devolución y feedback registrados."],"escalation":["Si la empresa exige prueba en sus instalaciones, añade transporte, seguro, préstamo y exportación si aplica.","Si pide cambios o trabajo nuevo, conviértelo en contrato artículo 60 o proyecto, no en favores sucesivos."]}
+    },
+    {
+      "id":"usar-nombre-logotipo-uv-iniciativa-externa","number":90,"category":"investigacion","baseChapter":35,"profile":"publication-transfer",
+      "title":"Usar el nombre o logotipo de la UV en una iniciativa externa","scenario":"Una empresa, congreso, proyecto o web quiere mostrar el logo UV o presentarte de forma que podría parecer respaldo institucional.",
+      "aliases":["logo UV","marca UV","identidad corporativa","aval institucional","afiliación","web empresa"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La afiliación académica se comunica con exactitud y cualquier uso de marca o apariencia de respaldo sigue autorización, versión y composición institucionales.","firstMove":"Separa una mención factual a tu afiliación de un uso de marca o de una afirmación de colaboración, patrocinio o validación por la UV.",
+        "questions":["¿Se identifica a una persona o se presenta a la UV como organizadora, socia o avalista?","¿Existe convenio, proyecto o autorización que sustente la relación?","¿La pieza usa archivos y composición oficiales sin modificarlos?"],
+        "unit":"Unidad Web y Marketing o Servicio de Marketing y Comunicación; estructura UV responsable de la relación","channel":"Solicitud de autorización y uso de recursos oficiales de identidad visual","deadline":"Antes de publicar, imprimir, patrocinar o anunciar la iniciativa",
+        "documents":["Pieza, web o material propuesto","Descripción de relación institucional real","Convenio, proyecto o autorización aplicable","Archivo oficial y aprobación de composición"],
+        "steps":[{"action":"Clasificar afiliación personal, colaboración o respaldo institucional.","evidence":"texto de relación validado"},{"action":"Comprobar instrumento que sustenta el uso.","evidence":"convenio o autorización"},{"action":"Solicitar aprobación a la unidad competente.","evidence":"respuesta institucional"},{"action":"Aplicar logotipo, jerarquía y textos oficiales.","evidence":"arte final aprobado"},{"action":"Retirar o actualizar cuando termine la relación.","evidence":"revisión de soportes"}],
+        "sources":[{"label":"UV · Logotipo institucional","url":"https://www.uv.es/unidad-web-marketing/es/identidad-visual/elementos-identidad/logotipo.html"},{"label":"UV · Logos e iconos oficiales","url":"https://www.uv.es/uvweb/universidad/es/universitat/manual-identitat-visual/logos-iconos-1285882969667.html"}]
+      },
+      "resolution":{"decisionRules":["Indicar afiliación personal no equivale a autorizar el uso del logo ni a afirmar respaldo de la UV.","Una colaboración solo puede comunicarse con el alcance del instrumento firmado."],"stopConditions":["No permitas que una empresa use el logo para vender o validar un producto sin autorización.","No redibujes, combines o modifiques la marca fuera del manual."],"completionEvidence":["Relación institucional definida.","Uso y diseño autorizados.","Retirada o actualización controlada."],"escalation":["Consulta a Marketing si la apariencia de respaldo es dudosa.","Si ya existe uso indebido, solicita corrección y conserva capturas y comunicaciones."]}
+    },
+    {
+      "id":"recuperar-gasto-pagado-personalmente","number":91,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Recuperar un gasto que has pagado personalmente","scenario":"Has adelantado una inscripción, material urgente u otro gasto relacionado con la UV y necesitas saber si puede reintegrarse y con cargo a qué presupuesto.",
+      "aliases":["reembolso","gasto de bolsillo","pagué yo","recuperar dinero","caja fija","indemnización"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El reintegro, si procede, queda autorizado, justificado y contabilizado con factura a nombre de la UV y prueba del pago, sin convertir el adelanto personal en vía ordinaria de compra.","firstMove":"No vuelvas a pagar ni prometas el reintegro: comunica el gasto de inmediato a la unidad gestora y aporta factura, justificante bancario, motivo y proyecto propuesto.",
+        "questions":["¿El gasto era elegible, necesario y estaba autorizado?","¿La factura identifica a la UV y el pago personal es demostrable?","¿Existe crédito y admite el financiador este tipo y fecha de gasto?"],
+        "unit":"Unidad de gestión económica del departamento, instituto o proyecto; responsable del crédito","channel":"Expediente de reintegro o caja fija indicado por la unidad, nunca compensación informal","deadline":"Inmediatamente y, en todo caso, dentro del ejercicio y del plazo de justificación del proyecto",
+        "documents":["Factura completa a nombre de la UV","Justificante bancario del pago personal","Memoria breve de necesidad y excepcionalidad","Autorización y aplicación presupuestaria","Programa, matrícula o evidencia de recepción si aplica"],
+        "steps":[{"action":"Comunicar el adelanto y pedir comprobación de reintegrabilidad.","evidence":"consulta registrada"},{"action":"Validar factura, elegibilidad, crédito y ausencia de doble financiación.","evidence":"conformidad de unidad y responsable"},{"action":"Aportar pago personal y motivo de la excepción.","evidence":"extracto y memoria"},{"action":"Tramitar por el procedimiento económico indicado.","evidence":"expediente o asiento"},{"action":"Comprobar abono y archivar trazabilidad completa.","evidence":"transferencia y expediente cerrado"}],
+        "sources":[{"label":"UV · Instrucción de gestión económica 1/2025","url":"https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693"},{"label":"UV · Servicio de Contabilidad y Presupuestos","url":"https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/servicio-contabilidad-presupuestos-1285867371947.html"}]
+      },
+      "resolution":{"decisionRules":["Haber pagado un gasto relacionado con el trabajo no crea por sí solo derecho al reintegro.","El gasto debe superar los mismos controles de necesidad, factura, elegibilidad y crédito que si se hubiera tramitado antes."],"stopConditions":["No fabriques una factura distinta ni presentes un recibo incompleto como factura.","No cargues el mismo gasto a dieta, caja fija y proyecto simultáneamente."],"completionEvidence":["Procedencia autorizada.","Factura y pago conciliados.","Abono y aplicación presupuestaria comprobados."],"escalation":["Si falta factura a nombre de la UV, pide rectificación al proveedor antes de tramitar.","Si se deniega, solicita motivo escrito; no lo repercutas a otra partida sin elegibilidad."]}
+    },
+    {
+      "id":"pagar-factura-proforma-anticipo-proveedor","number":92,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Pagar una proforma o un anticipo a un proveedor","scenario":"El proveedor exige pago anticipado para fabricar, reservar o enviar un equipo y solo ha emitido una factura proforma.",
+      "aliases":["proforma","prepago","pago anticipado","anticipo proveedor","advance payment","pago antes entrega"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El anticipo excepcional está justificado y autorizado, con pedido y condiciones claras, y se obtiene la factura definitiva y la recepción después del pago.","firstMove":"Envía la proforma y las condiciones del proveedor a la unidad gestora antes de aceptar o pagar; explica por qué no es posible el pago ordinario tras recepción.",
+        "questions":["¿Es realmente obligatorio anticipar y hay alternativa equivalente?","¿La proforma identifica proveedor, UV, objeto, impuestos, moneda y cuenta?","¿Qué protege a la UV si no hay entrega, hay retraso o debe devolverse el anticipo?"],
+        "unit":"Unidad de gestión económica, responsable de crédito y órgano de contratación o autorización competente","channel":"Pedido o expediente previo con autorización expresa de anticipo y posterior factura definitiva","deadline":"Antes de aceptar condiciones, transferir fondos o iniciar fabricación",
+        "documents":["Oferta y proforma completas","Justificación de necesidad y pago anticipado","Pedido, contrato o aceptación institucional","Condiciones de entrega, devolución y garantía","Factura definitiva y acta de recepción posterior"],
+        "steps":[{"action":"Validar proveedor, objeto, crédito y vía de compra.","evidence":"expediente abierto"},{"action":"Justificar por qué el anticipo es necesario y proporcionado.","evidence":"informe breve"},{"action":"Fijar entrega, devolución, impuestos y garantía.","evidence":"pedido o condiciones aceptadas"},{"action":"Autorizar y ejecutar el pago institucional.","evidence":"orden y justificante"},{"action":"Reclamar factura final, comprobar entrega y conciliar anticipo.","evidence":"factura, conformidad y cierre"}],
+        "sources":[{"label":"UV · Instrucción de gestión económica 1/2025","url":"https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693"},{"label":"UV · Instrucciones de factura electrónica para proveedores","url":"https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/procedimientos/facturas-electronicas-face/facturas-electronicas-face/instrucciones-proveedores-1286238694312.html"}]
+      },
+      "resolution":{"decisionRules":["Una proforma informa y permite iniciar la tramitación, pero no sustituye siempre a la factura definitiva.","El anticipo es una excepción que exige control reforzado de entrega y recuperación."],"stopConditions":["No pagues con tarjeta personal para evitar el expediente.","No des conformidad definitiva a bienes o servicios todavía no recibidos."],"completionEvidence":["Anticipo autorizado antes del pago.","Entrega comprobada.","Factura definitiva y conciliación archivadas."],"escalation":["Si el proveedor extranjero no adapta la proforma, pide a gestión los datos mínimos aceptables.","Si hay incumplimiento, documenta reclamación y activa recuperación con contratación y asesoría."]}
+    },
+    {
+      "id":"tramitar-factura-extranjera","number":93,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Tramitar una factura de un proveedor extranjero","scenario":"Compras software, material o un servicio a una empresa extranjera y la factura llega en otra moneda, sin IVA español o con datos fiscales incompletos.",
+      "aliases":["factura extranjera","VAT","IVA intracomunitario","divisa","invoice","proveedor internacional","importación"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La factura extranjera contiene los datos fiscales correctos, la operación recibe el tratamiento de IVA, divisa e importación que corresponde y queda conciliada con pedido, recepción y pago.","firstMove":"Antes del pedido, facilita al proveedor los datos fiscales oficiales de la UV y consulta a gestión si la operación es intracomunitaria, importación de bienes o servicio de tercer país.",
+        "questions":["¿Dónde está establecido el proveedor y se compran bienes, servicios o acceso digital?","¿La factura usa ESQ4618001D, dirección y referencia de pedido correctas?","¿Hay aduana, inversión del sujeto pasivo, retención, moneda o comisión bancaria?"],
+        "unit":"Unidad de gestión económica y Servicio de Contabilidad y Presupuesto; aduanas o compras cuando haya importación","channel":"Expediente de compra y factura original por el canal económico indicado","deadline":"Configurar datos fiscales antes del pedido y revisar factura antes de aceptar o pagar",
+        "documents":["Oferta, pedido y justificación de compra","Factura original con moneda y datos fiscales","Prueba de entrega o prestación","Documentos aduaneros y liquidación si existen","Tipo de cambio o justificante bancario aplicable"],
+        "steps":[{"action":"Clasificar país, proveedor y naturaleza de la operación.","evidence":"ficha fiscal inicial"},{"action":"Enviar datos UV y referencia del expediente.","evidence":"instrucciones al proveedor"},{"action":"Revisar factura, VAT, moneda e impuestos.","evidence":"validación de gestión"},{"action":"Incorporar aduana, cambio y recepción cuando proceda.","evidence":"expediente completo"},{"action":"Contabilizar, pagar y conciliar importes en euros.","evidence":"asiento y justificante"}],
+        "sources":[{"label":"UV · Instrucción de gestión económica 1/2025","url":"https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693"},{"label":"UV · Facturas electrónicas e instrucciones a proveedores","url":"https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/procedimientos/facturas-electronicas-face/facturas-electronicas-face/instrucciones-proveedores-1286238694312.html"}]
+      },
+      "resolution":{"decisionRules":["Que la factura no muestre IVA no significa que la operación carezca de obligaciones fiscales.","El tratamiento depende de país, condición del proveedor y naturaleza de la prestación, no solo de la moneda."],"stopConditions":["No pidas al proveedor que invente IVA español.","No contabilices únicamente el cargo de tarjeta ignorando factura, aduana o diferencia de cambio."],"completionEvidence":["Clasificación fiscal validada.","Factura y entrega completas.","Pago, impuesto y cambio conciliados."],"escalation":["Consulta antes de comprar si hay importación temporal, equipo usado o servicio prestado físicamente en España.","Si la factura ya es incorrecta, solicita abono o rectificativa antes del cierre."]}
+    },
+    {
+      "id":"repartir-compra-varios-proyectos","number":94,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Repartir una compra entre varios proyectos","scenario":"Un equipo, licencia o servicio beneficia a dos o más proyectos y quieres distribuir su coste sin incumplir elegibilidad ni fraccionar artificialmente la contratación.",
+      "aliases":["cofinanciar compra","varios proyectos","reparto coste","imputación múltiple","split funding","fraccionamiento"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El reparto responde a un criterio objetivo y verificable, cada proyecto admite el gasto y la contratación se tramita como una única necesidad por su importe total.","firstMove":"Antes de pedir ofertas, describe el uso previsto por proyecto, el coste total y el criterio de reparto y somételo a las unidades gestoras de todos los créditos implicados.",
+        "questions":["¿Cada proyecto necesita y permite el gasto en esa fecha?","¿Qué métrica objetiva sustenta porcentajes: horas, usuarios, muestras o capacidad?","¿La suma activa umbrales de contratación, inventario o autorización?"],
+        "unit":"Unidades gestoras y responsables de todos los proyectos; contratación e inventario cuando proceda","channel":"Un único expediente de compra con distribución contable y conformidades múltiples","deadline":"Antes de comprometer gasto, solicitar ofertas o dividir pedidos",
+        "documents":["Memoria común de necesidad","Presupuesto total y ofertas","Matriz de elegibilidad por proyecto","Criterio y porcentajes de reparto","Conformidades, factura e inventario único"],
+        "steps":[{"action":"Definir la necesidad total sin separar facturas artificialmente.","evidence":"memoria única"},{"action":"Validar elegibilidad, fechas y saldo en cada proyecto.","evidence":"matriz firmada"},{"action":"Elegir un criterio de reparto medible.","evidence":"cálculo reproducible"},{"action":"Tramitar contratación por el valor agregado.","evidence":"expediente y ofertas"},{"action":"Distribuir contablemente y conservar prueba de uso.","evidence":"asientos e indicadores"}],
+        "sources":[{"label":"UV · Gestión y trámites de investigación y transferencia","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"},{"label":"UV · Instrucción de gestión económica 1/2025","url":"https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-1693"}]
+      },
+      "resolution":{"decisionRules":["El porcentaje debe representar beneficio o uso esperado y poder revisarse si el uso real cambia.","Distribuir financiación no permite dividir la necesidad para eludir reglas de contratación."],"stopConditions":["No imputes un porcentaje solo porque queda saldo.","No dupliques la misma factura o el coste total en varias justificaciones."],"completionEvidence":["Elegibilidad de cada proyecto documentada.","Criterio objetivo aprobado.","Total contratado e imputaciones conciliados."],"escalation":["Si un financiador prohíbe cofinanciación o exige dedicación exclusiva, exclúyelo o pide autorización.","Si cambia sustancialmente el uso, solicita redistribución antes del cierre de proyectos."]}
+    },
+    {
+      "id":"pagar-servicio-cientifico-interno","number":95,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Pagar un servicio científico interno de la UV","scenario":"Necesitas microscopía, fabricación, análisis o soporte de una unidad UV y debes saber si se tramita como encargo interno, tarifa o compra externa.",
+      "aliases":["SCSIE","servicio interno","tarifa interna","microscopía","caracterización","cargo interno","unidad científica"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El servicio se solicita con tarifa, alcance, crédito y elegibilidad confirmados y el cargo interno queda vinculado a resultados, muestras y proyecto sin factura externa improcedente.","firstMove":"Pide a la unidad científica presupuesto o tarifa interna, condiciones de muestra y código de servicio; envíalo a la gestión del proyecto antes de reservar trabajo.",
+        "questions":["¿La unidad es UV, mixta o un proveedor externo?","¿Qué incluye la tarifa y quién prepara muestras, interpreta resultados o repite medidas?","¿El financiador admite cargos internos y exige evidencia de uso o cálculo de coste?"],
+        "unit":"Unidad científica prestadora y unidad de gestión del crédito","channel":"Solicitud o plataforma interna de servicio y documento contable interno indicado","deadline":"Antes de reservar equipo o entregar muestras, especialmente cerca del cierre del proyecto",
+        "documents":["Solicitud, tarifa y alcance","Código de proyecto y autorización","Ficha de muestras y riesgos","Registro de horas, análisis o resultados","Cargo interno y conformidad"],
+        "steps":[{"action":"Confirmar naturaleza interna y catálogo del servicio.","evidence":"tarifa o presupuesto"},{"action":"Validar crédito y elegibilidad del cargo.","evidence":"autorización de gestión"},{"action":"Definir muestras, entrega, datos y repeticiones.","evidence":"solicitud técnica"},{"action":"Ejecutar y conservar evidencia del servicio.","evidence":"registro y resultados"},{"action":"Revisar cargo y dar conformidad.","evidence":"asiento interno conciliado"}],
+        "sources":[{"label":"UV · Servicio Central de Soporte a la Investigación Experimental","url":"https://www.uv.es/uvweb/servicio-central-soporte-investigacion-experimental/es/presentacion-1285877078016.html"},{"label":"UV · Gestión y trámites de investigación","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"}]
+      },
+      "resolution":{"decisionRules":["Un servicio interno puede tener circuito contable y evidencia distintos de una adquisición a tercero.","La tarifa no sustituye a la definición técnica ni demuestra por sí sola que el coste sea elegible."],"stopConditions":["No pidas una factura externa a una unidad que debe hacer cargo interno.","No entregues muestras peligrosas o identificables sin declararlas y acordar custodia."],"completionEvidence":["Solicitud y crédito autorizados.","Servicio y resultados trazables.","Cargo interno conciliado."],"escalation":["Si la unidad participa intelectualmente, aclara antes si es servicio o colaboración y cómo se reconocerá.","Si no puede completar antes del cierre, acuerda fecha y elegibilidad con gestión antes de iniciar."]}
+    },
+    {
+      "id":"prestar-trasladar-equipo-fuera-uv","number":96,"category":"gestion","baseChapter":28,"profile":"economic-case",
+      "title":"Prestar o trasladar un equipo fuera de la UV","scenario":"Quieres llevar un instrumento, portátil o prototipo a otra institución, empresa, campaña de medida o domicilio para trabajar temporalmente.",
+      "aliases":["préstamo equipo","salida inventario","traslado equipo","llevar portátil","equipo fuera UV","cesión temporal"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La salida está autorizada y registrada, con propiedad, seguro, transporte, seguridad, datos, custodia y retorno definidos y compatibles con el financiador.","firstMove":"Identifica número de inventario, propietario, financiador, ubicación de destino, custodio y fechas y consulta a patrimonio o gestión antes de mover el equipo.",
+        "questions":["¿Es propiedad UV, está cedido o pertenece a un proyecto con restricciones?","¿Quién asume pérdida, daño, calibración, transporte y uso por terceros?","¿Contiene datos, láseres, baterías, sustancias o tecnología con controles especiales?"],
+        "unit":"Unidad responsable e inventario/patrimonio; Prevención, SIUV, aseguramiento o STI según el equipo","channel":"Autorización y acta de salida, préstamo o cesión con actualización de ubicación","deadline":"Antes de embalar, retirar del campus, enviar o permitir uso externo",
+        "documents":["Ficha e identificación de inventario","Autorización del responsable y condiciones del financiador","Acta de préstamo o traslado y custodio","Seguro, transporte y evaluación de riesgos","Registro de salida, estado y devolución"],
+        "steps":[{"action":"Verificar propiedad, inventario y restricciones.","evidence":"ficha patrimonial"},{"action":"Evaluar destino, riesgos, datos y transporte.","evidence":"plan de traslado"},{"action":"Fijar custodio, seguro, uso y retorno.","evidence":"acta autorizada"},{"action":"Registrar estado y salida antes de mover.","evidence":"fotos y registro"},{"action":"Comprobar devolución, daños y ubicación final.","evidence":"acta de retorno"}],
+        "sources":[{"label":"UV · Servicio de Prevención y Medio Ambiente","url":"https://www.uv.es/uvweb/servicio-prevencion-medio-ambiente/es/servicio/presentacion-1285899540519.html"},{"label":"UV · Gestión y trámites de investigación","url":"https://www.uv.es/uvweb/servicio-investigacion/es/gestion-tramites-normativa/gestion-tramites-investigacion-transferencia-1286265993358.html"}]
+      },
+      "resolution":{"decisionRules":["El investigador usuario no es necesariamente el titular ni puede autorizar por sí solo la salida.","Trasladar un equipo con datos o riesgos exige controles adicionales al inventario."],"stopConditions":["No saques equipo inventariado sin registro y custodio.","No lo envíes al extranjero sin revisar aduana, seguro y doble uso."],"completionEvidence":["Salida autorizada y ubicación actualizada.","Custodia y cobertura documentadas.","Retorno o destino final conciliado."],"escalation":["Si el equipo fue financiado por una ayuda vigente, pide conformidad de gestión o financiador.","Ante daño o pérdida, comunica inmediatamente y conserva denuncia, fotos y documentación de transporte."]}
+    },
+    {
+      "id":"aceptar-donacion-cesion-patrocinio","number":97,"category":"gestion","baseChapter":35,"profile":"economic-case",
+      "title":"Aceptar una donación, cesión gratuita o patrocinio","scenario":"Una empresa ofrece equipo, dinero, licencias o muestras sin precio aparente y pide visibilidad, acceso, datos, pruebas o una relación continuada.",
+      "aliases":["donación","cesión gratuita","comodato","patrocinio","equipo regalado","sponsorship","mecenazgo"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La oferta se clasifica y acepta institucionalmente con valor, titularidad, contraprestaciones, inventario, mantenimiento, fiscalidad, marca y conflictos claramente regulados.","firstMove":"No aceptes ni instales el bien personalmente: describe exactamente qué entrega la empresa y qué espera a cambio y remítelo a gestión y al órgano competente.",
+        "questions":["¿Es donación pura, préstamo, patrocinio con publicidad o contrato con prestaciones?","¿Quién paga transporte, instalación, consumibles, licencias, reparación y retirada?","¿Hay exclusividad, datos, ensayos, logo, publicación o influencia sobre decisiones?"],
+        "unit":"Gerencia o unidad patrimonial/económica, estructura receptora; STI, Marketing, asesoría o contratación según condiciones","channel":"Acuerdo institucional de donación, cesión, patrocinio o contrato y alta patrimonial","deadline":"Antes de recibir, usar, anunciar o emitir reconocimiento al aportante",
+        "documents":["Oferta y valoración del bien o aportación","Condiciones y contraprestaciones completas","Informe de necesidad, costes y conflicto de interés","Acuerdo aceptado por órgano competente","Inventario, recepción y plan de mantenimiento"],
+        "steps":[{"action":"Clasificar jurídicamente la oferta por lo que se da y recibe.","evidence":"ficha de operación"},{"action":"Evaluar valor, costes futuros, utilidad y conflicto.","evidence":"informe de conveniencia"},{"action":"Negociar propiedad, responsabilidad, marca y salida.","evidence":"borrador institucional"},{"action":"Obtener aceptación del órgano competente.","evidence":"acuerdo firmado"},{"action":"Recibir, inventariar y cumplir contraprestaciones autorizadas.","evidence":"acta y seguimiento"}],
+        "sources":[{"label":"UV · Código de buen gobierno","url":"https://www.uv.es/uvweb/transparencia-uv/es/institucional-organizativa/codigo-buen-gobierno-1285924614870.html"},{"label":"UV · Programa de soporte a eventos y colaboraciones","url":"https://www.uv.es/unidad-web-marketing/es/programas-comunicacion/esdeveniments/programa-soporte-esdeveniments-uv.html"}]
+      },
+      "resolution":{"decisionRules":["Una aportación deja de ser donación pura si existe una prestación exigible a cambio.","Coste cero de adquisición no significa coste cero, ausencia de riesgo ni libertad para aceptar."],"stopConditions":["No aceptes bienes en nombre propio para el laboratorio.","No prometas publicidad, resultados favorables, exclusividad o datos sin instrumento institucional."],"completionEvidence":["Naturaleza y competencia determinadas.","Acuerdo y conflicto revisados.","Recepción e inventario formalizados."],"escalation":["Si el aportante participa en compras o evaluaciones, declara el conflicto y separa decisiones.","Si aparecen condiciones después de la entrega, suspende uso y regulariza antes de continuar."]}
+    },
+    {
+      "id":"organizar-workshop-congreso-uv","number":98,"category":"gestion","baseChapter":29,"profile":"economic-case",
+      "title":"Organizar un workshop o congreso en la UV","scenario":"Quieres celebrar una reunión científica con inscripciones, ponentes, viajes, catering, espacios, patrocinadores, web y tratamiento de datos de asistentes.",
+      "aliases":["organizar congreso","workshop","evento científico","inscripciones evento","ponentes","catering","patrocinadores"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El evento tiene responsable institucional, presupuesto equilibrado, circuito de ingresos y gastos, contratos, privacidad, marca, riesgos y cierre económico definidos antes de abrir inscripciones.","firstMove":"Redacta una ficha de una página con objetivo, fechas, organizador UV, asistentes, presupuesto, ingresos, gastos, espacios y patrocinadores y llévala a la unidad gestora.",
+        "questions":["¿Quién organiza y asume déficit, cancelaciones y obligaciones?","¿Cómo se cobran inscripciones y se pagan viajes, honorarios, catering y proveedores?","¿Qué datos, imágenes, certificados, patrocinios y uso de marca requiere el evento?"],
+        "unit":"Estructura UV organizadora y unidad económica; Marketing/Eventos, contratación, privacidad y Prevención según alcance","channel":"Proyecto o centro de coste del evento, plataforma institucional de inscripción y expedientes de gasto","deadline":"Aprobar modelo y presupuesto antes de anunciar, contratar, cobrar o aceptar patrocinio",
+        "documents":["Memoria, programa y gobernanza","Presupuesto con escenarios y política de cancelación","Autorización de espacios y proveedores","Privacidad, imagen, accesibilidad y seguridad","Acuerdos de patrocinio, facturación y cierre"],
+        "steps":[{"action":"Definir organizador, alcance y responsable económico.","evidence":"ficha aprobada"},{"action":"Construir presupuesto, calendario y reglas de inscripción.","evidence":"escenarios y punto de equilibrio"},{"action":"Reservar espacios y tramitar proveedores y ponentes.","evidence":"autorizaciones y expedientes"},{"action":"Publicar inscripción, privacidad, marca y atención.","evidence":"web y registros"},{"action":"Celebrar, justificar ingresos y gastos y cerrar.","evidence":"acta e informe económico"}],
+        "sources":[{"label":"UV · Programa de soporte a eventos","url":"https://www.uv.es/unidad-web-marketing/es/programas-comunicacion/esdeveniments/programa-soporte-esdeveniments-uv.html"},{"label":"UV · Protección de datos","url":"https://www.uv.es/ensuv/es/proteccion-datos.html"},{"label":"UV · Facturas electrónicas e instrucciones a proveedores","url":"https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/procedimientos/facturas-electronicas-face/facturas-electronicas-face/instrucciones-proveedores-1286238694312.html"}]
+      },
+      "resolution":{"decisionRules":["Cobrar inscripciones o patrocinio convierte la idea académica en una operación económica institucional.","El presupuesto debe incluir impuestos, cancelaciones, viajes, accesibilidad, seguros y costes indirectos, no solo proveedores visibles."],"stopConditions":["No cobres por transferencia a una cuenta personal.","No confirmes catering, salas o ponentes sin crédito y competencia para contratar."],"completionEvidence":["Gobernanza y presupuesto aprobados.","Participantes, contratos y privacidad trazables.","Cierre económico y documental completado."],"escalation":["Si interviene una sociedad científica o fundación, delimita entidad organizadora y facturación por escrito.","Si el evento entra en déficit o se cancela, aplica la política aprobada y consulta antes de devolver o reubicar fondos."]}
+    },
+    {
+      "id":"abstenerse-conflicto-interes","number":99,"category":"cumplimiento","baseChapter":35,"profile":"integrity-case",
+      "title":"Abstenerte por un conflicto de interés","scenario":"Debes evaluar, contratar, seleccionar o decidir sobre una persona o entidad con la que tienes relación personal, científica, económica o competitiva.",
+      "aliases":["conflicto de interés","abstención","recusación","DACI","familiar","colaborador","competidor"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"El conflicto real, potencial o aparente se declara antes de intervenir, la autoridad decide medidas y queda constancia de sustitución, límites de acceso y validez del procedimiento.","firstMove":"Deja de acceder o deliberar sobre el asunto y comunica por escrito la relación y su posible efecto a la presidencia, responsable o unidad del procedimiento.",
+        "questions":["¿Existe interés personal, vínculo reciente, enemistad, colaboración, dependencia o beneficio?","¿Una persona razonable podría dudar de tu imparcialidad aunque creas ser objetivo?","¿Quién puede decidir abstención, sustitución o medida proporcional?"],
+        "unit":"Presidencia u órgano responsable del procedimiento; UVintegritat o asesoría cuando sea dudoso o sensible","channel":"Declaración escrita y registro o acta oficial, con DACI si el procedimiento la exige","deadline":"En cuanto conozcas el conflicto y siempre antes de recibir documentación reservada, puntuar o votar",
+        "documents":["Descripción factual de la relación","Convocatoria, expediente o decisión afectada","Declaración de conflicto o abstención","Resolución de medida y sustitución","Acta y control de acceso"],
+        "steps":[{"action":"Identificar relación, interés y fase del procedimiento.","evidence":"declaración fechada"},{"action":"Suspender intervención y preservar confidencialidad.","evidence":"comunicación inmediata"},{"action":"Remitir a quien tiene competencia para decidir.","evidence":"acuse y resolución"},{"action":"Aplicar abstención, sustitución o salvaguarda.","evidence":"acta y permisos"},{"action":"Conservar trazabilidad sin divulgar más datos de los necesarios.","evidence":"expediente completo"}],
+        "sources":[{"label":"UV · UVintegritat: procedimiento inicial","url":"https://www.uv.es/uvweb/universidad/es/uvintegridad/procedimiento-inicial-1286234683901.html"},{"label":"BOE · Ley 40/2015, abstención y recusación","url":"https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566"},{"label":"UV · Código de buen gobierno","url":"https://www.uv.es/uvweb/transparencia-uv/es/institucional-organizativa/codigo-buen-gobierno-1285924614870.html"}]
+      },
+      "resolution":{"decisionRules":["Declarar un conflicto no presupone conducta indebida; protege a la persona y al procedimiento.","La apariencia objetiva de parcialidad puede requerir medidas aunque no exista beneficio material."],"stopConditions":["No te limites a decir verbalmente que serás imparcial mientras sigues puntuando.","No descargues o compartas documentación después de abstenerte."],"completionEvidence":["Conflicto declarado a tiempo.","Medida decidida por órgano competente.","Sustitución y acta verificables."],"escalation":["Si la presidencia ignora un conflicto material, solicita instrucción escrita o consulta a UVintegritat.","Si ya interviniste, comunícalo de inmediato para valorar repetición, corrección o recusación."]}
+    },
+    {
+      "id":"aceptar-regalo-invitacion-proveedor","number":100,"category":"cumplimiento","baseChapter":35,"profile":"integrity-case",
+      "title":"Aceptar un regalo, comida o invitación de un proveedor","scenario":"Una empresa que vende, financia o colabora con tu grupo ofrece un obsequio, viaje, comida, entrada o actividad que podría influir o parecer que influye en tus decisiones.",
+      "aliases":["regalo proveedor","comida empresa","invitación viaje","hospitality","obsequio","entrada VIP","compliance"],"reviewedOn":"2026-08-09",
+      "guide":{
+        "outcome":"La oferta se evalúa por valor, contexto, frecuencia y relación con decisiones; se rechaza, devuelve o declara cuando pueda comprometer imparcialidad o apariencia de integridad.","firstMove":"No aceptes en el momento: pide por escrito qué cubre, su valor y finalidad y revisa si el oferente participa o puede participar en una decisión tuya.",
+        "questions":["¿Es una cortesía simbólica ordinaria o un beneficio personal relevante?","¿Coincide con compra, evaluación, renovación, licencia o negociación?","¿Podría declararse públicamente sin dañar la confianza en la decisión?"],
+        "unit":"Responsable de la estructura o procedimiento; unidad económica/contratación y UVintegritat si existe duda","channel":"Rechazo o declaración escrita y registro en el expediente afectado cuando proceda","deadline":"Antes de aceptar, consumir, viajar o tomar una decisión relacionada",
+        "documents":["Oferta y valor estimado","Identidad e interés del oferente","Procedimiento o decisión relacionada","Consulta, declaración o rechazo","Devolución, entrega institucional o medida adoptada"],
+        "steps":[{"action":"Identificar beneficio, valor, contexto y destinatario real.","evidence":"oferta documentada"},{"action":"Comprobar relación con decisiones presentes o previsibles.","evidence":"mapa de conflicto"},{"action":"Consultar si no es claramente simbólico y ordinario.","evidence":"criterio escrito"},{"action":"Rechazar, devolver, institucionalizar o aceptar según criterio.","evidence":"comunicación y recibo"},{"action":"Declarar conflicto y abstenerse si la imparcialidad queda afectada.","evidence":"acta o expediente"}],
+        "sources":[{"label":"UV · Código de buen gobierno","url":"https://www.uv.es/uvweb/transparencia-uv/es/institucional-organizativa/codigo-buen-gobierno-1285924614870.html"},{"label":"UV · Hechos que se pueden comunicar a UVintegritat","url":"https://www.uv.es/uvweb/universidad/es/uvintegridad/canal-denuncia-interna/hechos-se-pueden-denunciar-1286338033988.html"}]
+      },
+      "resolution":{"decisionRules":["No hay un importe mágico que vuelva correcto cualquier regalo: importan contexto, intención, frecuencia y apariencia.","Una invitación necesaria para una actividad institucional debe tramitarse con transparencia y cobertura, no como favor personal."],"stopConditions":["No aceptes efectivo, equivalentes, viajes de ocio ni beneficios para familiares.","No aceptes nada de quien está siendo evaluado o contratado por ti durante el procedimiento."],"completionEvidence":["Oferta y análisis documentados.","Decisión coherente con integridad y conflicto.","Rechazo, devolución o cobertura institucional acreditados."],"escalation":["Si el regalo ya llegó, no lo ocultes: consérvalo sin uso y pide instrucciones de devolución o destino institucional.","Si la oferta parece buscar influencia o contraprestación, informa por el canal competente y preserva pruebas."]}
+    }
+  ]
+}

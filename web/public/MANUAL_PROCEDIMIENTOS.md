@@ -41,7 +41,7 @@ Los casos prácticos de esta guía son ficticios, aunque describen situaciones p
 
 Si aparece una sigla o una expresión nueva —por ejemplo, caja fija, BCF, AD, unidad gestora, OCA, POD, SGI o TRL—, consulta primero el [glosario para PDI recién incorporado](GLOSARIO_PDI.md). Cada ficha ofrece una definición sencilla, una aplicación práctica, una confusión habitual y enlaces a las fuentes oficiales. En la web, el glosario también se puede buscar y filtrar.
 
-La web incorpora además un directorio de **50 situaciones operativas**. Cada resolución reutiliza el capítulo aplicable, pero añade primer movimiento, reglas de decisión, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre y escalado. El catálogo se valida automáticamente para impedir que una ficha incompleta se presente como resuelta.
+La web incorpora además un directorio de **100 situaciones operativas**. Cada resolución reutiliza el capítulo aplicable, pero añade primer movimiento, reglas de decisión, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre y escalado. El catálogo se valida automáticamente para impedir que una ficha incompleta se presente como resuelta.
 
 ### Cómo aclarar quién hace qué
 
