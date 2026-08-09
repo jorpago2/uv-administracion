@@ -75,6 +75,20 @@ test("el buscador entiende objetivos, siglas y ejemplos concretos", () => {
   assert.ok(searchSituationGuides(guides, "", "docencia").every((guide) => guide.categoryId === "docencia"));
 });
 
+test("el buscador exige todos los términos relevantes y evita ruido", () => {
+  const expectations = [
+    ["foundry MPW GDS", "fabricacion-foundry-run", 1],
+    ["incorporar estudiante laboratorio", "incorporar-estudiante-laboratorio", 1],
+    ["licencia HPC nube", "licencia-simulacion-calculo-nube", 1],
+    ["quiero comprar una lente de thorlabs", "comprar-lente-sda", 1]
+  ];
+  for (const [query, expectedId, maximumResults] of expectations) {
+    const matches = searchSituationGuides(guides, query);
+    assert.equal(matches[0]?.id, expectedId, query);
+    assert.ok(matches.length <= maximumResults, `${query}: ${matches.length} resultados`);
+  }
+});
+
 test("los casos docentes, POD y doctorado están adaptados a ETSE, DIE y sus programas", () => {
   const contextualised = guides.filter((guide) => guide.academicContext);
   const teaching = guides.filter((guide) => guide.categoryId === "docencia");

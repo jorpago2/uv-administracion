@@ -43,7 +43,7 @@ async function initHubSearch(searchForm) {
       .slice(0, 8);
     results.replaceChildren(...matches.map(renderResult));
     results.hidden = false;
-    status.textContent = matches.length ? `${matches.length} ${matches.length === 1 ? "resultado" : "resultados"} prioritarios.` : "No hay coincidencia directa. Prueba con otra acción o abre el resolutor.";
+    status.textContent = matches.length ? `${matches.length === 1 ? "1 resultado prioritario" : `${matches.length} resultados prioritarios`}.` : "No hay coincidencia directa. Prueba con otra acción o abre el resolutor.";
     if (!matches.length) {
       const fallback = document.createElement("a");
       fallback.className = "hub-search-result hub-search-result--empty";

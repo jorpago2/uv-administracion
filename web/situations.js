@@ -33,7 +33,13 @@ export function initSituationDirectory(root, options = {}) {
   const missing = Object.entries(elements).filter(([, element]) => !element).map(([name]) => name);
   if (missing.length) throw new Error(`Faltan controles de situaciones: ${missing.join(", ")}.`);
 
-  const state = { query: "", category: "all" };
+  const pageSize = Number.isInteger(options.pageSize) && options.pageSize > 0 ? options.pageSize : 8;
+  const loadMore = document.createElement("button");
+  loadMore.className = "control situation-load-more";
+  loadMore.type = "button";
+  loadMore.setAttribute("aria-controls", elements.list.id);
+  elements.list.after(loadMore);
+  const state = { query: "", category: "all", visibleLimit: pageSize };
   populateCategories(elements.category);
   elements.count.textContent = String(situationGuides.length);
   bindEvents();
@@ -41,20 +47,27 @@ export function initSituationDirectory(root, options = {}) {
   return Object.freeze({ count: situationGuides.length });
 
   function bindEvents() {
-    elements.query.addEventListener("input", () => { state.query = elements.query.value; render(); });
-    elements.category.addEventListener("change", () => { state.category = elements.category.value; render(); });
+    elements.query.addEventListener("input", () => { state.query = elements.query.value; state.visibleLimit = pageSize; render(); });
+    elements.category.addEventListener("change", () => { state.category = elements.category.value; state.visibleLimit = pageSize; render(); });
     elements.clear.addEventListener("click", () => {
-      state.query = ""; state.category = "all"; elements.query.value = ""; elements.category.value = "all"; render(); elements.query.focus();
+      state.query = ""; state.category = "all"; state.visibleLimit = pageSize; elements.query.value = ""; elements.category.value = "all"; render(); elements.query.focus();
     });
+    loadMore.addEventListener("click", () => { state.visibleLimit += pageSize; render(); });
   }
 
   function render() {
     const guides = searchSituationGuides(situationGuides, state.query, state.category);
+    const visibleGuides = guides.slice(0, state.visibleLimit);
     const fragment = document.createDocumentFragment();
-    guides.forEach((guide) => fragment.append(renderCard(guide, options.detailBase ?? "example.html")));
+    visibleGuides.forEach((guide) => fragment.append(renderCard(guide, options.detailBase ?? "example.html")));
     if (!guides.length) fragment.append(renderEmpty());
     elements.list.replaceChildren(fragment);
-    elements.status.textContent = guides.length === 1 ? `1 situación visible de ${situationGuides.length}.` : `${guides.length} situaciones visibles de ${situationGuides.length}.`;
+    elements.status.textContent = guides.length === 1
+      ? `1 situación visible · ${situationGuides.length} totales.`
+      : `${visibleGuides.length} mostradas de ${guides.length} coincidencias · ${situationGuides.length} totales.`;
+    const remaining = guides.length - visibleGuides.length;
+    loadMore.hidden = remaining <= 0;
+    loadMore.textContent = remaining > 0 ? `Mostrar ${Math.min(pageSize, remaining)} más` : "";
     elements.clear.disabled = !state.query && state.category === "all";
   }
 }
@@ -78,18 +91,18 @@ function renderCard(guide, detailBase) {
   const scenario = document.createElement("p");
   scenario.className = "situation-card__scenario";
   scenario.textContent = guide.scenario;
-  const outcome = document.createElement("p");
-  outcome.className = "situation-card__outcome";
-  const outcomeLabel = document.createElement("strong");
-  outcomeLabel.textContent = "Resultado verificable";
-  outcome.append(outcomeLabel, document.createTextNode(` ${guide.outcome}`));
+  const firstMove = document.createElement("p");
+  firstMove.className = "situation-card__first-move";
+  const firstMoveLabel = document.createElement("strong");
+  firstMoveLabel.textContent = "Empieza por";
+  firstMove.append(firstMoveLabel, document.createTextNode(` ${guide.firstMove}`));
   const programmes = renderProgrammeTags(guide.academicContext?.programmeIds ?? []);
   const researchStages = renderResearchTags(guide.personalResearchContext);
   const link = document.createElement("a");
   link.className = "situation-card__open";
   link.href = `${detailBase}?caso=${encodeURIComponent(guide.id)}`;
   link.textContent = "Abrir resolución paso a paso";
-  article.append(header, scenario, outcome);
+  article.append(header, scenario, firstMove);
   if (programmes) article.append(programmes);
   if (researchStages) article.append(researchStages);
   article.append(link);

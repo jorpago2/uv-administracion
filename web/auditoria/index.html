@@ -22,36 +22,6 @@
       <p>No todo caso extenso está suficientemente adaptado. Esta auditoría separa contenido específico, rutas todavía genéricas, evidencia que debe reforzarse y situaciones poco relevantes para tu perfil actual.</p>
     </section>
 
-    <section class="audit-overview" aria-labelledby="auditOverviewTitle">
-      <div class="audit-section-head">
-        <div><p class="hub-kicker">Estado comprobable</p><h2 id="auditOverviewTitle">Cobertura de los 104 casos</h2></div>
-        <p id="auditScope"></p>
-      </div>
-      <dl class="audit-stats" id="auditStats" aria-label="Resumen de la auditoría"></dl>
-      <div class="audit-status-key" id="auditStatusKey"></div>
-      <details class="audit-method">
-        <summary>Cómo se ha clasificado cada caso</summary>
-        <ol id="auditMethodology"></ol>
-        <p><strong>Límite:</strong> la clasificación mide la utilidad interna de la guía; no certifica que una fuente siga vigente ni sustituye la confirmación de la unidad competente.</p>
-      </details>
-    </section>
-
-    <section class="audit-routing" aria-labelledby="routingTitle">
-      <div class="audit-section-head">
-        <div><p class="hub-kicker">Mapa institucional</p><h2 id="routingTitle">Quién resuelve qué</h2></div>
-        <p>El punto de inicio no siempre coincide con quien autoriza, tramita o paga. Estas fronteras evitan derivaciones circulares y compromisos prematuros.</p>
-      </div>
-      <div class="institution-map" id="institutionMap"></div>
-    </section>
-
-    <section class="audit-gaps" aria-labelledby="gapsTitle">
-      <div class="audit-section-head">
-        <div><p class="hub-kicker"><span id="missingCount">—</span> operaciones no cubiertas</p><h2 id="gapsTitle">Casos importantes que faltan</h2></div>
-        <p>No son duplicados de los 104 casos. Cada hueco indica qué guía cercana existe y por qué todavía no basta para ejecutar la operación con seguridad.</p>
-      </div>
-      <div class="audit-gap-list" id="auditGapList"></div>
-    </section>
-
     <section class="audit-catalogue" aria-labelledby="catalogueTitle">
       <div class="audit-section-head">
         <div><p class="hub-kicker">Inventario trazable</p><h2 id="catalogueTitle">Auditoría caso por caso</h2></div>
@@ -79,6 +49,46 @@
       </form>
       <p class="audit-result-status" id="auditResultStatus" aria-live="polite"></p>
       <div class="audit-case-list" id="auditCaseList"></div>
+      <button class="hub-button audit-load-more" id="auditLoadMore" type="button" aria-controls="auditCaseList">Mostrar más</button>
+    </section>
+
+    <section class="audit-overview" aria-labelledby="auditOverviewTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker">Estado comprobable</p><h2 id="auditOverviewTitle">Cobertura de los 104 casos</h2></div>
+        <p id="auditScope"></p>
+      </div>
+      <dl class="audit-stats" id="auditStats" aria-label="Resumen de la auditoría"></dl>
+      <details class="audit-disclosure">
+        <summary>Ver significado de los cuatro estados</summary>
+        <div class="audit-status-key" id="auditStatusKey"></div>
+      </details>
+      <details class="audit-method">
+        <summary>Cómo se ha clasificado cada caso</summary>
+        <ol id="auditMethodology"></ol>
+        <p><strong>Límite:</strong> la clasificación mide la utilidad interna de la guía; no certifica que una fuente siga vigente ni sustituye la confirmación de la unidad competente.</p>
+      </details>
+    </section>
+
+    <section class="audit-routing" aria-labelledby="routingTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker">Mapa institucional</p><h2 id="routingTitle">Quién resuelve qué</h2></div>
+        <p>El punto de inicio no siempre coincide con quien autoriza, tramita o paga. Estas fronteras evitan derivaciones circulares y compromisos prematuros.</p>
+      </div>
+      <details class="audit-disclosure audit-disclosure--dark">
+        <summary>Mostrar mapa institucional</summary>
+        <div class="institution-map" id="institutionMap"></div>
+      </details>
+    </section>
+
+    <section class="audit-gaps" aria-labelledby="gapsTitle">
+      <div class="audit-section-head">
+        <div><p class="hub-kicker"><span id="missingCount">—</span> operaciones no cubiertas</p><h2 id="gapsTitle">Casos importantes que faltan</h2></div>
+        <p>No son duplicados de los 104 casos. Cada hueco indica qué guía cercana existe y por qué todavía no basta para ejecutar la operación con seguridad.</p>
+      </div>
+      <details class="audit-disclosure">
+        <summary>Mostrar operaciones pendientes</summary>
+        <div class="audit-gap-list" id="auditGapList"></div>
+      </details>
     </section>
   </main>
   <site-footer></site-footer>

@@ -22,6 +22,12 @@
 .audit-method ol, .audit-method p { margin: 0; padding: 0 var(--space-lg) var(--space-lg); }
 .audit-method ol { padding-inline-start: calc(var(--space-lg) + 1.25rem); }
 .audit-method li + li { margin-block-start: var(--space-xs); }
+.audit-disclosure { border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); }
+.audit-disclosure > summary { padding: var(--space-md); cursor: pointer; font-weight: 800; }
+.audit-disclosure[open] > summary { border-block-end: var(--rule) solid var(--color-rule); }
+.audit-disclosure > :not(summary) { margin: var(--space-md); }
+.audit-disclosure--dark { border-color: var(--color-paper); background: var(--color-ink); color: var(--color-paper); box-shadow: 6px 6px 0 var(--color-accent); }
+.audit-disclosure--dark[open] > summary { border-color: var(--color-paper); }
 
 .institution-map { display: grid; gap: var(--space-md); }
 .institution-map article { min-width: 0; display: grid; align-content: start; gap: var(--space-md); padding: var(--space-lg); border: var(--rule) solid var(--color-paper); background: var(--color-paper-raised); color: var(--color-ink); box-shadow: 6px 6px 0 var(--color-accent); }
@@ -65,6 +71,8 @@
 .audit-case__metrics dd { margin: var(--space-2xs) 0 0; font-weight: 800; font-variant-numeric: tabular-nums; }
 .audit-case__open { grid-column: 2; justify-self: start; align-self: start; min-height: 44px; display: inline-flex; align-items: center; padding-inline: var(--space-md); border: var(--rule) solid var(--color-rule); background: var(--color-ink); color: var(--color-paper); box-shadow: var(--shadow-sm); font-weight: 800; text-decoration: none; }
 .audit-case__open:active, .audit-nearby a:active { transform: translate(2px, 2px); box-shadow: none; }
+.audit-load-more { display: flex; margin: var(--space-xl) auto 0; background: var(--color-paper-raised); }
+.audit-load-more[hidden] { display: none; }
 
 @media (hover: hover) and (pointer: fine) {
   .institution-map a:hover, .audit-nearby a:hover { background: var(--color-accent); color: var(--color-accent-ink); }

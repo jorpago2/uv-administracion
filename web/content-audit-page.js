@@ -6,7 +6,8 @@ import { buildContentAudit, filterContentAudit, summarizeContentAudit } from "./
 const assessments = buildContentAudit(situationGuides, situationCatalog.situations, auditConfig);
 const summary = summarizeContentAudit(assessments, auditConfig);
 const guideById = new Map(situationGuides.map((guide) => [guide.id, guide]));
-const state = { query: "", status: "all", category: "all", priority: "all" };
+const PAGE_SIZE = 8;
+const state = { query: "", status: "all", category: "all", priority: "all", visibleLimit: PAGE_SIZE };
 
 const elements = {
   reviewedOn: required("#auditReviewedOn"), scope: required("#auditScope"), stats: required("#auditStats"),
@@ -14,7 +15,7 @@ const elements = {
   missingCount: required("#missingCount"), gapList: required("#auditGapList"), filters: required("#auditFilters"),
   query: required("#auditQuery"), status: required("#auditStatus"), category: required("#auditCategory"),
   priority: required("#auditPriority"), clear: required("#auditClear"), resultStatus: required("#auditResultStatus"),
-  caseList: required("#auditCaseList")
+  caseList: required("#auditCaseList"), loadMore: required("#auditLoadMore")
 };
 
 renderOverview();
@@ -119,11 +120,12 @@ function bindFilters() {
   for (const [key, element] of [["query", elements.query], ["status", elements.status], ["category", elements.category], ["priority", elements.priority]]) {
     element.addEventListener(element.tagName === "INPUT" ? "input" : "change", () => {
       state[key] = element.value;
+      state.visibleLimit = PAGE_SIZE;
       renderCases();
     });
   }
   elements.clear.addEventListener("click", () => {
-    Object.assign(state, { query: "", status: "all", category: "all", priority: "all" });
+    Object.assign(state, { query: "", status: "all", category: "all", priority: "all", visibleLimit: PAGE_SIZE });
     elements.query.value = "";
     elements.status.value = "all";
     elements.category.value = "all";
@@ -131,10 +133,15 @@ function bindFilters() {
     renderCases();
     elements.query.focus();
   });
+  elements.loadMore.addEventListener("click", () => {
+    state.visibleLimit += PAGE_SIZE;
+    renderCases();
+  });
 }
 
 function renderCases() {
-  const visible = filterContentAudit(assessments, state);
+  const matches = filterContentAudit(assessments, state);
+  const visible = matches.slice(0, state.visibleLimit);
   elements.caseList.replaceChildren(...visible.map((assessment) => {
     const article = document.createElement("article");
     article.className = `audit-case audit-case--${assessment.statusId}`;
@@ -167,7 +174,12 @@ function renderCases() {
     article.append(number, body, link);
     return article;
   }));
-  elements.resultStatus.textContent = `${visible.length} ${visible.length === 1 ? "caso visible" : "casos visibles"} de ${assessments.length}.`;
+  elements.resultStatus.textContent = matches.length === 1
+    ? `1 caso visible · ${assessments.length} totales.`
+    : `${visible.length} mostrados de ${matches.length} coincidencias · ${assessments.length} totales.`;
+  const remaining = matches.length - visible.length;
+  elements.loadMore.hidden = remaining <= 0;
+  elements.loadMore.textContent = remaining > 0 ? `Mostrar ${Math.min(PAGE_SIZE, remaining)} más` : "";
   elements.clear.disabled = !state.query && state.status === "all" && state.category === "all" && state.priority === "all";
 }
 

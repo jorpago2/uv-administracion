@@ -13,6 +13,9 @@ const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "ut
 const researchArea = await readFile(new URL("../investigacion/index.html", import.meta.url), "utf8");
 const manualPage = await readFile(new URL("../manual-page.js", import.meta.url), "utf8");
 const resolverPage = await readFile(new URL("../resolver-page.js", import.meta.url), "utf8");
+const situationsPage = await readFile(new URL("../situations.js", import.meta.url), "utf8");
+const auditPage = await readFile(new URL("../content-audit-page.js", import.meta.url), "utf8");
+const examplePage = await readFile(new URL("../example-page.js", import.meta.url), "utf8");
 const glossary = await readFile(new URL("../glossary.js", import.meta.url), "utf8");
 const decisionTools = await readFile(new URL("../decision-tools.js", import.meta.url), "utf8");
 const favicon = await readFile(new URL("../public/favicon.svg", import.meta.url), "utf8");
@@ -37,10 +40,13 @@ test("los seis ambitos comparten una ficha de navegacion completa", () => {
 
 test("la portada prioriza buscar, actuar y explorar antes de la consulta", () => {
   const searchIndex = html.indexOf('class="hub-search"');
+  const personalNoticeIndex = html.indexOf('class="personal-notice');
   const actionIndex = html.indexOf('class="hub-actions"');
   const domainIndex = html.indexOf('class="hub-domains"');
   const referenceIndex = html.indexOf('class="hub-reference"');
   assert.ok(searchIndex > 0 && searchIndex < actionIndex && actionIndex < domainIndex && domainIndex < referenceIndex);
+  assert.ok(searchIndex < personalNoticeIndex, "la búsqueda debe estar antes del aviso extenso en móvil");
+  assert.match(html, /<dt>Situaciones<\/dt><dd>104<\/dd>/);
   assert.match(html, /href="resolver\/"/);
   for (const route of ["administracion", "docencia", "carrera-pdi", "investigacion", "gestion", "cumplimiento"]) assert.match(html, new RegExp(`href="${route}/"`));
   assert.match(html, /href="consulta\.html"/);
@@ -55,6 +61,25 @@ test("las 104 situaciones tienen una subweb principal y buscable", () => {
   assert.match(resolverHtml, /href="\.\.\/auditoria\/"/);
   assert.match(auditHtml, /id="auditCaseList"/);
   assert.match(html, /href="auditoria\/"/);
+  assert.ok(resolverHtml.indexOf('id="situaciones"') < resolverHtml.indexOf('class="resolver-audit-callout"'));
+  assert.match(situationsPage, /visibleLimit/);
+  assert.match(situationsPage, /Mostrar \$\{Math\.min\(pageSize, remaining\)\} más/);
+  assert.match(auditPage, /const PAGE_SIZE = 8/);
+  assert.ok(auditHtml.indexOf('class="audit-catalogue"') < auditHtml.indexOf('class="audit-overview"'));
+});
+
+test("las guías largas permiten explorar por capas y siguen la sección visible", () => {
+  assert.match(examplePage, /const GUIDE_SECTIONS/);
+  assert.match(examplePage, /IntersectionObserver/);
+  assert.match(examplePage, /aria-current/);
+  assert.match(examplePage, /context-disclosure/);
+  assert.match(examplePage, /className = "action-link"/);
+});
+
+test("la vista completa se identifica como pesada y ofrece alternativas", () => {
+  assert.match(html, /Vista completa · pesada/);
+  assert.match(legacyHtml, /Vista excepcional · carga pesada/);
+  assert.match(legacyHtml, /href="resolver\/"/);
 });
 
 test("el glosario tiene una subweb filtrable y enlazable", () => {

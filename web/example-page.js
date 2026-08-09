@@ -25,6 +25,11 @@ const situationId = parameters.get("caso");
 const chapterNumber = parameters.get("capitulo");
 const guide = situationId ? findSituationGuide(situationGuides, situationId) : findExampleGuide(guides, chapterNumber);
 const activeGuides = situationId ? situationGuides : guides;
+const GUIDE_SECTIONS = [
+  ["orientacion", "1. Entender el caso"], ["transferibilidad", "2. Saber cuándo sirve"], ["responsabilidades", "3. Saber quién hace qué"],
+  ["preparacion", "4. Prepararlo"], ["ruta", "5. Ejecutarlo"], ["calendario", "6. Controlar tiempos"], ["comunicacion", "7. Pedir ayuda"],
+  ["control", "8. Verificar"], ["bloqueos", "9. Resolver bloqueos"], ["fuentes", "10. Consultar fuentes"]
+];
 
 if (guide) renderGuide(guide);
 else renderError();
@@ -48,17 +53,19 @@ function renderGuide(item) {
     paragraph(item.scenario, "guide-hero__summary")
   );
   const actions = el("div", "guide-actions");
-  actions.append(button("Imprimir / guardar PDF", "printGuide"), button("Copiar correo inicial", "copyEmail"));
+  const backToResolver = link("Resolver otro caso", "resolver/");
+  backToResolver.className = "action-link";
+  actions.append(backToResolver, button("Imprimir / guardar PDF", "printGuide"), button("Copiar correo inicial", "copyEmail"));
   hero.append(heroCopy, actions);
 
   const caution = el("aside", "personal-caution");
   caution.append(strong("Qué es esta página"), text(" Una orientación operativa para una persona que empieza desde cero. Las recomendaciones de organización no son reglas oficiales y no garantizan una resolución favorable."));
 
   const facts = el("dl", "guide-facts");
-  fact(facts, "Resultado buscado", item.outcome);
-  fact(facts, "Primera unidad", item.unit);
+  fact(facts, "Empieza por", item.firstMove);
+  fact(facts, "Confirma con", item.unit);
   fact(facts, "Plazo crítico", item.deadline);
-  fact(facts, "Canal orientativo", item.channel);
+  fact(facts, "Detente si", item.stopConditions?.[0] ?? item.doNotAssume);
 
   const layout = el("div", "guide-layout");
   const navigation = renderNavigation();
@@ -89,22 +96,24 @@ function renderGuide(item) {
 }
 
 function renderNavigation() {
-  const aside = el("aside", "guide-index");
-  const title = heading(2, "Ruta de trabajo");
+  const aside = el("details", "guide-index");
+  aside.open = window.matchMedia("(min-width: 64rem)").matches;
+  const summary = el("summary");
+  summary.append(strong("Ruta de trabajo"));
+  const current = el("span", "guide-index__current");
+  current.id = "guideCurrentSection";
+  current.textContent = GUIDE_SECTIONS[0][1];
+  summary.append(current);
   const nav = el("nav");
   nav.setAttribute("aria-label", "Secciones de la guía");
   const list = el("ol");
-  [
-    ["orientacion", "1. Entender el caso"], ["transferibilidad", "2. Saber cuándo sirve"], ["responsabilidades", "3. Saber quién hace qué"],
-    ["preparacion", "4. Prepararlo"], ["ruta", "5. Ejecutarlo"], ["calendario", "6. Controlar tiempos"], ["comunicacion", "7. Pedir ayuda"],
-    ["control", "8. Verificar"], ["bloqueos", "9. Resolver bloqueos"], ["fuentes", "10. Consultar fuentes"]
-  ].forEach(([id, label]) => {
+  GUIDE_SECTIONS.forEach(([id, label]) => {
     const item = el("li");
     item.append(link(label, `#${id}`));
     list.append(item);
   });
   nav.append(list);
-  aside.append(title, nav);
+  aside.append(summary, nav);
   return aside;
 }
 
@@ -138,7 +147,7 @@ function renderPersonalResearchContext(context) {
 
   const example = el("article", "research-example");
   example.append(heading(4, "Ejemplo en dispositivos y semiconductores avanzados"), paragraph(context.example));
-  panel.append(example, heading(4, "Interfaces y recursos que conviene comprobar"));
+  panel.append(example);
 
   const resources = el("ul", "research-resource-list");
   context.resourceIds.forEach((id) => {
@@ -151,7 +160,13 @@ function renderPersonalResearchContext(context) {
     item.append(resourceLink, text(` — ${resource.role}`));
     resources.append(item);
   });
-  panel.append(resources, paragraph(personalResearchData.scopeNote, "practical-note"));
+  const resourcesDisclosure = el("details", "context-disclosure context-disclosure--dark");
+  const resourcesSummary = el("summary");
+  resourcesSummary.textContent = "Ver interfaces y recursos oficiales";
+  const resourcesBody = el("div", "context-disclosure__body");
+  resourcesBody.append(resources, paragraph(personalResearchData.scopeNote, "practical-note"));
+  resourcesDisclosure.append(resourcesSummary, resourcesBody);
+  panel.append(resourcesDisclosure);
   return panel;
 }
 
@@ -192,7 +207,13 @@ function renderAcademicContext(context) {
     card.append(sources);
     documentGrid.append(card);
   });
-  panel.append(documentGrid, heading(4, "Qué cambia entre titulaciones"), list(context.differences));
+  const documentsDisclosure = el("details", "context-disclosure");
+  const documentsSummary = el("summary");
+  documentsSummary.textContent = `Ver documentos y diferencias por titulación · ${context.programmeIds.length} programas`;
+  const documentsBody = el("div", "context-disclosure__body");
+  documentsBody.append(documentGrid, heading(4, "Qué cambia entre titulaciones"), list(context.differences));
+  documentsDisclosure.append(documentsSummary, documentsBody);
+  panel.append(documentsDisclosure);
 
   const example = el("article", "academic-example");
   example.append(heading(4, "Ejemplo situado en tu contexto"), paragraph(context.example));
@@ -258,11 +279,16 @@ function renderRoute(item) {
     const entry = el("li");
     const number = el("span", "route-step__number");
     number.textContent = String(index + 1).padStart(2, "0");
-    const body = el("div");
-    body.append(heading(3, step.title), paragraph(step.body));
+    const disclosure = el("details", "route-step");
+    disclosure.open = index === 0;
+    const summary = el("summary");
+    summary.append(heading(3, step.title));
+    const body = el("div", "route-step__detail");
+    body.append(paragraph(step.body));
     const evidence = paragraph(`Evidencia a conservar: ${step.evidence}`, "evidence-note");
     body.append(evidence);
-    entry.append(number, body);
+    disclosure.append(summary, body);
+    entry.append(number, disclosure);
     listElement.append(entry);
   });
   section.append(listElement, recommendation("Si una unidad te indica una ruta distinta, pide que identifique el trámite o instrucción vigente y conserva esa respuesta con el expediente."));
@@ -404,6 +430,39 @@ function bindInteractions(item) {
       temporaryLabel(event.currentTarget, "Copiado");
     } catch { temporaryLabel(event.currentTarget, "No se pudo copiar"); }
   }));
+  setupGuideNavigation();
+}
+
+function setupGuideNavigation() {
+  const index = document.querySelector(".guide-index");
+  if (!index) return;
+  const links = [...index.querySelectorAll('a[href^="#"]')];
+  const sections = GUIDE_SECTIONS.map(([id, label]) => ({ id, label, element: document.getElementById(id) })).filter(({ element }) => element);
+  const current = document.querySelector("#guideCurrentSection");
+  const desktop = window.matchMedia("(min-width: 64rem)");
+  const syncDisclosure = () => { index.open = desktop.matches; };
+  syncDisclosure();
+  desktop.addEventListener?.("change", syncDisclosure);
+
+  const selectSection = (id) => {
+    const active = GUIDE_SECTIONS.find(([sectionId]) => sectionId === id);
+    if (current && active) current.textContent = active[1];
+    links.forEach((item) => {
+      if (item.getAttribute("href") === `#${id}`) item.setAttribute("aria-current", "location");
+      else item.removeAttribute("aria-current");
+    });
+  };
+
+  links.forEach((item) => item.addEventListener("click", () => {
+    selectSection(item.hash.slice(1));
+    if (!desktop.matches) index.open = false;
+  }));
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting).sort((left, right) => left.boundingClientRect.top - right.boundingClientRect.top);
+    if (visible[0]) selectSection(visible[0].target.id);
+  }, { rootMargin: "-18% 0px -70% 0px", threshold: 0 });
+  sections.forEach(({ element }) => observer.observe(element));
+  selectSection(window.location.hash.slice(1) || sections[0]?.id);
 }
 
 function checklistList(items, prefix) {

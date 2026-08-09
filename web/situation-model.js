@@ -287,11 +287,19 @@ function scoreGuide(guide, terms) {
     guide.scenario, guide.outcome, guide.firstMove, ...guide.questions, ...guide.decisionRules,
     ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext)
   ].join(" "));
+  const searchableText = `${title} ${aliases} ${body}`;
+  if (!terms.every((term) => searchableText.includes(term))) return 0;
   return terms.reduce((score, term) => score + (title.includes(term) ? 12 : 0) + (aliases.includes(term) ? 8 : 0) + (body.includes(term) ? 3 : 0), 0);
 }
 
+const SEARCH_STOP_WORDS = new Set([
+  "al", "como", "con", "de", "del", "el", "en", "hacer", "la", "las", "lo", "los", "me", "mi", "mis",
+  "necesito", "para", "por", "puedo", "que", "quiero", "se", "tramitar", "un", "una", "unos", "unas", "y"
+]);
+
 function tokenize(value) {
-  return normalize(value).split(/\s+/).filter((term) => term.length >= 2);
+  const normalized = normalize(value).replace(/\binteligencia artificial\b/g, " ia ");
+  return normalized.split(/\s+/).filter((term) => term.length >= 2 && !SEARCH_STOP_WORDS.has(term));
 }
 
 function normalize(value) {
