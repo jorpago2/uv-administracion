@@ -146,6 +146,13 @@ h4 { font-size: var(--text-lg); }
 .revision-note dt { min-width: 0; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; }
 .revision-note dd { min-width: 0; margin: 0; font-size: var(--text-base); font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
 
+.personal-use-notice { margin-block: var(--space-xl); background: var(--color-paper-raised); border: var(--rule-thick) solid var(--color-rule); box-shadow: var(--shadow-lg); }
+.personal-use-notice__label { margin: 0; padding: var(--space-xs) var(--space-md); background: var(--color-error-paper); border-block-end: var(--rule) solid var(--color-rule); font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.personal-use-notice__body { display: grid; gap: var(--space-lg); padding: var(--space-lg); }
+.personal-use-notice__body p { max-width: 62ch; margin: var(--space-sm) 0 0; }
+.personal-use-notice__body ul { display: grid; gap: var(--space-sm); margin: 0; padding-inline-start: var(--space-lg); }
+.personal-use-notice__verification { margin: 0; padding: var(--space-md) var(--space-lg); background: var(--color-accent); border-block-start: var(--rule) solid var(--color-rule); }
+
 .finder { display: grid; gap: var(--space-xl); padding-block: var(--space-2xl); }
 .finder__heading p { margin-block: var(--space-sm) 0; }
 kbd, code { font-family: var(--font-mono); }
@@ -668,6 +675,7 @@ mark { padding-inline: var(--space-3xs); background: var(--color-mark); color: v
   .masthead__meta { display: flex; }
   .masthead { grid-template-columns: minmax(0, 1fr) auto auto; }
   .intro { grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr); align-items: end; }
+  .personal-use-notice__body { grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr); }
   .finder { grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); align-items: end; }
   .search__row { grid-template-columns: minmax(0, 1fr) auto auto; }
   .search__row input { grid-column: auto; }

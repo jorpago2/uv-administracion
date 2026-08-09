@@ -33,6 +33,15 @@ test("la portada prioriza tareas, alertas y ambitos antes de las herramientas", 
   assert.match(html, /id="indice-capitulos"/);
 });
 
+test("la portada identifica el uso personal y el caracter no oficial", () => {
+  assert.match(html, /class="personal-use-notice"/);
+  assert.match(html, /uso personal de Jorge Parra/i);
+  assert.match(html, /No constituye asesoramiento, recomendación, instrucción administrativa ni interpretación oficial/);
+  assert.match(html, /Puede contener errores, omisiones o información incompleta o desactualizada/);
+  assert.match(html, /verifica siempre la norma, convocatoria, sede, plazo y criterio vigentes/);
+  assert.match(html, /<footer class="colophon">[\s\S]*contenido no oficial/);
+});
+
 test("el indice lateral se genera por ambitos y conserva los enlaces profundos", () => {
   assert.match(app, /function renderDomainDirectory\(/);
   assert.match(app, /document\.createElement\("details"\)/);
