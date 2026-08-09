@@ -3,13 +3,14 @@ import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
 import situationsSpecialisedData from "./data/situations-101-104.json";
+import situationsBudgetData from "./data/situations-105.json";
 import academicContextData from "./data/academic-situation-context.json";
 import academicProgrammesData from "./data/academic-programmes.json";
 import personalResearchData from "./data/personal-research-context.json";
 import { buildExampleGuides } from "./example-guide-model.js";
 import { buildSituationGuides, combineSituationCatalogs, searchSituationGuides, situationSearchItems } from "./situation-model.js";
 
-export const situationCatalog = combineSituationCatalogs(situationsData, situationsExtensionData, situationsSpecialisedData);
+export const situationCatalog = combineSituationCatalogs(situationsData, situationsExtensionData, situationsSpecialisedData, situationsBudgetData);
 const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 const researchStageById = new Map(personalResearchData.stages.map((stage) => [stage.id, stage]));
 

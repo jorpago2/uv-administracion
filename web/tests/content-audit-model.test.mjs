@@ -7,7 +7,8 @@ const config = JSON.parse(await readFile(new URL("../data/content-audit.json", i
 const catalogA = JSON.parse(await readFile(new URL("../data/situations.json", import.meta.url), "utf8"));
 const catalogB = JSON.parse(await readFile(new URL("../data/situations-51-100.json", import.meta.url), "utf8"));
 const catalogC = JSON.parse(await readFile(new URL("../data/situations-101-104.json", import.meta.url), "utf8"));
-const rawSituations = [...catalogA.situations, ...catalogB.situations, ...catalogC.situations];
+const catalogD = JSON.parse(await readFile(new URL("../data/situations-105.json", import.meta.url), "utf8"));
+const rawSituations = [...catalogA.situations, ...catalogB.situations, ...catalogC.situations, ...catalogD.situations];
 
 function guide(raw, overrides = {}) {
   return {
@@ -27,7 +28,7 @@ function guide(raw, overrides = {}) {
   };
 }
 
-test("la auditoría clasifica los 104 casos una sola vez", () => {
+test("la auditoría clasifica los 105 casos una sola vez", () => {
   const academicId = "preparar-guia-docente";
   const researchId = "presupuesto-proyecto";
   const guides = rawSituations.map((raw) => guide(raw, {
@@ -37,9 +38,9 @@ test("la auditoría clasifica los 104 casos una sola vez", () => {
   }));
   const audit = buildContentAudit(guides, rawSituations, config);
   const summary = summarizeContentAudit(audit, config);
-  assert.equal(audit.length, 104);
-  assert.equal(new Set(audit.map((item) => item.id)).size, 104);
-  assert.equal(Object.values(summary.counts).reduce((sum, value) => sum + value, 0), 104);
+  assert.equal(audit.length, 105);
+  assert.equal(new Set(audit.map((item) => item.id)).size, 105);
+  assert.equal(Object.values(summary.counts).reduce((sum, value) => sum + value, 0), 105);
   assert.equal(summary.counts.reinforce, config.reinforceSituationIds.length);
   assert.equal(summary.counts.low, config.lowRelevanceSituationIds.length);
   assert.equal(summary.missing, config.missingCases.length);

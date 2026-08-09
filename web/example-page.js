@@ -3,6 +3,7 @@ import operationsData from "./data/operations.json";
 import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
 import situationsSpecialisedData from "./data/situations-101-104.json";
+import situationsBudgetData from "./data/situations-105.json";
 import academicContextData from "./data/academic-situation-context.json";
 import academicProgrammesData from "./data/academic-programmes.json";
 import personalResearchData from "./data/personal-research-context.json";
@@ -16,7 +17,7 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData, situationsSpecialisedData), guides, academicContextData, personalResearchData);
+const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData, situationsSpecialisedData, situationsBudgetData), guides, academicContextData, personalResearchData);
 const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
 const researchStageById = new Map(personalResearchData.stages.map((stage) => [stage.id, stage]));
 const researchResourceById = new Map(personalResearchData.resources.map((resource) => [resource.id, resource]));
@@ -122,11 +123,67 @@ function renderOrientation(item) {
   section.append(callout("Meta operativa", item.outcome, "accent"));
   if (item.academicContext) section.append(renderAcademicContext(item.academicContext));
   if (item.personalResearchContext) section.append(renderPersonalResearchContext(item.personalResearchContext));
+  if (item.budgetSources?.length) section.append(renderBudgetMap(item.budgetSnapshot ?? [], item.budgetSources));
   section.append(heading(3, "Las tres preguntas que debes poder responder"), list(item.questions));
   if (item.decisionRules?.length) section.append(heading(3, "Reglas para decidir la ruta"), list(item.decisionRules, "decision-rule-list"));
   section.append(recommendation("No empieces por el formulario. Empieza delimitando hechos, plazo y órgano competente; un formulario correcto enviado al cauce equivocado sigue siendo un problema."));
   appendSourceNote(section, item.sources);
   return section;
+}
+
+function renderBudgetMap(snapshot, sources) {
+  const panel = el("aside", "budget-map");
+  panel.append(
+    paragraph("Respuesta aplicada", "eyebrow"),
+    heading(3, "Qué fondos existen y cuáles puedes utilizar"),
+    callout(
+      "La distinción decisiva",
+      "Los importes de ETSE, DIE e ICMUV son asignaciones a estructuras. No constituyen una bolsa personal. Un fondo solo es operativo para ti cuando constan clave, saldo, finalidad, responsable, autorización y fecha límite.",
+      "warning"
+    )
+  );
+
+  if (snapshot.length) {
+    const snapshotIntro = el("div", "budget-snapshot__intro");
+    snapshotIntro.append(heading(4, "Foto oficial del presupuesto UV 2026"), paragraph("Importes anuales de referencia para toda la estructura; no muestran el saldo vivo ni la parte disponible para una persona."));
+    const cards = el("div", "budget-snapshot");
+    snapshot.forEach((item) => {
+      const card = el("article", "budget-snapshot__card");
+      const source = link(item.label, item.sourceUrl);
+      source.target = "_blank";
+      source.rel = "noopener noreferrer";
+      card.append(source, strong(item.amount), paragraph(item.scope), paragraph(item.note, "practical-note"));
+      cards.append(card);
+    });
+    panel.append(snapshotIntro, cards);
+  }
+
+  const sourceIntro = el("div", "budget-sources__intro");
+  sourceIntro.append(heading(4, "Mapa por tipo de fondo"), paragraph("Abre una fuente para ver cómo nace, quién decide, dónde comprobarla y qué ocurre al cierre."));
+  const sourceList = el("div", "budget-sources");
+  sources.forEach((source) => {
+    const details = el("details", "budget-source");
+    const summary = el("summary");
+    const title = el("span", "budget-source__name");
+    title.textContent = source.name;
+    const status = el("span", "budget-source__status");
+    status.textContent = source.status;
+    summary.append(title, status);
+    const definitionList = el("dl", "budget-source__facts");
+    [
+      ["Titular", source.owner],
+      ["Cómo se obtiene", source.howObtained],
+      ["Quién decide", source.whoDecides],
+      ["Dónde comprobar saldo", source.checkBalance],
+      ["Para qué puede usarse", source.allowed],
+      ["Cierre o remanente", source.yearEnd],
+      ["Qué significa para Jorge", source.personal]
+    ].forEach(([label, value]) => fact(definitionList, label, value));
+    details.append(summary, definitionList);
+    sourceList.append(details);
+  });
+  panel.append(sourceIntro, sourceList);
+  return panel;
 }
 
 function renderPersonalResearchContext(context) {

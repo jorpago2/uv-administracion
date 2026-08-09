@@ -102,7 +102,8 @@ export function situationSearchItems(guides) {
     category: guide.categoryLabel,
     content: [
       guide.scenario, guide.outcome, guide.firstMove, ...guide.aliases, ...guide.questions, ...guide.decisionRules,
-      ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext)
+      ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext),
+      ...budgetSearchContent(guide)
     ].join(" "),
     href: `example.html?caso=${encodeURIComponent(guide.id)}`
   }));
@@ -243,6 +244,19 @@ function validateResolvedGuide(guide) {
   guide.sources.forEach((source) => {
     if (!source.label || !/^https:\/\//.test(source.url)) throw new Error(`Fuente no oficializable en ${guide.id}.`);
   });
+  if (guide.budgetSnapshot !== undefined) {
+    if (!Array.isArray(guide.budgetSnapshot) || guide.budgetSnapshot.length < 1) throw new Error(`Foto presupuestaria inválida en ${guide.id}.`);
+    guide.budgetSnapshot.forEach((item) => {
+      if (!item.label || !item.amount || !item.scope || !item.note || !/^https:\/\//.test(item.sourceUrl)) throw new Error(`Importe presupuestario incompleto en ${guide.id}.`);
+    });
+  }
+  if (guide.budgetSources !== undefined) {
+    const fields = ["name", "status", "owner", "howObtained", "whoDecides", "checkBalance", "allowed", "yearEnd", "personal"];
+    if (!Array.isArray(guide.budgetSources) || guide.budgetSources.length < 3) throw new Error(`Mapa de fondos insuficiente en ${guide.id}.`);
+    guide.budgetSources.forEach((source) => {
+      if (fields.some((field) => typeof source[field] !== "string" || source[field].trim().length < 4)) throw new Error(`Fuente presupuestaria incompleta en ${guide.id}.`);
+    });
+  }
 }
 
 function merge(...arrays) {
@@ -285,11 +299,19 @@ function scoreGuide(guide, terms) {
   const aliases = normalize(guide.aliases.join(" "));
   const body = normalize([
     guide.scenario, guide.outcome, guide.firstMove, ...guide.questions, ...guide.decisionRules,
-    ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext)
+    ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext),
+    ...budgetSearchContent(guide)
   ].join(" "));
   const searchableText = `${title} ${aliases} ${body}`;
   if (!terms.every((term) => searchableText.includes(term))) return 0;
   return terms.reduce((score, term) => score + (title.includes(term) ? 12 : 0) + (aliases.includes(term) ? 8 : 0) + (body.includes(term) ? 3 : 0), 0);
+}
+
+function budgetSearchContent(guide) {
+  return [
+    ...(guide.budgetSnapshot ?? []).flatMap((item) => [item.label, item.amount, item.scope, item.note]),
+    ...(guide.budgetSources ?? []).flatMap((source) => [source.name, source.status, source.owner, source.howObtained, source.whoDecides, source.checkBalance, source.allowed, source.yearEnd, source.personal])
+  ];
 }
 
 const SEARCH_STOP_WORDS = new Set([

@@ -11,6 +11,7 @@ const decisionCasesPath = path.join(repositoryRoot, "web", "data", "decision-cas
 const situationsPath = path.join(repositoryRoot, "web", "data", "situations.json");
 const situationsExtensionPath = path.join(repositoryRoot, "web", "data", "situations-51-100.json");
 const situationsSpecialisedPath = path.join(repositoryRoot, "web", "data", "situations-101-104.json");
+const situationsBudgetPath = path.join(repositoryRoot, "web", "data", "situations-105.json");
 const travelPath = path.join(repositoryRoot, "web", "data", "travel-2026.json");
 const academicProgrammesPath = path.join(repositoryRoot, "web", "data", "academic-programmes.json");
 const personalResearchPath = path.join(repositoryRoot, "web", "data", "personal-research-context.json");
@@ -22,6 +23,7 @@ const decisionCases = JSON.parse(await readFile(decisionCasesPath, "utf8"));
 const situations = JSON.parse(await readFile(situationsPath, "utf8"));
 const situationsExtension = JSON.parse(await readFile(situationsExtensionPath, "utf8"));
 const situationsSpecialised = JSON.parse(await readFile(situationsSpecialisedPath, "utf8"));
+const situationsBudget = JSON.parse(await readFile(situationsBudgetPath, "utf8"));
 const travel = JSON.parse(await readFile(travelPath, "utf8"));
 const academicProgrammes = JSON.parse(await readFile(academicProgrammesPath, "utf8"));
 const personalResearch = JSON.parse(await readFile(personalResearchPath, "utf8"));
@@ -31,7 +33,7 @@ const markdownLinks = [...markdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((matc
 const procedureLinks = Array.isArray(operations.procedures) ? operations.procedures.map((procedure) => procedure.sourceUrl) : [];
 const caseLinks = Array.isArray(decisionCases.cases) ? decisionCases.cases.map((item) => item.sourceUrl) : [];
 const guideLinks = buildExampleGuides(markdown, operations.procedures).flatMap((guide) => guide.sources.map((source) => source.url));
-const situationCatalog = combineSituationCatalogs(situations, situationsExtension, situationsSpecialised);
+const situationCatalog = combineSituationCatalogs(situations, situationsExtension, situationsSpecialised, situationsBudget);
 const situationLinks = buildSituationGuides(situationCatalog, buildExampleGuides(markdown, operations.procedures)).flatMap((guide) => guide.sources.map((source) => source.url));
 const webExternalLinks = [...webIndex.matchAll(/<a\s[^>]*href="(https?:\/\/[^"#]+(?:#[^"]*)?)"/gi)].map((match) => match[1].replace(/&amp;/g, "&"));
 const academicLinks = [

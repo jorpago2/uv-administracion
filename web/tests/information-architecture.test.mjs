@@ -46,18 +46,18 @@ test("la portada prioriza buscar, actuar y explorar antes de la consulta", () =>
   const referenceIndex = html.indexOf('class="hub-reference"');
   assert.ok(searchIndex > 0 && searchIndex < actionIndex && actionIndex < domainIndex && domainIndex < referenceIndex);
   assert.ok(searchIndex < personalNoticeIndex, "la búsqueda debe estar antes del aviso extenso en móvil");
-  assert.match(html, /<dt>Situaciones<\/dt><dd>104<\/dd>/);
+  assert.match(html, /<dt>Situaciones<\/dt><dd>105<\/dd>/);
   assert.match(html, /href="resolver\/"/);
   for (const route of ["administracion", "docencia", "carrera-pdi", "investigacion", "gestion", "cumplimiento"]) assert.match(html, new RegExp(`href="${route}/"`));
   assert.match(html, /href="consulta\.html"/);
 });
 
-test("las 104 situaciones tienen una subweb principal y buscable", () => {
+test("las 105 situaciones tienen una subweb principal y buscable", () => {
   assert.match(resolverHtml, /id="situaciones"/);
   assert.match(resolverHtml, /id="situationQuery"[^>]+type="search"/);
   assert.match(resolverHtml, /id="situationCategory"/);
   assert.match(resolverPage, /initSituationDirectory/);
-  assert.match(resolverHtml, /104 situaciones reales/);
+  assert.match(resolverHtml, /105 situaciones reales/);
   assert.match(resolverHtml, /href="\.\.\/auditoria\/"/);
   assert.match(auditHtml, /id="auditCaseList"/);
   assert.match(html, /href="auditoria\/"/);

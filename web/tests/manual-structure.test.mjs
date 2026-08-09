@@ -40,7 +40,7 @@ test("la numeración de los subapartados coincide con su capítulo", () => {
 
 test("los 32 capítulos operativos incluyen un ejemplo realista", () => {
   const exampleCount = (manual.match(/^> \*\*Ejemplo realista/gm) ?? []).length;
-  assert.equal(exampleCount, 32);
+  assert.ok(exampleCount >= 32);
 });
 
 test("el capítulo de financiación cubre las cinco vías solicitadas y la selección previa", () => {

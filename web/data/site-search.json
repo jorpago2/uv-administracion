@@ -1,7 +1,7 @@
 [
   {
     "kind": "Auditoría",
-    "title": "Auditoría de pertinencia de las 104 situaciones",
+    "title": "Auditoría de pertinencia de las 105 situaciones",
     "context": "Cobertura, pertinencia, fuentes y casos pendientes",
     "keywords": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+. control calidad casos genericos incompletos mapa institucional",
     "href": "auditoria/",
@@ -981,6 +981,14 @@
     "context": "El bruto, un complemento, un atraso o una deducción no coincide con tu categoría, dedicación o resoluciones.",
     "keywords": "nómina salario atrasos IRPF cotización complemento",
     "href": "example.html?caso=revisar-error-nomina",
+    "priority": 6
+  },
+  {
+    "kind": "Situación",
+    "title": "Saber qué dinero tengo para docencia e investigación",
+    "context": "Jorge quiere planificar consumibles docentes, componentes, microfabricación, caracterización, viajes o personal y necesita distinguir si existe una dotación personal anual, qué fondos pertenecen a ETSE, DIE o ICMUV y qué saldos de proyectos o claves puede utilizar.",
+    "keywords": "dinero anual PDI presupuesto profesor fondos docencia fondos investigación saldo proyecto clave 9999 remanentes retornos indirectos presupuesto DIE presupuesto ETSE presupuesto ICMUV INVE$WEB INVESWEB SICUV DIE y ETSE para docencia; ICMUV para su asignación; responsable y unidad gestora/SGI para proyectos, contratos y claves de investigación Consulta escrita a la secretaría o administración competente, consulta de claves en INVE$WEB y circuito económico institucional aplicable design simulation fabrication characterization data protection transfer management La investigación de Jorge combina costes muy distintos y secuenciales: licencias y cálculo, máscaras y obleas, consumibles de sala limpia, componentes ópticos, servicios de caracterización, encapsulado, viajes y publicación. El mapa evita iniciar una fase sin financiación elegible para las siguientes. Antes de fabricar un dispositivo fotónico con semiconductor avanzado, separa en el presupuesto la simulación, la máscara, la oblea, los procesos LFNN, la caracterización óptica y eléctrica y una posible foundry; asigna cada coste a una clave confirmada y reserva margen para repeticiones, calibración y cierre. icmuv umdo lfnn scsie serinves",
+    "href": "example.html?caso=saber-fondos-disponibles-docencia-investigacion",
     "priority": 6
   },
   {

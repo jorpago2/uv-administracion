@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Situación operativa 105",
+    "reviewedOn": "2026-08-09"
+  },
+  "categories": [
+    { "id": "incorporacion", "label": "Incorporación y carrera" },
+    { "id": "docencia", "label": "Docencia y estudiantado" },
+    { "id": "investigacion", "label": "Investigación y transferencia" },
+    { "id": "gestion", "label": "Compras, equipos y viajes" },
+    { "id": "cumplimiento", "label": "Cumplimiento y derechos" }
+  ],
+  "profiles": {
+    "standalone-detailed": {}
+  },
+  "situations": [
+    {
+      "id": "saber-fondos-disponibles-docencia-investigacion",
+      "number": 105,
+      "category": "investigacion",
+      "baseChapter": 20,
+      "profile": "standalone-detailed",
+      "title": "Saber qué dinero tengo para docencia e investigación",
+      "scenario": "Jorge quiere planificar consumibles docentes, componentes, microfabricación, caracterización, viajes o personal y necesita distinguir si existe una dotación personal anual, qué fondos pertenecen a ETSE, DIE o ICMUV y qué saldos de proyectos o claves puede utilizar.",
+      "aliases": ["dinero anual PDI", "presupuesto profesor", "fondos docencia", "fondos investigación", "saldo proyecto", "clave 9999", "remanentes", "retornos indirectos", "presupuesto DIE", "presupuesto ETSE", "presupuesto ICMUV", "INVE$WEB", "INVESWEB", "SICUV"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "Jorge dispone de un mapa fechado de fondos realmente accesibles: identifica titular o estructura, clave, saldo disponible, finalidad, persona que autoriza, plazo de ejecución y evidencia escrita antes de planificar o comprometer un gasto.",
+        "firstMove": "Prepara una tabla con cada necesidad prevista y pide por escrito a la secretaría o administración del DIE, ETSE e ICMUV que confirme qué fondo y clave podrían asumirla; en paralelo, consulta en INVE$WEB los proyectos y claves de investigación de los que seas responsable.",
+        "questions": [
+          "¿La necesidad es docente, investigadora, de transferencia o común, y beneficia a una asignatura, laboratorio, estructura, proyecto o contrato identificable?",
+          "¿Existe una clave concreta a tu nombre o bajo tu responsabilidad, o estás solicitando que una estructura asigne parte de su presupuesto?",
+          "¿Quién es responsable del fondo, quién distribuye la asignación, quién autoriza el gasto y qué unidad lo tramita?",
+          "¿Cuál es el saldo disponible hoy, descontando compromisos, y qué parte puede utilizarse para ese concepto y durante qué periodo?",
+          "¿El crédito se pierde al final del ejercicio, se incorpora condicionado, debe devolverse al financiador o puede pasar a una clave genérica?",
+          "¿La compra, viaje, contratación o servicio sigue además SDA, UV-plyca, comisión de servicio, tarifas internas u otro procedimiento?"
+        ],
+        "successChecks": [
+          "Cada necesidad tiene una fuente de financiación y una clave confirmadas por la persona responsable o la unidad gestora.",
+          "El saldo se ha comprobado con fecha, compromisos pendientes, elegibilidad y fecha límite de ejecución.",
+          "La autorización presupuestaria está separada del procedimiento de compra, viaje, contratación o pago aplicable."
+        ],
+        "responsibilities": [
+          { "actor": "Jorge", "task": "Definir la necesidad, vincularla a docencia o investigación, consultar las claves propias y no comprometer gasto sin confirmación." },
+          { "actor": "Consejo y dirección del DIE", "task": "Distribuir la asignación departamental y fijar prioridades dentro de las competencias del departamento." },
+          { "actor": "Dirección/Junta y administración de la ETSE", "task": "Gestionar las asignaciones del centro y el componente destinado a laboratorios y prácticas docentes." },
+          { "actor": "Consejo, dirección y apoyo administrativo del ICMUV", "task": "Distribuir y gestionar la asignación del instituto y aclarar los recursos comunes o de sus unidades." },
+          { "actor": "Responsable de proyecto, contrato o clave", "task": "Confirmar saldo, finalidad, elegibilidad, periodo y relación del gasto con la actividad financiada." },
+          { "actor": "Servicio de Gestión de la Investigación y unidades económicas", "task": "Informar sobre INVE$WEB, ingresos, modificaciones, justificación, remanentes y tramitación económica sin sustituir al órgano que asigna o autoriza." }
+        ],
+        "unit": "DIE y ETSE para docencia; ICMUV para su asignación; responsable y unidad gestora/SGI para proyectos, contratos y claves de investigación",
+        "channel": "Consulta escrita a la secretaría o administración competente, consulta de claves en INVE$WEB y circuito económico institucional aplicable",
+        "deadline": "Antes de presupuestar o comprometer el gasto y, en especial, antes del cierre anual; el componente ETSE para laboratorios docentes debe ejecutarse en el ejercicio",
+        "documents": [
+          "Tabla de necesidades con importe estimado, finalidad, asignatura/proyecto y fecha necesaria",
+          "Relación de claves y proyectos de los que Jorge es responsable en INVE$WEB",
+          "Confirmación escrita de fondo, clave, saldo disponible y responsable",
+          "Resolución, contrato, convenio o acuerdo interno que fija finalidad y periodo",
+          "Extracto o informe de ejecución con gastos y compromisos pendientes",
+          "Calendario de cierre e instrucciones de incorporación, devolución o remanentes",
+          "Conformidad de elegibilidad para el concepto concreto",
+          "Expediente posterior de compra, viaje, servicio o contratación"
+        ],
+        "steps": [
+          { "action": "Inventariar las necesidades de doce meses y clasificarlas como docencia ETSE/DIE, investigación ICMUV, proyecto competitivo, contrato artículo 60, clave personal genérica o recurso compartido.", "evidence": "Mapa necesidad–actividad–importe–fecha" },
+          { "action": "Consultar INVE$WEB y anotar por cada clave de responsabilidad ingresos reconocidos, gastos, compromisos, saldo y fecha final; no usar el presupuesto concedido como si fuera saldo disponible.", "evidence": "Captura o informe fechado de ejecución" },
+          { "action": "Solicitar al DIE/ETSE la ruta para necesidades docentes y al ICMUV la ruta para recursos del instituto, preguntando expresamente si existe acuerdo interno de reparto o convocatoria.", "evidence": "Respuesta que identifica fondo, decisor y unidad tramitadora" },
+          { "action": "Leer la finalidad y el periodo de la resolución, contrato o acuerdo de asignación y contrastar el concepto concreto con la unidad gestora cuando haya duda.", "evidence": "Regla de elegibilidad y plazo anotados con su fuente" },
+          { "action": "Separar cuatro decisiones: disponibilidad de crédito, elegibilidad, autorización y procedimiento de gasto; obtenerlas antes de pedir, reservar, contratar o pagar.", "evidence": "Conformidades y expediente previo exigible" },
+          { "action": "Revisar mensualmente saldos y compromisos y, tres meses antes del cierre, decidir qué ejecutar, modificar, incorporar o devolver conforme a la norma de cada fondo.", "evidence": "Previsión de cierre actualizada" },
+          { "action": "Archivar para cada gasto la cadena completa desde la necesidad y la fuente hasta autorización, pedido, recepción, factura y justificación.", "evidence": "Expediente económico trazable" }
+        ],
+        "risks": [
+          "Interpretar el presupuesto de ETSE, DIE o ICMUV como una cantidad personal anual o de libre disposición.",
+          "Confundir importe concedido, ingreso previsto, crédito incorporado, saldo contable y saldo realmente disponible tras compromisos.",
+          "Usar una clave genérica, un remanente o un retorno de indirectos sin ser responsable o sin confirmar sus condiciones.",
+          "Aplicar el reparto de costes indirectos de contratos artículo 60 a proyectos competitivos con reglas diferentes.",
+          "Perder el componente de laboratorios docentes por no ejecutarlo dentro del ejercicio.",
+          "Comprar primero y buscar después una partida o autorización que cubra el gasto.",
+          "No anticipar devoluciones, costes no elegibles, cierres de proyecto o reasignación de saldos inactivos."
+        ],
+        "alsoApplies": "A cualquier PDI que necesite saber qué estructura o actividad financia una compra, viaje, inscripción, servicio científico, licencia, contrato de personal o consumible.",
+        "adapt": "Para Jorge conviene separar al menos cinco columnas: docencia GIET/GIEI/GIT/MUIE, presupuesto del DIE, recursos ETSE de laboratorios, ICMUV/UMDO+ y claves propias de proyectos, contratos o investigación.",
+        "stopsApplying": "Si una resolución o contrato particular fija un reparto, finalidad o cierre diferente, prevalece esa condición específica sobre el mapa general.",
+        "doNotAssume": "No se ha identificado en las fuentes públicas revisadas una dotación automática, igual y personal por ser PDI; puede haber acuerdos internos o claves propias que solo la estructura y los sistemas económicos pueden confirmar.",
+        "sources": [
+          { "label": "UV · Presupuesto 2026, anexo 3 de asignaciones", "url": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493" },
+          { "label": "UV · Reglamento de ejecución presupuestaria 2026", "url": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7494" },
+          { "label": "DIE · Funciones del Consejo de Departamento", "url": "https://www.uv.es/uvweb/departament-enginyeria-electronica/ca/departament/organitzacio/consell-departament/funcions-1285859442829.html" },
+          { "label": "ICMUV · Reglamento de régimen interno", "url": "https://www.uv.es/sgeneral/Reglamentacio/Doc/Regl_Reg_Intern_Instituts/ICMUV.pdf" },
+          { "label": "UV · INVE$WEB, consulta económica de proyectos", "url": "https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/proyectos-investigacion/invesweb-1285867372160.html" },
+          { "label": "UV · Contratos al amparo del artículo 60 LOSU", "url": "https://www.uv.es/uvweb/servicio-investigacion/es/colaboracion-empresa/contratos-al-amparo-legislacion-universitaria-1286322242007.html" },
+          { "label": "UV · Programa propio de ayudas a la investigación", "url": "https://www.uv.es/uvweb/universidad/es/investigacion-transferencia/financiacion/programa-ayudas-investigacion-uv/introduccion-1285946452436.html" },
+          { "label": "UV · Convocatorias de innovación educativa 2026–2027", "url": "https://www.uv.es/uvweb/servicio-formacion-permanente-innovacion-educativa/es/innovacion-educativa/convocatorias-innovacion-educativa/vigente/2026-2027-1286460950115.html" }
+        ],
+        "budgetSnapshot": [
+          { "label": "ETSE · funcionamiento", "amount": "168.296,21 €/año", "scope": "Asignación 2026 al centro", "note": "No es una dotación personal.", "sourceUrl": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493" },
+          { "label": "ETSE · laboratorios docentes", "amount": "135.061,25 €/año", "scope": "Componente B 2026", "note": "Finalista y sin incorporación al ejercicio siguiente.", "sourceUrl": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493" },
+          { "label": "DIE · funcionamiento", "amount": "36.095,48 €/año", "scope": "Asignación 2026 al departamento", "note": "El Consejo distribuye el presupuesto departamental.", "sourceUrl": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493" },
+          { "label": "ICMUV · funcionamiento", "amount": "22.073,77 €/año", "scope": "Asignación 2026 al instituto", "note": "El Consejo del instituto distribuye la asignación.", "sourceUrl": "https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493" }
+        ],
+        "budgetSources": [
+          { "name": "Bolsa personal anual por ser PDI", "status": "No acreditada", "owner": "No consta una clave automática individual", "howObtained": "No se ha localizado en las fuentes públicas revisadas; confirma si DIE, ETSE o ICMUV han aprobado un reparto interno.", "whoDecides": "El órgano competente de la estructura si existe acuerdo de reparto", "checkBalance": "Pide acuerdo, clave, saldo y condiciones por escrito; no basta una práctica informal.", "allowed": "Solo lo que autorice el eventual acuerdo y el procedimiento económico aplicable.", "yearEnd": "Dependerá de la naturaleza presupuestaria de la clave asignada.", "personal": "No presupuestar como derecho personal" },
+          { "name": "Presupuesto ordinario del DIE", "status": "Fondo de estructura", "owner": "Departamento de Ingeniería Electrónica", "howObtained": "Asignación anual UV; en 2026 figura 36.095,48 € para el departamento completo.", "whoDecides": "Consejo/dirección del DIE según sus competencias y acuerdos", "checkBalance": "Secretaría o administración del DIE; el personal gestor consulta la ejecución en SICUV.", "allowed": "Necesidades departamentales aprobadas, incluida la docencia cuando corresponda; no es libre disposición individual.", "yearEnd": "Aplican las reglas de cierre e incorporación de asignaciones departamentales del ejercicio.", "personal": "Solo mediante asignación o autorización del DIE" },
+          { "name": "Presupuesto ordinario de la ETSE", "status": "Fondo de centro", "owner": "Escola Tècnica Superior d’Enginyeria", "howObtained": "Asignación anual UV; en 2026 figura 168.296,21 € para el centro completo.", "whoDecides": "Órganos y dirección de la ETSE dentro del presupuesto aprobado", "checkBalance": "Administración de la ETSE y responsables internos de la partida.", "allowed": "Funcionamiento y necesidades del centro autorizadas; no equivale a saldo de cada profesor.", "yearEnd": "Aplican las reglas generales del presupuesto de centros y las instrucciones de cierre.", "personal": "Requiere priorización y autorización del centro" },
+          { "name": "ETSE · laboratorios y prácticas docentes", "status": "Finalista docente", "owner": "ETSE para laboratorios y prácticas", "howObtained": "Componente B anual; en 2026 figura 135.061,25 € para el conjunto del centro.", "whoDecides": "ETSE mediante su planificación y circuito interno", "checkBalance": "Administración/dirección ETSE, identificando asignatura, laboratorio y necesidad.", "allowed": "Material fungible, equipamiento de laboratorio, prácticas y equipamiento docente conforme al reglamento.", "yearEnd": "Debe ejecutarse en el ejercicio y no se incorpora al siguiente.", "personal": "No personal; solicitar para una necesidad docente concreta" },
+          { "name": "Presupuesto ordinario del ICMUV", "status": "Fondo de instituto", "owner": "Institut de Ciència dels Materials", "howObtained": "Asignación anual UV; en 2026 figura 22.073,77 € para el instituto completo.", "whoDecides": "Consejo del ICMUV, que distribuye la asignación del instituto", "checkBalance": "Dirección/apoyo administrativo ICMUV y responsable de la partida o recurso común.", "allowed": "Funcionamiento y prioridades del instituto aprobadas; distingue ICMUV, UMDO+ y proyectos.", "yearEnd": "Aplican las reglas de cierre e incorporación de institutos y el acuerdo interno correspondiente.", "personal": "Solo si el ICMUV asigna o autoriza el gasto" },
+          { "name": "Máster Universitario en Ingeniería Electrónica", "status": "Asignación específica", "owner": "Programa/centro conforme a la asignación UV", "howObtained": "La UV asigna recursos a másteres oficiales atendiendo, entre otros criterios, a créditos y recursos docentes.", "whoDecides": "Vicerrectorado competente y órganos del título/ETSE en su ámbito", "checkBalance": "CCA/coordinación y administración ETSE; pide finalidad, clave y saldo del curso.", "allowed": "Necesidades del máster vinculadas a la asignación y aprobadas por el circuito competente.", "yearEnd": "Según el ejercicio y las instrucciones específicas de la asignación.", "personal": "No personal; vinculado al programa" },
+          { "name": "Proyecto, ayuda o contrato activo", "status": "Finalista", "owner": "Actividad y responsable identificados en la concesión o contrato", "howObtained": "Concesión competitiva, convenio o contrato; el ingreso y su disponibilidad siguen el instrumento.", "whoDecides": "Responsable de la actividad dentro de las condiciones, con control de la unidad gestora", "checkBalance": "INVE$WEB: ingresos, gastos, modificaciones, compromisos y totales por clave.", "allowed": "Solo costes elegibles, necesarios, trazables y realizados dentro del periodo y procedimiento.", "yearEnd": "Puede incorporarse si lo permiten concesión/contrato; al cierre puede haber devolución o reglas específicas.", "personal": "Utilizable solo si eres responsable o tienes autorización" },
+          { "name": "Clave personal genérica de investigación 9999XXXX", "status": "Solo si existe", "owner": "Responsable nominal de la clave", "howObtained": "Puede recibir determinados remanentes finales no reintegrables o retornos previstos por la normativa; no nace automáticamente por ser PDI.", "whoDecides": "Responsable dentro de la norma, con gestión y control UV", "checkBalance": "INVE$WEB y unidad gestora; comprueba origen y restricciones del saldo.", "allowed": "Investigación conforme a la naturaleza pública de los fondos y a las reglas económicas aplicables.", "yearEnd": "Sujeta a incorporación y posible revisión/reasignación de saldos inactivos según el reglamento.", "personal": "Clave bajo responsabilidad, no dinero privado" },
+          { "name": "Retorno de costes indirectos de contrato artículo 60", "status": "Generado por contrato", "owner": "UV, estructura y clave del responsable según el reparto", "howObtained": "En la información UV vigente: del 20 % de indirectos, 10 % institución, 5 % clave genérica personal, 4,5 % departamento/instituto/ERI y 0,5 % fondo común.", "whoDecides": "La regla institucional de reparto y los responsables de cada destino", "checkBalance": "Unidad de transferencia/gestora e INVE$WEB una vez contabilizado el ingreso.", "allowed": "Según la naturaleza de la clave receptora y las reglas económicas; no extrapolar este reparto a ayudas competitivas.", "yearEnd": "Según la clave receptora y el reglamento de ejecución.", "personal": "El 5 % puede ir a clave propia, pero sigue siendo fondo UV" },
+          { "name": "Convocatorias internas UV", "status": "Competitivas", "owner": "Persona, equipo o actividad beneficiaria de la resolución", "howObtained": "Solicitud y concesión: programa propio de investigación, proyectos precompetitivos, movilidad, infraestructura o innovación docente, entre otros.", "whoDecides": "Órgano convocante y resolución; después, responsable y unidad gestora", "checkBalance": "Resolución, clave comunicada e INVE$WEB o unidad gestora correspondiente.", "allowed": "Conceptos, cuantías, periodo y justificación definidos en cada convocatoria.", "yearEnd": "Lo que establezcan convocatoria, resolución e instrucciones de cierre.", "personal": "No automática; exige solicitud y concesión" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": [
+          "Una asignación a ETSE, DIE o ICMUV no es un derecho individual: solo se considera disponible cuando la estructura identifica clave, saldo, finalidad y autorización.",
+          "En proyectos, contratos y ayudas prevalecen resolución, contrato y elegibilidad; saldo contable, competencia para autorizar y procedimiento de gasto son controles diferentes.",
+          "La clave genérica 9999XXXX y el retorno de indirectos solo existen si se han generado y contabilizado; continúan siendo fondos UV, no dinero privado."
+        ],
+        "stopConditions": [
+          "No comprometas ni adelantes el gasto si no constan fondo, clave, saldo, elegibilidad y persona autorizante.",
+          "Detén la tramitación si la finalidad, el periodo, el cierre o la titularidad de la clave no coinciden con la necesidad."
+        ],
+        "completionEvidence": [
+          "Mapa de fondos fechado y responsable de cada fuente.",
+          "Saldo, finalidad y fecha límite confirmados por sistema o unidad competente.",
+          "Autorización y procedimiento de gasto identificados antes del compromiso."
+        ],
+        "escalation": [
+          "Si nadie identifica la partida docente, eleva una petición concreta al DIE o ETSE para que el órgano competente priorice y responda.",
+          "Si existe discrepancia sobre un proyecto, contrato, remanente o clave 9999, remite resolución y extracto a la unidad gestora/SGI antes de usar el saldo."
+        ]
+      }
+    }
+  ]
+}

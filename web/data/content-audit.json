@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-08-09",
-  "title": "Auditoría de pertinencia de las 104 situaciones",
+  "title": "Auditoría de pertinencia de las 105 situaciones",
   "scope": "Uso personal de Jorge Parra como PDI del DIE y la ETSE e investigador del ICMUV/UMDO+.",
   "methodology": [
     "Pertinencia: el caso se relaciona con funciones reales de docencia, investigación, gestión o empleo de Jorge Parra.",
@@ -75,7 +75,8 @@
     "acceso-lfnn-sala-limpia",
     "fabricacion-foundry-run",
     "licencia-simulacion-calculo-nube",
-    "incorporar-estudiante-laboratorio"
+    "incorporar-estudiante-laboratorio",
+    "saber-fondos-disponibles-docencia-investigacion"
   ],
   "institutionMap": [
     {

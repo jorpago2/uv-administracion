@@ -8,14 +8,15 @@ import { buildSituationGuides, combineSituationCatalogs } from "../situation-mod
 const situations = JSON.parse(await readFile(new URL("../data/situations.json", import.meta.url), "utf8"));
 const extension = JSON.parse(await readFile(new URL("../data/situations-51-100.json", import.meta.url), "utf8"));
 const specialised = JSON.parse(await readFile(new URL("../data/situations-101-104.json", import.meta.url), "utf8"));
+const budget = JSON.parse(await readFile(new URL("../data/situations-105.json", import.meta.url), "utf8"));
 const manual = JSON.parse(await readFile(new URL("../data/manual.json", import.meta.url), "utf8"));
 const operations = JSON.parse(await readFile(new URL("../data/operations.json", import.meta.url), "utf8"));
 const academic = JSON.parse(await readFile(new URL("../data/academic-situation-context.json", import.meta.url), "utf8"));
 const personal = JSON.parse(await readFile(new URL("../data/personal-research-context.json", import.meta.url), "utf8"));
-const guides = buildSituationGuides(combineSituationCatalogs(situations, extension, specialised), buildExampleGuides(manual.markdown, operations.procedures), academic, personal);
+const guides = buildSituationGuides(combineSituationCatalogs(situations, extension, specialised, budget), buildExampleGuides(manual.markdown, operations.procedures), academic, personal);
 
-test("las seis áreas reparten las 104 situaciones sin huecos ni duplicados", () => {
-  const expectedCounts = { planificacion: 5, docencia: 21, pdi: 14, investigacion: 39, gestion: 18, cumplimiento: 7 };
+test("las seis áreas reparten las 105 situaciones sin huecos ni duplicados", () => {
+  const expectedCounts = { planificacion: 5, docencia: 21, pdi: 14, investigacion: 40, gestion: 18, cumplimiento: 7 };
   const memberships = new Map(guides.map((guide) => [guide.id, []]));
   for (const [areaId, expected] of Object.entries(expectedCounts)) {
     const areaGuides = guides.filter((guide) => guideBelongsToArea(guide, areaId));

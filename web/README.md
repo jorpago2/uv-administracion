@@ -1,12 +1,12 @@
 # Interfaz web de la guía operativa UV
 
-Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene en `data/glossary.json` y las 104 situaciones operativas verificables en los tres catálogos `data/situations*.json`.
+Frontend Vite sin backend. El manual procede de `../MANUAL_PROCEDIMIENTOS.md`; el glosario se mantiene en `data/glossary.json` y las 105 situaciones operativas verificables en los cuatro catálogos `data/situations*.json`.
 
 ## Arquitectura multipágina
 
-La portada es una mesa de trabajo ligera. El contenido se distribuye en rutas independientes para evitar cargar y representar a la vez todo el manual, los 104 casos y las calculadoras:
+La portada es una mesa de trabajo ligera. El contenido se distribuye en rutas independientes para evitar cargar y representar a la vez todo el manual, los 105 casos y las calculadoras:
 
-- `/resolver/`: 104 situaciones operativas.
+- `/resolver/`: 105 situaciones operativas.
 - `/administracion/`, `/docencia/`, `/carrera-pdi/`, `/investigacion/`, `/gestion/` y `/cumplimiento/`: ámbitos con sus casos, capítulos y herramientas.
 - `/programas/`: GIET, GIEI, GIT, MUIE y Programa de Doctorado en Ingeniería Electrónica, con memorias Verifica, planes, guías y calidad.
 - `/financiacion/`: explorador y preparador de candidaturas.
@@ -67,9 +67,9 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
 - `glossary.js`: representación, búsqueda y filtros accesibles del glosario PDI.
 - `chapter-links.js`: enlaces canónicos compartidos de los 37 capítulos.
-- `situations.js`: directorio, búsqueda y filtros de las 104 situaciones operativas.
+- `situations.js`: directorio, búsqueda y filtros de las 105 situaciones operativas.
 - `situation-model.js`: validación estricta, composición con las guías base y búsqueda de situaciones.
-- `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías por capítulo y las 104 resoluciones mediante `example.html?caso=ID`.
+- `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías por capítulo y las 105 resoluciones mediante `example.html?caso=ID`.
 - `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
 - `example-transferability.js`: alcance reutilizable de cada caso: situaciones equivalentes, variables que deben adaptarse y condiciones que cambian la ruta.
 - `example-guide-model.js`: extracción comprobable de ejemplos, procedimientos, documentos y fuentes oficiales.
@@ -90,6 +90,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `data/situations.json`: situaciones 1–50 con reglas de decisión, paradas, cierre, escalado y variantes específicas.
 - `data/situations-51-100.json`: situaciones 51–100 y perfiles reutilizables para mantener el mismo contrato detallado.
 - `data/situations-101-104.json`: cuatro operaciones experimentales de alta prioridad con rutas autónomas y contexto ICMUV/ETSE.
+- `data/situations-105.json`: mapa operativo de asignaciones estructurales, proyectos, contratos, claves y convocatorias para docencia e investigación.
 - `data/operations.json`: fichas normalizadas e hitos anuales; cada cambio debe conservar su fuente y fecha de revisión.
 - `data/academic-programmes.json`: estructuras, titulaciones y familias documentales oficiales revisadas.
 - `data/funding-calls.json`: convocatorias estructuradas por nivel, finalidad, perfil, participación, beneficiario, TRL orientativo, financiación, periodicidad, edición y fuente oficial.

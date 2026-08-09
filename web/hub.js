@@ -48,7 +48,7 @@ async function initHubSearch(searchForm) {
       const fallback = document.createElement("a");
       fallback.className = "hub-search-result hub-search-result--empty";
       fallback.href = "resolver/";
-      fallback.innerHTML = "<strong>Abrir las 104 situaciones</strong><span>Filtra el catálogo completo por ámbito.</span>";
+      fallback.innerHTML = "<strong>Abrir las 105 situaciones</strong><span>Filtra el catálogo completo por ámbito.</span>";
       results.append(fallback);
     }
     if (focusFirst) results.querySelector("a")?.focus();

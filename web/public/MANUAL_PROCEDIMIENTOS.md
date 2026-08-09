@@ -41,7 +41,7 @@ Los casos prácticos de esta guía son ficticios, aunque describen situaciones p
 
 Si aparece una sigla o una expresión nueva —por ejemplo, caja fija, BCF, AD, unidad gestora, OCA, POD, SGI o TRL—, consulta primero el [glosario para PDI recién incorporado](GLOSARIO_PDI.md). Cada ficha ofrece una definición sencilla, una aplicación práctica, una confusión habitual y enlaces a las fuentes oficiales. En la web, el glosario también se puede buscar y filtrar.
 
-La web incorpora además un directorio de **104 situaciones operativas**. Cada resolución reutiliza el capítulo aplicable, pero añade primer movimiento, reglas de decisión, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre y escalado. El catálogo se valida automáticamente para impedir que una ficha incompleta se presente como resuelta.
+La web incorpora además un directorio de **105 situaciones operativas**. Cada resolución reutiliza el capítulo aplicable, pero añade primer movimiento, reglas de decisión, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre y escalado. El catálogo se valida automáticamente para impedir que una ficha incompleta se presente como resuelta.
 
 ### Cómo aclarar quién hace qué
 
@@ -795,6 +795,33 @@ Mantén preparado un paquete base que pueda adaptarse sin copiar afirmaciones ob
 - Esperar a la concesión para consultar ética, protección, datos o capacidad real de contratación.
 
 > **Ejemplo realista — estrategia de financiación para fotónica integrada.** Un grupo del ICMUV tiene resultados preliminares de un sensor fotónico basado en materiales de cambio de fase, todavía en TRL 2, y quiere fabricar un demostrador y contratar personal. Primero descarta COST como fuente para fabricar dispositivos porque solo cubriría la red. Valora un proyecto AEI de generación de conocimiento para consolidar física, proceso y personal; en paralelo busca socios complementarios para un futuro EIC Pathfinder, sin presentar todavía el resultado como próximo al mercado. Consulta con transferencia antes de divulgar la arquitectura, prepara un presupuesto completo y comunica al SGI la intención con meses de margen. Si una empresa desea validar el sensor para una aplicación concreta, separa esa actividad mediante un contrato artículo 60 o un instrumento empresarial adecuado, con entregables y propiedad intelectual definidos. Así construye una secuencia de financiación coherente en lugar de presentar la misma memoria indistintamente a cinco convocatorias.
+
+### 20.10 ¿Qué dinero tengo cada año para docencia e investigación?
+
+No debe confundirse una asignación presupuestaria a una estructura con una dotación personal. **En las fuentes públicas revisadas no se ha identificado una bolsa anual automática, igual y de libre disposición para cada PDI.** Puede haber acuerdos internos, proyectos o claves bajo responsabilidad individual, pero deben confirmarse con la estructura y en los sistemas económicos.
+
+El [presupuesto UV 2026](https://webges.uv.es/uvTaeWeb/DescargarAnuncio.do?codigo=ANUNCIO-G72-2025-7493) permite fechar esta referencia:
+
+| Fondo 2026 | Importe anual | Titular y alcance | Cómo podría acceder Jorge |
+|---|---:|---|---|
+| ETSE · funcionamiento | 168.296,21 € | Centro completo; no es una cantidad por profesor | Mediante necesidad priorizada y autorizada por la ETSE |
+| ETSE · laboratorios y prácticas docentes | 135.061,25 € | Componente finalista para el conjunto del centro | Solicitud vinculada a una asignatura, práctica o laboratorio; debe ejecutarse en el ejercicio y no se incorpora |
+| DIE · funcionamiento | 36.095,48 € | Departamento completo; su Consejo distribuye el presupuesto | Mediante asignación o autorización del DIE para una necesidad concreta |
+| ICMUV · funcionamiento | 22.073,77 € | Instituto completo; su Consejo distribuye la asignación | Mediante prioridad o autorización ICMUV, distinguiéndola de UMDO+ y de proyectos |
+
+Además pueden existir otros fondos que no forman una cantidad fija anual:
+
+| Fuente | Cómo nace | Dónde comprobarla | Regla esencial |
+|---|---|---|---|
+| Máster Universitario en Ingeniería Electrónica | Asignación específica a másteres oficiales según criterios UV | Coordinación/CCA y administración ETSE | Pertenece al programa, no al profesorado individual |
+| Proyecto, ayuda, convenio o contrato | Concesión o firma y disponibilidad del ingreso | [INVE$WEB](https://www.uv.es/uvweb/servicio-contabilidad-presupuesto/es/proyectos-investigacion/invesweb-1285867372160.html) y unidad gestora | Solo para costes elegibles, necesarios y dentro del periodo |
+| Clave personal genérica `9999XXXX` | Determinados remanentes finales no reintegrables o retornos previstos por la norma | INVE$WEB y unidad gestora | Solo existe si se ha generado; sigue siendo fondo UV, no dinero privado |
+| Retorno de un contrato artículo 60 | Reparto institucional de costes indirectos | Transferencia/unidad gestora e INVE$WEB | La información UV distribuye el 20 %: 10 % institución, 5 % clave genérica del responsable, 4,5 % estructura y 0,5 % fondo común; no se extrapola a proyectos competitivos |
+| Convocatoria interna UV | Solicitud y resolución competitiva | Resolución y clave comunicada | No es automática; finalidad, cuantía y cierre dependen de cada convocatoria |
+
+Antes de comprometer un gasto deben constar por separado: **crédito disponible, elegibilidad del concepto, persona competente para autorizar y procedimiento de compra, viaje, servicio o contratación**. El saldo debe consultarse con fecha y compromisos pendientes; el presupuesto concedido o el ingreso previsto no equivalen necesariamente a saldo utilizable.
+
+> **Ejemplo realista — plan anual de un dispositivo fotónico.** Jorge prevé una licencia de simulación, máscara, oblea, consumibles LFNN, componentes ópticos, caracterización SCSIE y un congreso. No carga todo a la primera clave con saldo: crea una tabla coste–actividad–fecha, consulta sus proyectos en INVE$WEB, pregunta al ICMUV por recursos comunes y a DIE/ETSE por la parte estrictamente docente. Para cada línea conserva clave, responsable, elegibilidad, saldo, cierre y autorización. Solo después inicia el procedimiento económico correspondiente.
 
 ## 21. Gestión de proyectos concedidos
 

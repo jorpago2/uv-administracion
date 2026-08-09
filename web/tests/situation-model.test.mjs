@@ -7,19 +7,20 @@ import { buildSituationGuides, combineSituationCatalogs, findSituationGuide, sea
 const situations = JSON.parse(await readFile(new URL("../data/situations.json", import.meta.url), "utf8"));
 const situationsExtension = JSON.parse(await readFile(new URL("../data/situations-51-100.json", import.meta.url), "utf8"));
 const situationsSpecialised = JSON.parse(await readFile(new URL("../data/situations-101-104.json", import.meta.url), "utf8"));
+const situationsBudget = JSON.parse(await readFile(new URL("../data/situations-105.json", import.meta.url), "utf8"));
 const manual = JSON.parse(await readFile(new URL("../data/manual.json", import.meta.url), "utf8"));
 const operations = JSON.parse(await readFile(new URL("../data/operations.json", import.meta.url), "utf8"));
 const academicContext = JSON.parse(await readFile(new URL("../data/academic-situation-context.json", import.meta.url), "utf8"));
 const academicProgrammes = JSON.parse(await readFile(new URL("../data/academic-programmes.json", import.meta.url), "utf8"));
 const personalResearch = JSON.parse(await readFile(new URL("../data/personal-research-context.json", import.meta.url), "utf8"));
 const baseGuides = buildExampleGuides(manual.markdown, operations.procedures);
-const catalog = combineSituationCatalogs(situations, situationsExtension, situationsSpecialised);
+const catalog = combineSituationCatalogs(situations, situationsExtension, situationsSpecialised, situationsBudget);
 const guides = buildSituationGuides(catalog, baseGuides, academicContext, personalResearch);
 
-test("las 104 situaciones forman un catálogo completo y consecutivo", () => {
-  assert.equal(guides.length, 104);
-  assert.deepEqual(guides.map((guide) => guide.situationNumber), Array.from({ length: 104 }, (_, index) => index + 1));
-  assert.equal(new Set(guides.map((guide) => guide.id)).size, 104);
+test("las 105 situaciones forman un catálogo completo y consecutivo", () => {
+  assert.equal(guides.length, 105);
+  assert.deepEqual(guides.map((guide) => guide.situationNumber), Array.from({ length: 105 }, (_, index) => index + 1));
+  assert.equal(new Set(guides.map((guide) => guide.id)).size, 105);
   assert.deepEqual(new Set(guides.map((guide) => guide.categoryId)), new Set(catalog.categories.map((category) => category.id)));
 });
 
@@ -72,6 +73,7 @@ test("el buscador entiende objetivos, siglas y ejemplos concretos", () => {
   assert.equal(searchSituationGuides(guides, "acceso LFNN sala limpia")[0].id, "acceso-lfnn-sala-limpia");
   assert.equal(searchSituationGuides(guides, "foundry MPW GDS")[0].id, "fabricacion-foundry-run");
   assert.equal(searchSituationGuides(guides, "licencia HPC nube")[0].id, "licencia-simulacion-calculo-nube");
+  assert.equal(searchSituationGuides(guides, "dinero anual PDI fondos docencia")[0].id, "saber-fondos-disponibles-docencia-investigacion");
   assert.ok(searchSituationGuides(guides, "", "docencia").every((guide) => guide.categoryId === "docencia"));
 });
 
@@ -118,7 +120,7 @@ test("el perfil ICMUV contextualiza todo el ciclo investigador y la gestión exp
   const contextualised = guides.filter((guide) => guide.personalResearchContext);
   const stageIds = new Set(personalResearch.stages.map((stage) => stage.id));
   const resourceIds = new Set(personalResearch.resources.map((resource) => resource.id));
-  assert.equal(contextualised.length, 70);
+  assert.equal(contextualised.length, 71);
   assert.ok(guides.filter((guide) => guide.categoryId === "investigacion").every((guide) => guide.personalResearchContext));
   assert.ok(guides.filter((guide) => guide.categoryId === "gestion").every((guide) => guide.personalResearchContext));
   for (const guide of contextualised) {
@@ -146,7 +148,7 @@ test("el buscador de casos usa el contexto de titulación y los ejemplos ETSE-DI
 
 test("las situaciones generan entradas profundas para el buscador global", () => {
   const entries = situationSearchItems(guides);
-  assert.equal(entries.length, 104);
+  assert.equal(entries.length, 105);
   assert.ok(entries.every((entry) => /^example\.html\?caso=/.test(entry.href)));
   assert.ok(entries.every((entry) => entry.title && entry.category && entry.content.length > 100));
 });
