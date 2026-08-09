@@ -54,6 +54,19 @@ export function initProjectBudget(root) {
     loadExample(elements);
   });
   elements.download.addEventListener("click", () => downloadBudget(elements));
+  window.addEventListener("funding:budget-preset", (event) => applyFundingPreset(elements, event.detail));
+}
+
+function applyFundingPreset(elements, preset) {
+  if (!preset || typeof preset !== "object") return;
+  elements.form.elements.projectTitle.value = String(preset.projectTitle || "Candidatura de investigación");
+  elements.form.elements.years.value = String(preset.years);
+  elements.form.elements.fundingRate.value = String(preset.fundingRate);
+  elements.form.elements.indirectRate.value = String(preset.indirectRate);
+  elements.form.elements.grantCeiling.value = String(preset.grantCeiling);
+  renderAnnualityInputs(elements.annualities, Number(preset.years));
+  update(elements);
+  elements.form.closest("details").open = true;
 }
 
 function loadExample(elements) {

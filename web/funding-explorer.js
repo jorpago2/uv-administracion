@@ -55,6 +55,11 @@ export function initFundingExplorer(root) {
     requestAnimationFrame(render);
   });
   elements.cardList.addEventListener("change", (event) => handleComparisonToggle(event, elements, data.calls, state, render));
+  elements.cardList.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-plan-funding]");
+    if (!button) return;
+    root.dispatchEvent(new CustomEvent("funding:select", { detail: { callId: button.dataset.planFunding } }));
+  });
   elements.clearComparison.addEventListener("click", () => {
     state.selected = [];
     state.limitMessage = "";
@@ -196,6 +201,13 @@ function createFundingCard(call, state) {
 
   const footer = document.createElement("footer");
   footer.className = "funding-card__footer";
+  const actions = document.createElement("div");
+  actions.className = "funding-card__actions";
+  const plan = document.createElement("button");
+  plan.type = "button";
+  plan.className = "control control--primary";
+  plan.dataset.planFunding = call.id;
+  plan.textContent = "Preparar candidatura";
   const compare = document.createElement("label");
   compare.className = "funding-compare-check";
   const checkbox = document.createElement("input");
@@ -212,7 +224,8 @@ function createFundingCard(call, state) {
   source.target = "_blank";
   source.rel = "noopener noreferrer";
   source.textContent = "Abrir fuente oficial";
-  footer.append(compare, source);
+  actions.append(plan, source);
+  footer.append(compare, actions);
 
   article.append(header, facts, details, footer);
   return article;

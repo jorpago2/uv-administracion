@@ -241,6 +241,93 @@
             <div id="fundingComparisonContent"></div>
           </section>
         </div>
+
+        <section class="funding-planner" id="preparador-candidatura" aria-labelledby="fundingPlannerTitle">
+          <header class="funding-planner__heading">
+            <div>
+              <p class="context-line">Go/no-go · calendario inverso · expediente</p>
+              <h3 id="fundingPlannerTitle">Preparador de candidatura</h3>
+              <p>Comprueba reglas decisivas y convierte una fecha límite en un plan con responsables. El resultado es preliminar: no certifica elegibilidad ni estima probabilidades.</p>
+            </div>
+            <p class="funding-planner__privacy"><strong>Local y privado.</strong> Los datos no salen de este navegador ni se almacenan.</p>
+          </header>
+
+          <form class="funding-planner__form" id="fundingPlannerForm">
+            <fieldset>
+              <legend>1 · Define la candidatura</legend>
+              <div class="funding-planner__basics">
+                <label class="funding-planner__call">Convocatoria
+                  <select name="callId" required></select>
+                </label>
+                <label>Título de trabajo
+                  <input name="projectTitle" type="text" maxlength="140" autocomplete="off" placeholder="Ej.: PIC-NVM · fotónica neuromórfica integrada">
+                </label>
+                <label>Tu papel
+                  <select name="role"><option value="pi">IP / solicitante</option><option value="coordinator">Coordinación de consorcio</option><option value="partner">Socio de consorcio</option><option value="institutional">Responsable institucional</option></select>
+                </label>
+                <label>Fecha límite externa
+                  <input name="externalDeadline" type="date" required>
+                </label>
+                <label>Cierre interno UV <span class="funding-label-note">si está confirmado</span>
+                  <input name="internalDeadline" type="date">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>2 · Comprueba requisitos</legend>
+              <header class="funding-rule-head">
+                <div><h4 id="fundingRuleTitle"></h4><p id="fundingRuleMeta"></p></div>
+                <p id="fundingRuleCaveat"></p>
+              </header>
+              <div class="funding-planner__questions" id="fundingEligibilityQuestions"></div>
+            </fieldset>
+
+            <div class="funding-planner__form-actions">
+              <button class="control control--primary" type="submit">Evaluar y crear plan</button>
+              <button class="control" type="reset">Empezar de nuevo</button>
+            </div>
+          </form>
+
+          <section class="funding-plan-output" id="fundingPlanOutput" aria-labelledby="fundingPlanResultTitle" aria-live="polite" hidden>
+            <header class="funding-plan-result">
+              <div>
+                <p class="funding-eligibility-badge" id="fundingEligibilityBadge" data-status="review">Debe verificarse</p>
+                <h4 id="fundingPlanResultTitle">Resultado preliminar y plan de trabajo</h4>
+                <p id="fundingEligibilitySummary"></p>
+              </div>
+              <div class="funding-plan-actions">
+                <button class="control" id="downloadFundingPlanMarkdown" type="button" disabled>Descargar plan .md</button>
+                <button class="control" id="downloadFundingPlanIcs" type="button" disabled>Descargar hitos .ics</button>
+                <button class="control control--primary" id="openFundingBudget" type="button" disabled>Enviar base a presupuesto</button>
+              </div>
+            </header>
+
+            <section class="funding-plan-block" aria-labelledby="fundingChecksTitle">
+              <h5 id="fundingChecksTitle">Reglas aplicadas</h5>
+              <ul class="funding-checks" id="fundingEligibilityChecks"></ul>
+            </section>
+
+            <section class="funding-plan-block" aria-labelledby="fundingTimelineTitle">
+              <h5 id="fundingTimelineTitle">Calendario inverso</h5>
+              <div class="funding-timeline-wrap" role="region" aria-label="Calendario inverso de la candidatura" tabindex="0">
+                <table class="funding-timeline"><thead><tr><th>Fecha</th><th>Hito</th><th>Responsable</th><th>Estado</th></tr></thead><tbody id="fundingTimelineBody"></tbody></table>
+              </div>
+            </section>
+
+            <section class="funding-plan-block" aria-labelledby="fundingChecklistTitle">
+              <h5 id="fundingChecklistTitle">Lista operativa</h5>
+              <div class="funding-plan-checklist" id="fundingPlanChecklist"></div>
+            </section>
+
+            <aside class="funding-plan-risks" aria-labelledby="fundingRisksTitle">
+              <h5 id="fundingRisksTitle">Riesgos y decisiones pendientes</h5>
+              <ul id="fundingPlanRisks"></ul>
+            </aside>
+
+            <footer class="funding-plan-source"><strong>Fuente de las reglas:</strong> <a id="fundingPlannerSource" href="#" target="_blank" rel="noopener noreferrer"></a>. Verifica siempre la edición abierta y el circuito interno UV.</footer>
+          </section>
+        </section>
       </section>
 
       <section class="decision-tools" id="calculadoras-operativas" aria-labelledby="decisionToolsTitle">
