@@ -13,6 +13,7 @@ const FILTER_MAP = Object.freeze({
 });
 
 const state = { sections: [], activeFilter: "all", query: "", searchTimer: null, observer: null };
+const desktopMenuMedia = window.matchMedia("(min-width: 60rem)");
 const elements = {
   manual: document.querySelector("#manual"),
   index: document.querySelector("#chapterIndex"),
@@ -37,6 +38,7 @@ const elements = {
 
 assertRequiredElements(elements);
 bindEvents();
+syncMenuMode();
 initOperationalTools(elements.operationalHub);
 initFundingExplorer(document.querySelector("#explorador-financiacion"));
 initFundingPlanner(document.querySelector("#explorador-financiacion"));
@@ -379,6 +381,7 @@ function bindEvents() {
   elements.closeMenuButton.addEventListener("click", closeMenu);
   elements.menuScrim.addEventListener("click", closeMenu);
   elements.index.addEventListener("click", (event) => { if (event.target.closest("a")) closeMenu(); });
+  desktopMenuMedia.addEventListener("change", syncMenuMode);
   window.addEventListener("hashchange", applyHashFocus);
   document.addEventListener("keydown", (event) => {
     if (event.key === "/" && !isTypingTarget(event.target)) { event.preventDefault(); elements.searchInput.focus(); }
@@ -406,6 +409,9 @@ function setupSectionObserver() {
 }
 
 function openMenu() {
+  if (desktopMenuMedia.matches) return;
+  elements.indexPanel.removeAttribute("inert");
+  elements.indexPanel.setAttribute("aria-hidden", "false");
   elements.indexPanel.classList.add("is-open");
   elements.menuButton.setAttribute("aria-expanded", "true");
   elements.menuScrim.hidden = false;
@@ -419,6 +425,22 @@ function closeMenu() {
   elements.menuScrim.hidden = true;
   elements.pageShell.inert = false;
   elements.menuButton.focus({ preventScroll: true });
+  elements.indexPanel.setAttribute("aria-hidden", "true");
+  elements.indexPanel.setAttribute("inert", "");
+}
+function syncMenuMode() {
+  const desktop = desktopMenuMedia.matches;
+  const open = !desktop && elements.indexPanel.classList.contains("is-open");
+  if (desktop) elements.indexPanel.classList.remove("is-open");
+  if (!desktop && !open && elements.indexPanel.contains(document.activeElement)) {
+    elements.menuButton.focus({ preventScroll: true });
+  }
+  elements.menuButton.setAttribute("aria-expanded", String(open));
+  elements.menuScrim.hidden = !open;
+  elements.pageShell.inert = open;
+  elements.indexPanel.toggleAttribute("inert", !desktop && !open);
+  if (desktop) elements.indexPanel.removeAttribute("aria-hidden");
+  else elements.indexPanel.setAttribute("aria-hidden", String(!open));
 }
 function setSearchState(nextState) {
   elements.searchControl.dataset.state = nextState;
