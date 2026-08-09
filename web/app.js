@@ -1,6 +1,16 @@
 import manualData from "./data/manual.json";
+import decisionCasesData from "./data/decision-cases.json";
+import fundingCallsData from "./data/funding-calls.json";
+import operationsData from "./data/operations.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { NAV_LANDMARKS, pickCurrentNavigationItem } from "./navigation-model.js";
+import {
+  createSearchSnippet,
+  matchesSearchQuery,
+  prepareSearchEntry,
+  rankSearchEntries,
+  tokenizeSearchQuery
+} from "./search-model.js";
 import { initDecisionTools } from "./decision-tools.js";
 import { initFundingExplorer } from "./funding-explorer.js";
 import { initFundingPlanner } from "./funding-planner.js";
@@ -14,7 +24,8 @@ const FILTER_MAP = Object.freeze({
 });
 
 const state = {
-  sections: [], activeFilter: "all", query: "", searchTimer: null,
+  sections: [], searchEntries: [], searchResults: [], visibleChapterCount: 0,
+  activeFilter: "all", query: "", searchTimer: null,
   indexExpandedAll: false, indexFollowActive: true,
   activeNavigationId: "", scrollSpyFrame: null, scrollSpyBound: false
 };
@@ -27,6 +38,8 @@ const elements = {
   searchControl: document.querySelector("#searchControl"),
   clearSearch: document.querySelector("#clearSearch"),
   searchStatus: document.querySelector("#searchStatus"),
+  searchSuggestions: document.querySelector("#searchSuggestions"),
+  searchResults: document.querySelector("#searchResults"),
   revisionDate: document.querySelector("#revisionDate"),
   sectionCount: document.querySelector("#sectionCount"),
   linkCount: document.querySelector("#linkCount"),
@@ -66,11 +79,15 @@ async function loadManual() {
     validateManualData(data);
     const parsed = parseManual(data.markdown);
     state.sections = parsed.sections;
+    state.searchEntries = buildSearchEntries(parsed.sections);
     renderMetadata(data.meta, parsed.sections.length, countLinks(data.markdown), countExamples(data.markdown));
     renderIntroduction(parsed.introduction);
     renderSections(parsed.sections);
     renderDomainDirectory(parsed.sections);
     renderIndex(parsed.sections);
+    state.visibleChapterCount = parsed.sections.length;
+    renderSearchResults();
+    updateSearchStatus();
     setSearchState("success");
     elements.manual.dataset.state = "success";
     elements.manual.setAttribute("aria-busy", "false");
@@ -114,6 +131,82 @@ function parseManual(markdown) {
     };
   });
   return { introduction, sections };
+}
+
+function buildSearchEntries(sections) {
+  const chapters = sections.map((section) => prepareSearchEntry({
+    id: `chapter-${section.number}`,
+    type: "chapter",
+    typeLabel: `Capítulo ${section.number}`,
+    title: section.title,
+    category: section.categoryLabel,
+    content: stripMarkdown(section.body),
+    href: `#${section.slug}`,
+    chapterNumber: section.number,
+    priority: 20
+  }));
+
+  const procedures = operationsData.procedures.map((procedure) => prepareSearchEntry({
+    id: `procedure-${procedure.id}`,
+    type: "procedure",
+    typeLabel: "Trámite",
+    title: procedure.title,
+    category: categoryLabelFor(procedure.area),
+    keywords: `${procedure.unit} ${procedure.channel} ${procedure.sourceLabel}`,
+    content: [procedure.summary, procedure.deadline, procedure.risk, ...(procedure.documents ?? []), ...(procedure.steps ?? [])].join(" "),
+    href: procedure.anchor ? `#${procedure.anchor}` : "#fichas-procedimiento",
+    chapterNumber: procedure.chapter,
+    priority: 25
+  }));
+
+  const fundingCalls = fundingCallsData.calls.map((call) => prepareSearchEntry({
+    id: `funding-${call.id}`,
+    type: "funding",
+    typeLabel: "Convocatoria",
+    title: call.name,
+    category: fundingLevelLabel(call.level),
+    keywords: `${call.shortName} ${(call.purposes ?? []).join(" ")} ${(call.profiles ?? []).join(" ")}`,
+    content: [call.profile, call.participation, call.duration, call.budget, call.frequency, call.calendar, call.critical].join(" "),
+    href: "#explorador-financiacion",
+    queryValue: call.shortName || call.name,
+    priority: 15
+  }));
+
+  const cases = decisionCasesData.cases.map((item) => prepareSearchEntry({
+    id: `case-${item.id}`,
+    type: "case",
+    typeLabel: "Caso práctico",
+    title: item.title,
+    category: item.area,
+    content: [item.summary, ...(item.facts ?? []), ...(item.decision ?? []), ...(item.mistakes ?? []), item.result].join(" "),
+    href: "#casos-completos",
+    priority: 10
+  }));
+
+  const tools = NAV_LANDMARKS
+    .filter((item) => !["inicio", "tareas-frecuentes", "ambitos", "indice-capitulos"].includes(item.id))
+    .map((item) => prepareSearchEntry({
+      id: `tool-${item.id}`,
+      type: "tool",
+      typeLabel: item.typeLabel,
+      title: item.label,
+      category: categoryLabelFor(item.categoryId),
+      keywords: item.parentId === item.id ? "" : NAV_LANDMARKS.find((candidate) => candidate.id === item.parentId)?.label,
+      content: "",
+      href: `#${item.id}`,
+      priority: 35
+    }));
+
+  return [...chapters, ...procedures, ...tools, ...fundingCalls, ...cases];
+}
+
+function categoryLabelFor(categoryId) {
+  return CATEGORIES.find((category) => category.id === categoryId)?.shortLabel ?? "Guía operativa";
+}
+
+function fundingLevelLabel(level) {
+  return ({ european: "Financiación europea", national: "Financiación estatal", regional: "Financiación autonómica", uv: "Financiación UV", private: "Financiación privada" })[level]
+    ?? "Financiación I+D+i";
 }
 
 function renderMetadata(meta, sectionTotal, linkTotal, exampleTotal) {
@@ -409,16 +502,131 @@ function normalizeHref(href) {
   return trimmed.replace(/^\.\//, "");
 }
 
+function updateSearch() {
+  const query = state.query.trim();
+  state.searchResults = query.length >= 2
+    ? rankSearchEntries(state.searchEntries, query, Number.MAX_SAFE_INTEGER)
+    : [];
+  renderSearchResults();
+  applyFilters();
+}
+
+function renderSearchResults() {
+  const query = state.query.trim();
+  const searchIsActive = query.length >= 2;
+  elements.searchSuggestions.hidden = Boolean(query);
+  elements.searchResults.hidden = !searchIsActive;
+  elements.searchResults.replaceChildren();
+  if (!searchIsActive) return;
+
+  const header = document.createElement("header");
+  header.className = "search-results__heading";
+  const heading = document.createElement("h3");
+  heading.textContent = state.searchResults.length
+    ? `${state.searchResults.length} ${state.searchResults.length === 1 ? "resultado" : "resultados"}`
+    : "Sin resultados";
+  const explanation = document.createElement("p");
+  explanation.textContent = state.searchResults.length
+    ? "Ordenados por relevancia. Mostramos los ocho primeros."
+    : "Prueba un término más general, una unidad, una norma o el nombre del trámite.";
+  header.append(heading, explanation);
+  elements.searchResults.append(header);
+
+  if (!state.searchResults.length) {
+    const suggestions = document.createElement("p");
+    suggestions.className = "search-results__empty";
+    suggestions.textContent = "Ejemplos: «patentes», «POD», «permiso», «ERC», «compra» o «viaje».";
+    elements.searchResults.append(suggestions);
+    return;
+  }
+
+  const list = document.createElement("ol");
+  list.className = "search-results__list";
+  const terms = tokenizeSearchQuery(query);
+  state.searchResults.slice(0, 8).forEach((entry) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.className = "search-result";
+    link.href = entry.href;
+    link.dataset.searchResultId = entry.id;
+
+    const meta = document.createElement("span");
+    meta.className = "search-result__meta";
+    const type = document.createElement("strong");
+    type.textContent = entry.typeLabel;
+    const category = document.createElement("span");
+    category.textContent = entry.category;
+    meta.append(type, category);
+
+    const title = document.createElement("span");
+    title.className = "search-result__title";
+    appendHighlightedText(title, entry.title, terms);
+
+    const snippet = document.createElement("span");
+    snippet.className = "search-result__snippet";
+    appendHighlightedText(snippet, createSearchSnippet(entry.content || entry.keywords || entry.category, query), terms);
+    link.append(meta, title, snippet);
+    item.append(link);
+    list.append(item);
+  });
+  elements.searchResults.append(list);
+}
+
+function appendHighlightedText(container, value, terms) {
+  const text = String(value ?? "");
+  const normalized = normalizeText(text);
+  const matches = terms
+    .flatMap((term) => {
+      const found = [];
+      let cursor = 0;
+      while (cursor < normalized.length) {
+        const start = normalized.indexOf(term, cursor);
+        if (start < 0) break;
+        found.push({ start, end: start + term.length });
+        cursor = start + term.length;
+      }
+      return found;
+    })
+    .sort((left, right) => left.start - right.start || right.end - left.end);
+  let cursor = 0;
+  matches.forEach((match) => {
+    if (match.start < cursor) return;
+    container.append(document.createTextNode(text.slice(cursor, match.start)));
+    const mark = document.createElement("mark");
+    mark.textContent = text.slice(match.start, match.end);
+    container.append(mark);
+    cursor = match.end;
+  });
+  container.append(document.createTextNode(text.slice(cursor)));
+}
+
+function updateSearchStatus() {
+  const query = state.query.trim();
+  if (query.length === 1) {
+    elements.searchStatus.textContent = "Escribe al menos dos caracteres.";
+    return;
+  }
+  if (query.length >= 2) {
+    const resultLabel = `${state.searchResults.length} ${state.searchResults.length === 1 ? "resultado" : "resultados"}`;
+    const chapterLabel = `${state.visibleChapterCount} ${state.visibleChapterCount === 1 ? "capítulo visible" : "capítulos visibles"}`;
+    elements.searchStatus.textContent = `${resultLabel}; ${chapterLabel}.`;
+    return;
+  }
+  elements.searchStatus.textContent = `${state.sections.length} capítulos, trámites, herramientas, convocatorias y casos indexados.`;
+}
+
 function applyFilters() {
-  const normalizedQuery = normalizeText(state.query);
+  const activeQuery = state.query.trim().length >= 2 ? state.query : "";
+  const queryTerms = tokenizeSearchQuery(activeQuery);
   const allowed = FILTER_MAP[state.activeFilter];
   let visible = 0;
   document.querySelectorAll(".chapter").forEach((chapter) => {
     clearHighlights(chapter);
     const number = Number(chapter.dataset.section);
-    const show = (!allowed || allowed.has(number)) && (!normalizedQuery || chapter.dataset.searchText.includes(normalizedQuery));
+    const searchEntry = state.searchEntries.find((entry) => entry.type === "chapter" && entry.chapterNumber === number);
+    const show = (!allowed || allowed.has(number)) && (!activeQuery || (searchEntry && matchesSearchQuery(searchEntry, activeQuery)));
     chapter.hidden = !show;
-    if (show) { visible += 1; if (normalizedQuery) highlightText(chapter, state.query.trim()); }
+    if (show) { visible += 1; if (queryTerms.length) highlightTerms(chapter, queryTerms); }
   });
   document.querySelectorAll("[data-index-section]").forEach((link) => {
     const target = document.querySelector(`[data-section="${Number(link.dataset.indexSection)}"]`);
@@ -434,7 +642,8 @@ function applyFilters() {
     empty.innerHTML = "<h2>No hay coincidencias</h2><p>Prueba otro término o selecciona «Todo».</p>";
     elements.manual.append(empty);
   } else if (visible > 0 && empty) empty.remove();
-  elements.searchStatus.textContent = `${visible} ${visible === 1 ? "capítulo visible" : "capítulos visibles"}.`;
+  state.visibleChapterCount = visible;
+  updateSearchStatus();
   elements.clearSearch.disabled = !state.query;
   updateIndexToggleLabel();
   scheduleScrollSpyUpdate();
@@ -477,25 +686,36 @@ function updateIndexToggleLabel() {
   if (button) button.textContent = allOpen ? "Contraer índice" : "Ver índice completo";
 }
 
-function highlightText(root, query) {
-  if (!query) return;
-  const needle = normalizeText(query);
+function highlightTerms(root, terms) {
+  if (!terms.length) return;
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
       if (!node.nodeValue.trim() || node.parentElement.closest("a, button, code, mark")) return NodeFilter.FILTER_REJECT;
-      return normalizeText(node.nodeValue).includes(needle) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      const normalized = normalizeText(node.nodeValue);
+      return terms.some((term) => normalized.includes(term)) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
     }
   });
   const matches = [];
   while (walker.nextNode()) matches.push(walker.currentNode);
   matches.forEach((node) => {
-    const start = normalizeText(node.nodeValue).indexOf(needle);
-    if (start < 0) return;
-    const range = document.createRange();
-    range.setStart(node, start);
-    range.setEnd(node, Math.min(start + query.length, node.nodeValue.length));
-    const mark = document.createElement("mark");
-    range.surroundContents(mark);
+    const normalized = normalizeText(node.nodeValue);
+    const positions = terms
+      .map((term) => ({ start: normalized.indexOf(term), length: term.length }))
+      .filter((match) => match.start >= 0)
+      .sort((left, right) => left.start - right.start);
+    if (!positions.length) return;
+    const fragment = document.createDocumentFragment();
+    let cursor = 0;
+    positions.forEach((match) => {
+      if (match.start < cursor) return;
+      fragment.append(document.createTextNode(node.nodeValue.slice(cursor, match.start)));
+      const mark = document.createElement("mark");
+      mark.textContent = node.nodeValue.slice(match.start, match.start + match.length);
+      fragment.append(mark);
+      cursor = match.start + match.length;
+    });
+    fragment.append(document.createTextNode(node.nodeValue.slice(cursor)));
+    node.replaceWith(fragment);
   });
 }
 
@@ -509,22 +729,75 @@ function bindEvents() {
     event.preventDefault();
     state.query = elements.searchInput.value;
     if (state.query) setActiveFilter("all", false);
-    applyFilters();
-    elements.chapterFilterArea.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+    updateSearch();
+    elements.searchResults.querySelector("a")?.focus();
   });
   elements.searchInput.addEventListener("input", () => {
     window.clearTimeout(state.searchTimer);
     state.query = elements.searchInput.value;
     if (state.query && state.activeFilter !== "all") setActiveFilter("all", false);
     setSearchState("loading");
-    state.searchTimer = window.setTimeout(() => { applyFilters(); setSearchState("success"); }, 250);
+    state.searchTimer = window.setTimeout(() => { updateSearch(); setSearchState("success"); }, 150);
   });
   elements.clearSearch.addEventListener("click", () => {
     elements.searchInput.value = "";
     state.query = "";
-    applyFilters();
+    updateSearch();
     setSearchState("default");
     elements.searchInput.focus();
+  });
+  elements.searchSuggestions.addEventListener("click", (event) => {
+    const suggestion = event.target.closest("[data-search-suggestion]");
+    if (!suggestion) return;
+    elements.searchInput.value = suggestion.dataset.searchSuggestion;
+    state.query = elements.searchInput.value;
+    setActiveFilter("all", false);
+    updateSearch();
+    setSearchState("success");
+    elements.searchInput.focus();
+  });
+  elements.searchResults.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-search-result-id]");
+    if (!link) return;
+    const entry = state.searchResults.find((candidate) => candidate.id === link.dataset.searchResultId);
+    if (!entry) return;
+    if (entry.type === "funding") {
+      const fundingInput = document.querySelector("#fundingQuery");
+      if (fundingInput) {
+        fundingInput.value = entry.queryValue;
+        fundingInput.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    }
+    const target = document.querySelector(entry.href);
+    if (target?.hidden || target?.closest("[hidden]")) {
+      target.hidden = false;
+      target.closest("[hidden]")?.removeAttribute("hidden");
+      window.setTimeout(() => {
+        elements.searchInput.value = "";
+        state.query = "";
+        updateSearch();
+        setSearchState("default");
+      }, 0);
+    }
+  });
+  elements.searchInput.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown") return;
+    const firstResult = elements.searchResults.querySelector("a");
+    if (!firstResult) return;
+    event.preventDefault();
+    firstResult.focus();
+  });
+  elements.searchResults.addEventListener("keydown", (event) => {
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    const links = [...elements.searchResults.querySelectorAll("a")];
+    const current = links.indexOf(document.activeElement);
+    if (current < 0) return;
+    event.preventDefault();
+    if (event.key === "Home") links[0]?.focus();
+    else if (event.key === "End") links.at(-1)?.focus();
+    else if (event.key === "ArrowDown") links[Math.min(current + 1, links.length - 1)]?.focus();
+    else if (current === 0) elements.searchInput.focus();
+    else links[current - 1]?.focus();
   });
   elements.filters.addEventListener("click", (event) => {
     const button = event.target.closest("[data-filter]");

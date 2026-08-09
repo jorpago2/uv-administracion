@@ -68,12 +68,21 @@
         <form class="search" id="searchForm" role="search">
           <label for="searchInput">Buscar en toda la guía</label>
           <div class="search__row" id="searchControl" data-state="default">
-            <input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Ej.: sexenio, examen, patente, viaje…" aria-describedby="searchHelp searchStatus">
+            <input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Ej.: patente, permiso, ERC, salario…" aria-describedby="searchHelp searchStatus" aria-controls="searchResults" aria-keyshortcuts="/">
             <button class="control control--primary search__submit" type="submit">Buscar</button>
             <button class="control control--clear" id="clearSearch" type="button" disabled>Limpiar</button>
           </div>
-          <p class="search__help" id="searchHelp">La búsqueda se realiza en este navegador; no se envía ningún dato.</p>
+          <p class="search__help" id="searchHelp">Admite varias palabras, sinónimos habituales y pequeñas erratas. La búsqueda se realiza en este navegador.</p>
           <p class="search__status" id="searchStatus" aria-live="polite"></p>
+          <div class="search-suggestions" id="searchSuggestions" aria-label="Búsquedas sugeridas">
+            <span>Prueba:</span>
+            <button type="button" data-search-suggestion="patentes">Patentes</button>
+            <button type="button" data-search-suggestion="POD">POD</button>
+            <button type="button" data-search-suggestion="permisos">Permisos</button>
+            <button type="button" data-search-suggestion="financiación europea">Financiación europea</button>
+            <button type="button" data-search-suggestion="compras">Compras</button>
+          </div>
+          <section class="search-results" id="searchResults" aria-label="Resultados de búsqueda" hidden></section>
         </form>
       </section>
 
