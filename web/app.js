@@ -1,5 +1,6 @@
 import manualData from "./data/manual.json";
 import { CATEGORIES } from "./chapter-categories.js";
+import { NAV_LANDMARKS, pickCurrentNavigationItem } from "./navigation-model.js";
 import { initDecisionTools } from "./decision-tools.js";
 import { initFundingExplorer } from "./funding-explorer.js";
 import { initFundingPlanner } from "./funding-planner.js";
@@ -12,7 +13,11 @@ const FILTER_MAP = Object.freeze({
   ...Object.fromEntries(CATEGORIES.map((category) => [category.id, new Set(category.sections)]))
 });
 
-const state = { sections: [], activeFilter: "all", query: "", searchTimer: null, observer: null, indexExpandedAll: false };
+const state = {
+  sections: [], activeFilter: "all", query: "", searchTimer: null,
+  indexExpandedAll: false, indexFollowActive: true,
+  activeNavigationId: "", scrollSpyFrame: null, scrollSpyBound: false
+};
 const desktopMenuMedia = window.matchMedia("(min-width: 60rem)");
 const elements = {
   manual: document.querySelector("#manual"),
@@ -69,7 +74,7 @@ async function loadManual() {
     setSearchState("success");
     elements.manual.dataset.state = "success";
     elements.manual.setAttribute("aria-busy", "false");
-    setupSectionObserver();
+    setupScrollSpy();
     applyHashFocus();
   } catch (error) {
     setSearchState("error");
@@ -228,15 +233,42 @@ function domainLinkGroup(title, links) {
 
 function renderIndex(sections) {
   const fragment = document.createDocumentFragment();
+  const location = document.createElement("div");
+  location.className = "index-location";
+  location.setAttribute("aria-label", "Ubicación actual");
+  const locationLabel = document.createElement("span");
+  locationLabel.className = "index-location__label";
+  locationLabel.textContent = "Ahora estás en";
+  const locationLink = document.createElement("a");
+  locationLink.id = "indexCurrentLink";
+  locationLink.href = "#inicio";
+  locationLink.textContent = "Inicio";
+  locationLink.setAttribute("aria-current", "location");
+  const locationContext = document.createElement("span");
+  locationContext.className = "index-location__context";
+  locationContext.id = "indexCurrentContext";
+  locationContext.textContent = "Portada";
+  location.append(locationLabel, locationLink, locationContext);
+  fragment.append(location);
+
   const shortcuts = document.createElement("div");
   shortcuts.className = "index-shortcuts";
-  [["Inicio", "#inicio"], ["Tareas frecuentes", "#tareas-frecuentes"], ["Resolver un trámite", "#asistente-tramites"]].forEach(([label, href]) => {
+  NAV_LANDMARKS.filter((item) => item.shortcut).forEach(({ id, label }) => {
     const link = document.createElement("a");
-    link.href = href;
+    link.href = `#${id}`;
+    link.dataset.indexAnchor = id;
     link.textContent = label;
     shortcuts.append(link);
   });
   fragment.append(shortcuts);
+
+  const toggle = document.createElement("button");
+  toggle.className = "index-all-toggle";
+  toggle.id = "indexAllToggle";
+  toggle.type = "button";
+  toggle.textContent = "Ver índice completo";
+  fragment.append(toggle);
+
   CATEGORIES.forEach((category) => {
     const categorySections = sections.filter((section) => section.categoryId === category.id);
     if (!categorySections.length) return;
@@ -267,20 +299,21 @@ function renderIndex(sections) {
       list.append(item);
     });
     group.append(heading, list);
-    group.addEventListener("toggle", () => {
-      if (!group.open || state.indexExpandedAll) return;
+    group.addEventListener("toggle", (event) => {
+      if (!group.open) {
+        state.indexExpandedAll = false;
+        updateIndexToggleLabel();
+        return;
+      }
+      if (event.isTrusted) state.indexFollowActive = true;
+      if (state.indexExpandedAll) return;
       elements.index.querySelectorAll(".index-group[open]").forEach((candidate) => {
         if (candidate !== group) candidate.open = false;
       });
+      updateIndexToggleLabel();
     });
     fragment.append(group);
   });
-  const toggle = document.createElement("button");
-  toggle.className = "index-all-toggle";
-  toggle.id = "indexAllToggle";
-  toggle.type = "button";
-  toggle.textContent = "Ver índice completo";
-  fragment.append(toggle);
   elements.index.replaceChildren(fragment);
 }
 
@@ -403,6 +436,8 @@ function applyFilters() {
   } else if (visible > 0 && empty) empty.remove();
   elements.searchStatus.textContent = `${visible} ${visible === 1 ? "capítulo visible" : "capítulos visibles"}.`;
   elements.clearSearch.disabled = !state.query;
+  updateIndexToggleLabel();
+  scheduleScrollSpyUpdate();
 }
 
 function setActiveFilter(filter, apply = true) {
@@ -424,14 +459,22 @@ function setActiveFilter(filter, apply = true) {
 
 function toggleCompleteIndex() {
   const groups = [...elements.index.querySelectorAll(".index-group:not([hidden])")];
-  state.indexExpandedAll = groups.some((group) => !group.open);
-  groups.forEach((group) => { group.open = state.indexExpandedAll; });
-  updateIndexToggleLabel();
+  const expand = groups.some((group) => !group.open);
+  state.indexExpandedAll = expand;
+  state.indexFollowActive = expand;
+  groups.forEach((group) => { group.open = expand; });
+  window.requestAnimationFrame(() => {
+    if (!expand) elements.index.scrollTo({ top: 0, behavior: "auto" });
+    updateIndexToggleLabel();
+  });
 }
 
 function updateIndexToggleLabel() {
   const button = elements.index.querySelector("#indexAllToggle");
-  if (button) button.textContent = state.indexExpandedAll ? "Contraer índice" : "Ver índice completo";
+  const groups = [...elements.index.querySelectorAll(".index-group:not([hidden])")];
+  const allOpen = groups.length > 0 && groups.every((group) => group.open);
+  state.indexExpandedAll = allOpen;
+  if (button) button.textContent = allOpen ? "Contraer índice" : "Ver índice completo";
 }
 
 function highlightText(root, query) {
@@ -525,18 +568,95 @@ function bindEvents() {
   window.addEventListener("scroll", () => elements.backToTop.classList.toggle("is-visible", window.scrollY > 700), { passive: true });
 }
 
-function setupSectionObserver() {
-  if (!("IntersectionObserver" in window)) return;
-  state.observer?.disconnect();
-  state.observer = new IntersectionObserver((entries) => {
-    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-    document.querySelectorAll("[data-index-section]").forEach((link) => {
-      if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
-      else link.removeAttribute("aria-current");
-    });
-  }, { rootMargin: "-20% 0px -68% 0px", threshold: [0, 0.1, 0.5] });
-  document.querySelectorAll(".chapter").forEach((chapter) => state.observer.observe(chapter));
+function setupScrollSpy() {
+  if (!state.scrollSpyBound) {
+    window.addEventListener("scroll", scheduleScrollSpyUpdate, { passive: true });
+    window.addEventListener("resize", scheduleScrollSpyUpdate);
+    state.scrollSpyBound = true;
+  }
+  scheduleScrollSpyUpdate();
+}
+
+function scheduleScrollSpyUpdate() {
+  if (state.scrollSpyFrame !== null) return;
+  state.scrollSpyFrame = window.requestAnimationFrame(() => {
+    state.scrollSpyFrame = null;
+    updateScrollLocation();
+  });
+}
+
+function updateScrollLocation() {
+  const mastheadHeight = document.querySelector(".masthead")?.getBoundingClientRect().height || 0;
+  const probeLine = mastheadHeight + 24;
+  const landmarkItems = NAV_LANDMARKS.map((item, order) => navigationItem(item, order, "section"));
+  const chapterItems = state.sections.map((section, index) => navigationItem({
+    id: section.slug,
+    label: `Capítulo ${String(section.number).padStart(2, "0")} · ${section.title}`,
+    parentId: "indice-capitulos",
+    categoryId: section.categoryId,
+    typeLabel: "Capítulo",
+    sectionNumber: section.number
+  }, NAV_LANDMARKS.length + index, "chapter"));
+  const active = pickCurrentNavigationItem([...landmarkItems, ...chapterItems], probeLine);
+  if (active) setCurrentNavigation(active);
+}
+
+function navigationItem(definition, order, kind) {
+  const element = document.getElementById(definition.id);
+  const hidden = !element || element.hidden || Boolean(element?.closest("[hidden]"));
+  return {
+    ...definition,
+    kind,
+    order,
+    element,
+    hidden,
+    top: hidden ? Number.POSITIVE_INFINITY : element.getBoundingClientRect().top
+  };
+}
+
+function setCurrentNavigation(active) {
+  const changed = state.activeNavigationId !== active.id;
+  state.activeNavigationId = active.id;
+
+  const currentLink = elements.index.querySelector("#indexCurrentLink");
+  const currentContext = elements.index.querySelector("#indexCurrentContext");
+  if (currentLink) {
+    currentLink.href = `#${active.id}`;
+    currentLink.textContent = active.label;
+  }
+  if (currentContext) {
+    const category = CATEGORIES.find((item) => item.id === active.categoryId);
+    currentContext.textContent = category ? `${active.typeLabel} · ${category.shortLabel}` : active.typeLabel;
+  }
+
+  document.querySelectorAll("[data-index-anchor]").forEach((link) => {
+    const current = link.dataset.indexAnchor === (active.parentId || active.id);
+    link.toggleAttribute("aria-current", current);
+    if (current) link.setAttribute("aria-current", "location");
+  });
+  document.querySelectorAll("[data-index-section]").forEach((link) => {
+    const current = active.kind === "chapter" && Number(link.dataset.indexSection) === active.sectionNumber;
+    link.toggleAttribute("aria-current", current);
+    if (current) link.setAttribute("aria-current", "location");
+  });
+  document.querySelectorAll(".index-group").forEach((group) => {
+    group.dataset.current = String(Boolean(active.categoryId && group.dataset.indexCategory === active.categoryId));
+  });
+
+  if (!changed || active.kind !== "chapter" || !state.indexFollowActive) return;
+  const group = elements.index.querySelector(`[data-index-category="${active.categoryId}"]`);
+  const chapterLink = elements.index.querySelector(`[data-index-section="${active.sectionNumber}"]`);
+  if (group && !group.open) group.open = true;
+  window.requestAnimationFrame(() => revealIndexItem(chapterLink));
+}
+
+function revealIndexItem(item) {
+  if (!item) return;
+  const indexRect = elements.index.getBoundingClientRect();
+  const stickyBottom = elements.index.querySelector(".index-location")?.getBoundingClientRect().bottom || indexRect.top;
+  const itemRect = item.getBoundingClientRect();
+  if (itemRect.top < stickyBottom + 8) elements.index.scrollTop -= stickyBottom + 8 - itemRect.top;
+  else if (itemRect.bottom > indexRect.bottom - 8) elements.index.scrollTop += itemRect.bottom - indexRect.bottom + 8;
 }
 
 function openMenu() {
@@ -635,8 +755,11 @@ function prefersReducedMotion() { return window.matchMedia("(prefers-reduced-mot
 function applyHashFocus() {
   if (!window.location.hash) return;
   try {
-    const target = document.querySelector(window.location.hash);
+    const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (target?.matches("details")) target.open = true;
+    const containingDetails = target?.closest("details");
+    if (containingDetails) containingDetails.open = true;
     if (target?.matches(".chapter")) setActiveFilter(target.dataset.category);
-    target?.scrollIntoView({ block: "start" });
+    window.requestAnimationFrame(() => target?.scrollIntoView({ block: "start" }));
   } catch { /* La URL puede contener un hash externo no seleccionable. */ }
 }

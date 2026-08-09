@@ -48,6 +48,7 @@ test("el indice lateral se genera por ambitos y conserva los enlaces profundos",
   assert.match(app, /document\.createElement\("details"\)/);
   assert.match(app, /dataIndexCategory|dataset\.indexCategory/);
   assert.match(app, /function setActiveFilter\(/);
+  assert.match(app, /function setupScrollSpy\(/);
   assert.match(app, /target\?\.matches\("\.chapter"\)/);
 });
 
