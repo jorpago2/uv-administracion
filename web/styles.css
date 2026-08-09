@@ -1,6 +1,7 @@
 /* Hallmark · genre: editorial · macrostructure: Index-First · theme: Brutal · tone: neobrutalista técnico · anchor hue: amarillo · nav: N3 · footer: Ft4 · contrast: pass (40–41) · slop: pass (42–49) · mobile: pass (34, 49–57) */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 @import url("tokens.css");
+@import url("context-components.css");
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { overflow-x: clip; }
@@ -289,9 +290,6 @@ kbd { padding: var(--space-3xs) var(--space-xs); background: var(--color-paper-r
 .situation-card__scenario { margin: 0; }
 .situation-card__outcome { margin: 0; padding: var(--space-sm); background: var(--color-paper); color: var(--color-ink); border: var(--rule-thin) solid var(--color-paper); }
 .situation-card__outcome strong { display: block; margin-block-end: var(--space-3xs); font-family: var(--font-display); }
-.academic-tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); align-items: center; }
-.academic-tag { display: inline-flex; align-items: center; min-height: 2rem; padding: var(--space-3xs) var(--space-sm); background: var(--color-accent); color: var(--color-accent-ink); border: var(--rule-thin) solid var(--color-rule); font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 800; letter-spacing: 0.04em; text-decoration: none; }
-.academic-tag--link:hover, .academic-tag--link:focus-visible { background: var(--color-secondary); color: var(--color-ink); transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--color-rule); }
 .situation-card__open { width: fit-content; max-width: 100%; padding: var(--space-sm) var(--space-md); background: var(--color-accent); color: var(--color-accent-ink); border: var(--rule) solid var(--color-paper); box-shadow: 4px 4px 0 var(--color-paper); font-weight: 800; overflow-wrap: anywhere; text-decoration: none; }
 .situation-card__open:hover, .situation-card__open:focus-visible { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-secondary); }
 .situation-empty { padding: var(--space-lg); background: var(--color-secondary); color: var(--color-secondary-ink); border: var(--rule) solid var(--color-rule); box-shadow: var(--shadow-sm); }

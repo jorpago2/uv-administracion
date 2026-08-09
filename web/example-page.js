@@ -4,6 +4,7 @@ import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
 import academicContextData from "./data/academic-situation-context.json";
 import academicProgrammesData from "./data/academic-programmes.json";
+import personalResearchData from "./data/personal-research-context.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { buildExampleGuides, findExampleGuide } from "./example-guide-model.js";
 import { buildSituationGuides, combineSituationCatalogs, findSituationGuide } from "./situation-model.js";
@@ -14,8 +15,10 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides, academicContextData);
+const situationGuides = buildSituationGuides(combineSituationCatalogs(situationsData, situationsExtensionData), guides, academicContextData, personalResearchData);
 const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
+const researchStageById = new Map(personalResearchData.stages.map((stage) => [stage.id, stage]));
+const researchResourceById = new Map(personalResearchData.resources.map((resource) => [resource.id, resource]));
 const parameters = new URLSearchParams(window.location.search);
 const situationId = parameters.get("caso");
 const chapterNumber = parameters.get("capitulo");
@@ -108,11 +111,47 @@ function renderOrientation(item) {
   const section = guideSection("orientacion", "1. Entender el caso antes de actuar", "Orientación");
   section.append(callout("Meta operativa", item.outcome, "accent"));
   if (item.academicContext) section.append(renderAcademicContext(item.academicContext));
+  if (item.personalResearchContext) section.append(renderPersonalResearchContext(item.personalResearchContext));
   section.append(heading(3, "Las tres preguntas que debes poder responder"), list(item.questions));
   if (item.decisionRules?.length) section.append(heading(3, "Reglas para decidir la ruta"), list(item.decisionRules, "decision-rule-list"));
   section.append(recommendation("No empieces por el formulario. Empieza delimitando hechos, plazo y órgano competente; un formulario correcto enviado al cauce equivocado sigue siendo un problema."));
   appendSourceNote(section, item.sources);
   return section;
+}
+
+function renderPersonalResearchContext(context) {
+  const panel = el("aside", "research-context");
+  panel.append(paragraph("Aplicación personal", "eyebrow"), heading(3, "ICMUV · UMDO+ · ciclo de dispositivos"));
+
+  const tags = el("div", "research-tags");
+  tags.setAttribute("aria-label", "Fases del ciclo de investigación afectadas");
+  context.stages.forEach((id) => {
+    const stage = researchStageById.get(id);
+    if (!stage) return;
+    const tag = el("span", "research-tag");
+    tag.textContent = stage.label;
+    tag.title = stage.description;
+    tags.append(tag);
+  });
+  panel.append(tags, callout("Cómo aterriza en tu trabajo", context.application, context.fit === "conditional" ? "warning" : "secondary"));
+
+  const example = el("article", "research-example");
+  example.append(heading(4, "Ejemplo en dispositivos y semiconductores avanzados"), paragraph(context.example));
+  panel.append(example, heading(4, "Interfaces y recursos que conviene comprobar"));
+
+  const resources = el("ul", "research-resource-list");
+  context.resourceIds.forEach((id) => {
+    const resource = researchResourceById.get(id);
+    if (!resource) return;
+    const item = el("li");
+    const resourceLink = link(resource.label, resource.url);
+    resourceLink.target = "_blank";
+    resourceLink.rel = "noopener noreferrer";
+    item.append(resourceLink, text(` — ${resource.role}`));
+    resources.append(item);
+  });
+  panel.append(resources, paragraph(personalResearchData.scopeNote, "practical-note"));
+  return panel;
 }
 
 function renderAcademicContext(context) {

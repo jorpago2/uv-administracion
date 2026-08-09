@@ -1,5 +1,13 @@
 [
   {
+    "kind": "Perfil",
+    "title": "Investigación en dispositivos y semiconductores avanzados en el ICMUV",
+    "context": "ICMUV · UMDO+ · ciclo completo de dispositivos",
+    "keywords": "Diseño, simulación, microfabricación y caracterización de dispositivos fotónicos y electrónicos integrados con materiales funcionales, orientados a nuevas funcionalidades como memoria, respuesta neuromimética y computación neuromórfica. Fotónica integrada Semiconductores avanzados Dispositivos emergentes Hardware neuromórfico Concepto Diseño Simulación Microfabricación Caracterización Datos y análisis Protección y publicación Transferencia Gestión",
+    "href": "investigacion/#researchProfile",
+    "priority": 11
+  },
+  {
     "kind": "Glosario",
     "title": "Caja fija",
     "context": "Anticipo, pago y justificación",
@@ -259,7 +267,7 @@
     "kind": "Situación",
     "title": "Abstenerte por un conflicto de interés",
     "context": "Debes evaluar, contratar, seleccionar o decidir sobre una persona o entidad con la que tienes relación personal, científica, económica o competitiva.",
-    "keywords": "conflicto de interés abstención recusación DACI familiar colaborador competidor Presidencia u órgano responsable del procedimiento; UVintegritat o asesoría cuando sea dudoso o sensible Declaración escrita y registro o acta oficial, con DACI si el procedimiento la exige",
+    "keywords": "conflicto de interés abstención recusación DACI familiar colaborador competidor Presidencia u órgano responsable del procedimiento; UVintegritat o asesoría cuando sea dudoso o sensible Declaración escrita y registro o acta oficial, con DACI si el procedimiento la exige fabrication characterization transfer management Puede surgir al evaluar proveedores, socios, artículos, proyectos, licencias o estudiantes vinculados a colaboraciones o empresas; declara la relación antes de intervenir. Si participas en una empresa que ofrece un proceso o equipo, no intervengas sin analizar el conflicto en la selección o validación del proveedor. serinves",
     "href": "example.html?caso=abstenerse-conflicto-interes",
     "priority": 6
   },
@@ -267,7 +275,7 @@
     "kind": "Situación",
     "title": "Aceptar un regalo, comida o invitación de un proveedor",
     "context": "Una empresa que vende, financia o colabora con tu grupo ofrece un obsequio, viaje, comida, entrada o actividad que podría influir o parecer que influye en tus decisiones.",
-    "keywords": "regalo proveedor comida empresa invitación viaje hospitality obsequio entrada VIP compliance Responsable de la estructura o procedimiento; unidad económica/contratación y UVintegritat si existe duda Rechazo o declaración escrita y registro en el expediente afectado cuando proceda",
+    "keywords": "regalo proveedor comida empresa invitación viaje hospitality obsequio entrada VIP compliance Responsable de la estructura o procedimiento; unidad económica/contratación y UVintegritat si existe duda Rechazo o declaración escrita y registro en el expediente afectado cuando proceda fabrication characterization management Los proveedores de óptica, instrumentación, foundry o software pueden ofrecer muestras, viajes o comidas; evalúa valor, finalidad y relación con decisiones de compra. Una lente de demostración para evaluación técnica no es lo mismo que un obsequio personal: registra condiciones, devolución y ausencia de compromiso comercial. serinves",
     "href": "example.html?caso=aceptar-regalo-invitacion-proveedor",
     "priority": 6
   },
@@ -275,7 +283,7 @@
     "kind": "Situación",
     "title": "Aceptar una consultoría o actividad privada compatible",
     "context": "Una empresa ofrece asesoramiento, cargo o colaboración remunerada relacionada con tu especialidad o proyectos UV.",
-    "keywords": "consultoría compatibilidad segunda actividad empresa conflicto interés abstención",
+    "keywords": "consultoría compatibilidad segunda actividad empresa conflicto interés abstención design simulation transfer management Una consultoría sobre fotónica, semiconductores o dispositivos puede solaparse con funciones UV, proyectos, socios, know-how o futura spin-off; delimita objeto, tiempo, medios y propiedad. No uses modelos, datos, software o contactos del ICMUV en una asesoría privada sin resolver compatibilidad y derechos institucionales. icmuv serinves",
     "href": "example.html?caso=consultoria-incompatibilidad",
     "priority": 6
   },
@@ -283,7 +291,7 @@
     "kind": "Situación",
     "title": "Aceptar una donación, cesión gratuita o patrocinio",
     "context": "Una empresa ofrece equipo, dinero, licencias o muestras sin precio aparente y pide visibilidad, acceso, datos, pruebas o una relación continuada.",
-    "keywords": "donación cesión gratuita comodato patrocinio equipo regalado sponsorship mecenazgo Gerencia o unidad patrimonial/económica, estructura receptora; STI, Marketing, asesoría o contratación según condiciones Acuerdo institucional de donación, cesión, patrocinio o contrato y alta patrimonial",
+    "keywords": "donación cesión gratuita comodato patrocinio equipo regalado sponsorship mecenazgo Gerencia o unidad patrimonial/económica, estructura receptora; STI, Marketing, asesoría o contratación según condiciones Acuerdo institucional de donación, cesión, patrocinio o contrato y alta patrimonial fabrication characterization transfer management Un equipo, material o licencia donados pueden generar mantenimiento, residuos, dependencia, publicidad, propiedad de resultados o incompatibilidad con proyectos; valora el coste total. Antes de aceptar una fuente o lote de material, identifica estado, inventario, consumibles, seguridad, restricciones de publicación y obligación de usar marca o proveedor. prevencion serinves",
     "href": "example.html?caso=aceptar-donacion-cesion-patrocinio",
     "priority": 6
   },
@@ -291,7 +299,7 @@
     "kind": "Situación",
     "title": "Acoger a un profesor o investigador visitante",
     "context": "Una persona externa realizará una estancia en el DIE o ICMUV y necesita autorización, seguro, carta, accesos y prevención antes de entrar en instalaciones.",
-    "keywords": "visitante investigador invitado carta invitación seguro personal no vinculado estancia Dirección de departamento, centro o instituto anfitrión; RR. HH. PDI y responsables de espacios Solicitud de autorización de estancia, carta posterior y peticiones nominativas de acceso",
+    "keywords": "visitante investigador invitado carta invitación seguro personal no vinculado estancia Dirección de departamento, centro o instituto anfitrión; RR. HH. PDI y responsables de espacios Solicitud de autorización de estancia, carta posterior y peticiones nominativas de acceso simulation fabrication characterization protection management La acogida debe resolver acceso ICMUV, formación de laboratorio, supervisión, datos, muestras, autoría, propiedad intelectual y financiación antes del trabajo experimental. Si la visita fabricará o medirá un chip con material funcional, define responsable, equipos permitidos, repositorio, muestras que aporta y qué resultados puede llevarse o publicar. icmuv umdo prevencion serinves",
     "href": "example.html?caso=acoger-pdi-investigador-visitante",
     "priority": 6
   },
@@ -331,7 +339,7 @@
     "kind": "Situación",
     "title": "Actuar ante un accidente laboral o in itinere",
     "context": "Sufres un accidente en el trabajo o durante el desplazamiento y necesitas atención, comunicación y declaración correcta según seas PDI laboral o funcionario.",
-    "keywords": "accidente trabajo in itinere acto de servicio UMIVALE MUFACE parte accidente Emergencias, UMIVALE o MUFACE según vínculo, RR. HH. PDI y Servicio de Prevención Atención urgente y modelos UV de declaración enviados a RR. HH. PDI",
+    "keywords": "accidente trabajo in itinere acto de servicio UMIVALE MUFACE parte accidente Emergencias, UMIVALE o MUFACE según vínculo, RR. HH. PDI y Servicio de Prevención Atención urgente y modelos UV de declaración enviados a RR. HH. PDI fabrication characterization management En laboratorio debes preservar la atención a la persona y, sin interferir, datos básicos del equipo, sustancia, láser, muestra y condiciones de operación que permitan investigar la causa. Ante una exposición o lesión durante una medida, detén el montaje de forma segura, activa la respuesta prevista y conserva configuración y registro del equipo sin reanudarlo por tu cuenta. prevencion",
     "href": "example.html?caso=accidente-laboral-in-itinere",
     "priority": 6
   },
@@ -363,7 +371,7 @@
     "kind": "Situación",
     "title": "Cambiar de IP, socio o institución en un proyecto",
     "context": "El IP se traslada, una entidad abandona, cambia el equipo o se pretende transferir parte del proyecto y hay tareas, personal, equipos y resultados en curso.",
-    "keywords": "cambio IP cambio socio transferir proyecto amendment baja beneficiario traslado investigador Servicio de Investigación o STI, financiador, RR. HH., gestión económica y Transferencia según efectos Solicitud institucional al financiador o portal de gestión y acuerdos internos de entrega",
+    "keywords": "cambio IP cambio socio transferir proyecto amendment baja beneficiario traslado investigador Servicio de Investigación o STI, financiador, RR. HH., gestión económica y Transferencia según efectos Solicitud institucional al financiador o portal de gestión y acuerdos internos de entrega fabrication characterization data protection management El cambio puede cortar acceso a diseños, repositorios, obleas, equipos, contratos, know-how o supervisión; inventaría activos y dependencias antes de proponerlo. No basta cambiar el nombre del IP: asigna custodia de GDS, lotes, datos, claves de software, muestras y compromisos de fabricación pendientes. serinves icmuv",
     "href": "example.html?caso=cambiar-ip-socio-institucion-proyecto",
     "priority": 6
   },
@@ -379,7 +387,7 @@
     "kind": "Situación",
     "title": "Comercializar software con dependencias de código abierto",
     "context": "Un prototipo incorpora paquetes open source, contribuciones de estudiantes y código de proyectos y se quiere licenciar a una empresa o spin-off.",
-    "keywords": "software comercial open source GPL MIT dependencias SBOM doble licencia STI UV y responsables del software; SIUV o asesoría técnica para seguridad y dependencias Comunicación de resultado, auditoría de licencias y contrato o licencia institucional",
+    "keywords": "software comercial open source GPL MIT dependencias SBOM doble licencia STI UV y responsables del software; SIUV o asesoría técnica para seguridad y dependencias Comunicación de resultado, auditoría de licencias y contrato o licencia institucional simulation data protection transfer Audita dependencias de simulación, control y análisis, sus licencias, código de terceros y titularidad UV antes de ofrecer soporte, licencia dual o producto asociado al dispositivo. Una interfaz propia para medir chips puede incorporar librerías permisivas y componentes incompatibles con distribución cerrada; genera SBOM y revisión de licencias. serinves",
     "href": "example.html?caso=comercializar-software-open-source",
     "priority": 6
   },
@@ -387,7 +395,7 @@
     "kind": "Situación",
     "title": "Completar mi incorporación inicial como PDI",
     "context": "Acabas de tomar posesión o firmar el contrato y necesitas activar identidad UV, correo, tarjeta, VPN, espacios, prevención y accesos del DIE, la ETSE y el ICMUV sin asumir que todo se crea automáticamente.",
-    "keywords": "nuevo PDI primer día alta cuenta UV correo tarjeta VPN llaves acceso laboratorio RR. HH. PDI para la vinculación; SIUV para identidad digital; DIE, ETSE e ICMUV para espacios y funciones locales; Prevención para riesgos Portal del Empleado, gestión de cuentas UV, solicitudes SIUV y petición escrita a cada responsable local",
+    "keywords": "nuevo PDI primer día alta cuenta UV correo tarjeta VPN llaves acceso laboratorio RR. HH. PDI para la vinculación; SIUV para identidad digital; DIE, ETSE e ICMUV para espacios y funciones locales; Prevención para riesgos Portal del Empleado, gestión de cuentas UV, solicitudes SIUV y petición escrita a cada responsable local management fabrication characterization La incorporación no termina con nómina y correo: en tu caso incluye adscripción ICMUV/UMDO, acceso a espacios, formación preventiva, permisos de laboratorio, cuentas de simulación y reglas de uso de equipos. Antes de iniciar una oblea o montar una caracterización óptica, deja identificados responsable de instalación, formación exigida, reserva, almacenamiento de muestras y cauce de incidencias. jorge-uv icmuv prevencion",
     "href": "example.html?caso=incorporacion-inicial",
     "priority": 6
   },
@@ -395,7 +403,7 @@
     "kind": "Situación",
     "title": "Comprar a un proveedor exclusivo",
     "context": "Solo el fabricante o distribuidor autorizado ofrece una pieza compatible y no puedes obtener tres ofertas equivalentes.",
-    "keywords": "exclusividad proveedor único compatibilidad sonda distribuidor",
+    "keywords": "exclusividad proveedor único compatibilidad sonda distribuidor fabrication characterization management La exclusividad debe ser técnica y demostrable: compatibilidad con proceso, equipo, máscara, software o lote previo; que un proveedor sea habitual o más cómodo no basta. Justifica una pieza propietaria para una estación de medida con documentación del fabricante y explica por qué una alternativa rompe calibración o garantía. serinves",
     "href": "example.html?caso=proveedor-exclusivo",
     "priority": 6
   },
@@ -403,7 +411,7 @@
     "kind": "Situación",
     "title": "Comprar una lente Thorlabs mediante SDA",
     "context": "Necesitas una referencia concreta de lente, filtro, fibra o montura incluida en el catálogo de material de laboratorio y quieres tramitarla con cargo a una clave UV.",
-    "keywords": "Thorlabs lente SDA catálogo material laboratorio centro de coste",
+    "keywords": "Thorlabs lente SDA catálogo material laboratorio centro de coste characterization management La lente debe partir de la especificación del banco: longitud de onda, NA, focal, apertura, recubrimiento, daño, montura, compatibilidad y plazo; después se decide SDA y proyecto pagador. Para acoplar a un chip a 1550 nm, guarda cálculo o esquema que justifica la referencia Thorlabs y comprueba que montura y working distance encajan antes del pedido. sda",
     "href": "example.html?caso=comprar-lente-sda",
     "priority": 6
   },
@@ -411,7 +419,7 @@
     "kind": "Situación",
     "title": "Comprobar elegibilidad en una convocatoria recurrente",
     "context": "Quieres saber si persona, grupo, UV, consorcio, fecha de doctorado, movilidad o resultado previo cumplen una edición concreta.",
-    "keywords": "elegibilidad ERC MSCA Pathfinder AICO PROMETEO PDC",
+    "keywords": "elegibilidad ERC MSCA Pathfinder AICO PROMETEO PDC management Separa el excelente encaje científico de la elegibilidad administrativa: adscripción ICMUV/UMDO, categoría contractual, fecha de doctorado, dedicación, composición del grupo y papel UV deben comprobarse por separado. Una propuesta técnicamente perfecta sobre dispositivos neuromórficos puede ser inadmisible si la figura de IP o el beneficiario no cumplen; valida primero ese árbol de requisitos. jorge-uv serinves",
     "href": "example.html?caso=comprobar-elegibilidad",
     "priority": 6
   },
@@ -419,7 +427,7 @@
     "kind": "Situación",
     "title": "Comunicar una brecha de datos o incidente",
     "context": "Envías notas al grupo equivocado, publicas un enlace abierto, pierdes un dispositivo o detectas acceso indebido a datos.",
-    "keywords": "brecha datos personales correo equivocado enlace público DPD incidente",
+    "keywords": "brecha datos personales correo equivocado enlace público DPD incidente simulation fabrication data protection management Además de datos personales, un incidente puede exponer GDS, recetas, resultados no publicados, credenciales de instrumentos o información de socios; clasifica activos y obligaciones sin confundirlas. Si se comparte públicamente una carpeta con layouts y datos bajo NDA, retira acceso, conserva evidencias y comunica tanto la brecha de datos como el posible incidente contractual o de propiedad intelectual. serinves",
     "href": "example.html?caso=brecha-datos",
     "priority": 6
   },
@@ -427,7 +435,7 @@
     "kind": "Situación",
     "title": "Construir el presupuesto completo de un proyecto",
     "context": "Debes presupuestar personal, equipos, viajes, consumibles, IVA, indirectos, cofinanciación y anualidades sin confundir coste con ayuda solicitada.",
-    "keywords": "presupuesto coste personal IVA indirectos cofinanciación anualidades",
+    "keywords": "presupuesto coste personal IVA indirectos cofinanciación anualidades simulation fabrication characterization data management Presupuesta el ciclo completo: licencias y cómputo, máscaras y obleas, materiales y deposición, sala limpia o foundry, encapsulado, consumibles, tiempo de equipo, calibración, personal y repetición de lotes. No presupuestes solo el chip: incluye acoplo óptico, electrónica de control, puntas, fibras, fuentes, detector, portamuestras y caracterización estructural necesaria para explicar el resultado. lfnn scsie serinves",
     "href": "example.html?caso=presupuesto-proyecto",
     "priority": 6
   },
@@ -435,7 +443,7 @@
     "kind": "Situación",
     "title": "Contratar personal con cargo a un proyecto",
     "context": "Necesitas incorporar personal investigador o técnico y debes encajar perfil, coste, duración, selección y fecha real de alta.",
-    "keywords": "contrato personal técnico predoctoral postdoctoral baremo",
+    "keywords": "contrato personal técnico predoctoral postdoctoral baremo simulation fabrication characterization data management Define capacidades observables y formación necesaria: FDTD o dispositivo, layouts, sala limpia, instrumentación óptica/eléctrica, automatización, análisis y trazabilidad; evita perfiles imposibles que mezclen todo sin prioridad. Decide si necesitas una persona de simulación, proceso o caracterización y fija entregables compatibles con duración contractual y acceso real a instalaciones. umdo lfnn scsie",
     "href": "example.html?caso=contratar-personal-proyecto",
     "priority": 6
   },
@@ -451,7 +459,7 @@
     "kind": "Situación",
     "title": "Corregir o retractar un artículo publicado",
     "context": "Detectas un error en datos, análisis, figura, autoría o conclusiones y necesitas decidir si basta corrección o afecta a la fiabilidad del trabajo.",
-    "keywords": "erratum correction retraction retractar artículo error publicado expresión preocupación Autores y revista; responsables de integridad UV, financiador y repositorio según alcance Comunicación documentada al editor y cauce de integridad si existe posible mala conducta",
+    "keywords": "erratum correction retraction retractar artículo error publicado expresión preocupación Autores y revista; responsables de integridad UV, financiador y repositorio según alcance Comunicación documentada al editor y cauce de integridad si existe posible mala conducta simulation characterization data protection Los fallos plausibles incluyen calibración, identificación de chip, deriva del material, script, unidades, modelo o selección de muestra; reconstruye la cadena completa antes de valorar alcance. Si una curva neuromórfica pertenece a otro dado o un filtro altera el claim, congela datos y código, reproduce el análisis y determina qué figuras y conclusiones cambian. umdo",
     "href": "example.html?caso=corregir-retractar-articulo",
     "priority": 6
   },
@@ -459,7 +467,7 @@
     "kind": "Situación",
     "title": "Corregir un POD u OCA incorrecto",
     "context": "El borrador de POD no refleja correctamente categoría, horas, asignaturas, idioma, reducciones o responsabilidades.",
-    "keywords": "POD OCA horas docentes reducciones dedicación",
+    "keywords": "POD OCA horas docentes reducciones dedicación giet giei git muie El DIE prepara y corrige la asignación de su profesorado; la ETSE y los órganos académicos de los títulos aportan la planificación docente. Una discrepancia de POD u OCA debe trazarse entre asignatura, grupo, actividad, titulación y dedicación. Si una práctica de laboratorio aparece asignada al grupo o profesor equivocado, compara POD/OCA con horario, guía y acuerdo de coordinación. Envía al DIE una tabla breve con situación publicada, situación correcta y evidencia; no intentes compensarlo informalmente cambiando horas con otro docente. En GIET, GIEI y GIT identifica titulación, CAT, curso, grupo y tipo de actividad antes de pedir la corrección. En el MUIE identifica la CCA, la asignatura y una planificación que puede concentrarse en periodos o sesiones diferentes de los grados.",
     "href": "example.html?caso=corregir-pod-oca",
     "priority": 6
   },
@@ -467,7 +475,7 @@
     "kind": "Situación",
     "title": "Crear una spin-off universitaria",
     "context": "El equipo quiere comercializar tecnología desarrollada en la UV y combinar sociedad, licencia, participación, funciones y uso de instalaciones.",
-    "keywords": "spin-off startup empresa derivada licencia participación UV compatibilidad",
+    "keywords": "spin-off startup empresa derivada licencia participación UV compatibilidad fabrication characterization protection transfer management Una spin-off de dispositivos necesita algo más que una curva prometedora: propiedad intelectual limpia, proceso reproducible, rendimiento de fabricación, coste, encapsulado, fiabilidad, mercado y acceso sostenible a infraestructura. Para explotar un memdispositivo, separa demostrador académico de producto y cuantifica yield, endurance, variabilidad, integración, cadena de suministro y know-how que licenciaría la UV. serinves lfnn",
     "href": "example.html?caso=crear-spin-off",
     "priority": 6
   },
@@ -475,7 +483,7 @@
     "kind": "Situación",
     "title": "Cumplir las obligaciones de acceso abierto del financiador",
     "context": "Un artículo está aceptado y debes elegir licencia, versión y repositorio y comprobar si existe acuerdo transformativo sin incumplir la ayuda.",
-    "keywords": "open access acceso abierto APC acuerdo transformativo RODERIC versión aceptada embargo Biblioteca UV y Servicio de Investigación; autor de correspondencia y financiador Flujo del editor, GREC/RODERIC y repositorio o portal exigido por la ayuda",
+    "keywords": "open access acceso abierto APC acuerdo transformativo RODERIC versión aceptada embargo Biblioteca UV y Servicio de Investigación; autor de correspondencia y financiador Flujo del editor, GREC/RODERIC y repositorio o portal exigido por la ayuda data protection management Coordina depósito de artículo y datos con patente, NDA, información de proceso y posibilidad real de compartir archivos voluminosos o sensibles sin perder reproducibilidad. Publica curvas y metadatos suficientes para validar el dispositivo, pero justifica embargo o acceso restringido a GDS y receta cuando exista protección o confidencialidad legítima. serinves",
     "href": "example.html?caso=cumplir-acceso-abierto-financiador",
     "priority": 6
   },
@@ -491,7 +499,7 @@
     "kind": "Situación",
     "title": "Detectar una revista o congreso depredador",
     "context": "Recibes una invitación halagadora con revisión rápida, indexación prometida y APC o inscripción urgente y quieres saber si es legítima.",
-    "keywords": "revista depredadora congreso depredador editorial fraudulenta APC sospechosa indexación falsa Biblioteca UV para evaluación de fuentes y equipo investigador para la decisión científica Consulta a La Bibliotec@ Respon y verificación independiente de cada afirmación",
+    "keywords": "revista depredadora congreso depredador editorial fraudulenta APC sospechosa indexación falsa Biblioteca UV para evaluación de fuentes y equipo investigador para la decisión científica Consulta a La Bibliotec@ Respon y verificación independiente de cada afirmación protection management Evalúa la comunidad real de fotónica, electrónica o materiales, comité, indexación, revisión, costes y antecedentes; una invitación que repite tus palabras clave no acredita calidad. Contrasta el evento con sociedades y conferencias reconocidas del área y no pagues APC o inscripción antes de verificar entidad, edición y política editorial. jorge-uv",
     "href": "example.html?caso=detectar-revista-congreso-depredador",
     "priority": 6
   },
@@ -507,7 +515,7 @@
     "kind": "Situación",
     "title": "Ejecutar correctamente un proyecto concedido",
     "context": "Recibes la concesión y debes traducir resolución, presupuesto, hitos y obligaciones en reglas de trabajo para el equipo.",
-    "keywords": "proyecto concedido ejecución gasto elegible hitos clave",
+    "keywords": "proyecto concedido ejecución gasto elegible hitos clave design simulation fabrication characterization data management La ejecución necesita trazabilidad de diseño a muestra: versión del layout, commit del modelo, lote, oblea, proceso, chip, montaje, calibración, archivo de datos y entregable financiado. Usa un identificador que conecte GDS, corrida de fabricación, dado medido y dataset para poder justificar por qué una respuesta neuromimética pertenece a una geometría y proceso concretos. umdo lfnn serinves",
     "href": "example.html?caso=ejecutar-proyecto",
     "priority": 6
   },
@@ -515,7 +523,7 @@
     "kind": "Situación",
     "title": "Elegir el orden entre patente, preprint, congreso y tesis",
     "context": "Tienes un resultado nuevo, una fecha de defensa o congreso próxima y dudas si depositar, enviar, presentar o comunicar primero la invención.",
-    "keywords": "patente antes publicar preprint congreso tesis novedad embargo Sección de Innovación y Valorización del STI, Escuela de Doctorado o centro y equipo autor Trámite de comunicación de resultado y coordinación escrita del calendario de divulgación",
+    "keywords": "patente antes publicar preprint congreso tesis novedad embargo Sección de Innovación y Valorización del STI, Escuela de Doctorado o centro y equipo autor Trámite de comunicación de resultado y coordinación escrita del calendario de divulgación data protection transfer La secuencia debe fijarse antes de cualquier resumen público y coordinar inventores, coautores, doctorando, socios y financiador; la fecha crítica puede ser el envío, no la presentación. Con una nueva respuesta de memoria óptica, decide primero si hay resultado protegible; después alinea comunicación de invención, manuscrito, congreso y depósito de tesis. serinves",
     "href": "example.html?caso=orden-patente-preprint-congreso-tesis",
     "priority": 6
   },
@@ -531,7 +539,7 @@
     "kind": "Situación",
     "title": "Elegir la convocatoria adecuada para una idea",
     "context": "Tienes una idea, resultados preliminares y una necesidad de personal, equipo, red o demostrador, pero varias convocatorias parecen posibles.",
-    "keywords": "financiación convocatoria ERC Pathfinder PID AICO PROMETEO TRL",
+    "keywords": "financiación convocatoria ERC Pathfinder PID AICO PROMETEO TRL concept design simulation fabrication characterization transfer management La convocatoria debe encajar simultáneamente con madurez del dispositivo, riesgo del material, necesidad de fabricación y tipo de validación; no basta con que mencione semiconductores o fotónica. Clasifica la idea por TRL y por cuello de botella: física todavía incierta, diseño a optimizar, proceso que desarrollar, caracterización que financiar o prototipo que transferir. jorge-uv umdo serinves",
     "href": "example.html?caso=elegir-financiacion",
     "priority": 6
   },
@@ -539,7 +547,7 @@
     "kind": "Situación",
     "title": "Enviar muestras, prototipos o tecnología al extranjero",
     "context": "Debes enviar un chip, láser, material, código o documentación técnica fuera de España y pueden existir aduanas, mercancía peligrosa, sanciones o control de doble uso.",
-    "keywords": "exportación doble uso aduanas enviar muestras prototipo extranjero tecnología láser STI y gestión económica/aduanera UV; Ministerio de Economía para licencias; transportista autorizado y Prevención Expediente institucional de exportación, aduana y transferencia; nunca envío personal no declarado",
+    "keywords": "exportación doble uso aduanas enviar muestras prototipo extranjero tecnología láser STI y gestión económica/aduanera UV; Ministerio de Economía para licencias; transportista autorizado y Prevención Expediente institucional de exportación, aduana y transferencia; nunca envío personal no declarado fabrication characterization protection transfer management Un envío puede incluir chips, obleas, máscaras, materiales, electrónica o archivos técnicos; revisa embalaje, seguridad, aduana, seguro, exportación, NDA/MTA y retorno. Para enviar un chip híbrido a una caracterización en otro país, documenta valor, composición, ausencia o presencia de peligros, finalidad, destinatario y datos de diseño que lo acompañan. serinves prevencion",
     "href": "example.html?caso=enviar-tecnologia-muestras-extranjero",
     "priority": 6
   },
@@ -547,7 +555,7 @@
     "kind": "Situación",
     "title": "Firmar un NDA, MTA o acuerdo de transferencia de datos",
     "context": "Una empresa o grupo quiere intercambiar información, muestras, software o datos y envía un documento para firmar antes de una reunión o envío.",
-    "keywords": "NDA confidencialidad MTA DTA transferencia material data transfer agreement Servicio de Transferencia e Innovación; DPD, ética, bioseguridad o Prevención cuando proceda Negociación institucional y firma por representante autorizado antes del intercambio",
+    "keywords": "NDA confidencialidad MTA DTA transferencia material data transfer agreement Servicio de Transferencia e Innovación; DPD, ética, bioseguridad o Prevención cuando proceda Negociación institucional y firma por representante autorizado antes del intercambio fabrication characterization data protection transfer Usa NDA para información, MTA para materiales o muestras y DTA para datos cuando corresponda; un envío puede necesitar más de un instrumento y condiciones de devolución o destrucción. Para recibir una película funcional o enviar chips a medir, lista muestras, propietario, uso permitido, resultados derivados, publicación, seguridad y qué ocurre con remanentes. serinves",
     "href": "example.html?caso=firmar-nda-mta-dta",
     "priority": 6
   },
@@ -587,7 +595,7 @@
     "kind": "Situación",
     "title": "Incorporarme a un consorcio antes de presentar una propuesta",
     "context": "Un coordinador extranjero pide confirmar participación, presupuesto y tareas en pocos días y puede enviar cartas o compromisos para firma.",
-    "keywords": "consorcio europeo letter of commitment socio proyecto Horizon Europe presupuesto socio Sección de I+D+i Internacional del STI, IP UV y representantes institucionales autorizados Circuito UV de propuestas y Funding & Tenders Portal o plataforma de la convocatoria",
+    "keywords": "consorcio europeo letter of commitment socio proyecto Horizon Europe presupuesto socio Sección de I+D+i Internacional del STI, IP UV y representantes institucionales autorizados Circuito UV de propuestas y Funding & Tenders Portal o plataforma de la convocatoria simulation fabrication characterization protection management Define la aportación UV como capacidad y entregable verificable, indicando qué se hace en ICMUV/LFNN, qué en SCSIE y qué depende de socios o foundry externa. En un consorcio de fotónica neuromórfica, evita prometer fabricación completa si tu papel real es diseño, integración de material y caracterización funcional. icmuv umdo lfnn scsie serinves",
     "href": "example.html?caso=incorporarse-consorcio-propuesta",
     "priority": 6
   },
@@ -595,7 +603,7 @@
     "kind": "Situación",
     "title": "Instalar un láser o actuar ante un accidente de laboratorio",
     "context": "Incorporas una estación láser o se produce exposición, derrame, descarga, incendio u otro accidente en el laboratorio.",
-    "keywords": "láser PRL accidente laboratorio emergencia EPI",
+    "keywords": "láser PRL accidente laboratorio emergencia EPI characterization management La caracterización fotónica exige evaluación del láser, cerramientos, interlocks, señalización, gafas, alineación, formación y respuesta ante incidentes antes de operar el banco. Para incorporar una fuente de mayor potencia a 1550 nm, no copies sin más el montaje anterior: actualiza evaluación, trayectoria, puntos de fuga y procedimiento de alineación. prevencion",
     "href": "example.html?caso=laser-accidente-laboratorio",
     "priority": 6
   },
@@ -611,7 +619,7 @@
     "kind": "Situación",
     "title": "Licenciar una patente o know-how a una empresa",
     "context": "Una empresa quiere explotar un resultado UV y pide exclusividad, acceso al know-how, opción de licencia o condiciones económicas.",
-    "keywords": "licencia patente know-how exclusividad regalías royalties opción licencia Sección de Innovación y Valorización del STI, titulares y representante autorizado de la UV Negociación institucional bajo confidencialidad y contrato de licencia firmado",
+    "keywords": "licencia patente know-how exclusividad regalías royalties opción licencia Sección de Innovación y Valorización del STI, titulares y representante autorizado de la UV Negociación institucional bajo confidencialidad y contrato de licencia firmado fabrication characterization protection transfer La patente puede no bastar: identifica recetas, ventana de proceso, calibraciones, librerías, fixtures y criterios de aceptación necesarios para reproducir el dispositivo. Para licenciar un modulador con material funcional, define qué know-how entrega la UV, soporte técnico, campos de uso, hitos y cómo se verifica rendimiento sin prometer más de los datos. serinves",
     "href": "example.html?caso=licenciar-patente-know-how-empresa",
     "priority": 6
   },
@@ -619,7 +627,7 @@
     "kind": "Situación",
     "title": "Mostrar un prototipo a una empresa interesada",
     "context": "Una empresa quiere ver un sensor o chip funcionando y pide una demo, muestras, medidas o acceso al laboratorio antes de decidir una colaboración.",
-    "keywords": "demo empresa mostrar prototipo prueba concepto visita laboratorio evaluación tecnología sample STI UV, responsable de laboratorio y Prevención; empresa bajo acuerdo institucional NDA/MTA, agenda y autorización nominativa de acceso o envío",
+    "keywords": "demo empresa mostrar prototipo prueba concepto visita laboratorio evaluación tecnología sample STI UV, responsable de laboratorio y Prevención; empresa bajo acuerdo institucional NDA/MTA, agenda y autorización nominativa de acceso o envío characterization protection transfer management Define qué se muestra, a quién, bajo qué confidencialidad y con qué límites de seguridad y prestaciones; una demostración puede divulgar la invención o crear expectativas contractuales. Para enseñar un chip neuromórfico, prepara dataset y montaje controlados, etiqueta resultados preliminares y evita entregar layout, receta o muestras sin acuerdo. serinves prevencion",
     "href": "example.html?caso=mostrar-prototipo-empresa",
     "priority": 6
   },
@@ -627,7 +635,7 @@
     "kind": "Situación",
     "title": "Negociar un acuerdo de consorcio tras concederse un proyecto",
     "context": "El proyecto europeo ha sido seleccionado y circula un DESCA con reglas de gobierno, responsabilidad, pagos, background, resultados y publicaciones.",
-    "keywords": "consortium agreement DESCA grant agreement background access rights joint ownership STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio Negociación de versiones controladas y firma institucional antes de la fecha exigida",
+    "keywords": "consortium agreement DESCA grant agreement background access rights joint ownership STI internacional y jurídico, IP UV y representante autorizado; coordinación del consorcio Negociación de versiones controladas y firma institucional antes de la fecha exigida design simulation fabrication data protection transfer Identifica como background los modelos, librerías de diseño, layouts, recetas, materiales, bancos de medida y software previos; regula acceso y explotación del foreground conjunto. Si un socio fabrica tu diseño y otro aporta el material funcional, acuerda antes quién puede reutilizar GDS, proceso y datos para proyectos o productos posteriores. serinves",
     "href": "example.html?caso=negociar-acuerdo-consorcio",
     "priority": 6
   },
@@ -635,7 +643,7 @@
     "kind": "Situación",
     "title": "Organizar un workshop o congreso en la UV",
     "context": "Quieres celebrar una reunión científica con inscripciones, ponentes, viajes, catering, espacios, patrocinadores, web y tratamiento de datos de asistentes.",
-    "keywords": "organizar congreso workshop evento científico inscripciones evento ponentes catering patrocinadores Estructura UV organizadora y unidad económica; Marketing/Eventos, contratación, privacidad y Prevención según alcance Proyecto o centro de coste del evento, plataforma institucional de inscripción y expedientes de gasto",
+    "keywords": "organizar congreso workshop evento científico inscripciones evento ponentes catering patrocinadores Estructura UV organizadora y unidad económica; Marketing/Eventos, contratación, privacidad y Prevención según alcance Proyecto o centro de coste del evento, plataforma institucional de inscripción y expedientes de gasto protection transfer management Un workshop sobre dispositivos o semiconductores debe separar programa científico, demostraciones, patrocinio, inscripciones, contratación, protección de resultados y seguridad de laboratorios. Si incluyes visita a LFNN o demostración óptica, limita acceso, aforo, fotografías y equipos, y tramita gastos e ingresos antes de anunciar el evento. icmuv lfnn prevencion serinves",
     "href": "example.html?caso=organizar-workshop-congreso-uv",
     "priority": 6
   },
@@ -659,7 +667,7 @@
     "kind": "Situación",
     "title": "Pagar la inscripción a un congreso",
     "context": "Han aceptado tu comunicación y debes decidir quién paga, cómo obtener factura y si cabe pago directo, anticipo o reintegro.",
-    "keywords": "congreso inscripción factura reintegro pago directo early bird",
+    "keywords": "congreso inscripción factura reintegro pago directo early bird protection management La inscripción debe vincularse a una contribución o actividad del proyecto y coordinar aceptación, autoría, patente, viaje, financiación y modalidad de pago. Para presentar un dispositivo en una conferencia de fotónica, no pagues hasta confirmar aceptación, fuente de fondos y que el resumen no compromete novedad. serinves",
     "href": "example.html?caso=inscripcion-congreso",
     "priority": 6
   },
@@ -667,7 +675,7 @@
     "kind": "Situación",
     "title": "Pagar un servicio científico interno de la UV",
     "context": "Necesitas microscopía, fabricación, análisis o soporte de una unidad UV y debes saber si se tramita como encargo interno, tarifa o compra externa.",
-    "keywords": "SCSIE servicio interno tarifa interna microscopía caracterización cargo interno unidad científica Unidad científica prestadora y unidad de gestión del crédito Solicitud o plataforma interna de servicio y documento contable interno indicado",
+    "keywords": "SCSIE servicio interno tarifa interna microscopía caracterización cargo interno unidad científica Unidad científica prestadora y unidad de gestión del crédito Solicitud o plataforma interna de servicio y documento contable interno indicado fabrication characterization management Para SCSIE u otro servicio UV define muestra, técnica, preparación, número de medidas, tarifa, proyecto y formato de datos; confirma si es servicio interno o colaboración científica. Para SEM/EDX de una película, acuerda preparación, zonas, resolución y archivos necesarios para no pagar imágenes que no responden a la hipótesis. scsie",
     "href": "example.html?caso=pagar-servicio-cientifico-interno",
     "priority": 6
   },
@@ -675,7 +683,7 @@
     "kind": "Situación",
     "title": "Pagar una actividad organizada por la propia UV",
     "context": "Quieres inscribirte en un curso, jornada o actividad facturada por una unidad de la UV con cargo a otra clave UV.",
-    "keywords": "compensación interna curso UV inscripción interna caja fija",
+    "keywords": "compensación interna curso UV inscripción interna caja fija fabrication characterization management La actividad interna puede ser formación obligatoria de sala limpia, microscopía, láser o instrumento; confirma si es tarifa interna, matrícula o servicio y qué proyecto puede asumirla. Una formación SCSIE para operar AFM no se tramita necesariamente como un congreso externo: identifica organizador y forma de compensación interna. scsie prevencion",
     "href": "example.html?caso=inscripcion-interna-uv",
     "priority": 6
   },
@@ -683,7 +691,7 @@
     "kind": "Situación",
     "title": "Pagar una APC, suscripción, base de datos o cuota científica",
     "context": "Necesitas pagar publicación, acceso digital, membresía o cuota y debes distinguir proveedor, periodo, impuestos, elegibilidad y vía de pago.",
-    "keywords": "APC open access suscripción base de datos cuota sociedad publicación",
+    "keywords": "APC open access suscripción base de datos cuota sociedad publicación protection management Antes de pagar una APC verifica revista, aceptación, política del financiador, afiliación UV, acuerdo transformativo, proyecto elegible y secuencia con patente. Un artículo sobre un nuevo dispositivo no debe activar una APC irreversible antes de comprobar acceso abierto institucional y protección del resultado. serinves",
     "href": "example.html?caso=apc-suscripcion-cuota",
     "priority": 6
   },
@@ -691,7 +699,7 @@
     "kind": "Situación",
     "title": "Pagar una proforma o un anticipo a un proveedor",
     "context": "El proveedor exige pago anticipado para fabricar, reservar o enviar un equipo y solo ha emitido una factura proforma.",
-    "keywords": "proforma prepago pago anticipado anticipo proveedor advance payment pago antes entrega Unidad de gestión económica, responsable de crédito y órgano de contratación o autorización competente Pedido o expediente previo con autorización expresa de anticipo y posterior factura definitiva",
+    "keywords": "proforma prepago pago anticipado anticipo proveedor advance payment pago antes entrega Unidad de gestión económica, responsable de crédito y órgano de contratación o autorización competente Pedido o expediente previo con autorización expresa de anticipo y posterior factura definitiva fabrication characterization management Foundries, máscaras, software o materiales especiales pueden exigir anticipo; necesita autorización previa, condiciones de entrega y garantías documentadas. Antes de pagar una corrida de obleas por proforma, fija archivos aceptados, fecha, criterios de conformidad, impuestos, entrega y respuesta ante lote fallido. serinves",
     "href": "example.html?caso=pagar-factura-proforma-anticipo-proveedor",
     "priority": 6
   },
@@ -699,7 +707,7 @@
     "kind": "Situación",
     "title": "Preparar la justificación o una auditoría de proyecto",
     "context": "Se aproxima el cierre o llega un requerimiento y debes demostrar actividades, gastos, pagos, contratación, inventario y resultados.",
-    "keywords": "justificación auditoría requerimiento cierre evidencias",
+    "keywords": "justificación auditoría requerimiento cierre evidencias simulation fabrication characterization data management La justificación debe enlazar cada gasto con una tarea y una evidencia: licencia-modelo, máscara-layout, factura-lote, servicio-muestra, viaje-medida o personal-entregable. Para una factura de microfabricación conserva oferta, autorización, pedido, factura, recepción, lote y referencia al paquete de trabajo que necesitaba esos dispositivos. serinves",
     "href": "example.html?caso=justificar-proyecto",
     "priority": 6
   },
@@ -715,7 +723,7 @@
     "kind": "Situación",
     "title": "Preparar un plan de gestión de datos y cumplir ciencia abierta",
     "context": "Un proyecto exige DMP y acceso abierto y necesitas decidir formatos, almacenamiento, metadatos, repositorio, licencias, embargos y excepciones.",
-    "keywords": "DMP plan gestión datos FAIR ciencia abierta RODERIC repositorio open data IP y data steward; Bibliotecas UV; DPD, ética, SIUV o Transferencia según restricciones Plantilla del financiador o ARGOS y repositorios institucionales o disciplinares autorizados",
+    "keywords": "DMP plan gestión datos FAIR ciencia abierta RODERIC repositorio open data IP y data steward; Bibliotecas UV; DPD, ética, SIUV o Transferencia según restricciones Plantilla del financiador o ARGOS y repositorios institucionales o disciplinares autorizados simulation fabrication characterization data protection El plan debe cubrir modelos, código, GDS, recetas, identificadores de muestra, calibraciones, espectros, curvas I-V, imágenes y datos procesados, con formatos, metadatos, acceso y retención distintos. Define desde el inicio cómo una figura se remonta a archivo crudo, instrumento, calibración, chip, lote, layout y commit del análisis. serinves",
     "href": "example.html?caso=plan-gestion-datos-ciencia-abierta",
     "priority": 6
   },
@@ -723,7 +731,7 @@
     "kind": "Situación",
     "title": "Preparar una acreditación ANECA o AVAP",
     "context": "Quieres acreditarte para PTU, CU o una figura laboral y necesitas elegir agencia, demostrar requisitos y presentar un expediente verificable sin confundir acreditación con concurso.",
-    "keywords": "ANECA AVAP ACADEMIA acreditación titular cátedra PPL méritos ANECA o AVAP como órgano evaluador; RR. HH. PDI y Unidad de Calidad para certificados UV Sede electrónica de la agencia y solicitudes UV de certificados o evaluación docente",
+    "keywords": "ANECA AVAP ACADEMIA acreditación titular cátedra PPL méritos ANECA o AVAP como órgano evaluador; RR. HH. PDI y Unidad de Calidad para certificados UV Sede electrónica de la agencia y solicitudes UV de certificados o evaluación docente concept simulation fabrication characterization protection transfer Tu narrativa debe mostrar una línea coherente desde el diseño y simulación hasta la demostración experimental, separando liderazgo científico de participación técnica. Para un dispositivo fotónico con material funcional, vincula hipótesis, modelo, proceso, caracterización, publicación, patente o colaboración y explica exactamente qué parte lideraste. jorge-uv",
     "href": "example.html?caso=preparar-acreditacion-aneca-avap",
     "priority": 6
   },
@@ -731,7 +739,7 @@
     "kind": "Situación",
     "title": "Preparar una propuesta competitiva desde cero",
     "context": "Has elegido convocatoria y necesitas organizar idea, socios, memoria, presupuesto, documentos, revisión y cierre interno.",
-    "keywords": "propuesta memoria grant calendario inverso presupuesto cierre interno",
+    "keywords": "propuesta memoria grant calendario inverso presupuesto cierre interno concept design simulation fabrication characterization data management Los paquetes de trabajo deben seguir dependencias físicas verificables: especificación, modelo, diseño, fabricación, metrología y comparación modelo-experimento, con iteraciones explícitas. Para un memdispositivo fotónico, define métricas de conmutación, memoria, energía, velocidad y endurance; enlaza cada métrica con simulación, lote fabricado y banco de medida. umdo lfnn scsie serinves",
     "href": "example.html?caso=preparar-propuesta",
     "priority": 6
   },
@@ -747,7 +755,7 @@
     "kind": "Situación",
     "title": "Presentarse a una plaza o concurso de PDI",
     "context": "Se publica una plaza que encaja con tu perfil y necesitas interpretar bases, presentar la instancia, acreditar méritos y seguir admisión, pruebas y reclamaciones.",
-    "keywords": "concurso PDI plaza PPL titular catedrático baremo admitidos reclamación Sección de Selección del PDI y comisión de selección designada para la plaza Formulario o sede indicados en la convocatoria y Tablón Oficial UV para actuaciones",
+    "keywords": "concurso PDI plaza PPL titular catedrático baremo admitidos reclamación Sección de Selección del PDI y comisión de selección designada para la plaza Formulario o sede indicados en la convocatoria y Tablón Oficial UV para actuaciones concept simulation fabrication characterization management El proyecto investigador debe ser viable dentro de ETSE-DIE e ICMUV y distinguir recursos disponibles, servicios UV, colaboraciones externas y capacidades que aún requieren financiación. No presentes como disponible una línea completa de microfabricación: identifica qué harías en LFNN, qué encargarías fuera y cómo caracterizarías y validarías los dispositivos. icmuv umdo lfnn scsie",
     "href": "example.html?caso=presentarse-concurso-pdi",
     "priority": 6
   },
@@ -755,7 +763,7 @@
     "kind": "Situación",
     "title": "Prestar o trasladar un equipo fuera de la UV",
     "context": "Quieres llevar un instrumento, portátil o prototipo a otra institución, empresa, campaña de medida o domicilio para trabajar temporalmente.",
-    "keywords": "préstamo equipo salida inventario traslado equipo llevar portátil equipo fuera UV cesión temporal Unidad responsable e inventario/patrimonio; Prevención, SIUV, aseguramiento o STI según el equipo Autorización y acta de salida, préstamo o cesión con actualización de ubicación",
+    "keywords": "préstamo equipo salida inventario traslado equipo llevar portátil equipo fuera UV cesión temporal Unidad responsable e inventario/patrimonio; Prevención, SIUV, aseguramiento o STI según el equipo Autorización y acta de salida, préstamo o cesión con actualización de ubicación fabrication characterization management Mover un equipo o prototipo exige inventario, seguro, transporte, calibración, acceso, prevención, responsable y condiciones de devolución; un chip o muestra puede requerir además NDA/MTA. Antes de llevar instrumentación a un socio, fotografía configuración, lista accesorios y define quién asume daño, realineación y datos generados. icmuv prevencion serinves",
     "href": "example.html?caso=prestar-trasladar-equipo-fuera-uv",
     "priority": 6
   },
@@ -771,7 +779,7 @@
     "kind": "Situación",
     "title": "Proteger un resultado antes de divulgarlo",
     "context": "Tienes un dispositivo, proceso, material o arquitectura nueva y se aproxima un artículo, congreso, tesis, repositorio o conversación con empresa.",
-    "keywords": "patente invención novedad congreso publicar resultado protegible",
+    "keywords": "patente invención novedad congreso publicar resultado protegible design fabrication characterization data protection transfer Puede ser protegible la arquitectura, integración de material, proceso, control o funcionalidad demostrada; conserva novedad, inventores, contribuciones, fechas y evidencia experimental antes de divulgar. Si una estructura VO₂/silicio muestra memoria multilevel, congela layout, proceso, curvas y autores de la idea antes de enviar resumen, preprint, tesis o demostración pública. jorge-uv serinves",
     "href": "example.html?caso=proteger-patente",
     "priority": 6
   },
@@ -779,7 +787,7 @@
     "kind": "Situación",
     "title": "Proteger un resultado creado con otra universidad o empresa",
     "context": "La invención tiene contribuciones de personal UV y externo y es necesario acordar inventores, titulares, porcentajes, costes y gestión antes de patentar.",
-    "keywords": "cotitularidad joint ownership varias universidades inventores externos porcentajes patente STI UV y oficinas homólogas de las entidades participantes Comunicación de resultado y negociación de acuerdo de cotitularidad antes de solicitud o licencia",
+    "keywords": "cotitularidad joint ownership varias universidades inventores externos porcentajes patente STI UV y oficinas homólogas de las entidades participantes Comunicación de resultado y negociación de acuerdo de cotitularidad antes de solicitud o licencia design fabrication characterization protection transfer La cotitularidad es probable cuando diseño, material, proceso o validación provienen de entidades distintas; inventaría contribuciones y acuerdos antes de repartir porcentajes. Si la UV diseña y caracteriza pero una universidad fabrica y otra aporta el material, documenta quién concibió cada rasgo reivindicable y quién puede explotar el conjunto. serinves",
     "href": "example.html?caso=proteger-resultado-cotitular",
     "priority": 6
   },
@@ -795,7 +803,7 @@
     "kind": "Situación",
     "title": "Publicar software, código o datos con una licencia adecuada",
     "context": "Quieres depositar código, modelos o datos y debes decidir versión, repositorio, licencia, metadatos y restricciones.",
-    "keywords": "software GitHub RODERIC datos licencia open source DOI",
+    "keywords": "software GitHub RODERIC datos licencia open source DOI simulation characterization data protection Distingue código de simulación, automatización de instrumentos, análisis, layouts, parámetros de proceso y datos crudos; cada activo puede tener propietario, licencia, embargo y riesgo de novedad distinto. Un repositorio reproducible puede publicar scripts y datos procesados, pero mantener bajo acceso controlado un GDS o receta de fabricación hasta resolver patente y acuerdos. serinves",
     "href": "example.html?caso=publicar-software-datos",
     "priority": 6
   },
@@ -803,7 +811,7 @@
     "kind": "Situación",
     "title": "Realizar seguimiento y depósito de una tesis",
     "context": "Diriges una tesis y debes controlar plan, actividades, evaluación anual, publicaciones, autoría, protección, depósito y defensa.",
-    "keywords": "doctorado tesis plan investigación depósito defensa compendio die-doctorado La Comisión Académica del Programa de Doctorado en Ingeniería Electrónica realiza el seguimiento académico; la Escuela de Doctorado gestiona los procedimientos institucionales de evaluación, depósito y defensa. El DIE organiza el programa, pero no sustituye a esos órganos. Para una tesis del PDIE sobre computación neuromórfica con memristores, revisa cada año que plan, actividades, publicaciones, formación y autorizaciones estén reflejados en el expediente. Meses antes del depósito confirma modalidad, informes, conflicto de intereses, protección de resultados, formato y tribunal con la Comisión Académica y la Escuela de Doctorado. El documento de actividades, el plan de investigación y las evaluaciones anuales forman una trazabilidad continuada, no un trámite que se reconstruye al depositar. Una tesis por compendio, una cotutela, una mención internacional o resultados confidenciales añaden requisitos y plazos que deben abrirse con antelación.",
+    "keywords": "doctorado tesis plan investigación depósito defensa compendio die-doctorado La Comisión Académica del Programa de Doctorado en Ingeniería Electrónica realiza el seguimiento académico; la Escuela de Doctorado gestiona los procedimientos institucionales de evaluación, depósito y defensa. El DIE organiza el programa, pero no sustituye a esos órganos. Para una tesis del PDIE sobre computación neuromórfica con memristores, revisa cada año que plan, actividades, publicaciones, formación y autorizaciones estén reflejados en el expediente. Meses antes del depósito confirma modalidad, informes, conflicto de intereses, protección de resultados, formato y tribunal con la Comisión Académica y la Escuela de Doctorado. El documento de actividades, el plan de investigación y las evaluaciones anuales forman una trazabilidad continuada, no un trámite que se reconstruye al depositar. Una tesis por compendio, una cotutela, una mención internacional o resultados confidenciales añaden requisitos y plazos que deben abrirse con antelación. concept simulation fabrication characterization data protection management Una tesis experimental debe mantener trazabilidad entre plan, formación, diseños, lotes, medidas, publicaciones, protección y cambios de alcance; no debe reconstruirse al final. Para una tesis en hardware neuromórfico, revisa trimestralmente métrica física, diseños fabricados, calidad de datos, resultados negativos, autoría y secuencia patente-artículo-depósito. umdo lfnn scsie serinves",
     "href": "example.html?caso=seguimiento-deposito-tesis",
     "priority": 6
   },
@@ -811,7 +819,7 @@
     "kind": "Situación",
     "title": "Recibir, inventariar, reparar, trasladar o dar de baja un equipo",
     "context": "Un equipo llega, falla calibración, necesita reparación, cambia de ubicación o termina su vida útil.",
-    "keywords": "inventario recepción calibración avería reparación traslado baja",
+    "keywords": "inventario recepción calibración avería reparación traslado baja fabrication characterization management Para láseres, analizadores, estaciones o equipos de proceso conserva inventario, ubicación, responsable, manual, calibración, mantenimiento, incidencias, software y accesorios. Al trasladar una fuente láser entre ETSE e ICMUV, confirma inventario, prevención, transporte, realineación y quién valida el banco antes de volver a medir. icmuv prevencion",
     "href": "example.html?caso=ciclo-vida-equipo",
     "priority": 6
   },
@@ -827,7 +835,7 @@
     "kind": "Situación",
     "title": "Recuperar un gasto que has pagado personalmente",
     "context": "Has adelantado una inscripción, material urgente u otro gasto relacionado con la UV y necesitas saber si puede reintegrarse y con cargo a qué presupuesto.",
-    "keywords": "reembolso gasto de bolsillo pagué yo recuperar dinero caja fija indemnización Unidad de gestión económica del departamento, instituto o proyecto; responsable del crédito Expediente de reintegro o caja fija indicado por la unidad, nunca compensación informal",
+    "keywords": "reembolso gasto de bolsillo pagué yo recuperar dinero caja fija indemnización Unidad de gestión económica del departamento, instituto o proyecto; responsable del crédito Expediente de reintegro o caja fija indicado por la unidad, nunca compensación informal fabrication characterization management La urgencia experimental —una pieza rota o consumible— no garantiza reintegro; evita anticipar dinero y conserva necesidad, autorización y relación con la medida o proceso. No compres personalmente un adaptador para salvar una campaña sin consulta: pide por escrito la ruta y, si ya ocurrió, aporta factura válida y explicación sin asumir recuperación. serinves",
     "href": "example.html?caso=recuperar-gasto-pagado-personalmente",
     "priority": 6
   },
@@ -835,7 +843,7 @@
     "kind": "Situación",
     "title": "Registrar dedicaciones y hojas de tiempo en varios proyectos",
     "context": "Participas en varias ayudas y debes declarar horas o dedicación sin superar disponibilidad ni imputar dos veces el mismo trabajo.",
-    "keywords": "DEDICA-i timesheet hojas de tiempo dedicación proyectos doble imputación horas Servicio de Investigación, responsables de proyecto y PDI o PI que declara en DEDICA-i DEDICA-i y sistemas específicos del financiador cuando sean adicionales",
+    "keywords": "DEDICA-i timesheet hojas de tiempo dedicación proyectos doble imputación horas Servicio de Investigación, responsables de proyecto y PDI o PI que declara en DEDICA-i DEDICA-i y sistemas específicos del financiador cuando sean adicionales simulation fabrication characterization data management Registra trabajo por proyecto y tarea sin imputar dos veces una misma simulación, corrida de fabricación o campaña de medidas que sirve a varias ayudas. Si una oblea común alimenta dos proyectos, documenta la regla técnica y temporal de reparto y conserva qué diseños, chips y medidas corresponden a cada uno. serinves",
     "href": "example.html?caso=registrar-dedicaciones-proyectos",
     "priority": 6
   },
@@ -843,7 +851,7 @@
     "kind": "Situación",
     "title": "Repartir una compra entre varios proyectos",
     "context": "Un equipo, licencia o servicio beneficia a dos o más proyectos y quieres distribuir su coste sin incumplir elegibilidad ni fraccionar artificialmente la contratación.",
-    "keywords": "cofinanciar compra varios proyectos reparto coste imputación múltiple split funding fraccionamiento Unidades gestoras y responsables de todos los proyectos; contratación e inventario cuando proceda Un único expediente de compra con distribución contable y conformidades múltiples",
+    "keywords": "cofinanciar compra varios proyectos reparto coste imputación múltiple split funding fraccionamiento Unidades gestoras y responsables de todos los proyectos; contratación e inventario cuando proceda Un único expediente de compra con distribución contable y conformidades múltiples fabrication characterization management Una oblea, licencia o componente común puede beneficiar varios proyectos, pero el reparto debe seguir una regla objetiva ligada a diseños, uso, tiempo o unidades, no al saldo disponible. Para una corrida multi-project wafer, documenta área o número de diseños de cada proyecto y conserva la relación entre coste, chips y tareas. serinves",
     "href": "example.html?caso=repartir-compra-varios-proyectos",
     "priority": 6
   },
@@ -851,7 +859,7 @@
     "kind": "Situación",
     "title": "Resolver autoría, integridad o uso de IA en investigación",
     "context": "Surge desacuerdo sobre autores, orden, contribuciones, datos, figura, código o uso de IA antes de enviar un trabajo.",
-    "keywords": "autoría CRediT integridad mala conducta IA retractación",
+    "keywords": "autoría CRediT integridad mala conducta IA retractación concept simulation fabrication characterization data protection En un trabajo interdisciplinar registra contribuciones a concepto, modelo, layout, proceso, material, medida y análisis; prestar equipo o financiar no equivale automáticamente a autoría. Antes de escribir un artículo sobre un dispositivo neuromórfico, construye una matriz CRediT que distinga quién ideó, simuló, fabricó, caracterizó y validó los claims. umdo",
     "href": "example.html?caso=autoria-integridad-ia",
     "priority": 6
   },
@@ -875,7 +883,7 @@
     "kind": "Situación",
     "title": "Responder a una petición de datos o código tras publicar",
     "context": "Otro equipo pide datos brutos, scripts o parámetros para reproducir un artículo y existen compromisos de disponibilidad, datos personales o software de terceros.",
-    "keywords": "data availability pedir datos código reproducibilidad datos brutos repositorio request data Equipo autor, custodio de datos, Biblioteca; DPD, ética o Transferencia según restricción Repositorio persistente o procedimiento de acceso controlado, no adjuntos improvisados",
+    "keywords": "data availability pedir datos código reproducibilidad datos brutos repositorio request data Equipo autor, custodio de datos, Biblioteca; DPD, ética o Transferencia según restricción Repositorio persistente o procedimiento de acceso controlado, no adjuntos improvisados simulation characterization data protection Responde desde el plan de datos y los acuerdos: separa datos publicables, código limpiable, archivos de diseño protegibles, parámetros de proceso confidenciales y material de terceros. Entrega scripts y datos de la figura con README y versiones, pero no envíes automáticamente GDS, credenciales de equipo o receta de un socio. serinves",
     "href": "example.html?caso=responder-peticion-datos-codigo",
     "priority": 6
   },
@@ -883,7 +891,7 @@
     "kind": "Situación",
     "title": "Responder a una resolución provisional de una ayuda",
     "context": "Una propuesta aparece concedida, denegada o con importe distinto en una resolución provisional y debes aceptar, alegar, subsanar o esperar.",
-    "keywords": "resolución provisional alegaciones proyecto aceptación ayuda denegación subsanación convocatoria Servicio de Gestión de la Investigación o STI UV y órgano concedente de la convocatoria Sede o aplicación indicada por la convocatoria, coordinada con la unidad UV competente",
+    "keywords": "resolución provisional alegaciones proyecto aceptación ayuda denegación subsanación convocatoria Servicio de Gestión de la Investigación o STI UV y órgano concedente de la convocatoria Sede o aplicación indicada por la convocatoria, coordinada con la unidad UV competente management Comprueba cómo cada recorte o condición afecta a personal, lotes de fabricación, acceso a equipos y métricas comprometidas; una reducción lineal del presupuesto puede hacer inviable una dependencia crítica. Si eliminan subcontratación de foundry, no aceptes sin más: explica qué dispositivo deja de fabricarse y propone una reconfiguración técnica y económica admisible. serinves",
     "href": "example.html?caso=responder-resolucion-provisional-ayuda",
     "priority": 6
   },
@@ -891,7 +899,7 @@
     "kind": "Situación",
     "title": "Reutilizar datos, muestras o consentimientos de otro proyecto",
     "context": "Quieres usar en un nuevo estudio datos o muestras ya recogidos y te dicen que están anonimizados o que el consentimiento anterior sirve.",
-    "keywords": "reutilizar datos uso secundario muestras humanas consentimiento anterior anonimización biobanco CEIH o comité aplicable, DPD UV, entidad custodio o biobanco e IP del nuevo estudio Solicitud ética y de acceso institucional antes de transferir o analizar",
+    "keywords": "reutilizar datos uso secundario muestras humanas consentimiento anterior anonimización biobanco CEIH o comité aplicable, DPD UV, entidad custodio o biobanco e IP del nuevo estudio Solicitud ética y de acceso institucional antes de transferir o analizar fabrication characterization data protection Para chips, obleas o datos de dispositivo normalmente importan propiedad, proyecto, NDA, MTA y finalidad; consentimiento humano solo aparece si el origen o la validación implica personas o muestras humanas. Antes de reutilizar un lote recibido de un socio, comprueba acuerdo, proyecto y publicación permitida aunque la muestra no contenga datos personales. serinves",
     "href": "example.html?caso=reutilizar-datos-muestras-consentimiento",
     "priority": 6
   },
@@ -907,7 +915,7 @@
     "kind": "Situación",
     "title": "Solicitar evaluación ética con personas o muestras humanas",
     "context": "El estudio incluye participantes, datos identificables, intervención o muestras humanas y aún no ha comenzado la fase afectada.",
-    "keywords": "CEIH ética personas muestras humanas consentimiento hospital",
+    "keywords": "CEIH ética personas muestras humanas consentimiento hospital characterization data management La fabricación y medida de semiconductores no activa por sí sola ética con personas; sí puede hacerlo validar sensores en participantes, usar muestras humanas o tratar datos personales o biomédicos. Un fotodetector medido con una fuente calibrada no es un estudio humano; probar un wearable sobre voluntarios exige detenerse y confirmar ética, información y tratamiento de datos. serinves",
     "href": "example.html?caso=etica-personas-muestras",
     "priority": 6
   },
@@ -923,7 +931,7 @@
     "kind": "Situación",
     "title": "Solicitar permiso, licencia, vacaciones, estancia o sabático",
     "context": "Necesitas ausentarte por actividad académica o personal y debes clasificar la figura, obtener autorización y cubrir la docencia.",
-    "keywords": "permiso licencia vacaciones estancia sabático ausencia",
+    "keywords": "permiso licencia vacaciones estancia sabático ausencia fabrication characterization management Una estancia puede estar ligada a una foundry, sala blanca o instalación de caracterización; el permiso laboral no sustituye acceso, envío de muestras, seguro, propiedad intelectual ni autorización del proyecto. Para una campaña externa de microfabricación, coordina permiso, fechas de proceso, transporte de muestras, NDA, costes y continuidad de las medidas en el ICMUV. icmuv serinves",
     "href": "example.html?caso=permiso-licencia-vacaciones",
     "priority": 6
   },
@@ -931,7 +939,7 @@
     "kind": "Situación",
     "title": "Solicitar trienios, quinquenios, sexenios o complemento autonómico",
     "context": "Cumples o crees cumplir un nuevo periodo de antigüedad, docencia, investigación o méritos autonómicos y necesitas presentar la solicitud correcta.",
-    "keywords": "trienio quinquenio sexenio complemento autonómico CNEAI méritos",
+    "keywords": "trienio quinquenio sexenio complemento autonómico CNEAI méritos protection management La evidencia investigadora debe reconstruir contribuciones en dispositivos, semiconductores y nuevas funcionalidades sin confundir artículo, patente, software, prototipo y transferencia. Mantén por año DOI, posición y contribución, proyecto financiador, dataset o código, patente y evidencia de impacto de cada línea de fotónica integrada o dispositivo emergente. jorge-uv",
     "href": "example.html?caso=solicitar-complementos",
     "priority": 6
   },
@@ -947,7 +955,7 @@
     "kind": "Situación",
     "title": "Solicitar una adaptación del puesto por motivos de salud",
     "context": "Una condición de salud, embarazo, parto o lactancia requiere ajustar espacio, tareas, horario o exposición sin difundir tu diagnóstico.",
-    "keywords": "adaptación puesto salud laboral embarazo lactancia especial sensibilidad ergonomía Área de Salud del Servicio de Prevención y Medio Ambiente, con RR. HH. y estructura para ejecutar medidas Instancia interna dirigida al grupo de adaptación correspondiente y circuito confidencial de salud laboral",
+    "keywords": "adaptación puesto salud laboral embarazo lactancia especial sensibilidad ergonomía Área de Salud del Servicio de Prevención y Medio Ambiente, con RR. HH. y estructura para ejecutar medidas Instancia interna dirigida al grupo de adaptación correspondiente y circuito confidencial de salud laboral fabrication characterization management La adaptación debe considerar exposición química, láseres, posturas en mesa óptica, manipulación de muestras y acceso a sala limpia sin reducir innecesariamente la actividad investigadora. Describe tareas concretas —alineación óptica, uso de campana, microscopía o largas simulaciones— para que prevención pueda proponer una medida técnicamente compatible. prevencion",
     "href": "example.html?caso=adaptacion-puesto-salud",
     "priority": 6
   },
@@ -955,7 +963,7 @@
     "kind": "Situación",
     "title": "Solicitar una modificación o prórroga de proyecto",
     "context": "Un retraso, cambio de personal, equipo, presupuesto, socio, ubicación o alcance amenaza el plan aprobado.",
-    "keywords": "prórroga modificación cambio presupuesto cambio IP retraso",
+    "keywords": "prórroga modificación cambio presupuesto cambio IP retraso fabrication characterization management Un retraso de foundry, fallo de deposición, indisponibilidad de equipo o cambio de material puede alterar tareas, hitos, presupuesto y subcontratación; documenta el efecto científico y económico. Si no llega la oblea a tiempo, compara replanificar medidas, usar un lote previo o trasladar fabricación, y solicita autorización antes de mover costes entre partidas cuando sea exigible. lfnn scsie serinves",
     "href": "example.html?caso=modificar-proyecto",
     "priority": 6
   },
@@ -963,7 +971,7 @@
     "kind": "Situación",
     "title": "Subcontratar un servicio científico especializado",
     "context": "Un proyecto necesita fabricación, caracterización, consultoría o ensayo externo y debes decidir si es compra, subcontratación de tarea o colaboración.",
-    "keywords": "subcontratación servicio científico ensayo externo fabricación externa tercero proyecto Servicio de Investigación y unidad de contratación o gestión económica; STI para IP y confidencialidad Consulta de elegibilidad y expediente de contratación o modificación antes del encargo",
+    "keywords": "subcontratación servicio científico ensayo externo fabricación externa tercero proyecto Servicio de Investigación y unidad de contratación o gestión económica; STI para IP y confidencialidad Consulta de elegibilidad y expediente de contratación o modificación antes del encargo fabrication characterization data management Define especificaciones y entregables medibles para foundry, deposición, encapsulado o caracterización externa; distingue servicio rutinario de una colaboración que genera conocimiento o propiedad conjunta. Para fabricar un lote, fija stack, tolerancias, test structures, aceptación, datos de proceso, tratamiento de fallos y propiedad de máscaras antes de pedir precio. lfnn scsie serinves",
     "href": "example.html?caso=subcontratar-servicio-cientifico",
     "priority": 6
   },
@@ -979,7 +987,7 @@
     "kind": "Situación",
     "title": "Tramitar investigación con animales, agentes biológicos u OMG",
     "context": "El proyecto incorpora organismos, vectores, muestras, instalaciones o procedimientos que pueden requerir comité y nivel de contención.",
-    "keywords": "bioseguridad OMG animales agentes biológicos contención residuos",
+    "keywords": "bioseguridad OMG animales agentes biológicos contención residuos fabrication characterization management Un dispositivo semiconductor convencional no entra automáticamente en animales u OMG, pero nanomateriales, agentes biológicos o validación in vivo pueden activar autorizaciones diferentes de la seguridad química o láser. No confundas manipular VO₂, resinas o disolventes con bioseguridad; si el dispositivo incorpora células o se prueba en animales, abre la evaluación antes de adquirir o recibir muestras. prevencion serinves",
     "href": "example.html?caso=bioseguridad-animales-omg",
     "priority": 6
   },
@@ -987,7 +995,7 @@
     "kind": "Situación",
     "title": "Tramitar un contrato artículo 60 con una empresa",
     "context": "Una empresa solicita ensayos, asesoramiento, prototipo o I+D y propone precio, calendario, confidencialidad o propiedad de resultados.",
-    "keywords": "artículo 60 empresa contrato ensayo consultoría institucional transferencia",
+    "keywords": "artículo 60 empresa contrato ensayo consultoría institucional transferencia design fabrication characterization protection transfer management En un encargo empresarial separa antecedentes UV, aportaciones de la empresa, diseño específico, fabricación, ensayos, entregables, publicación, propiedad del resultado y responsabilidad por prestaciones. Para caracterizar un material sobre una guía fotónica, acuerda si entregas datos, informe o prototipo; quién paga lotes fallidos; y qué know-how previo del ICMUV no se transfiere. serinves umdo",
     "href": "example.html?caso=contrato-articulo-60",
     "priority": 6
   },
@@ -995,7 +1003,7 @@
     "kind": "Situación",
     "title": "Tramitar una compra desde 5.000 € sin IVA",
     "context": "El equipo, componente o servicio alcanza 5.000 euros sin IVA o más y necesita expediente previo, ofertas o justificación y adjudicación.",
-    "keywords": "tres ofertas AD UV-plyca 9000 18000 contrato menor",
+    "keywords": "tres ofertas AD UV-plyca 9000 18000 contrato menor simulation fabrication characterization management Equipos, software, fuentes, detectores o lotes de fabricación requieren planificación temprana, especificaciones funcionales no sesgadas y coordinación con calendario y proyecto. Para una source-measure unit, define rangos, resolución, velocidad, interfaces y accesorios desde la medida prevista, no desde una referencia comercial favorita. serinves",
     "href": "example.html?caso=compra-desde-5000",
     "priority": 6
   },
@@ -1003,7 +1011,7 @@
     "kind": "Situación",
     "title": "Tramitar una compra ordinaria inferior a 5.000 € sin IVA",
     "context": "Necesitas un suministro o servicio puntual no cubierto por acuerdo marco o SDA y su valor estimado queda por debajo de 5.000 euros sin IVA.",
-    "keywords": "compra menor menos 5000 factura proveedor crédito",
+    "keywords": "compra menor menos 5000 factura proveedor crédito simulation fabrication characterization management Aplica a consumibles y componentes no cubiertos por SDA: obleas, materiales, puntas, monturas o licencias, siempre con especificación, seguridad, inventario y elegibilidad del proyecto. Una punta de RF o sustrato especial no debe describirse solo por marca: documenta parámetros que permiten verificar necesidad y equivalencia. serinves prevencion",
     "href": "example.html?caso=compra-menor-5000",
     "priority": 6
   },
@@ -1011,7 +1019,7 @@
     "kind": "Situación",
     "title": "Tramitar una factura de un proveedor extranjero",
     "context": "Compras software, material o un servicio a una empresa extranjera y la factura llega en otra moneda, sin IVA español o con datos fiscales incompletos.",
-    "keywords": "factura extranjera VAT IVA intracomunitario divisa invoice proveedor internacional importación Unidad de gestión económica y Servicio de Contabilidad y Presupuesto; aduanas o compras cuando haya importación Expediente de compra y factura original por el canal económico indicado",
+    "keywords": "factura extranjera VAT IVA intracomunitario divisa invoice proveedor internacional importación Unidad de gestión económica y Servicio de Contabilidad y Presupuesto; aduanas o compras cuando haya importación Expediente de compra y factura original por el canal económico indicado simulation fabrication characterization management Es habitual en foundry, software, materiales o componentes; confirma proveedor, divisa, IVA, aduana, concepto, recepción y proyecto antes de comprometer el pedido. Una factura extranjera por deposición debe identificar servicio, muestras, fecha y entidad UV correcta, no una dirección personal o del grupo. serinves",
     "href": "example.html?caso=tramitar-factura-extranjera",
     "priority": 6
   },
@@ -1019,7 +1027,7 @@
     "kind": "Situación",
     "title": "Tramitar viaje, dietas y anticipo de caja fija",
     "context": "Viajas por congreso, proyecto o estancia y necesitas autorizar ausencia, transporte, alojamiento, manutención, anticipo y liquidación.",
-    "keywords": "viaje dietas hotel kilometraje caja fija BCF comisión servicio",
+    "keywords": "viaje dietas hotel kilometraje caja fija BCF comisión servicio fabrication characterization protection management Puede tratarse de congreso, campaña de medida, foundry, sincrotrón o reunión de consorcio; cada viaje necesita objeto, autorización, fondos y justificantes coherentes. Para medir un chip en un laboratorio externo, separa viaje de envío de muestras y documenta agenda, instalación, proyecto y datos o muestras transportados. serinves",
     "href": "example.html?caso=viaje-caja-fija",
     "priority": 6
   },
@@ -1035,7 +1043,7 @@
     "kind": "Situación",
     "title": "Usar el nombre o logotipo de la UV en una iniciativa externa",
     "context": "Una empresa, congreso, proyecto o web quiere mostrar el logo UV o presentarte de forma que podría parecer respaldo institucional.",
-    "keywords": "logo UV marca UV identidad corporativa aval institucional afiliación web empresa Unidad Web y Marketing o Servicio de Marketing y Comunicación; estructura UV responsable de la relación Solicitud de autorización y uso de recursos oficiales de identidad visual",
+    "keywords": "logo UV marca UV identidad corporativa aval institucional afiliación web empresa Unidad Web y Marketing o Servicio de Marketing y Comunicación; estructura UV responsable de la relación Solicitud de autorización y uso de recursos oficiales de identidad visual transfer management Una presentación de prototipo, colaboración o futura empresa debe separar participación personal, proyecto ICMUV y respaldo institucional de la UV. No uses logotipos UV/ICMUV para sugerir validación comercial de un dispositivo si solo existe una conversación exploratoria o una actividad personal. icmuv serinves",
     "href": "example.html?caso=usar-nombre-logotipo-uv-iniciativa-externa",
     "priority": 6
   },

@@ -5,12 +5,13 @@ import path from "node:path";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = path.join(repositoryRoot, "web", "data");
 
-const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext] = await Promise.all([
+const [manual, situationsA, situationsB, glossary, funding, operations, academicProgrammes, academicSituationContext, personalResearchContext] = await Promise.all([
   readJson("manual.json"), readJson("situations.json"), readJson("situations-51-100.json"),
   readJson("glossary.json"), readJson("funding-calls.json"), readJson("operations.json"), readJson("academic-programmes.json"),
-  readJson("academic-situation-context.json")
+  readJson("academic-situation-context.json"), readJson("personal-research-context.json")
 ]);
 const academicContextBySituation = new Map(academicSituationContext.contexts.map((context) => [context.situationId, context]));
+const personalContextBySituation = new Map(personalResearchContext.contexts.map((context) => [context.situationId, context]));
 
 const entries = [
   ...manual.markdown.matchAll(/^##\s+(\d+)\.\s+(.+)$/gm)
@@ -25,6 +26,7 @@ const entries = [
 
 for (const situation of [...situationsA.situations, ...situationsB.situations]) {
   const academicContext = academicContextBySituation.get(situation.id);
+  const personalContext = personalContextBySituation.get(situation.id);
   entries.push({
     kind: "Situación",
     title: situation.title,
@@ -32,7 +34,8 @@ for (const situation of [...situationsA.situations, ...situationsB.situations]) 
     keywords: [
       ...(situation.aliases ?? []), situation.guide?.unit, situation.guide?.channel,
       ...(academicContext?.programmeIds ?? []), academicContext?.authority, academicContext?.example,
-      ...(academicContext?.differences ?? [])
+      ...(academicContext?.differences ?? []), ...(personalContext?.stages ?? []), personalContext?.application,
+      personalContext?.example, ...(personalContext?.resourceIds ?? [])
     ].filter(Boolean).join(" "),
     href: `example.html?caso=${encodeURIComponent(situation.id)}`,
     priority: 6
@@ -94,6 +97,7 @@ for (const programme of academicProgrammes.programmes ?? []) {
 }
 
 entries.push(
+  route("Perfil", personalResearchContext.title, "ICMUV · UMDO+ · ciclo completo de dispositivos", `${personalResearchContext.summary} ${personalResearchContext.themes.map((theme) => theme.label).join(" ")} ${personalResearchContext.stages.map((stage) => stage.label).join(" ")}`, "investigacion/#researchProfile", 11),
   route("Herramienta", "Comprar mediante SDA", "Suministros homologados, pedido y unidad gestora", "SDA lente thorlabs material laboratorio proveedor compra", "herramientas/#calculadora-compras", 10),
   route("Herramienta", "Calcular salario bruto", "Categoría, trienios, quinquenios, sexenios y complementos", "nomina retribucion sueldo salario", "herramientas/#calculadora-retributiva", 10),
   route("Herramienta", "Planificar viaje o congreso", "Autorización, inscripción, transporte, alojamiento, caja fija y reintegro", "dieta billete hotel congreso quien paga viaje", "herramientas/#calculadora-viajes", 10),

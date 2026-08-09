@@ -9,6 +9,7 @@ const resolverHtml = await readFile(new URL("../resolver/index.html", import.met
 const glossaryHtml = await readFile(new URL("../glosario/index.html", import.meta.url), "utf8");
 const manualHtml = await readFile(new URL("../manual/index.html", import.meta.url), "utf8");
 const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "utf8");
+const researchArea = await readFile(new URL("../investigacion/index.html", import.meta.url), "utf8");
 const manualPage = await readFile(new URL("../manual-page.js", import.meta.url), "utf8");
 const resolverPage = await readFile(new URL("../resolver-page.js", import.meta.url), "utf8");
 const glossary = await readFile(new URL("../glossary.js", import.meta.url), "utf8");
@@ -68,9 +69,15 @@ test("la portada identifica el uso personal y el caracter no oficial", () => {
 });
 
 test("cada ambito filtra sus casos y enlaza sus capitulos", () => {
-  assert.match(areaPage, /guide\.categoryId === areaId/);
+  assert.match(areaPage, /guideBelongsToArea\(guide, areaId\)/);
   assert.match(areaPage, /\.\.\/manual\/#/);
   assert.match(areaPage, /\.\.\/example\.html\?caso=/);
+});
+
+test("investigación declara el perfil ICMUV y el ciclo completo de dispositivos", () => {
+  assert.match(researchArea, /id="researchProfile"/);
+  assert.match(areaPage, /personalResearchData\.themes/);
+  assert.match(areaPage, /research-cycle/);
 });
 
 test("el manual conserva visible la ubicacion y sigue el capitulo al desplazarse", () => {

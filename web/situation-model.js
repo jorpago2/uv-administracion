@@ -3,10 +3,11 @@ const REQUIRED_GUIDE_FIELDS = Object.freeze([
 ]);
 const ACADEMIC_PROGRAMME_IDS = new Set(["giet", "giei", "git", "muie", "die-doctorado"]);
 
-export function buildSituationGuides(catalog, baseGuides, academicContextCatalog = null) {
+export function buildSituationGuides(catalog, baseGuides, academicContextCatalog = null, personalResearchCatalog = null) {
   validateCatalog(catalog);
   if (!Array.isArray(baseGuides)) throw new TypeError("Las guías base no tienen el formato esperado.");
   const academicContexts = validateAcademicContextCatalog(academicContextCatalog, catalog);
+  const personalResearchContexts = validatePersonalResearchCatalog(personalResearchCatalog, catalog);
   const baseByChapter = new Map(baseGuides.map((guide) => [guide.chapterNumber, guide]));
   const categories = new Map(catalog.categories.map((category) => [category.id, category.label]));
   const guides = catalog.situations.map((situation) => {
@@ -18,6 +19,7 @@ export function buildSituationGuides(catalog, baseGuides, academicContextCatalog
     // además las listas del ejemplo general del capítulo mezclaría rutas distintas.
     const inheritedLists = profile ? null : base;
     const overrides = situation.guide ?? {};
+    const personalResearchContext = personalResearchContexts.get(situation.id);
     const guide = {
       ...(base ?? {}),
       ...(profile ?? {}),
@@ -46,7 +48,10 @@ export function buildSituationGuides(catalog, baseGuides, academicContextCatalog
       escalation: [...situation.resolution.escalation],
       relatedTools: [...(situation.relatedTools ?? [])],
       reviewedOn: situation.reviewedOn,
-      academicContext: cloneAcademicContext(academicContexts.get(situation.id))
+      academicContext: cloneAcademicContext(academicContexts.get(situation.id)),
+      personalResearchContext: clonePersonalResearchContext(personalResearchContext),
+      outcome: personalResearchContext?.outcome ?? overrides.outcome ?? profile?.outcome ?? base?.outcome,
+      firstMove: personalResearchContext?.firstMove ?? overrides.firstMove ?? profile?.firstMove ?? base?.firstMove
     };
     validateResolvedGuide(guide);
     return Object.freeze(guide);
@@ -97,10 +102,35 @@ export function situationSearchItems(guides) {
     category: guide.categoryLabel,
     content: [
       guide.scenario, guide.outcome, guide.firstMove, ...guide.aliases, ...guide.questions, ...guide.decisionRules,
-      ...academicSearchContent(guide.academicContext)
+      ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext)
     ].join(" "),
     href: `example.html?caso=${encodeURIComponent(guide.id)}`
   }));
+}
+
+function validatePersonalResearchCatalog(contextCatalog, situationCatalog) {
+  if (contextCatalog === null || contextCatalog === undefined) return new Map();
+  if (contextCatalog.schemaVersion !== 1 || !Array.isArray(contextCatalog.contexts) || !Array.isArray(contextCatalog.stages) || !Array.isArray(contextCatalog.resources)) {
+    throw new TypeError("El perfil personal de investigación no tiene el formato esperado.");
+  }
+  const situationIds = new Set(situationCatalog.situations.map((situation) => situation.id));
+  const stageIds = new Set(contextCatalog.stages.map((stage) => stage.id));
+  const resourceIds = new Set(contextCatalog.resources.map((resource) => resource.id));
+  const contexts = new Map();
+  contextCatalog.contexts.forEach((context) => {
+    if (!situationIds.has(context.situationId) || contexts.has(context.situationId)) throw new Error(`Contexto personal desconocido o duplicado: ${context.situationId ?? "vacío"}.`);
+    if (!Array.isArray(context.stages) || !context.stages.length || context.stages.some((id) => !stageIds.has(id))) throw new Error(`Fases de investigación inválidas en ${context.situationId}.`);
+    if (!Array.isArray(context.resourceIds) || !context.resourceIds.length || context.resourceIds.some((id) => !resourceIds.has(id))) throw new Error(`Recursos de investigación inválidos en ${context.situationId}.`);
+    if (!(["direct", "conditional", "support"].includes(context.fit))) throw new Error(`Relevancia personal inválida en ${context.situationId}.`);
+    for (const field of ["application", "example"]) {
+      if (typeof context[field] !== "string" || context[field].trim().length < 80) throw new Error(`Falta ${field} en ${context.situationId}.`);
+    }
+    for (const field of ["outcome", "firstMove"]) {
+      if (context[field] !== undefined && (typeof context[field] !== "string" || context[field].trim().length < 60)) throw new Error(`Personalización ${field} inválida en ${context.situationId}.`);
+    }
+    contexts.set(context.situationId, context);
+  });
+  return contexts;
 }
 
 function validateAcademicContextCatalog(contextCatalog, situationCatalog) {
@@ -157,6 +187,22 @@ function academicSearchContent(context) {
     context.example,
     context.approvalGate
   ];
+}
+
+function clonePersonalResearchContext(context) {
+  if (!context) return null;
+  return Object.freeze({
+    stages: Object.freeze([...context.stages]),
+    fit: context.fit,
+    application: context.application,
+    example: context.example,
+    resourceIds: Object.freeze([...context.resourceIds])
+  });
+}
+
+function personalResearchSearchContent(context) {
+  if (!context) return [];
+  return [...context.stages, context.fit, context.application, context.example, ...context.resourceIds];
 }
 
 function validateCatalog(catalog) {
@@ -239,7 +285,7 @@ function scoreGuide(guide, terms) {
   const aliases = normalize(guide.aliases.join(" "));
   const body = normalize([
     guide.scenario, guide.outcome, guide.firstMove, ...guide.questions, ...guide.decisionRules,
-    ...academicSearchContent(guide.academicContext)
+    ...academicSearchContent(guide.academicContext), ...personalResearchSearchContent(guide.personalResearchContext)
   ].join(" "));
   return terms.reduce((score, term) => score + (title.includes(term) ? 12 : 0) + (aliases.includes(term) ? 8 : 0) + (body.includes(term) ? 3 : 0), 0);
 }

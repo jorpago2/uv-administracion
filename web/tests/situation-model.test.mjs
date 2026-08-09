@@ -10,9 +10,10 @@ const manual = JSON.parse(await readFile(new URL("../data/manual.json", import.m
 const operations = JSON.parse(await readFile(new URL("../data/operations.json", import.meta.url), "utf8"));
 const academicContext = JSON.parse(await readFile(new URL("../data/academic-situation-context.json", import.meta.url), "utf8"));
 const academicProgrammes = JSON.parse(await readFile(new URL("../data/academic-programmes.json", import.meta.url), "utf8"));
+const personalResearch = JSON.parse(await readFile(new URL("../data/personal-research-context.json", import.meta.url), "utf8"));
 const baseGuides = buildExampleGuides(manual.markdown, operations.procedures);
 const catalog = combineSituationCatalogs(situations, situationsExtension);
-const guides = buildSituationGuides(catalog, baseGuides, academicContext);
+const guides = buildSituationGuides(catalog, baseGuides, academicContext, personalResearch);
 
 test("las cien situaciones forman un catalogo completo y consecutivo", () => {
   assert.equal(guides.length, 100);
@@ -70,15 +71,15 @@ test("el buscador entiende objetivos, siglas y ejemplos concretos", () => {
   assert.ok(searchSituationGuides(guides, "", "docencia").every((guide) => guide.categoryId === "docencia"));
 });
 
-test("los veinte casos docentes y el caso doctoral están adaptados a ETSE, DIE y sus programas", () => {
+test("los casos docentes, POD y doctorado están adaptados a ETSE, DIE y sus programas", () => {
   const contextualised = guides.filter((guide) => guide.academicContext);
   const teaching = guides.filter((guide) => guide.categoryId === "docencia");
   const programmeIds = new Set(academicProgrammes.programmes.map((programme) => programme.id));
   const programmeById = new Map(academicProgrammes.programmes.map((programme) => [programme.id, programme]));
   assert.equal(teaching.length, 20);
-  assert.equal(contextualised.length, 21);
+  assert.equal(contextualised.length, 22);
   assert.ok(teaching.every((guide) => guide.academicContext), "todos los casos docentes deben tener contexto académico");
-  assert.deepEqual(contextualised.filter((guide) => guide.categoryId !== "docencia").map((guide) => guide.id), ["seguimiento-deposito-tesis"]);
+  assert.deepEqual(contextualised.filter((guide) => guide.categoryId !== "docencia").map((guide) => guide.id), ["corregir-pod-oca", "seguimiento-deposito-tesis"]);
   for (const guide of contextualised) {
     assert.ok(guide.academicContext.programmeIds.every((id) => programmeIds.has(id)), guide.id);
     assert.ok(guide.academicContext.documentTypes.length >= 2, guide.id);
@@ -95,10 +96,34 @@ test("los veinte casos docentes y el caso doctoral están adaptados a ETSE, DIE 
   assert.match(findSituationGuide(guides, "practicas-externas").academicContext.programmeNotes.muie, /condicionada/i);
 });
 
+test("el perfil ICMUV contextualiza todo el ciclo investigador y la gestión experimental", () => {
+  const contextualised = guides.filter((guide) => guide.personalResearchContext);
+  const stageIds = new Set(personalResearch.stages.map((stage) => stage.id));
+  const resourceIds = new Set(personalResearch.resources.map((resource) => resource.id));
+  assert.equal(contextualised.length, 66);
+  assert.ok(guides.filter((guide) => guide.categoryId === "investigacion").every((guide) => guide.personalResearchContext));
+  assert.ok(guides.filter((guide) => guide.categoryId === "gestion").every((guide) => guide.personalResearchContext));
+  for (const guide of contextualised) {
+    assert.ok(guide.personalResearchContext.stages.every((id) => stageIds.has(id)), guide.id);
+    assert.ok(guide.personalResearchContext.resourceIds.every((id) => resourceIds.has(id)), guide.id);
+    assert.ok(guide.personalResearchContext.application.length >= 80, guide.id);
+    assert.ok(guide.personalResearchContext.example.length >= 80, guide.id);
+  }
+  assert.equal(findSituationGuide(guides, "etica-personas-muestras").personalResearchContext.fit, "conditional");
+  assert.match(findSituationGuide(guides, "presupuesto-proyecto").personalResearchContext.example, /chip|acoplo|electrónica/i);
+  assert.match(findSituationGuide(guides, "proteger-patente").personalResearchContext.example, /VO₂|silicio|memoria/i);
+  const purchaseOutcomes = ["comprar-lente-sda", "compra-menor-5000", "compra-desde-5000", "proveedor-exclusivo"].map((id) => findSituationGuide(guides, id).outcome);
+  assert.equal(new Set(purchaseOutcomes).size, purchaseOutcomes.length);
+  assert.match(findSituationGuide(guides, "presupuesto-proyecto").outcome, /diseño.*simulación.*fabricación.*caracterización/i);
+  assert.match(findSituationGuide(guides, "comprobar-elegibilidad").firstMove, /tabla de requisitos/i);
+});
+
 test("el buscador de casos usa el contexto de titulación y los ejemplos ETSE-DIE", () => {
   assert.equal(searchSituationGuides(guides, "GIET cambiar examen")[0].id, "cambiar-horario-aula-examen");
   assert.equal(searchSituationGuides(guides, "MUIE TFM patentable")[0].id, "tfg-tfm-confidencial");
   assert.equal(searchSituationGuides(guides, "PDIE memristores depósito")[0].id, "seguimiento-deposito-tesis");
+  assert.equal(searchSituationGuides(guides, "source-measure rangos interfaces accesorios")[0].id, "compra-desde-5000");
+  assert.ok(searchSituationGuides(guides, "GDS receta petición").slice(0, 10).some((guide) => guide.id === "responder-peticion-datos-codigo"));
 });
 
 test("las situaciones generan entradas profundas para el buscador global", () => {

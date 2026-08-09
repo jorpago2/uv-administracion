@@ -4,16 +4,19 @@ import situationsData from "./data/situations.json";
 import situationsExtensionData from "./data/situations-51-100.json";
 import academicContextData from "./data/academic-situation-context.json";
 import academicProgrammesData from "./data/academic-programmes.json";
+import personalResearchData from "./data/personal-research-context.json";
 import { buildExampleGuides } from "./example-guide-model.js";
 import { buildSituationGuides, combineSituationCatalogs, searchSituationGuides, situationSearchItems } from "./situation-model.js";
 
 export const situationCatalog = combineSituationCatalogs(situationsData, situationsExtensionData);
 const academicProgrammeById = new Map(academicProgrammesData.programmes.map((programme) => [programme.id, programme]));
+const researchStageById = new Map(personalResearchData.stages.map((stage) => [stage.id, stage]));
 
 export const situationGuides = buildSituationGuides(
   situationCatalog,
   buildExampleGuides(manualData.markdown, operationsData.procedures),
-  academicContextData
+  academicContextData,
+  personalResearchData
 );
 
 export function situationGlobalSearchItems() {
@@ -80,14 +83,36 @@ function renderCard(guide, detailBase) {
   outcomeLabel.textContent = "Resultado verificable";
   outcome.append(outcomeLabel, document.createTextNode(` ${guide.outcome}`));
   const programmes = renderProgrammeTags(guide.academicContext?.programmeIds ?? []);
+  const researchStages = renderResearchTags(guide.personalResearchContext);
   const link = document.createElement("a");
   link.className = "situation-card__open";
   link.href = `${detailBase}?caso=${encodeURIComponent(guide.id)}`;
   link.textContent = "Abrir resolución paso a paso";
   article.append(header, scenario, outcome);
   if (programmes) article.append(programmes);
+  if (researchStages) article.append(researchStages);
   article.append(link);
   return article;
+}
+
+function renderResearchTags(context) {
+  if (!context) return null;
+  const container = document.createElement("div");
+  container.className = "research-tags";
+  container.setAttribute("aria-label", "Aplicación al ciclo de investigación ICMUV");
+  const contextTag = document.createElement("span");
+  contextTag.className = `research-tag research-tag--${context.fit}`;
+  contextTag.textContent = context.fit === "conditional" ? "ICMUV · condicional" : "ICMUV";
+  container.append(contextTag);
+  context.stages.slice(0, 3).forEach((id) => {
+    const stage = researchStageById.get(id);
+    if (!stage) return;
+    const tag = document.createElement("span");
+    tag.className = "research-tag";
+    tag.textContent = stage.label;
+    container.append(tag);
+  });
+  return container;
 }
 
 function renderProgrammeTags(programmeIds) {

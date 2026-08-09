@@ -4,6 +4,18 @@
   "scopeNote": "Contextualización operativa de los casos docentes de la ETSE-UV, el DIE y el Programa de Doctorado en Ingeniería Electrónica. No sustituye la normativa, la guía docente vigente ni los acuerdos del órgano competente.",
   "contexts": [
     {
+      "situationId": "corregir-pod-oca",
+      "programmeIds": ["giet", "giei", "git", "muie"],
+      "authority": "El DIE prepara y corrige la asignación de su profesorado; la ETSE y los órganos académicos de los títulos aportan la planificación docente. Una discrepancia de POD u OCA debe trazarse entre asignatura, grupo, actividad, titulación y dedicación.",
+      "documentTypes": ["ficha", "plan"],
+      "differences": [
+        "En GIET, GIEI y GIT identifica titulación, CAT, curso, grupo y tipo de actividad antes de pedir la corrección.",
+        "En el MUIE identifica la CCA, la asignatura y una planificación que puede concentrarse en periodos o sesiones diferentes de los grados."
+      ],
+      "example": "Si una práctica de laboratorio aparece asignada al grupo o profesor equivocado, compara POD/OCA con horario, guía y acuerdo de coordinación. Envía al DIE una tabla breve con situación publicada, situación correcta y evidencia; no intentes compensarlo informalmente cambiando horas con otro docente.",
+      "approvalGate": "No des por corregida la dedicación ni reorganices la docencia hasta que el cambio figure en el sistema o exista confirmación escrita del órgano responsable."
+    },
+    {
       "situationId": "preparar-guia-docente",
       "programmeIds": ["giet", "giei", "git", "muie"],
       "authority": "La coordinación prepara la propuesta; la CAT decide en GIET, GIEI y GIT, y la CCA en el MUIE. El DIE coordina la aportación de su profesorado, pero no sustituye al órgano académico del título.",
