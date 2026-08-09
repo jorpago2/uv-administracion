@@ -52,6 +52,7 @@ Cada cambio enviado a la rama `main` activa el flujo `.github/workflows/deploy-p
 - `app.js`: importación Vite, validación, transformación Markdown, búsqueda, filtros e índice.
 - `example.html`, `example.css` y `example-page.js`: plantilla multipágina de las 32 guías detalladas, accesibles mediante `example.html?capitulo=N`.
 - `example-guidance.js`: orientación específica para principiantes, separada de las reglas oficiales para poder revisarla sin duplicar el manual.
+- `example-transferability.js`: alcance reutilizable de cada caso: situaciones equivalentes, variables que deben adaptarse y condiciones que cambian la ruta.
 - `example-guide-model.js`: extracción comprobable de ejemplos, procedimientos, documentos y fuentes oficiales.
 - `chapter-categories.js`: mapa comprobable entre capítulos y ámbitos de la guía.
 - `operational-tools.js`: interfaz del asistente, fichas y calendario anual.

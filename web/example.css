@@ -47,6 +47,13 @@ a { color: currentColor; text-decoration-thickness: var(--rule-thin); text-under
 .guide-callout--accent { background: var(--color-accent); }
 .guide-callout--secondary { background: var(--color-secondary); }
 .guide-callout--warning, .recommendation { background: var(--color-paper-muted); }
+.transferability-grid { display: grid; gap: var(--space-md); margin-block: var(--space-xl); }
+.transferability-card { min-width: 0; padding: var(--space-md); border: var(--rule) solid var(--color-rule); overflow-wrap: anywhere; }
+.transferability-card h3 { margin-block-start: 0; }
+.transferability-card p { margin-block-end: 0; }
+.transferability-card--also { background: var(--color-success-paper); }
+.transferability-card--adapt { background: var(--color-secondary); }
+.transferability-card--stop { background: var(--color-error-paper); }
 .folder-tree { display: grid; gap: var(--space-xs); padding: var(--space-md); background: var(--color-ink); color: var(--color-paper); border: var(--rule) solid var(--color-rule); }
 .folder-tree code::before { content: "└─ "; color: var(--color-accent); }
 code, pre { font-family: var(--font-mono); }
@@ -95,13 +102,14 @@ code, pre { font-family: var(--font-mono); }
   .guide-layout { grid-template-columns: minmax(14rem, 0.28fr) minmax(0, 1fr); align-items: start; }
   .guide-index { position: sticky; inset-block-start: 6rem; }
   .guide-section { padding: var(--space-xl); }
+  .transferability-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition-duration: 0.01ms !important; } }
 @media print {
   .example-topbar, .guide-actions, .guide-index, .checklist-toolbar .action-button, .guide-pagination, .example-footer { display: none !important; }
   body { background: white; color: black; font-size: 10pt; }
   .example-main { width: 100%; padding: 0; }
-  .guide-hero, .guide-section, .guide-facts { break-inside: avoid; box-shadow: none; }
+  .guide-hero, .guide-section, .guide-facts, .transferability-card { break-inside: avoid; box-shadow: none; }
   .guide-content { gap: 1rem; }
   a { text-decoration: none; }
   .source-list a::after { content: " (" attr(href) ")"; font-weight: 400; }

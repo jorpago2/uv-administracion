@@ -23,7 +23,20 @@ test("cada guía ofrece orientación suficiente para una persona principiante", 
     assert.ok(guide.steps.length >= 3, `pasos ${guide.chapterNumber}`);
     assert.ok(guide.successChecks.length >= 3, `controles ${guide.chapterNumber}`);
     assert.ok(guide.risks.length >= 2, `riesgos ${guide.chapterNumber}`);
+    assert.ok(guide.alsoApplies.length > 70, `casos equivalentes ${guide.chapterNumber}`);
+    assert.ok(guide.adapt.length > 60, `variables adaptables ${guide.chapterNumber}`);
+    assert.ok(guide.stopsApplying.length > 70, `límites del caso ${guide.chapterNumber}`);
   }
+});
+
+test("explica la transferibilidad de los 32 casos sin textos genéricos duplicados", () => {
+  for (const field of ["alsoApplies", "adapt", "stopsApplying"]) {
+    assert.equal(new Set(guides.map((guide) => guide[field])).size, guides.length, field);
+  }
+  const sda = findExampleGuide(guides, 29);
+  assert.match(sda.alsoApplies, /Lentes Thorlabs/);
+  assert.match(sda.adapt, /referencia exacta/);
+  assert.match(sda.stopsApplying, /no aparece en el catálogo/);
 });
 
 test("todas las guías enlazan fuentes oficiales seguras", () => {
