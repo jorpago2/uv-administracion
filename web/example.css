@@ -82,6 +82,10 @@ code, pre { font-family: var(--font-mono); }
 .checklist-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-sm); align-items: center; margin-block-end: var(--space-lg); }
 .checklist-progress { margin: 0; font-weight: 700; }
 .risk-list li::marker { color: var(--color-error); }
+.decision-rule-list, .stop-list, .escalation-list { display: grid; gap: var(--space-sm); padding-inline-start: 1.4rem; }
+.decision-rule-list li { padding: var(--space-xs); background: var(--color-success-paper); border: var(--rule-thin) solid var(--color-rule); }
+.stop-list li { padding: var(--space-xs); background: var(--color-error-paper); border: var(--rule-thin) solid var(--color-error); }
+.escalation-list li { padding: var(--space-xs); background: var(--color-secondary); border: var(--rule-thin) solid var(--color-rule); }
 .blocker-grid { display: grid; gap: var(--space-md); }
 .blocker-grid article { padding: var(--space-md); background: var(--color-paper-muted); border: var(--rule-thin) solid var(--color-rule); }
 .blocker-grid h3 { margin-block-start: 0; }

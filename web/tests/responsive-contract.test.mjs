@@ -54,6 +54,15 @@ test("el glosario pasa de una a dos columnas sin perder controles contraibles", 
   assert.match(wideDesktop, /\.glossary-card\[open\]\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/);
 });
 
+test("las situaciones usan controles contraibles y dos columnas solo en escritorio ancho", () => {
+  const toolbar = ruleFor(".situation-toolbar");
+  const wideDesktop = mediaBetween("@media (min-width: 75rem)", "@media (min-width: 90rem)");
+  assert.match(toolbar, /display:\s*grid/);
+  assert.match(styles, /\.situation-toolbar input, \.situation-toolbar select\s*\{[^}]*min-width:\s*0/);
+  assert.match(ruleFor(".situation-card"), /min-width:\s*0/);
+  assert.match(wideDesktop, /\.situation-list\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)/);
+});
+
 test("el planificador puede contraerse sin desbordar", () => {
   assert.match(styles, /\.funding-plan-output > \*,[^}]*min-width:\s*0/);
   assert.match(ruleFor(".funding-plan-result"), /min-width:\s*0/);

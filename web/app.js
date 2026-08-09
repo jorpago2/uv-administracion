@@ -20,6 +20,7 @@ import { glossarySearchItems, initGlossary } from "./glossary.js";
 import { initOperationalTools } from "./operational-tools.js";
 import { initProjectBudget } from "./project-budget.js";
 import { initSalaryCalculator } from "./salary-calculator.js";
+import { initSituationDirectory, situationGlobalSearchItems } from "./situations.js";
 
 const FILTER_MAP = Object.freeze({
   all: null,
@@ -63,6 +64,7 @@ assertRequiredElements(elements);
 bindEvents();
 syncMenuMode();
 initOperationalTools(elements.operationalHub);
+const situationController = initSituationDirectory(document.querySelector("#situaciones"));
 const glossaryController = initGlossary(document.querySelector("#glosario"));
 initFundingExplorer(document.querySelector("#explorador-financiacion"));
 initFundingPlanner(document.querySelector("#explorador-financiacion"));
@@ -221,8 +223,19 @@ function buildSearchEntries(sections) {
     priority: 40
   }));
 
+  const situations = situationGlobalSearchItems().map((item) => prepareSearchEntry({
+    id: `situation-${item.id}`,
+    type: "situation",
+    typeLabel: "Situación resuelta",
+    title: item.title,
+    category: item.category,
+    content: item.content,
+    href: item.href,
+    priority: 45
+  }));
+
   const tools = NAV_LANDMARKS
-    .filter((item) => !["inicio", "glosario", "tareas-frecuentes", "ambitos", "indice-capitulos"].includes(item.id))
+    .filter((item) => !["inicio", "situaciones", "glosario", "tareas-frecuentes", "ambitos", "indice-capitulos"].includes(item.id))
     .map((item) => prepareSearchEntry({
       id: `tool-${item.id}`,
       type: "tool",
@@ -235,7 +248,7 @@ function buildSearchEntries(sections) {
       priority: 35
     }));
 
-  return [...chapters, ...examples, ...procedures, ...glossary, ...tools, ...fundingCalls, ...cases];
+  return [...situations, ...chapters, ...examples, ...procedures, ...glossary, ...tools, ...fundingCalls, ...cases];
 }
 
 function categoryLabelFor(categoryId) {
@@ -654,7 +667,7 @@ function updateSearchStatus() {
     elements.searchStatus.textContent = `${resultLabel}; ${chapterLabel}.`;
     return;
   }
-  elements.searchStatus.textContent = `${state.sections.length} capítulos y ${glossaryController.count} términos, además de trámites, herramientas, convocatorias y casos indexados.`;
+  elements.searchStatus.textContent = `${situationController.count} situaciones, ${state.sections.length} capítulos y ${glossaryController.count} términos, además de trámites, herramientas y convocatorias indexados.`;
 }
 
 function applyFilters() {

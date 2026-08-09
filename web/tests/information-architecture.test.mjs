@@ -30,17 +30,26 @@ test("los seis ambitos comparten una ficha de navegacion completa", () => {
 });
 
 test("la portada prioriza tareas, alertas y ambitos antes de las herramientas", () => {
+  const situationIndex = html.indexOf('id="situaciones"');
   const glossaryIndex = html.indexOf('id="glosario"');
   const taskIndex = html.indexOf('id="tareas-frecuentes"');
   const alertIndex = html.indexOf('class="attention-strip"');
   const domainIndex = html.indexOf('id="ambitos"');
   const toolsIndex = html.indexOf('id="herramientas-operativas"');
 
-  assert.ok(glossaryIndex > 0);
-  assert.ok(glossaryIndex < taskIndex && taskIndex < alertIndex && alertIndex < domainIndex && domainIndex < toolsIndex);
+  assert.ok(situationIndex > 0);
+  assert.ok(situationIndex < glossaryIndex && glossaryIndex < taskIndex && taskIndex < alertIndex && alertIndex < domainIndex && domainIndex < toolsIndex);
   assert.equal((html.match(/class="task-grid"[\s\S]+?<\/nav>/)?.[0].match(/<a href=/g) ?? []).length, 8);
   assert.match(html, /id="domainDirectory"/);
   assert.match(html, /id="indice-capitulos"/);
+});
+
+test("las cincuenta situaciones son una entrada principal y buscable", () => {
+  assert.match(html, /<section class="situations" id="situaciones"/);
+  assert.match(html, /id="situationQuery"[^>]+type="search"/);
+  assert.match(html, /id="situationCategory"/);
+  assert.match(app, /initSituationDirectory/);
+  assert.match(app, /situationGlobalSearchItems\(\)/);
 });
 
 test("el glosario es una entrada principal, descargable y buscable", () => {

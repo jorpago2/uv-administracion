@@ -1,7 +1,9 @@
 import manualData from "./data/manual.json";
 import operationsData from "./data/operations.json";
+import situationsData from "./data/situations.json";
 import { CATEGORIES } from "./chapter-categories.js";
 import { buildExampleGuides, findExampleGuide } from "./example-guide-model.js";
+import { buildSituationGuides, findSituationGuide } from "./situation-model.js";
 
 const elements = {
   loading: document.querySelector("#exampleLoading"),
@@ -9,8 +11,12 @@ const elements = {
   error: document.querySelector("#exampleError")
 };
 const guides = buildExampleGuides(manualData.markdown, operationsData.procedures);
-const chapterNumber = new URLSearchParams(window.location.search).get("capitulo");
-const guide = findExampleGuide(guides, chapterNumber);
+const situationGuides = buildSituationGuides(situationsData, guides);
+const parameters = new URLSearchParams(window.location.search);
+const situationId = parameters.get("caso");
+const chapterNumber = parameters.get("capitulo");
+const guide = situationId ? findSituationGuide(situationGuides, situationId) : findExampleGuide(guides, chapterNumber);
+const activeGuides = situationId ? situationGuides : guides;
 
 if (guide) renderGuide(guide);
 else renderError();
@@ -22,12 +28,14 @@ function renderGuide(item) {
 
   const breadcrumb = el("nav", "breadcrumb");
   breadcrumb.setAttribute("aria-label", "Migas de pan");
-  breadcrumb.append(link("Manual", "index.html#indice-capitulos"), text(" / "), link(`Capítulo ${item.chapterNumber}`, `index.html#${item.chapterSlug}`));
+  if (item.situationNumber) {
+    breadcrumb.append(link("Situaciones", "index.html#situaciones"), text(" / "), link(`Situación ${item.situationNumber}`, `example.html?caso=${encodeURIComponent(item.id)}`), text(" / "), link(`Capítulo ${item.chapterNumber}`, `index.html#${item.chapterSlug}`));
+  } else breadcrumb.append(link("Manual", "index.html#indice-capitulos"), text(" / "), link(`Capítulo ${item.chapterNumber}`, `index.html#${item.chapterSlug}`));
 
   const hero = el("header", "guide-hero");
   const heroCopy = el("div", "guide-hero__copy");
   heroCopy.append(
-    paragraph(`${category?.shortLabel ?? "Guía operativa"} · Capítulo ${item.chapterNumber}`, "eyebrow"),
+    paragraph(item.situationNumber ? `${item.categoryLabel} · Situación ${String(item.situationNumber).padStart(2, "0")}` : `${category?.shortLabel ?? "Guía operativa"} · Capítulo ${item.chapterNumber}`, "eyebrow"),
     heading(1, item.title),
     paragraph(item.scenario, "guide-hero__summary")
   );
@@ -96,6 +104,7 @@ function renderOrientation(item) {
   const section = guideSection("orientacion", "1. Entender el caso antes de actuar", "Orientación");
   section.append(callout("Meta operativa", item.outcome, "accent"));
   section.append(heading(3, "Las tres preguntas que debes poder responder"), list(item.questions));
+  if (item.decisionRules?.length) section.append(heading(3, "Reglas para decidir la ruta"), list(item.decisionRules, "decision-rule-list"));
   section.append(recommendation("No empieces por el formulario. Empieza delimitando hechos, plazo y órgano competente; un formulario correcto enviado al cauce equivocado sigue siendo un problema."));
   appendSourceNote(section, item.sources);
   return section;
@@ -221,6 +230,7 @@ function renderChecklist(item) {
 function renderProblems(item) {
   const section = guideSection("bloqueos", "9. Errores frecuentes y qué hacer si te bloqueas", "Contingencias");
   section.append(heading(3, "No hagas esto"), list(item.risks, "risk-list"));
+  if (item.stopConditions?.length) section.append(heading(3, "Detente y confirma antes de continuar"), list(item.stopConditions, "stop-list"));
   const grid = el("div", "blocker-grid");
   [
     ["No sé qué unidad es competente", "Envía una consulta breve con el objetivo, el capítulo y la fecha límite. Pide derivación expresa si no corresponde."],
@@ -233,6 +243,7 @@ function renderProblems(item) {
     grid.append(card);
   });
   section.append(grid);
+  if (item.escalation?.length) section.append(heading(3, "Cómo escalar sin perder trazabilidad"), list(item.escalation, "escalation-list"));
   return section;
 }
 
@@ -255,17 +266,20 @@ function renderSources(item) {
 function renderRelatedNavigation(item) {
   const section = el("nav", "guide-pagination");
   section.setAttribute("aria-label", "Otros ejemplos");
-  const index = guides.findIndex((guide) => guide.chapterNumber === item.chapterNumber);
-  const previous = guides[index - 1];
-  const next = guides[index + 1];
-  if (previous) section.append(link(`← ${previous.title}`, `example.html?capitulo=${previous.chapterNumber}`));
+  const index = activeGuides.findIndex((guide) => item.situationNumber ? guide.id === item.id : guide.chapterNumber === item.chapterNumber);
+  const previous = activeGuides[index - 1];
+  const next = activeGuides[index + 1];
+  const guideHref = (guide) => guide.situationNumber ? `example.html?caso=${encodeURIComponent(guide.id)}` : `example.html?capitulo=${guide.chapterNumber}`;
+  if (previous) section.append(link(`← ${previous.title}`, guideHref(previous)));
   section.append(link("Volver al capítulo", `index.html#${item.chapterSlug}`));
-  if (next) section.append(link(`${next.title} →`, `example.html?capitulo=${next.chapterNumber}`));
+  if (next) section.append(link(`${next.title} →`, guideHref(next)));
   return section;
 }
 
 function detailedSteps(item) {
-  const procedureActions = item.steps.map((step) => ({ title: step, body: "Completa esta acción y resuelve cualquier duda antes de pasar a la siguiente fase.", evidence: "documento, correo o anotación fechada que acredite el avance" }));
+  const procedureActions = item.steps.map((step) => typeof step === "string"
+    ? { title: step, body: "Completa esta acción y resuelve cualquier duda antes de pasar a la siguiente fase.", evidence: "documento, correo o anotación fechada que acredite el avance" }
+    : { title: step.action, body: step.detail || "Completa esta acción antes de pasar a la siguiente fase.", evidence: step.evidence });
   return [
     { title: "Delimita la situación y evita acciones irreversibles", body: item.firstMove, evidence: "nota de una página con hechos, fechas, objetivo y primera fuente consultada" },
     { title: "Confirma unidad, canal y plazo", body: `Contrasta la ruta con ${item.unit}. El canal orientativo es: ${item.channel}.`, evidence: "enlace del trámite o respuesta escrita de la unidad" },
@@ -277,7 +291,7 @@ function detailedSteps(item) {
 }
 
 function bindInteractions(item) {
-  const storageKey = `uv-example-progress:${item.chapterNumber}`;
+  const storageKey = `uv-example-progress:${item.situationNumber ? item.id : item.chapterNumber}`;
   const checkboxes = [...document.querySelectorAll('[data-guide-check="true"]')];
   const saved = readProgress(storageKey);
   checkboxes.forEach((checkbox) => {

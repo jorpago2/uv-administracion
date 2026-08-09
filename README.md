@@ -2,7 +2,7 @@
 
 ## Interfaz web
 
-La guía dispone de una [interfaz web estática](web/README.md) con búsqueda, filtros, índice navegable, un [glosario operativo para PDI de nueva incorporación](GLOSARIO_PDI.md), 26 fichas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Incluye además ocho casos completos que recorren hechos, decisión, documentos, secuencia, errores y resultado. El contenido documental se genera mediante `scripts/generar_datos_web.ps1`.
+La guía dispone de una [interfaz web estática](web/README.md) con un directorio de 50 situaciones resueltas paso a paso, búsqueda global, filtros, índice navegable, un [glosario operativo para PDI de nueva incorporación](GLOSARIO_PDI.md), 27 fichas normalizadas, asistente de procedimientos, calendario anual exportable, explorador y comparador trazable de 35 vías de financiación y calculadoras de retribuciones, POD, compras, viajes, coste de contratación y presupuesto completo de proyectos. Cada situación exige decisiones, responsables, documentos, secuencia, condiciones de parada, evidencias de cierre, escalado y fuentes oficiales. El contenido documental se genera mediante `scripts/generar_datos_web.ps1`.
 
 **Web publicada:** <https://jorpago2.github.io/uv-administracion/>
 

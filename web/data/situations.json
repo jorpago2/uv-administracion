@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Situaciones operativas del PDI",
+    "reviewedOn": "2026-08-09",
+    "scope": "Cincuenta situaciones verificables para PDI de la Universitat de València"
+  },
+  "categories": [
+    { "id": "incorporacion", "label": "Incorporación y carrera" },
+    { "id": "docencia", "label": "Docencia y estudiantado" },
+    { "id": "investigacion", "label": "Investigación y transferencia" },
+    { "id": "gestion", "label": "Compras, equipos y viajes" },
+    { "id": "cumplimiento", "label": "Cumplimiento y derechos" }
+  ],
+  "situations": [
+    {
+      "id": "incorporacion-inicial", "number": 1, "category": "incorporacion", "baseChapter": null,
+      "title": "Completar mi incorporación inicial como PDI",
+      "scenario": "Acabas de tomar posesión o firmar el contrato y necesitas activar identidad UV, correo, tarjeta, VPN, espacios, prevención y accesos del DIE, la ETSE y el ICMUV sin asumir que todo se crea automáticamente.",
+      "aliases": ["nuevo PDI", "primer día", "alta", "cuenta UV", "correo", "tarjeta", "VPN", "llaves", "acceso laboratorio"],
+      "reviewedOn": "2026-08-09",
+      "guide": {
+        "chapterNumber": 1, "chapterTitle": "Cómo utilizar este manual", "chapterSlug": "como-utilizar-este-manual",
+        "outcome": "Tu vinculación figura correctamente en los sistemas y dispones de identidad, comunicaciones, accesos, prevención y contactos necesarios para trabajar sin usar credenciales o permisos ajenos.",
+        "firstMove": "Confirma con RR. HH. PDI la fecha efectiva y que tu alta ha llegado a los sistemas; después abre una lista separada para identidad digital, tarjeta, espacios y prevención.",
+        "questions": ["¿La vinculación y categoría ya aparecen en el expediente personal?", "¿Qué recursos requieren autorización del DIE, de la ETSE o del ICMUV?", "¿Qué formación preventiva exige cada laboratorio antes de permitir el acceso?"],
+        "successChecks": ["Puedo acceder al correo, Portal del Empleado, sede, Aula Virtual y servicios informáticos que necesito.", "La tarjeta, llaves y permisos identifican espacios concretos y responsables que los han autorizado.", "He recibido información preventiva, de emergencia y de protección de datos antes de trabajar en laboratorios o con datos."],
+        "alsoApplies": "También sirve tras un cambio de contrato, reincorporación, traslado de estructura o pérdida de accesos después de una renovación.",
+        "adapt": "Sustituye categoría, fecha de alta, campus, departamento, instituto, laboratorios, docencia y recursos informáticos necesarios.",
+        "stopsApplying": "No basta si la relación aún no está formalizada, si eres visitante sin vinculación UV o si un acceso requiere convenio, contrato o evaluación de riesgos adicional.",
+        "unit": "RR. HH. PDI para la vinculación; SIUV para identidad digital; DIE, ETSE e ICMUV para espacios y funciones locales; Prevención para riesgos",
+        "channel": "Portal del Empleado, gestión de cuentas UV, solicitudes SIUV y petición escrita a cada responsable local",
+        "deadline": "Desde la toma de posesión o firma y antes de impartir docencia, entrar en un laboratorio o tratar información institucional",
+        "responsibilities": [
+          { "actor": "PDI incorporado", "task": "Comprobar datos, activar credenciales, solicitar solo los accesos necesarios y completar formación." },
+          { "actor": "RR. HH. PDI", "task": "Confirmar vinculación, categoría, fecha efectiva y expediente personal." },
+          { "actor": "SIUV", "task": "Habilitar o resolver identidad, cuenta, correo, VPN y servicios digitales dentro de su catálogo." },
+          { "actor": "DIE, ETSE, ICMUV y responsables de laboratorio", "task": "Autorizar funciones, espacios, llaves, equipos y formación local dentro de sus competencias." }
+        ],
+        "doNotAssume": "Una cuenta activa no concede acceso a cualquier espacio o dato; una llave o tarjeta tampoco sustituye formación preventiva ni autorización funcional.",
+        "documents": ["Nombramiento, contrato o justificante de toma de posesión", "Documento identificativo y código UV si ya existe", "Relación de asignaturas, proyectos, espacios y equipos necesarios", "Justificantes de formación preventiva y autorizaciones locales"],
+        "steps": [
+          { "action": "Verificar el alta administrativa y corregir categoría, dedicación o fecha si no coinciden.", "evidence": "captura o respuesta de RR. HH. PDI y copia del nombramiento o contrato" },
+          { "action": "Activar cuenta UV y comprobar correo, sede, Portal del Empleado, Aula Virtual y VPN.", "evidence": "lista de servicios probados y números de incidencia si alguno falla" },
+          { "action": "Solicitar tarjeta y accesos físicos indicando espacio, necesidad y responsable.", "evidence": "autorización de cada estructura y relación de llaves o permisos entregados" },
+          { "action": "Completar acogida preventiva, emergencias y normas de laboratorio antes de utilizar instalaciones.", "evidence": "formación registrada, procedimientos recibidos y responsable identificado" }
+        ],
+        "risks": ["Usar credenciales, llaves o permisos de otra persona.", "Entrar o trabajar en un laboratorio antes de la formación y autorización aplicables.", "Dar por finalizada el alta sin comprobar que categoría, dedicación y estructuras son correctas."],
+        "sources": [
+          { "label": "Guía de bienvenida para nuevo PDI/PI", "url": "https://www.uv.es/hrs4r/ca/guies-benvinguda/nou-pdi/pi.html" },
+          { "label": "SIUV · Cuentas de usuario", "url": "https://www.uv.es/uvweb/servicio-informatica/es/cuentas/cuentas-usuario-1285903570443.html" },
+          { "label": "Contacto de RR. HH. PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/ubicacion-contacto/horario-atencion-al-publico-1285911217756.html" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Si la vinculación no aparece, resuelve primero el alta con RR. HH.; las incidencias posteriores pueden ser solo una consecuencia.", "Cada acceso físico o digital debe vincularse a una función concreta y a la unidad que puede autorizarla."],
+        "stopConditions": ["No utilices cuentas, tarjetas, llaves o permisos prestados mientras se resuelve el alta.", "No entres en laboratorios ni utilices equipos sin formación, evaluación de riesgos y autorización aplicables."],
+        "completionEvidence": ["Expediente personal y categoría comprobados.", "Servicios digitales esenciales probados con tu propia identidad.", "Accesos físicos y formación preventiva documentados."],
+        "escalation": ["Si el alta administrativa no consta, escribe a servei.pdi@uv.es adjuntando el documento de vinculación.", "Si la identidad existe pero un servicio falla, abre incidencia SIUV y conserva el número; para espacios, pide derivación al responsable local." ]
+      }
+    },
+    {
+      "id": "identificar-unidad-competente", "number": 2, "category": "incorporacion", "baseChapter": 6,
+      "title": "Identificar qué unidad debe resolver mi asunto",
+      "scenario": "Tienes una necesidad que afecta a docencia, personal, investigación o presupuesto y no sabes si empezar por el DIE, la ETSE, el ICMUV o un servicio central.",
+      "aliases": ["a quién pregunto", "unidad competente", "ETSE", "DIE", "ICMUV", "servicio central"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "outcome": "La consulta llega a la unidad que puede tramitarla y queda identificado por separado quién propone, informa, autoriza, ejecuta y paga.",
+        "firstMove": "Describe en cinco líneas el resultado que necesitas, tu papel, la fecha límite, las estructuras afectadas y si existe gasto, firma o datos personales.",
+        "documents": ["Resumen de hechos, objetivo y fecha límite", "Documento o mensaje que origina la necesidad", "Relación de estructuras, proyecto o asignatura afectados", "Pregunta concreta cuya respuesta necesitas obtener"],
+        "steps": ["Separar iniciativa, tramitación, autorización, pago y ejecución", "Consultar el directorio del capítulo 2 y la competencia descrita en la fuente", "Pedir derivación expresa si la primera unidad no es competente", "Registrar la actuación cuando un correo ordinario no tenga validez suficiente"]
+      },
+      "resolution": {
+        "decisionRules": ["Los asuntos docentes parten normalmente de departamento, centro o CAT/CCA según la decisión; personal, investigación y economía conservan sus servicios especializados.", "Que una unidad gestione el presupuesto o prepare el expediente no significa que pueda autorizar el fondo del asunto."],
+        "stopConditions": ["No pidas una aprobación genérica sin identificar la decisión y el órgano que debe adoptarla.", "No interpretes el silencio o una derivación informal como autorización para actuar."],
+        "completionEvidence": ["Unidad inicial y órgano decisor confirmados por escrito.", "Canal, documentos y plazo identificados.", "Siguiente responsable y evidencia esperada anotados."],
+        "escalation": ["Pide a la primera unidad una derivación nominal o funcional, no una lista genérica de correos.", "Si dos unidades dan instrucciones incompatibles, remite ambas respuestas y solicita criterio escrito del órgano superior competente." ]
+      }
+    },
+    {
+      "id": "registro-electronico", "number": 3, "category": "incorporacion", "baseChapter": 5,
+      "title": "Presentar correctamente una solicitud por sede o registro",
+      "scenario": "Debes presentar una solicitud o aportar documentos con efectos administrativos y necesitas demostrar destinatario, contenido y fecha.",
+      "aliases": ["sede", "registro", "instancia", "firma", "justificante"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La solicitud queda registrada ante el destinatario correcto con firma, anexos legibles y justificante que reproduce qué se presentó y cuándo.", "firstMove": "Localiza el procedimiento específico y utiliza instancia general solo si no existe una acción o formulario propio.", "steps": ["Comprobar destinatario, procedimiento y plazo", "Preparar PDF finales con nombres inequívocos", "Firmar y registrar con margen", "Descargar justificante y verificar anexos"] },
+      "resolution": {
+        "decisionRules": ["Usa la acción del expediente cuando ya existe; una nueva instancia puede quedar desconectada.", "El correo solo sirve si la instrucción vigente lo admite expresamente como canal."],
+        "stopConditions": ["No continúes si la sede muestra otro destinatario o expediente.", "No cierres la sesión sin descargar y abrir el justificante."],
+        "completionEvidence": ["Justificante con fecha, asiento y destinatario.", "Copia exacta de la solicitud y todos los anexos.", "Siguiente plazo o actuación anotado."],
+        "escalation": ["Ante fallo, guarda captura fechada y abre incidencia antes del vencimiento.", "Si el procedimiento no aparece, consulta al registro o unidad competente y conserva su respuesta." ]
+      }
+    },
+    {
+      "id": "notificacion-y-subsanacion", "number": 4, "category": "incorporacion", "baseChapter": 5,
+      "title": "Abrir una notificación y responder una subsanación",
+      "scenario": "Recibes un aviso de notificación o un requerimiento que pide corregir documentos dentro de un plazo.",
+      "aliases": ["notificación", "subsanación", "días hábiles", "requerimiento", "plazo"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Calcula el plazo desde la notificación efectiva y según indique el requerimiento, no desde el correo de aviso.", "Responde dentro del expediente y limita la subsanación al defecto solicitado salvo que la unidad indique otra cosa."],
+        "stopConditions": ["No respondas solo al correo informativo.", "No esperes al último día si necesitas firma, documento de otra persona o aclaración."],
+        "completionEvidence": ["Requerimiento completo y fecha de acceso archivados.", "Documento corregido vinculado al expediente original.", "Nuevo justificante de presentación comprobado."],
+        "escalation": ["Si el requerimiento es ambiguo, formula por escrito una pregunta referida a su apartado exacto.", "Si el plazo o recurso es dudoso, conserva la notificación completa y solicita criterio antes de asumir un cómputo." ]
+      }
+    },
+    {
+      "id": "datos-personales-bancarios-irpf", "number": 5, "category": "incorporacion", "baseChapter": null,
+      "title": "Actualizar datos personales, bancarios o de IRPF",
+      "scenario": "Necesitas cambiar la cuenta de nómina, domicilio, datos personales o retención de IRPF y quieres comprobar que la modificación produce efecto.",
+      "aliases": ["cuenta bancaria", "nómina", "IRPF", "modelo 145", "domicilio", "Portal del Empleado"], "reviewedOn": "2026-08-09",
+      "guide": {
+        "chapterNumber": 18, "chapterTitle": "Nómina, retribuciones y previsión social", "chapterSlug": "nomina-retribuciones-y-prevision-social",
+        "outcome": "La solicitud queda presentada mediante el Portal del Empleado, su estado puede consultarse y el cambio se comprueba en el expediente, certificado o nómina posterior aplicable.",
+        "firstMove": "Identifica qué dato cambia y desde qué fecha debe producir efecto; prepara el documento justificativo antes de abrir el trámite correspondiente del Portal del Empleado.",
+        "questions": ["¿Es un dato personal, bancario o fiscal y qué documento lo acredita?", "¿Existe una fecha de cierre de nómina que condicione el mes de efecto?", "¿El cambio requiere modelo 145, certificado bancario u otro anexo?"],
+        "successChecks": ["La solicitud figura en el estado de trámites del Portal del Empleado.", "El documento aportado coincide con titular, NIF y dato solicitado.", "El cambio se verifica en la primera nómina, certificado o consulta posterior que deba reflejarlo."],
+        "alsoApplies": "Sirve para consultar recibos, certificados de retenciones, hoja de servicios y otras gestiones personales disponibles en el Portal del Empleado.",
+        "adapt": "Cambia el tipo de dato, documento acreditativo, fecha de efecto y unidad de nómina o RR. HH. que deba validarlo.",
+        "stopsApplying": "No sustituye una reclamación retributiva, un embargo, una regularización fiscal compleja o un cambio que deba comunicar también a otra administración.",
+        "unit": "Portal del Empleado y Servicio de RR. HH. PDI; unidad de nóminas cuando el efecto sea económico",
+        "channel": "Trámite específico del Portal del Empleado y consulta a servei.pdi@uv.es si no aparece o no cambia de estado",
+        "deadline": "Antes del cierre de la nómina en la que pretendas que produzca efecto; confirma el mes aplicable con la unidad",
+        "responsibilities": [
+          { "actor": "PDI interesado", "task": "Presentar el dato correcto, aportar soporte y comprobar el estado y efecto posterior." },
+          { "actor": "RR. HH. PDI o nóminas", "task": "Validar la solicitud y aplicar sus efectos administrativos, bancarios o fiscales cuando proceda." }
+        ],
+        "doNotAssume": "Enviar un correo o cambiar un dato en otra plataforma no modifica automáticamente el expediente de personal ni la nómina.",
+        "documents": ["Documento identificativo si lo exige el trámite", "Certificado o documento bancario con titular e IBAN para cambios de cuenta", "Modelo 145 o justificante fiscal aplicable", "Captura o justificante de la solicitud y nómina posterior"],
+        "steps": [
+          { "action": "Elegir el trámite exacto del Portal del Empleado y leer sus anexos.", "evidence": "captura o referencia del trámite utilizado" },
+          { "action": "Presentar el nuevo dato y documento acreditativo sin incluir información innecesaria.", "evidence": "justificante o estado de solicitud presentada" },
+          { "action": "Comprobar el estado y responder cualquier petición de corrección.", "evidence": "historial de estados y respuesta aportada" },
+          { "action": "Verificar el efecto en la nómina, certificado o expediente posterior.", "evidence": "documento posterior donde aparece el dato correcto" }
+        ],
+        "risks": ["Enviar datos bancarios o fiscales a destinatarios no verificados.", "Dar por aplicado el cambio solo porque la solicitud se envió.", "Solicitar un efecto retroactivo sin confirmar si es posible."],
+        "sources": [
+          { "label": "Gestión de RR. HH. y Portal del Empleado", "url": "https://www.uv.es/servicio-sistemas-informacion-digitalizacion/es/gestion-universitaria/gestion-rrhh.html" },
+          { "label": "Contacto y competencias de RR. HH. PDI", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/servicio/ubicacion-contacto/horario-atencion-al-publico-1285911217756.html" }
+        ]
+      },
+      "resolution": {
+        "decisionRules": ["Utiliza el trámite específico disponible en el Portal del Empleado antes que una comunicación genérica.", "Distingue presentar la solicitud, que sea validada y que produzca efecto en una nómina o documento concreto."],
+        "stopConditions": ["No envíes IBAN, NIF o datos fiscales por un correo cuya identidad y competencia no hayas verificado.", "No cierres el seguimiento mientras el estado siga pendiente o el documento posterior conserve el dato antiguo."],
+        "completionEvidence": ["Solicitud presentada y estado consultable.", "Documento justificativo archivado.", "Efecto comprobado en nómina, certificado o expediente."],
+        "escalation": ["Si el trámite no aparece, consulta a RR. HH. PDI indicando categoría y tipo de cambio, sin enviar datos sensibles innecesarios.", "Si el cambio aceptado no aparece en nómina, comunica concepto, fecha de solicitud y mes afectado a la unidad competente." ]
+      }
+    },
+    {
+      "id": "corregir-pod-oca", "number": 6, "category": "incorporacion", "baseChapter": 8,
+      "title": "Corregir un POD u OCA incorrecto", "scenario": "El borrador de POD no refleja correctamente categoría, horas, asignaturas, idioma, reducciones o responsabilidades.",
+      "aliases": ["POD", "OCA", "horas docentes", "reducciones", "dedicación"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Compara cada discrepancia con una evidencia y con el curso al que produce efectos.", "Solicita corrección antes del cierre departamental; no compenses horas mediante acuerdos informales."],
+        "stopConditions": ["No aceptes una reducción sin resolución o condición reconocible.", "No esperes a que el POD esté aprobado si ya conoces la discrepancia."],
+        "completionEvidence": ["Borrador anotado y documentos justificativos.", "Solicitud fechada a dirección o secretaría del DIE.", "POD final y respuesta archivados."],
+        "escalation": ["Consulta primero al DIE con la línea concreta y la evidencia.", "Si persiste un error de reglas o datos centrales, pide derivación a unitat.oca@uv.es." ]
+      }
+    },
+    {
+      "id": "revisar-error-nomina", "number": 7, "category": "incorporacion", "baseChapter": 18,
+      "title": "Revisar y reclamar una diferencia en la nómina", "scenario": "El bruto, un complemento, un atraso o una deducción no coincide con tu categoría, dedicación o resoluciones.",
+      "aliases": ["nómina", "salario", "atrasos", "IRPF", "cotización", "complemento"], "reviewedOn": "2026-08-09",
+      "guide": { "steps": ["Comparar categoría, dedicación y periodo", "Separar devengos, deducciones, extras y atrasos", "Cuantificar la diferencia por concepto y mes", "Consultar a RR. HH. PDI adjuntando resoluciones y nóminas necesarias"] },
+      "resolution": {
+        "decisionRules": ["Usa la calculadora para contrastar bruto anual, no para predecir el líquido ni sustituir la nómina.", "Separa un error retributivo de una diferencia debida a IRPF, cotización, paga extra o regularización."],
+        "stopConditions": ["No envíes nóminas completas a unidades no competentes.", "No reclames un total genérico sin identificar concepto, periodo, importe y resolución."],
+        "completionEvidence": ["Tabla de diferencias por concepto y mes.", "Resoluciones y hoja de servicios aplicables.", "Respuesta o regularización comprobada en una nómina posterior."],
+        "escalation": ["Consulta a servei.pdi@uv.es con categoría, concepto y periodo, minimizando datos personales.", "Si existe una resolución desfavorable, conserva el pie de recursos y pasa a la ruta de recurso administrativo." ]
+      }
+    },
+    {
+      "id": "solicitar-complementos", "number": 8, "category": "incorporacion", "baseChapter": 18,
+      "title": "Solicitar trienios, quinquenios, sexenios o complemento autonómico", "scenario": "Cumples o crees cumplir un nuevo periodo de antigüedad, docencia, investigación o méritos autonómicos y necesitas presentar la solicitud correcta.",
+      "aliases": ["trienio", "quinquenio", "sexenio", "complemento autonómico", "CNEAI", "méritos"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Cada reconocimiento se solicita por su convocatoria y colectivo correctos, con periodos y evidencias comprobados, y sus efectos se verifican después en resolución y nómina.", "firstMove": "Separa las cuatro figuras y comprueba para cada una convocatoria vigente, colectivo, periodo evaluable, plazo, plataforma y efectos.", "steps": ["Confirmar figura y colectivo", "Descargar convocatoria y criterios vigentes", "Preparar periodos y evidencias sin duplicidades", "Presentar, seguir la resolución y comprobar efectos"] },
+      "resolution": {
+        "decisionRules": ["Docentia, quinquenio, sexenio y complemento autonómico son expedientes distintos aunque compartan evidencias.", "No introduzcas en la calculadora periodos esperados hasta que exista reconocimiento o regla expresa aplicable."],
+        "stopConditions": ["No uses el plazo o formulario de una edición anterior.", "No mezcles vía funcionarial y laboral sin comprobar la convocatoria de tu colectivo."],
+        "completionEvidence": ["Convocatoria y criterios de la edición guardados.", "Copia presentada y justificante.", "Resolución y efecto retributivo comprobados."],
+        "escalation": ["RR. HH. PDI atiende consultas de trienios, quinquenios, sexenios y complemento autonómico.", "Si la resolución es desfavorable, utiliza su pie de recursos y no una reclamación informal." ]
+      }
+    },
+    {
+      "id": "permiso-licencia-vacaciones", "number": 9, "category": "incorporacion", "baseChapter": 16,
+      "title": "Solicitar permiso, licencia, vacaciones, estancia o sabático", "scenario": "Necesitas ausentarte por actividad académica o personal y debes clasificar la figura, obtener autorización y cubrir la docencia.",
+      "aliases": ["permiso", "licencia", "vacaciones", "estancia", "sabático", "ausencia"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Clasifica primero motivo, duración, destino y efectos económicos; la figura determina competencia y plazo.", "La financiación del viaje y la autorización de ausencia son expedientes relacionados pero distintos."],
+        "stopConditions": ["No compres billetes no reembolsables antes de la autorización necesaria.", "No des por cubierta la docencia con un acuerdo entre profesores que no haya validado el DIE."],
+        "completionEvidence": ["Solicitud, memoria, invitación y cobertura docente.", "Resolución anterior a la ausencia.", "Certificado final y reincorporación comunicados cuando proceda."],
+        "escalation": ["Consulta al DIE la cobertura y canaliza la solicitud hacia RR. HH. PDI o vicerrectorado según duración.", "Ante cambios de fechas o destino, pide confirmación de si requieren nueva autorización." ]
+      }
+    },
+    {
+      "id": "it-nacimiento-conciliacion", "number": 10, "category": "incorporacion", "baseChapter": 16,
+      "title": "Tramitar incapacidad temporal, nacimiento o conciliación", "scenario": "Una baja médica, nacimiento, lactancia, permiso parental, cuidado o reducción de jornada afecta a tu actividad y docencia.",
+      "aliases": ["baja médica", "IT", "maternidad", "paternidad", "nacimiento", "lactancia", "permiso parental", "conciliación"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La situación se comunica por el canal laboral correcto, la docencia se reorganiza sin divulgar diagnósticos y la resolución refleja duración y efectos aplicables.", "firstMove": "Contacta cuanto antes con RR. HH. PDI para identificar la figura vigente y comunica al DIE solo la información funcional necesaria para cubrir obligaciones.", "unit": "RR. HH. PDI para la situación personal; dirección del DIE para cobertura docente", "channel": "Canal laboral o Portal del Empleado indicado por RR. HH. PDI y comunicación funcional al departamento", "deadline": "De inmediato en una incapacidad y dentro del plazo específico de la figura de nacimiento, cuidado, lactancia o conciliación", "steps": ["Identificar la figura vigente con RR. HH. PDI", "Aportar solo los documentos exigidos por canal protegido", "Coordinar cobertura sin divulgar datos de salud", "Comprobar resolución, nómina y fecha de reincorporación"] },
+      "resolution": {
+        "decisionRules": ["Baja, permiso, justificación de ausencia y reducción de jornada no son equivalentes.", "El departamento necesita conocer disponibilidad y cobertura, no diagnósticos ni documentos clínicos completos."],
+        "stopConditions": ["No envíes información médica a listas, coordinaciones o personas que no deban tratarla.", "No utilices denominaciones o plazos de reglamentos antiguos sin confirmación de RR. HH. PDI."],
+        "completionEvidence": ["Comunicación laboral presentada por canal adecuado.", "Cobertura docente confirmada sin datos sensibles.", "Resolución, efectos y reincorporación comprobados."],
+        "escalation": ["RR. HH. PDI publica servei.pdi@uv.es para enfermedad, nacimiento y cambios de situación.", "Si existen urgencia sanitaria o riesgo, prioriza asistencia y emergencias; la tramitación administrativa no las sustituye." ]
+      }
+    },
+    {
+      "id": "preparar-guia-docente", "number": 11, "category": "docencia", "baseChapter": 12,
+      "title": "Preparar o modificar una guía docente", "scenario": "El equipo docente necesita definir o cambiar actividades, evaluación, software, prácticas o reglas de IA manteniendo coherencia con la memoria de la titulación.",
+      "aliases": ["guía docente", "evaluación", "CAT", "CCA", "coordinación", "IA docente"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La guía aprobada describe resultados, actividades, carga, evaluación, revisión y reglas aplicables antes de comenzar el curso, y la docencia real no introduce cambios sustanciales no aprobados.", "firstMove": "Compara la propuesta con memoria verificada, guía vigente, calendario de titulación y acuerdos de coordinación antes de editar contenidos.", "unit": "Coordinación de asignatura y titulación, DIE y CAT/CCA según el cambio", "channel": "Circuito de planificación docente y aprobación de la titulación antes de la publicación", "deadline": "Antes de la aprobación y publicación de la guía del curso; nunca después de iniciar una actividad afectada", "steps": ["Comparar memoria, guía y resultados de aprendizaje", "Acordar cambios con el equipo docente", "Validar recursos, riesgos, datos y licencias", "Obtener aprobación y comprobar la versión publicada"] },
+      "resolution": {
+        "decisionRules": ["Un cambio que altera resultados, ponderaciones, requisitos o carga no se trata como simple corrección editorial.", "Las reglas sobre IA y entregas deben ser explícitas, evaluables y conocidas antes de aplicarse."],
+        "stopConditions": ["No anuncies una ponderación o requisito que contradiga la guía aprobada.", "No recojas datos o reutilices calificaciones para innovación sin revisar protección de datos y, si procede, ética."],
+        "completionEvidence": ["Matriz entre resultados, actividades y evaluación.", "Acuerdo o validación de la coordinación y órgano aplicable.", "Versión publicada comprobada antes del curso."],
+        "escalation": ["Si el cambio puede afectar la memoria verificada, consulta a coordinación y calidad antes de proponerlo como ordinario.", "Si requiere recursos, software o laboratorio no disponibles, detén la publicación hasta confirmar viabilidad." ]
+      }
+    },
+    {
+      "id": "cambiar-horario-aula-examen", "number": 12, "category": "docencia", "baseChapter": 9,
+      "title": "Cambiar horario, aula, laboratorio o fecha de examen", "scenario": "Surge una incompatibilidad o incidencia y quieres mover una actividad sin perjudicar derechos, reservas ni coordinación del curso.",
+      "aliases": ["cambio horario", "reserva aula", "laboratorio", "fecha examen", "calendario"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "El cambio está autorizado por quien gestiona el calendario y el espacio, evita solapamientos y se comunica de forma trazable a todas las personas afectadas.", "firstMove": "No anuncies una fecha alternativa: documenta motivo, actividad, grupos, espacio, recursos y posibles solapamientos y consulta primero a coordinación o secretaría ETSE.", "unit": "Coordinación de asignatura y titulación, DIE y secretaría ETSE según calendario y espacio", "channel": "Solicitud institucional de cambio o reserva y comunicación posterior por Aula Virtual y canales oficiales", "deadline": "Con antelación suficiente y antes de comunicar o ejecutar el cambio; las incidencias urgentes se escalan de inmediato", "steps": ["Identificar afectados y restricciones", "Solicitar autorización y disponibilidad de espacio", "Comprobar ausencia de solapamientos", "Comunicar la decisión aprobada y conservarla"] },
+      "resolution": {
+        "decisionRules": ["Una reserva de aula no equivale por sí sola a modificar un calendario académico aprobado.", "La alternativa debe conservar condiciones de evaluación, accesibilidad y recursos equivalentes."],
+        "stopConditions": ["No acuerdes el cambio solo con parte del estudiantado.", "No comuniques como definitivo un espacio o fecha sin confirmación de la unidad gestora."],
+        "completionEvidence": ["Autorización y reserva confirmadas.", "Comprobación de solapamientos y adaptaciones.", "Aviso institucional con fecha, lugar y condiciones definitivos."],
+        "escalation": ["Si no hay alternativa sin conflicto, eleva las opciones a coordinación de titulación o ETSE.", "Ante cierre o emergencia, aplica instrucciones del centro y documenta la reprogramación." ]
+      }
+    },
+    {
+      "id": "copia-plagio-ia", "number": 13, "category": "docencia", "baseChapter": 25,
+      "title": "Actuar ante copia, plagio o uso no autorizado de IA", "scenario": "Detectas indicios en un examen, memoria, código o TFG/TFM y necesitas preservar evidencias y aplicar las reglas sin prejuzgar.",
+      "aliases": ["copia", "plagio", "fraude académico", "IA", "ChatGPT", "Turnitin"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Los hechos quedan documentados, se aplican las reglas anunciadas y el procedimiento académico correcto permite audiencia y revisión sin convertir una sospecha en acusación pública.", "firstMove": "Congela la entrega, versión, metadatos, instrucciones y evidencia original; separa coincidencia o indicio de la conclusión que deba adoptar el órgano competente.", "unit": "Profesorado responsable y, cuando exceda la calificación ordinaria, coordinación, ETSE o comisión académica competente", "channel": "Expediente de evaluación, audiencia o procedimiento institucional; nunca exposición en canales del grupo", "deadline": "Antes de destruir o sobrescribir evidencias y dentro del calendario de calificación, revisión o procedimiento aplicable", "steps": ["Preservar entrega, consigna y evidencia", "Contrastar la conducta con reglas publicadas", "Escuchar a la persona por el cauce aplicable", "Resolver o elevar y conservar la motivación"] },
+      "resolution": {
+        "decisionRules": ["Una puntuación de similitud o un detector de IA es un indicio, no prueba concluyente autónoma.", "Distingue consecuencia prevista en la evaluación de un posible procedimiento disciplinario que no resuelve unilateralmente el profesor."],
+        "stopConditions": ["No subas entregas con datos personales a servicios no autorizados.", "No modifiques el acta ni difundas una acusación antes de documentar hechos, audiencia y competencia."],
+        "completionEvidence": ["Consigna, guía, entrega y evidencia preservadas.", "Acta o nota de audiencia y criterio aplicado.", "Decisión motivada y cauce de revisión comunicado."],
+        "escalation": ["Si las reglas publicadas no cubren el caso, consulta a coordinación y ETSE antes de imponer una consecuencia nueva.", "Si existe posible falsificación o conducta grave más allá de la evaluación, solicita el cauce institucional competente." ]
+      }
+    },
+    {
+      "id": "revision-calificacion", "number": 14, "category": "docencia", "baseChapter": 9,
+      "title": "Publicar calificaciones y realizar una revisión", "scenario": "Debes publicar resultados y explicar a un estudiante cómo se aplicaron prueba, rúbrica y ponderaciones.",
+      "aliases": ["notas", "revisión", "examen", "rúbrica", "calificación"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Publica junto a las calificaciones fecha, lugar y horario de revisión por el canal admitido.", "La revisión aplica los criterios anunciados y muestra la evidencia individual sin exponer datos de terceros."],
+        "stopConditions": ["No alteres criterios o ponderaciones después de ver los resultados.", "No envíes listados identificables ni exámenes de otras personas."],
+        "completionEvidence": ["Publicación y convocatoria de revisión archivadas.", "Examen, rúbrica y cálculo individual conservados.", "Resultado de la revisión y cambio, si existe, documentados."],
+        "escalation": ["Si la revisión revela un error general, coordina una corrección coherente para todas las personas afectadas.", "Si el estudiante impugna, conserva el expediente y pasa a la ruta formal de impugnación." ]
+      }
+    },
+    {
+      "id": "impugnacion-calificacion", "number": 15, "category": "docencia", "baseChapter": 9,
+      "title": "Responder a una impugnación de calificación", "scenario": "La ETSE te comunica una impugnación y debes aportar el expediente de evaluación sin intentar resolver el procedimiento por tu cuenta.",
+      "aliases": ["impugnación", "reclamación de nota", "tribunal", "acta"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Entrega evidencia original, criterios publicados y explicación técnica; el órgano competente tramita y resuelve.", "Distingue revisión ordinaria, impugnación y recurso contra la resolución."],
+        "stopConditions": ["No negocies retirar la impugnación ni alteres informalmente el acta.", "No reconstruyas evidencias inexistentes como si fueran contemporáneas a la evaluación."],
+        "completionEvidence": ["Expediente remitido con índice.", "Justificante de entrega y respuesta técnica.", "Resolución y, si procede, corrección de acta archivadas."],
+        "escalation": ["Pregunta a la ETSE plazo, composición del expediente y canal si la comunicación no lo concreta.", "Si aparece conflicto de interés, comunícalo y abstente cuando corresponda." ]
+      }
+    },
+    {
+      "id": "adaptacion-discapacidad", "number": 16, "category": "docencia", "baseChapter": 13,
+      "title": "Aplicar una adaptación por discapacidad", "scenario": "Recibes un informe técnico que exige adaptar tiempo, formato, espacio, tecnología o comunicación en una actividad docente.",
+      "aliases": ["UVdiscapacidad", "adaptación", "necesidades específicas", "examen accesible"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Aplica exactamente el informe técnico sin pedir diagnósticos ni rebajar competencias.", "Coordina con antelación recursos que no dependen solo del profesor, como aula, tecnología o vigilancia."],
+        "stopConditions": ["No improvises una medida distinta si el informe es ambiguo.", "No compartas la adaptación con personas que no necesitan aplicarla."],
+        "completionEvidence": ["Informe recibido por canal institucional.", "Medios, responsables y horario confirmados.", "Aplicación documentada sin datos clínicos innecesarios."],
+        "escalation": ["Consulta la ambigüedad a UVdiscapacidad, no al estudiante para que revele más información.", "Si no hay recursos, avisa con margen a ETSE para acordar una alternativa equivalente." ]
+      }
+    },
+    {
+      "id": "malestar-estudiante", "number": 17, "category": "docencia", "baseChapter": 13,
+      "title": "Atender a un estudiante con malestar psicológico", "scenario": "Durante una tutoría observas malestar intenso, una petición de ayuda o posible riesgo y necesitas actuar sin asumir funciones sanitarias.",
+      "aliases": ["salud mental", "crisis", "tutoría", "asesoría psicológica", "SEDI"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La persona recibe información y derivación proporcionadas, el riesgo inmediato se atiende por emergencias y la tutoría mantiene límites, privacidad y continuidad académica posible.", "firstMove": "Escucha, pregunta solo lo necesario para valorar urgencia y distingue una necesidad de orientación de un riesgo inmediato para la persona o terceros.", "steps": ["Escuchar y valorar urgencia sin diagnosticar", "Ofrecer recursos institucionales y facilitar el contacto", "Activar emergencias ante riesgo inmediato", "Registrar solo la información funcional necesaria y coordinar apoyos académicos"] },
+      "resolution": {
+        "decisionRules": ["Una tutoría docente puede orientar y derivar, pero no diagnostica ni sustituye atención sanitaria.", "Ante riesgo inmediato prevalecen seguridad y emergencias sobre la confidencialidad ordinaria, limitando la información a lo necesario."],
+        "stopConditions": ["No prometas secreto absoluto si existe riesgo inmediato.", "No conserves ni difundas detalles clínicos que no sean necesarios para la actuación académica."],
+        "completionEvidence": ["Recurso institucional o emergencia contactados cuando proceda.", "Información funcional y actuaciones mínimas anotadas de forma segura.", "Adaptaciones académicas canalizadas por la vía competente."],
+        "escalation": ["Deriva a la asesoría psicológica del SEDI cuando no exista urgencia inmediata.", "Ante peligro actual, contacta con 112 o los servicios de emergencia del campus y no dejes sola a la persona si hacerlo aumenta el riesgo." ]
+      }
+    },
+    {
+      "id": "tfg-tfm-ordinario", "number": 18, "category": "docencia", "baseChapter": 10,
+      "title": "Proponer, tutorizar y cerrar un TFG o TFM ordinario", "scenario": "Vas a proponer o aceptar un trabajo y necesitas definir alcance, seguimiento, evaluación, depósito y cierre sin improvisar requisitos.",
+      "aliases": ["TFG", "TFM", "tutor", "depósito", "defensa", "tribunal"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "El trabajo tiene propuesta aprobada, alcance viable, seguimiento, criterios de evaluación, depósito válido y defensa conforme al calendario de la titulación.", "firstMove": "Consulta instrucciones y calendario ETSE de la titulación y acuerda por escrito tema, entregables, reuniones, datos, recursos y criterios antes de empezar.", "steps": ["Aprobar propuesta y alcance", "Acordar plan, reuniones y evidencias", "Revisar originalidad, formato, datos y autorizaciones", "Autorizar depósito y documentar evaluación y cierre"] },
+      "resolution": {
+        "decisionRules": ["El tutor orienta y supervisa, pero el estudiante es responsable de su trabajo y la comisión o tribunal ejerce sus competencias.", "Cualquier cambio de tema, confidencialidad o calendario debe formalizarse por el cauce de la titulación."],
+        "stopConditions": ["No autorices depósito sin comprobar formato, originalidad, datos y documentos exigidos.", "No introduzcas criterios de evaluación que no estuvieran comunicados o aprobados."],
+        "completionEvidence": ["Propuesta y plan de trabajo aprobados.", "Versiones, reuniones y autorizaciones trazables.", "Depósito, acta y versión final archivados."],
+        "escalation": ["Si el alcance o calendario deja de ser viable, consulta pronto a coordinación de TFG/TFM.", "Si aparecen resultados protegibles o empresa, pasa antes de divulgar a la ruta confidencial y de transferencia." ]
+      }
+    },
+    {
+      "id": "tfg-tfm-confidencial", "number": 19, "category": "docencia", "baseChapter": 10,
+      "title": "Gestionar un TFG o TFM confidencial o patentable", "scenario": "El trabajo contiene información empresarial o un resultado potencialmente protegible y se aproxima el depósito o la defensa.",
+      "aliases": ["TFM confidencial", "patente", "defensa no pública", "empresa", "anexo confidencialidad"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Protección, depósito y defensa se coordinan antes de cualquier resumen, repositorio o comunicación pública.", "Usa documentos institucionales y delimita qué contenido se restringe, durante cuánto tiempo y para quién."],
+        "stopConditions": ["No envíes la memoria completa por canales no controlados.", "No esperes al día de la defensa para plantear confidencialidad o patente."],
+        "completionEvidence": ["Resultado comunicado a Transferencia.", "Anexos y medidas aprobados antes del depósito.", "Versiones evaluada y publicable identificadas y archivadas."],
+        "escalation": ["Coordina simultáneamente Transferencia y comisión académica.", "Si una empresa solicita restricciones no previstas, no las aceptes personalmente: exige el instrumento institucional aplicable." ]
+      }
+    },
+    {
+      "id": "practicas-externas", "number": 20, "category": "docencia", "baseChapter": 11,
+      "title": "Tutorizar o modificar unas prácticas externas", "scenario": "La empresa, el estudiante o el calendario plantean cambios de horario, tareas o condiciones antes o durante la práctica.",
+      "aliases": ["prácticas", "empresa", "tutor académico", "ADEIT", "proyecto formativo"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["La práctica no empieza ni cambia solo por acuerdo entre empresa y estudiante; debe estar formalizada.", "Horario, tareas y evaluación deben seguir siendo compatibles con docencia y proyecto formativo."],
+        "stopConditions": ["No valides horas o tareas que no consten en el proyecto formativo.", "No permitas inicio o continuidad si falta convenio, seguro o formalización aplicable."],
+        "completionEvidence": ["Proyecto formativo y horario aprobados.", "Cambios firmados o registrados por el cauce aplicable.", "Informes y evaluación final archivados."],
+        "escalation": ["Comunica incompatibilidades a coordinación de prácticas ETSE y, cuando proceda, ADEIT.", "Ante riesgo laboral o incumplimiento grave, detén la actividad afectada y activa los responsables institucionales." ]
+      }
+    },
+    {
+      "id": "elegir-financiacion", "number": 21, "category": "investigacion", "baseChapter": 20,
+      "title": "Elegir la convocatoria adecuada para una idea", "scenario": "Tienes una idea, resultados preliminares y una necesidad de personal, equipo, red o demostrador, pero varias convocatorias parecen posibles.",
+      "aliases": ["financiación", "convocatoria", "ERC", "Pathfinder", "PID", "AICO", "PROMETEO", "TRL"], "reviewedOn": "2026-08-09", "relatedTools": ["#explorador-financiacion", "#preparador-candidatura"],
+      "resolution": {
+        "decisionRules": ["Elige por finalidad, elegibilidad, madurez, consorcio y costes financiables, no por prestigio o cuantía aislados.", "Compara al menos tres vías y descarta primero mediante requisitos excluyentes."],
+        "stopConditions": ["No redactes una memoria completa antes de confirmar beneficiario, IP, TRL y cierre interno.", "No uses una ayuda de red para financiar fabricación o personal si sus costes no lo permiten."],
+        "completionEvidence": ["Matriz comparativa de tres convocatorias.", "Elegibilidad y rol UV confirmados.", "Vía principal, alternativa y calendario de decisión documentados."],
+        "escalation": ["Contrasta la preselección con SGI y, si hay explotación o empresa, con Transferencia.", "Si ninguna vía encaja, reformula necesidad o secuencia de madurez antes de forzar la propuesta." ]
+      }
+    },
+    {
+      "id": "preparar-propuesta", "number": 22, "category": "investigacion", "baseChapter": 20,
+      "title": "Preparar una propuesta competitiva desde cero", "scenario": "Has elegido convocatoria y necesitas organizar idea, socios, memoria, presupuesto, documentos, revisión y cierre interno.",
+      "aliases": ["propuesta", "memoria", "grant", "calendario inverso", "presupuesto", "cierre interno"], "reviewedOn": "2026-08-09", "relatedTools": ["#preparador-candidatura", "#calculadora-presupuesto"],
+      "resolution": {
+        "decisionRules": ["Convierte criterios de evaluación en una matriz de evidencias antes de redactar.", "El cierre operativo es el interno necesario para revisar presupuesto y firmas, no solo el de la plataforma externa."],
+        "stopConditions": ["No cierres presupuesto si tareas, meses-persona y recursos no coinciden.", "No presentes sin validar versión final, participantes, anexos y justificante."],
+        "completionEvidence": ["Matriz criterio-evidencia y calendario inverso.", "Memoria, presupuesto y formularios coherentes y revisados.", "Copia presentada y justificante archivados."],
+        "escalation": ["Comunica intención al SGI con margen y solicita su cierre interno real.", "Eleva pronto propiedad intelectual, ética, datos, consorcio o empresa a la unidad especializada correspondiente." ]
+      }
+    },
+    {
+      "id": "comprobar-elegibilidad", "number": 23, "category": "investigacion", "baseChapter": 20,
+      "title": "Comprobar elegibilidad en una convocatoria recurrente", "scenario": "Quieres saber si persona, grupo, UV, consorcio, fecha de doctorado, movilidad o resultado previo cumplen una edición concreta.",
+      "aliases": ["elegibilidad", "ERC", "MSCA", "Pathfinder", "AICO", "PROMETEO", "PDC"], "reviewedOn": "2026-08-09", "relatedTools": ["#preparador-candidatura"],
+      "resolution": {
+        "decisionRules": ["Comprueba cada requisito contra la edición de la convocatoria y conserva evidencia de fechas, no contra una ficha histórica.", "Distingue elegibilidad de admisibilidad documental y de calidad competitiva."],
+        "stopConditions": ["No extrapoles ventanas, excepciones o restricciones de reenvío de otra edición.", "No declares una composición de grupo o movilidad sin comprobar todas las personas afectadas."],
+        "completionEvidence": ["Lista de requisitos excluyentes con evidencia.", "Excepciones y extensiones documentadas.", "Confirmación interna de beneficiario y papel UV."],
+        "escalation": ["Plantea al SGI una pregunta binaria citando apartado y hechos exactos.", "Si la respuesta cambia la estrategia, conserva el criterio escrito junto a la propuesta." ]
+      }
+    },
+    {
+      "id": "presupuesto-proyecto", "number": 24, "category": "investigacion", "baseChapter": 20,
+      "title": "Construir el presupuesto completo de un proyecto", "scenario": "Debes presupuestar personal, equipos, viajes, consumibles, IVA, indirectos, cofinanciación y anualidades sin confundir coste con ayuda solicitada.",
+      "aliases": ["presupuesto", "coste personal", "IVA", "indirectos", "cofinanciación", "anualidades"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-presupuesto", "#calculadora-personal"],
+      "resolution": {
+        "decisionRules": ["Calcula primero coste total elegible y después porcentaje o límite de ayuda.", "Separa precio sin IVA, IVA recuperable o no y coste finalmente imputable."],
+        "stopConditions": ["No uses salario bruto como coste completo de personal.", "No distribuyas anualidades sin alinearlas con tareas, contratación y fechas de entrega."],
+        "completionEvidence": ["Hipótesis, unidades y fuentes de cada coste.", "Elegibilidad e indirectos revisados contra la convocatoria.", "Anualidades y total conciliados con memoria y formularios."],
+        "escalation": ["Valida con SGI costes dudosos, IVA, indirectos y cofinanciación antes del cierre.", "Solicita ofertas o estimaciones justificables para equipos y servicios significativos." ]
+      }
+    },
+    {
+      "id": "ejecutar-proyecto", "number": 25, "category": "investigacion", "baseChapter": 21,
+      "title": "Ejecutar correctamente un proyecto concedido", "scenario": "Recibes la concesión y debes traducir resolución, presupuesto, hitos y obligaciones en reglas de trabajo para el equipo.",
+      "aliases": ["proyecto concedido", "ejecución", "gasto elegible", "hitos", "clave"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "El proyecto comienza con condiciones, periodos, presupuesto, responsables y evidencias traducidos a un plan operativo y cada compromiso se comprueba antes de ejecutarlo.", "firstMove": "Reúne resolución, memoria aprobada, presupuesto, instrucciones de ejecución y fecha final y celebra una reunión de alta con la unidad gestora.", "steps": ["Crear ficha maestra de condiciones", "Asignar responsables e hitos", "Abrir archivo de gastos y evidencias", "Revisar mensualmente ejecución científica y económica"] },
+      "resolution": {
+        "decisionRules": ["Que exista crédito no convierte un gasto en elegible; debe cumplir finalidad, concepto, periodo y documentación.", "La memoria aprobada y las instrucciones de ejecución prevalecen sobre la versión inicial o las costumbres de otro proyecto."],
+        "stopConditions": ["No comprometas personal, equipo o viaje dudoso sin confirmación previa.", "No dejes para el cierre la conciliación de facturas, hitos, inventario y dedicación."],
+        "completionEvidence": ["Ficha maestra y calendario de hitos.", "Archivo mensual de gastos y evidencias conciliado.", "Cambios, comunicaciones y decisiones conservados."],
+        "escalation": ["Consulta a la unidad gestora la regla de la ayuda antes de ejecutar una excepción.", "Si la necesidad altera alcance, presupuesto o calendario, activa la ruta de modificación antes de actuar." ]
+      }
+    },
+    {
+      "id": "modificar-proyecto", "number": 26, "category": "investigacion", "baseChapter": 21,
+      "title": "Solicitar una modificación o prórroga de proyecto", "scenario": "Un retraso, cambio de personal, equipo, presupuesto, socio, ubicación o alcance amenaza el plan aprobado.",
+      "aliases": ["prórroga", "modificación", "cambio presupuesto", "cambio IP", "retraso"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "El cambio se clasifica y solicita antes de ejecutarse o vencer el plazo, con causa, impacto, nueva planificación y autorización archivados.", "firstMove": "Compara situación real y plan aprobado y documenta qué cambia, por qué, desde cuándo y qué ocurre si no se autoriza.", "steps": ["Clasificar cambio y competencia", "Preparar justificación e impacto", "Solicitar por el canal de la ayuda", "Esperar autorización y actualizar todos los documentos"] },
+      "resolution": {
+        "decisionRules": ["Distingue comunicación, modificación que requiere autorización y cambio no admisible.", "La prórroga científica no amplía automáticamente elegibilidad de gastos, contratos o pagos."],
+        "stopConditions": ["No ejecutes el cambio mientras necesite autorización previa.", "No esperes al final si la convocatoria fija antelación o impide modificar tras el vencimiento."],
+        "completionEvidence": ["Comparativa aprobado-propuesto.", "Solicitud y justificante anteriores al cambio.", "Autorización y plan, presupuesto y calendario actualizados."],
+        "escalation": ["Pide a SGI que confirme tipo de cambio, competencia y canal citando la cláusula aplicable.", "Si afecta contrato, compra, ética o datos, coordina además la modificación en esos expedientes." ]
+      }
+    },
+    {
+      "id": "justificar-proyecto", "number": 27, "category": "investigacion", "baseChapter": 21,
+      "title": "Preparar la justificación o una auditoría de proyecto", "scenario": "Se aproxima el cierre o llega un requerimiento y debes demostrar actividades, gastos, pagos, contratación, inventario y resultados.",
+      "aliases": ["justificación", "auditoría", "requerimiento", "cierre", "evidencias"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La justificación científica y económica concilia lo aprobado, ejecutado y acreditado, y cualquier requerimiento recibe una respuesta única validada por la UV.", "firstMove": "Cierra una tabla por partida y actividad que enlace presupuesto, gasto, factura, pago, contratación, recepción y resultado.", "steps": ["Conciliar mayor, presupuesto y partidas", "Completar evidencias científicas y contractuales", "Resolver diferencias antes del cierre", "Validar y presentar una versión única"] },
+      "resolution": {
+        "decisionRules": ["Una factura no prueba por sí sola elegibilidad, pago, recepción ni vinculación científica.", "Responde a requerimientos mediante la UV y conserva la versión validada, no envíes explicaciones paralelas a la agencia."],
+        "stopConditions": ["No certifiques entregables, dedicación o recepción sin evidencia.", "No ocultes diferencias: clasifícalas y consulta su regularización antes de presentar."],
+        "completionEvidence": ["Matriz gasto-actividad-evidencia conciliada.", "Informe, formularios y anexos validados.", "Justificante, requerimientos y cierre archivados."],
+        "escalation": ["Eleva cuanto antes a unidad gestora gastos, pagos o documentos faltantes.", "Si un hallazgo puede implicar reintegro o incumplimiento, conserva hechos y solicita criterio institucional antes de contestar." ]
+      }
+    },
+    {
+      "id": "contratar-personal-proyecto", "number": 28, "category": "investigacion", "baseChapter": 22,
+      "title": "Contratar personal con cargo a un proyecto", "scenario": "Necesitas incorporar personal investigador o técnico y debes encajar perfil, coste, duración, selección y fecha real de alta.",
+      "aliases": ["contrato", "personal", "técnico", "predoctoral", "postdoctoral", "baremo"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-personal"],
+      "resolution": {
+        "decisionRules": ["Presupuesta coste completo y limita duración y funciones a la elegibilidad y vigencia del proyecto.", "La persona solo puede empezar tras selección, contrato y alta efectivos."],
+        "stopConditions": ["No reserves la plaza ni permitas trabajo previo aunque exista una candidata conocida.", "No participes en valoración si concurre conflicto de interés no resuelto."],
+        "completionEvidence": ["Perfil, baremo, coste y financiación validados.", "Convocatoria, solicitudes y actas conservadas.", "Contrato, alta y plan de acogida efectivos."],
+        "escalation": ["Confirma con SGI y RR. HH. modalidad, coste y calendario real antes de prometer fecha.", "Si el contrato excede el proyecto o cambia su financiación, detén la convocatoria hasta resolverlo." ]
+      }
+    },
+    {
+      "id": "contrato-articulo-60", "number": 29, "category": "investigacion", "baseChapter": 23,
+      "title": "Tramitar un contrato artículo 60 con una empresa", "scenario": "Una empresa solicita ensayos, asesoramiento, prototipo o I+D y propone precio, calendario, confidencialidad o propiedad de resultados.",
+      "aliases": ["artículo 60", "empresa", "contrato", "ensayo", "consultoría institucional", "transferencia"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La actividad empieza solo tras memoria, coste completo, equipo, entregables, confidencialidad, propiedad, responsabilidades y firmas institucionales acordados.", "firstMove": "No aceptes presupuesto ni fecha: delimita alcance, entregables, recursos, riesgos, publicación y resultados y remite una ficha a Transferencia.", "steps": ["Definir alcance y entregables verificables", "Calcular coste completo, impuestos e indirectos", "Negociar confidencialidad, publicación y propiedad", "Obtener aprobaciones y firmas antes de empezar"] },
+      "resolution": {
+        "decisionRules": ["Un correo del investigador no vincula a la UV ni sustituye contrato firmado por sus representantes.", "El precio debe cubrir costes y reglas institucionales; no se fija solo por horas estimadas o presupuesto de la empresa."],
+        "stopConditions": ["No inicies medidas, entregues datos ni firmes NDA personal antes del instrumento UV.", "No prometas exclusividad, propiedad o ausencia de publicación sin intervención de Transferencia."],
+        "completionEvidence": ["Memoria técnica y presupuesto completo.", "Contrato firmado con anexos y responsables.", "Entregables, facturación, resultados y cierre documentados."],
+        "escalation": ["Transferencia debe clasificar instrumento, negociar cláusulas y tramitar firmas.", "Si existe conflicto con proyecto, tesis o patente, inventaría obligaciones y titulares antes de negociar." ]
+      }
+    },
+    {
+      "id": "proteger-patente", "number": 30, "category": "investigacion", "baseChapter": 24,
+      "title": "Proteger un resultado antes de divulgarlo", "scenario": "Tienes un dispositivo, proceso, material o arquitectura nueva y se aproxima un artículo, congreso, tesis, repositorio o conversación con empresa.",
+      "aliases": ["patente", "invención", "novedad", "congreso", "publicar", "resultado protegible"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Comunica antes de toda divulgación y separa autoría científica, inventoría y titularidad.", "Documenta contribuciones técnicas, financiación, contratos y fecha exacta de divulgación prevista."],
+        "stopConditions": ["No envíes resumen, tesis, código o datos públicos hasta la decisión de protección.", "No firmes confidencialidad o cesión personal sobre resultados UV."],
+        "completionEvidence": ["Comunicación de resultado y cuaderno de evidencia.", "Contribuciones y titulares evaluados.", "Decisión de protección y calendario de divulgación coordinados."],
+        "escalation": ["Avisa a Transferencia indicando la divulgación más próxima.", "Si ya hubo divulgación, informa exactamente qué, cuándo, dónde y para quién; no asumas que toda protección está perdida." ]
+      }
+    },
+    {
+      "id": "publicar-software-datos", "number": 31, "category": "investigacion", "baseChapter": 26,
+      "title": "Publicar software, código o datos con una licencia adecuada", "scenario": "Quieres depositar código, modelos o datos y debes decidir versión, repositorio, licencia, metadatos y restricciones.",
+      "aliases": ["software", "GitHub", "RODERIC", "datos", "licencia", "open source", "DOI"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La versión depositada es reproducible, citable y compatible con titularidad, contratos, patentes, datos personales y licencias de dependencias.", "firstMove": "Inventaría autores, titulares, financiación, dependencias, datos, secretos y obligaciones antes de elegir repositorio o licencia.", "steps": ["Auditar titularidad y restricciones", "Preparar versión reproducible y metadatos", "Elegir licencia y nivel de acceso compatibles", "Depositar, obtener identificador y archivar la versión"] },
+      "resolution": {
+        "decisionRules": ["Acceso público, código abierto y dominio público no son equivalentes; la licencia define permisos.", "La licencia propia no puede conceder derechos que dependencias, contratos o cotitulares no permiten."],
+        "stopConditions": ["No publiques credenciales, datos personales, secretos o resultados pendientes de protección.", "No elijas licencia sin comprobar titularidad UV y compatibilidad de componentes de terceros."],
+        "completionEvidence": ["Inventario de componentes, autores, titulares y licencias.", "README, metadatos, entorno y pruebas de reproducción.", "Depósito, DOI o versión etiquetada y cita recomendada."],
+        "escalation": ["Consulta a Transferencia si hay explotación, titularidad o patente y a biblioteca/RODERIC sobre depósito.", "Si los datos no pueden anonimizarse, define acceso controlado o exclúyelos documentando la decisión." ]
+      }
+    },
+    {
+      "id": "etica-personas-muestras", "number": 32, "category": "investigacion", "baseChapter": 32,
+      "title": "Solicitar evaluación ética con personas o muestras humanas", "scenario": "El estudio incluye participantes, datos identificables, intervención o muestras humanas y aún no ha comenzado la fase afectada.",
+      "aliases": ["CEIH", "ética", "personas", "muestras humanas", "consentimiento", "hospital"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Determina responsable, base jurídica, consentimiento, codificación, cesiones y ciclo de las muestras antes de reclutar o recibir datos.", "Un informe externo o afirmar que los datos están anonimizados no sustituye la verificación UV."],
+        "stopConditions": ["No reclutes, intervengas ni recibas muestras antes de informes y convenios aplicables.", "No cambies población, intervención o tratamiento de datos sin evaluar si es modificación sustancial."],
+        "completionEvidence": ["Protocolo, información, consentimiento y plan de datos coherentes.", "Dictamen favorable y acuerdos externos archivados.", "Versiones y modificaciones controladas durante el estudio."],
+        "escalation": ["Consulta al CEIH la clasificación si existen dudas antes de presentar.", "Coordina DPD, hospital, biobanco o bioseguridad cuando sus competencias también resulten afectadas." ]
+      }
+    },
+    {
+      "id": "bioseguridad-animales-omg", "number": 33, "category": "investigacion", "baseChapter": 32,
+      "title": "Tramitar investigación con animales, agentes biológicos u OMG", "scenario": "El proyecto incorpora organismos, vectores, muestras, instalaciones o procedimientos que pueden requerir comité y nivel de contención.",
+      "aliases": ["bioseguridad", "OMG", "animales", "agentes biológicos", "contención", "residuos"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Cada componente obtiene la evaluación competente y se ejecuta solo en instalaciones, condiciones, personal y versiones aprobados.", "firstMove": "Clasifica por separado animales, agentes, OMG, instalación, transporte, residuos y cambios respecto de autorizaciones existentes.", "steps": ["Identificar comités y autorizaciones", "Preparar protocolo, instalaciones y emergencia", "Obtener informes antes de iniciar", "Controlar versiones, formación y modificaciones"] },
+      "resolution": {
+        "decisionRules": ["Un dictamen ético no sustituye bioseguridad, bienestar animal, prevención, transporte o autorizaciones externas.", "La contención se determina por agentes y procedimientos reales, no solo por el nombre del proyecto."],
+        "stopConditions": ["No recibas material ni inicies procedimientos antes de confirmar instalación y autorizaciones.", "No introduzcas un nuevo vector, especie, agente o escala sin evaluar la modificación."],
+        "completionEvidence": ["Clasificación y protocolos por componente.", "Dictámenes, instalaciones y formación vigentes.", "Registros de uso, residuos, incidentes y cambios."],
+        "escalation": ["Presenta bioseguridad por sede y consulta calendario del comité con margen.", "Para animales o centros externos, confirma además el órgano, instalación y convenio específicos." ]
+      }
+    },
+    {
+      "id": "autoria-integridad-ia", "number": 34, "category": "investigacion", "baseChapter": 25,
+      "title": "Resolver autoría, integridad o uso de IA en investigación", "scenario": "Surge desacuerdo sobre autores, orden, contribuciones, datos, figura, código o uso de IA antes de enviar un trabajo.",
+      "aliases": ["autoría", "CRediT", "integridad", "mala conducta", "IA", "retractación"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Contribuciones, responsabilidades, datos y uso de herramientas quedan documentados; los desacuerdos se intentan resolver antes del envío y las sospechas formales siguen un cauce imparcial.", "firstMove": "Congela la versión y reconstruye contribuciones, acuerdos, datos y decisiones con hechos y fechas, separando desacuerdo de posible mala conducta.", "steps": ["Documentar contribuciones y evidencias", "Contrastar criterios de autoría y políticas", "Intentar acuerdo escrito sin coerciones", "Elevar de forma confidencial cuando no se resuelva o exista posible mala conducta"] },
+      "resolution": {
+        "decisionRules": ["Jerarquía, financiación o cesión de muestras no bastan para autoría; inventoría y autoría tampoco coinciden necesariamente.", "Un desacuerdo honesto se gestiona de forma distinta de fabricación, falsificación, plagio u ocultación deliberada."],
+        "stopConditions": ["No envíes el manuscrito con autoría disputada ni elimines datos o historial.", "No expongas acusaciones en el grupo ni investigues accediendo a información ajena sin autorización."],
+        "completionEvidence": ["Tabla CRediT y acuerdo de autores.", "Procedencia de datos, código e IA verificable.", "Acuerdo o comunicación institucional y decisión final archivados."],
+        "escalation": ["Empieza por una mediación documentada con responsable académico sin conflicto.", "Si existe posible mala conducta o represalia, usa el canal institucional competente preservando confidencialidad y evidencias legítimas." ]
+      }
+    },
+    {
+      "id": "seguimiento-deposito-tesis", "number": 35, "category": "investigacion", "baseChapter": 15,
+      "title": "Realizar seguimiento y depósito de una tesis", "scenario": "Diriges una tesis y debes controlar plan, actividades, evaluación anual, publicaciones, autoría, protección, depósito y defensa.",
+      "aliases": ["doctorado", "tesis", "plan investigación", "depósito", "defensa", "compendio"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["La dirección supervisa y documenta, pero depósito, informes, tribunal y defensa dependen de órganos y requisitos institucionales.", "Patente, empresa, datos, compendio, mención internacional o cotutela se preparan antes del depósito."],
+        "stopConditions": ["No garantices una fecha de defensa antes de completar requisitos e informes.", "No autorices depósito con autoría, originalidad, datos o divulgación sin resolver."],
+        "completionEvidence": ["Plan, actividades, reuniones y evaluaciones al día.", "Documentos especiales y autorizaciones preparados.", "Depósito, informes, acta y versión publicada archivados."],
+        "escalation": ["Eleva pronto a comisión académica cambios de plan, conflicto o modalidad.", "Coordina con Transferencia y empresa cualquier restricción antes de RODERIC o divulgación." ]
+      }
+    },
+    {
+      "id": "crear-spin-off", "number": 36, "category": "investigacion", "baseChapter": 27,
+      "title": "Crear una spin-off universitaria", "scenario": "El equipo quiere comercializar tecnología desarrollada en la UV y combinar sociedad, licencia, participación, funciones y uso de instalaciones.",
+      "aliases": ["spin-off", "startup", "empresa derivada", "licencia", "participación UV", "compatibilidad"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Tecnología, titulares, equipo, plan de negocio, licencia, participación, compatibilidad, conflictos y uso de recursos se aprueban antes de operar como empresa vinculada a la UV.", "firstMove": "No constituyas ni comprometas activos: comunica tecnología y equipo a Transferencia y prepara un mapa de titulares, financiación, funciones y recursos UV.", "steps": ["Comunicar tecnología y revisar titularidad", "Preparar equipo y plan de negocio", "Negociar licencia, participación y uso de recursos", "Obtener reconocimiento y compatibilidad antes de operar"] },
+      "resolution": {
+        "decisionRules": ["Constituir una sociedad mercantil no la convierte en spin-off UV ni autoriza usar tecnología, nombre o instalaciones.", "Separa decisiones académicas del PDI y decisiones empresariales donde exista interés personal."],
+        "stopConditions": ["No aportes, licencies o prometas tecnología UV personalmente.", "No factures, emplees personal o uses laboratorios UV sin contratos, tarifas y autorizaciones."],
+        "completionEvidence": ["Dossier de tecnología, titulares y obligaciones de financiación.", "Plan de negocio, equipo y conflictos declarados.", "Reconocimiento, licencia, compatibilidad y contratos de recursos firmados."],
+        "escalation": ["Transferencia debe coordinar valorización, reconocimiento y licencia.", "RR. HH. PDI y órganos de gobierno deben resolver compatibilidad, participación y conflictos antes de asumir funciones." ]
+      }
+    },
+    {
+      "id": "comprar-lente-sda", "number": 37, "category": "gestion", "baseChapter": 29,
+      "title": "Comprar una lente Thorlabs mediante SDA", "scenario": "Necesitas una referencia concreta de lente, filtro, fibra o montura incluida en el catálogo de material de laboratorio y quieres tramitarla con cargo a una clave UV.",
+      "aliases": ["Thorlabs", "lente", "SDA", "catálogo", "material laboratorio", "centro de coste"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-compras"],
+      "resolution": {
+        "decisionRules": ["Comprueba referencia, recubrimiento, cantidad, portes y compatibilidad técnica antes de formar la cesta.", "Si el producto está cubierto por SDA, usa proveedores, categorías y aprobaciones del sistema, no un contrato menor paralelo."],
+        "stopConditions": ["No finalices la cesta con centro de coste o dirección de entrega dudosos.", "No contactes al proveedor como pedido firme antes de la aprobación y emisión del pedido UV."],
+        "completionEvidence": ["Ficha técnica y necesidad vinculada al proyecto.", "Cesta, centro de coste y aprobaciones SDA.", "Pedido, albarán, recepción y factura conformada."],
+        "escalation": ["Si no aparece la referencia, consulta a la unidad gestora antes de buscar otra vía.", "Si el producto es exclusivo, urgente o supera el alcance de la categoría, pide clasificación a contratación/unidad gestora." ]
+      }
+    },
+    {
+      "id": "compra-menor-5000", "number": 38, "category": "gestion", "baseChapter": 29,
+      "title": "Tramitar una compra ordinaria inferior a 5.000 € sin IVA", "scenario": "Necesitas un suministro o servicio puntual no cubierto por acuerdo marco o SDA y su valor estimado queda por debajo de 5.000 euros sin IVA.",
+      "aliases": ["compra menor", "menos 5000", "factura", "proveedor", "crédito"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-compras"],
+      "resolution": {
+        "decisionRules": ["Calcula la necesidad completa y valor estimado sin IVA, incluyendo opciones, accesorios y recurrencia previsible.", "Para gastos superiores a 200 euros confirma previamente crédito y autorización por el circuito de la unidad."],
+        "stopConditions": ["No dividas una necesidad para mantener cada factura bajo el umbral.", "No pagues personalmente ni comuniques pedido firme sin confirmación de modalidad."],
+        "completionEvidence": ["Necesidad, especificación, valor e inexistencia de vía preferente.", "Confirmación de crédito y pedido autorizado.", "Recepción, factura correcta y conformidad."],
+        "escalation": ["Envía a la unidad gestora referencia, proveedor, importe sin IVA, IVA, portes y clave.", "Si es recurrente, conjunto o dudoso, solicita clasificación antes de comprar." ]
+      }
+    },
+    {
+      "id": "compra-desde-5000", "number": 39, "category": "gestion", "baseChapter": 29,
+      "title": "Tramitar una compra desde 5.000 € sin IVA", "scenario": "El equipo, componente o servicio alcanza 5.000 euros sin IVA o más y necesita expediente previo, ofertas o justificación y adjudicación.",
+      "aliases": ["tres ofertas", "AD", "UV-plyca", "9000", "18000", "contrato menor"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-compras"],
+      "resolution": {
+        "decisionRules": ["La unidad funcional debe crear y adjudicar el expediente antes de comunicar el pedido.", "Las ofertas deben responder al mismo objeto y especificaciones; documenta si alguna no es comparable."],
+        "stopConditions": ["No pidas al proveedor que entregue o reserve material antes de adjudicación y AD cuando proceda.", "No redactes especificaciones para excluir competencia sin justificación técnica."],
+        "completionEvidence": ["Memoria de necesidad y especificaciones neutrales.", "Ofertas o justificación, expediente, adjudicación y AD.", "Pedido, recepción, inventario y factura conformada."],
+        "escalation": ["Consulta a unidad gestora la unidad funcional y documentos exactos antes de solicitar ofertas.", "Si el valor, duración o recurrencia excede contrato menor, deriva a contratación ordinaria." ]
+      }
+    },
+    {
+      "id": "proveedor-exclusivo", "number": 40, "category": "gestion", "baseChapter": 29,
+      "title": "Comprar a un proveedor exclusivo", "scenario": "Solo el fabricante o distribuidor autorizado ofrece una pieza compatible y no puedes obtener tres ofertas equivalentes.",
+      "aliases": ["exclusividad", "proveedor único", "compatibilidad", "sonda", "distribuidor"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-compras", "#casos-completos"],
+      "resolution": {
+        "decisionRules": ["Justifica la característica imprescindible y por qué una alternativa funcional no satisface la necesidad, no solo la marca preferida.", "La exclusividad explica ausencia de competencia, pero no elimina expediente, crédito, adjudicación ni control de precio."],
+        "stopConditions": ["No solicites certificados de exclusividad redactados para reproducir una justificación falsa o demasiado amplia.", "No confundas continuidad conveniente con incompatibilidad técnica demostrada."],
+        "completionEvidence": ["Informe técnico de necesidad y alternativas consideradas.", "Evidencia de exclusividad o distribución y razonabilidad del precio.", "Expediente, adjudicación, pedido y recepción."],
+        "escalation": ["Presenta a unidad gestora el informe antes de comprometer la compra.", "Si la exclusividad deriva de una compra anterior, revisa también si hubo dependencia o fraccionamiento previsible." ]
+      }
+    },
+    {
+      "id": "apc-suscripcion-cuota", "number": 41, "category": "gestion", "baseChapter": 29,
+      "title": "Pagar una APC, suscripción, base de datos o cuota científica", "scenario": "Necesitas pagar publicación, acceso digital, membresía o cuota y debes distinguir proveedor, periodo, impuestos, elegibilidad y vía de pago.",
+      "aliases": ["APC", "open access", "suscripción", "base de datos", "cuota sociedad", "publicación"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La naturaleza del gasto, beneficiario, periodo, impuestos, elegibilidad y modalidad de pago quedan confirmados antes de aceptar, renovar o pagar.", "firstMove": "Clasifica si pagas publicación, licencia de acceso, suscripción recurrente, cuota institucional o membresía personal y reúne oferta o factura proforma.", "steps": ["Clasificar objeto y beneficiario", "Comprobar elegibilidad, periodo e impuestos", "Determinar contratación y modalidad de pago", "Obtener factura, evidencia de prestación y conformidad"] },
+      "resolution": {
+        "decisionRules": ["Publicación, suscripción y cuota no comparten necesariamente tratamiento ni herramienta de compra.", "Una membresía personal solo es imputable si finalidad, titularidad y convocatoria lo permiten expresamente."],
+        "stopConditions": ["No aceptes renovación automática o términos contractuales en nombre de la UV.", "No adelantes el pago sin confirmación de factura, elegibilidad y reintegro admisible."],
+        "completionEvidence": ["Clasificación y justificación de necesidad.", "Confirmación de elegibilidad, impuestos y modalidad.", "Factura correcta y evidencia de publicación, acceso o periodo cubierto."],
+        "escalation": ["Consulta a unidad gestora y, para suscripciones o recursos bibliográficos, a biblioteca/contratación.", "Si existe pago extranjero o tratamiento fiscal dudoso, pide criterio antes de pagar." ]
+      }
+    },
+    {
+      "id": "ciclo-vida-equipo", "number": 42, "category": "gestion", "baseChapter": 28,
+      "title": "Recibir, inventariar, reparar, trasladar o dar de baja un equipo", "scenario": "Un equipo llega, falla calibración, necesita reparación, cambia de ubicación o termina su vida útil.",
+      "aliases": ["inventario", "recepción", "calibración", "avería", "reparación", "traslado", "baja"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "Titularidad, recepción, inventario, ubicación, riesgo, calibración, mantenimiento, datos y destino quedan trazados durante todo el ciclo de vida.", "firstMove": "Identifica fase, propietario, inventario, financiación, responsable, ubicación y riesgo; detén uso si puede producir daño o datos no fiables.", "steps": ["Registrar recepción, inventario e instalación", "Mantener calibración y uso trazable", "Tramitar reparación antes de encargarla", "Autorizar traslado o baja y cerrar datos, sustancias e inventario"] },
+      "resolution": {
+        "decisionRules": ["La compra no termina con factura: instalación, prevención, calibración e inventario condicionan el uso.", "Traslado, reparación y baja son actuaciones patrimoniales y económicas, no decisiones informales del usuario."],
+        "stopConditions": ["Bloquea uso ante riesgo, calibración vencida o resultados dudosos.", "No encargues reparación ni muevas el equipo sin confirmar expediente, financiación e inventario."],
+        "completionEvidence": ["Acta de recepción, inventario y puesta en servicio.", "Historial de calibración, mantenimiento e incidencias.", "Autorización y cierre de traslado, reparación o baja."],
+        "escalation": ["Avisa a usuarios y responsable cuando los resultados previos puedan estar afectados.", "Coordina unidad gestora, patrimonio y Prevención según la fase y el riesgo." ]
+      }
+    },
+    {
+      "id": "inscripcion-congreso", "number": 43, "category": "gestion", "baseChapter": 30,
+      "title": "Pagar la inscripción a un congreso", "scenario": "Han aceptado tu comunicación y debes decidir quién paga, cómo obtener factura y si cabe pago directo, anticipo o reintegro.",
+      "aliases": ["congreso", "inscripción", "factura", "reintegro", "pago directo", "early bird"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-viajes"],
+      "resolution": {
+        "decisionRules": ["Confirma antes de pagar proyecto, crédito, elegibilidad, modalidad y datos de factura.", "Factura a nombre de la UV e identificación del asistente cumplen funciones distintas y ambas pueden ser necesarias."],
+        "stopConditions": ["No adelantes la inscripción suponiendo que se reintegrará.", "No pierdas una tarifa temprana sin comunicar con margen la fecha y documentación necesarias."],
+        "completionEvidence": ["Aceptación, autorización y financiación confirmadas.", "Modalidad de pago y factura correcta.", "Certificado de asistencia y liquidación archivados."],
+        "escalation": ["Pregunta a la unidad gestora quién desembolsa y qué documento necesita antes de la fecha de pago.", "Si el organizador no emite factura válida, no pagues sin que la unidad confirme alternativa admisible." ]
+      }
+    },
+    {
+      "id": "viaje-caja-fija", "number": 44, "category": "gestion", "baseChapter": 30,
+      "title": "Tramitar viaje, dietas y anticipo de caja fija", "scenario": "Viajas por congreso, proyecto o estancia y necesitas autorizar ausencia, transporte, alojamiento, manutención, anticipo y liquidación.",
+      "aliases": ["viaje", "dietas", "hotel", "kilometraje", "caja fija", "BCF", "comisión servicio"], "reviewedOn": "2026-08-09", "relatedTools": ["#calculadora-viajes"],
+      "resolution": {
+        "decisionRules": ["Separa autorización de ausencia, comisión de servicio, financiación y modalidad de pago.", "Aplica el régimen de la ayuda cuando sea distinto de las cuantías UV y separa días personales."],
+        "stopConditions": ["No reserves gastos no reembolsables antes de autorización y elegibilidad.", "No mezcles en una misma imputación costes personales, otra financiación o conceptos no justificados."],
+        "completionEvidence": ["Orden o autorización, cobertura y clave.", "Facturas, billetes, tarjetas de embarque y pruebas de pago.", "Certificado, liquidación única y regularización del anticipo."],
+        "escalation": ["Pide a caja fija modalidad y documentos antes de adelantar dinero.", "Si cambia itinerario, fecha o finalidad, confirma por escrito el efecto antes de continuar el gasto." ]
+      }
+    },
+    {
+      "id": "inscripcion-interna-uv", "number": 45, "category": "gestion", "baseChapter": 30,
+      "title": "Pagar una actividad organizada por la propia UV", "scenario": "Quieres inscribirte en un curso, jornada o actividad facturada por una unidad de la UV con cargo a otra clave UV.",
+      "aliases": ["compensación interna", "curso UV", "inscripción interna", "caja fija"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La unidad organizadora y la financiadora tramitan una compensación interna sin pago personal y el gasto queda cargado a la clave autorizada.", "firstMove": "Antes de inscribirte, envía a tu unidad gestora actividad, organizador UV, importe, fecha y clave y pide la modalidad de compensación interna.", "steps": ["Confirmar que organizador y facturación son UV", "Obtener autorización y datos de ambas unidades", "Tramitar compensación interna", "Conservar inscripción, asistencia y movimiento presupuestario"] },
+      "resolution": {
+        "decisionRules": ["La compensación interna es la vía exclusiva para actividades organizadas y facturadas por la propia UV según el Anexo 1a.", "El PDI no actúa como pagador intermedio entre dos unidades UV."],
+        "stopConditions": ["No pagues personalmente: el Anexo 1a indica que ese adelanto no puede reintegrarse.", "No uses la ruta si el organizador es una entidad externa aunque el evento se celebre en la UV."],
+        "completionEvidence": ["Identificación de unidades organizadora y financiadora.", "Autorización y compensación interna registrada.", "Inscripción y asistencia acreditadas."],
+        "escalation": ["Pide a la unidad organizadora los datos internos necesarios y a la financiadora la clave.", "Si existe entidad externa o factura externa, vuelve a clasificarlo como inscripción ordinaria." ]
+      }
+    },
+    {
+      "id": "brecha-datos", "number": 46, "category": "cumplimiento", "baseChapter": 31,
+      "title": "Comunicar una brecha de datos o incidente", "scenario": "Envías notas al grupo equivocado, publicas un enlace abierto, pierdes un dispositivo o detectas acceso indebido a datos.",
+      "aliases": ["brecha", "datos personales", "correo equivocado", "enlace público", "DPD", "incidente"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Contén el acceso sin destruir registros y comunica de inmediato para que la UV evalúe alcance y obligaciones.", "Distingue incidente de seguridad y brecha de datos, pero no retrases la comunicación por intentar calificarla solo."],
+        "stopConditions": ["No borres evidencias ni escribas masivamente a afectados por iniciativa propia.", "No compartas más datos de los necesarios al pedir ayuda."],
+        "completionEvidence": ["Cronología, datos, personas y sistemas afectados.", "Medidas de contención y comunicación registradas.", "Instrucciones del DPD/seguridad y cierre aplicados."],
+        "escalation": ["Avisa inmediatamente por los canales UV de protección de datos y seguridad.", "Ante delito, peligro o compromiso activo, activa además seguridad y emergencias correspondientes." ]
+      }
+    },
+    {
+      "id": "laser-accidente-laboratorio", "number": 47, "category": "cumplimiento", "baseChapter": 33,
+      "title": "Instalar un láser o actuar ante un accidente de laboratorio", "scenario": "Incorporas una estación láser o se produce exposición, derrame, descarga, incendio u otro accidente en el laboratorio.",
+      "aliases": ["láser", "PRL", "accidente", "laboratorio", "emergencia", "EPI"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Una instalación nueva no entra en servicio hasta evaluar riesgos, protecciones, formación y emergencia.", "Ante accidente aplica proteger, avisar y socorrer sin exponerse a un segundo accidente."],
+        "stopConditions": ["No utilices el equipo si faltan protecciones colectivas, interbloqueos, señalización o formación.", "No alteres la escena o reanudes el trabajo antes de controlar riesgo y conservar evidencia para investigación."],
+        "completionEvidence": ["Evaluación y procedimiento ajustados a la instalación real.", "Formación, protecciones y prueba previa registradas.", "Accidente comunicado, investigado y medidas correctoras cerradas."],
+        "escalation": ["Ante urgencia llama al 112 y a emergencias del campus; después comunica a responsable y Prevención.", "Si una protección o condición cambia, detén uso y pide reevaluación." ]
+      }
+    },
+    {
+      "id": "acoso-discriminacion", "number": 48, "category": "cumplimiento", "baseChapter": 34,
+      "title": "Actuar ante acoso o discriminación", "scenario": "Recibes o conoces mensajes, conductas, amenazas, aislamiento o represalias potencialmente discriminatorias en docencia o investigación.",
+      "aliases": ["acoso", "discriminación", "igualdad", "represalias", "violencia", "Unidad Igualdad"], "reviewedOn": "2026-08-09",
+      "resolution": {
+        "decisionRules": ["Prioriza seguridad, escucha y preservación de evidencia; no exijas denuncia inmediata como condición para orientar o proteger.", "Comparte información solo con unidades y personas necesarias para el canal elegido."],
+        "stopConditions": ["No organices confrontaciones ni mediaciones informales si pueden aumentar riesgo o represalia.", "No comuniques hechos o identidades al grupo ni realices una investigación paralela."],
+        "completionEvidence": ["Hechos, fechas y evidencias preservados legítimamente.", "Canal especializado y medidas de protección activados.", "Seguimiento de actuaciones y posibles represalias documentado."],
+        "escalation": ["Consulta a Unidad de Igualdad y ofrece acompañamiento por el cauce especializado.", "Ante peligro inmediato o posible delito, prioriza emergencias y autoridades competentes." ]
+      }
+    },
+    {
+      "id": "consultoria-incompatibilidad", "number": 49, "category": "cumplimiento", "baseChapter": 35,
+      "title": "Aceptar una consultoría o actividad privada compatible", "scenario": "Una empresa ofrece asesoramiento, cargo o colaboración remunerada relacionada con tu especialidad o proyectos UV.",
+      "aliases": ["consultoría", "compatibilidad", "segunda actividad", "empresa", "conflicto interés", "abstención"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "La actividad se clasifica, declara y autoriza o reconoce cuando corresponda antes de empezar, con horario, remuneración, propiedad y recursos separados de la UV.", "firstMove": "No firmes: describe entidad, funciones, horario, remuneración, duración, relación con proyectos y uso potencial de recursos y remítelo a RR. HH. PDI.", "steps": ["Describir actividad e intereses relacionados", "Clasificar compatibilidad y autorización", "Resolver propiedad, confidencialidad y recursos", "Obtener resolución y aplicar abstenciones"] },
+      "resolution": {
+        "decisionRules": ["Distingue actividad privada, actividad exceptuada, contrato artículo 60 y función en spin-off; no comparten régimen.", "Aunque sea compatible, debes abstenerte de decisiones UV relacionadas con tu interés personal cuando proceda."],
+        "stopConditions": ["No firmes ni empieces antes de la resolución o confirmación aplicable.", "No uses datos, equipos, personal, nombre o tiempo UV como parte de la actividad privada."],
+        "completionEvidence": ["Descripción completa y declaración de intereses.", "Resolución o criterio de compatibilidad archivado.", "Separación de recursos y abstenciones documentadas."],
+        "escalation": ["RR. HH. PDI tramita compatibilidades; plantea el caso antes de comprometerte.", "Si la actividad puede articularse institucionalmente, consulta también a Transferencia en lugar de tratarla como privada." ]
+      }
+    },
+    {
+      "id": "elegir-recurso-queja-denuncia", "number": 50, "category": "cumplimiento", "baseChapter": 36,
+      "title": "Elegir entre recurso, queja, Sindicatura o denuncia", "scenario": "Recibes una decisión desfavorable o conoces una actuación irregular y necesitas usar el canal que realmente puede producir el efecto buscado.",
+      "aliases": ["recurso", "queja", "Sindicatura", "denuncia", "canal interno", "represalias", "resolución"], "reviewedOn": "2026-08-09",
+      "guide": { "outcome": "El objetivo se vincula al canal competente sin perder plazos: revisión de resolución, defensa universitaria, protocolo especializado o comunicación protegida de infracción.", "firstMove": "Define qué quieres obtener y conserva acto, notificación, fecha, hechos y evidencias; separa resolución recurrible de conducta o irregularidad.", "steps": ["Clasificar acto, conflicto o infracción", "Identificar efecto, órgano y plazo", "Preparar hechos, fundamentos y petición", "Registrar por el canal correcto y seguir hasta cierre"] },
+      "resolution": {
+        "decisionRules": ["Una queja o Sindicatura no interrumpe el plazo de un recurso administrativo o judicial.", "El canal interno no sustituye impugnaciones de notas, protocolos de acoso, emergencias o denuncias penales cuando esos son los cauces específicos."],
+        "stopConditions": ["No dejes correr un plazo mientras esperas respuesta informal o de un canal sin efecto suspensivo.", "No recopiles masivamente información ajena ni publiques acusaciones para reforzar una denuncia."],
+        "completionEvidence": ["Clasificación, plazo y efecto del canal documentados.", "Escrito factual con petición y evidencias pertinentes.", "Justificante, buzón seguro, resolución o cierre conservados."],
+        "escalation": ["Si existe pie de recursos, sigue literalmente órgano y plazo y solicita asesoramiento cuando sea necesario.", "Ante riesgo inmediato, posible delito o represalia, activa además la protección y autoridad competente sin esperar al trámite ordinario." ]
+      }
+    }
+  ]
+}
