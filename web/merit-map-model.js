@@ -18,22 +18,55 @@ export const MERIT_PROFILE_DEFAULTS = Object.freeze({
   ipAllocation: "research"
 });
 
+export const TRADEOFF_OBJECTIVES = Object.freeze({
+  balanced: Object.freeze({ label: "Equilibrio de carrera", weights: { cu: 1, funding: 1, independence: 1, transfer: 0.5, international: 0.6 } }),
+  cu: Object.freeze({ label: "Llegar antes a CU", weights: { cu: 2, funding: 0.6, independence: 0.9, transfer: 0.25, international: 0.3 } }),
+  funding: Object.freeze({ label: "Consolidar financiación", weights: { cu: 0.6, funding: 2, independence: 1.2, transfer: 0.5, international: 0.8 } }),
+  europe: Object.freeze({ label: "Internacionalizar la línea", weights: { cu: 0.4, funding: 1.2, independence: 1.2, transfer: 0.5, international: 3 } }),
+  transfer: Object.freeze({ label: "Transferir tecnología", weights: { cu: 0.4, funding: 0.8, independence: 0.8, transfer: 3.5, international: 0.2 } })
+});
+
 export function validateMeritMapData(data) {
   if (!data || !Array.isArray(data.systems) || !Array.isArray(data.assets) || !Array.isArray(data.sources)) throw new TypeError("Mapa de méritos incompleto");
   const systemIds = uniqueIds(data.systems, "sistema");
   const sourceIds = uniqueIds(data.sources, "fuente");
   uniqueIds(data.assets, "activo");
+  uniqueIds(data.tradeoffOptions ?? [], "ruta de trade-off");
+  for (const route of data.tradeoffOptions ?? []) {
+    for (const key of ["cu", "funding", "independence", "transfer", "international"]) requireScore(route.benefits?.[key], `${route.id}.benefits.${key}`);
+    for (const key of ["time", "uncertainty", "dependency"]) requireScore(route.burdens?.[key], `${route.id}.burdens.${key}`);
+    requireScore(route.readiness, `${route.id}.readiness`);
+    if (!Array.isArray(route.effortHours) || route.effortHours.length !== 2 || route.effortHours.some((value) => !Number.isFinite(value) || value < 0)) throw new TypeError(`Horas inválidas en ${route.id}`);
+  }
   for (const asset of data.assets) {
     for (const systemId of Object.keys(asset.systems ?? {})) {
       if (!systemIds.has(systemId)) throw new Error(`Sistema desconocido en ${asset.id}: ${systemId}`);
     }
   }
-  for (const item of [...data.systems, ...(data.callScorecards ?? []), ...(data.tailoredCalls ?? [])]) {
+  for (const item of [...data.systems, ...(data.callScorecards ?? []), ...(data.tailoredCalls ?? []), ...(data.tradeoffOptions ?? [])]) {
     for (const sourceId of item.sourceIds ?? []) {
       if (!sourceIds.has(sourceId)) throw new Error(`Fuente desconocida en ${item.id}: ${sourceId}`);
     }
   }
   return true;
+}
+
+export function calculateTradeoffRanking(options, rawSettings = {}) {
+  if (!Array.isArray(options)) throw new TypeError("Las rutas de decisión deben ser una lista");
+  const objective = TRADEOFF_OBJECTIVES[rawSettings.objective] ? rawSettings.objective : "balanced";
+  const capacityHours = integer(rawSettings.capacityHours, 2, 20, 8);
+  const objectiveProfile = TRADEOFF_OBJECTIVES[objective];
+  const ranked = options.map((option) => scoreTradeoffOption(option, objectiveProfile.weights, capacityHours));
+  ranked.sort((left, right) => right.priorityIndex - left.priorityIndex || right.strategicValue - left.strategicValue || left.title.localeCompare(right.title, "es"));
+  return {
+    objective,
+    objectiveLabel: objectiveProfile.label,
+    capacityHours,
+    routes: ranked,
+    primary: ranked[0] ?? null,
+    complement: findComplement(ranked),
+    overloadCount: ranked.filter((route) => route.capacityState === "overload").length
+  };
 }
 
 export function calculateMeritScenario(rawProfile = {}) {
@@ -69,6 +102,7 @@ export function assetLeverage(asset) {
 }
 
 export function exportMeritMapMarkdown(scenario, data, generatedOn = new Date()) {
+  const tradeoffs = calculateTradeoffRanking(data.tradeoffOptions ?? [], { objective: "balanced", capacityHours: 8 });
   const lines = [
     `# ${data.title}`,
     "",
@@ -85,6 +119,14 @@ export function exportMeritMapMarkdown(scenario, data, generatedOn = new Date())
     "## Prioridades personales",
     "",
     ...scenario.priorities.map((item, index) => `${index + 1}. **${item.title}.** ${item.reason}`),
+    "",
+    "## Trade-offs · supuesto de equilibrio y 8 h/semana de pico",
+    "",
+    "> Índice heurístico personal de 1 a 5; no es baremo ni probabilidad de éxito.",
+    "",
+    "| Ruta | Encaje | Valor | Carga | Capacidad |",
+    "|---|---:|---:|---:|---|",
+    ...tradeoffs.routes.map((route) => `| ${route.title} | ${formatNumber(route.priorityIndex)}/5 | ${formatNumber(route.strategicValue)}/5 | ${formatNumber(route.burden)}/5 | ${route.effortMin}–${route.effortMax} h/semana · ${route.capacityState} |`),
     "",
     "## Activos de alto apalancamiento",
     "",
@@ -115,6 +157,29 @@ function calculateResearch(profile) {
       : `${profile.sexennia}/3 sexenios hacia el mínimo automático de 1.2.1; también puede acreditarse con contribuciones no usadas.`,
     caveat: "Este subtotal no incluye resultados 1.2, transferencia, divulgación ni otros méritos y no equivale a la puntuación completa del bloque."
   };
+}
+
+function scoreTradeoffOption(option, weights, capacityHours) {
+  const benefitKeys = ["cu", "funding", "independence", "transfer", "international"];
+  const weightedValue = benefitKeys.reduce((sum, key) => sum + boundedScore(option.benefits?.[key]) * weights[key], 0);
+  const weightTotal = benefitKeys.reduce((sum, key) => sum + weights[key], 0);
+  const strategicValue = round1(weightedValue / weightTotal);
+  const burden = round1(["time", "uncertainty", "dependency"].reduce((sum, key) => sum + boundedScore(option.burdens?.[key]), 0) / 3);
+  const readiness = boundedScore(option.readiness);
+  const effortMin = integer(option.effortHours?.[0], 0, 40, 0);
+  const effortMax = integer(option.effortHours?.[1], effortMin, 40, effortMin);
+  const capacityState = capacityHours < effortMin ? "overload" : capacityHours < effortMax ? "tight" : "comfortable";
+  const capacityPenalty = capacityState === "overload" ? 1.25 : capacityState === "tight" ? 0.35 : 0;
+  const priorityIndex = round1(Math.max(1, Math.min(5, strategicValue + (readiness - 3) * 0.2 - (burden - 3) * 0.18 - capacityPenalty)));
+  return { ...option, strategicValue, burden, readiness, effortMin, effortMax, capacityState, priorityIndex };
+}
+
+function findComplement(ranked) {
+  const primary = ranked[0];
+  if (!primary) return null;
+  return ranked.find((route) => route.id !== primary.id && route.capacityState !== "overload" && route.cluster !== primary.cluster)
+    ?? ranked.find((route) => route.id !== primary.id && route.capacityState !== "overload")
+    ?? null;
 }
 
 function calculateTeaching(profile) {
@@ -202,6 +267,9 @@ function cap100(value) { return Math.min(100, value); }
 function integer(value, min, max, fallback) { const number = Number(value); return Number.isFinite(number) ? Math.min(max, Math.max(min, Math.round(number))) : fallback; }
 function normalizeText(value) { return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim(); }
 function formatNumber(value) { return new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 }).format(value); }
+function boundedScore(value) { const number = Number(value); return Number.isFinite(number) ? Math.min(5, Math.max(1, number)) : 1; }
+function round1(value) { return Math.round(value * 10) / 10; }
+function requireScore(value, label) { if (!Number.isFinite(value) || value < 1 || value > 5) throw new RangeError(`Escala 1–5 inválida: ${label}`); }
 function uniqueIds(items, label) {
   const ids = new Set();
   for (const item of items) {

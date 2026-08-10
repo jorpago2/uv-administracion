@@ -37,11 +37,12 @@
       <a href="#lectura">01 Punto de partida</a>
       <a href="#simulador">02 Simulador CU</a>
       <a href="#mapa">03 Mapa de activos</a>
-      <a href="#afinidad">04 Convocatorias afines</a>
-      <a href="#convocatorias">05 Baremos</a>
-      <a href="#matriz">06 Matriz</a>
-      <a href="#prioridad">07 Prioridad personal</a>
-      <a href="#fuentes">08 Fuentes</a>
+      <a href="#tradeoffs">04 Decidir</a>
+      <a href="#afinidad">05 Convocatorias afines</a>
+      <a href="#convocatorias">06 Baremos</a>
+      <a href="#matriz">07 Matriz</a>
+      <a href="#prioridad">08 Prioridad personal</a>
+      <a href="#fuentes">09 Fuentes</a>
     </nav>
 
     <section class="merit-section" id="lectura" aria-labelledby="baselineTitle">
@@ -122,9 +123,36 @@
       <div class="merit-assets" id="meritAssets"></div>
     </section>
 
+    <section class="merit-section merit-tradeoff-section" id="tradeoffs" aria-labelledby="tradeoffTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">04 · Coste de oportunidad explícito</p>
+        <h2 id="tradeoffTitle">Panel de trade-offs</h2>
+        <p>Compara qué gana y qué sacrifica cada ruta. Los valores de 1 a 5 y las horas son estimaciones personales para ordenar decisiones: no son puntos ANECA, probabilidad de éxito ni dedicación oficial.</p>
+      </div>
+      <form class="merit-tradeoff-controls" id="meritTradeoffControls">
+        <label>Objetivo que quieres proteger
+          <select name="objective" id="meritTradeoffObjective"></select>
+        </label>
+        <label>Horas semanales de pico realmente protegidas
+          <select name="capacityHours">
+            <option value="4">4 h · margen bajo</option>
+            <option value="8" selected>8 h · margen medio</option>
+            <option value="12">12 h · bloque alto</option>
+            <option value="16">16 h · dedicación intensiva</option>
+          </select>
+        </label>
+      </form>
+      <div class="merit-tradeoff-formula">
+        <strong>Cómo leer el índice</strong>
+        <p>Promedia el valor para CU, financiación, independencia, transferencia e internacionalización según el objetivo; después ajusta ligeramente por preparación, carga y encaje con las horas disponibles. Sirve para ordenar, no para decidir automáticamente.</p>
+      </div>
+      <div class="merit-tradeoff-summary" id="meritTradeoffSummary" aria-live="polite"></div>
+      <div class="merit-tradeoff-panels" id="meritTradeoffPanels"></div>
+    </section>
+
     <section class="merit-section" id="afinidad" aria-labelledby="fitTitle">
       <div class="merit-section__head">
-        <p class="hub-kicker">04 · Afinidad con la línea ICMUV</p>
+        <p class="hub-kicker">05 · Afinidad con la línea ICMUV</p>
         <h2 id="fitTitle">Proyectos estatales y europeos más afines</h2>
         <p>El encaje se puntúa de 1 a 5 como heurística personal —no como probabilidad de éxito— para una línea que une dispositivos, semiconductores y materiales avanzados, fotónica integrada, microfabricación, caracterización y nuevas funcionalidades.</p>
       </div>
@@ -134,7 +162,7 @@
 
     <section class="merit-section merit-section--dark" id="convocatorias" aria-labelledby="callsTitle">
       <div class="merit-section__head">
-        <p class="hub-kicker">05 · Dónde se decide una propuesta</p>
+        <p class="hub-kicker">06 · Dónde se decide una propuesta</p>
         <h2 id="callsTitle">Pesos oficiales de convocatorias</h2>
         <p>Las barras muestran el máximo de cada criterio. Un historial potente ayuda, pero una propuesta AEI deficiente puede quedar fuera aunque el CV sea bueno porque existen umbrales separados.</p>
       </div>
@@ -147,7 +175,7 @@
 
     <section class="merit-section" id="matriz" aria-labelledby="matrixTitle">
       <div class="merit-section__head">
-        <p class="hub-kicker">06 · Vista comparada</p>
+        <p class="hub-kicker">07 · Vista comparada</p>
         <h2 id="matrixTitle">Qué reutiliza cada sistema</h2>
         <p>La matriz indica el tipo de relación, no una equivalencia de puntos entre sistemas. Desplázala horizontalmente en pantallas pequeñas.</p>
       </div>
@@ -158,7 +186,7 @@
 
     <section class="merit-section" id="prioridad" aria-labelledby="priorityTitle">
       <div class="merit-section__head">
-        <p class="hub-kicker">07 · Aplicado a Jorge</p>
+        <p class="hub-kicker">08 · Aplicado a Jorge</p>
         <h2 id="priorityTitle">Orden sugerido de construcción</h2>
         <p>Este orden usa tus datos actuales y cambia con el simulador. Prioriza primero mínimos nítidos y después activos que alimentan varios procesos sin dispersar la línea científica.</p>
       </div>
@@ -172,7 +200,7 @@
 
     <section class="merit-section" id="fuentes" aria-labelledby="sourcesTitle">
       <div class="merit-section__head">
-        <p class="hub-kicker">08 · Trazabilidad</p>
+        <p class="hub-kicker">09 · Trazabilidad</p>
         <h2 id="sourcesTitle">Fuentes oficiales</h2>
         <p id="meritReviewed"></p>
       </div>

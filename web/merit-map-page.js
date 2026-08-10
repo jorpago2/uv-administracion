@@ -2,8 +2,10 @@ import "./site-shell.js";
 import meritData from "./data/merit-map.json";
 import {
   MERIT_PROFILE_DEFAULTS,
+  TRADEOFF_OBJECTIVES,
   assetLeverage,
   calculateMeritScenario,
+  calculateTradeoffRanking,
   exportMeritMapMarkdown,
   filterAssets,
   validateMeritMapData
@@ -12,11 +14,14 @@ import {
 const STORAGE_KEY = "uv-merit-map-profile-v1";
 const form = document.querySelector("#meritScenarioForm");
 const filters = document.querySelector("#meritFilters");
+const tradeoffControls = document.querySelector("#meritTradeoffControls");
 let scenario;
 
 validateMeritMapData(meritData);
 renderBaseline();
 renderSystemOptions();
+renderTradeoffObjectiveOptions();
+renderTradeoffs();
 renderTailoredCalls();
 renderScorecards();
 renderMatrix();
@@ -33,6 +38,7 @@ form.addEventListener("submit", (event) => {
 });
 form.addEventListener("input", updateScenario);
 filters.addEventListener("input", updateAssets);
+tradeoffControls.addEventListener("input", renderTradeoffs);
 document.querySelector("#meritReset").addEventListener("click", () => {
   localStorage.removeItem(STORAGE_KEY);
   writeForm({ ...MERIT_PROFILE_DEFAULTS, ...meritData.personalBaseline });
@@ -90,6 +96,70 @@ function updateAssets() {
       <div class="merit-flow"><div><b>Hacer</b><p>${escapeHtml(asset.action)}</p></div><span aria-hidden="true">→</span><div><b>Conservar</b><p>${escapeHtml(asset.evidence)}</p></div></div>
       <div class="merit-relations">${Object.entries(asset.systems).map(([systemId, relation]) => relationChip(systemId, relation)).join("")}</div>
     </article>`).join("");
+}
+
+function renderTradeoffObjectiveOptions() {
+  const select = document.querySelector("#meritTradeoffObjective");
+  select.append(...Object.entries(TRADEOFF_OBJECTIVES).map(([id, objective]) => option(id, objective.label)));
+}
+
+function renderTradeoffs() {
+  const settings = Object.fromEntries(new FormData(tradeoffControls));
+  const tradeoffs = calculateTradeoffRanking(meritData.tradeoffOptions, settings);
+  const summary = document.querySelector("#meritTradeoffSummary");
+  summary.innerHTML = `
+    <article class="merit-tradeoff-summary__primary">
+      <span>Mayor encaje estratégico con este supuesto</span>
+      <strong>${escapeHtml(tradeoffs.primary?.title ?? "Sin rutas")}</strong>
+      ${tradeoffs.primary ? `<b class="merit-summary-capacity">Capacidad: ${escapeHtml(capacityLabel(tradeoffs.primary.capacityState))} · ${tradeoffs.primary.effortMin}–${tradeoffs.primary.effortMax} h/semana de pico</b>` : ""}
+      <p>${escapeHtml(tradeoffs.primary?.nextAction ?? "")}</p>
+    </article>
+    <article>
+      <span>Complemento que no duplica frente</span>
+      <strong>${escapeHtml(tradeoffs.complement?.title ?? "Ninguno con la capacidad indicada")}</strong>
+      <p>${tradeoffs.overloadCount ? `${tradeoffs.overloadCount} rutas no caben en ${tradeoffs.capacityHours} h/semana de pico sin sustituir otra actividad.` : "Todas las rutas caben individualmente en la capacidad declarada; no significa que quepan simultáneamente."}</p>
+    </article>`;
+
+  document.querySelector("#meritTradeoffPanels").innerHTML = tradeoffs.routes.map((route, index) => `
+    <article class="merit-tradeoff-card merit-tradeoff-card--${escapeHtml(route.capacityState)}">
+      <header>
+        <div><span>${String(index + 1).padStart(2, "0")} · ${escapeHtml(route.eyebrow)}</span><h3>${escapeHtml(route.title)}</h3></div>
+        <div class="merit-tradeoff-index"><strong>${formatNumber(route.priorityIndex)}</strong><small>/5 encaje</small></div>
+      </header>
+      <p class="merit-tradeoff-card__summary">${escapeHtml(route.summary)}</p>
+      <div class="merit-tradeoff-capacity">
+        <span class="merit-capacity-badge merit-capacity-badge--${escapeHtml(route.capacityState)}">${escapeHtml(capacityLabel(route.capacityState))}</span>
+        <strong>${route.effortMin}–${route.effortMax} h/semana de pico</strong>
+        <small>${escapeHtml(route.horizon)}</small>
+      </div>
+      <div class="merit-tradeoff-ledger">
+        <section aria-label="Valor estratégico estimado">
+          <div class="merit-ledger-title"><h4>Qué impulsa</h4><strong>${formatNumber(route.strategicValue)}/5</strong></div>
+          ${tradeoffBar("CU", route.benefits.cu, "benefit")}
+          ${tradeoffBar("Financiación", route.benefits.funding, "benefit")}
+          ${tradeoffBar("Independencia", route.benefits.independence, "benefit")}
+          ${tradeoffBar("Transferencia", route.benefits.transfer, "benefit")}
+          ${tradeoffBar("Internacionalización", route.benefits.international, "benefit")}
+        </section>
+        <section aria-label="Carga estimada">
+          <div class="merit-ledger-title"><h4>Qué exige</h4><strong>${formatNumber(route.burden)}/5</strong></div>
+          ${tradeoffBar("Tiempo", route.burdens.time, "burden")}
+          ${tradeoffBar("Incertidumbre", route.burdens.uncertainty, "burden")}
+          ${tradeoffBar("Dependencia externa", route.burdens.dependency, "burden")}
+          ${tradeoffBar("Preparación actual", route.readiness, "readiness")}
+        </section>
+      </div>
+      <dl class="merit-tradeoff-notes">
+        <div><dt>Coste de oportunidad</dt><dd>${escapeHtml(route.tradeoff)}</dd></div>
+        <div><dt>Activar solo si</dt><dd>${escapeHtml(route.gate)}</dd></div>
+        <div><dt>Siguiente paso reversible</dt><dd>${escapeHtml(route.nextAction)}</dd></div>
+      </dl>
+      <footer>${sourceLinks(route.sourceIds)}</footer>
+    </article>`).join("");
+}
+
+function tradeoffBar(label, value, tone) {
+  return `<div class="merit-tradeoff-bar merit-tradeoff-bar--${tone}"><div><span>${escapeHtml(label)}</span><b>${value}/5</b></div><i aria-hidden="true"><span style="--level:${Number(value) * 20}%"></span></i></div>`;
 }
 
 function renderScorecards() {
@@ -193,6 +263,7 @@ function initScrollSpy() {
 }
 
 function option(value, label) { const element = document.createElement("option"); element.value = value; element.textContent = label; return element; }
+function capacityLabel(state) { return ({ comfortable: "Cabe con margen", tight: "Cabe justo", overload: "Exige sustituir" })[state] ?? state; }
 function domainLabel(domain) { return ({ investigacion: "Investigación", financiacion: "Financiación", liderazgo: "Liderazgo", transferencia: "Transferencia", docencia: "Docencia", gestion: "Gestión" })[domain] ?? domain; }
 function formatNumber(value) { return new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 }).format(value); }
 function formatDate(value) { return new Intl.DateTimeFormat("es-ES", { dateStyle: "long", timeZone: "Europe/Madrid" }).format(new Date(`${value}T12:00:00+02:00`)); }

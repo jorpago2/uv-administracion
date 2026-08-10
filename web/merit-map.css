@@ -82,6 +82,59 @@
 .merit-relation--weighted { background: var(--color-secondary); }
 .merit-relation--eligibility { background: var(--color-error-paper); }
 
+.merit-tradeoff-section { background: var(--color-paper-muted); }
+.merit-tradeoff-controls { display: grid; gap: var(--space-md); padding: var(--space-lg); border: var(--rule-thick) solid var(--color-rule); background: var(--color-accent); box-shadow: var(--shadow-md); }
+.merit-tradeoff-controls label { min-width: 0; display: grid; gap: var(--space-xs); font-weight: 800; }
+.merit-tradeoff-controls select { width: 100%; min-width: 0; min-height: 3.2rem; padding: var(--space-xs) var(--space-sm); border: var(--rule) solid var(--color-rule); border-radius: 0; background: var(--color-paper); color: var(--color-ink); }
+.merit-tradeoff-formula { display: grid; gap: var(--space-xs); padding: var(--space-md) var(--space-lg); border-inline: var(--rule-thick) solid var(--color-rule); border-block-end: var(--rule-thick) solid var(--color-rule); background: var(--color-paper-raised); }
+.merit-tradeoff-formula strong { font: 800 var(--text-md)/1 var(--font-display); }
+.merit-tradeoff-formula p { max-width: 72rem; margin: 0; font-size: var(--text-sm); }
+.merit-tradeoff-summary { display: grid; gap: var(--space-md); margin-block: var(--space-xl); }
+.merit-tradeoff-summary article { min-width: 0; padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); }
+.merit-tradeoff-summary__primary { background: var(--color-secondary) !important; }
+.merit-tradeoff-summary span { display: block; font: 700 var(--text-xs)/1.2 var(--font-mono); text-transform: uppercase; }
+.merit-tradeoff-summary strong { display: block; margin-block-start: var(--space-sm); font: 800 var(--text-xl)/1 var(--font-display); overflow-wrap: anywhere; }
+.merit-summary-capacity { display: inline-block; margin-block-start: var(--space-sm); padding: var(--space-2xs) var(--space-xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-raised); font: 700 var(--text-xs)/1.4 var(--font-mono); }
+.merit-tradeoff-summary p { margin: var(--space-sm) 0 0; }
+.merit-tradeoff-panels { display: grid; gap: var(--space-xl); }
+.merit-tradeoff-card { min-width: 0; display: grid; align-content: start; border: var(--rule-thick) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-lg); }
+.merit-tradeoff-card--overload { box-shadow: 8px 8px 0 var(--color-error); }
+.merit-tradeoff-card--comfortable { box-shadow: 8px 8px 0 var(--color-success); }
+.merit-tradeoff-card > header { display: flex; justify-content: space-between; gap: var(--space-lg); padding: var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-ink); color: var(--color-paper); }
+.merit-tradeoff-card > header > div:first-child { min-width: 0; }
+.merit-tradeoff-card header span { font: 600 var(--text-xs)/1.3 var(--font-mono); text-transform: uppercase; }
+.merit-tradeoff-card h3 { max-width: 27ch; margin: var(--space-sm) 0 0; font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1; overflow-wrap: anywhere; }
+.merit-tradeoff-index { flex: 0 0 4.75rem; align-self: start; display: grid; place-items: center; min-height: 4.75rem; padding: var(--space-xs); border: var(--rule) solid var(--color-paper); background: var(--color-accent); color: var(--color-ink); text-align: center; }
+.merit-tradeoff-index strong { font: 800 var(--text-xl)/.9 var(--font-display); font-variant-numeric: tabular-nums; }
+.merit-tradeoff-index small { font: 700 var(--text-xs)/1.1 var(--font-mono); }
+.merit-tradeoff-card__summary { margin: 0; padding: var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); font-size: var(--text-md); }
+.merit-tradeoff-capacity { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-xs) var(--space-sm); align-items: center; padding: var(--space-md) var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-accent); }
+.merit-tradeoff-capacity strong { min-width: 0; overflow-wrap: anywhere; }
+.merit-tradeoff-capacity small { grid-column: 1 / -1; font-family: var(--font-mono); }
+.merit-capacity-badge { display: inline-flex; align-items: center; min-height: 2rem; padding-inline: var(--space-xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-raised); font: 800 var(--text-xs)/1 var(--font-mono); text-transform: uppercase; white-space: nowrap; }
+.merit-capacity-badge--comfortable { background: var(--color-success-paper); }
+.merit-capacity-badge--overload { background: var(--color-error-paper); }
+.merit-tradeoff-ledger { display: grid; border-block-end: var(--rule) solid var(--color-rule); }
+.merit-tradeoff-ledger > section { min-width: 0; padding: var(--space-lg); }
+.merit-tradeoff-ledger > section + section { border-block-start: var(--rule) solid var(--color-rule); }
+.merit-ledger-title { display: flex; justify-content: space-between; gap: var(--space-md); align-items: baseline; margin-block-end: var(--space-md); }
+.merit-ledger-title h4 { margin: 0; font: 800 var(--text-md)/1 var(--font-display); }
+.merit-ledger-title strong { font-family: var(--font-mono); }
+.merit-tradeoff-bar + .merit-tradeoff-bar { margin-block-start: var(--space-sm); }
+.merit-tradeoff-bar > div { display: flex; justify-content: space-between; gap: var(--space-sm); font-size: var(--text-sm); }
+.merit-tradeoff-bar b { font-family: var(--font-mono); }
+.merit-tradeoff-bar > i { display: block; height: .8rem; margin-block-start: var(--space-2xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-muted); }
+.merit-tradeoff-bar > i > span { display: block; width: var(--level); height: 100%; background: var(--color-secondary); }
+.merit-tradeoff-bar--burden > i > span { background: var(--color-error); }
+.merit-tradeoff-bar--readiness > i > span { background: var(--color-accent); }
+.merit-tradeoff-notes { margin: 0; }
+.merit-tradeoff-notes > div { padding: var(--space-md) var(--space-lg); border-block-end: var(--rule-thin) solid var(--color-rule); }
+.merit-tradeoff-notes dt { font: 800 var(--text-xs)/1.2 var(--font-mono); text-transform: uppercase; }
+.merit-tradeoff-notes dd { margin: var(--space-xs) 0 0; }
+.merit-tradeoff-notes > div:first-child { background: var(--color-error-paper); }
+.merit-tradeoff-notes > div:last-child { background: var(--color-success-paper); }
+.merit-tradeoff-card > footer { margin-block-start: auto; padding: var(--space-md) var(--space-lg); background: var(--color-paper-muted); }
+
 .merit-fit-legend { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-block-end: var(--space-xl); }
 .merit-fit-legend span { display: inline-flex; gap: var(--space-xs); align-items: center; padding: var(--space-xs) var(--space-sm); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); }
 .merit-fit-legend b { display: inline-grid; place-items: center; width: 2rem; aspect-ratio: 1; background: var(--color-accent); font-family: var(--font-mono); }
@@ -161,6 +214,9 @@
   .merit-blocks, .merit-assets, .merit-scorecards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .merit-block:last-child { grid-column: 1 / -1; }
   .merit-filters { grid-template-columns: minmax(14rem, 2fr) repeat(2, minmax(10rem, 1fr)); }
+  .merit-tradeoff-controls, .merit-tradeoff-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-tradeoff-ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-tradeoff-ledger > section + section { border-block-start: 0; border-inline-start: var(--rule) solid var(--color-rule); }
   .merit-flow { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
   .merit-flow > span { display: block; }
   .merit-tailored-call__body { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -178,6 +234,7 @@
   .merit-blocks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .merit-block:last-child { grid-column: auto; }
   .merit-assets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-tradeoff-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 47.999rem) {
@@ -185,6 +242,11 @@
   .merit-section { scroll-margin-top: 8rem; }
   .merit-form__actions .hub-button { width: 100%; white-space: normal; }
   .merit-block__head { align-items: end; }
+  .merit-tradeoff-card > header { align-items: start; }
+  .merit-tradeoff-index { flex-basis: 4rem; min-height: 4rem; }
+  .merit-tradeoff-capacity { grid-template-columns: 1fr; }
+  .merit-tradeoff-capacity small { grid-column: auto; }
+  .merit-capacity-badge { justify-self: start; white-space: normal; }
   .merit-erc-note { grid-template-columns: 1fr; }
   .merit-erc-note > span { width: 4.5rem; }
 }

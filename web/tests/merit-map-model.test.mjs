@@ -3,8 +3,10 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
   MERIT_PROFILE_DEFAULTS,
+  TRADEOFF_OBJECTIVES,
   assetLeverage,
   calculateMeritScenario,
+  calculateTradeoffRanking,
   exportMeritMapMarkdown,
   filterAssets,
   validateMeritMapData
@@ -17,6 +19,20 @@ test("el catálogo enlaza sistemas, convocatorias afines y fuentes existentes", 
   assert.ok(data.tailoredCalls.length >= 7);
   assert.ok(data.tailoredCalls.some((call) => call.code === "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03"));
   assert.ok(data.tailoredCalls.some((call) => call.code === "HORIZON-Chips-JU-2026-FT2-IA"));
+  assert.equal(data.tradeoffOptions.length, 8);
+});
+
+test("los trade-offs responden al objetivo y penalizan rutas que no caben", () => {
+  assert.equal(Object.keys(TRADEOFF_OBJECTIVES).length, 5);
+  const balanced = calculateTradeoffRanking(data.tradeoffOptions, { objective: "balanced", capacityHours: 8 });
+  const transfer = calculateTradeoffRanking(data.tradeoffOptions, { objective: "transfer", capacityHours: 8 });
+  const europe = calculateTradeoffRanking(data.tradeoffOptions, { objective: "europe", capacityHours: 8 });
+  const lowCapacity = calculateTradeoffRanking(data.tradeoffOptions, { objective: "balanced", capacityHours: 4 });
+  assert.equal(balanced.primary.id, "ge-engine");
+  assert.equal(transfer.primary.id, "patent-transfer-route");
+  assert.equal(europe.primary.id, "horizon-partner");
+  assert.equal(lowCapacity.routes.find((route) => route.id === "aei-pid-route").capacityState, "overload");
+  assert.ok(lowCapacity.overloadCount > balanced.overloadCount);
 });
 
 test("el punto de partida personal no inventa méritos todavía no maduros", () => {
@@ -55,5 +71,6 @@ test("la exportación conserva límites, lectura CU y fuentes", () => {
   const markdown = exportMeritMapMarkdown(scenario, data, new Date("2026-08-10T12:00:00+02:00"));
   assert.match(markdown, /Herramienta personal y no oficial/);
   assert.match(markdown, /## Lectura ANECA CU/);
+  assert.match(markdown, /## Trade-offs/);
   assert.match(markdown, /## Fuentes/);
 });
