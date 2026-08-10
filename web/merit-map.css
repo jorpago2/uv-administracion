@@ -1,0 +1,192 @@
+/* Mapa de méritos · neobrutalismo editorial, datos densos y responsive */
+.merit-main { width: min(100%, 92rem); margin-inline: auto; }
+.merit-main h1, .merit-main h2, .merit-main h3 { font-family: var(--font-display); }
+.merit-hero, .merit-section, .merit-disclaimer { padding-inline: clamp(var(--space-md), 4vw, var(--space-2xl)); }
+.merit-hero { display: grid; gap: var(--space-xl); padding-block: var(--space-xl) var(--space-2xl); border-block-end: var(--rule-thick) solid var(--color-rule); }
+.merit-hero h1 { max-width: 11ch; margin: 0; font: 800 clamp(3rem, 9vw, 7.4rem)/.88 var(--font-display); letter-spacing: -.06em; overflow-wrap: anywhere; }
+.merit-hero__lead { max-width: 59rem; margin: var(--space-lg) 0 0; font-size: clamp(var(--text-md), 2vw, var(--text-xl)); }
+.merit-hero__rule { align-self: end; padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-accent); box-shadow: var(--shadow-lg); }
+.merit-hero__rule > span { font: 700 var(--text-xs)/1 var(--font-mono); text-transform: uppercase; }
+.merit-hero__rule strong { display: block; margin-block-start: var(--space-md); font: 800 var(--text-xl)/1 var(--font-display); }
+.merit-hero__rule p { margin: var(--space-md) 0 0; }
+.merit-disclaimer { padding-block: var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-error-paper); }
+.merit-disclaimer p { max-width: 80rem; margin: var(--space-xs) 0 0; }
+.merit-jump { position: sticky; inset-block-start: 7.3rem; z-index: calc(var(--z-sticky) - 1); display: flex; overflow-x: auto; border-block-end: var(--rule) solid var(--color-rule); background: var(--color-ink); color: var(--color-paper); scrollbar-width: thin; }
+.merit-jump a { flex: 0 0 auto; min-height: 3rem; display: flex; align-items: center; padding-inline: var(--space-md); border-inline-end: var(--rule-thin) solid var(--color-paper-muted); font: 700 var(--text-xs)/1 var(--font-mono); text-decoration: none; white-space: nowrap; }
+.merit-jump a[aria-current] { background: var(--color-accent); color: var(--color-ink); }
+.merit-section { padding-block: var(--space-2xl); border-block-end: var(--rule-thick) solid var(--color-rule); scroll-margin-top: 11rem; }
+.merit-section__head { max-width: 66rem; margin-block-end: var(--space-xl); }
+.merit-section__head h2 { margin: 0; font: 800 clamp(2.2rem, 6vw, 5rem)/.94 var(--font-display); letter-spacing: -.045em; }
+.merit-section__head > p:last-child { max-width: 60rem; margin: var(--space-md) 0 0; font-size: var(--text-md); }
+
+.merit-baseline { display: grid; gap: var(--space-md); }
+.merit-baseline__card { min-width: 0; display: grid; align-content: start; gap: var(--space-xs); padding: var(--space-lg); border: var(--rule) solid var(--color-rule); box-shadow: var(--shadow-sm); background: var(--color-paper-raised); }
+.merit-baseline__card--done { background: var(--color-success-paper); }
+.merit-baseline__card--active { background: var(--color-accent); }
+.merit-baseline__card > span { font: 700 var(--text-xs)/1.2 var(--font-mono); text-transform: uppercase; }
+.merit-baseline__card > strong { font: 800 var(--text-xl)/1 var(--font-display); overflow-wrap: anywhere; }
+.merit-baseline__card p { margin: var(--space-xs) 0 0; }
+.merit-reading-grid { display: grid; gap: 0; margin-block-start: var(--space-2xl); border: var(--rule-thick) solid var(--color-rule); }
+.merit-reading-grid article { min-width: 0; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: var(--space-xs) var(--space-md); padding: var(--space-lg); background: var(--color-paper-raised); border-block-end: var(--rule) solid var(--color-rule); }
+.merit-reading-grid article:last-child { border-block-end: 0; }
+.merit-reading-grid article > span { grid-row: 1 / span 2; font: 700 var(--text-sm)/1 var(--font-mono); }
+.merit-reading-grid h3, .merit-reading-grid p { grid-column: 2; margin: 0; }
+.merit-reading-grid h3 { font-size: var(--text-lg); line-height: 1; }
+
+.merit-form { display: grid; gap: var(--space-lg); }
+.merit-form fieldset { min-width: 0; display: grid; gap: var(--space-md); margin: 0; padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); }
+.merit-form legend { padding-inline: var(--space-xs); font: 800 var(--text-lg)/1 var(--font-display); }
+.merit-form label, .merit-filters label { min-width: 0; display: grid; gap: var(--space-xs); align-content: start; font-weight: 700; }
+.merit-form input, .merit-form select, .merit-filters input, .merit-filters select { width: 100%; min-width: 0; min-height: 3.2rem; padding: var(--space-xs) var(--space-sm); border: var(--rule) solid var(--color-rule); border-radius: 0; background: var(--color-paper); color: var(--color-ink); }
+.merit-form__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.merit-blocks { display: grid; gap: var(--space-lg); margin-block-start: var(--space-2xl); }
+.merit-block { min-width: 0; border: var(--rule-thick) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-md); }
+.merit-block__head { display: flex; justify-content: space-between; gap: var(--space-md); align-items: start; padding: var(--space-lg); background: var(--color-ink); color: var(--color-paper); }
+.merit-block__head span { font: 600 var(--text-xs)/1.3 var(--font-mono); text-transform: uppercase; }
+.merit-block__head h3 { margin: var(--space-xs) 0 0; font-size: var(--text-xl); line-height: 1; }
+.merit-block__head > strong { flex: 0 0 auto; font: 800 var(--text-2xl)/.9 var(--font-display); font-variant-numeric: tabular-nums; }
+.merit-block__head small { display: block; margin-block-start: var(--space-xs); font: 600 var(--text-xs)/1 var(--font-mono); text-align: end; }
+.merit-block__track { position: relative; height: 1.5rem; border-block: var(--rule) solid var(--color-rule); background: var(--color-paper-muted); overflow: visible; }
+.merit-block__track i { display: block; width: min(var(--score), 100%); height: 100%; background: var(--color-secondary); }
+.merit-block__track b { position: absolute; inset-block: -0.55rem; inset-inline-start: 50%; display: grid; place-items: center; width: 2.2rem; height: 2.2rem; transform: translateX(-50%); border: var(--rule-thin) solid var(--color-rule); background: var(--color-accent); font: 700 var(--text-xs)/1 var(--font-mono); }
+.merit-block__minimum { margin: 0; padding: var(--space-md) var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-accent); font-weight: 700; }
+.merit-block ul { margin: 0; padding: 0; list-style: none; }
+.merit-block li { display: grid; grid-template-columns: minmax(0, 1fr) 4rem; gap: var(--space-md); align-items: start; padding: var(--space-md) var(--space-lg); border-block-end: var(--rule-thin) solid var(--color-rule); }
+.merit-block li div { min-width: 0; display: grid; gap: var(--space-2xs); }
+.merit-block li small { color: var(--color-ink-soft); }
+.merit-block li > span { font: 800 var(--text-md)/1 var(--font-mono); text-align: end; font-variant-numeric: tabular-nums; }
+.merit-block__empty, .merit-block__caveat { margin: 0; padding: var(--space-md) var(--space-lg); }
+.merit-block__caveat { background: var(--color-paper-muted); font-size: var(--text-sm); }
+.merit-warnings { margin-block-start: var(--space-xl); padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-error-paper); }
+.merit-warnings ul { margin-block-end: 0; }
+
+.merit-filters { display: grid; gap: var(--space-md); padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-accent); box-shadow: var(--shadow-sm); }
+.merit-filter-status { margin: var(--space-lg) 0; font: 600 var(--text-sm)/1.4 var(--font-mono); }
+.merit-assets { display: grid; gap: var(--space-lg); }
+.merit-asset { min-width: 0; display: grid; align-content: start; border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-md); }
+.merit-asset header { display: flex; justify-content: space-between; gap: var(--space-md); align-items: center; padding: var(--space-sm) var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-accent); }
+.merit-asset header > span { font: 700 var(--text-xs)/1 var(--font-mono); text-transform: uppercase; }
+.merit-asset header > strong { font: 800 var(--text-lg)/1 var(--font-display); }
+.merit-asset header small { font: 600 var(--text-xs)/1 var(--font-mono); }
+.merit-asset h3 { margin: 0; padding: var(--space-lg); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1; }
+.merit-flow { display: grid; gap: var(--space-md); padding: 0 var(--space-lg) var(--space-lg); }
+.merit-flow > div { min-width: 0; padding: var(--space-md); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper); }
+.merit-flow > span { display: none; align-self: center; font: 800 var(--text-xl)/1 var(--font-display); }
+.merit-flow b { font: 700 var(--text-xs)/1 var(--font-mono); text-transform: uppercase; }
+.merit-flow p { margin: var(--space-xs) 0 0; }
+.merit-relations { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-block-start: auto; padding: var(--space-md) var(--space-lg); border-block-start: var(--rule) solid var(--color-rule); background: var(--color-paper-muted); }
+.merit-relation { min-width: 7rem; display: grid; gap: var(--space-2xs); padding: var(--space-xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-raised); }
+.merit-relation b { font-size: var(--text-sm); }
+.merit-relation small { font-size: var(--text-xs); }
+.merit-relation--points, .merit-relation--points-choice { background: var(--color-accent); }
+.merit-relation--weighted { background: var(--color-secondary); }
+.merit-relation--eligibility { background: var(--color-error-paper); }
+
+.merit-fit-legend { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-block-end: var(--space-xl); }
+.merit-fit-legend span { display: inline-flex; gap: var(--space-xs); align-items: center; padding: var(--space-xs) var(--space-sm); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); }
+.merit-fit-legend b { display: inline-grid; place-items: center; width: 2rem; aspect-ratio: 1; background: var(--color-accent); font-family: var(--font-mono); }
+.merit-tailored-calls { display: grid; gap: var(--space-xl); }
+.merit-tailored-call { min-width: 0; border: var(--rule-thick) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-lg); }
+.merit-tailored-call--priority { box-shadow: 8px 8px 0 var(--color-secondary); }
+.merit-tailored-call > header { display: flex; justify-content: space-between; gap: var(--space-lg); padding: var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-ink); color: var(--color-paper); }
+.merit-tailored-call > header > div:first-child { min-width: 0; }
+.merit-tailored-call header span { font: 600 var(--text-xs)/1.2 var(--font-mono); text-transform: uppercase; }
+.merit-tailored-call h3 { max-width: 38ch; margin: var(--space-sm) 0; font-size: clamp(1.5rem, 3vw, 2.4rem); line-height: 1; overflow-wrap: anywhere; }
+.merit-tailored-call code { display: block; font: 600 var(--text-xs)/1.4 var(--font-mono); overflow-wrap: anywhere; }
+.merit-fit-score { flex: 0 0 4.5rem; align-self: start; display: grid; place-items: center; aspect-ratio: 1; border: var(--rule) solid var(--color-paper); background: var(--color-accent); color: var(--color-ink); }
+.merit-fit-score strong { font: 800 var(--text-xl)/.8 var(--font-display); }
+.merit-fit-score small { font: 700 var(--text-xs)/1 var(--font-mono); }
+.merit-tailored-call__meta { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: var(--space-md) var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-accent); }
+.merit-tailored-call__meta span { max-width: 100%; padding: var(--space-2xs) var(--space-xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-raised); font: 600 var(--text-xs)/1.4 var(--font-mono); overflow-wrap: anywhere; }
+.merit-tailored-call__body { display: grid; }
+.merit-tailored-call__body > div { min-width: 0; padding: var(--space-lg); border-block-end: var(--rule-thin) solid var(--color-rule); }
+.merit-tailored-call__body h4 { margin: 0; font: 800 var(--text-md)/1 var(--font-display); }
+.merit-tailored-call__body p { margin: var(--space-sm) 0 0; }
+.merit-tailored-call__body ul { margin-block-end: 0; padding-inline-start: 1.25rem; }
+.merit-tailored-call > footer { padding: var(--space-lg); background: var(--color-paper-muted); }
+.merit-tailored-call > footer > strong { font: 800 var(--text-md)/1 var(--font-display); }
+.merit-tailored-call > footer > p { margin: var(--space-sm) 0 var(--space-md); }
+
+.merit-section--dark { background: var(--color-ink); color: var(--color-paper); }
+.merit-scorecards { display: grid; gap: var(--space-lg); }
+.merit-scorecard { min-width: 0; border: var(--rule) solid var(--color-paper); background: var(--color-paper); color: var(--color-ink); box-shadow: 6px 6px 0 var(--color-accent); }
+.merit-scorecard > header { display: flex; justify-content: space-between; gap: var(--space-md); padding: var(--space-lg); border-block-end: var(--rule) solid var(--color-rule); background: var(--color-accent); }
+.merit-scorecard header span { font: 600 var(--text-xs)/1.2 var(--font-mono); }
+.merit-scorecard h3 { margin: var(--space-xs) 0 0; font-size: var(--text-xl); line-height: 1; }
+.merit-source-links { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.merit-source-links a { align-self: start; padding: var(--space-2xs) var(--space-xs); border: var(--rule-thin) solid currentColor; font: 700 var(--text-xs)/1.3 var(--font-mono); text-decoration: none; }
+.merit-scorecard__parts { padding: var(--space-lg); }
+.merit-score-row + .merit-score-row { margin-block-start: var(--space-lg); }
+.merit-score-row > div:first-child { display: flex; justify-content: space-between; gap: var(--space-md); }
+.merit-score-row > div:first-child strong { font-family: var(--font-mono); }
+.merit-score-track { position: relative; height: 1.25rem; margin-block: var(--space-xs); border: var(--rule-thin) solid var(--color-rule); background: var(--color-paper-muted); }
+.merit-score-track i { display: block; width: var(--weight); height: 100%; background: var(--color-secondary); }
+.merit-score-track b { position: absolute; inset-block: -4px; inset-inline-start: var(--threshold); width: var(--rule); height: calc(100% + 8px); background: var(--color-error); }
+.merit-score-row small { display: block; color: var(--color-ink-soft); overflow-wrap: anywhere; }
+.merit-erc-note { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--space-lg); margin-block-start: var(--space-xl); padding: var(--space-lg); border: var(--rule) solid var(--color-paper); background: var(--color-accent); color: var(--color-ink); box-shadow: 6px 6px 0 var(--color-paper); }
+.merit-erc-note > span { display: grid; place-items: center; align-self: start; aspect-ratio: 1; border: var(--rule) solid var(--color-rule); background: var(--color-ink); color: var(--color-paper); font: 800 var(--text-md)/1 var(--font-display); }
+.merit-erc-note h3 { margin: 0; font-size: var(--text-xl); line-height: 1; }
+.merit-erc-note p { margin: var(--space-sm) 0 0; }
+
+.merit-matrix-wrap { max-width: 100%; overflow: auto; border: var(--rule-thick) solid var(--color-rule); box-shadow: var(--shadow-md); }
+.merit-matrix { width: max(100%, 72rem); border-collapse: collapse; background: var(--color-paper-raised); }
+.merit-matrix caption { padding: var(--space-md); background: var(--color-accent); border-block-end: var(--rule) solid var(--color-rule); text-align: start; font-size: var(--text-sm); font-weight: 700; }
+.merit-matrix th, .merit-matrix td { min-width: 6rem; padding: var(--space-sm); border-inline-end: var(--rule-thin) solid var(--color-rule); border-block-end: var(--rule-thin) solid var(--color-rule); text-align: center; }
+.merit-matrix thead th { position: sticky; inset-block-start: 0; z-index: 2; background: var(--color-ink); color: var(--color-paper); font: 700 var(--text-xs)/1.2 var(--font-mono); }
+.merit-matrix th:first-child { position: sticky; inset-inline-start: 0; z-index: 1; min-width: 15rem; max-width: 18rem; background: var(--color-paper); text-align: start; }
+.merit-matrix thead th:first-child { z-index: 3; background: var(--color-ink); }
+.merit-matrix abbr { display: inline-grid; place-items: center; min-width: 2.5rem; min-height: 2.5rem; border: var(--rule-thin) solid var(--color-rule); background: var(--color-accent); font: 800 var(--text-sm)/1 var(--font-mono); text-decoration: none; cursor: help; }
+
+.merit-priorities { margin: 0; padding: 0; list-style: none; border-block-start: var(--rule-thick) solid var(--color-rule); }
+.merit-priorities li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-xl); border-block-end: var(--rule) solid var(--color-rule); }
+.merit-priorities li > span { font: 700 var(--text-md)/1 var(--font-mono); }
+.merit-priorities h3 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1; }
+.merit-priorities p { max-width: 68rem; margin: var(--space-sm) 0 0; }
+.merit-strategy { margin-block-start: var(--space-xl); padding: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-accent); box-shadow: var(--shadow-md); }
+.merit-strategy strong { font: 800 var(--text-xl)/1 var(--font-display); }
+.merit-strategy p { max-width: 72rem; margin: var(--space-md) 0 0; }
+.merit-back { min-height: 3.25rem; display: inline-flex; align-items: center; margin-block-start: var(--space-xl); padding-inline: var(--space-lg); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); font-weight: 800; text-decoration: none; }
+.merit-sources { columns: 1; padding-inline-start: 1.25rem; }
+.merit-sources li { break-inside: avoid; padding-block: var(--space-xs); overflow-wrap: anywhere; }
+
+@media (min-width: 48rem) {
+  .merit-hero { grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr); }
+  .merit-baseline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-reading-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-reading-grid article { border-inline-end: var(--rule) solid var(--color-rule); }
+  .merit-reading-grid article:nth-last-child(-n + 2) { border-block-end: 0; }
+  .merit-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-form fieldset:last-of-type { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-form__actions { grid-column: 1 / -1; }
+  .merit-blocks, .merit-assets, .merit-scorecards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .merit-block:last-child { grid-column: 1 / -1; }
+  .merit-filters { grid-template-columns: minmax(14rem, 2fr) repeat(2, minmax(10rem, 1fr)); }
+  .merit-flow { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .merit-flow > span { display: block; }
+  .merit-tailored-call__body { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .merit-tailored-call__body > div { border-inline-end: var(--rule-thin) solid var(--color-rule); border-block-end: 0; }
+  .merit-tailored-call__body > div:last-child { border-inline-end: 0; }
+  .merit-sources { columns: 2; column-gap: var(--space-2xl); }
+}
+
+@media (min-width: 75rem) {
+  .merit-baseline { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .merit-reading-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .merit-reading-grid article { border-block-end: 0; }
+  .merit-form { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .merit-form fieldset:last-of-type { grid-column: auto; grid-template-columns: 1fr; }
+  .merit-blocks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .merit-block:last-child { grid-column: auto; }
+  .merit-assets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 47.999rem) {
+  .merit-jump { inset-block-start: 4.25rem; }
+  .merit-section { scroll-margin-top: 8rem; }
+  .merit-form__actions .hub-button { width: 100%; white-space: normal; }
+  .merit-block__head { align-items: end; }
+  .merit-erc-note { grid-template-columns: 1fr; }
+  .merit-erc-note > span { width: 4.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

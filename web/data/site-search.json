@@ -1,5 +1,13 @@
 [
   {
+    "kind": "Mapa personal",
+    "title": "Relacionar méritos, ANECA CU y financiación",
+    "context": "Puntos y mínimos ANECA, sexenios, proyectos estatales y europeos afines al ICMUV",
+    "keywords": "catedratico CU ANECA sexenio quinquenio liderazgo tesis AEI PID ERC Pathfinder Chips JU fotonica semiconductores materiales neuromorfico meritos",
+    "href": "mapa-meritos/",
+    "priority": 14
+  },
+  {
     "kind": "Plan personal",
     "title": "Trazar mi hoja de ruta de carrera",
     "context": "Diagnóstico PTU, prioridades 30/90/365, tiempo y filtro de oportunidades",

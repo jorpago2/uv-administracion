@@ -12,6 +12,8 @@ const manualHtml = await readFile(new URL("../manual/index.html", import.meta.ur
 const areaPage = await readFile(new URL("../area-page.js", import.meta.url), "utf8");
 const careerPlanHtml = await readFile(new URL("../plan-carrera/index.html", import.meta.url), "utf8");
 const careerPlanPage = await readFile(new URL("../career-roadmap-page.js", import.meta.url), "utf8");
+const meritMapHtml = await readFile(new URL("../mapa-meritos/index.html", import.meta.url), "utf8");
+const meritMapPage = await readFile(new URL("../merit-map-page.js", import.meta.url), "utf8");
 const researchArea = await readFile(new URL("../investigacion/index.html", import.meta.url), "utf8");
 const manualPage = await readFile(new URL("../manual-page.js", import.meta.url), "utf8");
 const resolverPage = await readFile(new URL("../resolver-page.js", import.meta.url), "utf8");
@@ -51,6 +53,7 @@ test("la portada prioriza buscar, actuar y explorar antes de la consulta", () =>
   assert.match(html, /<dt>Situaciones<\/dt><dd>105<\/dd>/);
   assert.match(html, /href="resolver\/"/);
   assert.match(html, /href="plan-carrera\/"/);
+  assert.match(html, /href="mapa-meritos\/"/);
   for (const route of ["administracion", "docencia", "carrera-pdi", "investigacion", "gestion", "cumplimiento"]) assert.match(html, new RegExp(`href="${route}/"`));
   assert.match(html, /href="consulta\.html"/);
 });
@@ -58,12 +61,22 @@ test("la portada prioriza buscar, actuar y explorar antes de la consulta", () =>
 test("la carrera PDI incluye un plan personal sin presentar hipótesis como hechos", () => {
   const pdiCategory = CATEGORIES.find((category) => category.id === "pdi");
   assert.ok(pdiCategory.tools.some((tool) => tool.href === "../plan-carrera/"));
+  assert.ok(pdiCategory.tools.some((tool) => tool.href === "../mapa-meritos/"));
   assert.match(careerPlanHtml, /id="careerProfileForm"/);
   assert.match(careerPlanHtml, /id="careerRoadmap"/);
   assert.match(careerPlanHtml, /id="opportunityForm"/);
   assert.match(careerPlanHtml, /No garantiza acreditación, plaza o promoción/);
   assert.match(careerPlanPage, /localStorage/);
   assert.match(careerPlanPage, /exportCareerRoadmapMarkdown/);
+});
+
+test("el mapa de méritos distingue puntos, pesos y evidencia", () => {
+  assert.match(meritMapHtml, /id="meritScenarioForm"/);
+  assert.match(meritMapHtml, /id="meritTailoredCalls"/);
+  assert.match(meritMapHtml, /id="meritMatrix"/);
+  assert.match(meritMapHtml, /No existe una puntuación universal/);
+  assert.match(meritMapPage, /renderTailoredCalls/);
+  assert.match(meritMapPage, /IntersectionObserver/);
 });
 
 test("las 105 situaciones tienen una subweb principal y buscable", () => {

@@ -8,6 +8,7 @@
 .career-thesis { align-self: end; padding: var(--space-lg); background: var(--color-accent); border: var(--rule) solid var(--color-rule); box-shadow: var(--shadow-lg); }
 .career-thesis strong { font: 800 var(--text-xl)/1 var(--font-display); }
 .career-thesis p { margin: var(--space-md) 0 0; }
+.career-thesis__link { min-height: 3rem; display: inline-flex; align-items: center; margin-block-start: var(--space-lg); padding-inline: var(--space-md); border: var(--rule) solid var(--color-rule); background: var(--color-paper-raised); box-shadow: var(--shadow-sm); font-weight: 800; text-decoration: none; }
 .career-disclaimer { padding-block: var(--space-lg); background: var(--color-error-paper); border-block-end: var(--rule) solid var(--color-rule); }
 .career-disclaimer p { max-width: 80rem; margin: var(--space-xs) 0 0; }
 .career-jump { position: sticky; inset-block-start: 7.3rem; z-index: calc(var(--z-sticky) - 1); display: flex; overflow-x: auto; background: var(--color-ink); color: var(--color-paper); border-block-end: var(--rule) solid var(--color-rule); scrollbar-width: thin; }

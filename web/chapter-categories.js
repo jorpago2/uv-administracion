@@ -34,6 +34,7 @@ export const CATEGORIES = Object.freeze([
     featuredSections: [16, 17, 18],
     tools: [
       ["Trazar hoja de ruta personal", "../plan-carrera/"],
+      ["Relacionar méritos y convocatorias", "../mapa-meritos/"],
       ["Calcular salario bruto", "#calculadora-retributiva"],
       ["Revisar dedicación POD", "#calculadora-pod"],
       ["Resolver un trámite PDI", "#asistente-tramites"]
@@ -47,6 +48,7 @@ export const CATEGORIES = Object.freeze([
     sections: [15, 20, 21, 22, 23, 24, 25, 26, 27, 28],
     featuredSections: [15, 20, 24],
     tools: [
+      ["Mapear méritos y proyectos afines", "../mapa-meritos/"],
       ["Explorar financiación", "#explorador-financiacion"],
       ["Preparar candidatura", "#preparador-candidatura"],
       ["Presupuestar un proyecto", "#calculadora-presupuesto"],

@@ -1,7 +1,7 @@
 const ROUTES = Object.freeze([
   { id: "inicio", label: "Inicio", href: "" },
   { id: "resolver", label: "Resolver", href: "resolver/" },
-  { id: "ambitos", label: "Ámbitos", href: "#domainsTitle", activePages: ["administracion", "carrera-pdi", "plan-carrera", "cumplimiento"] },
+  { id: "ambitos", label: "Ámbitos", href: "#domainsTitle", activePages: ["administracion", "carrera-pdi", "plan-carrera", "mapa-meritos", "cumplimiento"] },
   { id: "docencia", label: "Docencia", href: "docencia/" },
   { id: "investigacion", label: "Investigación", href: "investigacion/" },
   { id: "gestion", label: "Gestión", href: "gestion/" },

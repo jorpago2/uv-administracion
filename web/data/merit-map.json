@@ -1,0 +1,370 @@
+{
+  "title": "Mapa personal de méritos, financiación y promoción",
+  "reviewedOn": "2026-08-10",
+  "personalBaseline": {
+    "sexennia": 1,
+    "quinquennia": 1,
+    "individualTheses": 0,
+    "coDirectedTheses": 0,
+    "tfm9": 0,
+    "stateIpYears": 0,
+    "stateMemberYears": 0,
+    "qualifyingStays": 0,
+    "openManuals": 0,
+    "tfg6": 0,
+    "collaborationScholarships": 0,
+    "erasmusYears": 0,
+    "teacherTrainingBlocks": 0,
+    "otherTeamLeadershipPeriods": 0,
+    "managementPeriods": 0,
+    "scientificResponsibilityPeriods": 0,
+    "ipAllocation": "research"
+  },
+  "knownFacts": [
+    { "label": "Acreditación PTU", "value": "Favorable y comunicada a la UV", "state": "done" },
+    { "label": "Sexenios", "value": "1 reconocido", "state": "active" },
+    { "label": "Quinquenios", "value": "1 reconocido", "state": "active" },
+    { "label": "Proyecto GVA GE", "value": "Concedido · inicio septiembre de 2026", "state": "active" }
+  ],
+  "systems": [
+    {
+      "id": "aneca-cu",
+      "short": "ANECA CU",
+      "name": "Acreditación a Catedrático/a de Universidad",
+      "kind": "official-threshold",
+      "summary": "Exige suficiencia independiente de 50/100 en investigación, docencia y liderazgo, además de los mínimos obligatorios de cada bloque.",
+      "sourceIds": ["aneca-overview", "aneca-manual-2026"]
+    },
+    {
+      "id": "cneai",
+      "short": "Sexenio",
+      "name": "CNEAI · sexenio de investigación",
+      "kind": "portfolio",
+      "summary": "Se presentan cinco aportaciones principales y dos sustitutorias; cuentan relevancia, impacto y contribución, no una suma bibliométrica automática.",
+      "sourceIds": ["cneai-2025"]
+    },
+    {
+      "id": "gva-ge",
+      "short": "GVA GE",
+      "name": "GVA · grupos emergentes 2026",
+      "kind": "weighted-call",
+      "summary": "El baremo publicado pondera IP 50 %, resto del grupo 30 % y coherencia del grupo 20 %.",
+      "sourceIds": ["gva-ge-2026"]
+    },
+    {
+      "id": "aei-pid",
+      "short": "AEI PID",
+      "name": "AEI · Proyectos de Generación de Conocimiento",
+      "kind": "weighted-call",
+      "summary": "En investigación no orientada: propuesta 50, equipo 30, impacto 10 y presupuesto 10; los tres primeros criterios tienen umbrales.",
+      "sourceIds": ["aei-pid"]
+    },
+    {
+      "id": "prometeo",
+      "short": "PROMETEO",
+      "name": "GVA · Programa PROMETEO",
+      "kind": "weighted-call",
+      "summary": "El grupo supone 60 puntos y el proyecto 40; el historial del IP, del equipo y de los doctores formados es central.",
+      "sourceIds": ["gva-prometeo"]
+    },
+    {
+      "id": "erc",
+      "short": "ERC",
+      "name": "ERC Starting / Consolidator",
+      "kind": "qualitative",
+      "summary": "La excelencia es el único criterio y se aplica conjuntamente al proyecto y al IP; la elegibilidad temporal se comprueba aparte.",
+      "sourceIds": ["erc-starting", "erc-consolidator"]
+    },
+    {
+      "id": "r3",
+      "short": "R3",
+      "name": "Certificado R3",
+      "kind": "weighted-call",
+      "summary": "Contribuciones 40, liderazgo e independencia 40 —con umbral 30— e internacionalización 20.",
+      "sourceIds": ["r3-2025"]
+    },
+    {
+      "id": "uv-promotion",
+      "short": "Promoción UV",
+      "name": "Promoción y concurso UV",
+      "kind": "eligibility",
+      "summary": "La acreditación habilita, pero no concede una plaza: rigen la convocatoria, los requisitos lingüísticos, la situación contractual y el concurso aplicable.",
+      "sourceIds": ["uv-career-2026"]
+    }
+  ],
+  "tailoredCalls": [
+    {
+      "id": "horizon-photonics-2027",
+      "level": "Europeo · Horizon Europe Cluster 4",
+      "title": "Advanced integrated photonic devices for extended features and ultra-low power consumption",
+      "code": "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03",
+      "fit": 5,
+      "fitLabel": "Encaje temático directo",
+      "window": "Apertura prevista 17/11/2026 · cierre 18/03/2027",
+      "instrument": "RIA · 3–5 M€ por proyecto · TRL 3 → 6",
+      "role": "Socio científico con paquete de trabajo propio; coordinación solo con consorcio y soporte maduros.",
+      "whyFit": "El texto cita PIC avanzados, bajo consumo, integración de materiales novedosos —incluidos materiales de cambio de fase—, electrónica-fotónica y demostración a nivel de sistema.",
+      "requiredBefore": ["Demostrador reproducible del GE", "plataforma/material y métrica diferenciadora", "socio de integración/fabricación", "usuario o aplicación de sistema"],
+      "creates": ["liderazgo de paquete", "red internacional", "resultados y personal", "base para R3/CU y siguiente proyecto"],
+      "decision": "Objetivo europeo principal para 2027: formar núcleo de consorcio antes de noviembre de 2026.",
+      "sourceIds": ["horizon-cl4-2026-2027"]
+    },
+    {
+      "id": "aei-pid-next",
+      "level": "Estatal · AEI",
+      "title": "Proyectos de Generación de Conocimiento",
+      "code": "PID · modalidad no orientada u orientada según la pregunta",
+      "fit": 5,
+      "fitLabel": "Escalón natural tras GE",
+      "window": "Convocatoria anual; confirmar edición y plazo interno UV",
+      "instrument": "Proyecto individual o coordinado · investigación fundamental",
+      "role": "IP/co-IP cuando la vinculación e incompatibilidades lo permitan.",
+      "whyFit": "Permite financiar el núcleo científico completo —diseño, simulación, fabricación y caracterización— sin forzar un topic europeo demasiado específico.",
+      "requiredBefore": ["pregunta científica central", "primer resultado del GE", "equipo ejecutable", "plan de riesgos y presupuesto trazable"],
+      "creates": ["mérito IP estatal", "posible contrato predoctoral", "resultados para sexenio", "base para PDC, CPP o Europa"],
+      "decision": "Prioridad estatal nº 1; construir desde el primer hito del GE y no esperar a que se publique el plazo.",
+      "sourceIds": ["aei-pid-2025"]
+    },
+    {
+      "id": "erc-route",
+      "level": "Europeo · ERC",
+      "title": "ERC Starting o Consolidator Grant",
+      "code": "StG / CoG según fecha de defensa y extensiones",
+      "fit": 5,
+      "fitLabel": "Encaje científico alto · elegibilidad desconocida",
+      "window": "StG 2027: cierre 14/10/2026; CoG según programa anual",
+      "instrument": "Proyecto individual de frontera · excelencia como único criterio",
+      "role": "IP único con independencia científica y compromiso de la UV como host.",
+      "whyFit": "La combinación de materiales funcionales, dispositivos emergentes y nuevas funcionalidades puede sostener una hipótesis de frontera si se formula una pregunta radical y coherente, no como suma de tecnologías.",
+      "requiredBefore": ["fecha exacta de defensa y extensiones", "idea de frontera no incremental", "evidencia de independencia", "resultados preliminares que reduzcan el riesgo clave"],
+      "creates": ["equipo propio", "liderazgo internacional", "trayectoria excepcional", "acceso posterior a ERC PoC"],
+      "decision": "Comprobar ya la ventana doctoral. Si encaja StG 2027 pero no existe borrador maduro, preparar la siguiente edición en vez de improvisar.",
+      "sourceIds": ["erc-starting", "erc-consolidator"]
+    },
+    {
+      "id": "chips-ju-photonics-2026",
+      "level": "Europeo · Chips JU",
+      "title": "Reinforcing Europe's strength in photonics",
+      "code": "HORIZON-Chips-JU-2026-FT2-IA",
+      "fit": 4,
+      "fitLabel": "Muy afín si existe madurez industrial",
+      "window": "Abierta · cierre 16/09/2026",
+      "instrument": "IA · 20 M€ de presupuesto UE indicativo · escalado industrial",
+      "role": "Socio de un consorcio ya formado; aportar dispositivo, material, proceso o caracterización claramente industrializable.",
+      "whyFit": "Busca escalar plataformas fotónicas avanzadas y cerrar la brecha investigación-producción. Es más afín a una tecnología madura que a una prueba inicial de laboratorio.",
+      "requiredBefore": ["consorcio existente", "TRL y plataforma compatibles", "fabricación/escalado", "explotación industrial y cofinanciación nacional verificadas"],
+      "creates": ["consorcio industrial", "validación a escala", "transferencia", "liderazgo de tarea o paquete"],
+      "decision": "No coordinar desde cero a cinco semanas del cierre; explorar entrada solo si llega una invitación con encaje y trabajo definido.",
+      "sourceIds": ["chips-ju-2026"]
+    },
+    {
+      "id": "eic-pathfinder-next",
+      "level": "Europeo · EIC",
+      "title": "EIC Pathfinder Open",
+      "code": "Convocatoria anual deep-tech",
+      "fit": 4,
+      "fitLabel": "Alto si la hipótesis es radical",
+      "window": "Preparar la siguiente edición anual; verificar programa de trabajo vigente",
+      "instrument": "RIA · normalmente hasta 4 M€ · TRL inicial",
+      "role": "Coordinador o socio de equipo multidisciplinar; Open exige normalmente tres entidades.",
+      "whyFit": "Encaja con un nuevo principio de dispositivo o computación que combine alto riesgo y alto potencial; no con una mejora incremental de prestaciones.",
+      "requiredBefore": ["breakthrough tecnológico inequívoco", "riesgo científico principal", "socios multidisciplinares imprescindibles", "visión de tecnología futura"],
+      "creates": ["resultado elegible para EIC Transition", "red europea", "independencia", "propiedad intelectual"],
+      "decision": "Usar solo para la idea más transformadora; comparar honestamente contra ERC y PID antes de invertir meses.",
+      "sourceIds": ["eic-pathfinder-2026"]
+    },
+    {
+      "id": "aei-cpp-next",
+      "level": "Estatal · AEI",
+      "title": "Proyectos de Colaboración Público-Privada",
+      "code": "CPP",
+      "fit": 4,
+      "fitLabel": "Alto cuando exista demostrador y empresa",
+      "window": "Prevista anualmente 2026–2028; confirmar edición",
+      "instrument": "Consorcio empresa–organismo · desarrollo experimental próximo al mercado",
+      "role": "Socio UV con tareas críticas; la empresa y la explotación deben ser reales, no decorativas.",
+      "whyFit": "Es la vía estatal lógica para llevar un dispositivo o plataforma desde evidencia de laboratorio hacia prototipo, validación y explotación.",
+      "requiredBefore": ["resultado protegible", "empresa con problema concreto", "TRL de entrada suficiente", "reparto de IP, presupuesto y explotación"],
+      "creates": ["transferencia", "contrato/relación industrial", "validación de prototipo", "base para licencia o spin-off"],
+      "decision": "Mantener en la ruta de 2–4 años; no forzarla mientras la tecnología siga en fase de pregunta científica.",
+      "sourceIds": ["aei-cpp-2025"]
+    },
+    {
+      "id": "aei-pdc-2027",
+      "level": "Estatal · AEI",
+      "title": "Proyectos de Prueba de Concepto",
+      "code": "PDC · prevista en el plan para 2027",
+      "fit": 4,
+      "fitLabel": "Ruta posterior, no elegible desde GE por sí solo",
+      "window": "Planificada para 2027; comprobar proyecto de origen elegible",
+      "instrument": "Valorización de resultados de un proyecto estatal previo",
+      "role": "Normalmente el mismo IP de la actuación de origen elegible.",
+      "whyFit": "Puede financiar validación, protección y aproximación al mercado de un resultado nacido en un PID, pero una ayuda GVA GE no debe darse por elegible sin texto expreso.",
+      "requiredBefore": ["PID u otra actuación de origen admitida", "resultado y titularidad", "prueba de concepto concreta", "camino de valorización"],
+      "creates": ["patente/licencia", "prototipo", "empresa colaboradora", "posible spin-off"],
+      "decision": "Diseñar PID pensando en una salida PDC, sin contar hoy con esta financiación como derecho futuro.",
+      "sourceIds": ["aei-pdc-2025"]
+    }
+  ],
+  "callScorecards": [
+    {
+      "id": "gva-ge",
+      "label": "GVA GE 2026",
+      "edition": "2026",
+      "parts": [
+        { "label": "Relevancia IP", "value": 50, "detail": "30 producción/internacional/congresos + 20 TFM, tesis, proyectos, contratos y patentes" },
+        { "label": "Resto del grupo", "value": 30, "detail": "Trayectoria investigadora conjunta" },
+        { "label": "Coherencia", "value": 20, "detail": "Trabajos conjuntos, complementariedad y líneas abiertas" }
+      ],
+      "sourceIds": ["gva-ge-2026"]
+    },
+    {
+      "id": "aei-pid",
+      "label": "AEI PID · no orientada",
+      "edition": "PID 2024/criterios de bases aplicables",
+      "parts": [
+        { "label": "Propuesta", "value": 50, "threshold": 40 },
+        { "label": "Equipo", "value": 30, "threshold": 20 },
+        { "label": "Impacto", "value": 10, "threshold": 5 },
+        { "label": "Presupuesto", "value": 10 }
+      ],
+      "sourceIds": ["aei-pid"]
+    },
+    {
+      "id": "prometeo",
+      "label": "PROMETEO",
+      "edition": "baremo publicado 2025/2026",
+      "parts": [
+        { "label": "IP", "value": 25 },
+        { "label": "Equipo", "value": 25 },
+        { "label": "Coherencia/internacional/doctores", "value": 10 },
+        { "label": "Objetivos, impacto y método", "value": 20 },
+        { "label": "Plan y diseño", "value": 20 }
+      ],
+      "sourceIds": ["gva-prometeo"]
+    },
+    {
+      "id": "r3",
+      "label": "Certificado R3",
+      "edition": "2025",
+      "parts": [
+        { "label": "Contribuciones", "value": 40 },
+        { "label": "Liderazgo e independencia", "value": 40, "threshold": 30 },
+        { "label": "Internacionalización", "value": 20 }
+      ],
+      "sourceIds": ["r3-2025"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "coherent-output",
+      "domain": "investigacion",
+      "title": "Resultado científico sólido y trazable",
+      "action": "Cerrar un resultado del ciclo diseño → simulación → microfabricación → caracterización con contribución, datos y código identificables.",
+      "evidence": "Artículo/resultado, DOI, CRediT, datos o código, indicadores contextualizados y vínculo al proyecto.",
+      "systems": { "aneca-cu": "evidence", "cneai": "portfolio", "gva-ge": "weighted", "aei-pid": "weighted", "prometeo": "weighted", "erc": "evidence", "r3": "weighted" }
+    },
+    {
+      "id": "sexennium",
+      "domain": "investigacion",
+      "title": "Sexenio reconocido",
+      "action": "Preparar cinco aportaciones coherentes, narrativa de impacto, contribución propia y depósito en repositorio.",
+      "evidence": "Resolución CNEAI y expediente de aportaciones.",
+      "systems": { "aneca-cu": "points", "cneai": "target", "prometeo": "eligibility", "uv-promotion": "evidence" }
+    },
+    {
+      "id": "competitive-ip",
+      "domain": "financiacion",
+      "title": "Proyecto competitivo como IP con resultados",
+      "action": "Usar GE para producir el piloto que habilite una propuesta estatal; documentar equipo, contratación, decisiones, resultados e impacto.",
+      "evidence": "Concesión, rol IP, duración, equipo, entregables, personal captado, informes y resultados.",
+      "systems": { "aneca-cu": "points-choice", "gva-ge": "weighted", "aei-pid": "weighted", "prometeo": "eligibility", "erc": "evidence", "r3": "weighted", "uv-promotion": "evidence" }
+    },
+    {
+      "id": "defended-thesis",
+      "domain": "liderazgo",
+      "title": "Tesis doctoral defendida y fértil",
+      "action": "Diseñar una tesis conectada al programa ICMUV que deje resultados, independencia del doctorando y continuidad profesional.",
+      "evidence": "Acta de defensa, rol individual/codirección, resultados, internacionalización, premios y destino de la persona egresada.",
+      "systems": { "aneca-cu": "points", "gva-ge": "weighted", "aei-pid": "weighted", "prometeo": "weighted", "erc": "evidence", "r3": "weighted" }
+    },
+    {
+      "id": "international-stay",
+      "domain": "investigacion",
+      "title": "Estancia internacional con resultado",
+      "action": "Vincular una estancia a una capacidad que falte —proceso, metrología o dispositivo— y cerrar un resultado conjunto verificable.",
+      "evidence": "Certificado, plan, duración, resultado, red estable y contribución.",
+      "systems": { "aneca-cu": "points", "cneai": "evidence", "gva-ge": "weighted", "aei-pid": "weighted", "prometeo": "weighted", "erc": "evidence", "r3": "weighted" }
+    },
+    {
+      "id": "patent-transfer",
+      "domain": "transferencia",
+      "title": "Patente, licencia o transferencia demostrable",
+      "action": "Evaluar protección antes de divulgar y avanzar solo si hay novedad, titularidad y vía de explotación plausibles.",
+      "evidence": "Informe de patentabilidad, solicitud, inventores, titularidad, licencia/contrato y uso o impacto.",
+      "systems": { "aneca-cu": "evidence", "cneai": "portfolio", "gva-ge": "weighted", "aei-pid": "weighted", "prometeo": "weighted", "erc": "evidence", "r3": "weighted" }
+    },
+    {
+      "id": "open-teaching",
+      "domain": "docencia",
+      "title": "Recurso docente abierto aplicado y evaluado",
+      "action": "Convertir una mejora real en GIET, GIEI, GIT o MUIE en un recurso abierto, con licencia, uso y evidencia de aprendizaje.",
+      "evidence": "Repositorio, licencia, guía docente, actividad, cohortes y resultado antes/después.",
+      "systems": { "aneca-cu": "points", "uv-promotion": "evidence" }
+    },
+    {
+      "id": "docentia",
+      "domain": "docencia",
+      "title": "Calidad docente evaluada",
+      "action": "Conservar encargo, autoinforme, encuestas válidas, mejoras y resultados por curso; solicitar la evaluación aplicable cuando proceda.",
+      "evidence": "Resolución DOCENTIA o equivalente que cubra el periodo exigido y dossier de evidencias.",
+      "systems": { "aneca-cu": "points", "uv-promotion": "evidence" }
+    },
+    {
+      "id": "team-leadership",
+      "domain": "liderazgo",
+      "title": "Dirección sostenida de equipo",
+      "action": "Definir visión, personas, responsabilidades y un cambio medible; registrar talento captado, resultados y promoción del equipo.",
+      "evidence": "Cuatro años o más, rol, composición, cambios introducidos, personal captado, resultados e impacto.",
+      "systems": { "aneca-cu": "points", "aei-pid": "weighted", "prometeo": "weighted", "erc": "evidence", "r3": "weighted" }
+    },
+    {
+      "id": "management",
+      "domain": "gestion",
+      "title": "Gestión con transformación verificable",
+      "action": "Aceptar responsabilidades acotadas solo cuando exista autoridad, objetivo, indicador, duración y salida.",
+      "evidence": "Nombramiento, cuatro años o más, cambio implantado, resultado e impacto institucional.",
+      "systems": { "aneca-cu": "points", "uv-promotion": "evidence" }
+    }
+  ],
+  "relationLabels": {
+    "points": "Puntos orientativos",
+    "points-choice": "Puntos · elegir bloque",
+    "weighted": "Alimenta criterio ponderado",
+    "evidence": "Evidencia cualitativa",
+    "portfolio": "Puede integrar cartera",
+    "eligibility": "Puede afectar elegibilidad",
+    "target": "Es el objetivo"
+  },
+  "sources": [
+    { "id": "aneca-overview", "label": "ANECA · estructura y suficiencia ACADEMIA", "url": "https://ayuda.aneca.es/hc/es/articles/21627871603868-Informaci%C3%B3n-sobre-los-criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-requeridos-para-obtener-la-acreditaci%C3%B3n-estatal-para-el-acceso-a-los-cuerpos-docentes-universitarios" },
+    { "id": "aneca-manual-2026", "label": "ANECA · instrucciones de puntuación de comisiones, julio de 2026", "url": "https://www.aneca.es/documents/d/guest/2026-doc-instrucciones-comisiones-acreditacion-rd6782023-pdf" },
+    { "id": "aneca-research", "label": "ANECA · investigación y transferencia", "url": "https://ayuda.aneca.es/hc/es/articles/21629372377756-1-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-de-investigaci%C3%B3n-transferencia-e-intercambio-del-conocimiento" },
+    { "id": "aneca-teaching", "label": "ANECA · docencia", "url": "https://ayuda.aneca.es/hc/es/articles/21629475619996-2-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencia-de-docencia" },
+    { "id": "aneca-leadership", "label": "ANECA · liderazgo para CU", "url": "https://ayuda.aneca.es/hc/es/articles/21629887575964-3-Criterios-de-evaluaci%C3%B3n-y-requisitos-m%C3%ADnimos-de-referencia-de-los-m%C3%A9ritos-y-competencias-de-liderazgo" },
+    { "id": "cneai-2025", "label": "BOE · criterios de sexenios 2025", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-26118" },
+    { "id": "gva-ge-2026", "label": "GVA · grupos emergentes 2026", "url": "https://sede.gva.es/es/detall-tramit?id_proc=G104733" },
+    { "id": "aei-pid", "label": "AEI · criterios Proyectos de Generación de Conocimiento", "url": "https://www.aei.gob.es/sites/default/files/inline-files/Webinario_PID2024_VF_0.pdf" },
+    { "id": "gva-prometeo", "label": "GVA · baremo PROMETEO", "url": "https://www.gva.es/es/inicio/procedimientos?id_proc=16376" },
+    { "id": "erc-starting", "label": "ERC · Starting Grant", "url": "https://erc.europa.eu/apply-grant/starting-grant" },
+    { "id": "erc-consolidator", "label": "ERC · Consolidator Grant", "url": "https://erc.europa.eu/apply-grant/consolidator-grant" },
+    { "id": "r3-2025", "label": "BOE · Certificado R3 2025", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-8200" },
+    { "id": "uv-career-2026", "label": "UV · normativa y carrera docente 2026–2027", "url": "https://www.uv.es/uvweb/servicio-recursos-humanos-pdi/es/normativas/normativa-especifica-del-pdi-1286099270026.html" }
+    ,{ "id": "horizon-cl4-2026-2027", "label": "Comisión Europea · Horizon Europe Cluster 4, programa 2026–2027", "url": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en" }
+    ,{ "id": "aei-pid-2025", "label": "AEI · Proyectos de Generación de Conocimiento 2025", "url": "https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-generacion-conocimiento-actuaciones-formacion-0" }
+    ,{ "id": "chips-ju-2026", "label": "Chips JU · convocatorias abiertas 2026", "url": "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/" }
+    ,{ "id": "eic-pathfinder-2026", "label": "EIC · programa de trabajo y Pathfinder 2026", "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-2026-work-programme_en" }
+    ,{ "id": "aei-cpp-2025", "label": "AEI · Colaboración Público-Privada 2025", "url": "https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-colaboracion-publico-privada-2025" }
+    ,{ "id": "aei-pdc-2025", "label": "AEI · Prueba de Concepto", "url": "https://www.aei.gob.es/convocatorias/buscador-convocatorias/proyectos-prueba-concepto-2025" }
+  ]
+}

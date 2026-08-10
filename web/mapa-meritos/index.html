@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Mapa personal e interactivo que relaciona méritos con ANECA CU, sexenios, proyectos AEI, GVA, ERC, R3 y promoción UV.">
+  <meta name="theme-color" content="#f5d328">
+  <title>Mapa de méritos · Guía operativa UV</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../hub.css">
+  <link rel="stylesheet" href="../merit-map.css">
+  <script type="module" src="../merit-map-page.js"></script>
+</head>
+<body data-root="../" data-page="mapa-meritos">
+  <a class="hub-skip" href="#contenido">Saltar al contenido</a>
+  <site-header></site-header>
+  <main class="merit-main" id="contenido">
+    <section class="merit-hero" aria-labelledby="pageTitle">
+      <div>
+        <p class="hub-kicker">Carrera PDI · mapa de decisión</p>
+        <h1 id="pageTitle">Un mérito. Varios destinos.</h1>
+        <p class="merit-hero__lead">Relaciona acciones, evidencias y evaluaciones para elegir qué producir ahora. Cuantifica únicamente lo que tiene baremo público y separa puntos, mínimos, elegibilidad y valor cualitativo.</p>
+      </div>
+      <div class="merit-hero__rule">
+        <span>Regla de lectura</span>
+        <strong>No existe una puntuación universal de carrera.</strong>
+        <p>Un mismo resultado puede alimentar varios procesos, pero cada uno lo evalúa de forma distinta y ANECA no permite contarlo dos veces dentro del expediente.</p>
+      </div>
+    </section>
+
+    <aside class="merit-disclaimer" aria-label="Límites de la herramienta">
+      <strong>Uso exclusivamente personal de <a href="https://www.uv.es/jorpago2">Jorge Parra</a>.</strong>
+      <p>No es una evaluación, recomendación ni fuente oficial. Puede contener errores o quedar desactualizada. No garantiza acreditación, financiación, plaza ni promoción; prevalecen siempre la convocatoria y el criterio del órgano evaluador.</p>
+    </aside>
+
+    <nav class="merit-jump" aria-label="Contenido del mapa">
+      <a href="#lectura">01 Punto de partida</a>
+      <a href="#simulador">02 Simulador CU</a>
+      <a href="#mapa">03 Mapa de activos</a>
+      <a href="#afinidad">04 Convocatorias afines</a>
+      <a href="#convocatorias">05 Baremos</a>
+      <a href="#matriz">06 Matriz</a>
+      <a href="#prioridad">07 Prioridad personal</a>
+      <a href="#fuentes">08 Fuentes</a>
+    </nav>
+
+    <section class="merit-section" id="lectura" aria-labelledby="baselineTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">01 · Estado conocido</p>
+        <h2 id="baselineTitle">Tu punto de partida no es cero</h2>
+        <p>La acreditación PTU ya está resuelta. Para mirar hacia CU conviene distinguir lo que ya da una ventaja medible de lo que todavía es una oportunidad en ejecución.</p>
+      </div>
+      <div class="merit-baseline" id="meritBaseline"></div>
+      <div class="merit-reading-grid">
+        <article><span>01</span><h3>Puntos</h3><p>ANECA publica equivalencias orientativas para algunas aportaciones. La comisión conserva juicio técnico.</p></article>
+        <article><span>02</span><h3>Mínimos</h3><p>Algunos requisitos son puertas: dos quinquenios, tres sexenios para el mínimo automático de 1.2.1 o 10 puntos en tesis/TFM.</p></article>
+        <article><span>03</span><h3>Pesos</h3><p>En una convocatoria, “equipo 30” significa que ese criterio vale 30 puntos; no que cada proyecto previo aporte 30.</p></article>
+        <article><span>04</span><h3>Evidencia</h3><p>ERC y muchas partes de los baremos valoran excelencia, independencia e impacto sin una conversión automática desde el CV.</p></article>
+      </div>
+    </section>
+
+    <section class="merit-section" id="simulador" aria-labelledby="simulatorTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">02 · Subtotales parciales, no predicción</p>
+        <h2 id="simulatorTitle">Simulador orientativo ANECA CU</h2>
+        <p>Introduce solo méritos ya acreditables. El resultado muestra equivalencias publicadas y mínimos visibles; no intenta inventar la puntuación de artículos, patentes, calidad docente o impacto.</p>
+      </div>
+      <form class="merit-form" id="meritScenarioForm">
+        <fieldset>
+          <legend>Investigación</legend>
+          <label>Sexenios reconocidos<input name="sexennia" type="number" min="0" max="6" step="1"></label>
+          <label>Años como IP en proyecto competitivo estatal<input name="stateIpYears" type="number" min="0" max="12" step="1"></label>
+          <label>Años como miembro en proyecto competitivo estatal<input name="stateMemberYears" type="number" min="0" max="12" step="1"></label>
+          <label>Estancias internacionales de ≥3 meses con resultados<input name="qualifyingStays" type="number" min="0" max="6" step="1"></label>
+          <label>¿Dónde usar el mismo proyecto IP?
+            <select name="ipAllocation">
+              <option value="research">Investigación 1.1</option>
+              <option value="leadership">Liderazgo 3.1</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Docencia</legend>
+          <label>Quinquenios positivos<input name="quinquennia" type="number" min="0" max="6" step="1"></label>
+          <label>Manuales de asignatura en abierto<input name="openManuals" type="number" min="0" max="5" step="1"></label>
+          <label>TFG de 6 ECTS dirigidos<input name="tfg6" type="number" min="0" max="20" step="1"></label>
+          <label>Becas de colaboración tutorizadas un curso<input name="collaborationScholarships" type="number" min="0" max="20" step="1"></label>
+          <label>Años en proyectos Erasmus+<input name="erasmusYears" type="number" min="0" max="6" step="1"></label>
+          <label>Bloques de 20 h de formación docente impartida<input name="teacherTrainingBlocks" type="number" min="0" max="6" step="1"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Liderazgo</legend>
+          <label>Tesis dirigidas individualmente y defendidas<input name="individualTheses" type="number" min="0" max="10" step="1"></label>
+          <label>Tesis codirigidas y defendidas<input name="coDirectedTheses" type="number" min="0" max="10" step="1"></label>
+          <label>TFM individuales de 9 ECTS<input name="tfm9" type="number" min="0" max="10" step="1"></label>
+          <label>Otros periodos de ≥4 años dirigiendo equipo<input name="otherTeamLeadershipPeriods" type="number" min="0" max="3" step="1"></label>
+          <label>Responsabilidades de gestión de ≥4 años<input name="managementPeriods" type="number" min="0" max="5" step="1"></label>
+          <label>Responsabilidades científico-técnicas de ≥4 años<input name="scientificResponsibilityPeriods" type="number" min="0" max="5" step="1"></label>
+        </fieldset>
+        <div class="merit-form__actions">
+          <button class="hub-button hub-button--primary" type="submit">Actualizar lectura</button>
+          <button class="hub-button" id="meritReset" type="button">Restablecer mis datos</button>
+          <button class="hub-button" id="meritExport" type="button">Descargar Markdown</button>
+        </div>
+      </form>
+      <div class="merit-blocks" id="meritBlocks" aria-live="polite"></div>
+      <div class="merit-warnings" id="meritWarnings"></div>
+    </section>
+
+    <section class="merit-section" id="mapa" aria-labelledby="mapTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">03 · Acción → activo → evaluación</p>
+        <h2 id="mapTitle">Mapa de activos reutilizables</h2>
+        <p>“Palanca” es una cuenta personal de destinos conectados, no un baremo. Selecciona un sistema para ver qué activos lo alimentan y qué prueba conviene conservar.</p>
+      </div>
+      <form class="merit-filters" id="meritFilters">
+        <label>Buscar activo<input name="query" type="search" autocomplete="off" placeholder="Ej.: tesis, patente, estancia…"></label>
+        <label>Ámbito<select name="domain"><option value="all">Todos</option><option value="investigacion">Investigación</option><option value="financiacion">Financiación</option><option value="liderazgo">Liderazgo</option><option value="transferencia">Transferencia</option><option value="docencia">Docencia</option><option value="gestion">Gestión</option></select></label>
+        <label>Evaluación<select name="system" id="meritSystemFilter"><option value="all">Todas</option></select></label>
+      </form>
+      <p class="merit-filter-status" id="meritFilterStatus" aria-live="polite"></p>
+      <div class="merit-assets" id="meritAssets"></div>
+    </section>
+
+    <section class="merit-section" id="afinidad" aria-labelledby="fitTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">04 · Afinidad con la línea ICMUV</p>
+        <h2 id="fitTitle">Proyectos estatales y europeos más afines</h2>
+        <p>El encaje se puntúa de 1 a 5 como heurística personal —no como probabilidad de éxito— para una línea que une dispositivos, semiconductores y materiales avanzados, fotónica integrada, microfabricación, caracterización y nuevas funcionalidades.</p>
+      </div>
+      <div class="merit-fit-legend"><span><b>5</b> Encaje directo</span><span><b>4</b> Encaje condicionado por madurez, consorcio o elegibilidad</span></div>
+      <div class="merit-tailored-calls" id="meritTailoredCalls"></div>
+    </section>
+
+    <section class="merit-section merit-section--dark" id="convocatorias" aria-labelledby="callsTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">05 · Dónde se decide una propuesta</p>
+        <h2 id="callsTitle">Pesos oficiales de convocatorias</h2>
+        <p>Las barras muestran el máximo de cada criterio. Un historial potente ayuda, pero una propuesta AEI deficiente puede quedar fuera aunque el CV sea bueno porque existen umbrales separados.</p>
+      </div>
+      <div class="merit-scorecards" id="meritScorecards"></div>
+      <article class="merit-erc-note">
+        <span>ERC</span>
+        <div><h3>Excelencia como único criterio</h3><p>No se representa con porcentajes inventados. Se evalúan conjuntamente proyecto e IP, después se ordenan las propuestas que superan calidad y se aplica el corte presupuestario.</p></div>
+      </article>
+    </section>
+
+    <section class="merit-section" id="matriz" aria-labelledby="matrixTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">06 · Vista comparada</p>
+        <h2 id="matrixTitle">Qué reutiliza cada sistema</h2>
+        <p>La matriz indica el tipo de relación, no una equivalencia de puntos entre sistemas. Desplázala horizontalmente en pantallas pequeñas.</p>
+      </div>
+      <div class="merit-matrix-wrap" tabindex="0" aria-label="Matriz desplazable de activos y evaluaciones">
+        <table class="merit-matrix" id="meritMatrix"></table>
+      </div>
+    </section>
+
+    <section class="merit-section" id="prioridad" aria-labelledby="priorityTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">07 · Aplicado a Jorge</p>
+        <h2 id="priorityTitle">Orden sugerido de construcción</h2>
+        <p>Este orden usa tus datos actuales y cambia con el simulador. Prioriza primero mínimos nítidos y después activos que alimentan varios procesos sin dispersar la línea científica.</p>
+      </div>
+      <ol class="merit-priorities" id="meritPriorities"></ol>
+      <aside class="merit-strategy">
+        <strong>Lectura estratégica del GE</strong>
+        <p>La concesión de septiembre de 2026 ya es una señal de independencia, pero no equivale hoy a 10 puntos ANECA. Su mayor valor es convertir dos años de ejecución en piloto, equipo, tesis, resultados, protección y una propuesta estatal. La dirección de equipos se aproxima a 10 puntos cuando existe una trayectoria de al menos cuatro años y resultados, no por el título de IP aislado.</p>
+      </aside>
+      <a class="merit-back" href="../plan-carrera/">Volver a la hoja de ruta personal</a>
+    </section>
+
+    <section class="merit-section" id="fuentes" aria-labelledby="sourcesTitle">
+      <div class="merit-section__head">
+        <p class="hub-kicker">08 · Trazabilidad</p>
+        <h2 id="sourcesTitle">Fuentes oficiales</h2>
+        <p id="meritReviewed"></p>
+      </div>
+      <ul class="merit-sources" id="meritSources"></ul>
+    </section>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>
